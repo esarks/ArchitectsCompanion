@@ -1,8 +1,0 @@
-echo on
-set JAC_HOME=C:\GitHub\JAC2020\jac2020\jacBuild8
-
-copy %JAC_HOME%\lib\jac\jac.jar C:\GitHub\JAC2020\jac2020\jacBuild8\lib\jac
-
-copy %JAC_HOME%\lib\mic\mic.jar C:\GitHub\JAC2020\jac2020\jacBuild8\lib\mic
-
-pause

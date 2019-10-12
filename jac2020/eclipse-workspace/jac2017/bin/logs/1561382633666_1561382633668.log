@@ -1,5 +1,0 @@
-Mon Jun 24 09:23:53 EDT 2019: Start
-0: Open log file.
-65: DEBUG-com.esarks.jac.jac:getScript()!Log opened by jac!Debug=4!DebugClass=4
-1335: APP-com.esarks.jac.jrun.Jrun:execute(String)!Enter method!aXml="C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\make\MakeJac_force.jrun"
-27994: APP-com.esarks.jac.jrun.Jrun:execute(String)!Normal final exit method!Elapsed time = 26659
