@@ -1,611 +1,611 @@
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:2: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:3: import java.util.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:5: import java.io.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:6: import java.text.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:7: import java.sql.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:8: //import java.net.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:10: //import java.security.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:13: //import java.awt.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:15: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:18: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:19: <#import#>
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:2: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:3: <#var#>
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:4: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:6:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:7: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:9: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:10:     super(aScript);
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:11: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:12:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:1: context micScriptComponent
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:2: import java.awt.*
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:3: import javax.swing.*
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:4: var private boolean iReverseMerge = true;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:5: var private String iFileSeparator = System.getProperty("file.separator");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:6: end
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:7: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:8:   public void generateDtable(String aXmlDefinition) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:9:     resetExit();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:10:     try {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:11: %>generateDtable: <!%aXmlDefinition!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:12: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:13:     parseXmlPath(path(aXmlDefinition) + ".xml");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:14: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:15:     if (<!com.esarks.arm.schemas.rules.root!>!size() == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:16:       setContext(iScript.getMasterScript());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:17:       <!$jac:event!>!set("Could not find <com.esarks.arm.schemas.rules.root> tag in " + path(aXmlDefinition) + ".xml file.");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:18:       <!$jac:event:severity!>!set("fatal");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:19:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:20:       <!$jac:event:scriptName!>!set(iScriptName);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:21:       restoreContext();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:22:       setExit();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:23:       return;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:24:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:25: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:26:     boolean lForce = false;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:27:     setContext(iScript.getMasterScript());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:28:     if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:29:     restoreContext();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:30:     if (!lForce) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:31:       File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateDtable") + ".new");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:32:       File lXmlFile = new File(path(aXmlDefinition) + ".xml");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:33:       File lNewFile = new File(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".script");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:34:       if (lNewFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:35:           lGeneratorFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:36:         String lReportName = <![com.esarks.arm.schemas.rules.root:name]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:37:         setContext(iScript.getMasterScript());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:38:         <!$jac:event!>!set("File " + lReportName + ".script is not stale.  Generation bypassed.");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:39:         <!$jac:event:severity!>!set("info");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:40:         <!$jac:event:scriptPackage!>!set(iScriptPackage);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:41:         <!$jac:event:scriptName!>!set(iScriptName);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:42:         restoreContext();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:43:         setExit();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:44:         return;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:45:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:46:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:47: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:48:     setContext(iScript.getMasterScript());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:49:     String lHomePath = <![$jac:path:home]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:50:     String lWorkPath = <![$jac:path:work]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:51:     String lScriptPath = <![$jac:path:scripts]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:52:     restoreContext();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:53:     String lPackageName = "";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:54:     String lPackagePath = "";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:55:     String aScriptName = <![com.esarks.arm.schemas.rules.root:name]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:56:     String lScriptName = aScriptName;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:57: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:58:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:59:         int lLastDot = -1;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:60:         for (int lIdx = aScriptName.length() - 1; lIdx >= 0; lIdx--) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:61:             if (aScriptName.charAt(lIdx) == '.') {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:62:                 lLastDot = lIdx;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:63:                 break;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:64:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:65:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:66: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:67:         if (lLastDot > -1) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:68:             lPackageName = aScriptName.substring(0, lLastDot);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:69:             lPackagePath = lPackageName;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:70:             lScriptName = aScriptName.substring(lLastDot + 1);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:71:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:72: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:73:         int lIdx = lPackagePath.indexOf(".");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:74:         while (lIdx > -1) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:75:             lPackagePath = lPackagePath.substring(0,lIdx) + iFileSeparator + lPackagePath.substring(lIdx+1);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:76:             lIdx = lPackagePath.indexOf(".");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:77:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:78:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:79: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:80: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:81:     File lPrimarySourceFile = new File(lScriptPath + iFileSeparator + lPackagePath + iFileSeparator + lScriptName + ".script");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:82:     if (lPrimarySourceFile.exists()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:83:         try {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:84:             File lJavaFile = new File(lWorkPath + iFileSeparator + lPackagePath + iFileSeparator + lScriptName + ".java");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:85: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:86:             if (iReverseMerge == false && lJavaFile.exists() && lJavaFile.lastModified() > lPrimarySourceFile.lastModified()) lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:87: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:88:             if (iReverseMerge && lJavaFile.exists() && lJavaFile.lastModified() > lPrimarySourceFile.lastModified()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:89: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:90:                 boolean lReverseMergeThisFile = false;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:91:                 java.awt.Frame lFrame = new java.awt.Frame();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:92:                 int lResult = JOptionPane.showConfirmDialog(lFrame, "Do you want to Reverse Merge " + lPrimarySourceFile.getName() + "?");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:93:                 switch (lResult) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:94:                     case JOptionPane.YES_OPTION:
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:95:                         lReverseMergeThisFile = true;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:96:                         break;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:97:                     case JOptionPane.NO_OPTION:
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:98:                         lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:99:                         lReverseMergeThisFile = false;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:100:                         break;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:101:                     case JOptionPane.CANCEL_OPTION:
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:102:                         lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:103:                         lReverseMergeThisFile = false;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:104:                         iReverseMerge = false;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:105:                         break;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:106:                 }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:107:                 lFrame.dispose();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:108: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:109:                 if (lReverseMergeThisFile) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:110:                     if (!iOutputManager.isJspOpen()) iOutputManager.println("Reverse Merging " + lPrimarySourceFile.getName(), true);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:111:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:sectionMarker", new PropertyValue("//$Sec" + "tion="));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:112:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:preserveMarker", new PropertyValue("$Pres" + "erve=yes"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:113:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:noPreserveMarker", new PropertyValue("$Pres" + "erve=no"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:114:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:keepPreserveMarker", new PropertyValue("$Pres" + "erve=keep"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:115:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:discardPreserveMarker", new PropertyValue("$Pres" + "erve=discard"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:116:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:preservePreamble", new PropertyValue("no"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:117:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:comments", new PropertyValue("//"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:118:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:commentsBegin", new PropertyValue("/*"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:119:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:commentsEnd", new PropertyValue("*/"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:120:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:reverseMergeMarker", new PropertyValue("$Reverse" + "Merge=yes"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:121:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:reverseMergeNoPreserveMarker", new PropertyValue("$Reverse" + "Merge=no"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:122:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:excludeCompare", new PropertyValue("//  Gener" + "ated at"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:123:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:trimOutput", new PropertyValue("yes"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:124:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:keepSections", new PropertyValue("no"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:125:                     Merge.getInstance().doMergeToExisting(lPrimarySourceFile.getAbsolutePath(), lJavaFile.getAbsolutePath(), iScript);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:126: //                      lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:127:                 }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:128:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:129:         } catch (Exception e) {if (!iOutputManager.isJspOpen()) iOutputManager.println(e.getMessage(), true);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:130:                                if (!iOutputManager.isJspOpen()) iOutputManager.println("Error in ReverseMerge.", true);}
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:131:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:132: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:133:     setContext(iScript.getMasterScript());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:134:     <!$jac:merge:sectionMarker!>!reset("//$Section=");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:135:     <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:136:     <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:137:     <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:138:     <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:139:     <!$jac:merge:preservePreamble!>!reset("yes");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:140:     <!$jac:merge:comments!>!reset("//");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:141:     <!$jac:merge:excludeCompare!>!reset("//  Generated at");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:142:     <!$jac:merge:trimOutput!>!reset("yes");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:143:     <!$jac:merge:keepSections!>!reset("no");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:144:     restoreContext();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:145: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:146: //    String lLineNbr = "<" + "#" + "[$jac:script:lineNumber]#>";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:147: //    boolean lResultSetExists = false;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:148: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:149:     openOutput(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".html");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:150: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:151:     %><html><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:152:     %><table border=1 cellpadding=2 cellspacing=0><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:153:     %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><tr><td><b><![com.esarks.arm.schemas.rules.root:title]!></b> (<![com.esarks.arm.schemas.rules.root:name]!>)<%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:154:     %></td></tr></table></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:155:     %><tr bgcolor="#ccccff"><td><b>Rule Controller:</b></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:156:     %><tr><td><![com.esarks.arm.schemas.rules.root:text]!><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:157:     %></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:158:     %></table><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:159:     %><p><i>List of Decision Tables:</i><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:160:     %><ul><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:161:     <!com.esarks.arm.schemas.rules.root:dtable!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:162:       %><li><![com.esarks.arm.schemas.rules.root:dtable:title]!> (<![com.esarks.arm.schemas.rules.root:dtable:name]!>) <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:163:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:164:     %></ul><br><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:165: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:166:     <!com.esarks.arm.schemas.rules.root:dtable!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:167:       if (<![com.esarks.arm.schemas.rules.root:dtable:pagebreak]!>.equals("true")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:168:         %><p style="page-break-before: always"><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:169:       } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:170:         %><p><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:171:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:172:       %><a name="<!%iScriptFullName!>_<!%iScriptInstanceName!>_<![com.esarks.arm.schemas.rules.root:dtable:name]!>"></a><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:173:       %><table width="100%" border="0" cellpadding="0" cellspacing="0"><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:174:       %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:175:       %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><tr><td><b><![com.esarks.arm.schemas.rules.root:dtable:title]!></b> (<![com.esarks.arm.schemas.rules.root:dtable:name]!>)</td></tr></table></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:176:       %><tr bgcolor="#ccccff"><td><b>Control:</b></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:177:       %><tr><td><![com.esarks.arm.schemas.rules.root:dtable:text]!></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:178:       %><tr bgcolor="#ccccff"><td><b>Method Prototype:</b></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:179:       %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:180:       String lReturn = "void";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:181:       String lVisibility = "private";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:182:       if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() > 0) lReturn = <![com.esarks.arm.schemas.rules.root:dtable:return]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:183:       if (<!com.esarks.arm.schemas.rules.root:dtable:visibility!>!size() > 0) lVisibility = <![com.esarks.arm.schemas.rules.root:dtable:visibility]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:184:       %><tr><td colspan=3><b>Return:</b> <!%lReturn!>; <b>Visibility:</b> <!%lVisibility!>; <b>Name:</b> <![com.esarks.arm.schemas.rules.root:dtable:name]!></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:185:       %><tr><td><b>Type</b></td><td><b>Name</b></td><td><b>Description</b></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:186:       <!com.esarks.arm.schemas.rules.root:dtable:argument!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:187:         %><tr><td><![com.esarks.arm.schemas.rules.root:dtable:argument:type]!></td><td><![com.esarks.arm.schemas.rules.root:dtable:argument:name]!></td><td><![com.esarks.arm.schemas.rules.root:dtable:argument:document]!></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:188:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:189:       %></table></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:190:       %></table></td></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:191:       %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:192:       if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() == 1) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:193:         %><tr bgcolor="#ccccff"><td><b>Condition:</b></td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:194:       } else if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() > 1) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:195:         %><tr bgcolor="#ccccff"><td><b>Conditions:</b></td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:196:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:197:       for (int lIdx=0; lIdx < <!com.esarks.arm.schemas.rules.root:dtable:scenario!>!size(); lIdx++) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:198:         %><td width="20" valign="top" align="center"><b><!%Integer.toString(lIdx+1)!></b></td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:199:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:200:       %></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:201:       <!com.esarks.arm.schemas.rules.root:dtable:condition!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:202:         String lConditionText = <![com.esarks.arm.schemas.rules.root:dtable:condition:text]!>.trim();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:203:         %><tr><td><table border="0" cellpadding="2" cellspacing="0"><tr><td valign="top"><![com.esarks.arm.schemas.rules.root:dtable:condition:id]!>)</td><td valign="top"><!%lConditionText!><br><small>[<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>]</small><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:204:         %></td></tr></table></td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:205:         <!com.esarks.arm.schemas.rules.root:dtable:scenario!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:206:           <!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:207:           if (<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!scan("condition:id", <![com.esarks.arm.schemas.rules.root:dtable:condition:id]!>)) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:208:             if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate!>!size() == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:209:               %><td width="20" valign="top" align="center">T</td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:210:             } else if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("true")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:211:               %><td width="20" valign="top" align="center">T</td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:212:             } else if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("false")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:213:               %><td width="20" valign="top" align="center">F</td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:214:             } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:215:               %><td width="20" valign="top" align="center">?</td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:216:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:217:           } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:218:             %><td>&nbsp;</td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:219:           }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:220:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:221:         %></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:222:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:223:       %></table><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:224:       %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:225:       if (<!com.esarks.arm.schemas.rules.root:dtable:action!>!size() == 1) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:226:         %><tr bgcolor="#ccccff"><td><b>Action:</b></td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:227:       } else if (<!com.esarks.arm.schemas.rules.root:dtable:action!>!size() > 1) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:228:         %><tr bgcolor="#ccccff"><td><b>Actions:</b></td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:229:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:230:       for (int lIdx=0; lIdx < <!com.esarks.arm.schemas.rules.root:dtable:scenario!>!size(); lIdx++) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:231:         %><td width="20" valign="top" align="center"><b><!%Integer.toString(lIdx+1)!></b></td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:232:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:233:       %></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:234:       <!com.esarks.arm.schemas.rules.root:dtable:action!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:235:         String lActionText = <![com.esarks.arm.schemas.rules.root:dtable:action:text]!>.trim();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:236:         %><tr><td><table border="0" cellpadding="2" cellspacing="0"><tr><td valign="top"><![com.esarks.arm.schemas.rules.root:dtable:action:id]!>)</td><td><!%lActionText!><br><small>[<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>]</small><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:237:         %></td></tr></table></td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:238:         <!com.esarks.arm.schemas.rules.root:dtable:scenario!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:239:           <!com.esarks.arm.schemas.rules.root:dtable:scenario:action!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:240:           if (<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!scan("action:id", <![com.esarks.arm.schemas.rules.root:dtable:action:id]!>)) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:241:             int lSeq = <!com.esarks.arm.schemas.rules.root:dtable:scenario:action!>!getIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:242:             %><td width="20" valign="top" align="center"><!%lSeq!></td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:243:           } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:244:             %><td>&nbsp;</td><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:245:           }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:246:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:247:         %></tr><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:248:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:249:       %></table></td></tr></table><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:250:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:251:     %></html><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:252: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:253:     closeOutput();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:254: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:255:     openOutput(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".new");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:256: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:257:     setContext(iScript.getMasterScript());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:258:     String lDateTime = <![$jac:dateTime]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:259:     restoreContext();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:260: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:261:     String lStart = "%" + ">";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:262:     String lStop = "<" + "%";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:263:     String lVarStart = "<" + "!";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:264:     String lVarEnd = "!" + ">";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:265:     String lScriptBegin = "<" + "&";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:266:     String lScriptEnd = "&" + ">";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:267:     
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:268: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:269: //  Generated at <!%lDateTime!> by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:270: //$Section=genertedBody$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:271: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:272: // TODO: Place custom declarations (e.g. variables) or helper methods here.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:273: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:274: //$Section=genertedBody$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:275: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:276: <!%lScriptBegin!> com.esarks.arm.scripts.Method
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:277:   <method name="execute" visibility="public" return="void" >
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:278:   </method>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:279: <!%lScriptEnd!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:280: //$Section=execute$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:281: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:282: // TODO: Place execute() method behavior here.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:283: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:284: //$Section=execute$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:285: <!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod <!%lScriptEnd!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:286: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:287: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:288: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:289:     <!com.esarks.arm.schemas.rules.root:dtable!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:290:     String lReturn = "void";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:291:     String lVisibility = "private";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:292:     if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() > 0) lReturn = <![com.esarks.arm.schemas.rules.root:dtable:return]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:293:     if (<!com.esarks.arm.schemas.rules.root:dtable:visibility!>!size() > 0) lVisibility = <![com.esarks.arm.schemas.rules.root:dtable:visibility]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:294: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:295: <!%lScriptBegin!> com.esarks.arm.scripts.Method
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:296:   <method name="<![com.esarks.arm.schemas.rules.root:dtable:name]!>" visibility="<!%lVisibility!>" return="<!%lReturn!>" >
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:297: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:298:       <!com.esarks.arm.schemas.rules.root:dtable:argument!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:299: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:300:     <argument type="<![com.esarks.arm.schemas.rules.root:dtable:argument:type]!>" name="a<![com.esarks.arm.schemas.rules.root:dtable:argument:name]!>" document="<![com.esarks.arm.schemas.rules.root:dtable:argument:document]!>" />
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:301: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:302:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:303: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:304:   </method>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:305: <!%lScriptEnd!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:306: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:307: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:308: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:309:       <!com.esarks.arm.schemas.rules.root:dtable:condition!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:310: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:311:     boolean lConditionEnable_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = true;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:312: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:313:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:314: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:315: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:316: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:317: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:318: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Precondition
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:319: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_precondition$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:320: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:321: // TODO: Place decision table control initialization behavior here.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:322: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:323: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_precondition$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:324: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:325: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:326:       if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() > 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:327: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:328:     boolean lDecisionTableProcessing = false;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:329: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:330:     do {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:331:         if (iMicLog.test(Log._APP)) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:332:             iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Start of DecisionTable loop");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:333:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:334:         lDecisionTableProcessing = false;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:335:         boolean lScenarioProcessing = true;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:336:         int lNextScenario = 0;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:337:         do {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:338:           if (iMicLog.test(Log._APP)) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:339:               iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Start of Scenario loop");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:340:           }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:341: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:342: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:343: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:344: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:345: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Code
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:346: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_code$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:347: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:348: // TODO: Place decision table control initialization behavior here. (This is within the "do" iteration loops).
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:349: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:350: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_code$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:351: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:352: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:353:       <!com.esarks.arm.schemas.rules.root:dtable:condition!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:354: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:355: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:356: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Condition id = <![com.esarks.arm.schemas.rules.root:dtable:condition:id]!>; symbolicId = <![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:357: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:358:       String lText = <![com.esarks.arm.schemas.rules.root:dtable:condition:text]!>.trim();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:359: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:360: /* <!%lText!> */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:361: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_condition_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:362: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:363: // TODO: Modify or add condition processing behavior here.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:364: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:365:             int lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = 0;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:366:             if (lConditionEnable_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:367: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:368:                 lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = 0;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:369: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:370:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:371: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:372: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_condition_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:373: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:374:             if (iMicLog.test(Log._APP)) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:375:                 iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = " + lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:376:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:377: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:378:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:379: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:380:             int lScenarioTaken = 0;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:381:             ArrayList lActionArrayList = new ArrayList();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:382: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:383:       <!com.esarks.arm.schemas.rules.root:dtable:scenario!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:384:         String lScenarioNumber = Integer.toString(<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!getIterator());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:385:         String lConditionsExist = " &&";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:386:         if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>!size() == 0) lConditionsExist = "";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:387:         if (<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!isFirst()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:388: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:389:             if (lScenarioProcessing && lNextScenario <= <!%lScenarioNumber!><!%lConditionsExist!> <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:390:         } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:391: %> else if (lScenarioProcessing && lNextScenario <= <!%lScenarioNumber!><!%lConditionsExist!> <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:392: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:393:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:394:         <!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:395:           String lTest = "true";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:396:           if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate!>!size() > 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:397:             if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("true")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:398:               lTest = "true";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:399:             } else if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("false")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:400:               lTest = "false";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:401:             } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:402:               lTest = "?";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:403:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:404:           }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:405:           String lAnd = " &&";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:406:           if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>!isLast()) lAnd = "";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:407:             <!com.esarks.arm.schemas.rules.root:dtable:condition!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:408:             <!com.esarks.arm.schemas.rules.root:dtable!>!scan("condition:id", <![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:id]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:409:             if (lTest.equals("true")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:410: %>(lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> > 0)<!%lAnd!><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:411:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:412:             if (lTest.equals("false")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:413: %>(lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> < 0)<!%lAnd!><%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:414:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:415:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:416: %>) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:417:                 // Scenario <!%lScenarioNumber!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:418:                 if (iMicLog.test(Log._APP)) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:419:                     iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Scenario <!%lScenarioNumber!> taken.");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:420:                 }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:421:                 lScenarioTaken = <!%lScenarioNumber!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:422:                 lScenarioProcessing = false;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:423: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:424:         <!com.esarks.arm.schemas.rules.root:dtable:scenario:action!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:425:           <!com.esarks.arm.schemas.rules.root:dtable:action!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:426:           <!com.esarks.arm.schemas.rules.root:dtable!>!scan("action:id", <![com.esarks.arm.schemas.rules.root:dtable:scenario:action:id]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:427: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:428:                 // Action symbolicId=<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:429:                 lActionArrayList.add("<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:430: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:431:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:432: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:433:             }<%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:434:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:435: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:436: else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:437:                 // No scenario taken
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:438:                 if (iMicLog.test(Log._APP)) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:439:                     iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!No scenario taken.");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:440:                 }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:441:                 lScenarioProcessing = false;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:442:                 lScenarioTaken = -1;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:443:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:444: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:445: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Actions (all have visibility of this section)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:446: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_actions$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:447: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:448: // TODO: Place global action behavior here.  This section is visible to all actions.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:449: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:450: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_actions$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:451: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:452:             for (int lActionIdx=0; lActionIdx < lActionArrayList.size(); lActionIdx++) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:453: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:454:       <!com.esarks.arm.schemas.rules.root:dtable:action!>& {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:455: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:456:         if (<!com.esarks.arm.schemas.rules.root:dtable:action!>!isFirst()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:457: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:458:                 if (((String) lActionArrayList.get(lActionIdx)).equals("<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:459: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:460:         } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:461: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:462:  else if (((String) lActionArrayList.get(lActionIdx)).equals("<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:463: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:464:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:465: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:466:                     // Action symbolicId=<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:467:                     if (iMicLog.test(Log._APP)) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:468:                         iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Performing action code \\\"<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>\\\"");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:469:                     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:470: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:471: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Action id = <![com.esarks.arm.schemas.rules.root:dtable:action:id]!>; symbolicId = <![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:472: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:473:       String lText = <![com.esarks.arm.schemas.rules.root:dtable:action:text]!>.trim();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:474: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:475: /* <!%lText!> */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:476: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_action_<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:477: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:478: // TODO: Place action behavior here.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:479: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:480: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_action_<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:481: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:482:                 }<%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:483:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:484: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:485: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:486:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:487:         } while(lScenarioProcessing);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:488: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:489:         if (iMicLog.test(Log._APP)) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:490:             iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Fall out of Scenario loop");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:491:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:492: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:493: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:494: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:495: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:496: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Postcondition
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:497: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_postcondition$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:498: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:499: // TODO: Place decision table control post-processing behavior here.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:500: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:501: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_postcondition$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:502: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:503:     } while(lDecisionTableProcessing);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:504: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:505:     if (iMicLog.test(Log._APP)) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:506:         iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Fall out of DecisionTable loop");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:507:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:508: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:509: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:510:       } // if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() > 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:511: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:512:       if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:513: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:514: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:515: <!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod <!%lScriptEnd!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:516: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:517: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:518:         continue;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:519:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:520:       if (<![com.esarks.arm.schemas.rules.root:dtable:return]!>.equals("boolean")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:521: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:522: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:523: <!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:524:   <return>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:525:     <normal>true</normal>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:526:     <error>false</error>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:527:   </return>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:528: <!%lScriptEnd!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:529: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:530: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:531:         continue;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:532:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:533:       if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() > 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:534: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:535: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:536: <!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:537:   <return>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:538:     <normal>null</normal>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:539:     <error>null</error>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:540:   </return>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:541: <!%lScriptEnd!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:542: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:543: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:544:         continue;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:545:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:546: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:547: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:548: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:549: <!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod <!%lScriptEnd!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:550: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:551: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:552:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:553: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:554: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:555: //$Section=endOfClass$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:556: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:557: // TODO: Place helper methods or inner-classes here.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:558: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:559: //$Section=endOfClass$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:560: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:561: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:562:     closeOutput();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:563: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:564:     if (<![com.esarks.arm.schemas.rules.root:generateCode]!>.equals("true")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:565:       Merge.getInstance().doMerge(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".script", path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".new", iScript.getMasterScript());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:566:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:567:     
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:568:     } catch (Throwable e) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:569:       setContext(iScript.getMasterScript());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:570:       <!$jac:event!>!set(e.getMessage());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:571:       <!$jac:event:severity!>!set("fatal");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:572:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:573:       <!$jac:event:scriptName!>!set(iScriptName);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:574:       restoreContext();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:575:       setExit();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:576:       return;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:577:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:578: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:579:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPostfix.script:1: }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:3: import java.util.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:5: import java.io.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:6: import java.text.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:7: import java.sql.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:8: //import java.net.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:10: //import java.security.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:13: //import java.awt.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:15: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:18: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:19: <#import#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:4: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:6:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:7: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:9: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:11: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:12:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:1: context micScriptComponent
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:2: import java.awt.*
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:3: import javax.swing.*
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:4: var private boolean iReverseMerge = true;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:5: var private String iFileSeparator = System.getProperty("file.separator");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:6: end
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:7: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:8:   public void generateDtable(String aXmlDefinition) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:9:     resetExit();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:10:     try {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:11: %>generateDtable: <!%aXmlDefinition!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:12: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:13:     parseXmlPath(path(aXmlDefinition) + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:14: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:15:     if (<!com.esarks.arm.schemas.rules.root!>!size() == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:16:       setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:17:       <!$jac:event!>!set("Could not find <com.esarks.arm.schemas.rules.root> tag in " + path(aXmlDefinition) + ".xml file.");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:18:       <!$jac:event:severity!>!set("fatal");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:19:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:20:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:21:       restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:22:       setExit();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:23:       return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:24:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:25: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:26:     boolean lForce = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:27:     setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:28:     if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:29:     restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:30:     if (!lForce) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:31:       File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateDtable") + ".new");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:32:       File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:33:       File lNewFile = new File(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".script");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:34:       if (lNewFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:35:           lGeneratorFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:36:         String lReportName = <![com.esarks.arm.schemas.rules.root:name]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:37:         setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:38:         <!$jac:event!>!set("File " + lReportName + ".script is not stale.  Generation bypassed.");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:39:         <!$jac:event:severity!>!set("info");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:40:         <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:41:         <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:42:         restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:43:         setExit();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:44:         return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:45:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:46:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:47: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:48:     setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:49:     String lHomePath = <![$jac:path:home]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:50:     String lWorkPath = <![$jac:path:work]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:51:     String lScriptPath = <![$jac:path:scripts]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:52:     restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:53:     String lPackageName = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:54:     String lPackagePath = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:55:     String aScriptName = <![com.esarks.arm.schemas.rules.root:name]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:56:     String lScriptName = aScriptName;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:57: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:58:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:59:         int lLastDot = -1;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:60:         for (int lIdx = aScriptName.length() - 1; lIdx >= 0; lIdx--) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:61:             if (aScriptName.charAt(lIdx) == '.') {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:62:                 lLastDot = lIdx;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:63:                 break;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:64:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:65:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:66: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:67:         if (lLastDot > -1) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:68:             lPackageName = aScriptName.substring(0, lLastDot);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:69:             lPackagePath = lPackageName;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:70:             lScriptName = aScriptName.substring(lLastDot + 1);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:71:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:72: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:73:         int lIdx = lPackagePath.indexOf(".");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:74:         while (lIdx > -1) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:75:             lPackagePath = lPackagePath.substring(0,lIdx) + iFileSeparator + lPackagePath.substring(lIdx+1);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:76:             lIdx = lPackagePath.indexOf(".");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:77:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:78:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:79: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:80: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:81:     File lPrimarySourceFile = new File(lScriptPath + iFileSeparator + lPackagePath + iFileSeparator + lScriptName + ".script");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:82:     if (lPrimarySourceFile.exists()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:83:         try {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:84:             File lJavaFile = new File(lWorkPath + iFileSeparator + lPackagePath + iFileSeparator + lScriptName + ".java");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:85: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:86:             if (iReverseMerge == false && lJavaFile.exists() && lJavaFile.lastModified() > lPrimarySourceFile.lastModified()) lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:87: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:88:             if (iReverseMerge && lJavaFile.exists() && lJavaFile.lastModified() > lPrimarySourceFile.lastModified()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:89: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:90:                 boolean lReverseMergeThisFile = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:91:                 java.awt.Frame lFrame = new java.awt.Frame();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:92:                 int lResult = JOptionPane.showConfirmDialog(lFrame, "Do you want to Reverse Merge " + lPrimarySourceFile.getName() + "?");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:93:                 switch (lResult) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:94:                     case JOptionPane.YES_OPTION:
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:95:                         lReverseMergeThisFile = true;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:96:                         break;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:97:                     case JOptionPane.NO_OPTION:
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:98:                         lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:99:                         lReverseMergeThisFile = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:100:                         break;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:101:                     case JOptionPane.CANCEL_OPTION:
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:102:                         lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:103:                         lReverseMergeThisFile = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:104:                         iReverseMerge = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:105:                         break;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:106:                 }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:107:                 lFrame.dispose();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:108: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:109:                 if (lReverseMergeThisFile) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:110:                     if (!iOutputManager.isJspOpen()) iOutputManager.println("Reverse Merging " + lPrimarySourceFile.getName(), true);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:111:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:sectionMarker", new PropertyValue("//$Sec" + "tion="));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:112:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:preserveMarker", new PropertyValue("$Pres" + "erve=yes"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:113:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:noPreserveMarker", new PropertyValue("$Pres" + "erve=no"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:114:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:keepPreserveMarker", new PropertyValue("$Pres" + "erve=keep"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:115:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:discardPreserveMarker", new PropertyValue("$Pres" + "erve=discard"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:116:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:preservePreamble", new PropertyValue("no"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:117:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:comments", new PropertyValue("//"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:118:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:commentsBegin", new PropertyValue("/*"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:119:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:commentsEnd", new PropertyValue("*/"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:120:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:reverseMergeMarker", new PropertyValue("$Reverse" + "Merge=yes"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:121:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:reverseMergeNoPreserveMarker", new PropertyValue("$Reverse" + "Merge=no"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:122:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:excludeCompare", new PropertyValue("//  Gener" + "ated at"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:123:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:trimOutput", new PropertyValue("yes"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:124:                     iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:keepSections", new PropertyValue("no"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:125:                     Merge.getInstance().doMergeToExisting(lPrimarySourceFile.getAbsolutePath(), lJavaFile.getAbsolutePath(), iScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:126: //                      lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:127:                 }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:128:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:129:         } catch (Exception e) {if (!iOutputManager.isJspOpen()) iOutputManager.println(e.getMessage(), true);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:130:                                if (!iOutputManager.isJspOpen()) iOutputManager.println("Error in ReverseMerge.", true);}
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:131:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:132: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:133:     setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:134:     <!$jac:merge:sectionMarker!>!reset("//$Section=");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:135:     <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:136:     <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:137:     <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:138:     <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:139:     <!$jac:merge:preservePreamble!>!reset("yes");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:140:     <!$jac:merge:comments!>!reset("//");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:141:     <!$jac:merge:excludeCompare!>!reset("//  Generated at");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:142:     <!$jac:merge:trimOutput!>!reset("yes");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:143:     <!$jac:merge:keepSections!>!reset("no");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:144:     restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:145: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:146: //    String lLineNbr = "<" + "#" + "[$jac:script:lineNumber]#>";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:147: //    boolean lResultSetExists = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:148: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:149:     openOutput(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".html");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:150: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:151:     %><html><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:152:     %><table border=1 cellpadding=2 cellspacing=0><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:153:     %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><tr><td><b><![com.esarks.arm.schemas.rules.root:title]!></b> (<![com.esarks.arm.schemas.rules.root:name]!>)<%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:154:     %></td></tr></table></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:155:     %><tr bgcolor="#ccccff"><td><b>Rule Controller:</b></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:156:     %><tr><td><![com.esarks.arm.schemas.rules.root:text]!><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:157:     %></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:158:     %></table><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:159:     %><p><i>List of Decision Tables:</i><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:160:     %><ul><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:161:     <!com.esarks.arm.schemas.rules.root:dtable!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:162:       %><li><![com.esarks.arm.schemas.rules.root:dtable:title]!> (<![com.esarks.arm.schemas.rules.root:dtable:name]!>) <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:163:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:164:     %></ul><br><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:165: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:166:     <!com.esarks.arm.schemas.rules.root:dtable!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:167:       if (<![com.esarks.arm.schemas.rules.root:dtable:pagebreak]!>.equals("true")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:168:         %><p style="page-break-before: always"><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:169:       } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:170:         %><p><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:171:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:172:       %><a name="<!%iScriptFullName!>_<!%iScriptInstanceName!>_<![com.esarks.arm.schemas.rules.root:dtable:name]!>"></a><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:173:       %><table width="100%" border="0" cellpadding="0" cellspacing="0"><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:174:       %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:175:       %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><tr><td><b><![com.esarks.arm.schemas.rules.root:dtable:title]!></b> (<![com.esarks.arm.schemas.rules.root:dtable:name]!>)</td></tr></table></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:176:       %><tr bgcolor="#ccccff"><td><b>Control:</b></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:177:       %><tr><td><![com.esarks.arm.schemas.rules.root:dtable:text]!></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:178:       %><tr bgcolor="#ccccff"><td><b>Method Prototype:</b></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:179:       %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:180:       String lReturn = "void";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:181:       String lVisibility = "private";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:182:       if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() > 0) lReturn = <![com.esarks.arm.schemas.rules.root:dtable:return]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:183:       if (<!com.esarks.arm.schemas.rules.root:dtable:visibility!>!size() > 0) lVisibility = <![com.esarks.arm.schemas.rules.root:dtable:visibility]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:184:       %><tr><td colspan=3><b>Return:</b> <!%lReturn!>; <b>Visibility:</b> <!%lVisibility!>; <b>Name:</b> <![com.esarks.arm.schemas.rules.root:dtable:name]!></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:185:       %><tr><td><b>Type</b></td><td><b>Name</b></td><td><b>Description</b></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:186:       <!com.esarks.arm.schemas.rules.root:dtable:argument!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:187:         %><tr><td><![com.esarks.arm.schemas.rules.root:dtable:argument:type]!></td><td><![com.esarks.arm.schemas.rules.root:dtable:argument:name]!></td><td><![com.esarks.arm.schemas.rules.root:dtable:argument:document]!></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:188:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:189:       %></table></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:190:       %></table></td></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:191:       %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:192:       if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() == 1) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:193:         %><tr bgcolor="#ccccff"><td><b>Condition:</b></td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:194:       } else if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() > 1) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:195:         %><tr bgcolor="#ccccff"><td><b>Conditions:</b></td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:196:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:197:       for (int lIdx=0; lIdx < <!com.esarks.arm.schemas.rules.root:dtable:scenario!>!size(); lIdx++) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:198:         %><td width="20" valign="top" align="center"><b><!%Integer.toString(lIdx+1)!></b></td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:199:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:200:       %></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:201:       <!com.esarks.arm.schemas.rules.root:dtable:condition!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:202:         String lConditionText = <![com.esarks.arm.schemas.rules.root:dtable:condition:text]!>.trim();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:203:         %><tr><td><table border="0" cellpadding="2" cellspacing="0"><tr><td valign="top"><![com.esarks.arm.schemas.rules.root:dtable:condition:id]!>)</td><td valign="top"><!%lConditionText!><br><small>[<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>]</small><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:204:         %></td></tr></table></td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:205:         <!com.esarks.arm.schemas.rules.root:dtable:scenario!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:206:           <!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:207:           if (<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!scan("condition:id", <![com.esarks.arm.schemas.rules.root:dtable:condition:id]!>)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:208:             if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate!>!size() == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:209:               %><td width="20" valign="top" align="center">T</td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:210:             } else if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("true")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:211:               %><td width="20" valign="top" align="center">T</td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:212:             } else if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("false")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:213:               %><td width="20" valign="top" align="center">F</td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:214:             } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:215:               %><td width="20" valign="top" align="center">?</td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:216:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:217:           } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:218:             %><td>&nbsp;</td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:219:           }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:220:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:221:         %></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:222:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:223:       %></table><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:224:       %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:225:       if (<!com.esarks.arm.schemas.rules.root:dtable:action!>!size() == 1) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:226:         %><tr bgcolor="#ccccff"><td><b>Action:</b></td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:227:       } else if (<!com.esarks.arm.schemas.rules.root:dtable:action!>!size() > 1) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:228:         %><tr bgcolor="#ccccff"><td><b>Actions:</b></td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:229:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:230:       for (int lIdx=0; lIdx < <!com.esarks.arm.schemas.rules.root:dtable:scenario!>!size(); lIdx++) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:231:         %><td width="20" valign="top" align="center"><b><!%Integer.toString(lIdx+1)!></b></td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:232:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:233:       %></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:234:       <!com.esarks.arm.schemas.rules.root:dtable:action!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:235:         String lActionText = <![com.esarks.arm.schemas.rules.root:dtable:action:text]!>.trim();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:236:         %><tr><td><table border="0" cellpadding="2" cellspacing="0"><tr><td valign="top"><![com.esarks.arm.schemas.rules.root:dtable:action:id]!>)</td><td><!%lActionText!><br><small>[<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>]</small><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:237:         %></td></tr></table></td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:238:         <!com.esarks.arm.schemas.rules.root:dtable:scenario!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:239:           <!com.esarks.arm.schemas.rules.root:dtable:scenario:action!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:240:           if (<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!scan("action:id", <![com.esarks.arm.schemas.rules.root:dtable:action:id]!>)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:241:             int lSeq = <!com.esarks.arm.schemas.rules.root:dtable:scenario:action!>!getIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:242:             %><td width="20" valign="top" align="center"><!%lSeq!></td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:243:           } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:244:             %><td>&nbsp;</td><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:245:           }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:246:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:247:         %></tr><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:248:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:249:       %></table></td></tr></table><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:250:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:251:     %></html><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:252: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:253:     closeOutput();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:254: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:255:     openOutput(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".new");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:256: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:257:     setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:258:     String lDateTime = <![$jac:dateTime]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:259:     restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:260: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:261:     String lStart = "%" + ">";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:262:     String lStop = "<" + "%";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:263:     String lVarStart = "<" + "!";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:264:     String lVarEnd = "!" + ">";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:265:     String lScriptBegin = "<" + "&";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:266:     String lScriptEnd = "&" + ">";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:267:     
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:268: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:269: //  Generated at <!%lDateTime!> by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:270: //$Section=genertedBody$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:271: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:272: // TODO: Place custom declarations (e.g. variables) or helper methods here.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:273: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:274: //$Section=genertedBody$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:275: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:276: <!%lScriptBegin!> com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:277:   <method name="execute" visibility="public" return="void" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:278:   </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:279: <!%lScriptEnd!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:280: //$Section=execute$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:281: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:282: // TODO: Place execute() method behavior here.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:283: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:284: //$Section=execute$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:285: <!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod <!%lScriptEnd!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:286: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:287: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:288: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:289:     <!com.esarks.arm.schemas.rules.root:dtable!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:290:     String lReturn = "void";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:291:     String lVisibility = "private";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:292:     if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() > 0) lReturn = <![com.esarks.arm.schemas.rules.root:dtable:return]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:293:     if (<!com.esarks.arm.schemas.rules.root:dtable:visibility!>!size() > 0) lVisibility = <![com.esarks.arm.schemas.rules.root:dtable:visibility]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:294: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:295: <!%lScriptBegin!> com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:296:   <method name="<![com.esarks.arm.schemas.rules.root:dtable:name]!>" visibility="<!%lVisibility!>" return="<!%lReturn!>" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:297: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:298:       <!com.esarks.arm.schemas.rules.root:dtable:argument!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:299: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:300:     <argument type="<![com.esarks.arm.schemas.rules.root:dtable:argument:type]!>" name="a<![com.esarks.arm.schemas.rules.root:dtable:argument:name]!>" document="<![com.esarks.arm.schemas.rules.root:dtable:argument:document]!>" />
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:301: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:302:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:303: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:304:   </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:305: <!%lScriptEnd!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:306: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:307: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:308: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:309:       <!com.esarks.arm.schemas.rules.root:dtable:condition!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:310: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:311:     boolean lConditionEnable_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = true;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:312: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:313:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:314: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:315: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:316: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:317: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:318: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Precondition
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:319: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_precondition$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:320: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:321: // TODO: Place decision table control initialization behavior here.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:322: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:323: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_precondition$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:324: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:325: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:326:       if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:327: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:328:     boolean lDecisionTableProcessing = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:329: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:330:     do {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:331:         if (iMicLog.test(Log._APP)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:332:             iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Start of DecisionTable loop");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:333:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:334:         lDecisionTableProcessing = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:335:         boolean lScenarioProcessing = true;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:336:         int lNextScenario = 0;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:337:         do {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:338:           if (iMicLog.test(Log._APP)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:339:               iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Start of Scenario loop");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:340:           }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:341: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:342: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:343: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:344: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:345: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Code
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:346: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_code$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:347: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:348: // TODO: Place decision table control initialization behavior here. (This is within the "do" iteration loops).
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:349: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:350: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_code$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:351: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:352: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:353:       <!com.esarks.arm.schemas.rules.root:dtable:condition!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:354: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:355: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:356: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Condition id = <![com.esarks.arm.schemas.rules.root:dtable:condition:id]!>; symbolicId = <![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:357: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:358:       String lText = <![com.esarks.arm.schemas.rules.root:dtable:condition:text]!>.trim();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:359: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:360: /* <!%lText!> */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:361: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_condition_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:362: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:363: // TODO: Modify or add condition processing behavior here.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:364: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:365:             int lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = 0;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:366:             if (lConditionEnable_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:367: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:368:                 lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = 0;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:369: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:370:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:371: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:372: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_condition_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:373: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:374:             if (iMicLog.test(Log._APP)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:375:                 iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = " + lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:376:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:377: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:378:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:379: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:380:             int lScenarioTaken = 0;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:381:             ArrayList lActionArrayList = new ArrayList();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:382: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:383:       <!com.esarks.arm.schemas.rules.root:dtable:scenario!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:384:         String lScenarioNumber = Integer.toString(<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!getIterator());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:385:         String lConditionsExist = " &&";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:386:         if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>!size() == 0) lConditionsExist = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:387:         if (<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!isFirst()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:388: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:389:             if (lScenarioProcessing && lNextScenario <= <!%lScenarioNumber!><!%lConditionsExist!> <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:390:         } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:391: %> else if (lScenarioProcessing && lNextScenario <= <!%lScenarioNumber!><!%lConditionsExist!> <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:392: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:393:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:394:         <!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:395:           String lTest = "true";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:396:           if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:397:             if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("true")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:398:               lTest = "true";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:399:             } else if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("false")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:400:               lTest = "false";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:401:             } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:402:               lTest = "?";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:403:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:404:           }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:405:           String lAnd = " &&";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:406:           if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>!isLast()) lAnd = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:407:             <!com.esarks.arm.schemas.rules.root:dtable:condition!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:408:             <!com.esarks.arm.schemas.rules.root:dtable!>!scan("condition:id", <![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:id]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:409:             if (lTest.equals("true")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:410: %>(lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> > 0)<!%lAnd!><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:411:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:412:             if (lTest.equals("false")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:413: %>(lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> < 0)<!%lAnd!><%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:414:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:415:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:416: %>) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:417:                 // Scenario <!%lScenarioNumber!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:418:                 if (iMicLog.test(Log._APP)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:419:                     iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Scenario <!%lScenarioNumber!> taken.");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:420:                 }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:421:                 lScenarioTaken = <!%lScenarioNumber!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:422:                 lScenarioProcessing = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:423: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:424:         <!com.esarks.arm.schemas.rules.root:dtable:scenario:action!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:425:           <!com.esarks.arm.schemas.rules.root:dtable:action!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:426:           <!com.esarks.arm.schemas.rules.root:dtable!>!scan("action:id", <![com.esarks.arm.schemas.rules.root:dtable:scenario:action:id]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:427: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:428:                 // Action symbolicId=<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:429:                 lActionArrayList.add("<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:430: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:431:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:432: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:433:             }<%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:434:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:435: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:436: else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:437:                 // No scenario taken
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:438:                 if (iMicLog.test(Log._APP)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:439:                     iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!No scenario taken.");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:440:                 }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:441:                 lScenarioProcessing = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:442:                 lScenarioTaken = -1;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:443:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:444: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:445: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Actions (all have visibility of this section)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:446: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_actions$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:447: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:448: // TODO: Place global action behavior here.  This section is visible to all actions.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:449: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:450: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_actions$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:451: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:452:             for (int lActionIdx=0; lActionIdx < lActionArrayList.size(); lActionIdx++) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:453: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:454:       <!com.esarks.arm.schemas.rules.root:dtable:action!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:455: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:456:         if (<!com.esarks.arm.schemas.rules.root:dtable:action!>!isFirst()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:457: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:458:                 if (((String) lActionArrayList.get(lActionIdx)).equals("<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:459: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:460:         } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:461: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:462:  else if (((String) lActionArrayList.get(lActionIdx)).equals("<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:463: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:464:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:465: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:466:                     // Action symbolicId=<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:467:                     if (iMicLog.test(Log._APP)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:468:                         iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Performing action code \\\"<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>\\\"");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:469:                     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:470: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:471: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Action id = <![com.esarks.arm.schemas.rules.root:dtable:action:id]!>; symbolicId = <![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:472: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:473:       String lText = <![com.esarks.arm.schemas.rules.root:dtable:action:text]!>.trim();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:474: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:475: /* <!%lText!> */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:476: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_action_<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:477: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:478: // TODO: Place action behavior here.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:479: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:480: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_action_<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:481: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:482:                 }<%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:483:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:484: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:485: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:486:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:487:         } while(lScenarioProcessing);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:488: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:489:         if (iMicLog.test(Log._APP)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:490:             iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Fall out of Scenario loop");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:491:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:492: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:493: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:494: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:495: //CUSTOMDTABLE-----------------------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:496: // <![com.esarks.arm.schemas.rules.root:dtable:name]!> Postcondition
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:497: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_postcondition$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:498: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:499: // TODO: Place decision table control post-processing behavior here.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:500: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:501: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_postcondition$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:502: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:503:     } while(lDecisionTableProcessing);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:504: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:505:     if (iMicLog.test(Log._APP)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:506:         iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Fall out of DecisionTable loop");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:507:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:508: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:509: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:510:       } // if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:511: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:512:       if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:513: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:514: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:515: <!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod <!%lScriptEnd!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:516: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:517: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:518:         continue;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:519:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:520:       if (<![com.esarks.arm.schemas.rules.root:dtable:return]!>.equals("boolean")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:521: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:522: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:523: <!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:524:   <return>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:525:     <normal>true</normal>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:526:     <error>false</error>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:527:   </return>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:528: <!%lScriptEnd!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:529: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:530: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:531:         continue;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:532:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:533:       if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:534: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:535: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:536: <!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:537:   <return>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:538:     <normal>null</normal>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:539:     <error>null</error>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:540:   </return>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:541: <!%lScriptEnd!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:542: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:543: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:544:         continue;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:545:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:546: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:547: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:548: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:549: <!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod <!%lScriptEnd!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:550: //$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:551: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:552:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:553: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:554: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:555: //$Section=endOfClass$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:556: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:557: // TODO: Place helper methods or inner-classes here.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:558: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:559: //$Section=endOfClass$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:560: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:561: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:562:     closeOutput();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:563: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:564:     if (<![com.esarks.arm.schemas.rules.root:generateCode]!>.equals("true")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:565:       Merge.getInstance().doMerge(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".script", path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".new", iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:566:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:567:     
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:568:     } catch (Throwable e) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:569:       setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:570:       <!$jac:event!>!set(e.getMessage());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:571:       <!$jac:event:severity!>!set("fatal");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:572:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:573:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:574:       restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:575:       setExit();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:576:       return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:577:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:578: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateDtable.script:579:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPostfix.script:1: }

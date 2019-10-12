@@ -1,0 +1,246 @@
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:3: import com.esarks.jac.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:4: import com.esarks.mic.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:5: import java.util.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:6: import java.lang.reflect.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:7: import java.io.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:8: import java.text.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:9: import java.net.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:10: import javax.net.ssl.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:11: import java.security.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:12: import java.sql.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:13: import javax.servlet.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:14: import javax.servlet.http.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:15: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:16: <#import#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:4: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:6:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:7: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:9: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:11: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:12:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:1: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:2: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:3: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:4: <& com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:5:    <method name="onLoad" visibility="public" return="void" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:6:      <document></document>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:7:    </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:8: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:9:   setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:10:   String lPropertySet = <![com.esarks.arm.schemas.router.root:loc:propertySet]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:11:   System.out.println("RegionsTemplate PropertySet = " + lPropertySet);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:12:   XmlSchemaFactory lXmlSchemaFactory = iSymbolTable.getXmlSchemaFactory();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:13:   if (lXmlSchemaFactory.getXmlSchemaElement("com.esarks.arm.schemas.properties.root") == null) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:14:     loadXmlSchema("com.esarks.arm.schemas.properties", path(<![com.esarks.arm.schemas.router.root:loc:propertySet:path]!> + "Schema") + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:15:     parseXmlSchema(<![com.esarks.arm.schemas.router.root:loc:propertySet:path]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:16:     boolean lScan = <!com.esarks.arm.schemas.properties.root!>!scan("property:context", lPropertySet);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:17:     System.out.println("RegionsTemplate Scan = " + lScan);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:18:     // Open all the DbConnections possible...
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:19: System.out.println("RegionsTemplate DbConnections = " + <!com.esarks.arm.schemas.properties.root:property:dbConnection!>!size());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:20:     DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:21:     <!com.esarks.arm.schemas.properties.root:property:dbConnection!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:22:     while (<!com.esarks.arm.schemas.properties.root:property:dbConnection!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:23:       String lName = <![com.esarks.arm.schemas.properties.root:property:dbConnection:name]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:24:       String lJdbcClass = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcClass]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:25:       String lJdbcConnection = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcConnection]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:26:       String lJdbcUser = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcUser]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:27:       String lJdbcPassword = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcPassword]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:28:       String lDbTypes = <![com.esarks.arm.schemas.properties.root:property:dbConnection:dbTypes]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:29:       String lCatalog = <![com.esarks.arm.schemas.properties.root:property:dbConnection:catalog]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:30:       String lOwner = <![com.esarks.arm.schemas.properties.root:property:dbConnection:owner]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:31:       String lStereotype = <![com.esarks.arm.schemas.properties.root:property:dbConnection:stereotype]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:32:       String lOpenCountString = <![com.esarks.arm.schemas.properties.root:property:dbConnection:openCount]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:33:       int lOpenCount = 1;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:34:       if (!lOpenCountString.equals("")) lOpenCount = Integer.parseInt(lOpenCountString);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:35: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:36:       for (int lIdx=0; lIdx < lOpenCount; lIdx++) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:37:         DbConnection lDbConnection = new DbConnection(lName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:38:         lDbConnection.setCatalog(lCatalog);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:39:         lDbConnection.setOwner(lOwner);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:40:         lDbConnection.setDbTypes(lDbTypes);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:41:         lDbConnection.setStereotype(lStereotype);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:42:         lDbConnectionFactory.register(lDbConnection);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:43: System.out.println("Connection(" + lStereotype + ") " + lIdx + " at " + lName + "=" + lDbConnection.connect(lJdbcClass, lJdbcConnection, lJdbcUser, lJdbcPassword));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:44:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:45:       
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:46:       <!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:47:       while (<!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:48:         lDbConnectionFactory.alias(lName, <![com.esarks.arm.schemas.properties.root:property:dbConnection:alias]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:49:       }  
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:50:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:51: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:52:     try {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:53:       // Associate all the objects to a DbConnection...
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:54:       <!com.esarks.arm.schemas.properties.root:dbObjects:dbConnection!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:55:       while (<!com.esarks.arm.schemas.properties.root:dbObjects:dbConnection!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:56:         DbConnection lDbConnection = lDbConnectionFactory.getDbConnection(<![com.esarks.arm.schemas.properties.root:dbObjects:dbConnection:name]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:57:         <!com.esarks.arm.schemas.properties.root:dbObjects:dbConnection:object!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:58:         while (<!com.esarks.arm.schemas.properties.root:dbObjects:dbConnection:object!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:59:           lDbConnectionFactory.associateObjectConnection(<![com.esarks.arm.schemas.properties.root:dbObjects:dbConnection:object:name]!>, lDbConnection);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:60:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:61:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:62:     } catch(Throwable e) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:63:       System.out.println(e);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:64:       System.out.println("Failed to associate all database objects to a DbConnection.  Please verify the <dbObjects> section of Properties.xml.");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:65:       restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:66:       return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:67:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:68:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:69:   restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:70: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:71: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:72: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:73: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:74: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:75: <& com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:76:    <method name="handlePost" visibility="public" return="void" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:77:      <document></document>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:78:    </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:79: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:80: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:81:   <:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:template:region!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:82:     String lRegion = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:template:region]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:83:     com.esarks.mic.View lView = (com.esarks.mic.View)<!regions:" + lRegion + "!>!getValueObject();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:84:     lView.handlePost();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:85:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:86: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:87: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:88: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:89: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:90: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:91: <& com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:92:    <method name="prepareRender" visibility="public" return="boolean" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:93:      <document></document>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:94:    </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:95: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:96: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:97:   boolean lReturn = true;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:98:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:99:   executeThis();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:100: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:101:   if (<:iScript.getMasterScript():><!$jac:router.changeloc!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:102:     // Detected change in location...signal to abort rendering...
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:103:     lReturn = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:104:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:105:       
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:106: <& com.esarks.arm.scripts.FinalReturnMethod
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:107:   <return normal="lReturn" error="false" />
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:108: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:109: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:110: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:111: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:112: <& com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:113:    <method name="execute" visibility="public" return="void" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:114:      <document></document>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:115:    </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:116: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:117: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:118:   executeThis();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:119:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:120: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:121: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:122: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:123: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:124: <& com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:125:    <method name="executeThis" visibility="private" return="void" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:126:      <document></document>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:127:    </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:128: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:129: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:130:   if (<:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:securityManager!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:131: System.out.println("Custom SecurityManager");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:132:     iSecurityManager = (com.esarks.mic.SecurityManager) loadScript(<:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:securityManager:script]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:133:   } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:134: System.out.println("Generic SecurityManager");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:135:     iSecurityManager = new com.esarks.mic.SecurityManager();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:136:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:137: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:138:   <!regions!>!remove();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:139:   <:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:template:region!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:140:     String lRegion = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:template:region]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:141:     com.esarks.mic.View lView = (com.esarks.mic.View) loadScript(<:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":script]!>, <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":instance]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:142:     lView.setMicSecurityManager(iSecurityManager);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:143: System.out.println("Region: " + lRegion);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:144:     <:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:145: System.out.println("Add: " + <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:146:       com.esarks.mic.View lAdd = (com.esarks.mic.View) loadScript(<:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>, <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:instance]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:147:       lView.addView(lAdd);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:148:     }      
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:149:     <!regions:" + lRegion + "!>!reset(lView);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:150:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:151: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:152:   ServletRequest lServletRequest = getServletRequest();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:153: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:154:   boolean lHrefError = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:155:   String lScript = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:156:   String lInstance = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:157:   String lMethod = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:158:   String lArgument = null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:159:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:160:   String lHref = lServletRequest.getParameter("href");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:161:   if (lHref != null && lHref != "") {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:162: System.out.println("href = " + lHref);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:163:     <:iScript.getMasterScript():><!$jac:href:id!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:164:     if (<:iScript.getMasterScript():><!$jac:href!>!scan("id", lHref)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:165: System.out.println("TRUE");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:166:       lScript = (String) <:iScript.getMasterScript():><![$jac:href:id:script]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:167:       lInstance = (String) <:iScript.getMasterScript():><![$jac:href:id:instance]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:168:       lMethod = (String) <:iScript.getMasterScript():><![$jac:href:id:method]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:169:       if (<:iScript.getMasterScript():><!$jac:href:id:argument!>!size() > 0) lArgument = (String) <:iScript.getMasterScript():><![$jac:href:id:argument]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:170:     } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:171: System.out.println("FALSE");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:172:       lHrefError = true;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:173:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:174:   } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:175:     lScript = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:script:path]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:176:     lInstance = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:script:instance]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:177:     lMethod = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:script:method]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:178:     if (<:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:script:argument!>!size() > 0) lArgument = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:script:argument]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:179:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:180: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:181: System.out.println("s:" + lScript + " i:" + lInstance + " m:" + lMethod + " a:" + lArgument);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:182: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:183:   if (!lScript.equals("")) handlePost();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:184: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:185:   if (!lScript.equals("") && !lMethod.equals("handlePost")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:186:     MicScriptHelper lScriptHelper = (MicScriptHelper) loadScript(lScript, lInstance);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:187:     lScriptHelper.setMicSecurityManager(iSecurityManager);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:188:     if (lArgument == null) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:189:       iScript.execMethod(lScriptHelper, lMethod);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:190:     } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:191:       iScript.execMethod(lScriptHelper, lMethod, new Object[] {lArgument});
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:192:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:193:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:194: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:195:   <:iScript.getMasterScript():><!$jac:href:id!>!removeValue();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:196: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:197: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:198: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:199: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:200: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:201: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:202: <& com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:203:    <method name="findRegion" visibility="public" return="boolean" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:204:      <document></document>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:205:      <argument type="String" name="aRegion" />
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:206:    </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:207: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:208: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:209:   if (<:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:" + aRegion + "!>!size() > 0) return true;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:210:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:211: <& com.esarks.arm.scripts.FinalReturnMethod
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:212:   <return>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:213:     <normal>false</normal>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:214:     <error>false</error>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:215:   </return>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:216: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\RegionsTemplate.script:217:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPostfix.script:1: }

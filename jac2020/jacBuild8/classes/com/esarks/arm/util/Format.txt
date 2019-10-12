@@ -1,557 +1,557 @@
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:2: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:3: import java.util.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:5: import java.io.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:6: import java.text.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:7: import java.sql.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:8: //import java.net.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:10: //import java.security.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:13: //import java.awt.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:15: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:18: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:19: <#import#>
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:2: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:3: <#var#>
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:4: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:6:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:7: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:9: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:10:     super(aScript);
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:11: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:12:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:1: import java.util.*
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:2: end
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:3: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:4: //$Section=definitions$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:5:     private Locale m_Locale = Locale.getDefault();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:6: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:7:     private NumberFormat m_CurrencyFormatter = NumberFormat.getCurrencyInstance(Locale.getDefault());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:8: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:9:     private NumberFormat m_PercentFormatter = NumberFormat.getPercentInstance(Locale.getDefault());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:10: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:11:     private SimpleDateFormat m_DateFormatter = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:12: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:13:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:14:      * Static array containing all titles for assessors
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:15:      * TODO: Put this somewhere else
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:16:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:17:     public static final String[] s_szTitles =
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:18:         { "ARNP", "BS", "BSN", "CCRN", "COS-C", "Dr", "MD", "MS", "OT", "OTL",
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:19:             "OTR", "PhD", "PT", "RN", "RN, C.N.A.", "RN, C.S.", "DPT",
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:20:             "RPT", "SWOSN", "SLP/ST", "WOSN" , "II", "III", "IV", "VI", "VII", "VIII", "IX"};
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:21: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:22:     public static Hashtable s_Titles = new Hashtable();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:23: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:24:     static
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:25:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:26:         for (int idx = 0; idx < s_szTitles.length; idx++)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:27:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:28:             s_Titles.put(s_szTitles[idx].toLowerCase(), s_szTitles[idx]);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:29:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:30:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:31: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:32:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:33:      * Return properly formatted last name that starts with mc e.g. mcdonald -> McDonald
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:34:      * @param szString
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:35:      * @return Formatted LAst Name
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:36:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:37:     public static String FormatMc(String szString)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:38:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:39:         if (szString.startsWith("Mc") && (szString.length() > 3))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:40:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:41:             szString = szString.substring(0, 2) + ("" + szString.charAt(2)).toUpperCase() + szString.substring(3, szString.length());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:42:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:43: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:44:         return (szString);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:45:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:46: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:47:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:48:      * Properly formatted last name. De and Mc are formatted properly
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:49:      * @param LastName
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:50:      * @return Formatted Last Name
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:51:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:52:     public static String FormatLastName(String LastName)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:53:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:54:         int iLastNameLength = LastName.length();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:55: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:56:         LastName = CapitalizeWords(LastName);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:57: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:58:         if (LastName.startsWith("De") && (iLastNameLength > 3))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:59:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:60:             //LastName = LastName.substring(0, 2) + ("" + LastName.charAt(2)).toUpperCase() + LastName.substring(3, LastName.length());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:61:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:62: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:63:         LastName = FormatMc(LastName);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:64: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:65:         if (iLastNameLength > 1)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:66:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:67:             LastName = ("" + LastName.charAt(0)).toUpperCase() + LastName.substring(1, LastName.length());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:68:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:69:         else
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:70:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:71:             LastName = LastName.toUpperCase();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:72:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:73: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:74:         return (LastName);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:75:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:76: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:77:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:78:      * Formats first name (capitalizes first letter)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:79:      * @param FirstName
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:80:      * @return Formatted name
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:81:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:82:     public static String FormatFirstName(String FirstName)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:83:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:84:         int iLastNameLength = FirstName.length();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:85: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:86:         FirstName = FirstName.toLowerCase();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:87: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:88:         if (iLastNameLength > 1)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:89:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:90:             FirstName = ("" + FirstName.charAt(0)).toUpperCase() + FirstName.substring(1, FirstName.length());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:91:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:92:         else
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:93:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:94:             FirstName = FirstName.toUpperCase();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:95:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:96: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:97:         return (FirstName);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:98:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:99: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:100:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:101:      * Formats title
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:102:      * @param szTitle Title to format
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:103:      * @return Formatted title
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:104:      * @see #s_szTitles
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:105:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:106:     public static String FormatTitle(String szTitle)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:107:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:108:         if (s_Titles.containsKey(szTitle.toLowerCase().trim()))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:109:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:110:             szTitle = s_Titles.get(szTitle.toLowerCase().trim()).toString();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:111:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:112: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:113:         return (szTitle);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:114:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:115: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:116:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:117:      * Formats complete name
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:118:      * @param LastName
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:119:      * @param FirstName
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:120:      * @param MiddleInitial
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:121:      * @param Title
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:122:      * @return Formatted name, first letters are capitalized
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:123:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:124:     public static String FormatName(String LastName, String FirstName, String MiddleInitial, String Title)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:125:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:126:         try
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:127:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:128:             LastName = LastName.trim();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:129:             FirstName = FirstName.trim();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:130:             MiddleInitial = MiddleInitial.trim();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:131:             Title = Title.trim();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:132: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:133:             String szRetVal = LastName;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:134: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:135:             if (LastName.length() > 0)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:136:             {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:137:                 if ((FirstName.length() > 0) || (MiddleInitial.length() > 0) || (Title.length() > 0))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:138:                 {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:139:                     szRetVal += ",";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:140:                 }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:141:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:142: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:143:             if (FirstName.length() > 0)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:144:             {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:145:                 if ((szRetVal.length() > 1) && (szRetVal.charAt(szRetVal.length() - 1) != ' '))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:146:                 {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:147:                     szRetVal += ' ';
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:148:                 }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:149: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:150:                 szRetVal += FirstName;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:151:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:152: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:153:             if (MiddleInitial.length() > 0)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:154:             {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:155:                 if ((szRetVal.length() > 1) && (szRetVal.charAt(szRetVal.length() - 1) != ' '))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:156:                 {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:157:                     szRetVal += ' ';
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:158:                 }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:159: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:160:                 szRetVal += MiddleInitial + (MiddleInitial.indexOf('.') < 0 ? "." : "");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:161:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:162: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:163:             if (Title.length() > 0)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:164:             {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:165:                 if ((szRetVal.length() > 1) && (szRetVal.charAt(szRetVal.length() - 1) != ' '))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:166:                 {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:167:                     szRetVal += ' ';
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:168:                 }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:169: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:170:                 szRetVal += Title;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:171:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:172: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:173:             szRetVal = FormatName(szRetVal);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:174: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:175:             return (szRetVal);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:176:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:177:         catch (Exception e)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:178:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:179:             return (LastName + ", " + FirstName + " " + MiddleInitial + " " + Title);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:180:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:181:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:182: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:183:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:184:      * Capitalizes full name, i.e. peter mcdonald, PHD -> Peter McDonald PhD
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:185:      * @param szFullName
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:186:      * @return Formatted name
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:187:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:188:     public static String FormatName(String szFullName)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:189:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:190:         try
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:191:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:192:             String szRetVal = "";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:193:             szFullName = szFullName.trim();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:194:             szFullName = szFullName.replaceAll("  "," ");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:195: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:196:             if (szFullName.length() == 0)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:197:             {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:198: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:199:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:200:             else
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:201:             {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:202:                 szRetVal = CapitalizeWords(szFullName);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:203: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:204:                 java.util.StringTokenizer st = new StringTokenizer(szRetVal, " ", true);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:205: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:206:                 szRetVal = "";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:207: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:208:                 int idx = 0;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:209: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:210:                 while (st.hasMoreTokens())
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:211:                 {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:212:                     String szToken = st.nextToken();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:213: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:214:                     java.util.StringTokenizer st2 = new StringTokenizer(szToken, ".,", true);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:215: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:216:                     while(st2.hasMoreTokens())
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:217:                     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:218:                         String szToken2 = st2.nextToken();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:219: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:220: 	                    if (idx == 0)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:221: 	                    {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:222: 	                        szToken2 = FormatLastName(szToken2);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:223: 	                    }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:224: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:225: 	                    szToken2 = FormatMc(szToken2);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:226: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:227: 	                    if (s_Titles.containsKey(szToken2.toLowerCase().trim()))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:228: 	                    {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:229: 	                        szToken2 = s_Titles.get(szToken2.toLowerCase().trim()).toString();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:230: 	                    }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:231: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:232: 	                    szRetVal += szToken2;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:233:                     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:234: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:235:                     idx++;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:236:                 }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:237:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:238: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:239:             return szRetVal;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:240:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:241:         catch (Exception e)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:242:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:243:             return (szFullName);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:244:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:245:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:246: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:247:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:248:      * Capitalizes words in a sentence
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:249:      * @param szString
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:250:      * @return Capitalized sentence
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:251:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:252:     public static String CapitalizeWords(String szString)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:253:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:254:         String szOriginal = szString;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:255: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:256:         try
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:257:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:258:             String szRetVal = "";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:259:             szString = szString.toLowerCase();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:260: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:261:             char ch; // One of the characters in str.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:262:             char prevCh; // The character that comes before ch
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:263:             // in the string.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:264:             int i; // A position in str, from 0 to str.length()-1.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:265:             prevCh = '.'; // Prime the loop with any non-letter character
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:266: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:267:             for (i = 0; i < szString.length(); i++)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:268:             {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:269:                 ch = szString.charAt(i);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:270: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:271:                 if (Character.isLetter(ch) && !Character.isLetter(prevCh))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:272:                 {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:273:                     szRetVal += Character.toUpperCase(ch);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:274:                 }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:275:                 else
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:276:                 {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:277:                     szRetVal += ch;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:278:                 }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:279: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:280:                 prevCh = ("" + ch).toLowerCase().charAt(0);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:281:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:282: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:283:             return (szRetVal);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:284:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:285:         catch (Exception e)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:286:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:287:             return (szOriginal);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:288:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:289:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:290: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:291:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:292:      * Capitalizes first word in a sentence
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:293:      * @param szSentence
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:294:      * @return Formatted sentence
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:295:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:296:     public static String CapitalizeSentence(String szSentence)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:297:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:298:         if (szSentence.trim().equals(""))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:299:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:300:             return "";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:301:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:302: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:303:         byte[] baTmp = szSentence.toLowerCase().getBytes();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:304: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:305:         if (Character.isLetter((char) baTmp[0]))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:306:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:307:             baTmp[0] -= 32;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:308:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:309: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:310:         return (new String(baTmp));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:311:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:312: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:313:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:314:      * Formats date for report. Uses specified locale
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:315:      * @param szDate Date to format
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:316:      * @return Formatted date
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:317:      * @see #setLocale(Locale)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:318:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:319:     public String formatDateForReport(String szDate)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:320:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:321:         String szRetVal;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:322: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:323:         if ((szDate == null) || (szDate.trim().equals("")))
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:324:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:325:             return "";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:326:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:327: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:328:         try
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:329:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:330:             szRetVal = m_DateFormatter.format(com.esarks.arm.util.DateTime.GetDate(szDate));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:331:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:332:         catch (Exception e)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:333:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:334:             szRetVal = szDate;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:335:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:336: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:337:         return szRetVal;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:338:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:339: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:340:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:341:      * Formats date for report. Uses specified locale
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:342:      * @param dtDate Date to format
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:343:      * @return Formatted date
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:344:      * @see #setLocale(Locale)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:345:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:346:     public String formatDateForReport(java.util.Date dtDate)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:347:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:348:         String szRetVal;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:349: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:350:         if (dtDate == null)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:351:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:352:             return "";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:353:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:354: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:355:         try
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:356:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:357:             szRetVal = m_DateFormatter.format(dtDate);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:358:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:359:         catch (Exception e)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:360:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:361:             szRetVal = dtDate.toString();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:362:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:363: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:364:         return szRetVal;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:365:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:366: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:367:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:368:      * Formats date for report. Uses specified locale
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:369:      * @param dtDate Date to format
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:370:      * @return Formatted date
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:371:      * @see #setLocale(Locale)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:372:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:373:     public String formatDateForReport(DateTime dtDate)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:374:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:375:         String szRetVal;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:376: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:377:         if (dtDate == null)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:378:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:379:             return "";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:380:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:381: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:382:         try
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:383:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:384:             szRetVal = m_DateFormatter.format(dtDate.toDate(getLocale()));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:385:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:386:         catch (Exception e)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:387:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:388:             szRetVal = dtDate.toString();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:389:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:390: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:391:         return szRetVal;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:392:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:393: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:394: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:395:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:396:      * Formats ammount for report. Uses specified locale
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:397:      * @param dAmmount Ammount to format
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:398:      * @return Formatted ammount
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:399:      * @see #setLocale(Locale)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:400:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:401:     public String formatCurrencyForReport(double dAmmount)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:402:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:403:         String szRetVal;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:404: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:405:         try
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:406:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:407:             szRetVal = m_CurrencyFormatter.format(dAmmount);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:408:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:409:         catch (Exception e)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:410:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:411:             szRetVal = "$" + dAmmount;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:412:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:413: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:414:         return szRetVal;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:415:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:416: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:417:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:418:      * Formats percent for report. Uses specified locale
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:419:      * @param dPercent Percent to format
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:420:      * @return Formatted percent
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:421:      * @see #setLocale(Locale)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:422:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:423:     public String formatPercentForReport(double dPercent)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:424:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:425:         String szRetVal;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:426: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:427:         try
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:428:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:429:             szRetVal = m_PercentFormatter.format(dPercent);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:430:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:431:         catch (Exception e)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:432:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:433:             szRetVal = dPercent + "%";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:434:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:435: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:436:         return szRetVal;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:437:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:438: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:439: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:440:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:441:      * Some test cases
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:442:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:443:     public static void RunTest(String[] args)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:444:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:445:         System.out.println("Format:");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:446:         System.out.println(Format.FormatLastName(""));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:447:         System.out.println(Format.FormatLastName("M"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:448:         System.out.println(Format.FormatLastName("m"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:449:         System.out.println("" + Format.FormatLastName("Mc"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:450:         System.out.println("" + Format.FormatLastName("mc"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:451:         System.out.println("" + Format.FormatLastName("mccormic"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:452:         System.out.println("-----------------------");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:453:         System.out.println("" + Format.FormatLastName(""));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:454:         System.out.println("" + Format.FormatLastName("D"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:455:         System.out.println("" + Format.FormatLastName("d"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:456:         System.out.println("" + Format.FormatLastName("De"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:457:         System.out.println("" + Format.FormatLastName("de"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:458:         System.out.println("" + Format.FormatLastName("deniro"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:459:         System.out.println("" + Format.FormatLastName("de niro"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:460:         System.out.println("-----------------------");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:461:         System.out.println("" + Format.FormatLastName("smith"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:462:         System.out.println("-----------------------");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:463:         System.out.println("" + Format.FormatName("smith, jones m. phd"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:464:         System.out.println("" + Format.FormatName(" jones m. phd"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:465:         System.out.println("" + Format.FormatName("smith m. phd"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:466:         System.out.println("" + Format.FormatName("deniro, robert s. md"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:467:         System.out.println("" + Format.FormatName("deniro s. md"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:468:         System.out.println("" + Format.FormatName("mcdonald, ronald bs"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:469:         System.out.println("" + Format.FormatName("dr. michael mcdonald"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:470:         System.out.println("" + Format.FormatName("dr. mcdonald"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:471:         System.out.println("" + Format.FormatName("dr. michael "));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:472:         System.out.println("-----------------------");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:473:         System.out.println("" + Format.FormatName("smith", " jones", "m.", "phd"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:474:         System.out.println("" + Format.FormatName(" ", " jones", "   ", "  "));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:475:         System.out.println("" + Format.FormatName("mcdonald", "", "m.", " md"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:476:         System.out.println("" + Format.FormatName("mcdonald", "", "  ", " md"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:477:         System.out.println("" + Format.FormatName("deniro", " robert", " ", ""));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:478: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:479:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:480: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:481:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:482:      * Sets locale
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:483:      * @param locale
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:484:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:485:     public void setLocale(Locale locale)
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:486:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:487:         m_Locale = locale;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:488:         m_CurrencyFormatter = NumberFormat.getCurrencyInstance(m_Locale);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:489:         m_DateFormatter = new SimpleDateFormat("MM/dd/yyyy", m_Locale);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:490:         m_PercentFormatter = NumberFormat.getPercentInstance(m_Locale);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:491:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:492: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:493:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:494:      * @return Returns the m_CurrencyFormatter.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:495:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:496:     public NumberFormat getCurrencyFormatter()
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:497:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:498:         return m_CurrencyFormatter;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:499:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:500: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:501:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:502:      * @return Returns the m_DateFormatter.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:503:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:504:     public SimpleDateFormat getDateFormatter()
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:505:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:506:         return m_DateFormatter;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:507:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:508: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:509:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:510:      * @return Returns the m_DateFormatter.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:511:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:512:     public NumberFormat getPercentFormatter()
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:513:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:514:         return m_PercentFormatter;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:515:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:516: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:517:     /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:518:      * @return Returns the m_Locale.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:519:      */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:520:     public Locale getLocale()
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:521:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:522:         return m_Locale;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:523:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:524: //$Section=definitions$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:525: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPostfix.script:1: }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:3: import java.util.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:5: import java.io.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:6: import java.text.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:7: import java.sql.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:8: //import java.net.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:10: //import java.security.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:13: //import java.awt.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:15: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:18: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:19: <#import#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:4: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:6:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:7: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:9: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:11: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:12:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:1: import java.util.*
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:2: end
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:3: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:4: //$Section=definitions$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:5:     private Locale m_Locale = Locale.getDefault();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:6: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:7:     private NumberFormat m_CurrencyFormatter = NumberFormat.getCurrencyInstance(Locale.getDefault());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:8: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:9:     private NumberFormat m_PercentFormatter = NumberFormat.getPercentInstance(Locale.getDefault());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:10: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:11:     private SimpleDateFormat m_DateFormatter = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:12: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:13:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:14:      * Static array containing all titles for assessors
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:15:      * TODO: Put this somewhere else
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:16:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:17:     public static final String[] s_szTitles =
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:18:         { "ARNP", "BS", "BSN", "CCRN", "COS-C", "Dr", "MD", "MS", "OT", "OTL",
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:19:             "OTR", "PhD", "PT", "RN", "RN, C.N.A.", "RN, C.S.", "DPT",
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:20:             "RPT", "SWOSN", "SLP/ST", "WOSN" , "II", "III", "IV", "VI", "VII", "VIII", "IX"};
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:21: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:22:     public static Hashtable s_Titles = new Hashtable();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:23: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:24:     static
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:25:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:26:         for (int idx = 0; idx < s_szTitles.length; idx++)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:27:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:28:             s_Titles.put(s_szTitles[idx].toLowerCase(), s_szTitles[idx]);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:29:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:30:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:31: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:32:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:33:      * Return properly formatted last name that starts with mc e.g. mcdonald -> McDonald
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:34:      * @param szString
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:35:      * @return Formatted LAst Name
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:36:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:37:     public static String FormatMc(String szString)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:38:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:39:         if (szString.startsWith("Mc") && (szString.length() > 3))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:40:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:41:             szString = szString.substring(0, 2) + ("" + szString.charAt(2)).toUpperCase() + szString.substring(3, szString.length());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:42:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:43: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:44:         return (szString);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:45:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:46: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:47:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:48:      * Properly formatted last name. De and Mc are formatted properly
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:49:      * @param LastName
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:50:      * @return Formatted Last Name
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:51:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:52:     public static String FormatLastName(String LastName)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:53:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:54:         int iLastNameLength = LastName.length();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:55: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:56:         LastName = CapitalizeWords(LastName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:57: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:58:         if (LastName.startsWith("De") && (iLastNameLength > 3))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:59:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:60:             //LastName = LastName.substring(0, 2) + ("" + LastName.charAt(2)).toUpperCase() + LastName.substring(3, LastName.length());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:61:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:62: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:63:         LastName = FormatMc(LastName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:64: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:65:         if (iLastNameLength > 1)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:66:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:67:             LastName = ("" + LastName.charAt(0)).toUpperCase() + LastName.substring(1, LastName.length());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:68:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:69:         else
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:70:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:71:             LastName = LastName.toUpperCase();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:72:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:73: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:74:         return (LastName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:75:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:76: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:77:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:78:      * Formats first name (capitalizes first letter)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:79:      * @param FirstName
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:80:      * @return Formatted name
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:81:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:82:     public static String FormatFirstName(String FirstName)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:83:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:84:         int iLastNameLength = FirstName.length();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:85: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:86:         FirstName = FirstName.toLowerCase();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:87: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:88:         if (iLastNameLength > 1)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:89:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:90:             FirstName = ("" + FirstName.charAt(0)).toUpperCase() + FirstName.substring(1, FirstName.length());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:91:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:92:         else
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:93:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:94:             FirstName = FirstName.toUpperCase();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:95:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:96: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:97:         return (FirstName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:98:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:99: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:100:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:101:      * Formats title
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:102:      * @param szTitle Title to format
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:103:      * @return Formatted title
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:104:      * @see #s_szTitles
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:105:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:106:     public static String FormatTitle(String szTitle)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:107:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:108:         if (s_Titles.containsKey(szTitle.toLowerCase().trim()))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:109:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:110:             szTitle = s_Titles.get(szTitle.toLowerCase().trim()).toString();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:111:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:112: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:113:         return (szTitle);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:114:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:115: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:116:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:117:      * Formats complete name
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:118:      * @param LastName
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:119:      * @param FirstName
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:120:      * @param MiddleInitial
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:121:      * @param Title
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:122:      * @return Formatted name, first letters are capitalized
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:123:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:124:     public static String FormatName(String LastName, String FirstName, String MiddleInitial, String Title)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:125:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:126:         try
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:127:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:128:             LastName = LastName.trim();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:129:             FirstName = FirstName.trim();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:130:             MiddleInitial = MiddleInitial.trim();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:131:             Title = Title.trim();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:132: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:133:             String szRetVal = LastName;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:134: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:135:             if (LastName.length() > 0)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:136:             {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:137:                 if ((FirstName.length() > 0) || (MiddleInitial.length() > 0) || (Title.length() > 0))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:138:                 {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:139:                     szRetVal += ",";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:140:                 }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:141:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:142: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:143:             if (FirstName.length() > 0)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:144:             {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:145:                 if ((szRetVal.length() > 1) && (szRetVal.charAt(szRetVal.length() - 1) != ' '))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:146:                 {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:147:                     szRetVal += ' ';
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:148:                 }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:149: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:150:                 szRetVal += FirstName;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:151:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:152: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:153:             if (MiddleInitial.length() > 0)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:154:             {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:155:                 if ((szRetVal.length() > 1) && (szRetVal.charAt(szRetVal.length() - 1) != ' '))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:156:                 {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:157:                     szRetVal += ' ';
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:158:                 }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:159: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:160:                 szRetVal += MiddleInitial + (MiddleInitial.indexOf('.') < 0 ? "." : "");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:161:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:162: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:163:             if (Title.length() > 0)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:164:             {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:165:                 if ((szRetVal.length() > 1) && (szRetVal.charAt(szRetVal.length() - 1) != ' '))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:166:                 {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:167:                     szRetVal += ' ';
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:168:                 }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:169: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:170:                 szRetVal += Title;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:171:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:172: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:173:             szRetVal = FormatName(szRetVal);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:174: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:175:             return (szRetVal);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:176:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:177:         catch (Exception e)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:178:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:179:             return (LastName + ", " + FirstName + " " + MiddleInitial + " " + Title);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:180:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:181:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:182: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:183:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:184:      * Capitalizes full name, i.e. peter mcdonald, PHD -> Peter McDonald PhD
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:185:      * @param szFullName
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:186:      * @return Formatted name
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:187:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:188:     public static String FormatName(String szFullName)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:189:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:190:         try
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:191:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:192:             String szRetVal = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:193:             szFullName = szFullName.trim();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:194:             szFullName = szFullName.replaceAll("  "," ");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:195: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:196:             if (szFullName.length() == 0)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:197:             {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:198: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:199:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:200:             else
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:201:             {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:202:                 szRetVal = CapitalizeWords(szFullName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:203: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:204:                 java.util.StringTokenizer st = new StringTokenizer(szRetVal, " ", true);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:205: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:206:                 szRetVal = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:207: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:208:                 int idx = 0;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:209: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:210:                 while (st.hasMoreTokens())
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:211:                 {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:212:                     String szToken = st.nextToken();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:213: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:214:                     java.util.StringTokenizer st2 = new StringTokenizer(szToken, ".,", true);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:215: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:216:                     while(st2.hasMoreTokens())
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:217:                     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:218:                         String szToken2 = st2.nextToken();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:219: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:220: 	                    if (idx == 0)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:221: 	                    {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:222: 	                        szToken2 = FormatLastName(szToken2);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:223: 	                    }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:224: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:225: 	                    szToken2 = FormatMc(szToken2);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:226: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:227: 	                    if (s_Titles.containsKey(szToken2.toLowerCase().trim()))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:228: 	                    {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:229: 	                        szToken2 = s_Titles.get(szToken2.toLowerCase().trim()).toString();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:230: 	                    }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:231: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:232: 	                    szRetVal += szToken2;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:233:                     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:234: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:235:                     idx++;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:236:                 }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:237:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:238: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:239:             return szRetVal;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:240:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:241:         catch (Exception e)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:242:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:243:             return (szFullName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:244:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:245:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:246: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:247:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:248:      * Capitalizes words in a sentence
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:249:      * @param szString
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:250:      * @return Capitalized sentence
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:251:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:252:     public static String CapitalizeWords(String szString)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:253:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:254:         String szOriginal = szString;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:255: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:256:         try
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:257:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:258:             String szRetVal = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:259:             szString = szString.toLowerCase();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:260: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:261:             char ch; // One of the characters in str.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:262:             char prevCh; // The character that comes before ch
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:263:             // in the string.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:264:             int i; // A position in str, from 0 to str.length()-1.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:265:             prevCh = '.'; // Prime the loop with any non-letter character
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:266: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:267:             for (i = 0; i < szString.length(); i++)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:268:             {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:269:                 ch = szString.charAt(i);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:270: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:271:                 if (Character.isLetter(ch) && !Character.isLetter(prevCh))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:272:                 {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:273:                     szRetVal += Character.toUpperCase(ch);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:274:                 }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:275:                 else
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:276:                 {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:277:                     szRetVal += ch;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:278:                 }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:279: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:280:                 prevCh = ("" + ch).toLowerCase().charAt(0);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:281:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:282: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:283:             return (szRetVal);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:284:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:285:         catch (Exception e)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:286:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:287:             return (szOriginal);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:288:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:289:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:290: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:291:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:292:      * Capitalizes first word in a sentence
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:293:      * @param szSentence
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:294:      * @return Formatted sentence
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:295:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:296:     public static String CapitalizeSentence(String szSentence)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:297:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:298:         if (szSentence.trim().equals(""))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:299:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:300:             return "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:301:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:302: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:303:         byte[] baTmp = szSentence.toLowerCase().getBytes();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:304: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:305:         if (Character.isLetter((char) baTmp[0]))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:306:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:307:             baTmp[0] -= 32;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:308:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:309: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:310:         return (new String(baTmp));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:311:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:312: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:313:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:314:      * Formats date for report. Uses specified locale
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:315:      * @param szDate Date to format
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:316:      * @return Formatted date
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:317:      * @see #setLocale(Locale)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:318:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:319:     public String formatDateForReport(String szDate)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:320:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:321:         String szRetVal;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:322: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:323:         if ((szDate == null) || (szDate.trim().equals("")))
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:324:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:325:             return "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:326:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:327: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:328:         try
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:329:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:330:             szRetVal = m_DateFormatter.format(com.esarks.arm.util.DateTime.GetDate(szDate));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:331:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:332:         catch (Exception e)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:333:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:334:             szRetVal = szDate;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:335:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:336: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:337:         return szRetVal;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:338:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:339: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:340:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:341:      * Formats date for report. Uses specified locale
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:342:      * @param dtDate Date to format
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:343:      * @return Formatted date
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:344:      * @see #setLocale(Locale)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:345:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:346:     public String formatDateForReport(java.util.Date dtDate)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:347:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:348:         String szRetVal;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:349: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:350:         if (dtDate == null)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:351:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:352:             return "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:353:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:354: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:355:         try
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:356:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:357:             szRetVal = m_DateFormatter.format(dtDate);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:358:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:359:         catch (Exception e)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:360:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:361:             szRetVal = dtDate.toString();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:362:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:363: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:364:         return szRetVal;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:365:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:366: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:367:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:368:      * Formats date for report. Uses specified locale
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:369:      * @param dtDate Date to format
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:370:      * @return Formatted date
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:371:      * @see #setLocale(Locale)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:372:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:373:     public String formatDateForReport(DateTime dtDate)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:374:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:375:         String szRetVal;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:376: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:377:         if (dtDate == null)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:378:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:379:             return "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:380:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:381: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:382:         try
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:383:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:384:             szRetVal = m_DateFormatter.format(dtDate.toDate(getLocale()));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:385:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:386:         catch (Exception e)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:387:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:388:             szRetVal = dtDate.toString();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:389:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:390: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:391:         return szRetVal;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:392:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:393: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:394: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:395:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:396:      * Formats ammount for report. Uses specified locale
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:397:      * @param dAmmount Ammount to format
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:398:      * @return Formatted ammount
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:399:      * @see #setLocale(Locale)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:400:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:401:     public String formatCurrencyForReport(double dAmmount)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:402:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:403:         String szRetVal;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:404: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:405:         try
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:406:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:407:             szRetVal = m_CurrencyFormatter.format(dAmmount);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:408:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:409:         catch (Exception e)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:410:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:411:             szRetVal = "$" + dAmmount;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:412:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:413: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:414:         return szRetVal;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:415:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:416: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:417:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:418:      * Formats percent for report. Uses specified locale
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:419:      * @param dPercent Percent to format
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:420:      * @return Formatted percent
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:421:      * @see #setLocale(Locale)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:422:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:423:     public String formatPercentForReport(double dPercent)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:424:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:425:         String szRetVal;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:426: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:427:         try
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:428:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:429:             szRetVal = m_PercentFormatter.format(dPercent);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:430:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:431:         catch (Exception e)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:432:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:433:             szRetVal = dPercent + "%";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:434:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:435: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:436:         return szRetVal;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:437:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:438: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:439: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:440:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:441:      * Some test cases
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:442:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:443:     public static void RunTest(String[] args)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:444:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:445:         System.out.println("Format:");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:446:         System.out.println(Format.FormatLastName(""));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:447:         System.out.println(Format.FormatLastName("M"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:448:         System.out.println(Format.FormatLastName("m"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:449:         System.out.println("" + Format.FormatLastName("Mc"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:450:         System.out.println("" + Format.FormatLastName("mc"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:451:         System.out.println("" + Format.FormatLastName("mccormic"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:452:         System.out.println("-----------------------");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:453:         System.out.println("" + Format.FormatLastName(""));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:454:         System.out.println("" + Format.FormatLastName("D"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:455:         System.out.println("" + Format.FormatLastName("d"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:456:         System.out.println("" + Format.FormatLastName("De"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:457:         System.out.println("" + Format.FormatLastName("de"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:458:         System.out.println("" + Format.FormatLastName("deniro"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:459:         System.out.println("" + Format.FormatLastName("de niro"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:460:         System.out.println("-----------------------");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:461:         System.out.println("" + Format.FormatLastName("smith"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:462:         System.out.println("-----------------------");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:463:         System.out.println("" + Format.FormatName("smith, jones m. phd"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:464:         System.out.println("" + Format.FormatName(" jones m. phd"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:465:         System.out.println("" + Format.FormatName("smith m. phd"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:466:         System.out.println("" + Format.FormatName("deniro, robert s. md"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:467:         System.out.println("" + Format.FormatName("deniro s. md"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:468:         System.out.println("" + Format.FormatName("mcdonald, ronald bs"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:469:         System.out.println("" + Format.FormatName("dr. michael mcdonald"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:470:         System.out.println("" + Format.FormatName("dr. mcdonald"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:471:         System.out.println("" + Format.FormatName("dr. michael "));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:472:         System.out.println("-----------------------");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:473:         System.out.println("" + Format.FormatName("smith", " jones", "m.", "phd"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:474:         System.out.println("" + Format.FormatName(" ", " jones", "   ", "  "));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:475:         System.out.println("" + Format.FormatName("mcdonald", "", "m.", " md"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:476:         System.out.println("" + Format.FormatName("mcdonald", "", "  ", " md"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:477:         System.out.println("" + Format.FormatName("deniro", " robert", " ", ""));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:478: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:479:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:480: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:481:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:482:      * Sets locale
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:483:      * @param locale
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:484:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:485:     public void setLocale(Locale locale)
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:486:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:487:         m_Locale = locale;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:488:         m_CurrencyFormatter = NumberFormat.getCurrencyInstance(m_Locale);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:489:         m_DateFormatter = new SimpleDateFormat("MM/dd/yyyy", m_Locale);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:490:         m_PercentFormatter = NumberFormat.getPercentInstance(m_Locale);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:491:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:492: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:493:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:494:      * @return Returns the m_CurrencyFormatter.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:495:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:496:     public NumberFormat getCurrencyFormatter()
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:497:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:498:         return m_CurrencyFormatter;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:499:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:500: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:501:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:502:      * @return Returns the m_DateFormatter.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:503:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:504:     public SimpleDateFormat getDateFormatter()
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:505:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:506:         return m_DateFormatter;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:507:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:508: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:509:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:510:      * @return Returns the m_DateFormatter.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:511:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:512:     public NumberFormat getPercentFormatter()
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:513:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:514:         return m_PercentFormatter;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:515:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:516: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:517:     /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:518:      * @return Returns the m_Locale.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:519:      */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:520:     public Locale getLocale()
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:521:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:522:         return m_Locale;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:523:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:524: //$Section=definitions$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\Format.script:525: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPostfix.script:1: }

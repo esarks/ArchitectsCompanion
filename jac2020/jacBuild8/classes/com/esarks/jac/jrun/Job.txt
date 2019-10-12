@@ -1,142 +1,142 @@
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:2: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:3: import java.util.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:5: import java.io.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:6: import java.text.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:7: import java.sql.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:8: //import java.net.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:10: //import java.security.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:13: //import java.awt.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:15: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:18: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:19: <#import#>
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:2: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:3: <#var#>
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:4: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:6:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:7: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:9: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:10:     super(aScript);
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:11: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:12:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:1: context micScriptComponent
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:2: end
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:3: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:4:   public void execute(String aScript, String aMethod) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:5:     execute(aScript, aMethod, null);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:6:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:7:   
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:8:   public void execute(String aScript, String aMethod, String aArgument) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:9: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:10:     MicScriptHelper lLoadObject = (MicScriptHelper) loadScript(aScript);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:11:     if (lLoadObject == null) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:12:       System.out.println("Job: !WARNING! Cannot open script " + aScript);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:13:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:14: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:15:     System.out.println("Job " + aScript + "::" + aMethod + "(" + aArgument + ")");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:16: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:17:     parseXmlPath(homePath("bin.Job") + ".xml");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:18: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:19:     String lPropertiesPath = <![mic.element:options:properties]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:20:     String lPropertySet = <![mic.element:options:propertySet]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:21:     System.out.println("Job Properties  = " + lPropertiesPath);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:22:     System.out.println("Job PropertySet = " + lPropertySet);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:23:     setContext(iScript.getMasterScript());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:24:     // Search for the Schemas...
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:25: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:26:     File lSchemaFile = new File(path("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:27:     if (lSchemaFile.exists()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:28:       loadXmlSchema("com.esarks.arm.schemas.properties", path("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:29:     } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:30: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:31:       lSchemaFile = new File(homePath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:32:       if (lSchemaFile.exists()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:33:         loadXmlSchema("com.esarks.arm.schemas.properties", homePath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:34:       } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:35: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:36:         lSchemaFile = new File(workPath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:37:         if (lSchemaFile.exists()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:38:           loadXmlSchema("com.esarks.arm.schemas.properties", workPath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:39:         } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:40:           System.out.println("!! WARNING !! PropertiesSchema.xml not found.");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:41:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:42:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:43:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:44: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:45:     parseXmlSchemaPath(homePath(lPropertiesPath + ".Properties") + ".xml");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:46:     boolean lScan = <!com.esarks.arm.schemas.properties.root:property:context!>!scan(lPropertySet);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:47:     System.out.println("Job Context = " + <![com.esarks.arm.schemas.properties.root:property:context]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:48: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:49:     // Open all the DbConnections possible...
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:50:     DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:51:     <!com.esarks.arm.schemas.properties.root:property:dbConnection!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:52:     while (<!com.esarks.arm.schemas.properties.root:property:dbConnection!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:53:       String lName = <![com.esarks.arm.schemas.properties.root:property:dbConnection:name]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:54:       String lJdbcClass = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcClass]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:55:       String lJdbcConnection = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcConnection]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:56:       String lJdbcUser = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcUser]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:57:       String lJdbcPassword = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcPassword]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:58:       String lDbTypes = <![com.esarks.arm.schemas.properties.root:property:dbConnection:dbTypes]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:59:       String lCatalog = <![com.esarks.arm.schemas.properties.root:property:dbConnection:catalog]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:60:       String lOwner = <![com.esarks.arm.schemas.properties.root:property:dbConnection:owner]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:61:       String lStereotype = <![com.esarks.arm.schemas.properties.root:property:dbConnection:stereotype]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:62:       String lOpenCountString = <![com.esarks.arm.schemas.properties.root:property:dbConnection:openCount]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:63:       String iMake = <![com.esarks.arm.schemas.properties.root:property:dbConnection:make]!>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:64:       int lOpenCount = 1;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:65:       if (!lOpenCountString.equals("")) lOpenCount = Integer.parseInt(lOpenCountString);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:66: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:67:       for (int lIdx=0; lIdx < lOpenCount; lIdx++) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:68:         DbConnection lDbConnection = new DbConnection(lName);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:69:         lDbConnection.setCatalog(lCatalog);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:70:         lDbConnection.setOwner(lOwner);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:71:         lDbConnection.setDbTypes(lDbTypes);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:72:         lDbConnection.setStereotype(lStereotype);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:73:         if (iMake.equals("false")) lDbConnection.setMake(false);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:74:         lDbConnectionFactory.register(lDbConnection);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:75:         System.out.println("Connection " + lIdx + " at " + lName + "=" + lDbConnection.connect(lJdbcClass, lJdbcConnection, lJdbcUser, lJdbcPassword));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:76:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:77:       
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:78:       <!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:79:       while (<!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:80:         lDbConnectionFactory.alias(lName, <![com.esarks.arm.schemas.properties.root:property:dbConnection:alias]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:81:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:82: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:83:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:84: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:85:     try {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:86:       // Associate all the objects to a DbConnection...
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:87:       <!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:88:       while (<!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:89:         DbConnection lDbConnection = lDbConnectionFactory.getDbConnection(<![com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:name]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:90:         <!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:91:         while (<!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:92:           lDbConnectionFactory.associateObjectConnection(<![com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object:name]!>, lDbConnection);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:93:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:94:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:95:     } catch(Throwable e) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:96:       System.out.println(e);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:97:       System.out.println("Failed to associate all database objects to a DbConnection.  Please verify the <dbObjects> section of Properties.xml.");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:98:       restoreContext();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:99:       return;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:100:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:101:     
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:102:     restoreContext();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:103:     
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:104:     if (aArgument == null || aArgument.equals("")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:105:       iScript.execMethod(lLoadObject, aMethod);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:106:     } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:107:       iScript.execMethod(lLoadObject, aMethod, new Object[]{aArgument});
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:108:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:109:     
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:110: }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPostfix.script:1: }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:3: import java.util.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:5: import java.io.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:6: import java.text.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:7: import java.sql.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:8: //import java.net.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:10: //import java.security.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:13: //import java.awt.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:15: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:18: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:19: <#import#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:4: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:6:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:7: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:9: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:11: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:12:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:1: context micScriptComponent
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:2: end
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:3: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:4:   public void execute(String aScript, String aMethod) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:5:     execute(aScript, aMethod, null);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:6:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:7:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:8:   public void execute(String aScript, String aMethod, String aArgument) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:9: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:10:     MicScriptHelper lLoadObject = (MicScriptHelper) loadScript(aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:11:     if (lLoadObject == null) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:12:       System.out.println("Job: !WARNING! Cannot open script " + aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:13:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:14: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:15:     System.out.println("Job " + aScript + "::" + aMethod + "(" + aArgument + ")");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:16: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:17:     parseXmlPath(homePath("bin.Job") + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:18: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:19:     String lPropertiesPath = <![mic.element:options:properties]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:20:     String lPropertySet = <![mic.element:options:propertySet]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:21:     System.out.println("Job Properties  = " + lPropertiesPath);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:22:     System.out.println("Job PropertySet = " + lPropertySet);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:23:     setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:24:     // Search for the Schemas...
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:25: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:26:     File lSchemaFile = new File(path("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:27:     if (lSchemaFile.exists()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:28:       loadXmlSchema("com.esarks.arm.schemas.properties", path("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:29:     } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:30: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:31:       lSchemaFile = new File(homePath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:32:       if (lSchemaFile.exists()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:33:         loadXmlSchema("com.esarks.arm.schemas.properties", homePath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:34:       } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:35: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:36:         lSchemaFile = new File(workPath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:37:         if (lSchemaFile.exists()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:38:           loadXmlSchema("com.esarks.arm.schemas.properties", workPath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:39:         } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:40:           System.out.println("!! WARNING !! PropertiesSchema.xml not found.");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:41:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:42:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:43:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:44: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:45:     parseXmlSchemaPath(homePath(lPropertiesPath + ".Properties") + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:46:     boolean lScan = <!com.esarks.arm.schemas.properties.root:property:context!>!scan(lPropertySet);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:47:     System.out.println("Job Context = " + <![com.esarks.arm.schemas.properties.root:property:context]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:48: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:49:     // Open all the DbConnections possible...
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:50:     DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:51:     <!com.esarks.arm.schemas.properties.root:property:dbConnection!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:52:     while (<!com.esarks.arm.schemas.properties.root:property:dbConnection!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:53:       String lName = <![com.esarks.arm.schemas.properties.root:property:dbConnection:name]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:54:       String lJdbcClass = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcClass]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:55:       String lJdbcConnection = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcConnection]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:56:       String lJdbcUser = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcUser]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:57:       String lJdbcPassword = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcPassword]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:58:       String lDbTypes = <![com.esarks.arm.schemas.properties.root:property:dbConnection:dbTypes]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:59:       String lCatalog = <![com.esarks.arm.schemas.properties.root:property:dbConnection:catalog]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:60:       String lOwner = <![com.esarks.arm.schemas.properties.root:property:dbConnection:owner]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:61:       String lStereotype = <![com.esarks.arm.schemas.properties.root:property:dbConnection:stereotype]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:62:       String lOpenCountString = <![com.esarks.arm.schemas.properties.root:property:dbConnection:openCount]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:63:       String iMake = <![com.esarks.arm.schemas.properties.root:property:dbConnection:make]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:64:       int lOpenCount = 1;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:65:       if (!lOpenCountString.equals("")) lOpenCount = Integer.parseInt(lOpenCountString);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:66: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:67:       for (int lIdx=0; lIdx < lOpenCount; lIdx++) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:68:         DbConnection lDbConnection = new DbConnection(lName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:69:         lDbConnection.setCatalog(lCatalog);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:70:         lDbConnection.setOwner(lOwner);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:71:         lDbConnection.setDbTypes(lDbTypes);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:72:         lDbConnection.setStereotype(lStereotype);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:73:         if (iMake.equals("false")) lDbConnection.setMake(false);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:74:         lDbConnectionFactory.register(lDbConnection);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:75:         System.out.println("Connection " + lIdx + " at " + lName + "=" + lDbConnection.connect(lJdbcClass, lJdbcConnection, lJdbcUser, lJdbcPassword));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:76:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:77:       
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:78:       <!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:79:       while (<!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:80:         lDbConnectionFactory.alias(lName, <![com.esarks.arm.schemas.properties.root:property:dbConnection:alias]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:81:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:82: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:83:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:84: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:85:     try {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:86:       // Associate all the objects to a DbConnection...
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:87:       <!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:88:       while (<!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:89:         DbConnection lDbConnection = lDbConnectionFactory.getDbConnection(<![com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:name]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:90:         <!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:91:         while (<!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:92:           lDbConnectionFactory.associateObjectConnection(<![com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object:name]!>, lDbConnection);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:93:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:94:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:95:     } catch(Throwable e) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:96:       System.out.println(e);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:97:       System.out.println("Failed to associate all database objects to a DbConnection.  Please verify the <dbObjects> section of Properties.xml.");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:98:       restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:99:       return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:100:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:101:     
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:102:     restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:103:     
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:104:     if (aArgument == null || aArgument.equals("")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:105:       iScript.execMethod(lLoadObject, aMethod);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:106:     } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:107:       iScript.execMethod(lLoadObject, aMethod, new Object[]{aArgument});
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:108:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:109:     
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Job.script:110: }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPostfix.script:1: }

@@ -1,429 +1,429 @@
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:2: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:3: import java.util.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:5: import java.io.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:6: import java.text.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:7: import java.sql.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:8: //import java.net.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:10: //import java.security.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:13: //import java.awt.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:15: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:18: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:19: <#import#>
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:2: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:3: <#var#>
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:4: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:6:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:7: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:9: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:10:     super(aScript);
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:11: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:12:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:1: context micScriptComponent
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:2: end
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:3: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:4:   public void generateFrames(String aXmlDefinition) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:5: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:6:     <!frames!>!remove();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:7:     parseXmlPath(path(aXmlDefinition) + ".xml");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:8:     if (<!frames!>!size() == 0) return;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:9: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:10:     setContext(iScript.getMasterScript());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:11:     <!$jac:merge:sectionMarker!>!reset("//$Section=");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:12:     <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:13:     <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:14:     <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:15:     <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:16:     <!$jac:merge:preservePreamble!>!reset("yes");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:17:     <!$jac:merge:comments!>!reset("//");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:18:     <!$jac:merge:excludeCompare!>!reset("//  Generated at");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:19:     <!$jac:merge:trimOutput!>!reset("yes");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:20:     <!$jac:merge:keepSections!>!reset("no");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:21:     restoreContext();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:22: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:23:     if (aXmlDefinition.endsWith("_View")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:24:       openOutput(path(aXmlDefinition.substring(0,aXmlDefinition.length()-5)) + ".new");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:25:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:26: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:27: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:28: //$Section=registerFrames$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:29: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:30:   public void registerFrames() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:31:     
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:32: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:33: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:34:     <!frames:frame!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:35:     while (<!frames:frame!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:36: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:37: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:38:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:39:       Frame lFrame = new Frame();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:40:       lFrame.setName("<![frames:frame:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:41:       lFrame.setTitle("<![frames:frame:title]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:42:       getFrames().add(lFrame);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:43: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:44: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:45:       <!frames:frame:control!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:46:       while (<!frames:frame:control!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:47:         if (<![frames:frame:control:type]!>.compareTo("text") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:48: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:49: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:50:       {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:51:         TextControl lControl = new TextControl();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:52:         lControl.setName("<![frames:frame:control:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:53:         lControl.setType("<![frames:frame:control:type]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:54:         lControl.setCaption("<![frames:frame:control:caption]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:55:         lControl.setGrid("<![frames:frame:control:grid]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:56:         lControl.setColumn("<![frames:frame:control:column]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:57:         lControl.setMaxLength(<![frames:frame:control:maxlength]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:58:         lControl.setSize(<![frames:frame:control:size]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:59: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:60:     if (<!frames:frame:control:uppercase!>!size() > 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:61: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:62:         lControl.setUppercase(<![frames:frame:control:uppercase]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:63: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:64:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:65: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:66:         lFrame.addControl(lControl);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:67:         ControlValue lControlValue = new ControlValue();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:68:         lControl.setControlValue(lControlValue);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:69:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:70: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:71:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:72:         else if (<![frames:frame:control:type]!>.compareTo("password") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:73: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:74: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:75:       {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:76:         TextControl lControl = new TextControl();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:77:         lControl.setName("<![frames:frame:control:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:78:         lControl.setType("<![frames:frame:control:type]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:79:         lControl.setCaption("<![frames:frame:control:caption]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:80:         lControl.setGrid("<![frames:frame:control:grid]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:81:         lControl.setColumn("<![frames:frame:control:column]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:82:         lControl.setMaxLength(<![frames:frame:control:maxlength]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:83:         lControl.setSize(<![frames:frame:control:size]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:84:         lFrame.addControl(lControl);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:85:         ControlValue lControlValue = new ControlValue();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:86:         lControl.setControlValue(lControlValue);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:87:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:88: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:89:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:90:         else if (<![frames:frame:control:type]!>.compareTo("select") == 0 ||
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:91:                  <![frames:frame:control:type]!>.compareTo("checkbox") == 0 ||
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:92:                  <![frames:frame:control:type]!>.compareTo("radio") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:93: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:94: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:95:       {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:96:         OptionControl lControl = new OptionControl();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:97:         lControl.setName("<![frames:frame:control:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:98:         lControl.setType("<![frames:frame:control:type]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:99:         lControl.setCaption("<![frames:frame:control:caption]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:100:         lControl.setGrid("<![frames:frame:control:grid]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:101:         lControl.setColumn("<![frames:frame:control:column]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:102:         lFrame.addControl(lControl);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:103: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:104:           <!frames:frame:control:option!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:105:           while (<!frames:frame:control:option!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:106:             int lIterator = <!frames:frame:control:option!>!getIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:107: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:108:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:109:           OptionValue lControlValue = new OptionValue();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:110:           lControlValue.setValue("<![frames:frame:control:option:value]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:111:           lControlValue.setName("<![frames:frame:control:option]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:112:           lControl.addControlValue(lControlValue);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:113:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:114: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:115:           }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:116: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:117:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:118: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:119:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:120:         else if (<![frames:frame:control:type]!>.compareTo("date") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:121: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:122: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:123:       {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:124:         Control lControl = new Control();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:125:         lControl.setName("<![frames:frame:control:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:126:         lControl.setType("<![frames:frame:control:type]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:127:         lControl.setCaption("<![frames:frame:control:caption]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:128:         lControl.setGrid("<![frames:frame:control:grid]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:129:         lControl.setColumn("<![frames:frame:control:column]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:130:         lFrame.addControl(lControl);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:131:         DateValue lControlValue = new DateValue();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:132:         lControl.setControlValue(lControlValue);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:133:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:134: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:135:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:136:         else if (<![frames:frame:control:type]!>.compareTo("submit") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:137: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:138: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:139:       {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:140:         SubmitControl lControl = new SubmitControl();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:141:         lControl.setName("<![frames:frame:control:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:142:         lControl.setType("<![frames:frame:control:type]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:143:         lControl.setCaption("<![frames:frame:control:caption]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:144:         lControl.setGrid("<![frames:frame:control:grid]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:145:         lControl.setColumn("<![frames:frame:control:column]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:146:         lFrame.addControl(lControl);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:147: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:148:           <!frames:frame:control:button!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:149:           while (<!frames:frame:control:button!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:150: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:151:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:152:           ButtonValue lControlValue = new ButtonValue();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:153:           lControlValue.setType("<![frames:frame:control:button:type]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:154:           lControlValue.setName("<![frames:frame:control:button:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:155:           lControlValue.setValue("<![frames:frame:control:button:value]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:156:           lControlValue.setEvent("<![frames:frame:control:button:method]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:157:           lControlValue.setService("<![frames:frame:control:button:service:script]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:158:           lControlValue.setMethod("<![frames:frame:control:button:service:method]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:159:           lControlValue.setMap("<![frames:frame:control:button:service:map]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:160:           lControl.addControlValue(lControlValue);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:161:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:162: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:163:           }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:164: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:165:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:166: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:167:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:168:         else if (<![frames:frame:control:type]!>.compareTo("multirow") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:169: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:170: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:171:       {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:172:         MultiRowControl lControl = new MultiRowControl();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:173:         lControl.setName("<![frames:frame:control:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:174:         lControl.setType("<![frames:frame:control:type]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:175:         lControl.setCaption("<![frames:frame:control:caption]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:176:         lControl.setGrid("<![frames:frame:control:grid]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:177:         lControl.setColumn("<![frames:frame:control:column]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:178:         lFrame.addControl(lControl);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:179: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:180:           <!frames:frame:control:rowColumn!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:181:           while (<!frames:frame:control:rowColumn!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:182: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:183:         {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:184:           ColumnValue lControlValue = new ColumnValue();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:185:           lControlValue.setTitle("<![frames:frame:control:rowColumn:title]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:186:           lControlValue.setName("<![frames:frame:control:rowColumn:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:187:           lControlValue.setHrefMethod("<![frames:frame:control:rowColumn:hrefMethod]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:188:           lControlValue.setHrefRowColumn("<![frames:frame:control:rowColumn:hrefRowColumn]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:189:           lControl.addControlValue(lControlValue);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:190:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:191: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:192:           }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:193: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:194:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:195: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:196:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:197:         else if (<![frames:frame:control:type]!>.compareTo("data") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:198: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:199: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:200:       {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:201:         Control lControl = new Control();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:202:         lControl.setName("<![frames:frame:control:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:203:         lControl.setType("<![frames:frame:control:type]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:204:         lControl.setCaption("<![frames:frame:control:caption]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:205:         lControl.setGrid("<![frames:frame:control:grid]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:206:         lFrame.addControl(lControl);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:207:         ControlValue lControlValue = new ControlValue();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:208:         lControl.setControlValue(lControlValue);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:209:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:210: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:211:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:212:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:213: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:214:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:215: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:216:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:217: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:218:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:219: <%    
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:220: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:221:       <!frames:frame:control!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:222:       while (<!frames:frame:control!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:223:         if (<![frames:frame:control:type]!>.compareTo("text") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:224:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:225:         else if (<![frames:frame:control:type]!>.compareTo("password") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:226:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:227:         else if (<![frames:frame:control:type]!>.compareTo("select") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:228:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:229:         else if (<![frames:frame:control:type]!>.compareTo("date") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:230:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:231:         else if (<![frames:frame:control:type]!>.compareTo("radio") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:232:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:233:         else if (<![frames:frame:control:type]!>.compareTo("submit") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:234:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:235:         else if (<![frames:frame:control:type]!>.compareTo("multirow") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:236:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:237:         else if (<![frames:frame:control:type]!>.compareTo("data") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:238: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:239:   public void set_<![frames:frame:name]!>_<![frames:frame:control:name]!>(String aValue) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:240: //$Section=set_<![frames:frame:name]!>_<![frames:frame:control:name]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:241:     Frame lFrame = getFrame("<![frames:frame:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:242:     if (lFrame == null) return;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:243:     lFrame.setValue("<![frames:frame:control:name]!>", aValue);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:244: //$Section=set_<![frames:frame:name]!>_<![frames:frame:control:name]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:245:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:246:   public String get_<![frames:frame:name]!>_<![frames:frame:control:name]!>() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:247: //$Section=set_<![frames:frame:name]!>_<![frames:frame:control:name]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:248:     Frame lFrame = getFrame("<![frames:frame:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:249:     if (lFrame == null) return null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:250:     return lFrame.getControl("<![frames:frame:control:name]!>").getControlValue().getValue();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:251: //$Section=set_<![frames:frame:name]!>_<![frames:frame:control:name]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:252:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:253: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:254:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:255:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:256: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:257:       <!frames:frame:service!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:258:       while (<!frames:frame:service!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:259: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:260:   public void service_<![frames:frame:service:name]!>() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:261: //$Section=service_<![frames:frame:service:name]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:262:     Frame lFrame = getFrame("<![frames:frame:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:263:     if (lFrame == null) return;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:264:     com.esarks.arm.model.jeo.ServiceJeo lServiceJeo = (com.esarks.arm.model.jeo.ServiceJeo) lFrame.getServiceJeo();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:265:     lFrame.setServiceJeo(lServiceJeo);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:266:     Object lObject = loadScript("<![frames:frame:service:script]!>", "");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:267:     iScript.execMethod(lObject, "<![frames:frame:service:method]!>", new Object[]{lServiceJeo});
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:268:     if (lServiceJeo.getJeoByInstanceNameSize("Error") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:269:       iScript.execMethod(this, "<![frames:frame:service:map]!>", new Object[] {lFrame});
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:270:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:271:     lFrame.setErrors(lServiceJeo.getJeoByInstanceName("Error"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:272: //$Section=service_<![frames:frame:service:name]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:273:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:274: <%            
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:275:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:276: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:277:       <!frames:frame:control!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:278:       while (<!frames:frame:control!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:279:         if (<![frames:frame:control:type]!>.compareTo("multirow") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:280:           <!frames:frame:control:rowColumn!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:281:           while(<!frames:frame:control:rowColumn!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:282:             if (<!frames:frame:control:rowColumn:hrefMethod!>!size() > 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:283: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:284:   public void <![frames:frame:control:rowColumn:hrefMethod]!>(String aArgument) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:285: //$Section=<![frames:frame:control:rowColumn:hrefMethod]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:286:     Frame lFrame = getFrame("<![frames:frame:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:287:     if (lFrame == null) return;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:288:     com.esarks.arm.model.jeo.ServiceJeo lServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:289:     lFrame.setServiceJeo(lServiceJeo);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:290:     lServiceJeo.getRequest().setPropertyValue("<![frames:frame:control:rowColumn:hrefRowColumn]!>", new PropertyValue(aArgument));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:291:     Object lObject = loadScript("<![frames:frame:control:rowColumn:service:script]!>", "");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:292:     iScript.execMethod(lObject, "<![frames:frame:control:rowColumn:service:method]!>", new Object[]{lServiceJeo});
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:293:     if (lServiceJeo.getError() == null || lServiceJeo.getError().getSeverity() == 10) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:294:       iScript.execMethod(this, "<![frames:frame:control:rowColumn:service:map]!>", new Object[] {lFrame});
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:295:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:296:     lFrame.setErrors(lServiceJeo.getJeoByInstanceName("Error"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:297: //$Section=<![frames:frame:control:rowColumn:hrefMethod]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:298:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:299: <%            
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:300:             }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:301:           }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:302:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:303:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:304: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:305: //System.out.println("***" + aXmlDefinition);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:306:     <!frames:frame!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:307:     while (<!frames:frame!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:308: //System.out.println("   Frame: " + <![frames:frame:name]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:309:       <!frames:frame:maps:map!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:310:       while (<!frames:frame:maps:map!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:311: //System.out.println("     Map: " + <![frames:frame:maps:map:name]!>);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:312: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:313:   public void <![frames:frame:maps:map:name]!>(Frame aFrame) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:314: //$Section=<![frames:frame:maps:map:name]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:315:     com.esarks.arm.model.jeo.ServiceJeo lServiceJeo = (com.esarks.arm.model.jeo.ServiceJeo) aFrame.getServiceJeo();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:316:     if (lServiceJeo == null) return;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:317:     ArrayList lArrayList = lServiceJeo.getReply().getJeoByInstanceName("<![frames:frame:maps:map:jeo:name]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:318: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:319:     if (<!frames:frame:maps:map:jeo:control!>!size() > 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:320: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:321:     <![frames:frame:maps:map:jeo:name]!> lJeo = null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:322:     for (int lIdx=0; lIdx < lArrayList.size(); lIdx++) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:323:       ((MultiRowControl) aFrame.getControl("<![frames:frame:maps:map:jeo:control]!>")).addRow();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:324: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:325:     } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:326: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:327: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:328:     if (lArrayList.size() == 0) return;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:329:     <![frames:frame:maps:map:jeo:name]!> lJeo = null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:330:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:331:       int lIdx = 0;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:332: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:333:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:334: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:335:       lJeo = (<![frames:frame:maps:map:jeo:name]!>) lArrayList.get(lIdx);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:336: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:337:     <!frames:frame:maps:map:jeo:property!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:338:     while (<!frames:frame:maps:map:jeo:property!>!next()) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:339: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:340:       if (<!frames:frame:maps:map:jeo:property:from!>!size() == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:341: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:342:       aFrame.clearValue("<![frames:frame:maps:map:jeo:property:to]!>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:343: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:344:         continue;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:345:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:346:       
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:347:       if (<!frames:frame:maps:map:jeo:control!>!size() > 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:348:           if (<![frames:frame:maps:map:jeo:property:format]!>.compareTo("date") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:349: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:350:       aFrame.setColumnValue("<![frames:frame:maps:map:jeo:control]!>", "<![frames:frame:maps:map:jeo:property:rowColumn]!>", lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toDateString("MM-dd-yyyy"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:351: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:352:           } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:353: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:354:       aFrame.setColumnValue("<![frames:frame:maps:map:jeo:control]!>", "<![frames:frame:maps:map:jeo:property:rowColumn]!>", lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toString());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:355: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:356:           }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:357:       } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:358:         if (<!frames:frame:maps:map:jeo:property:value!>!size() > 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:359: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:360:       aFrame.setOptionValue("<![frames:frame:maps:map:jeo:property:to]!>", "<![frames:frame:maps:map:jeo:property:value]!>", lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toString());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:361: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:362:         } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:363:           if (<![frames:frame:maps:map:jeo:property:format]!>.compareTo("date") == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:364: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:365:       aFrame.setDateValue("<![frames:frame:maps:map:jeo:property:to]!>", 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:366:         lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toDateString("MM-dd-yyyy"),
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:367:         lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toDateString("MM"),
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:368:         lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toDateString("dd"),
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:369:         lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toDateString("yyyy"));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:370: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:371:           } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:372: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:373:       aFrame.setValue("<![frames:frame:maps:map:jeo:property:to]!>", lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toString());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:374: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:375:           }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:376:         }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:377:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:378:       if (<!frames:frame:maps:map:jeo:property:method!>!size() > 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:379: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:380:       <![frames:frame:maps:map:jeo:property:method]!>(aFrame);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:381: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:382:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:383:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:384: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:385:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:386: //$Section=<![frames:frame:maps:map:name]!>$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:387:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:388: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:389:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:390:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:391:     closeOutput();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:392:     if (aXmlDefinition.endsWith("_View")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:393:       Merge.getInstance().doMerge(path(aXmlDefinition.substring(0,aXmlDefinition.length()-5)) + ".script", path(aXmlDefinition.substring(0,aXmlDefinition.length()-5)) + ".new", iScript.getMasterScript());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:394:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:395:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:396: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:397:   
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPostfix.script:1: }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:3: import java.util.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:5: import java.io.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:6: import java.text.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:7: import java.sql.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:8: //import java.net.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:10: //import java.security.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:13: //import java.awt.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:15: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:18: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImport.script:19: <#import#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:4: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:6:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:7: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:9: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:11: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:12:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:1: context micScriptComponent
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:2: end
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:3: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:4:   public void generateFrames(String aXmlDefinition) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:5: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:6:     <!frames!>!remove();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:7:     parseXmlPath(path(aXmlDefinition) + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:8:     if (<!frames!>!size() == 0) return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:9: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:10:     setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:11:     <!$jac:merge:sectionMarker!>!reset("//$Section=");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:12:     <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:13:     <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:14:     <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:15:     <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:16:     <!$jac:merge:preservePreamble!>!reset("yes");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:17:     <!$jac:merge:comments!>!reset("//");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:18:     <!$jac:merge:excludeCompare!>!reset("//  Generated at");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:19:     <!$jac:merge:trimOutput!>!reset("yes");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:20:     <!$jac:merge:keepSections!>!reset("no");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:21:     restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:22: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:23:     if (aXmlDefinition.endsWith("_View")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:24:       openOutput(path(aXmlDefinition.substring(0,aXmlDefinition.length()-5)) + ".new");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:25:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:26: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:27: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:28: //$Section=registerFrames$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:29: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:30:   public void registerFrames() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:31:     
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:32: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:33: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:34:     <!frames:frame!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:35:     while (<!frames:frame!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:36: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:37: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:38:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:39:       Frame lFrame = new Frame();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:40:       lFrame.setName("<![frames:frame:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:41:       lFrame.setTitle("<![frames:frame:title]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:42:       getFrames().add(lFrame);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:43: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:44: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:45:       <!frames:frame:control!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:46:       while (<!frames:frame:control!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:47:         if (<![frames:frame:control:type]!>.compareTo("text") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:48: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:49: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:50:       {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:51:         TextControl lControl = new TextControl();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:52:         lControl.setName("<![frames:frame:control:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:53:         lControl.setType("<![frames:frame:control:type]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:54:         lControl.setCaption("<![frames:frame:control:caption]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:55:         lControl.setGrid("<![frames:frame:control:grid]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:56:         lControl.setColumn("<![frames:frame:control:column]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:57:         lControl.setMaxLength(<![frames:frame:control:maxlength]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:58:         lControl.setSize(<![frames:frame:control:size]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:59: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:60:     if (<!frames:frame:control:uppercase!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:61: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:62:         lControl.setUppercase(<![frames:frame:control:uppercase]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:63: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:64:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:65: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:66:         lFrame.addControl(lControl);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:67:         ControlValue lControlValue = new ControlValue();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:68:         lControl.setControlValue(lControlValue);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:69:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:70: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:71:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:72:         else if (<![frames:frame:control:type]!>.compareTo("password") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:73: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:74: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:75:       {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:76:         TextControl lControl = new TextControl();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:77:         lControl.setName("<![frames:frame:control:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:78:         lControl.setType("<![frames:frame:control:type]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:79:         lControl.setCaption("<![frames:frame:control:caption]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:80:         lControl.setGrid("<![frames:frame:control:grid]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:81:         lControl.setColumn("<![frames:frame:control:column]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:82:         lControl.setMaxLength(<![frames:frame:control:maxlength]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:83:         lControl.setSize(<![frames:frame:control:size]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:84:         lFrame.addControl(lControl);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:85:         ControlValue lControlValue = new ControlValue();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:86:         lControl.setControlValue(lControlValue);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:87:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:88: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:89:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:90:         else if (<![frames:frame:control:type]!>.compareTo("select") == 0 ||
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:91:                  <![frames:frame:control:type]!>.compareTo("checkbox") == 0 ||
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:92:                  <![frames:frame:control:type]!>.compareTo("radio") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:93: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:94: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:95:       {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:96:         OptionControl lControl = new OptionControl();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:97:         lControl.setName("<![frames:frame:control:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:98:         lControl.setType("<![frames:frame:control:type]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:99:         lControl.setCaption("<![frames:frame:control:caption]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:100:         lControl.setGrid("<![frames:frame:control:grid]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:101:         lControl.setColumn("<![frames:frame:control:column]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:102:         lFrame.addControl(lControl);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:103: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:104:           <!frames:frame:control:option!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:105:           while (<!frames:frame:control:option!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:106:             int lIterator = <!frames:frame:control:option!>!getIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:107: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:108:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:109:           OptionValue lControlValue = new OptionValue();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:110:           lControlValue.setValue("<![frames:frame:control:option:value]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:111:           lControlValue.setName("<![frames:frame:control:option]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:112:           lControl.addControlValue(lControlValue);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:113:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:114: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:115:           }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:116: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:117:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:118: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:119:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:120:         else if (<![frames:frame:control:type]!>.compareTo("date") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:121: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:122: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:123:       {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:124:         Control lControl = new Control();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:125:         lControl.setName("<![frames:frame:control:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:126:         lControl.setType("<![frames:frame:control:type]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:127:         lControl.setCaption("<![frames:frame:control:caption]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:128:         lControl.setGrid("<![frames:frame:control:grid]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:129:         lControl.setColumn("<![frames:frame:control:column]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:130:         lFrame.addControl(lControl);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:131:         DateValue lControlValue = new DateValue();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:132:         lControl.setControlValue(lControlValue);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:133:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:134: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:135:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:136:         else if (<![frames:frame:control:type]!>.compareTo("submit") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:137: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:138: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:139:       {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:140:         SubmitControl lControl = new SubmitControl();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:141:         lControl.setName("<![frames:frame:control:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:142:         lControl.setType("<![frames:frame:control:type]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:143:         lControl.setCaption("<![frames:frame:control:caption]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:144:         lControl.setGrid("<![frames:frame:control:grid]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:145:         lControl.setColumn("<![frames:frame:control:column]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:146:         lFrame.addControl(lControl);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:147: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:148:           <!frames:frame:control:button!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:149:           while (<!frames:frame:control:button!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:150: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:151:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:152:           ButtonValue lControlValue = new ButtonValue();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:153:           lControlValue.setType("<![frames:frame:control:button:type]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:154:           lControlValue.setName("<![frames:frame:control:button:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:155:           lControlValue.setValue("<![frames:frame:control:button:value]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:156:           lControlValue.setEvent("<![frames:frame:control:button:method]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:157:           lControlValue.setService("<![frames:frame:control:button:service:script]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:158:           lControlValue.setMethod("<![frames:frame:control:button:service:method]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:159:           lControlValue.setMap("<![frames:frame:control:button:service:map]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:160:           lControl.addControlValue(lControlValue);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:161:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:162: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:163:           }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:164: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:165:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:166: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:167:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:168:         else if (<![frames:frame:control:type]!>.compareTo("multirow") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:169: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:170: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:171:       {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:172:         MultiRowControl lControl = new MultiRowControl();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:173:         lControl.setName("<![frames:frame:control:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:174:         lControl.setType("<![frames:frame:control:type]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:175:         lControl.setCaption("<![frames:frame:control:caption]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:176:         lControl.setGrid("<![frames:frame:control:grid]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:177:         lControl.setColumn("<![frames:frame:control:column]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:178:         lFrame.addControl(lControl);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:179: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:180:           <!frames:frame:control:rowColumn!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:181:           while (<!frames:frame:control:rowColumn!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:182: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:183:         {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:184:           ColumnValue lControlValue = new ColumnValue();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:185:           lControlValue.setTitle("<![frames:frame:control:rowColumn:title]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:186:           lControlValue.setName("<![frames:frame:control:rowColumn:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:187:           lControlValue.setHrefMethod("<![frames:frame:control:rowColumn:hrefMethod]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:188:           lControlValue.setHrefRowColumn("<![frames:frame:control:rowColumn:hrefRowColumn]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:189:           lControl.addControlValue(lControlValue);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:190:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:191: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:192:           }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:193: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:194:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:195: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:196:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:197:         else if (<![frames:frame:control:type]!>.compareTo("data") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:198: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:199: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:200:       {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:201:         Control lControl = new Control();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:202:         lControl.setName("<![frames:frame:control:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:203:         lControl.setType("<![frames:frame:control:type]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:204:         lControl.setCaption("<![frames:frame:control:caption]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:205:         lControl.setGrid("<![frames:frame:control:grid]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:206:         lFrame.addControl(lControl);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:207:         ControlValue lControlValue = new ControlValue();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:208:         lControl.setControlValue(lControlValue);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:209:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:210: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:211:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:212:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:213: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:214:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:215: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:216:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:217: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:218:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:219: <%    
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:220: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:221:       <!frames:frame:control!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:222:       while (<!frames:frame:control!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:223:         if (<![frames:frame:control:type]!>.compareTo("text") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:224:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:225:         else if (<![frames:frame:control:type]!>.compareTo("password") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:226:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:227:         else if (<![frames:frame:control:type]!>.compareTo("select") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:228:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:229:         else if (<![frames:frame:control:type]!>.compareTo("date") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:230:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:231:         else if (<![frames:frame:control:type]!>.compareTo("radio") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:232:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:233:         else if (<![frames:frame:control:type]!>.compareTo("submit") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:234:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:235:         else if (<![frames:frame:control:type]!>.compareTo("multirow") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:236:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:237:         else if (<![frames:frame:control:type]!>.compareTo("data") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:238: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:239:   public void set_<![frames:frame:name]!>_<![frames:frame:control:name]!>(String aValue) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:240: //$Section=set_<![frames:frame:name]!>_<![frames:frame:control:name]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:241:     Frame lFrame = getFrame("<![frames:frame:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:242:     if (lFrame == null) return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:243:     lFrame.setValue("<![frames:frame:control:name]!>", aValue);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:244: //$Section=set_<![frames:frame:name]!>_<![frames:frame:control:name]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:245:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:246:   public String get_<![frames:frame:name]!>_<![frames:frame:control:name]!>() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:247: //$Section=set_<![frames:frame:name]!>_<![frames:frame:control:name]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:248:     Frame lFrame = getFrame("<![frames:frame:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:249:     if (lFrame == null) return null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:250:     return lFrame.getControl("<![frames:frame:control:name]!>").getControlValue().getValue();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:251: //$Section=set_<![frames:frame:name]!>_<![frames:frame:control:name]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:252:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:253: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:254:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:255:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:256: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:257:       <!frames:frame:service!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:258:       while (<!frames:frame:service!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:259: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:260:   public void service_<![frames:frame:service:name]!>() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:261: //$Section=service_<![frames:frame:service:name]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:262:     Frame lFrame = getFrame("<![frames:frame:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:263:     if (lFrame == null) return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:264:     com.esarks.arm.model.jeo.ServiceJeo lServiceJeo = (com.esarks.arm.model.jeo.ServiceJeo) lFrame.getServiceJeo();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:265:     lFrame.setServiceJeo(lServiceJeo);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:266:     Object lObject = loadScript("<![frames:frame:service:script]!>", "");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:267:     iScript.execMethod(lObject, "<![frames:frame:service:method]!>", new Object[]{lServiceJeo});
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:268:     if (lServiceJeo.getJeoByInstanceNameSize("Error") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:269:       iScript.execMethod(this, "<![frames:frame:service:map]!>", new Object[] {lFrame});
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:270:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:271:     lFrame.setErrors(lServiceJeo.getJeoByInstanceName("Error"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:272: //$Section=service_<![frames:frame:service:name]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:273:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:274: <%            
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:275:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:276: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:277:       <!frames:frame:control!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:278:       while (<!frames:frame:control!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:279:         if (<![frames:frame:control:type]!>.compareTo("multirow") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:280:           <!frames:frame:control:rowColumn!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:281:           while(<!frames:frame:control:rowColumn!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:282:             if (<!frames:frame:control:rowColumn:hrefMethod!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:283: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:284:   public void <![frames:frame:control:rowColumn:hrefMethod]!>(String aArgument) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:285: //$Section=<![frames:frame:control:rowColumn:hrefMethod]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:286:     Frame lFrame = getFrame("<![frames:frame:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:287:     if (lFrame == null) return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:288:     com.esarks.arm.model.jeo.ServiceJeo lServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:289:     lFrame.setServiceJeo(lServiceJeo);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:290:     lServiceJeo.getRequest().setPropertyValue("<![frames:frame:control:rowColumn:hrefRowColumn]!>", new PropertyValue(aArgument));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:291:     Object lObject = loadScript("<![frames:frame:control:rowColumn:service:script]!>", "");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:292:     iScript.execMethod(lObject, "<![frames:frame:control:rowColumn:service:method]!>", new Object[]{lServiceJeo});
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:293:     if (lServiceJeo.getError() == null || lServiceJeo.getError().getSeverity() == 10) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:294:       iScript.execMethod(this, "<![frames:frame:control:rowColumn:service:map]!>", new Object[] {lFrame});
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:295:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:296:     lFrame.setErrors(lServiceJeo.getJeoByInstanceName("Error"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:297: //$Section=<![frames:frame:control:rowColumn:hrefMethod]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:298:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:299: <%            
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:300:             }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:301:           }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:302:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:303:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:304: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:305: //System.out.println("***" + aXmlDefinition);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:306:     <!frames:frame!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:307:     while (<!frames:frame!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:308: //System.out.println("   Frame: " + <![frames:frame:name]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:309:       <!frames:frame:maps:map!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:310:       while (<!frames:frame:maps:map!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:311: //System.out.println("     Map: " + <![frames:frame:maps:map:name]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:312: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:313:   public void <![frames:frame:maps:map:name]!>(Frame aFrame) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:314: //$Section=<![frames:frame:maps:map:name]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:315:     com.esarks.arm.model.jeo.ServiceJeo lServiceJeo = (com.esarks.arm.model.jeo.ServiceJeo) aFrame.getServiceJeo();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:316:     if (lServiceJeo == null) return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:317:     ArrayList lArrayList = lServiceJeo.getReply().getJeoByInstanceName("<![frames:frame:maps:map:jeo:name]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:318: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:319:     if (<!frames:frame:maps:map:jeo:control!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:320: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:321:     <![frames:frame:maps:map:jeo:name]!> lJeo = null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:322:     for (int lIdx=0; lIdx < lArrayList.size(); lIdx++) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:323:       ((MultiRowControl) aFrame.getControl("<![frames:frame:maps:map:jeo:control]!>")).addRow();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:324: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:325:     } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:326: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:327: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:328:     if (lArrayList.size() == 0) return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:329:     <![frames:frame:maps:map:jeo:name]!> lJeo = null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:330:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:331:       int lIdx = 0;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:332: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:333:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:334: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:335:       lJeo = (<![frames:frame:maps:map:jeo:name]!>) lArrayList.get(lIdx);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:336: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:337:     <!frames:frame:maps:map:jeo:property!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:338:     while (<!frames:frame:maps:map:jeo:property!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:339: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:340:       if (<!frames:frame:maps:map:jeo:property:from!>!size() == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:341: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:342:       aFrame.clearValue("<![frames:frame:maps:map:jeo:property:to]!>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:343: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:344:         continue;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:345:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:346:       
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:347:       if (<!frames:frame:maps:map:jeo:control!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:348:           if (<![frames:frame:maps:map:jeo:property:format]!>.compareTo("date") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:349: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:350:       aFrame.setColumnValue("<![frames:frame:maps:map:jeo:control]!>", "<![frames:frame:maps:map:jeo:property:rowColumn]!>", lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toDateString("MM-dd-yyyy"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:351: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:352:           } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:353: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:354:       aFrame.setColumnValue("<![frames:frame:maps:map:jeo:control]!>", "<![frames:frame:maps:map:jeo:property:rowColumn]!>", lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toString());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:355: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:356:           }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:357:       } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:358:         if (<!frames:frame:maps:map:jeo:property:value!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:359: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:360:       aFrame.setOptionValue("<![frames:frame:maps:map:jeo:property:to]!>", "<![frames:frame:maps:map:jeo:property:value]!>", lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toString());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:361: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:362:         } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:363:           if (<![frames:frame:maps:map:jeo:property:format]!>.compareTo("date") == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:364: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:365:       aFrame.setDateValue("<![frames:frame:maps:map:jeo:property:to]!>", 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:366:         lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toDateString("MM-dd-yyyy"),
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:367:         lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toDateString("MM"),
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:368:         lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toDateString("dd"),
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:369:         lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toDateString("yyyy"));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:370: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:371:           } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:372: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:373:       aFrame.setValue("<![frames:frame:maps:map:jeo:property:to]!>", lJeo.get<![cap@[frames:frame:maps:map:jeo:property:from]]!>PropertyValue().toString());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:374: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:375:           }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:376:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:377:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:378:       if (<!frames:frame:maps:map:jeo:property:method!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:379: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:380:       <![frames:frame:maps:map:jeo:property:method]!>(aFrame);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:381: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:382:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:383:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:384: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:385:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:386: //$Section=<![frames:frame:maps:map:name]!>$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:387:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:388: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:389:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:390:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:391:     closeOutput();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:392:     if (aXmlDefinition.endsWith("_View")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:393:       Merge.getInstance().doMerge(path(aXmlDefinition.substring(0,aXmlDefinition.length()-5)) + ".script", path(aXmlDefinition.substring(0,aXmlDefinition.length()-5)) + ".new", iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:394:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:395:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:396: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateFrame.script:397:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPostfix.script:1: }

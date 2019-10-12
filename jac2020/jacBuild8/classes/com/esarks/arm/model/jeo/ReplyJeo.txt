@@ -1,290 +1,290 @@
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:1: //$Section=License$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:2: //  Generated at 2005.12.24 12:42:49.687 AM EST by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:3: //  XML Definition: com.esarks.arm.model.jeo.Service_Jeo
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:4: //     Module Name: com.esarks.arm.model.jeo.ReplyJeo
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:5: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:6: //$Section=ChangeLog$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:7: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:8: /* ========================================================================= *
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:9:    Contributor        Description
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:10:    ------------------ ------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:11:                       Author
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:12: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:13:  * ========================================================================= */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:14: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:15: //$Section=Class$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:16: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:17: package com.esarks.arm.model.jeo;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:18: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:19: /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:20:  *
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:21:  */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:22: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:23: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:24: // This section is for generated import delcarations.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:25: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:26: // Additional Import Declarations
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:27: import com.esarks.jac.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:28: import com.esarks.mic.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:29: import java.util.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:30: import java.lang.reflect.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:31: import java.io.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:32: import java.text.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:33: import java.net.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:34: import java.sql.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:35: import javax.servlet.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:36: import javax.servlet.http.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:37: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:38: //$Section=CustomDeclare$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:39: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:40: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:41: // This section is for custom declarations.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:42: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:43: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:44: //$Section=CustomDeclare$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:45: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:46: public class ReplyJeo extends com.esarks.jac.Jeo {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:47: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:48: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:49: // This section is for generated declarations.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:50: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:51: // Attributes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:52: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:53: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:54: //$Section=CustomClassDeclare$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:55: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:56: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:57: // This section is for custom class declarations.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:58: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:59: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:60: //$Section=CustomClassDeclare$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:61: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:62: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:63: // Generated constructors.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:64: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:65: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:66: /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:67:  * Default constructor.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:68:  */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:69:     public ReplyJeo() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:70:       iInstanceName = "com.esarks.arm.model.jeo.ReplyJeo";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:71: //$Section=DefaultConstructor$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:72: //$Section=DefaultConstructor$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:73:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:74: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:75: /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:76:  *
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:77:  */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:78:     public ReplyJeo( com.esarks.jac.JeoFactory aJeoFactory ) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:79:       iInstanceName = "com.esarks.arm.model.jeo.ReplyJeo";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:80: //$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:81: //$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:82:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:83: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:84: /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:85:  *
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:86:  */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:87:     public ReplyJeo( Script aScript ) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:88:       super("", aScript);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:89:       iInstanceName = "com.esarks.arm.model.jeo.ReplyJeo";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:90: //$Section=Operation$Jeo( String aScript )$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:91: //$Section=Operation$Jeo( String aScript )$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:92:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:93: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:94: /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:95:  *
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:96:  */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:97:     public ReplyJeo( String aTypeName ) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:98:       iInstanceName = "com.esarks.arm.model.jeo.ReplyJeo";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:99:       iJeoTypeName = aTypeName;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:100: //$Section=Operation$Jeo( String aTypeName )$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:101: //$Section=Operation$Jeo( String aTypeName )$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:102:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:103: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:104: /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:105:  *
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:106:  */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:107:     public ReplyJeo( String aTypeName, Script aScript ) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:108:       super("", aScript);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:109:       iInstanceName = "com.esarks.arm.model.jeo.ReplyJeo";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:110:       iJeoTypeName = aTypeName;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:111: //$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:112: //$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:113:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:114: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:115: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:116: // Default finalize is generated.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:117: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:118: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:119: /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:120:  * Default finalize.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:121:  */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:122:     public void finalize() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:123:     	freeResources();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:124: //$Section=DefaultDestructor$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:125: //$Section=DefaultDestructor$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:126:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:127: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:128: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:129: // Default freeResources is generated.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:130: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:131: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:132: /**
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:133:  * Default freeResources.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:134:  */
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:135:     public void freeResources() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:136:     	super.freeResources();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:137: //$Section=DefaultFreeResources$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:138: //$Section=DefaultFreeResources$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:139:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:140: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:141: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:142: // This section is for custom operations.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:143: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:144: //$Section=CustomOperations$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:145: //$Section=CustomOperations$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:146: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:147:     public void init() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:148:     	super.init();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:149:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:150: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:151: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:152: // This section is for mapping views to tables.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:153: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:154: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:155: // This section is for mapping from and to Jeo's.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:156: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:157: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:158:   public void mapToJeo( Jeo aJeo) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:159: //$Section=Operation$mapFromJeo$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:160:     String lType = null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:161:     PropertyValue lValue = null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:162: //$Section=Operation$mapToJeo$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:163:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:164: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:165:   public void mapFromJeo( Jeo aJeo) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:166: //$Section=Operation$mapFromJeo$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:167:     String lType = null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:168:     PropertyValue lValue = null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:169: //$Section=Operation$mapFromJeo$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:170:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:171: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:172: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:173: // This section is for the get by string name related methods.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:174: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:175: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:176:   public String getCasedName ( String aAttributeName) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:177: //$Section=Operation$getCasedName$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:178: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:179:     try {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:180:         Method lMethod = this.getClass().getMethod("getAttributeName_" + aAttributeName.toLowerCase(), null);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:181:         return (String) lMethod.invoke(this, null);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:182:     } catch (Throwable e) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:183:         //System.out.println(e);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:184:         return null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:185:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:186: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:187: //$Section=Operation$getCasedName$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:188:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:189: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:190:   public PropertyValue getPropertyValueByName ( String aAttributeName) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:191: //$Section=Operation$getPropertyValueByName$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:192: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:193:     try {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:194:         Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "PropertyValue", null);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:195:         return (PropertyValue) lMethod.invoke(this, null);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:196:     } catch (Throwable e) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:197:         //System.out.println(e);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:198:         return null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:199:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:200: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:201: //$Section=Operation$getPropertyValueByName$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:202:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:203: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:204:   public void setStringValueByName ( String aAttributeName, String aValue) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:205: //$Section=Operation$setStringValueByName$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:206: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:207:     try {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:208:         Class lClassParams[] = new Class[]{"".getClass()};
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:209:         Object lArguments[] = new Object[] {aValue};
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:210:         Method lMethod = this.getClass().getMethod("set" + getCasedName(aAttributeName), lClassParams);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:211:         lMethod.invoke(this, lArguments);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:212:     } catch (Throwable e) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:213:         //System.out.println(e);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:214:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:215: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:216: //$Section=Operation$setStringValueByName$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:217:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:218: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:219:   public String getTypeByName ( String aAttributeName) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:220: //$Section=Operation$getTypeByName$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:221: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:222:     try {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:223:         Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueType", null);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:224:         return (String) lMethod.invoke(this, null);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:225:     } catch (Throwable e) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:226:         //System.out.println(e);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:227:         return null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:228:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:229: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:230: //$Section=Operation$getTypeByName$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:231:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:232: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:233:   public String getStereotypeByName ( String aAttributeName) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:234: //$Section=Operation$getStereotypeByName$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:235: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:236:     try {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:237:         Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueStereotype", null);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:238:         return (String) lMethod.invoke(this, null);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:239:     } catch (Throwable e) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:240:         //System.out.println(e);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:241:         return null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:242:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:243: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:244: //$Section=Operation$getStereotypeByName$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:245:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:246: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:247:   public String getNameByIndex ( int aIndex) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:248: //$Section=Operation$getNameByIndex$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:249: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:250:     switch(aIndex) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:251:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:252:     return null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:253: //$Section=Operation$getNameByIndex$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:254:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:255: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:256:   public String getXml ( ) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:257: //$Section=Operation$getXml$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:258: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:259:     StringBuffer lXml = new StringBuffer("<jeo name='com.esarks.arm.model.jeo.ReplyJeo'>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:260:     String lCdataBegin = "<" + "!" + "[CDATA[";
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:261:     lXml.append("</jeo>");
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:262:     return lXml.toString();
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:263: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:264: //$Section=Operation$getXml$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:265:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:266: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:267:   public boolean isJeoEqual ( Jeo aJeo) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:268: //$Section=Operation$isJeoEqual$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:269: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:270:     PropertyValue lThisValue = null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:271:     PropertyValue lThatValue = null;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:272:     return true;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:273: //$Section=Operation$isJeoEqual$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:274:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:275: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:276: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:277: // This section is for generated attribute accessor methods.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:278: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:279: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:280: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:281: //$Section=Deleted$Preserve=yes
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:282: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:283: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:284: // This section contains orphaned code from deleted operations.
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:285: //----------------------------------------------------------------------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:286: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:287: //$Section=Deleted$Preserve=no
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:288: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:289: //End of class---------------
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:290: }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:1: //$Section=License$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:2: //  Generated at 2005.12.24 12:42:49.687 AM EST by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:3: //  XML Definition: com.esarks.arm.model.jeo.Service_Jeo
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:4: //     Module Name: com.esarks.arm.model.jeo.ReplyJeo
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:5: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:6: //$Section=ChangeLog$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:7: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:8: /* ========================================================================= *
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:9:    Contributor        Description
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:10:    ------------------ ------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:11:                       Author
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:12: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:13:  * ========================================================================= */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:14: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:15: //$Section=Class$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:16: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:17: package com.esarks.arm.model.jeo;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:18: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:19: /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:20:  *
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:21:  */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:22: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:23: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:24: // This section is for generated import delcarations.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:25: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:26: // Additional Import Declarations
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:27: import com.esarks.jac.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:28: import com.esarks.mic.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:29: import java.util.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:30: import java.lang.reflect.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:31: import java.io.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:32: import java.text.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:33: import java.net.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:34: import java.sql.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:35: import javax.servlet.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:36: import javax.servlet.http.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:37: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:38: //$Section=CustomDeclare$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:39: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:40: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:41: // This section is for custom declarations.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:42: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:43: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:44: //$Section=CustomDeclare$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:45: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:46: public class ReplyJeo extends com.esarks.jac.Jeo {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:47: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:48: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:49: // This section is for generated declarations.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:50: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:51: // Attributes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:52: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:53: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:54: //$Section=CustomClassDeclare$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:55: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:56: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:57: // This section is for custom class declarations.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:58: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:59: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:60: //$Section=CustomClassDeclare$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:61: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:62: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:63: // Generated constructors.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:64: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:65: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:66: /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:67:  * Default constructor.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:68:  */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:69:     public ReplyJeo() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:70:       iInstanceName = "com.esarks.arm.model.jeo.ReplyJeo";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:71: //$Section=DefaultConstructor$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:72: //$Section=DefaultConstructor$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:73:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:74: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:75: /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:76:  *
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:77:  */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:78:     public ReplyJeo( com.esarks.jac.JeoFactory aJeoFactory ) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:79:       iInstanceName = "com.esarks.arm.model.jeo.ReplyJeo";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:80: //$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:81: //$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:82:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:83: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:84: /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:85:  *
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:86:  */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:87:     public ReplyJeo( Script aScript ) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:88:       super("", aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:89:       iInstanceName = "com.esarks.arm.model.jeo.ReplyJeo";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:90: //$Section=Operation$Jeo( String aScript )$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:91: //$Section=Operation$Jeo( String aScript )$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:92:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:93: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:94: /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:95:  *
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:96:  */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:97:     public ReplyJeo( String aTypeName ) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:98:       iInstanceName = "com.esarks.arm.model.jeo.ReplyJeo";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:99:       iJeoTypeName = aTypeName;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:100: //$Section=Operation$Jeo( String aTypeName )$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:101: //$Section=Operation$Jeo( String aTypeName )$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:102:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:103: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:104: /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:105:  *
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:106:  */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:107:     public ReplyJeo( String aTypeName, Script aScript ) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:108:       super("", aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:109:       iInstanceName = "com.esarks.arm.model.jeo.ReplyJeo";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:110:       iJeoTypeName = aTypeName;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:111: //$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:112: //$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:113:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:114: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:115: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:116: // Default finalize is generated.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:117: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:118: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:119: /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:120:  * Default finalize.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:121:  */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:122:     public void finalize() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:123:     	freeResources();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:124: //$Section=DefaultDestructor$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:125: //$Section=DefaultDestructor$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:126:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:127: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:128: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:129: // Default freeResources is generated.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:130: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:131: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:132: /**
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:133:  * Default freeResources.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:134:  */
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:135:     public void freeResources() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:136:     	super.freeResources();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:137: //$Section=DefaultFreeResources$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:138: //$Section=DefaultFreeResources$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:139:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:140: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:141: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:142: // This section is for custom operations.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:143: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:144: //$Section=CustomOperations$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:145: //$Section=CustomOperations$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:146: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:147:     public void init() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:148:     	super.init();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:149:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:150: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:151: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:152: // This section is for mapping views to tables.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:153: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:154: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:155: // This section is for mapping from and to Jeo's.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:156: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:157: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:158:   public void mapToJeo( Jeo aJeo) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:159: //$Section=Operation$mapFromJeo$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:160:     String lType = null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:161:     PropertyValue lValue = null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:162: //$Section=Operation$mapToJeo$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:163:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:164: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:165:   public void mapFromJeo( Jeo aJeo) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:166: //$Section=Operation$mapFromJeo$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:167:     String lType = null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:168:     PropertyValue lValue = null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:169: //$Section=Operation$mapFromJeo$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:170:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:171: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:172: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:173: // This section is for the get by string name related methods.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:174: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:175: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:176:   public String getCasedName ( String aAttributeName) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:177: //$Section=Operation$getCasedName$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:178: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:179:     try {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:180:         Method lMethod = this.getClass().getMethod("getAttributeName_" + aAttributeName.toLowerCase(), null);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:181:         return (String) lMethod.invoke(this, null);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:182:     } catch (Throwable e) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:183:         //System.out.println(e);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:184:         return null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:185:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:186: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:187: //$Section=Operation$getCasedName$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:188:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:189: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:190:   public PropertyValue getPropertyValueByName ( String aAttributeName) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:191: //$Section=Operation$getPropertyValueByName$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:192: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:193:     try {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:194:         Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "PropertyValue", null);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:195:         return (PropertyValue) lMethod.invoke(this, null);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:196:     } catch (Throwable e) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:197:         //System.out.println(e);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:198:         return null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:199:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:200: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:201: //$Section=Operation$getPropertyValueByName$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:202:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:203: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:204:   public void setStringValueByName ( String aAttributeName, String aValue) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:205: //$Section=Operation$setStringValueByName$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:206: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:207:     try {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:208:         Class lClassParams[] = new Class[]{"".getClass()};
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:209:         Object lArguments[] = new Object[] {aValue};
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:210:         Method lMethod = this.getClass().getMethod("set" + getCasedName(aAttributeName), lClassParams);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:211:         lMethod.invoke(this, lArguments);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:212:     } catch (Throwable e) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:213:         //System.out.println(e);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:214:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:215: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:216: //$Section=Operation$setStringValueByName$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:217:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:218: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:219:   public String getTypeByName ( String aAttributeName) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:220: //$Section=Operation$getTypeByName$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:221: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:222:     try {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:223:         Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueType", null);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:224:         return (String) lMethod.invoke(this, null);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:225:     } catch (Throwable e) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:226:         //System.out.println(e);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:227:         return null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:228:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:229: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:230: //$Section=Operation$getTypeByName$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:231:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:232: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:233:   public String getStereotypeByName ( String aAttributeName) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:234: //$Section=Operation$getStereotypeByName$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:235: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:236:     try {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:237:         Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueStereotype", null);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:238:         return (String) lMethod.invoke(this, null);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:239:     } catch (Throwable e) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:240:         //System.out.println(e);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:241:         return null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:242:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:243: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:244: //$Section=Operation$getStereotypeByName$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:245:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:246: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:247:   public String getNameByIndex ( int aIndex) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:248: //$Section=Operation$getNameByIndex$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:249: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:250:     switch(aIndex) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:251:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:252:     return null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:253: //$Section=Operation$getNameByIndex$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:254:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:255: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:256:   public String getXml ( ) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:257: //$Section=Operation$getXml$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:258: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:259:     StringBuffer lXml = new StringBuffer("<jeo name='com.esarks.arm.model.jeo.ReplyJeo'>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:260:     String lCdataBegin = "<" + "!" + "[CDATA[";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:261:     lXml.append("</jeo>");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:262:     return lXml.toString();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:263: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:264: //$Section=Operation$getXml$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:265:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:266: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:267:   public boolean isJeoEqual ( Jeo aJeo) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:268: //$Section=Operation$isJeoEqual$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:269: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:270:     PropertyValue lThisValue = null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:271:     PropertyValue lThatValue = null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:272:     return true;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:273: //$Section=Operation$isJeoEqual$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:274:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:275: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:276: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:277: // This section is for generated attribute accessor methods.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:278: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:279: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:280: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:281: //$Section=Deleted$Preserve=yes
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:282: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:283: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:284: // This section contains orphaned code from deleted operations.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:285: //----------------------------------------------------------------------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:286: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:287: //$Section=Deleted$Preserve=no
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:288: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:289: //End of class---------------
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\model\jeo\ReplyJeo.script:290: }

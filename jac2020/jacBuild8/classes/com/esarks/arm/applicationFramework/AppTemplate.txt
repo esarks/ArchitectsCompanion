@@ -1,0 +1,226 @@
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:3: import com.esarks.jac.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:4: import com.esarks.mic.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:5: import java.util.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:6: import java.lang.reflect.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:7: import java.io.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:8: import java.text.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:9: import java.net.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:10: import javax.net.ssl.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:11: import java.security.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:12: import java.sql.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:13: import javax.servlet.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:14: import javax.servlet.http.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:15: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micImportView.script:16: <#import#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:4: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:6:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:7: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:9: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:11: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPrefix.script:12:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:1: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:2: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:3: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:4: <& com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:5:    <method name="onLoad" visibility="public" return="void" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:6:      <document></document>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:7:    </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:8: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:9: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:10:     setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:11:     String lPropertySet = <![com.esarks.arm.schemas.router.root:loc:propertySet]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:12:     System.out.println("AppTemplate PropertySet = " + lPropertySet);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:13:     XmlSchemaFactory lXmlSchemaFactory = iSymbolTable.getXmlSchemaFactory();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:14:     if (lXmlSchemaFactory.getXmlSchemaElement("com.esarks.arm.schemas.properties.root") == null) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:15:       loadXmlSchema("com.esarks.arm.schemas.properties", path("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:16:       parseXmlSchema(<![com.esarks.arm.schemas.router.root:loc:propertySet:path]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:17: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:18:       boolean lScan = <!com.esarks.arm.schemas.properties.root:property!>!scan(lPropertySet);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:19:       // Open all the DbConnections possible...
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:20:       DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:21:       <!com.esarks.arm.schemas.properties.root:property:dbConnection!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:22:       while (<!com.esarks.arm.schemas.properties.root:property:dbConnection!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:23:         String lName = <![com.esarks.arm.schemas.properties.root:property:dbConnection:name]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:24:         String lJdbcClass = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcClass]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:25:         String lJdbcConnection = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcConnection]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:26:         String lJdbcUser = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcUser]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:27:         String lJdbcPassword = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcPassword]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:28:         String lDbTypes = <![com.esarks.arm.schemas.properties.root:property:dbConnection:dbTypes]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:29:         String lCatalog = <![com.esarks.arm.schemas.properties.root:property:dbConnection:catalog]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:30:         String lOwner = <![com.esarks.arm.schemas.properties.root:property:dbConnection:owner]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:31:         String lStereotype = <![com.esarks.arm.schemas.properties.root:property:dbConnection:stereotype]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:32:         String lOpenCountString = <![com.esarks.arm.schemas.properties.root:property:dbConnection:openCount]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:33:         int lOpenCount = 1;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:34:         if (!lOpenCountString.equals("")) lOpenCount = Integer.parseInt(lOpenCountString);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:35:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:36:         for (int lIdx=0; lIdx < lOpenCount; lIdx++) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:37:           DbConnection lDbConnection = new DbConnection(lName);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:38:           lDbConnection.setCatalog(lCatalog);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:39:           lDbConnection.setOwner(lOwner);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:40:           lDbConnection.setDbTypes(lDbTypes);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:41:           lDbConnection.setStereotype(lStereotype);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:42:           lDbConnectionFactory.register(lDbConnection);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:43:           System.out.println("Connection " + lIdx + " at " + lName + "=" + lDbConnection.connect(lJdbcClass, lJdbcConnection, lJdbcUser, lJdbcPassword));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:44:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:45:         
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:46:         <!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:47:         while (<!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:48:           lDbConnectionFactory.alias(lName, <![com.esarks.arm.schemas.properties.root:property:dbConnection:alias]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:49:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:50:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:51:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:52:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:53:       try {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:54:         // Associate all the objects to a DbConnection...
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:55:         <!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:56:         while (<!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:57:           DbConnection lDbConnection = lDbConnectionFactory.getDbConnection(<![com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:name]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:58:           <!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:59:           while (<!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object!>!next()) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:60:             lDbConnectionFactory.associateObjectConnection(<![com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object:name]!>, lDbConnection);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:61:           }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:62:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:63:       } catch(Throwable e) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:64:         System.out.println(e);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:65:         System.out.println("Failed to associate all database objects to a DbConnection.  Please verify the <dbObjects> section of Properties.xml.");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:66:         restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:67:         return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:68:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:69:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:70: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:71:     if (<!com.esarks.arm.schemas.router.root:loc:securityManager!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:72:       iSecurityManager = (com.esarks.mic.SecurityManager) loadScript(<![com.esarks.arm.schemas.router.root:loc:securityManager]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:73:     } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:74:       iSecurityManager = new com.esarks.mic.SecurityManager();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:75:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:76: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:77:     String lInstance = Long.toString(new java.util.Date().getTime());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:78:     int lInstanceCount = 0;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:79:     <!com.esarks.arm.schemas.router.root:loc:template:region!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:80:       // Instantiate the region.
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:81:       String lRegion = <![com.esarks.arm.schemas.router.root:loc:template:region]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:82:       com.esarks.mic.View lView = (com.esarks.mic.View) loadScript(<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":script]!>, "com.esarks.schemas.router.loc:" + lRegion);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:83: System.out.println("Region: " + lRegion);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:84:       <!com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:85: System.out.println("Add: " + <![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:86: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:87:         if (<!com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:instance!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:88:           com.esarks.mic.View lAdd = (com.esarks.mic.View) loadScript(<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>, <![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:instance]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:89:           lView.addView(lAdd);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:90:         } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:91:           lView.addView(<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:92:           if (<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:open]!>.equals("true")) lView.openView(<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:93:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:94:       }      
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:95:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:96: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:97:     restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:98: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:99: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:100: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:101: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:102: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:103: <& com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:104:    <method name="handlePost" visibility="public" return="void" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:105:      <document></document>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:106:    </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:107: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:108: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:109:     <!com.esarks.arm.schemas.router.root:loc:template:region!>& {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:110:       String lRegion = <![com.esarks.arm.schemas.router.root:loc:template:region]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:111:       iScript.execMethod(loadScript(<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":script]!>, lRegion), "handlePost");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:112:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:113: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:114: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:115: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:116: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:117: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:118: <& com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:119:    <method name="execute" visibility="public" return="void" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:120:      <document></document>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:121:    </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:122: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:123: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:124:     setContext(iScript.getMasterScript());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:125: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:126:     ServletRequest lServletRequest = getServletRequest();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:127: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:128:     boolean lHrefError = false;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:129:     String lScript = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:130:     String lInstance = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:131:     String lMethod = "";
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:132:     String lArgument = null;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:133:     
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:134:     String lHref = lServletRequest.getParameter("href");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:135:     if (lHref != null && lHref != "") {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:136: System.out.println("href = " + lHref);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:137:       <!$jac:href:id!>!resetIterator();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:138:       if (<!$jac:href!>!scan("id", lHref)) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:139: System.out.println("TRUE");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:140:         lScript = (String) <![$jac:href:id:script]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:141:         lInstance = (String) <![$jac:href:id:instance]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:142:         lMethod = (String) <![$jac:href:id:method]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:143:         if (<!$jac:href:id:argument!>!size() > 0) lArgument = (String) <![$jac:href:id:argument]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:144:       } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:145: System.out.println("FALSE");
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:146:         lHrefError = true;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:147:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:148:     } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:149:       lScript = <![com.esarks.arm.schemas.router.root:loc:script:path]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:150:       lInstance = <![com.esarks.arm.schemas.router.root:loc:script:instance]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:151:       lMethod = <![com.esarks.arm.schemas.router.root:loc:script:method]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:152:       if (<!com.esarks.arm.schemas.router.root:loc:script:argument!>!size() > 0) lArgument = <![com.esarks.arm.schemas.router.root:loc:script:argument]!>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:153:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:154: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:155: System.out.println("-->1 " + lScript + " " + lInstance + " " + lMethod + " " + lArgument);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:156: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:157:     if (!lScript.equals("")) handlePost();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:158: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:159: System.out.println("-->2 " + lScript + " " + lInstance + " " + lMethod + " " + lArgument);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:160: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:161:     if (!lScript.equals("") && !lMethod.equals("handlePost")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:162:       MicScriptHelper lScriptHelper = (MicScriptHelper) loadScript(lScript, lInstance);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:163:       if (true) { // || lScriptHelper.checkSecurity(iSecurityManager)) {        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:164:         if (lArgument == null) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:165:           iScript.execMethod(lScriptHelper, lMethod);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:166:         } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:167:           iScript.execMethod(lScriptHelper, lMethod, new Object[] {lArgument});
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:168:         }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:169:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:170:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:171: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:172: System.out.println("-->3 " + lScript + " " + lInstance + " " + lMethod + " " + lArgument);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:173: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:174:     <!$jac:href!>!remove();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:175: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:176:   restoreContext();
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:177: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:178: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:179: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:180: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:181: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:182: <& com.esarks.arm.scripts.Method
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:183:    <method name="findRegion" visibility="public" return="boolean" >
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:184:      <document></document>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:185:      <argument type="String" name="aRegion" />
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:186:    </method>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:187: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:188: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:189:   if (<!com.esarks.arm.schemas.router.root:loc:" + aRegion + "!>!size() > 0) return true;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:190:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:191: <& com.esarks.arm.scripts.FinalReturnMethod
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:192:   <return>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:193:     <normal>false</normal>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:194:     <error>false</error>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:195:   </return>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:196: &>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:197:   
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\micPostfix.script:1: }

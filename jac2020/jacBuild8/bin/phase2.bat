@@ -1,4 +1,4 @@
-set JAC_BUILD=C:\ArchitectsCompanion\jac2017\jacBuild8
+set JAC_BUILD=C:\GitHub\JAC2020\jac2020\jacBuild8
 
 if EXIST %JAC_BUILD%\classes rmdir/q/s %JAC_BUILD%\classes
 mkdir %JAC_BUILD%\classes

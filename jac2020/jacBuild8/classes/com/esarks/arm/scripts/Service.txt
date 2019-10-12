@@ -1,76 +1,76 @@
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:1: package <#[$jac:script:package]#>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:2: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:3: import com.esarks.jac.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:4: import java.util.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:5: import java.lang.reflect.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:6: import java.io.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:7: import java.util.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:8: import java.text.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:9: import java.net.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:10: //import java.sql.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:11: //import javax.servlet.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:12: //import javax.servlet.http.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:13: //import javax.servlet.jsp.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:14: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:1: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:2: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:3: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:4: <#var#>
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:5: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:6:   private String iScriptPackage = "<#[$jac:script:package]#>";
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:7:   private String iScriptName = "<#[$jac:script]#>";
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:8: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:9:   protected <#[$jac:script]#>() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:10:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:11: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:12:   public <#[$jac:script]#>(Script aScript) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:13: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:14:     super(aScript);
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:15: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:16:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:17: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:18:   public void execute() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:19:     
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:20: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:1: // Begin: com.esarks.arm.scripts.Service
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:2: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:3:   if (<!$jac:script:xml:script:serviceJeo!>!size() > 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:4: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:5:     <![$jac:script:xml:script:serviceJeo]!>.getRequest().setPropertyValue("scriptFullName", new PropertyValue(iScriptFullName));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:6:     <![$jac:script:xml:script:serviceJeo]!>.getRequest().setPropertyValue("methodSignature", new PropertyValue(lMethodSignature));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:7:     <![$jac:script:xml:script:serviceJeo]!>.getRequest().setPropertyValue("methodLocation", new PropertyValue(lMethodLocation));
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:8: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:9:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:10: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:11:     iScript.execMethod(<![$jac:script:xml:script:name]!>.class.getName(), "<![$jac:script:xml:script:method]!>", <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:12:   if (<!$jac:script:xml:script:arguments!>!size() > 0) %>new Object[]{<![$jac:script:xml:script:arguments]!>});<%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:13:   if (<!$jac:script:xml:script:object!>!size() > 0) %><![$jac:script:xml:script:object]!>);<%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:14:   if (<!$jac:script:xml:script:serviceJeo!>!size() > 0) %>new Object[]{<![$jac:script:xml:script:serviceJeo]!>});<%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:15: %>    
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:16: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:17: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:18:   if (<!$jac:script:xml:script:serviceJeo!>!size() > 0 && !<![$jac:script:xml:script:checkError]!>.equals("false")) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:19: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:20:     if (<![$jac:script:xml:script:serviceJeo]!>.getError() != null && <![$jac:script:xml:script:serviceJeo]!>.getError().getSeverity() < 5) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:21:       System.out.println(<![$jac:script:xml:script:serviceJeo]!>.getError().getTitle());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:22:       System.out.println(<![$jac:script:xml:script:serviceJeo]!>.getError().getText());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:23:       System.out.println(<![$jac:script:xml:script:serviceJeo]!>.getError().getLocation());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:24: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:25:     if (<!$jac:script:xml:script:errorReturn!>!size() == 0) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:26: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:27:       return;
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:28:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:29: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:30:     } else {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:31: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:32:       <![$jac:script:xml:script:errorReturn]!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:33:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:34: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:35:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:36:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:37: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:38: // End: com.esarks.arm.scripts.Service
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:1: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:2:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:3: }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:4: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:3: import com.esarks.jac.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:4: import java.util.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:5: import java.lang.reflect.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:6: import java.io.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:7: import java.util.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:8: import java.text.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:9: import java.net.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:10: //import java.sql.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:11: //import javax.servlet.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:12: //import javax.servlet.http.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:13: //import javax.servlet.jsp.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:14: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:1: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:2: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:3: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:4: <#var#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:5: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:6:   private String iScriptPackage = "<#[$jac:script:package]#>";
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:7:   private String iScriptName = "<#[$jac:script]#>";
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:8: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:9:   protected <#[$jac:script]#>() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:10:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:11: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:12:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:13: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:14:     super(aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:15: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:16:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:17: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:18:   public void execute() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:19:     
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:20: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:1: // Begin: com.esarks.arm.scripts.Service
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:2: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:3:   if (<!$jac:script:xml:script:serviceJeo!>!size() > 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:4: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:5:     <![$jac:script:xml:script:serviceJeo]!>.getRequest().setPropertyValue("scriptFullName", new PropertyValue(iScriptFullName));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:6:     <![$jac:script:xml:script:serviceJeo]!>.getRequest().setPropertyValue("methodSignature", new PropertyValue(lMethodSignature));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:7:     <![$jac:script:xml:script:serviceJeo]!>.getRequest().setPropertyValue("methodLocation", new PropertyValue(lMethodLocation));
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:8: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:9:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:10: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:11:     iScript.execMethod(<![$jac:script:xml:script:name]!>.class.getName(), "<![$jac:script:xml:script:method]!>", <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:12:   if (<!$jac:script:xml:script:arguments!>!size() > 0) %>new Object[]{<![$jac:script:xml:script:arguments]!>});<%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:13:   if (<!$jac:script:xml:script:object!>!size() > 0) %><![$jac:script:xml:script:object]!>);<%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:14:   if (<!$jac:script:xml:script:serviceJeo!>!size() > 0) %>new Object[]{<![$jac:script:xml:script:serviceJeo]!>});<%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:15: %>    
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:16: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:17: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:18:   if (<!$jac:script:xml:script:serviceJeo!>!size() > 0 && !<![$jac:script:xml:script:checkError]!>.equals("false")) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:19: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:20:     if (<![$jac:script:xml:script:serviceJeo]!>.getError() != null && <![$jac:script:xml:script:serviceJeo]!>.getError().getSeverity() < 5) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:21:       System.out.println(<![$jac:script:xml:script:serviceJeo]!>.getError().getTitle());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:22:       System.out.println(<![$jac:script:xml:script:serviceJeo]!>.getError().getText());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:23:       System.out.println(<![$jac:script:xml:script:serviceJeo]!>.getError().getLocation());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:24: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:25:     if (<!$jac:script:xml:script:errorReturn!>!size() == 0) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:26: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:27:       return;
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:28:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:29: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:30:     } else {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:31: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:32:       <![$jac:script:xml:script:errorReturn]!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:33:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:34: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:35:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:36:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:37: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Service.script:38: // End: com.esarks.arm.scripts.Service
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPostfix.script:1: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPostfix.script:2:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPostfix.script:3: }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPostfix.script:4: 

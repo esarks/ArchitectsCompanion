@@ -1,45 +1,45 @@
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:1: package <#[$jac:script:package]#>;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:2: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:3: import com.esarks.jac.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:4: import java.util.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:5: import java.lang.reflect.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:6: import java.io.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:7: import java.util.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:8: import java.text.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:9: import java.net.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:10: //import java.sql.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:11: //import javax.servlet.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:12: //import javax.servlet.http.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:13: //import javax.servlet.jsp.*;
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:14: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:1: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:2: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:3: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:4: <#var#>
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:5: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:6:   private String iScriptPackage = "<#[$jac:script:package]#>";
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:7:   private String iScriptName = "<#[$jac:script]#>";
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:8: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:9:   protected <#[$jac:script]#>() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:10:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:11: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:12:   public <#[$jac:script]#>(Script aScript) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:13: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:14:     super(aScript);
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:15: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:16:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:17: 
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:18:   public void execute() {
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:19:     
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:20: %>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:1:     {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:2:       ArrayList lArrayList = <![$jac:script:xml:script:jeo]!>.getReply().getJeoByInstanceName(<![$jac:script:xml:script:instance]!>.class.getName());
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:3:       for (int lIdx=0; lIdx < lArrayList.size(); lIdx++) {
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:4:         <![$jac:script:xml:script:instance]!> lInstanceJeo = (<![$jac:script:xml:script:instance]!>) lArrayList.get(lIdx);
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:5: <![$jac:script:xml:script:custom]!>
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:6:       }
-C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:7:     }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:1: <%
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:2:   }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:3: }
-C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:4: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:2: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:3: import com.esarks.jac.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:4: import java.util.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:5: import java.lang.reflect.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:6: import java.io.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:7: import java.util.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:8: import java.text.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:9: import java.net.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:10: //import java.sql.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:11: //import javax.servlet.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:12: //import javax.servlet.http.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:13: //import javax.servlet.jsp.*;
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptImport.script:14: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:1: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:2: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:3: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:4: <#var#>
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:5: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:6:   private String iScriptPackage = "<#[$jac:script:package]#>";
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:7:   private String iScriptName = "<#[$jac:script]#>";
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:8: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:9:   protected <#[$jac:script]#>() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:10:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:11: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:12:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:13: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:14:     super(aScript);
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:15: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:16:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:17: 
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:18:   public void execute() {
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:19:     
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPrefix.script:20: %>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:1:     {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:2:       ArrayList lArrayList = <![$jac:script:xml:script:jeo]!>.getReply().getJeoByInstanceName(<![$jac:script:xml:script:instance]!>.class.getName());
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:3:       for (int lIdx=0; lIdx < lArrayList.size(); lIdx++) {
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:4:         <![$jac:script:xml:script:instance]!> lInstanceJeo = (<![$jac:script:xml:script:instance]!>) lArrayList.get(lIdx);
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:5: <![$jac:script:xml:script:custom]!>
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:6:       }
+C:\GitHub\JAC2020\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\IterateReplyJeo.script:7:     }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPostfix.script:1: <%
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPostfix.script:2:   }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPostfix.script:3: }
+C:\GitHub\JAC2020\jac2020\jacBuild8\conf\ScriptPostfix.script:4: 
