@@ -1,6 +1,6 @@
-set JAVA_HOME=C:\ArchitectsCompanion\jac2017\jdk1.8.0_112
+set JAVA_HOME=C:\GitHub\JAC2020\jac2020\jdk1.8.0_112
 
-cd C:\ArchitectsCompanion\jac2017\jacBuild8\bin
+cd C:\GitHub\JAC2020\jac2020\jdk1.8.0_112\bin
 
 call phase1
 call phase2
