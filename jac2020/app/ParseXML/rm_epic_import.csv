@@ -1,0 +1,62 @@
+number,short_description,description,state,assignment_group,product
+557260,"As a member of BISL, I want to have support from the VIP Dashboard team ","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+707337,"As a member of the TRS Team, I want to have the ability to triage TRS requests so that I can review Receiving Organization requests","As a member of the TRS Team, I want to have the ability to triage TRS requests so that I can review Receiving Organization requests",Invalid,VIP Team,VA VIP Dashboard
+557261,"As a member of the VIP Dashboard Help Desk Team, I want to have technical support for Help Desk tickets so that I can address issues provided by the user community","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557264,"As a 508 user, I want the VIP Dashboard to be 508 compliant","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557263,"As a VIP Dashboard trainer, I want to learn about the latest capabilities and enhancements to the VIP Dashboard so that I can share this information to the VIP Dashboard user community","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+797842,"As an EPMO Director, I want to see a Scorecard by Portfolio so that I can see the health of VIP projects in each portfolio","As an EPMO Director, I want to see a Scorecard by Portfolio so that I can see the health of VIP projects in each portfolio",Invalid,VIP Team,VA VIP Dashboard
+557250,"As a VIP administator, I want the administration module updated ","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557257,"As a VIP Dashboard user, I want the VIP Dashboard to interface with POLARIS so that I can view project release information","PWS Requirement",New,VIP Team,VA VIP Dashboard
+707340,"As a Project Manager, I want to submit a TRS request so that I can have a Receiving Organization for my VIP project","As a Project Manager, I want to submit a TRS request so that I can have a Receiving Organization for my VIP project",Invalid,VIP Team,VA VIP Dashboard
+557256,"As a VIP Dashboard user, I want the VIP Dashboard to interface with the Rational Tools suite","Note from PJ (4/20): Risks entered in Rational should be pulled for VIP project records",Invalid,VIP Team,VA VIP Dashboard
+557259,"As a VIP Dashboard, I want the VIP project business rules updated so that they reflect changes to VIP policy ","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557258,"As a VIP Dashboard user, I want the VIP Dashboard to interface with VATAS","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557253,"As a stakeholder for cybersecurity, I want additional fields added to the VIP Dashboard to capture data elements regarding cybersecurity software","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557255,"As a VIP Dashboard user, I want the VIP Dashboard to interface with VIPR so that I can VIP project initiation information","PWS Requirement",New,VIP Team,VA VIP Dashboard
+557254,"As a VIP Dashboard user, I want to have the BTT Tool integrated with the VIP Dashboard ","PWS Requirement",New,VIP Team,VA VIP Dashboard
+557249,"As an OMB administator, I want to submit investment and project data for the month of July so that I can adhere to OMB submission requirements","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557240,"As a VIP Dashboard user, I want to view canned, customized, ad-hoc, and live data reports","PWS Requirement
+
+1. Prioritize CIO canned report then creating a reporting cube (per email on 08/16/17, ""Canned Reports"")
+
+2. From email (""Canned Reports"" on 08/17/2017; Shannon Langiotti)
+It was discussed the EPS Reports would be prioritized as below….
+1)      EPS Rollup Current and Future FY
+a.       Rename to “EPS Rollup Report�?
+b.      We need to have all FY’s in the parameter. This will eliminate the EPS Roll Up Past FY Report
+2)      EPS Change Control Log
+a.       Rename to “CCB Metrics Report�?
+3)      EPS History
+  The following reports are no longer needed:
+·        EPS Report by Year
+·        EPS Roll Up Past FY Report",Invalid,VIP Team,VA VIP Dashboard
+557246,"As an EPS user, I want to conduct investment restructuring to include Exhibit 300s and major IT Business Cases for investments","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557245,"As an EPS user, I want EPS field drop-downs expanded and updated as needed","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557248,"As an OMB administrator, I want the ability to submit XML files automatically to OMB so that I meet OMB submission requirements","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557247,"As an EPS user, I want to have changes to the EPS module to accommodate for VA project changes and OMB requirements","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557242,"As a VIP Dashboard, I want to view a report on VIP Help Desk activity and trends ","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557241,"As a VIP Dashboard user, I want a data cube implemented so that I can create ad-hoc reports","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557244,"As a VIP Dashboard user, I want to view a report that captures ""Project Completion Percentage"" for each project","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557243,"Identify VIP Dashboard reporting infrastructure necessary to implement a BI tool","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557239,"As a VIP Dashboard user, I want to review reports on TechStat and other lifecycle activities","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557238,"As a VIP Dashboard user, I want to view VIP Quad Charts","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557235,"As a member of the VBO team and authorized user, I want to use self-service reporting functionality","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557234,"As an Enterprise Project Manager, I want to access and view reports to make informed decisions pertaining to enterprise project management","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557237,"As a VIP Dashboard user, I want to view forecasting/proactive analytical reports with core critical investment and project data elements","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557236,"As a member of the VDV team and authorized user, I want to use analytical reports and capabilities based project metadata and other imported data","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557231,"As a VIP Dashboard user, I want to view cost saving and cost avoidance metrics so that I have more information for my managed records","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557230,"As an Investment Manager, I want to enter more data for investment risks so that all investment risks are collected and reportable","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557233,"As a Project Manager, I want to track project execution costs against the original baseline","PWS Requirement",New,VIP Team,VA VIP Dashboard
+557232,"As a member of a Governance Board, I want the VIP Dashboard to capture Governance Boards' data","PWS Requirement",New,VIP Team,VA VIP Dashboard
+557228,"As a Project Manager, I want to enter security-related project data for VIP projects","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557227,"As a security stakeholder, I want the VIP Dashboard to adhere to security requirements in accordance with VA Directive 6500 and FISMA so that the VIP Dashboard is up to date","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard
+557229,"As a Project Manager, I want to enter more data for project risks so that all project and investment risks are collected and reportable","PWS Requirement
+
+May require adding fields from other EPMO dashboards",Invalid,VIP Team,VA VIP Dashboard
+797897,"As a Project Manager, I want to have a sustainment flow structure added to the VIP Tool so that I can add sustainment projects","As a Project Manager, I want to have a sustainment flow structure added to the VIP Tool so that I can add sustainment projects",Invalid,VIP Team,VA VIP Dashboard
+724627,"As an OMB Administrator, I want to update the VIP Dashboard to address changes in guidance provided by OMB","As an OMB Administrator, I want to update the VIP Dashboard to address changes in guidance provided by OMB",Invalid,VIP Team,VA VIP Dashboard
+777034,"As an SES, I want to view canned reports related to OMB data","As an SES, I want to view canned reports related to OMB data",Invalid,VIP Team,VA VIP Dashboard
+639511,"As a VA user, I want to pull data from the VIP Dashboard so that I create my own reports and analysis","As a VA user, I want to request to connect to the VIP Dashboard to pull data so that I create my own reports",New,VIP Team,VA VIP Dashboard
+557224,"As a member of an OI&T pillar organization, I want a system reminder to update my CIO Rating so that it can be submitted to OMB","Develop a system reminder for select members of the OI&T pillar organizations to update their CIO rating; the CIO rating is required as part of the OMB submission requirements (data quality report requirements). The Contractor shall also develop a functionality to include a reminder that triggers an alert when the pillar organizations have updated the CIO rating, to also update the comments field and not allow submission until the comments field is modified",Invalid,VIP Team,VA VIP Dashboard
+557223,"As a VIP Dashboard user, I want to have a log of data so that I have more information for a project record","PWS Requirement",New,VIP Team,VA VIP Dashboard
+557222,"As a VIP Dashboard user, I want to have status indicators and the dates the status indicators change so that I have more information for a project record","PWS Requirement",Invalid,VIP Team,VA VIP Dashboard

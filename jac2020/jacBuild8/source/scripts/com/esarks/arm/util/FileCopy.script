@@ -1,0 +1,155 @@
+
+public void execute() {
+
+    String lFrom = "";
+    String lFromDir = "";
+    String lFromType = "";
+    String lFromFile = "";
+    String lTo = "";
+    String lToDir = "";
+    String lToType = "";
+    String lToFile = "";
+    String lName = "";
+    
+    <!mic.element:file!>& {
+
+      if (<!mic.element:file:fromHome!>!size() > 0) {
+        lFrom = <![mic.element:file:fromHome]!>;
+        lFromDir = homePath(<![mic.element:file:fromHome]!>);
+        lFromType = "home";
+      }
+      if (<!mic.element:file:fromWork!>!size() > 0) {
+        lFrom = <![mic.element:file:fromWork]!>;
+        lFromDir = workPath(<![mic.element:file:fromWork]!>);
+        lFromType = "work";
+      }
+      if (<!mic.element:file:fromScript!>!size() > 0) {
+        lFrom = <![mic.element:file:fromScript]!>;
+        lFromDir = path(<![mic.element:file:fromScript]!>);
+        lFromType = "script";
+      }
+      if (<!mic.element:file:toHome!>!size() > 0) {
+        lTo = <![mic.element:file:toHome]!>;
+        lToDir = homePath(<![mic.element:file:toHome]!>);
+        lToType = "home";
+        try {
+          File lDirectory = new File(homePath(lTo));
+          lDirectory.mkdirs();
+        } catch(Exception e) {System.out.println(e.getMessage());}
+      }
+      if (<!mic.element:file:toWork!>!size() > 0) {
+        lTo = <![mic.element:file:toWork]!>;
+        lToDir = workPath(<![mic.element:file:toWork]!>);
+        lToType = "work";
+        try {
+          File lDirectory = new File(workPath(lTo));
+          lDirectory.mkdirs();
+        } catch(Exception e) {System.out.println(e.getMessage());}
+      }
+      if (<!mic.element:file:toScript!>!size() > 0) {
+        lTo = <![mic.element:file:toScript]!>;
+        lToDir = path(<![mic.element:file:toScript]!>);
+        lToType = "script";
+        try {
+          File lDirectory = new File(path(lTo));
+          lDirectory.mkdirs();
+        } catch(Exception e) {System.out.println(e.getMessage());}
+      }
+      lName = "";
+      if (<!mic.element:file:name!>!size() > 0) {
+        lName = <![mic.element:file:name]!>;
+        if (lFromType.equals("home")) lFromFile = homePath(lFrom + ".") + lName;
+        if (lFromType.equals("work")) lFromFile = workPath(lFrom + ".") + lName;
+        if (lFromType.equals("script")) lFromFile = path(lFrom + ".") + lName;
+        if (lToType.equals("home")) lToFile = homePath(lTo + ".") + lName;
+        if (lToType.equals("work")) lToFile = workPath(lTo + ".") + lName;
+        if (lToType.equals("script")) lToFile = path(lTo + ".") + lName;
+      }
+      String lAction = <![mic.element:file:action]!>;
+      if (lAction.equals("copy")) {
+        command("cmd /c copy " + lFromFile + " " + lToFile);
+      } else if (lAction.equals("delete")) {
+        if (lName.equals("")) {
+          command("cmd /c rmdir/s/q " + lFromDir);
+        } else {
+          command("cmd /c del " + lFromFile);
+        }
+      } else if (lAction.equals("jar")) {
+        command("cmd /c %JAVA_HOME%\\bin\\jar cv0f " + lToFile + " " + lFromDir);
+      }
+    }
+}
+
+public void command(String aCommand)
+    {
+        System.out.println(">" + aCommand);
+        try
+        {
+            Runtime rt = Runtime.getRuntime();
+            Process proc = rt.exec(aCommand);
+            
+            // any error message?
+            StreamGobbler errorGobbler = new 
+                StreamGobbler(proc.getErrorStream(), "ERR");
+                
+            // any output?
+            StreamGobbler outputGobbler = new 
+                StreamGobbler(proc.getInputStream(), "OUT");
+                
+            // kick them off
+            errorGobbler.start();
+            outputGobbler.start();
+                                    
+            // any error???
+            int exitVal = proc.waitFor();
+            System.out.println("ExitValue: " + exitVal);
+        } catch (Throwable t)
+          {
+            t.printStackTrace();
+          }
+    }
+
+
+class StreamGobbler extends Thread
+{
+    InputStream is;
+    String type;
+    OutputStream os;
+    
+    StreamGobbler(InputStream is, String type)
+    {
+        this(is, type, null);
+    }
+
+    StreamGobbler(InputStream is, String type, OutputStream redirect)
+    {
+        this.is = is;
+        this.type = type;
+        this.os = redirect;
+    }
+    
+    public void run()
+    {
+        try
+        {
+            PrintWriter pw = null;
+            if (os != null)
+                pw = new PrintWriter(os);
+                
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+            String line=null;
+            while ( (line = br.readLine()) != null)
+            {
+                if (pw != null)
+                    pw.println(line);
+                System.out.println(type + ">" + line);    
+            }
+            if (pw != null)
+                pw.flush();
+        } catch (IOException ioe)
+            {
+            ioe.printStackTrace();  
+            }
+    }
+}

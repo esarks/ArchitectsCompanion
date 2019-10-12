@@ -1,0 +1,89 @@
+***************************************
+***************************************
+
+<%
+
+/**************************************
+  Set data values
+***************************************/
+
+  <!record!>!set(12345);
+  <!record:name:last!>!set("Smith");
+  <!record:name:first!>!set("John");
+  <!record:phone:type!>!set("work");
+  <!record:phone:number!>!set("333-1111");
+  <!record:phone:type!>!set("home");
+  <!record:phone:number!>!set("333-2222");
+  <!record:phone:type!>!set("mobile");
+  <!record:phone:number!>!set("333-3333");
+
+  <!record!>!set(12346);
+  <!record:name:last!>!set("Doe");
+  <!record:name:first!>!set("Jane");
+  <!record:phone:type!>!set("work");
+  <!record:phone:number!>!set("444-1111");
+  <!record:phone:type!>!set("home");
+  <!record:phone:number!>!set("444-2222");
+  <!record:phone:type!>!set("mobile");
+  <!record:phone:number!>!set("444-3333");
+
+  <!record!>!set(12347);
+  <!record:name:first!>!set("Johnnie");
+  <!record:phone:type!>!set("work");
+  <!record:phone:number!>!set("555-1111");
+  <!record:phone:type!>!set("home");
+  <!record:phone:number!>!set("555-2222");
+  <!record:phone:type!>!set("mobile");
+  <!record:phone:number!>!set("555-3333");
+
+// Reset iterator
+  <!record!>!resetIterator();
+
+  while (<!record!>!next()) {
+
+%>
+1. Record = <![record]!>
+<%
+
+    if (<!record:phone:type!>!find("home") == true) {
+
+%>
+2. Home Phone Number = <![record:phone:number]!>
+<%
+
+    }
+  }
+
+%>
+
+Trying find:
+
+<%
+
+  if (<!record:phone:number!>!find("444-1111") == true) {
+
+%>
+3. Matching Phone Number Found = <![record]!>
+<%
+
+  }
+
+%>
+
+Trying scan:
+<%
+
+  if (<!record:phone:number!>!scan("444-1111") == true) {
+
+%>
+4. Matching Phone Number Found = <![record]!>
+<%
+
+  }
+
+%>
+
+
+***************************************
+***************************************
+

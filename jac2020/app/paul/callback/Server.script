@@ -1,0 +1,17 @@
+
+public void execute() {
+
+  System.out.println("Server.script");
+  
+}
+
+public void doTheCallback(paul.callback.Client aClient) {
+
+  aClient.callbackMethod();
+
+}
+
+public void doNothing() {
+
+}
+

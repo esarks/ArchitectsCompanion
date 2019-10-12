@@ -1,0 +1,22 @@
+<views>
+
+  <view name="ArmSearchView">
+
+    <table name="ArmSearchDocuments" symbolic="ArmSearchDocuments" in="com.esarks.arm.wordSearch">
+      <column name="protocol" />
+      <column name="url" />
+      <column name="id" view="armSearchDocumentsId" />
+    </table>
+
+    <table name="ArmSearchDocumentsWords" symbolic="ArmSearchDocumentsWords" in="com.esarks.arm.wordSearch">
+      <column name="urlId" />
+      <column name="word" />
+    </table>
+
+    <from><![CDATA[
+     $ArmSearchDocuments as ArmSearchDocuments JOIN $ArmSearchDocumentsWords as ArmSearchDocumentsWords ON ArmSearchDocuments.id=ArmSearchDocumentsWords.urlId
+    ]]></from>
+
+ </view> 
+
+</views>

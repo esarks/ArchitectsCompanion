@@ -1,0 +1,361 @@
+
+<business name="VBA">
+
+<products>
+ <AcHIM      description="Access HIM"                           owner="Cerner"/>
+ <AdvInterop description="Advanced Interop"                     owner="Cerner"/>
+ <AHLTA      description="AHLTA"                                owner="DoD" />
+ <AmbOrg     description="Ambulatory Organizer"                 owner="Cerner"/>
+ <AmbSched   description="Revenue Cycle / Amulatory Scheduling" owner="Cerner"/>
+ <CAPRI      description="CAPRI"                                owner="VA"/>
+ <ClXR       description="Clinicical Reporting XR"              owner="VA"/>
+ <ERRA       description="ERRA Tool"                            owner="VA"/>
+ <HeR        description="Healthy Record"                       owner="Cerner"/>
+ <JLV        description="JLV"                                  owner="VA"/>
+ <Man        description="Manual"                               owner="N/A"/>
+ <MsgCtr     description="Message Center"                       owner="Cerner"/>
+ <Outlook    description="MS Outlook"                           owner="Microsoft" />
+ <Orders     description="Orders"                               owner="Cerner"/>
+ <PChart     description="PowerChart"                           owner="Cerner"/>
+ <PForms     description="PowerForms"                           owner="Cerner"/>
+ <PatTrack   description="PowerChart / Patient Tracking"        owner="Cerner"/>
+ <RevCyc     description="Revenue Cycle"                        owner="Cerner" />
+ <Sched      description="Scheduling"                           owner="Cerner"/>
+ <TBD        description="TBD"                                  owner="N/A"/>
+ <VBARpt     description="VBA Report"                           owner="VA"/>
+ <VBMS       description="VBMS"                                 owner="VA"/>
+</products>
+
+<phases>
+ <p1  description="IOC Entry"/>
+</phases>
+
+<!--
+1866	"Proposed" 1VA - VBA - Exam-Management (IOC)
+1987	"Proposed" 1VA - VBA - Perform Examination (IOC)
+1873	"Proposed" 1VA - VBA - VR&E Block 1
+2008	"Proposed" 1VA-VBA-7131-Process
+1989	*Proposed*  1VA - VBA - Deliver Exam Results
+1998	1VA - C&P Scheduling - Ambulatory - Orders to Scheduling
+1353	1VA - Registration - OHI Collection
+1260	1VA - Registration/Scheduling - In Person Check In
+35	1VA - Scheduling - Ambulatory - No Show Process
+771	1VA - Scheduling - Ambulatory - No Show-Contact
+319	1VA - Scheduling - Ambulatory - Orders to Scheduling
+222	1VA - Scheduling - Ambulatory - Record an Appointment Contact
+34	1VA - Scheduling - Ambulatory - Reschedule Appointment
+32	1VA - Scheduling - Ambulatory - Schedule Appointment
+1999	1VA - Scheduling - Ambulatory - VBA Record an Appointment Contact
+1993	1VA - VBA - Capacity & Capability & Routing  (IOC)
+1990	1VA - VBA - Enterprise Medical Records Search (IOC)
+1995	1VA - VBA - Exam-Management - Child Orders (IOC)
+2033	Test Workflow
+
+-->
+
+<wfds>
+ <wf2008   description="1VA - VBA - 7131 Process" >
+      <product   name="AcHIM"  description="ROI" />
+      <product   name="RevCyc" description="Appointments Perspective" />
+      <interface name="oru"    description="to DAS" />
+ </wf2008>
+      
+ <wf1993   description="1VA - VBA - Capacity &#038; Capability (IOC)" reviewed="VBA Approved 10/8" phase="p1">
+      <product   name="ERRA"   description="Determine location to send request" />
+ </wf1993>
+           
+ <wf1989   description="1VA - VBA - Deliver Exam Results" >
+      <product   name="VBMS" />
+ </wf1989>
+
+ <wf1990   description="1VA - VBA - Enterprise Medical Records Search (IOC)" reviewed="VBA Approved 10/8" phase="p1">
+      <product   name="CAPRI"   description="Enterprise search" />
+      <product   name="VBMS" />
+      <product   name="JLV" description="DoD records search"/>
+      <product   name="ClXR" description="Reports; May access from AccessHIM (TBD)"/>
+      <product   name="TBD" description="Pilot user retrieves claim" />
+      <interface name="man" description="Drop files to a location" />
+ </wf1990>
+
+ <wf1866   description="1VA - VBA - Exam-Management (IOC)" reviewed="Revisit 10/8" phase="p1">
+      <product name="PChart" description="Search and view medical records"/>
+      <product name="PForms" description="Form 2507 to document requested DBQs"/>
+      <product name="ClXR" description="Generic Encounter"/>
+      <product name="MsgCtr" description="2507 Message Template"/>
+      <product name="MsgCtr" description="Message Pool"/>
+      <product name="PChart" description="Review Order"/>
+      <product name="Outlook" description="TBD may be Message Center"/>
+      <product name="Sched" description="Sub Flow belongs to Scheduling Council"/>
+      <product name="AmbOrg" description="Clinician's view of scheduled appointments"/>
+      <product name="PChart" description="MPage Assessment Component"/>
+      <product name="RevCyc" description="Patient Access"/>
+      <interface name="Man" description="Upload to VBMS eFolder"/>
+      <interface name="siu" description="to VBMS" />
+ </wf1866>
+
+ <wf1995   description="1VA - VBA - Exam-Management - Child Orders (IOC)" reviewed="VBA Approved 10/8" phase="p1">
+      <product name="PChart" description="?" />
+ </wf1995>
+ 
+ <wf1987   description="1VA - VBA - Perform Examination (IOC)" reviewed="VBA Conditional Approval 10/8" phase="p1">
+      <product name="PForms" description="Form 2507" />
+      <product name="PChart" description="" />
+      <product name="VBMS" description="" />
+      <product name="CAPRI" description="" />
+      <product name="JLV" description="" />
+      <product name="AHLTA" description="" />
+      <product name="PForms" description="Specific DBQ" />
+ </wf1987>
+
+ <wf222   description="1VA - VBA - Scheduling - Ambulatory - VBA Record an Appointment Contact" >
+ </wf222>
+
+ <wf1873   description="1VA - VBA - VR&#038;E Block 1" >
+ </wf1873>
+
+<wf1998 description="1VA - C&#038;P Scheduling - Ambulatory - Orders to Scheduling" notes="">
+</wf1998>
+<wf1353 description="1VA - Registration - OHI Collection" notes="">
+</wf1353>
+<wf1260 description="1VA - Registration/Scheduling - In Person Check In" notes=""> 
+</wf1260>
+<wf35 description="1VA - Scheduling - Ambulatory - No Show Process" notes=""> 
+</wf35>
+<wf771 description="1VA - Scheduling - Ambulatory - No Show-Contact" notes=""> 
+</wf771>
+<wf319 description="1VA - Scheduling - Ambulatory - Orders to Scheduling" > 
+</wf319>
+<wf34 description="1VA - Scheduling - Ambulatory - Reschedule Appointment" > 
+</wf34>
+<wf32 description="1VA - Scheduling - Ambulatory - Schedule Appointment" > 
+</wf32>
+<wf1999 description="1VA - Scheduling - Ambulatory - VBA Record an Appointment Contact"> 
+</wf1999>
+</wfds>
+
+<pdfs folder="C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746">
+<pdf id="wf1998"  name="1VA_-_C_P_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-11_0746_In_Process.txt" />
+<pdf id="wf1353"  name="1VA_-_Registration_-_OHI_Collection_2019-10-11_0746_Approved.txt" />
+<pdf id="wf1260"  name="1VA_-_Registration_Scheduling_-_In_Person_Check_In_2019-10-11_0746_Approved.txt" />
+<pdf id="wf771"   name="1VA_-_Scheduling_-_Ambulatory_-_No_Show-Contact_2019-10-11_0746_Approved.txt" />
+<pdf id="wf35"    name="1VA_-_Scheduling_-_Ambulatory_-_No_Show_Process_2019-10-11_0745_Approved.txt" />
+<pdf id="wf319"   name="1VA_-_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-11_0745_Approved.txt" />
+<pdf id="wf222"   name="1VA_-_Scheduling_-_Ambulatory_-_Record_an_Appointment_Contact_2019-10-11_0745_Approved.txt" />
+<pdf id="wf34"    name="1VA_-_Scheduling_-_Ambulatory_-_Reschedule_Appointment_2019-10-11_0745_Approved.txt" />
+<pdf id="wf32"    name="1VA_-_Scheduling_-_Ambulatory_-_Schedule_Appointment_2019-10-11_0745_Approved.txt" />
+<pdf id="wf1999"  name="1VA_-_Scheduling_-_Ambulatory_-_VBA_Record_an_Appointment_Contact_2019-10-11_0746_In_Process.txt" />
+<pdf id="wf1993"  name="1VA_-_VBA_-_Capacity___Capability___Routing__(IOC)_2019-10-11_0746_Approved.txt" />
+<pdf id="wf1990"  name="1VA_-_VBA_-_Enterprise_Medical_Records_Search_(IOC)_2019-10-11_0746_Approved.txt" />
+<pdf id="wf1995"  name="1VA_-_VBA_-_Exam-Management_-_Child_Orders_(IOC)_2019-10-11_0746_Approved.txt" />
+<pdf id="wf2008"  name="_Proposed__1VA-VBA-7131-Process_2019-10-11_0746_Ready_For_Review.txt" />
+<pdf id="wf1866"  name="_Proposed__1VA_-_VBA_-_Exam-Management_(IOC)_2019-10-11_0746_In_Process.txt" />
+<pdf id="wf1987"  name="_Proposed__1VA_-_VBA_-_Perform_Examination_(IOC)_2019-10-11_0746_Approved.txt" />
+<pdf id="wf1873"  name="_Proposed__1VA_-_VBA_-_VR_E_Block_1_2019-10-11_0746_Ready_For_Review.txt" />
+<pdf id="wf1989"  name="_Proposed___1VA_-_VBA_-_Deliver_Exam_Results_2019-10-11_0746_Ready_For_Review.txt" />
+</pdfs>
+
+<wfreport>
+<wf name="wf1866">
+  <subflow name="wf1998"/>
+  <subflow name="wf1987"/>
+  <subflow name="wf1995"/>
+  <subflow name="wf771"/>
+  <subflow name="wf1260"/>
+</wf>
+
+<wf name="wf1987">
+</wf>
+
+<wf name="wf1873">
+  <subflow name="wf319"/>
+</wf>
+
+<wf name="wf2008">
+</wf>
+
+<wf name="wf1989">
+  <subflow name="wf1987"/>
+</wf>
+
+<wf name="wf1998">
+  <subflow name="wf32"/>
+  <subflow name="wf1999"/>
+</wf>
+
+<wf name="wf1353">
+</wf>
+
+<wf name="wf1260">
+  <subflow name="wf1353"/>
+</wf>
+
+<wf name="wf35">
+</wf>
+
+<wf name="wf771">
+  <subflow name="wf222"/>
+  <subflow name="wf34"/>
+  <subflow name="wf35"/>
+</wf>
+
+<wf name="wf319">
+  <subflow name="wf32"/>
+  <subflow name="w222"/>
+</wf>
+
+<wf name="wf222">
+</wf>
+
+<wf name="wf34">
+</wf>
+
+<wf name="wf32">
+</wf>
+
+<wf name="wf1999">
+</wf>
+
+<wf name="wf1993">
+</wf>
+
+<wf name="wf1990">
+</wf>
+
+<wf name="wf1995">
+</wf>
+
+</wfreport>
+
+<interfaces>
+ <orm  description="HL7 ORM"/>
+ <oru  description="HL7 ORU"/>
+ <siu  description="HL7 SIU"/>
+ <man  description="Manual" />
+</interfaces>
+
+  <major name="Request Examination / Evaluation">
+  
+    <workflow name="Determination of Capacity and Capability"  date1="10/15/2019" date2="10/31/2019" page="1">
+      <wfdesigner name="wf1993"  reviewed="No" phase="p1"/>
+    </workflow>
+
+    <workflow name="Request Examinations / Evaluation to Cerner Site"  date1="10/4/2019" date2="" page="1">
+      <wfdesigner name="wf1866"  reviewed="No" phase="p1"/>
+    </workflow>
+
+    <workflow name="Status Examination"  date1="10/15/2019" date2="10/31/2019" page="1">
+    </workflow>
+
+  </major>
+
+  <major name="Triage Examination / Evaluation Request">
+
+    <workflow name="Review Examination / Evaluation Request" date1="10/4/2019" date2="10/15/2019" page="2">
+      <wfdesigner name="wf1866"  reviewed="No" phase="p1"/>
+    </workflow>   
+    
+    <workflow name="Request Clarification" date1="10/15/2019" date2="10/31/2019" page="2">
+      <wfdesigner name="wf1866"  reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Cancel Examination Request" date1="10/15/2019" date2="10/31/2019" page="2">
+      <wfdesigner name="wf1866"  reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Generate Detail Orders" date1="10/4/2019" date2="10/15/2019" page="3">
+      <wfdesigner name="wf1995"  reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Modify Examination Request" date1="" date2="" page="3">
+    </workflow>   
+
+  </major>
+
+  <major name="Schedule Examination">
+
+    <workflow name="Review Detailed Orders" date1="10/15/2019" date2="10/31/2019" page="4">
+      <wfdesigner name="wf1995"  reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Schedule the Examination / Evaluation"  date1="10/4/2019" date2="10/15/2019" page="4">
+      <wfdesigner name="wf222"  reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Manage Appointment" date1="10/15/2019" date2="10/31/2019" page="4">
+      <wfdesigner name="wf222"  reviewed="No" phase="p1"/>
+    </workflow>   
+
+  </major>
+  
+  <major name="Conduct Examinations">
+  
+    <workflow name="Conduct Examinations" date1="10/15/2019" date2="10/31/2019" page="5">
+      <wfdesigner name="wf222"  reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Perform Examination" date1="10/4/2019" date2="10/15/2019" page="5">
+      <wfdesigner name="wf1866"  reviewed="No" phase="p1"/>
+      <wfdesigner name="wf1987"  reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Deliver Examination Results" date1="10/4/2019" date2="10/15/2019" page="5">
+      <wfdesigner name="wf1866"  reviewed="No" phase="p1"/>
+    </workflow>   
+
+  </major>
+ 
+  <major name="Claims Establishment" >
+  </major>
+
+  <major name="Medical Records Review">
+
+    <workflow name="Enterprise Search" date1="10/15/2019" date2="10/31/2019" page="6">
+      <wfdesigner name="wf1990" reviewed="No" phase="p1"/>
+    </workflow>
+
+    <workflow name="Search Patient Record" date1="10/15/2019" date2="10/31/2019" page="6">
+      <wfdesigner name="wf1990" reviewed="No" phase="p1"/>
+    </workflow>
+
+    <workflow name="Assemble Record Extract" date1="10/15/2019" date2="10/31/2019" page="6">
+      <wfdesigner name="wf1990" reviewed="No" phase="p1"/>
+    </workflow>
+
+    <workflow name="Transmit Medical Records" date1="10/15/2019" date2="" page="7">
+      <wfdesigner name="wf1990" reviewed="No" phase="p1"/>
+    </workflow>
+
+    <workflow name="Form 7131" date1="10/15/2019" date2="10/31/2019" page="7">
+      <wfdesigner name="wf2008"  reviewed="No" phase="p1"/>
+    </workflow>
+
+  </major>
+
+  <major name="Review Examinations">
+    <workflow name="Request Examination Re-Work - Insufficient" date1="10/15/2019" date2="10/31/2019" page="8">
+    </workflow>
+
+  </major>
+
+  <major name="VR&#038;E">
+
+    <workflow name="Request Medical Services" date1="10/15/2019" date2="" page="9">
+      <wfdesigner name="wf1873" reviewed="No" phase="p1"/>
+    </workflow>
+
+    <workflow name="Manage Service Requests" date1="10/15/2019" date2="" page="9">
+      <wfdesigner name="wf1873" reviewed="No" phase="p1"/>
+    </workflow>
+
+    <workflow name="Deliver Medical Services" date1="10/15/2019" date2="" page="10">
+      <wfdesigner name="wf1873" reviewed="No" phase="p1"/>
+    </workflow>
+
+    <workflow name="Review Results" date1="10/15/2019" date2="" page="10">
+      <wfdesigner name="wf1873" reviewed="No" phase="p1"/>
+    </workflow>
+
+  </major>
+
+</business>
+

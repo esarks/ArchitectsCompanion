@@ -1,0 +1,22 @@
+
+Get 31 days back from an effective date:
+
+    Calendar lCalendar = Calendar.getInstance();
+    lCalendar.setTime(aEffectiveDate);
+    java.util.Date lDate = lCalendar.getTime();
+    PropertyValue lDateHighPropertyValue = new PropertyValue(lDate);
+    if (aDays <= 0) aDays = 31;
+    lCalendar.add(Calendar.DATE, - aDays);
+    lDate = lCalendar.getTime();
+
+Difference in days between two dates in YYYYMMDD string format:
+
+    PropertyValue lM0090 = new PropertyValue("date:yyyyMMdd", aJeo.getM0090PropertyValue().toString());
+    PropertyValue lLockDate = new PropertyValue("date:yyyyMMdd", aJeo.getLockDatePropertyValue().toString());
+    long lDifference = lLockDate.getValueDate().getTime() - lM0090.getValueDate().getTime();
+    long lDays = lDifference / (1000 * 60 * 60 * 24);
+
+Format date:
+
+    lJeo.setM0090(lM0090.toDateString("MM/dd/yyyy"));
+

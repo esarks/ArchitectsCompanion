@@ -1,0 +1,54 @@
+extends com.esarks.arm.xmlDoc.XmlDoc
+end
+
+public void execute(){
+%>
+<html>
+
+<form name="form" method="post" action="http://www.elumn8.org/Jrun.jsp?jrun=<!%iXmlPath!>">
+
+<h1>R&D Transmittal</h1>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tr bgcolor="#dddddd"><td>Reason for Transmittal:</td></tr>
+  <tr><td><![xdoc:reason]!></td></tr>
+</table>
+
+<br>
+<table width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tr bgcolor="#dddddd"><td>Requested Response:</td></tr>
+  <tr><td><![xdoc:response]!></td></tr>
+</table>
+
+<br>
+<table width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tr bgcolor="#dddddd"><td>Product:</td><td>Version:</td><td>Location:</td></tr>
+<%
+  <!xdoc:product!>& {
+%>
+  <tr><td><![xdoc:product:name]!></td><td><![xdoc:product:version]!></td><td><![xdoc:product:location]!></td></tr>
+<%
+  }
+%>
+</table>
+
+<br>
+<table width="100%" cellspacing="0" cellpadding="0" border="1">
+  <tr bgcolor="#dddddd"><td>Point of Contact:</td><td>Telephone:</td><td>Email:</td></tr>
+<%
+  <!xdoc:contact!>& {
+%>
+  <tr><td><![xdoc:contact:name]!></td><td><![xdoc:contact:telephone]!></td><td><![xdoc:contact:email]!></td></tr>
+<%
+  }
+%>
+
+</table>
+
+</form>
+
+</html>
+
+
+<%
+}

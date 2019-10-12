@@ -1,0 +1,417 @@
+lPropertyValues = cld~Claim
+
+<Claim>%%%%Claim****
+    
+    
+    
+    
+    
+Claim,
+    
+    
+    
+    
+    
+
+
+   <schemaLocation>%%%%schemaLocation****http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Claim/2.0 ../../XMLschemas/exchange/Claim-2.0.xsdschemaLocation,http://vler.va.gov/vler/schemas/health/clinicalDocuments/clinicalAssessments/cpExams/Claim/2.0 ../../XMLschemas/exchange/Claim-2.0.xsd
+@@@@</schemaLocation>
+   <DocumentTypeVersion>%%%%DocumentTypeVersion****2.0DocumentTypeVersion,2.0
+@@@@</DocumentTypeVersion>
+   <ClaimID>%%%%ClaimID****ClaimID,
+@@@@</ClaimID>
+   <CommonData>%%%%CommonData****
+        
+        
+
+        
+
+        
+
+        
+        
+
+        
+
+        
+        
+
+        
+
+    CommonData,
+        
+        
+
+        
+
+        
+
+        
+        
+
+        
+
+        
+        
+
+        
+
+    
+
+      <VeteranOfInterest>%%%%VeteranOfInterest****VeteranOfInterest,
+
+         <edipi>%%%%edipi****0123456789edipi,0123456789
+@@@@</edipi>
+         <fileNumber>%%%%fileNumber****NNNNNNNNfileNumber,NNNNNNNN
+@@@@</fileNumber>
+         <branchOfService>%%%%branchOfService****Regular ArmybranchOfService,Regular Army
+@@@@</branchOfService>
+         <anticipatedRadDate>%%%%anticipatedRadDate****2015-05-22anticipatedRadDate,2015-05-22
+@@@@</anticipatedRadDate>
+         <firstName>%%%%firstName****BillyfirstName,Billy
+@@@@</firstName>
+         <middleName>%%%%middleName****BobbermiddleName,Bobber
+@@@@</middleName>
+         <lastName>%%%%lastName****BobbingtonlastName,Bobbington
+@@@@</lastName>
+         <fullName>%%%%fullName****Billy Bobber BobbingtonfullName,Billy Bobber Bobbington
+@@@@</fullName>
+         <dateOfBirth>%%%%dateOfBirth****1971-05-01dateOfBirth,1971-05-01
+@@@@</dateOfBirth>
+         <sex>%%%%sex****Msex,M
+@@@@</sex>
+      </VeteranOfInterest>
+      <Document>%%%%Document****
+            
+            
+            
+            
+            
+        Document,
+            
+            
+            
+            
+            
+        
+
+         <DocumentCreationDate>%%%%DocumentCreationDate****
+                
+            DocumentCreationDate,
+                
+            
+
+            <DateTime>%%%%DateTime****2013-05-01T13:42:58-04:00DateTime,2013-05-01T13:42:58-04:00
+@@@@</DateTime>
+         </DocumentCreationDate>
+         <DocumentDescriptionText>%%%%DocumentDescriptionText****Cold Injury ResidualsDocumentDescriptionText,Cold Injury Residuals
+@@@@</DocumentDescriptionText>
+         <DocumentIdentification>%%%%DocumentIdentification****
+                
+            DocumentIdentification,
+                
+            
+
+            <IdentificationID>%%%%IdentificationID****137134513513462345623465IdentificationID,137134513513462345623465
+@@@@</IdentificationID>
+         </DocumentIdentification>
+         <DocumentStatus>%%%%DocumentStatus****
+                
+            DocumentStatus,
+                
+            
+
+            <StatusText>%%%%StatusText****CompletedStatusText,Completed
+@@@@</StatusText>
+         </DocumentStatus>
+         <DocumentTitleText>%%%%DocumentTitleText****Cold Injury ResidualsDocumentTitleText,Cold Injury Residuals
+@@@@</DocumentTitleText>
+      </Document>
+      <ExamDetail>%%%%ExamDetail****
+            
+            
+            
+            
+            
+            
+            
+            
+        ExamDetail,
+            
+            
+            
+            
+            
+            
+            
+            
+        
+
+         <examManagementRequestUuid>%%%%examManagementRequestUuid****6a2f0ceb-924b-4d6f-83de-922c0bdbce98examManagementRequestUuid,6a2f0ceb-924b-4d6f-83de-922c0bdbce98
+@@@@</examManagementRequestUuid>
+         <PhysicalSource>%%%%PhysicalSource****PhysicalSource,
+@@@@</PhysicalSource>
+         <ExamId>%%%%ExamId****ExamId,
+@@@@</ExamId>
+         <ExamManagementContentionUuid>%%%%ExamManagementContentionUuid****7a607fa8-c5e8-4cc0-aab6-8934b05df06bExamManagementContentionUuid,7a607fa8-c5e8-4cc0-aab6-8934b05df06b
+%%%%ExamManagementContentionUuid****7a607fa8-c5e8-4cc0-aab6-8934b05df06bExamManagementContentionUuid,7a607fa8-c5e8-4cc0-aab6-8934b05df06b
+@@@@</ExamManagementContentionUuid>
+         <ExaminerType>%%%%ExaminerType****ExaminerType,
+@@@@</ExaminerType>
+         <ContractType>%%%%ContractType****ContractType,
+@@@@</ContractType>
+         <StatusDate>%%%%StatusDate****StatusDate,
+@@@@</StatusDate>
+         <Comments>%%%%Comments****Comments,
+@@@@</Comments>
+      </ExamDetail>
+      <Client>%%%%Client****
+            
+            
+            
+             
+        Client,
+            
+            
+            
+             
+        
+
+         <id>%%%%id****clientid,client
+@@@@</id>
+         <ClientIdentifier>%%%%ClientIdentifier****
+                
+                
+            ClientIdentifier,
+                
+                
+            
+
+            <IdentificationID>%%%%IdentificationID****369854103IdentificationID,369854103
+@@@@</IdentificationID>
+            <AssigningAuthority>%%%%AssigningAuthority****2.16.840.1.113883.3.184AssigningAuthority,2.16.840.1.113883.3.184
+@@@@</AssigningAuthority>%%%%ClientIdentifier****
+                
+                
+            ClientIdentifier,
+                
+                
+            
+
+            <IdentificationID>%%%%IdentificationID****0000000002IdentificationID,0000000002
+@@@@</IdentificationID>
+            <AssigningAuthority>%%%%AssigningAuthority****2.16.840.1.113883.3.42.10001.100001.12AssigningAuthority,2.16.840.1.113883.3.42.10001.100001.12
+@@@@</AssigningAuthority>
+         </ClientIdentifier>
+         <ClientStatus>%%%%ClientStatus****
+                
+            ClientStatus,
+                
+            
+
+            <ClientStatusText>%%%%ClientStatusText****OKClientStatusText,OK
+@@@@</ClientStatusText>
+         </ClientStatus>
+         <RoleOfPersonReference>%%%%RoleOfPersonReference****RoleOfPersonReference,
+
+            <ref>%%%%ref****oneref,one
+@@@@</ref>
+         </RoleOfPersonReference>
+      </Client>
+      <ServiceProvider>%%%%ServiceProvider****
+            
+            
+            
+        ServiceProvider,
+            
+            
+            
+        
+
+         <id>%%%%id****service_providerid,service_provider
+@@@@</id>
+         <PersonIdentifier>%%%%PersonIdentifier****
+                
+                
+            PersonIdentifier,
+                
+                
+            
+
+            <IdentificationID>%%%%IdentificationID****CA109IdentificationID,CA109
+@@@@</IdentificationID>
+            <IdentificationJurisdictionText>%%%%IdentificationJurisdictionText****Harris Form SystemIdentificationJurisdictionText,Harris Form System
+@@@@</IdentificationJurisdictionText>
+         </PersonIdentifier>
+         <ServiceProviderRoleTitle>%%%%ServiceProviderRoleTitle****PhysicianServiceProviderRoleTitle,Physician
+@@@@</ServiceProviderRoleTitle>
+         <RoleOfPersonReference>%%%%RoleOfPersonReference****RoleOfPersonReference,
+
+            <ref>%%%%ref****tworef,two
+@@@@</ref>
+         </RoleOfPersonReference>
+      </ServiceProvider>
+      <Person>%%%%Person****
+            
+        Person,
+            
+        
+
+         <id>%%%%id****twoid,two
+@@@@</id>
+         <PersonName>%%%%PersonName****
+                
+                
+                
+            PersonName,
+                
+                
+                
+            
+
+            <PersonGivenName>%%%%PersonGivenName****JESSICAPersonGivenName,JESSICA
+@@@@</PersonGivenName>
+            <PersonMiddleName>%%%%PersonMiddleName****PersonMiddleName,
+@@@@</PersonMiddleName>
+            <PersonSurName>%%%%PersonSurName****LAWARENCEPersonSurName,LAWARENCE
+@@@@</PersonSurName>
+         </PersonName>%%%%Person****
+            
+            
+            
+            
+        Person,
+            
+            
+            
+            
+        
+
+         <id>%%%%id****oneid,one
+@@@@</id>
+         <PersonBirthDate>%%%%PersonBirthDate****
+                
+            PersonBirthDate,
+                
+            
+
+            <Date>%%%%Date****1971-06-15Date,1971-06-15
+@@@@</Date>
+         </PersonBirthDate>
+         <PersonName>%%%%PersonName****
+                
+                
+                
+            PersonName,
+                
+                
+                
+            
+
+            <PersonGivenName>%%%%PersonGivenName****JohnPersonGivenName,John
+@@@@</PersonGivenName>
+            <PersonMiddleName>%%%%PersonMiddleName****WPersonMiddleName,W
+@@@@</PersonMiddleName>
+            <PersonSurName>%%%%PersonSurName****JonesPersonSurName,Jones
+@@@@</PersonSurName>
+         </PersonName>
+         <PersonSexCode>%%%%PersonSexCode****MPersonSexCode,M
+@@@@</PersonSexCode>
+         <PersonSSNIdentification>%%%%PersonSSNIdentification****
+                
+            PersonSSNIdentification,
+                
+            
+
+            <IdentificationID>%%%%IdentificationID****369854103IdentificationID,369854103
+@@@@</IdentificationID>
+         </PersonSSNIdentification>
+      </Person>
+      <Facility>%%%%Facility****
+            
+            
+        Facility,
+            
+            
+        
+
+         <FacilityIdentification>%%%%FacilityIdentification****
+                
+                
+            FacilityIdentification,
+                
+                
+            
+
+            <IdentificationID>%%%%IdentificationID****600IdentificationID,600
+@@@@</IdentificationID>
+            <IdentificationJurisdictionText>%%%%IdentificationJurisdictionText****LONG-BEACH.MED.VA.GOVIdentificationJurisdictionText,LONG-BEACH.MED.VA.GOV
+@@@@</IdentificationJurisdictionText>
+         </FacilityIdentification>
+         <FacilityName>%%%%FacilityName****VA LONG BEACH HEALTHCARE SYSTEMFacilityName,VA LONG BEACH HEALTHCARE SYSTEM
+@@@@</FacilityName>
+      </Facility>
+      <ServiceProviderClientAssociation>%%%%ServiceProviderClientAssociation****
+            
+            
+        ServiceProviderClientAssociation,
+            
+            
+        
+
+         <ServiceProviderReference>%%%%ServiceProviderReference****ServiceProviderReference,
+
+            <ref>%%%%ref****service_providerref,service_provider
+@@@@</ref>
+         </ServiceProviderReference>
+         <ClientReference>%%%%ClientReference****ClientReference,
+
+            <ref>%%%%ref****clientref,client
+@@@@</ref>
+         </ClientReference>
+      </ServiceProviderClientAssociation>
+      <ClaimInformation>%%%%ClaimInformation****ClaimInformation,
+
+         <endProductCode>%%%%endProductCode****010endProductCode,010
+@@@@</endProductCode>
+         <label>%%%%label****Initial Compensation 8+ Issueslabel,Initial Compensation 8+ Issues
+@@@@</label>
+         <claimProcess>%%%%claimProcess****BDDclaimProcess,BDD
+@@@@</claimProcess>
+      </ClaimInformation>
+   </CommonData>
+   <MedicalData>%%%%MedicalData****MedicalData,
+@@@@</MedicalData>
+   <Attachments>%%%%Attachments****
+        
+    Attachments,
+        
+    
+
+      <Attachment>%%%%Attachment****
+            
+            
+            
+            
+            
+        Attachment,
+            
+            
+            
+            
+            
+        
+
+         <BinaryDescriptionText>%%%%BinaryDescriptionText****LegBinaryDescriptionText,Leg
+@@@@</BinaryDescriptionText>
+         <BinaryFormatStandardName>%%%%BinaryFormatStandardName****image/jpegBinaryFormatStandardName,image/jpeg
+@@@@</BinaryFormatStandardName>
+         <BinaryLocationURI>%%%%BinaryLocationURI****5298f22ae11f069427000003BinaryLocationURI,5298f22ae11f069427000003
+@@@@</BinaryLocationURI>
+         <BinarySizeValue>%%%%BinarySizeValue****10241024BinarySizeValue,10241024
+@@@@</BinarySizeValue>
+         <BinaryCategoryText>%%%%BinaryCategoryText****X-RaysBinaryCategoryText,X-Rays
+@@@@</BinaryCategoryText>
+      </Attachment>
+   </Attachments>
+</Claim>

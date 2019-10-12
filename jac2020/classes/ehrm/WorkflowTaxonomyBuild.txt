@@ -1,0 +1,142 @@
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:2: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:3: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:4: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:5: import java.time.Duration;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:6: import java.time.Instant;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:7: import java.time.Period;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:8: import java.time.ZoneId;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:9: import java.time.LocalDate;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:10: import java.time.LocalDateTime;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:11: import java.time.LocalTime;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:12: import java.time.format.DateTimeFormatter;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:13: import java.time.format.FormatStyle;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:14: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:15: import java.util.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:16: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:17: import java.io.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:18: import java.text.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:19: import java.net.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:20: import javax.net.ssl.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:21: import java.security.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:22: import java.sql.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:23: import javax.servlet.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:24: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:25: import java.awt.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:26: import javax.swing.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:27: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:28: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:29: import java.nio.file.Files;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:30: import java.nio.file.Paths;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:31: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:32: import java.io.FileNotFoundException;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:33: import java.io.FileReader;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:34: import java.io.IOException;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:35: import java.util.Iterator;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:36: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:37: import org.json.simple.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:38: import org.json.simple.parser.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:39: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:40: <#import#>
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:2: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:4:   }
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:5: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:7: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:8:     super(aScript);
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:9: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:10:   }
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:1: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:2: public void execute() {
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:3: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:4: %>EHRM Hello World! v20190816a
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:5: <%
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:6: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:7:   iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy.xml");
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:8: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:9:   iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy.csv", false);
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:10: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:11:   int lRow = 0;
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:12:   Integer lWorkflow = 0;
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:13:   Boolean lIncludeDetail = true;
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:14:   
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:15: %>
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:16: ,,,,,,Wf Designer,Interfaces
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:17: <%    
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:18:   <!business!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:19:   while (<!business!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:20: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:21: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:22:     <!business:major!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:23:     while (<!business:major!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:24:     lRow++;
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:25: %>
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:26: <![business:major:name]!>,,,,,,,,,group,<!%lRow!>
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:27: <%
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:28: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:29:       <!business:major:workflow!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:30:       while (<!business:major:workflow!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:31:         int lWorkflowSize = <!business:major:workflow:wfdesigner!>!size();
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:32:         int lProdSize = <!business:major:workflow:product!>!size();
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:33:         int lInterfaceSize = <!business:major:workflow:interface!>!size();
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:34:         lRow++;
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:35:         lWorkflow++;
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:36: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:37:  
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:38: %>
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:39: <![business:major:name]!>,<![business:major:workflow:name]!>,#<!%lWorkflow!>: # Wf Designer = <!%lWorkflowSize!>; # Products = <!%lProdSize!>; # Interfaces = <!%lInterfaceSize!> Page = <![business:major:workflow:page]!>,,,,<![business:major:workflow:date1]!>,<![business:major:workflow:date2]!>,,workflow,<!%lRow!>
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:40: <%
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:41: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:42:         <!business:major:workflow:wfdesigner!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:43:         while (<!business:major:workflow:wfdesigner!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:44:           lRow++;
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:45:           String lWfd = <![business:wfds:[business:major:workflow:wfdesigner:name]:description]!>;
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:46: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:47: if (lIncludeDetail) {          
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:48: %>
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:49: <![business:major:name]!>,,Wf Designer = <!%lWfd!>,Reviewed = <![business:major:workflow:wfdesigner:reviewed]!>,Phase = <![business:phases:[business:major:workflow:wfdesigner:phase]:description]!>,,,,,wfdesigner,<!%lRow!>
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:50: <%
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:51: }
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:52: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:53:         }
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:54: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:55:         <!business:major:workflow:product!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:56:         while (<!business:major:workflow:product!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:57:           lRow++;
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:58:           String lProduct = <![business:products:[business:major:workflow:product:name]:description]!> + " <" + <![business:products:[business:major:workflow:product:name]:owner]!> + ">";
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:59: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:60: if (lIncludeDetail) {
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:61: %>
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:62: <![business:major:name]!>,,Product = <!%lProduct!>,Reviewed = <![business:major:workflow:product:reviewed]!>,Phase = <![business:phases:[business:major:workflow:product:phase]:description]!>,,,,,product,<!%lRow!>
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:63: <%
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:64: }
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:65: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:66:         }
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:67: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:68:         <!business:major:workflow:interface!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:69:         while (<!business:major:workflow:interface!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:70:           lRow++;
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:71:           String lInterface = <![business:interfaces:[business:major:workflow:interface:name]:description]!>;
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:72: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:73: if (lIncludeDetail) {
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:74: %>
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:75: <![business:major:name]!>,,Interface = <!%lInterface!>,Reviewed = <![business:major:workflow:interface:reviewed]!>,Phase = <![business:phases:[business:major:workflow:interface:phase]:description]!>,,,,,interface,<!%lRow!>
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:76: <%
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:77: }
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:78:         }
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:79: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:80:       }
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:81: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:82:     }
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:83: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:84:   }
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:85: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:86:   iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:87: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:88: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:89: 
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:90: }
+C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.script:91: 
+C:\ArchitectsCompanion\jac2017\conf\micPostfix.script:1: }

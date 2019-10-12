@@ -1,0 +1,2212 @@
+context micScriptComponent
+var private boolean iCreateJeo = false;
+end
+
+  public void createTable(String aXmlDefinition, String aTable) {
+    resetExit();
+    try {
+    %>createTableJeo: XML=<!%aXmlDefinition!> Table=<!%aTable!><!%"\r\n"!><%
+    iCreateJeo = false;
+
+    String lPackage = aXmlDefinition;
+    for(int lIdx=aXmlDefinition.length(); lIdx > 0; lIdx--) {
+      if (aXmlDefinition.charAt(lIdx-1) == '.') {
+        lPackage = aXmlDefinition.substring(0, lIdx-1);
+        break;
+      }
+    }
+
+    boolean lForce = false;
+    setContext(iScript.getMasterScript());
+    if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+    restoreContext();
+    if (!lForce) {
+      File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateJeo") + ".script");
+      File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+      File lNewFile = new File(path(lPackage + "." + aTable) + ".script");
+      File lCrudFile = new File(path(lPackage + "." + aTable) + "Crud_Crud.xml");
+      if (lNewFile.exists() && lCrudFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+          ((lGeneratorFile.exists() && lNewFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) || !lGeneratorFile.exists())) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("File " + lPackage + "." + aTable + ".script is not stale.  Generation bypassed.");
+        <!$jac:event:severity!>!set("info");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;
+      }
+    }
+
+    <!$mic:createTable!>!set("true");
+    <!com.esarks.arm.schemas.ddl.root!>!remove();
+    readTableXml(aXmlDefinition, lPackage, aTable);
+    if (checkExit()) return;
+    generateTableJeo(aXmlDefinition, lPackage, aTable);
+    closeOutput();
+    if (checkExit()) return;
+    prepareMerge();
+    Merge.getInstance().doMerge(path(lPackage + "." + aTable) + ".script", path(lPackage + "." + aTable) + ".new", iScript.getMasterScript());
+    if (Merge.getInstance().getExceptionMessage() != null) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(Merge.getInstance().getExceptionMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+    if (openOutput(path(lPackage + "." + aTable) + "Crud_Crud.new")) {
+      generateCrudService(lPackage, aTable);
+      closeOutput();
+
+      setContext(iScript.getMasterScript());
+      <!$jac:merge:sectionMarker!>!reset("<!--$Section=");
+      <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
+      <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
+      <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
+      <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
+      <!$jac:merge:preservePreamble!>!reset("no");
+      <!$jac:merge:comments!>!reset("<!--");
+      <!$jac:merge:excludeCompare!>!reset("<!--  Generated at");
+      <!$jac:merge:trimOutput!>!reset("yes");
+      <!$jac:merge:keepSections!>!reset("no");
+      restoreContext();
+
+      Merge.getInstance().doMerge(path(lPackage + "." + aTable) + "Crud_Crud.xml", path(lPackage + "." + aTable) + "Crud_Crud.new", iScript.getMasterScript());
+      if (Merge.getInstance().getExceptionMessage() != null) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set(Merge.getInstance().getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;      
+      }
+
+    } else {
+      setContext(iScript.getMasterScript());
+      if (iOutputManager.getExceptionMessage() != null) {
+        <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+      }
+      <!$jac:event!>!set("Failed to open " + path(lPackage + "." + aTable) + "Crud_Crud.xml output file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void createView(String aXmlDefinition, String aView) {
+    resetExit();
+    try {
+    <!$mic:createView!>!set("true");
+    %>createViewJeo: XML=<!%aXmlDefinition!> View=<!%aView!><!%"\r\n"!><%
+    iCreateJeo = false;
+
+    String lPackage = aXmlDefinition;
+    for(int lIdx=aXmlDefinition.length(); lIdx > 0; lIdx--) {
+      if (aXmlDefinition.charAt(lIdx-1) == '.') {
+        lPackage = aXmlDefinition.substring(0, lIdx-1);
+        break;
+      }
+    }
+
+    boolean lForce = false;
+    setContext(iScript.getMasterScript());
+    if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+    restoreContext();
+    if (!lForce) {
+      File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateJeo") + ".script");
+      File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+      File lNewFile = new File(path(lPackage + "." + aView) + ".script");
+      File lReadFile = new File(path(lPackage + "." + aView) + "Read_Crud.xml");
+      if (lNewFile.exists() && lReadFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+          ((lGeneratorFile.exists() && lNewFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) || !lGeneratorFile.exists())) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("File " + lPackage + "." + aView + ".script is not stale.  Generation bypassed.");
+        <!$jac:event:severity!>!set("info");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;
+      }
+    }
+    
+    <!com.esarks.arm.schemas.ddl.root!>!remove();
+    readViewXml(aXmlDefinition, lPackage, aView);
+    if (checkExit()) return;
+    generateViewJeo(aXmlDefinition, lPackage, aView);
+    closeOutput();
+    if (checkExit()) return;
+    prepareMerge();
+    Merge.getInstance().doMerge(path(lPackage + "." + aView) + ".script", path(lPackage + "." + aView) + ".new", iScript.getMasterScript());
+    if (Merge.getInstance().getExceptionMessage() != null) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(Merge.getInstance().getExceptionMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;      
+    }
+
+    if (openOutput(path(lPackage + "." + aView) + "Read_Crud.new")) {
+      generateReadService(lPackage, aView);
+      closeOutput();
+
+      setContext(iScript.getMasterScript());
+      <!$jac:merge:sectionMarker!>!reset("<!--$Section=");
+      <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
+      <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
+      <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
+      <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
+      <!$jac:merge:preservePreamble!>!reset("no");
+      <!$jac:merge:comments!>!reset("<!--");
+      <!$jac:merge:excludeCompare!>!reset("<!--  Generated at");
+      <!$jac:merge:trimOutput!>!reset("yes");
+      <!$jac:merge:keepSections!>!reset("no");
+      restoreContext();
+
+      Merge.getInstance().doMerge(path(lPackage + "." + aView) + "Read_Crud.xml", path(lPackage + "." + aView) + "Read_Crud.new", iScript.getMasterScript());
+      if (Merge.getInstance().getExceptionMessage() != null) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set(Merge.getInstance().getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;      
+      }
+
+    } else {
+      setContext(iScript.getMasterScript());
+      if (iOutputManager.getExceptionMessage() != null) {
+        <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+      }
+      <!$jac:event!>!set("Failed to open " + path(lPackage + "." + aView) + "Read_Crud.xml output file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void createJeo(String aXmlDefinition, String aJeo) {
+    resetExit();
+    try {
+    %>createJeo: XML=<!%aXmlDefinition!> Jeo=<!%aJeo!><!%"\r\n"!><%
+    iCreateJeo = true;
+
+    String lPackage = aXmlDefinition;
+    for(int lIdx=aXmlDefinition.length(); lIdx > 0; lIdx--) {
+      if (aXmlDefinition.charAt(lIdx-1) == '.') {
+        lPackage = aXmlDefinition.substring(0, lIdx-1);
+        break;
+      }
+    }
+
+    boolean lForce = false;
+    setContext(iScript.getMasterScript());
+    if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+    restoreContext();
+    if (!lForce) {
+      File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateJeo") + ".script");
+      File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+      File lNewFile = new File(path(lPackage + "." + aJeo) + ".script");
+      if (lNewFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+          ((lGeneratorFile.exists() && lNewFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) || !lGeneratorFile.exists())) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("File " + lPackage + "." + aJeo + ".script is not stale.  Generation bypassed.");
+        <!$jac:event:severity!>!set("info");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;
+      }
+    }
+    
+    <!com.esarks.arm.schemas.ddl.root!>!remove();
+    readJeoXml(aXmlDefinition, lPackage, aJeo);
+    if (checkExit()) return;
+    generateJeo(aXmlDefinition, lPackage, aJeo);
+    closeOutput();
+    if (checkExit()) return;
+    prepareMerge();
+    Merge.getInstance().doMerge(path(lPackage + "." + aJeo) + ".script", path(lPackage + "." + aJeo) + ".new", iScript.getMasterScript());
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  private void prepareMerge() {
+    try {
+    setContext(iScript.getMasterScript());
+    <!$jac:merge!>!remove();
+    <!$jac:merge:sectionMarker!>!reset("//$Section=");
+    <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
+    <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
+    <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
+    <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
+    <!$jac:merge:preservePreamble!>!reset("no");
+    <!$jac:merge:comments!>!reset("//");
+    <!$jac:merge:excludeCompare!>!reset("//  Generated at");
+    <!$jac:merge:trimOutput!>!reset("yes");
+    <!$jac:merge:keepSections!>!reset("no");
+    restoreContext();
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+  
+  private void readTableXml(String aXmlDefinition, String aPackage, String aTable) {
+    try {
+    if (!openOutput(path(aPackage + "." + aTable) + ".new")) {
+      setContext(iScript.getMasterScript());
+      if (iOutputManager.getExceptionMessage() != null) {
+        <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+      }
+      <!$jac:event!>!set("Failed to open " + path(aPackage + "." + aTable) + ".new file for output.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    <!com.esarks.arm.schemas.ddl.root!>!remove();
+    parseXmlDefinition(aXmlDefinition);
+    if (<!com.esarks.arm.schemas.ddl.root!>!size() == 0) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Could not find <tables> tag in *.xml file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    return;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  private void readViewXml(String aXmlDefinition, String aPackage, String aView) {
+    try {
+    if (!openOutput(path(aPackage + "." + aView) + ".new")) {
+      setContext(iScript.getMasterScript());
+      if (iOutputManager.getExceptionMessage() != null) {
+        <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+      }
+      <!$jac:event!>!set("Failed to open " + path(aPackage + "." + aView) + ".new file for output.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    <!com.esarks.arm.schemas.ddl.root!>!remove();
+    parseXmlDefinition(aXmlDefinition);
+    if (<!com.esarks.arm.schemas.ddl.root!>!size() == 0) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Could not find <views> tag in *.xml file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    return;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+    
+  private void readJeoXml(String aXmlDefinition, String aPackage, String aJeo) {
+    try {
+    if (!openOutput(path(aPackage + "." + aJeo) + ".new")) {
+      setContext(iScript.getMasterScript());
+      if (iOutputManager.getExceptionMessage() != null) {
+        <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+      }
+      <!$jac:event!>!set("Failed to open " + path(aPackage + "." + aJeo) + ".new file for output.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    <!com.esarks.arm.schemas.ddl.root!>!remove();
+    parseXmlPath(path(aXmlDefinition) + ".xml");
+    if (<!com.esarks.arm.schemas.ddl.root!>!size() == 0) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Could not find <jeos> tag in *.xml file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    return;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void generateTableJeo(String aXmlDefinition, String aPackageName, String aTable) {
+    if (checkExit()) return;
+    <!$mic:attribute!>!remove();
+    <!$mic:table!>!remove();
+    <!$mic:sql!>!remove();
+    <!$mic:primary!>!remove();
+    <!$mic:set!>!remove();
+    <!com.esarks.arm.schemas.ddl.root:table!>!resetIterator();
+    if (<!com.esarks.arm.schemas.ddl.root!>!scan("table:name", aTable) == false) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Definition for table \"" + aTable + "\" was not found in XML file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    String lExtends = "com.esarks.jac.Jeo";
+    if (<!com.esarks.arm.schemas.ddl.root:table:extends!>!size() != 0) lExtends = <![com.esarks.arm.schemas.ddl.root:table:extends]!>;
+    <!com.esarks.arm.schemas.ddl.root:table:field!>!resetIterator();
+    while (<!com.esarks.arm.schemas.ddl.root:table:field!>!next()) {
+      <!$mic:attribute!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:name]!>);
+      <!$mic:attribute:name!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:name]!>);
+      <!$mic:attribute:mapTo!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:name]!>);
+      <!$mic:attribute:type!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:type]!>);
+      <!$mic:attribute:stereotype!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:stereotype]!>);
+      <!$mic:attribute:asDate!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:asDate]!>);
+      <!$mic:attribute:size!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:size]!>);
+      <!$mic:attribute:nullable!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:nullable]!>);
+      <!$mic:attribute:identity!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:identity]!>);
+      <!$mic:attribute:table!>!set(<![com.esarks.arm.schemas.ddl.root:table:name]!>);
+    }
+    if (<!com.esarks.arm.schemas.ddl.root:table:primary!>!size() > 0) {
+      <!com.esarks.arm.schemas.ddl.root:table:primary:field!>!resetIterator();
+      while (<!com.esarks.arm.schemas.ddl.root:table:primary:field!>!next()) {
+        <!$mic:primary!>!set(<![com.esarks.arm.schemas.ddl.root:table:primary:field]!>);
+      }
+    } else {
+      <!com.esarks.arm.schemas.ddl.root:table:index!>!resetIterator();
+      if (<![com.esarks.arm.schemas.ddl.root:table:index:type]!>.toLowerCase().startsWith("unique")) {
+        <!com.esarks.arm.schemas.ddl.root:table:index:field!>!resetIterator();
+        while (<!com.esarks.arm.schemas.ddl.root:table:index:field!>!next()) {
+          <!$mic:primary!>!set(<![com.esarks.arm.schemas.ddl.root:table:index:field]!>);
+        }
+      }
+    }
+
+    <!com.esarks.arm.schemas.ddl.root:table:set!>!resetIterator();
+    while (<!com.esarks.arm.schemas.ddl.root:table:set!>!next()) {
+      <!$mic:set!>!set(<![com.esarks.arm.schemas.ddl.root:table:set:name]!>);
+      <!com.esarks.arm.schemas.ddl.root:table:set:field!>!resetIterator();
+      while (<!com.esarks.arm.schemas.ddl.root:table:set:field!>!next()) {
+        <!$mic:set:field!>!set(<![com.esarks.arm.schemas.ddl.root:table:set:field]!>);
+        if (<!com.esarks.arm.schemas.ddl.root:table:set:field:clause!>!size() > 0) {
+          <!$mic:set:field:clause!>!set(<![com.esarks.arm.schemas.ddl.root:table:set:field:clause]!>);
+        }
+      }
+    }
+    generateAttributes(aXmlDefinition, aPackageName, aTable, lExtends);
+  }
+
+  public void generateViewJeo(String aXmlDefinition, String aPackageName, String aView) {
+    try {
+    <!$mic:attribute!>!remove();
+    <!$mic:table!>!remove();
+    <!$mic:sql!>!remove();
+    <!com.esarks.arm.schemas.ddl.root:view!>!resetIterator();
+    if (<!com.esarks.arm.schemas.ddl.root!>!scan("view:name", aView) == false) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Definition for view \"" + aView + "\" was not found in XML file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+    String lExtends = "com.esarks.jac.Jeo";
+    if (<!com.esarks.arm.schemas.ddl.root:view:extends!>!size() != 0) lExtends = <![com.esarks.arm.schemas.ddl.root:view:extends]!>;
+
+    <!com.esarks.arm.schemas.ddl.root:view:table!>!resetIterator();
+    while (<!com.esarks.arm.schemas.ddl.root:view:table!>!next()) {
+
+      Jeo lJeoInstance = null;
+      String lJeoClassName = "";
+
+      try {
+        if (!<![com.esarks.arm.schemas.ddl.root:view:table:in]!>.equals("")) {
+          lJeoClassName = <![com.esarks.arm.schemas.ddl.root:view:table:in]!> + "." + <![com.esarks.arm.schemas.ddl.root:view:table:name]!>;
+          Class lJeoClass = ClassLoader.getSystemClassLoader().loadClass(lJeoClassName);
+          Constructor lConstructor = lJeoClass.getConstructor(new Class[]{});
+          lJeoInstance = (Jeo) lConstructor.newInstance(new Object[]{});
+        }
+      } catch (Exception e) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("Non-fatal exception: " + e.getMessage());
+        <!$jac:event:severity!>!set("error");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+      }
+
+      DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+      DbConnection lDbConnection = lDbConnectionFactory.getAssociatedDbConnection(<![com.esarks.arm.schemas.ddl.root:view:table:name]!>.toLowerCase());
+
+      String lTableName = <![com.esarks.arm.schemas.ddl.root:view:table:name]!>;
+
+      for(int lIdx=lTableName.length(); lIdx > 0; lIdx--) {
+        if (lTableName.charAt(lIdx-1) == '.') {
+          lTableName = lTableName.substring(lIdx);
+          break;
+        }
+      }
+
+      if (lDbConnection.getMake()) lDbConnection.getColumns(iScript, lTableName);
+      <!$mic:table!>!set(lTableName);
+      <!$mic:table:in!>!set(<![com.esarks.arm.schemas.ddl.root:view:table:in]!>);
+      
+      boolean lHasName = false;
+      String lNameView = "hrmConcatName";
+      ArrayList lTypeNameList = new ArrayList();
+      <!com.esarks.arm.schemas.ddl.root:view:table:column!>!resetIterator();
+      while (<!com.esarks.arm.schemas.ddl.root:view:table:column!>!next()) {
+
+        if (<!com.esarks.arm.schemas.ddl.root:view:table:column:isName!>!size() > 0) {
+          lHasName = true;
+          if (<!com.esarks.arm.schemas.ddl.root:view:table:column:nameView!>!size() > 0) {
+            lNameView = <![com.esarks.arm.schemas.ddl.root:view:table:column:nameView]!>;
+          }
+        }
+        
+        if (<!com.esarks.arm.schemas.ddl.root:view:table:column:isType!>!size() > 0) {
+          lTypeNameList.add(<![com.esarks.arm.schemas.ddl.root:view:table:column:name]!> + "Name");
+        }
+        
+        <!$mic:attribute!>!set(<![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>);
+        <!$mic:attribute:table!>!set(<![com.esarks.arm.schemas.ddl.root:view:table:name]!>);
+
+        if (<![com.esarks.arm.schemas.ddl.root:view:table:column:view]!>.equals("")) {
+          <!$mic:attribute:name!>!set(<![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>);
+        } else {
+          <!$mic:attribute:name!>!set(<![com.esarks.arm.schemas.ddl.root:view:table:column:view]!>);
+        }
+
+        String lValueType = "";
+        String lValueStereotype = "";
+        if (lJeoInstance != null) {
+          lValueType = lJeoInstance.getTypeByName(<![$mic:attribute]!>);
+          lValueStereotype = lJeoInstance.getStereotypeByName(<![$mic:attribute]!>);
+        }
+        if ((lValueType == null || lValueType.equals("")) && (!<![com.esarks.arm.schemas.ddl.root:view:table:column:isColumn]!>.equals("false"))) {
+          lValueType = null;
+          String lAttributeName = <![$mic:attribute:name]!>;
+          setContext(iScript.getMasterScript());
+          <!$jac:event!>!set("Non-fatal error: Cannot find attribute " + lAttributeName + " in Jeo " + lJeoClassName + ".");
+          <!$jac:event:severity!>!set("error");
+          <!$jac:event:scriptPackage!>!set(iScriptPackage);
+          <!$jac:event:scriptName!>!set(iScriptName);
+          restoreContext();
+        }
+
+        if (<![com.esarks.arm.schemas.ddl.root:view:table:column:isColumn]!>.equals("false")) {
+          <!$mic:attribute:type!>!set(<![com.esarks.arm.schemas.ddl.root:view:table:column:type]!>);
+          <!$mic:attribute:stereotype!>!set(<![com.esarks.arm.schemas.ddl.root:view:table:column:stereotype]!>);
+          <!$mic:attribute:size!>!set(<![com.esarks.arm.schemas.ddl.root:view:table:column:size]!>);
+          <!$mic:attribute:nullable!>!set("true");
+        } else {
+          <!$mic:attribute:mapTo!>!set(<![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>);
+          if (lDbConnection.getMake()) {
+            <!$jac:DbMetaData:Table:" + lTableName + ":Column!>!resetIterator();
+            if (!<!$jac:DbMetaData:Table:" + lTableName + "!>!scan("Column", <![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>.toLowerCase())) {
+              setContext(iScript.getMasterScript());
+              <!$jac:event!>!set("Non-fatal error: Cannot find column (" + <![com.esarks.arm.schemas.ddl.root:view:table:column:name]!> + ") in table (" + lTableName + ") definition.");
+              <!$jac:event:severity!>!set("error");
+              <!$jac:event:scriptPackage!>!set(iScriptPackage);
+              <!$jac:event:scriptName!>!set(iScriptName);
+              restoreContext();
+              continue;
+            }
+          }
+          if (lValueType == null) {
+            <!$mic:attribute:type!>!set(<![$jac:DbMetaData:Table:" + lTableName + ":Column:Type]!>);
+            <!$mic:attribute:size!>!set(<![$jac:DbMetaData:Table:" + lTableName + ":Column:Size]!>);
+          } else {
+            <!$mic:attribute:type!>!set(lValueType);
+            <!$mic:attribute:stereotype!>!set(lValueStereotype);
+            <!$mic:attribute:size!>!set("0");
+          }
+          if (<![$jac:DbMetaData:Table:" + lTableName + ":Column:Nullable]!>.equals("yes")) {
+            <!$mic:attribute:nullable!>!set("true");
+          } else {
+            <!$mic:attribute:nullable!>!set("false");
+          }
+        }
+        if (!<![com.esarks.arm.schemas.ddl.root:view:table:column:isColumn]!>.equals("false")) {
+          <!$mic:table:attribute!>!set(<![$mic:attribute]!>);
+          <!$mic:table:attribute:name!>!set(<![$mic:attribute:name]!>);
+          <!$mic:table:attribute:mapTo!>!set(<![$mic:attribute:mapTo]!>);
+        }
+      }
+
+      if (lHasName) {
+        <!$mic:attribute!>!set(lNameView);
+        <!$mic:attribute:table!>!set(<![com.esarks.arm.schemas.ddl.root:view:table:name]!>);
+        <!$mic:attribute:name!>!set(lNameView);
+        <!$mic:attribute:type!>!set("string");
+        <!$mic:attribute:size!>!set("0");
+        <!$mic:attribute:nullable!>!set("true");
+      }
+
+      for (int lTypeNameListIdx=0; lTypeNameListIdx < lTypeNameList.size(); lTypeNameListIdx++) {
+        <!$mic:attribute!>!set((String) lTypeNameList.get(lTypeNameListIdx));
+        <!$mic:attribute:table!>!set(<![com.esarks.arm.schemas.ddl.root:view:table:name]!>);
+        <!$mic:attribute:name!>!set((String) lTypeNameList.get(lTypeNameListIdx));
+        <!$mic:attribute:type!>!set("string");
+        <!$mic:attribute:size!>!set("0");
+        <!$mic:attribute:nullable!>!set("true");
+      }
+      
+      <!com.esarks.arm.schemas.ddl.root:view:sql!>!resetIterator();
+      while (<!com.esarks.arm.schemas.ddl.root:view:sql!>!next()) {
+        <!$mic:sql!>!set(<![com.esarks.arm.schemas.ddl.root:view:sql:name]!>);
+        <!$mic:sql:sqlText!>!set(<![com.esarks.arm.schemas.ddl.root:view:sql:sqlText]!>);
+      }
+
+      if (false) {
+        <!com.esarks.arm.schemas.ddl.root!>!remove();
+        parseXmlDefinition(<![com.esarks.arm.schemas.ddl.root:view:table:in]!>);
+        if (<!com.esarks.arm.schemas.ddl.root!>!size() == 0) continue;
+        <!com.esarks.arm.schemas.ddl.root:table!>!resetIterator();
+        if (<!com.esarks.arm.schemas.ddl.root!>!scan("table:name", <![com.esarks.arm.schemas.ddl.root:view:table:name]!>) == false) continue;
+
+        <!com.esarks.arm.schemas.ddl.root:view:table:column!>!resetIterator();
+        while (<!com.esarks.arm.schemas.ddl.root:view:table:column!>!next()) {
+          <!com.esarks.arm.schemas.ddl.root:table:field!>!resetIterator();
+          if (<!com.esarks.arm.schemas.ddl.root:table!>!scan("field:name", <![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>) == false) continue;
+          <!$mic:attribute!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:name]!>);      
+          <!$mic:attribute:name!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:name]!>);      
+          <!$mic:attribute:type!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:type]!>);      
+          <!$mic:attribute:size!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:size]!>);      
+          <!$mic:attribute:nullable!>!set(<![com.esarks.arm.schemas.ddl.root:table:field:nullable]!>);      
+        }
+      }
+    }
+    generateAttributes(aXmlDefinition, aPackageName, aView, lExtends);
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+  
+  public void generateJeo(String aXmlDefinition, String aPackageName, String aJeo) {
+    try {
+    <!$mic:attribute!>!remove();
+    <!$mic:table!>!remove();
+    <!$mic:sql!>!remove();
+    <!com.esarks.arm.schemas.ddl.root:jeo!>!resetIterator();
+    if (<!com.esarks.arm.schemas.ddl.root!>!scan("jeo:name", aJeo) == false) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Definition for jeo \"" + aJeo + "\" was not found in XML file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+    String lExtends = "com.esarks.jac.Jeo";
+    if (<!com.esarks.arm.schemas.ddl.root:jeo:extends!>!size() != 0) lExtends = <![com.esarks.arm.schemas.ddl.root:jeo:extends]!>;
+
+    <!com.esarks.arm.schemas.ddl.root:jeo:field!>!resetIterator();
+    while (<!com.esarks.arm.schemas.ddl.root:jeo:field!>!next()) {
+      <!$mic:attribute!>!set(<![com.esarks.arm.schemas.ddl.root:jeo:field:name]!>);
+      <!$mic:attribute:name!>!set(<![com.esarks.arm.schemas.ddl.root:jeo:field:name]!>);
+      <!$mic:attribute:mapTo!>!set(<![com.esarks.arm.schemas.ddl.root:jeo:field:name]!>);
+      <!$mic:attribute:type!>!set(<![com.esarks.arm.schemas.ddl.root:jeo:field:type]!>);
+      <!$mic:attribute:class!>!set(<![com.esarks.arm.schemas.ddl.root:jeo:field:class]!>);
+      if (<!com.esarks.arm.schemas.ddl.root:jeo:field:size!>!size() > 0) {
+        <!$mic:attribute:size!>!set(<![com.esarks.arm.schemas.ddl.root:jeo:field:size]!>);
+      } else {
+        <!$mic:attribute:size!>!set("0");
+      }
+      if (<!com.esarks.arm.schemas.ddl.root:jeo:field:nullable!>!size() > 0) {
+        <!$mic:attribute:nullable!>!set(<![com.esarks.arm.schemas.ddl.root:jeo:field:nullable]!>);
+      } else {
+        <!$mic:attribute:nullable!>!set("true");
+      }
+    }
+
+    generateAttributes(aXmlDefinition, aPackageName, aJeo, lExtends);
+
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void generateAttributes(String aXmlDefinition, String aPackageName, String aClass, String aExtends) {
+    try {
+
+    setContext(iScript.getMasterScript());
+    String lDateTime = <![$jac:dateTime]!>;
+    restoreContext();
+%>
+//$Section=License$Preserve=no
+//  Generated at <!%lDateTime!> by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+//  XML Definition: <!%aXmlDefinition!>
+//     Module Name: <!%aPackageName!>.<!%aClass!>
+
+//$Section=ChangeLog$Preserve=yes
+
+/* ========================================================================= *
+   Contributor        Description
+   ------------------ ------------------------------------------------------
+                      Author
+
+ * ========================================================================= */
+
+//$Section=Class$Preserve=no
+
+package <!%aPackageName!>;
+
+/**
+ *
+ */
+
+//----------------------------------------------------------------------------
+// This section is for generated import delcarations.
+//----------------------------------------------------------------------------
+// Additional Import Declarations
+import com.esarks.jac.*;
+import com.esarks.mic.*;
+import java.util.*;
+import java.lang.reflect.*;
+import java.io.*;
+import java.text.*;
+import java.net.*;
+import java.sql.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+//$Section=CustomDeclare$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section is for custom declarations.
+//----------------------------------------------------------------------------
+
+//$Section=CustomDeclare$Preserve=no
+
+public class <!%aClass!> extends <!%aExtends!> {
+
+//----------------------------------------------------------------------------
+// This section is for generated declarations.
+//----------------------------------------------------------------------------
+// Attributes
+
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+//      String lType = getDbType(<![$mic:attribute:type]!>);
+%>
+//<![cap@[$mic:attribute:name]]!>  Type: <![$mic:attribute:type]!>  Size: <![$mic:attribute:size]!>  Nullable: <![$mic:attribute:nullable]!>
+    private PropertyValue i<![cap@[$mic:attribute:name]]!> = new PropertyValue();
+    private boolean i<![cap@[$mic:attribute:name]]!>IsNullable = <![$mic:attribute:nullable]!>;
+    private boolean i<![cap@[$mic:attribute:name]]!>Update = false;
+<%
+      if (<![$mic:attribute:size]!>.equals("")) {
+%>
+    private int i<![cap@[$mic:attribute:name]]!>Size = -1;
+<%
+      } else {
+%>
+    private int i<![cap@[$mic:attribute:name]]!>Size = <![$mic:attribute:size]!>;
+<%
+      }
+
+    }
+
+%>
+
+//$Section=CustomClassDeclare$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section is for custom class declarations.
+//----------------------------------------------------------------------------
+
+//$Section=CustomClassDeclare$Preserve=no
+
+//----------------------------------------------------------------------------
+// Generated constructors.
+//----------------------------------------------------------------------------
+
+/**
+ * Default constructor.
+ */
+    public <!%aClass!>() {
+      iInstanceName = "<!%aPackageName!>.<!%aClass!>";
+//$Section=DefaultConstructor$Preserve=yes
+//$Section=DefaultConstructor$Preserve=no
+    }
+
+/**
+ *
+ */
+    public <!%aClass!>( com.esarks.jac.JeoFactory aJeoFactory ) {
+      iInstanceName = "<!%aPackageName!>.<!%aClass!>";
+//$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=yes
+//$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public <!%aClass!>( Script aScript ) {
+      super("", aScript);
+      iInstanceName = "<!%aPackageName!>.<!%aClass!>";
+//$Section=Operation$Jeo( String aScript )$Preserve=yes
+//$Section=Operation$Jeo( String aScript )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public <!%aClass!>( String aTypeName ) {
+      iInstanceName = "<!%aPackageName!>.<!%aClass!>";
+      iJeoTypeName = aTypeName;
+//$Section=Operation$Jeo( String aTypeName )$Preserve=yes
+//$Section=Operation$Jeo( String aTypeName )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public <!%aClass!>( String aTypeName, Script aScript ) {
+      super("", aScript);
+      iInstanceName = "<!%aPackageName!>.<!%aClass!>";
+      iJeoTypeName = aTypeName;
+//$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=yes
+//$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Default finalize is generated.
+//----------------------------------------------------------------------------
+
+/**
+ * Default finalize.
+ */
+    public void finalize() {
+    	freeResources();
+//$Section=DefaultDestructor$Preserve=yes
+//$Section=DefaultDestructor$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Default freeResources is generated.
+//----------------------------------------------------------------------------
+
+/**
+ * Default freeResources.
+ */
+    public void freeResources() {
+    	super.freeResources();
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+
+%>
+    i<![cap@[$mic:attribute:name]]!> = null;
+<%
+    }
+%>
+//$Section=DefaultFreeResources$Preserve=yes
+//$Section=DefaultFreeResources$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// This section is for custom operations.
+//----------------------------------------------------------------------------
+//$Section=CustomOperations$Preserve=yes
+//$Section=CustomOperations$Preserve=no
+
+    public void init() {
+    	super.init();
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+%>
+//<![cap@[$mic:attribute:name]]!>
+    i<![cap@[$mic:attribute:name]]!> = new PropertyValue();
+    i<![cap@[$mic:attribute:name]]!>Update = false;
+<%
+    }
+%>
+    }
+
+//----------------------------------------------------------------------------
+// This section is for mapping views to tables.
+//----------------------------------------------------------------------------
+<%
+
+    <!$mic:table!>!resetIterator();
+    while (<!$mic:table!>!next()) {
+      if (<![$mic:table:in]!>.equals("")) continue;
+%>
+
+  public <![$mic:table:in]!>.<![$mic:table]!> get<![cap@[$mic:table]]!>() {
+//$Section=Operation$get<![cap@[$mic:table]]!>()$Preserve=no
+
+//  <![$mic:table:in]!>.<![$mic:table]!> l<![cap@[$mic:table]]!> = (<![$mic:table:in]!>.<![$mic:table]!>) com.esarks.jac.JeoFactory.getInstance(iScript).reserveJeo("<![$mic:table:in]!>.<![$mic:table]!>");
+    <![$mic:table:in]!>.<![$mic:table]!> l<![cap@[$mic:table]]!> = new <![$mic:table:in]!>.<![$mic:table]!>();
+<%
+      <!$mic:table:attribute!>!resetIterator();
+      while (<!$mic:table:attribute!>!next()) {
+%>
+    l<![cap@[$mic:table]]!>.set<![cap@[$mic:table:attribute:mapTo]]!>(get<![cap@[$mic:table:attribute:name]]!>PropertyValue());
+<%
+      }
+%>
+    return l<![cap@[$mic:table]]!>;
+//$Section=Operation$get<![cap@[$mic:table]]!>()$Preserve=no
+  }
+<%
+    }
+
+    if (!iCreateJeo) {
+%>
+//----------------------------------------------------------------------------
+// This section is for mapping from result sets.
+//----------------------------------------------------------------------------
+
+  public void mapFromResultSet( ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+//$Section=Operation$mapFromResultSet$Preserve=no
+    mapFromResultSetTable("*", aResultSet, aTrim, aSpacesToNull);
+//$Section=Operation$mapFromResultSet$Preserve=no
+  }
+
+  public void mapFromResultSetTable( String aTable, ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+    // DEPRECATED METHOD!!!!
+    // Use of Trim and SpacesToNull is not functional.
+    mapFromResultSetTable(aTable, aResultSet);
+  }
+  
+  public void mapFromResultSetTable( String aTable, ResultSet aResultSet) {
+//$Section=Operation$mapFromResultSetTable$Preserve=no
+//    String lValue = null;
+<%
+      String lLastTableName = "*";
+      <!$mic:attribute!>!resetIterator();
+      while (<!$mic:attribute!>!next()) {
+        if (!lLastTableName.equals(<![$mic:attribute:table]!>)) {
+          if (!lLastTableName.equals("*")) {
+%>
+      }
+<%
+          }
+%>
+      if (aTable.equals("*") || aTable.equals("<![$mic:attribute:table]!>")) {
+<%
+          lLastTableName = <![$mic:attribute:table]!>;
+        }
+        String lJavaType = getProperty("dbTypes:" + <![$mic:attribute:type]!> + ":java");
+        String lJdbcType = getProperty("dbTypes:" + <![$mic:attribute:type]!> + ":jdbc");
+        
+%>
+// <![cap@[$mic:attribute:name]]!> in <![$mic:attribute:table]!>
+        try {
+          <!%lJavaType!> lValue = aResultSet.get<!%lJdbcType!>("<![$mic:attribute:name]!>");
+          if (aResultSet.wasNull()) {
+            set<![cap@[$mic:attribute:name]]!>Null();
+          } else {
+            set<![cap@[$mic:attribute:name]]!>(lValue);
+          }
+        } catch (Throwable e) {}
+<%
+      }
+      if (!lLastTableName.equals("*")) {
+%>
+      }
+<%
+      }
+%>
+//$Section=Operation$mapFromResultSetTable$Preserve=no
+  }
+<%
+    }
+%>
+//----------------------------------------------------------------------------
+// This section is for mapping from and to Jeo's.
+//----------------------------------------------------------------------------
+
+  public void mapToJeo( Jeo aJeo) {
+//$Section=Operation$mapFromJeo$Preserve=no
+    String lType = null;
+    PropertyValue lValue = null;
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+%>
+// <![cap@[$mic:attribute:name]]!>
+      try {
+        lValue = aJeo.getPropertyValueByName("<![$mic:attribute:name]!>");
+        if (lValue != null) {
+          lType = aJeo.getTypeByName("<![$mic:attribute:name]!>");
+          if (!is<![cap@[$mic:attribute:name]]!>Null()) {
+            lValue.reset(lType, get<![cap@[$mic:attribute:name]]!>PropertyValue().toString());
+          } else {
+            lValue.reset("null", "");
+          }
+        }
+      } catch(Throwable e) {}
+<%
+    }
+%>
+//$Section=Operation$mapToJeo$Preserve=no
+  }
+
+  public void mapFromJeo( Jeo aJeo) {
+//$Section=Operation$mapFromJeo$Preserve=no
+    String lType = null;
+    PropertyValue lValue = null;
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+%>
+// <![cap@[$mic:attribute:name]]!>
+      try {
+        lValue = aJeo.getPropertyValueByName("<![$mic:attribute:name]!>");
+        if (lValue != null) {
+          set<![cap@[$mic:attribute:name]]!>(lValue);
+        }
+      } catch(Throwable e) {}
+<%
+    }
+%>
+//$Section=Operation$mapFromJeo$Preserve=no
+  }
+
+//----------------------------------------------------------------------------
+// This section is for the get by string name related methods.
+//----------------------------------------------------------------------------
+
+  public String getCasedName ( String aAttributeName) {
+//$Section=Operation$getCasedName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("getAttributeName_" + aAttributeName.toLowerCase(), null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getCasedName$Preserve=no
+  }
+
+  public PropertyValue getPropertyValueByName ( String aAttributeName) {
+//$Section=Operation$getPropertyValueByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "PropertyValue", null);
+        return (PropertyValue) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getPropertyValueByName$Preserve=no
+  }
+
+  public void setStringValueByName ( String aAttributeName, String aValue) {
+//$Section=Operation$setStringValueByName$Preserve=no
+
+    try {
+        Class lClassParams[] = new Class[]{"".getClass()};
+        Object lArguments[] = new Object[] {aValue};
+        Method lMethod = this.getClass().getMethod("set" + getCasedName(aAttributeName), lClassParams);
+        lMethod.invoke(this, lArguments);
+    } catch (Throwable e) {
+        //System.out.println(e);
+    }
+
+//$Section=Operation$setStringValueByName$Preserve=no
+  }
+
+  public String getTypeByName ( String aAttributeName) {
+//$Section=Operation$getTypeByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueType", null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getTypeByName$Preserve=no
+  }
+
+  public String getStereotypeByName ( String aAttributeName) {
+//$Section=Operation$getStereotypeByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueStereotype", null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getStereotypeByName$Preserve=no
+  }
+
+  public String getNameByIndex ( int aIndex) {
+//$Section=Operation$getNameByIndex$Preserve=no
+
+    switch(aIndex) {
+<%
+    int lCase = 0;
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      lCase++;
+      String lLowerName = <![$mic:attribute:name]!>.toLowerCase();
+%>
+      case <!%lCase!>: return "<!%lLowerName!>";
+<%
+    }
+%>
+    }
+    return null;
+//$Section=Operation$getNameByIndex$Preserve=no
+  }
+
+  public String getXml ( ) {
+//$Section=Operation$getXml$Preserve=no
+
+    StringBuffer lXml = new StringBuffer("<jeo name='<!%aPackageName!>.<!%aClass!>'>");
+    String lCdataBegin = "<" + "!" + "[CDATA[";
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+%>
+// Field: <![cap@[$mic:attribute:name]]!>
+    lXml.append("<field name='<![cap@[$mic:attribute:name]]!>' type='<![$mic:attribute:type]!>'>");
+<%
+      if (<![$mic:attribute:type]!>.equals("string")) {
+%>
+    lXml.append(lCdataBegin).append(get<![cap@[$mic:attribute:name]]!>PropertyValue().toString()).append("]]>").append("</field>");
+<%
+      } else {
+%>
+    lXml.append(get<![cap@[$mic:attribute:name]]!>PropertyValue().toString()).append("</field>");
+<%
+      }
+    }
+%>
+    lXml.append("</jeo>");
+    return lXml.toString();
+
+//$Section=Operation$getXml$Preserve=no
+  }
+
+  public boolean isJeoEqual ( Jeo aJeo) {
+//$Section=Operation$isJeoEqual$Preserve=no
+
+    PropertyValue lThisValue = null;
+    PropertyValue lThatValue = null;
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      String lLowerName = <![$mic:attribute:name]!>.toLowerCase();
+%>
+    lThisValue = this.getPropertyValueByName("<!%lLowerName!>");
+    lThatValue = aJeo.getPropertyValueByName("<!%lLowerName!>");
+    if (lThisValue.getValueType() != lThatValue.getValueType()) return false;
+    if (lThisValue.compareTo(lThatValue) != 0) return false;
+<%
+    }
+%>
+    return true;
+//$Section=Operation$isJeoEqual$Preserve=no
+  }
+
+//----------------------------------------------------------------------------
+// This section is for generated attribute accessor methods.
+//----------------------------------------------------------------------------
+
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      String lCastConvert = "";
+      String lType = getProperty("dbTypes:" + <![$mic:attribute:type]!> + ":java");
+      if (lType.equals("")) {
+        String lMicType = <![$mic:attribute:type]!>;
+        String lMicName = <![$mic:attribute:name]!>;
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("Cannot find dbTypes:*:java for type \"" + lMicType + "\" at attribute \"" + lMicName + "\"");
+        <!$jac:event:severity!>!set("error");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+      }
+      String lGetType = getProperty("dbTypes:" + <![$mic:attribute:type]!> + ":property");
+      if (lGetType.equals("")) {
+        String lMicType = <![$mic:attribute:type]!>;
+        String lMicName = <![$mic:attribute:name]!>;
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("Cannot find dbTypes:*:property for type \"" + lMicType + "\" at attribute \"" + lMicName + "\"");
+        <!$jac:event:severity!>!set("error");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+      }
+      if (lType.equals("Object") && <!$mic:attribute:class!>!size() > 0) {
+        lType = <![$mic:attribute:class]!>;
+        lCastConvert = "(" + lType + ")";
+      }
+%>
+//----------------------------------------------------------------------------
+// <![cap@[$mic:attribute:name]]!>
+//----------------------------------------------------------------------------
+    public <!%lType!> get<![cap@[$mic:attribute:name]]!>() {
+//$Section=Attribute get$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        return <!%lCastConvert!>i<![cap@[$mic:attribute:name]]!>.<!%lGetType!>();
+//$Section=Attribute get$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+    public <!%lType!> get<![cap@[$mic:attribute:name]]!>(<!%lType!> aValue) {
+//$Section=Attribute get$<![cap@[$mic:attribute:name]]!>(<!%lType!>)$Preserve=no
+      if (is<![cap@[$mic:attribute:name]]!>Null()) return aValue;
+      return <!%lCastConvert!>i<![cap@[$mic:attribute:name]]!>.<!%lGetType!>();
+//$Section=Attribute get$<![cap@[$mic:attribute:name]]!>(<!%lType!>)$Preserve=no
+    }
+<%
+      if (<![$mic:attribute:type]!>.equals("string") && <![$mic:attribute:stereotype]!>.startsWith("date:")) {
+%>
+    public java.util.Date get<![cap@[$mic:attribute:name]]!>AsDate() {
+//$Section=Attribute get$<![cap@[$mic:attribute:name]]!>AsDate$Preserve=no
+      try {
+        PropertyValue lDateValue = new PropertyValue("<![$mic:attribute:stereotype]!>", i<![cap@[$mic:attribute:name]]!>.getValueString());
+        return lDateValue.getValueDate();
+      } catch (Throwable e) {
+        throw new RuntimeException("Date conversion failed.");
+      }
+//$Section=Attribute get$<![cap@[$mic:attribute:name]]!>AsDate$Preserve=no
+    }
+    public java.util.Date get<![cap@[$mic:attribute:name]]!>AsDate(java.util.Date aValue) {
+//$Section=Attribute get$<![cap@[$mic:attribute:name]]!>AsDate(java.util.Date)$Preserve=no
+      if (is<![cap@[$mic:attribute:name]]!>Null()) return aValue;
+      return get<![cap@[$mic:attribute:name]]!>AsDate();
+//$Section=Attribute get$<![cap@[$mic:attribute:name]]!>AsDate(java.util.Date)$Preserve=no
+    }
+<%
+      }
+%>
+    public void set<![cap@[$mic:attribute:name]]!>(<!%lType!> aValue) {
+//$Section=Attribute set$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        i<![cap@[$mic:attribute:name]]!>.reset(aValue);
+//$Section=Attribute set$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+<%
+      if (<![$mic:attribute:type]!>.equals("string") && <![$mic:attribute:stereotype]!>.startsWith("date:")) {
+        String lAsDateFormat = <![$mic:attribute:stereotype]!>.substring(5);
+%>
+    public void set<![cap@[$mic:attribute:name]]!>AsDate(java.util.Date aValue) {
+//$Section=Attribute set$<![cap@[$mic:attribute:name]]!>AsDate$Preserve=no
+        PropertyValue lDateValue = new PropertyValue(aValue);
+        set<![cap@[$mic:attribute:name]]!>(lDateValue.toDateString("<!%lAsDateFormat!>"));
+//$Section=Attribute set$<![cap@[$mic:attribute:name]]!>AsDate$Preserve=no
+    }
+<%
+      }
+%>
+    public void set<![cap@[$mic:attribute:name]]!>(PropertyValue aValue) {
+//$Section=Attribute setPropertyValue$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        if (aValue.getType().equals("null")) {
+          set<![cap@[$mic:attribute:name]]!>Null();
+          return;
+        }
+        set<![cap@[$mic:attribute:name]]!>(aValue.toString());
+//$Section=Attribute setPropertyValue$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+    public void set<![cap@[$mic:attribute:name]]!>(PropertyValue aValue, String aFormat) {
+//$Section=Attribute setPropertyValueFormat$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        if (aValue.getType().equals("null")) {
+          set<![cap@[$mic:attribute:name]]!>Null();
+          return;
+        }
+        set<![cap@[$mic:attribute:name]]!>(aValue.toString(), aFormat);
+//$Section=Attribute setPropertyValueFormat$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+<%
+    String lSetType = getProperty("dbTypes:" + <![$mic:attribute:type]!> + ":setString");
+//    if (lSetType.equals("")) {
+//      String lMicType = <![$mic:attribute:type]!>;
+//      String lMicName = <![$mic:attribute:name]!>;
+//      setContext(iScript.getMasterScript());
+//      <!$jac:event!>!set("Cannot find dbTypes:*:setString for type \"" + lMicType + "\" at attribute \"" + lMicName + "\"");
+//      <!$jac:event:severity!>!set("error");
+//      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+//      <!$jac:event:scriptName!>!set(iScriptName);
+//      restoreContext();
+//    }
+    if (!lSetType.equals("")) {
+%>
+    public void set<![cap@[$mic:attribute:name]]!>(String aValue) {
+//$Section=Attribute setAsString$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        i<![cap@[$mic:attribute:name]]!>.reset("<!%lSetType!>", aValue);
+//$Section=Attribute setAsString$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+<%
+    }
+%>
+    public void set<![cap@[$mic:attribute:name]]!>(String aValue, String aType) {
+//$Section=Attribute setAsStringType$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        i<![cap@[$mic:attribute:name]]!>.reset(aType, aValue);
+//$Section=Attribute setAsStringType$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+    public PropertyValue get<![cap@[$mic:attribute:name]]!>PropertyValue() {
+//$Section=Attribute getPropertyValue$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        return i<![cap@[$mic:attribute:name]]!>;
+//$Section=Attribute getPropertyValue$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+<%
+  String lAllLower = <![$mic:attribute:name]!>.toLowerCase();
+%>
+    public String getAttributeName_<!%lAllLower!>() {
+//$Section=Attribute getAttributeName$<!%lAllLower!>$Preserve=no
+        return "<![cap@[$mic:attribute:name]]!>";
+//$Section=Attribute getAttributeName_$<!%lAllLower!>$Preserve=no
+    }
+<%
+//    public String get<![cap@[$mic:attribute:name]]!>Name() {
+////$Section=Attribute getName$<![cap@[$mic:attribute:name]]!>$Preserve=no
+//        return "<![$mic:attribute:name]!>";
+////$Section=Attribute getName$<![cap@[$mic:attribute:name]]!>$Preserve=no
+//    }
+%>
+    public int size<![cap@[$mic:attribute:name]]!>() {
+//$Section=Attribute size$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        return i<![cap@[$mic:attribute:name]]!>Size;
+//$Section=Attribute size$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+    public boolean is<![cap@[$mic:attribute:name]]!>Nullable() {
+//$Section=Attribute isNullable$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        return i<![cap@[$mic:attribute:name]]!>IsNullable;
+//$Section=Attribute isNullable$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+    public boolean is<![cap@[$mic:attribute:name]]!>Null() {
+//$Section=Attribute isNull$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        if (i<![cap@[$mic:attribute:name]]!>.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+        return false;
+//$Section=Attribute isNull$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+    public void set<![cap@[$mic:attribute:name]]!>Null() {
+//$Section=Attribute setNull$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        i<![cap@[$mic:attribute:name]]!>.reset();
+//$Section=Attribute setNull$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+    public void set<![cap@[$mic:attribute:name]]!>SpaceToNull() {
+//$Section=Attribute setSpaceToNull$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        if (get<![cap@[$mic:attribute:name]]!>PropertyValue().toString().trim().equals("")) set<![cap@[$mic:attribute:name]]!>Null();
+//$Section=Attribute setSpaceToNull$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+    public void set<![cap@[$mic:attribute:name]]!>Update(boolean aUpdate) {
+//$Section=Attribute setUpdate$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        i<![cap@[$mic:attribute:name]]!>Update = aUpdate;
+//$Section=Attribute setUpdate$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+    public boolean get<![cap@[$mic:attribute:name]]!>Update() {
+//$Section=Attribute getUpdate$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        return i<![cap@[$mic:attribute:name]]!>Update;
+//$Section=Attribute getUpdate$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+    public String get<![cap@[$mic:attribute:name]]!>ValueType() {
+//$Section=Attribute getValueType$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        return "<![$mic:attribute:type]!>";
+//$Section=Attribute getValueType$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+    public String get<![cap@[$mic:attribute:name]]!>ValueStereotype() {
+//$Section=Attribute getValueStereotype$<![cap@[$mic:attribute:name]]!>$Preserve=no
+        return "<![$mic:attribute:stereotype]!>";
+//$Section=Attribute getValueStereotype$<![cap@[$mic:attribute:name]]!>$Preserve=no
+    }
+
+<%
+    }
+%>
+
+//$Section=Deleted$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section contains orphaned code from deleted operations.
+//----------------------------------------------------------------------------
+
+//$Section=Deleted$Preserve=no
+
+//End of class---------------
+}
+<%
+
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+  }
+
+  public void generateCrudService(String aPackage, String aTableName) {
+    try {
+%>
+  <com.esarks.arm.schemas.services.root name="<!%aPackage!>.<!%aTableName!>Crud">
+<%
+
+// create
+
+    String lAttributeList = "";
+    String lAttributeListWithIdent = "";
+    String lQuestionMarks = "";
+    String lQuestionMarksWithIdent = "";
+    String lIdentity = "";
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (<![$mic:attribute:identity]!>.equals("true")) {
+        lIdentity = <![$mic:attribute:name]!>;
+        if (!lAttributeListWithIdent.equals("")) lAttributeListWithIdent += ",";
+        if (!lQuestionMarksWithIdent.equals("")) lQuestionMarksWithIdent += ",";
+        lAttributeListWithIdent += <![$mic:attribute:name]!>;
+        lQuestionMarksWithIdent += "?";
+      } else {
+        if (!lAttributeList.equals("")) lAttributeList += ",";
+        if (!lQuestionMarks.equals("")) lQuestionMarks += ",";
+        lAttributeList += <![$mic:attribute:name]!>;
+        lQuestionMarks += "?";
+        if (!lAttributeListWithIdent.equals("")) lAttributeListWithIdent += ",";
+        if (!lQuestionMarksWithIdent.equals("")) lQuestionMarksWithIdent += ",";
+        lAttributeListWithIdent += <![$mic:attribute:name]!>;
+        lQuestionMarksWithIdent += "?";
+      }
+    }
+    String lServiceBaseName = aTableName.substring(0,1).toUpperCase() + aTableName.substring(1);
+    
+%>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="batchCreate<!%lServiceBaseName!>" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement type="PreparedStatement" method="executeUpdate">
+          INSERT INTO $<!%aTableName!> (<!%lAttributeList!>) VALUES (<!%lQuestionMarks!>)
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" iterate="true">
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (<![$mic:attribute:identity]!>.equals("true")) continue;
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+    }
+%>
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+    </service>
+<%
+
+%>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="batchCreate<!%lServiceBaseName!>WithIdentity" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement stereotype="sqlServer" type="PreparedStatement" method="executeUpdate">
+          SET IDENTITY_INSERT $<!%aTableName!> ON
+          INSERT INTO $<!%aTableName!> (<!%lAttributeListWithIdent!>) VALUES (<!%lQuestionMarksWithIdent!>)
+        </statement>
+        <statement stereotype="postgreSql" type="PreparedStatement" method="executeUpdate">
+          INSERT INTO $<!%aTableName!> (<!%lAttributeListWithIdent!>) VALUES (<!%lQuestionMarksWithIdent!>)
+        </statement>
+        <statement stereotype="mySql" type="PreparedStatement" method="executeUpdate">
+          INSERT INTO $<!%aTableName!> (<!%lAttributeListWithIdent!>) VALUES (<!%lQuestionMarksWithIdent!>)
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" iterate="true">
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+    }
+%>
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+    </service>
+<%
+
+
+    if (lIdentity.length() > 0) {
+%>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="create<!%lServiceBaseName!>" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql stereotype="sqlServer">
+        <statement type="CallableStatement" method="executeQuery">
+          BEGIN
+          DECLARE @IDENT BIGINT
+          INSERT INTO $<!%aTableName!> (<!%lAttributeList!>) VALUES (<!%lQuestionMarks!>)
+          SELECT @IDENT = (SELECT @@IDENTITY)
+          SELECT * FROM $<!%aTableName!> WHERE <!%lIdentity!> = @IDENT
+          END
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (<![$mic:attribute:identity]!>.equals("true")) continue;
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+    }
+
+%>
+            </jeo>
+          </jeo>
+        </value>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" iterate="true" />
+          </jeo>
+        </result>
+      </sql>
+      <sql stereotype="postgreSql">
+        <statement type="PreparedStatement" method="executeUpdate">
+          INSERT INTO $<!%aTableName!> (<!%lAttributeList!>) VALUES (<!%lQuestionMarks!>)
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (<![$mic:attribute:identity]!>.equals("true")) continue;
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+    }
+
+%>
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+      <sql stereotype="postgreSql">
+        <statement type="PreparedStatement" method="executeQuery">
+          SELECT * FROM $<!%aTableName!> WHERE <!%lIdentity!> = LAST_INSERT_ID()
+        </statement>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" iterate="true" />
+          </jeo>
+        </result>
+      </sql>
+      <sql stereotype="mySql">
+        <statement type="PreparedStatement" method="executeUpdate">
+          INSERT INTO $<!%aTableName!> (<!%lAttributeList!>) VALUES (<!%lQuestionMarks!>)
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (<![$mic:attribute:identity]!>.equals("true")) continue;
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+    }
+
+%>
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+      <sql stereotype="mySql">
+        <statement type="PreparedStatement" method="executeQuery">
+          SELECT * FROM $<!%aTableName!> WHERE <!%lIdentity!> = LAST_INSERT_ID()
+        </statement>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" iterate="true" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+<%
+
+%>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="create<!%lServiceBaseName!>WithIdentity" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql stereotype="sqlServer">
+        <statement type="CallableStatement" method="executeQuery">
+          BEGIN
+          DECLARE @IDENT BIGINT
+          SET IDENTITY_INSERT $<!%aTableName!> ON
+          INSERT INTO $<!%aTableName!> (<!%lAttributeListWithIdent!>) VALUES (<!%lQuestionMarksWithIdent!>)
+          SELECT @IDENT = (SELECT @@IDENTITY)
+          SELECT * FROM $<!%aTableName!> WHERE <!%lIdentity!> = @IDENT
+          END
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (<![$mic:attribute:identity]!>.equals("true")) continue;
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+    }
+
+%>
+            </jeo>
+          </jeo>
+        </value>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" iterate="true" />
+          </jeo>
+        </result>
+      </sql>
+      <sql stereotype="postgreSql">
+        <statement type="PreparedStatement" method="executeUpdate">
+          INSERT INTO $<!%aTableName!> (<!%lAttributeListWithIdent!>) VALUES (<!%lQuestionMarksWithIdent!>)
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (<![$mic:attribute:identity]!>.equals("true")) continue;
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+    }
+
+%>
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+      <sql stereotype="postgreSql">
+        <statement type="PreparedStatement" method="executeQuery">
+          SELECT * FROM $<!%aTableName!> WHERE <!%lIdentity!> = NOT IMPLEMENTED
+        </statement>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" iterate="true" />
+          </jeo>
+        </result>
+      </sql>
+      <sql stereotype="mySql">
+        <statement type="PreparedStatement" method="executeUpdate">
+          INSERT INTO $<!%aTableName!> (<!%lAttributeListWithIdent!>) VALUES (<!%lQuestionMarksWithIdent!>)
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (<![$mic:attribute:identity]!>.equals("true")) continue;
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+    }
+
+%>
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+      <sql stereotype="mySql">
+        <statement type="PreparedStatement" method="executeQuery">
+          SELECT * FROM $<!%aTableName!> WHERE <!%lIdentity!> = NOT IMPLEMENTED
+        </statement>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" iterate="true" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+<%
+    } else {
+
+%>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="create<!%lServiceBaseName!>" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql stereotype="sqlServer">
+        <statement type="CallableStatement" method="executeQuery">
+          BEGIN
+          INSERT INTO $<!%aTableName!> (<!%lAttributeList!>) VALUES (<!%lQuestionMarks!>)
+          SELECT * FROM $<!%aTableName!> WHERE <%
+
+    <!$mic:primary!>!resetIterator();
+    while (<!$mic:primary!>!next()) {
+      if (<!$mic:primary!>!isFirst()) {
+        %><![$mic:primary]!>=?<%
+      } else {
+        %> AND <![$mic:primary]!>=?<%
+      }
+    }
+
+%>
+          END
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (<![$mic:attribute:identity]!>.equals("true")) continue;
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+    }
+    <!$mic:primary!>!resetIterator();
+    while (<!$mic:primary!>!next()) {
+%>
+              <value attribute="<![$mic:primary]!>" />
+<%
+    }
+%>
+            </jeo>
+          </jeo>
+        </value>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" />
+          </jeo>
+        </result>
+      </sql>
+      <sql stereotype="postgreSql">
+        <statement type="PreparedStatement" method="executeUpdate">
+          INSERT INTO $<!%aTableName!> (<!%lAttributeList!>) VALUES (<!%lQuestionMarks!>)
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (<![$mic:attribute:identity]!>.equals("true")) continue;
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+    }
+%>
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+      <sql stereotype="postgreSql">
+        <statement type="PreparedStatement" method="executeQuery">
+          SELECT * FROM $<!%aTableName!> WHERE <%
+
+    <!$mic:primary!>!resetIterator();
+    while (<!$mic:primary!>!next()) {
+      if (<!$mic:primary!>!isFirst()) {
+        %><![$mic:primary]!>=?<%
+      } else {
+        %> AND <![$mic:primary]!>=?<%
+      }
+    }
+
+%>
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+    <!$mic:primary!>!resetIterator();
+    while (<!$mic:primary!>!next()) {
+%>
+              <value attribute="<![$mic:primary]!>" />
+<%
+    }
+%>
+            </jeo>
+          </jeo>
+        </value>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" />
+          </jeo>
+        </result>
+      </sql>
+      <sql stereotype="mySql">
+        <statement type="PreparedStatement" method="executeUpdate">
+          INSERT INTO $<!%aTableName!> (<!%lAttributeList!>) VALUES (<!%lQuestionMarks!>)
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (<![$mic:attribute:identity]!>.equals("true")) continue;
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+    }
+%>
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+      <sql stereotype="mySql">
+        <statement type="PreparedStatement" method="executeQuery">
+          SELECT * FROM $<!%aTableName!> WHERE <%
+
+    <!$mic:primary!>!resetIterator();
+    while (<!$mic:primary!>!next()) {
+      if (<!$mic:primary!>!isFirst()) {
+        %><![$mic:primary]!>=?<%
+      } else {
+        %> AND <![$mic:primary]!>=?<%
+      }
+    }
+
+%>
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+    <!$mic:primary!>!resetIterator();
+    while (<!$mic:primary!>!next()) {
+%>
+              <value attribute="<![$mic:primary]!>" />
+<%
+    }
+%>
+            </jeo>
+          </jeo>
+        </value>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+<%
+    }
+    
+%>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="uidRead<!%lServiceBaseName!>" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement type="PreparedStatement" method="executeQuery">
+          SELECT * FROM $<!%aTableName!> $*where
+        </statement>
+        <where>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" >
+<%
+    <!$mic:primary!>!resetIterator();
+    while (<!$mic:primary!>!next()) {
+      if (<!$mic:primary!>!isFirst()) {
+%>
+              <where clause="<![$mic:primary]!>=?" attribute="<![$mic:primary]!>" />
+<%
+      } else {
+%>
+              <where clause="AND <![$mic:primary]!>=?" attribute="<![$mic:primary]!>" />
+<%
+      }
+    }
+%>
+            </jeo>
+          </jeo>
+        </where>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+<%
+
+%>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="read<!%lServiceBaseName!>" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement type="PreparedStatement" method="executeQuery">
+          SELECT $*top * FROM $<!%aTableName!> $*where $*order $*limit
+        </statement>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+<%
+
+    String lPrimary = "";
+    <!$mic:primary!>!resetIterator();
+    while (<!$mic:primary!>!next()) {
+      if (lPrimary.equals("")) {
+        lPrimary = <![$mic:primary]!> + "=?";
+      } else {
+        lPrimary += " AND " + <![$mic:primary]!> + "=?";
+      }
+    }
+        
+    lAttributeList = "";
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (lPrimary.indexOf(<![$mic:attribute:name]!> + "=?") > -1) {
+      } else {
+        if (lAttributeList.equals("")) {
+          lAttributeList += <![$mic:attribute:name]!> + "=?";
+        } else {
+          lAttributeList += ", " + <![$mic:attribute:name]!> + "=?";
+        }
+      }
+    }
+%>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="delete<!%lServiceBaseName!>" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement type="PreparedStatement" method="executeUpdate">
+          DELETE FROM $<!%aTableName!>
+        </statement>
+        <where>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" >
+<%
+    <!$mic:primary!>!resetIterator();
+    while (<!$mic:primary!>!next()) {
+      if (<!$mic:primary!>!isFirst()) {
+%>
+              <where clause="<![$mic:primary]!>=?" attribute="<![$mic:primary]!>" />
+<%
+      } else {
+%>
+              <where clause="AND <![$mic:primary]!>=?" attribute="<![$mic:primary]!>" />
+<%
+      }
+    }
+%>
+            </jeo>
+          </jeo>
+        </where>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="uidUpdate<!%lServiceBaseName!>" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement type="PreparedStatement" method="executeUpdate">
+          UPDATE $<!%aTableName!> SET <!%lAttributeList!> WHERE <!%lPrimary!>
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>">
+<%
+    <!$mic:attribute!>!resetIterator();
+    while (<!$mic:attribute!>!next()) {
+      if (lPrimary.indexOf(<![$mic:attribute:name]!> + "=?") > -1) {
+      } else {
+%>
+              <value attribute="<![$mic:attribute:name]!>" />
+<%
+      }
+    }
+    <!$mic:primary!>!resetIterator();
+    while (<!$mic:primary!>!next()) {
+%>
+              <value attribute="<![$mic:primary]!>" />
+<%
+    }
+%>
+            </jeo>
+          </jeo>
+        </value>
+        <count>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+          </jeo>
+        </count>
+      </sql>
+    </service>
+<%
+    <!$mic:set!>!resetIterator();
+    while (<!$mic:set!>!next()) {
+%>
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="setRead<![$mic:set]!>" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement type="PreparedStatement" method="executeQuery">
+          SELECT $*top * FROM $<!%aTableName!> $*where $*order $*limit
+        </statement>
+        <where>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="<!%aPackage!>.<!%aTableName!>" >
+<%
+      <!$mic:set:field!>!resetIterator();
+      while (<!$mic:set:field!>!next()) {
+        if (<!$mic:set:field:clause!>!size() > 0) {
+%>
+              <where clause="<![$mic:set:field:clause]!>" attribute="<![$mic:set:field]!>" />
+<%
+        } else {
+          if (<!$mic:set:field!>!isFirst()) {
+%>
+              <where clause="<![$mic:set:field]!>=?" attribute="<![$mic:set:field]!>" />
+<%
+          } else {
+%>
+              <where clause="AND <![$mic:set:field]!>=?" attribute="<![$mic:set:field]!>" />
+<%
+          }
+        }
+      }
+%>
+            </jeo>
+          </jeo>
+        </where>
+      </sql>
+    </service>
+
+<%
+    }
+%>
+  </com.esarks.arm.schemas.services.root>
+<%
+
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+  }
+
+  public void generateReadService(String aPackage, String aViewName) {
+    try {
+    String lServiceBaseName = aViewName.substring(0,1).toUpperCase() + aViewName.substring(1);
+
+%>
+  <com.esarks.arm.schemas.services.root name="<!%aPackage!>.<!%aViewName!>Read">
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="read<!%lServiceBaseName!>" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement type="PreparedStatement" method="executeQuery">
+          SELECT $*top * FROM $<!%aViewName!> $*where $*order $*limit
+        </statement>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="<!%aPackage!>.<!%aViewName!>" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+  </com.esarks.arm.schemas.services.root>
+<%
+
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+  }
+
+  private void parseXmlDefinition(String aXmlDefinition) {
+    XmlSchemaFactory lXmlSchemaFactory = iSymbolTable.getXmlSchemaFactory();
+    if (lXmlSchemaFactory.getXmlSchemaElement("com.esarks.arm.schemas.ddl.root") == null) {
+      loadXmlSchema("com.esarks.arm.schemas.ddl", path("com.esarks.arm.schemas.DdlSchema") + ".xml");
+    }
+    parseXmlSchema(aXmlDefinition);
+  }

@@ -1,0 +1,63 @@
+//  Generated at 2019.10.11 07:59:59.482 PM EDT by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+
+  public void execute() {
+
+    ArrayList lCollection = performService();
+
+    com.esarks.arm.model.jeo.ServiceJeo lDocumentServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"com.esarks.arm.logging.ExceptionRpt", lDocumentServiceJeo});
+
+  }
+  
+  public void performService() {
+
+    // Create the service jeo
+    com.esarks.arm.model.jeo.ServiceJeo lServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+
+    // Call the service
+    iScript.execMethod("!!com...!!", "!!serviceName!!", new Object[]{lServiceJeo});
+    if (lServiceJeo.getError() != null && lServiceJeo.getError().getSeverity() < 5) {
+      System.out.println(lServiceJeo.getError().getTitle());
+      System.out.println(lServiceJeo.getError().getText());
+      System.out.println(lServiceJeo.getError().getLocation());
+      return;
+    }
+
+    // Get the reply objects
+    Jeo lReplyJeo = lServiceJeo.getReply();
+    ArrayList lArrayList = lReplyJeo.getJeoByInstanceName("!!com...!!");
+
+    int lIdx = 0;
+    for (lIdx=0; lIdx < lArrayList.size(); lIdx++) {
+      !!com...!! lJeo = (!!com...!!) lArrayList.get(lIdx);
+    }
+
+  }
+  
+  public Jeo createDetail(Jeo aJeo);
+
+    com.esarks.arm.logging.ExceptionJeo lJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+
+    lJeo.setTime(aJeo.get!!Attribute!!PropertyValue().toString());
+    lJeo.setModule(aJeo.get!!Attribute!!PropertyValue().toString());
+    lJeo.setMethod(aJeo.get!!Attribute!!PropertyValue().toString());
+    lJeo.setSeverity(aJeo.get!!Attribute!!PropertyValue().toString());
+    lJeo.setLocation(aJeo.get!!Attribute!!PropertyValue().toString());
+    lJeo.setDescription(aJeo.get!!Attribute!!PropertyValue().toString());
+    lJeo.setAction(aJeo.get!!Attribute!!PropertyValue().toString());
+    lJeo.setResolution(aJeo.get!!Attribute!!PropertyValue().toString());
+
+    return lJeo;
+  }
+
+  public Jeo createTrace(Jeo aJeo);
+
+    com.esarks.arm.logging.ExceptionJeo lJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+
+    lJeo.setDescription(aJeo.get!!Attribute!!PropertyValue().toString());
+
+    return lJeo;
+  }
+
+}

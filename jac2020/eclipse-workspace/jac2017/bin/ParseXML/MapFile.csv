@@ -1,0 +1,126 @@
+*** Data Maps for rm_sprint ***
+mic.element:sprintFile:number,number
+Project:Name,short_description
+"Complete",state
+"false",active
+"VIP Team",assignment_group
+"VA VIP Dashboard",product
+FinishDate,schedule_end_date
+StartDate,schedule_start_date
+FinishDate,end_date
+StartDate,start_date
+Duration,actual_duration
+"0",actual_effort
+"100",percent_complete
+StartDate,opened
+FinishDate,closed
+"0",completed_points
+FinishDate,original_end_date
+StartDate,original_start_date
+Duration,planned_duration
+"0",remaining_effort
+
+*** Data Maps for rm_epic ***
+Workitem:Id,number
+Workitem:Summary,short_description
+Workitem:Description,description
+Workitem:Status,state
+"VIP Team",assignment_group
+"VA VIP Dashboard",product
+
+*** Data Maps for rm_story ***
+Workitem:Id,number
+Workitem:Summary,short_description
+Workitem:Description,description
+Workitem:Severity,urgency
+Workitem:Status,state
+Workitem:Story Points,story_points
+Workitem:Acceptance Test,acceptance_criteria
+Workitem:Comments,comments_and_work_notes
+Workitem:Impact,impact
+Workitem:Priority,priority
+Workitem:Owned By,assigned_to
+mic.element:sprintFile:number,parent
+"true",active
+"Product",backlog_type
+"VIP Team",assignment_group
+"VA VIP Dashboard",product
+mic.element:sprintFile:number,sprint
+
+*** Data Maps for rm_defect ***
+Workitem:Id,number
+Workitem:Summary,short_description
+Workitem:Description,description
+Workitem:Severity,urgency
+Workitem:Status,state
+Workitem:Story Points,story_points
+Workitem:Acceptance Test,acceptance_criteria
+Workitem:Comments,comments_and_work_notes
+Workitem:Impact,impact
+Workitem:Priority,priority
+Workitem:Owned By,assigned_to
+Workitem:Parent,parent
+"true",active
+"Product",backlog_type
+"VIP Team",assignment_group
+"VA VIP Dashboard",product
+mic.element:sprintFile:number,sprint
+
+*** Data Maps for rm_scrum_task ***
+Workitem:Id,number
+Workitem:Summary,short_description
+Workitem:Description,description
+Workitem:Status,state
+Workitem:Comments,comments_and_work_notes
+Workitem:Impact,impact
+Workitem:Priority,priority
+Workitem:Owned By,assigned_to
+"true",active
+Workitem:Severity,urgency
+Workitem:Story Points,story_points
+Workitem:Acceptance Test,acceptance_criteria
+"VIP Team",assignment_group
+"VA VIP Dashboard",product
+Workitem:Parent,parent
+
+*** Data Maps for rm_backlog ***
+Workitem:Id,number
+Workitem:Summary,short_description
+Workitem:Description,description
+Workitem:Severity,urgency
+Workitem:Status,state
+Workitem:Story Points,story_points
+Workitem:Acceptance Test,acceptance_criteria
+Workitem:Comments,comments_and_work_notes
+Workitem:Impact,impact
+Workitem:Priority,priority
+Workitem:Owned By,assigned_to
+Workitem:Parent,parent
+"true",active
+"Product",backlog_type
+"VIP Team",assignment_group
+"VA VIP Dashboard",product
+mic.element:sprintFile:number,sprint
+Workitem:Type,Type
+
+*** Data Maps for rm_orphan ***
+Workitem:Id,number
+Workitem:Summary,short_description
+Workitem:Description,description
+Workitem:Severity,urgency
+Workitem:Status,state
+Workitem:Story Points,story_points
+Workitem:Acceptance Test,acceptance_criteria
+Workitem:Comments,comments_and_work_notes
+Workitem:Impact,impact
+Workitem:Priority,priority
+Workitem:Parent,parent
+"true",active
+"Product",backlog_type
+"VIP Team",assignment_group
+"VA VIP Dashboard",product
+Workitem:Type,Type
+Workitem:Planned For,Planned For
+Workitem:Owned By,assigned_to
+Workitem:Resolution,Resolution
+

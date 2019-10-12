@@ -1,0 +1,392 @@
+C:\ArchitectsCompanion\jac\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\ArchitectsCompanion\jac\conf\micImport.script:2: 
+C:\ArchitectsCompanion\jac\conf\micImport.script:3: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:4: import java.util.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:5: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:6: import java.io.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:7: import java.text.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:8: import java.net.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:9: import javax.net.ssl.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:10: import java.security.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:11: import java.sql.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:12: import javax.servlet.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:13: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:14: import java.awt.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:15: import javax.swing.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:16: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:17: 
+C:\ArchitectsCompanion\jac\conf\micImport.script:18: <#import#>
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:2: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:4:   }
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:5: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:7: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:8:     super(aScript);
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:9: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:10:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:1: public void execute(String aScript) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:2: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:3:   iOutputManager.setDocument("makeAll");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:4: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:5: %>makeAll using <!%aScript!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:6: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:7:   // Parse the input file.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:8:   parseXmlPath(path(aScript) + ".xml");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:9:   StringBuffer lStringBuffer1 = new StringBuffer();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:10:   StringBuffer lStringBuffer2 = new StringBuffer();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:11:   StringBuffer lStringBuffer3 = new StringBuffer();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:12: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:13:   <!makeAll:componentInventory!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:14:   while (<!makeAll:componentInventory!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:15:     parseXmlPath(path(<![makeAll:componentInventory]!>) + ".xml");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:16:     if (<!components!>!size() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:17:       %>** Components file <![makeAll:componentInventory]!> doesn't contain <components> tag.<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:18:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:19:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:20:   
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:21:   System.out.print("Check Dependencies:");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:22:   <!makeAll:component!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:23:   while (<!makeAll:component!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:24:     addComponent(<![makeAll:component]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:25:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:26:   System.out.println(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:27: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:28:   <!makeAll:ddl!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:29:   while (<!makeAll:ddl!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:30:   
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:31:     makeDdl();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:32:     writeEvents();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:33: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:34:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:35:   
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:36:   lStringBuffer1 = iOutputManager.getDocument("makeAll");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:37:   iOutputManager.setDocument("makeAll");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:38: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:39:   <!makeAll:jeo!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:40:   while (<!makeAll:jeo!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:41: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:42:     makeJeo();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:43:     writeEvents();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:44: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:45:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:46:   
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:47:   lStringBuffer2 = iOutputManager.getDocument("makeAll");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:48:   iOutputManager.setDocument("makeAll");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:49: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:50:   <!makeAll:make!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:51:   while (<!makeAll:make!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:52: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:53:     make();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:54:     writeEvents();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:55: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:56:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:57:   
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:58:   lStringBuffer3 = iOutputManager.getDocument("makeAll");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:59:   if (!openOutput(path(aScript) + ".log")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:60:     System.out.println("Cannot open output log file!");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:61:     if (iOutputManager.getExceptionMessage() != null) System.out.println(iOutputManager.getExceptionMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:62:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:63:   %><!%lStringBuffer1.toString()!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:64:   %><!%lStringBuffer2.toString()!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:65:   %><!%lStringBuffer3.toString()!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:66:   closeOutput();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:67: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:68: }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:69: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:70: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:71: public void makeDdl() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:72: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:73: %>makeDdl<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:74: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:75:   System.out.print("makeDdl");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:76:   
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:77:   if (<!makeAll:ddl:script!>!size() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:78:     %>makeDdl... Nothing to process.<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:79:     System.out.println(" Nothing to process...");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:80:     return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:81:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:82:   
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:83:   <!makeAll:ddl:script!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:84:   while (<!makeAll:ddl:script!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:85:     <!makeAll:ddl:script:entity!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:86:     while (<!makeAll:ddl:script:entity!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:87:       <!makeDdl!>!remove();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:88:       iScript.execMethod(loadScript("com.esarks.arm.model.MakeDdl"), <![makeAll:ddl:script:method]!>, new Object[] {<![makeAll:ddl:script]!>, <![makeAll:ddl:script:entity]!>});
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:89:       writeEvents();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:90:       System.out.print(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:91:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:92:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:93:   System.out.println(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:94: }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:95: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:96: public void makeJeo() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:97: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:98: %>makeJeo<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:99: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:100:   System.out.print("makeJeo");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:101: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:102:   if (<!makeAll:jeo:script!>!size() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:103:     %>makeJeo... Nothing to process.<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:104:     System.out.println(" Nothing to process...");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:105:     return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:106:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:107: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:108:   <!makeAll:jeo:script!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:109:   while (<!makeAll:jeo:script!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:110:     <!makeAll:jeo:script:entity!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:111:     while (<!makeAll:jeo:script:entity!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:112:       iScript.execMethod(loadScript("com.esarks.arm.model.MakeJeo"), <![makeAll:jeo:script:method]!>, new Object[] {<![makeAll:jeo:script]!>, <![makeAll:jeo:script:entity]!>});
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:113:       writeEvents();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:114:       System.out.print(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:115:       String lContext = "jeo";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:116:       if (iScript.getMasterScript().buildScript(getScriptName(<![makeAll:jeo:script]!>, <![makeAll:jeo:script:entity]!>), lContext, false) == true) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:117:         setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:118:         String lSourceFile = <![$jac:script:sourceFile]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:119:         restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:120:         <!$mic:compile!>!set(lSourceFile);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:121:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:122:       if (<![makeAll:jeo:script:compile]!>.compareTo("true") == 0 && <!$mic:compile!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:123:         String [] lClassFiles = new String[<!$mic:compile!>!size()];
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:124:         int lIdx = 0;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:125:         <!$mic:compile!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:126:         while (<!$mic:compile!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:127:           lClassFiles[lIdx++] = <![$mic:compile]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:128:           %>Compile <![$mic:compile]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:129:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:130:         iScript.compileScripts(lClassFiles);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:131:         <!$mic:compile!>!remove();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:132:         writeEvents();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:133:         System.out.print(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:134:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:135:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:136:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:137:   if (<!$mic:compile!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:138:     String [] lClassFiles = new String[<!$mic:compile!>!size()];
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:139:     int lIdx = 0;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:140:     <!$mic:compile!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:141:     while (<!$mic:compile!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:142:       lClassFiles[lIdx++] = <![$mic:compile]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:143:       %>Compile <![$mic:compile]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:144:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:145:     iScript.compileScripts(lClassFiles);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:146:     <!$mic:compile!>!remove();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:147:     writeEvents();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:148:     System.out.print(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:149:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:150:   System.out.println(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:151: }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:152: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:153: public void make() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:154: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:155: %>make<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:156: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:157:   System.out.print("make");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:158: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:159:   if (<!makeAll:make:script!>!size() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:160:     %>make... Nothing to process.<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:161:     System.out.println(" Nothing to process...");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:162:     return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:163:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:164: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:165:   <!makeAll:make:script!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:166:   while (<!makeAll:make:script!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:167:     if (<!makeAll:make:script:method!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:168:       if (<!makeAll:make:script:argument!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:169:         iScript.execMethod(loadScript(<![makeAll:make:script]!>), <![makeAll:make:script:method]!>, new Object[] {<![makeAll:make:script:argument]!>});
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:170:         writeEvents();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:171:         System.out.print(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:172:       } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:173:         iScript.execMethod(loadScript(<![makeAll:make:script]!>), <![makeAll:make:script:method]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:174:         writeEvents();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:175:         System.out.print(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:176:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:177:     } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:178:       String lContext = <![makeAll:make:script:context]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:179:       if (<![makeAll:make:script:context]!>.compareTo("?") == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:180:         parseXml(<![makeAll:make:script]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:181:         lContext = "micScript" + <![mic.element:type]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:182:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:183:       if (iScript.getMasterScript().buildScript(<![makeAll:make:script]!>, lContext, false) == true) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:184:         setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:185:         String lSourceFile = <![$jac:script:sourceFile]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:186:         restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:187:         <!$mic:compile!>!set(lSourceFile);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:188:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:189:       if (<![makeAll:make:script:compile]!>.compareTo("true") == 0 && <!$mic:compile!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:190:         String [] lClassFiles = new String[<!$mic:compile!>!size()];
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:191:         int lIdx = 0;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:192:         <!$mic:compile!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:193:         while (<!$mic:compile!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:194:           lClassFiles[lIdx++] = <![$mic:compile]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:195:           %>Compile <![$mic:compile]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:196:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:197:         iScript.compileScripts(lClassFiles);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:198:         <!$mic:compile!>!remove();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:199:         writeEvents();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:200:         System.out.print(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:201:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:202:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:203:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:204:   if (<!$mic:compile!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:205:     String [] lClassFiles = new String[<!$mic:compile!>!size()];
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:206:     int lIdx = 0;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:207:     <!$mic:compile!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:208:     while (<!$mic:compile!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:209:       lClassFiles[lIdx++] = <![$mic:compile]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:210:       %>Compile <![$mic:compile]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:211:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:212:     iScript.compileScripts(lClassFiles);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:213:     <!$mic:compile!>!remove();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:214:     writeEvents();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:215:     System.out.print(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:216:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:217:   System.out.println(".");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:218: }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:219: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:220: private String getScriptName(String aXmlDefinition, String aTable) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:221:   String lPackage = aXmlDefinition;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:222:   for(int lIdx=aXmlDefinition.length(); lIdx > 0; lIdx--) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:223:     if (aXmlDefinition.charAt(lIdx-1) == '.') {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:224:       lPackage = aXmlDefinition.substring(0, lIdx-1);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:225:       break;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:226:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:227:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:228:   return lPackage + "." + aTable;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:229: }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:230: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:231: private void writeEvents() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:232:     iOutputManager.setDocument("makeAll");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:233:     setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:234:     <!$jac:event!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:235:     while (<!$jac:event!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:236:       %>*<![$jac:event:severity]!>* <![$jac:event]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:237:       String lSeverity = <![$jac:event:severity]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:238:       if (lSeverity.equals("fatal")) System.out.print("!");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:239:       else if (lSeverity.equals("error")) System.out.print("*");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:240:       else if (lSeverity.equals("info")) System.out.print("?");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:241:       else System.out.print("%");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:242:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:243:     <!$jac:event!>!remove();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:244:     restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:245: }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:246: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:247: private void addComponent(String aComponent) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:248:     
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:249:     System.out.print("?");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:250: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:251:     // See if the component is already in the make list...
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:252:     <!$mic:makeComponentList:name!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:253:     if (<!$mic:makeComponentList!>!scan("name", aComponent)) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:254:       %>                  - <!%aComponent!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:255:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:256:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:257:     // Add it, so it won't get added during the dependency check (although, that would be a bad condition if another element depends on this one, and this one depends on it)
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:258:     <!$mic:makeComponentList:name!>!set(aComponent);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:259: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:260:     System.out.print("+");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:261:     %>Adding Component: <!%aComponent!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:262: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:263:     // Find this component's definition and dependencies
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:264:     <!components:component!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:265:     if (<!components!>!scan("component:name", aComponent)) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:266: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:267:       // Save these, as recursion will destory the index to the component item.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:268:       String lEntity = <![components:component:entity]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:269:       String lType = <![components:component:type]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:270:       String lSource = <![components:component:source]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:271:       if (<!components:component:source!>!size() == 0) lSource = aComponent;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:272: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:273:       // Get dependencies in a list, and process each one...
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:274:       ArrayList lArrayList = new ArrayList();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:275:       <!components:component:dependsOn!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:276:       while (<!components:component:dependsOn!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:277:         lArrayList.add(<![components:component:dependsOn:name]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:278:         %>                  * <![components:component:dependsOn:name]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:279:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:280: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:281:       // Process the dependencies
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:282:       for (int lIdx=0; lIdx < lArrayList.size(); lIdx++) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:283:         addComponent((String) lArrayList.get(lIdx));
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:284:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:285: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:286:       %>                  + <!%aComponent!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:287: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:288:       /// Now add the component
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:289:       if (lType.equals("DbTable")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:290:         <!makeAll:ddl:script!>!set(lSource);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:291:         if (lEntity.equals("")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:292:           <!makeAll:ddl:script:entity!>!set(aComponent);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:293:         } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:294:           <!makeAll:ddl:script:entity!>!set(lEntity);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:295:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:296:         <!makeAll:ddl:script:method!>!set("createTable");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:297:         <!makeAll:jeo:script!>!set(lSource);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:298:         if (lEntity.equals("")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:299:           <!makeAll:jeo:script:entity!>!set(aComponent);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:300:         } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:301:           <!makeAll:jeo:script:entity!>!set(lEntity);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:302:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:303:         <!makeAll:jeo:script:method!>!set("createTable");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:304:         <!makeAll:jeo:script:compile!>!set("true");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:305:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:306:       else if (lType.equals("DbView")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:307:         <!makeAll:ddl:script!>!set(lSource);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:308:         if (lEntity.equals("")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:309:           <!makeAll:ddl:script:entity!>!set(aComponent);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:310:         } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:311:           <!makeAll:ddl:script:entity!>!set(lEntity);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:312:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:313:         <!makeAll:ddl:script:method!>!set("createView");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:314:         <!makeAll:jeo:script!>!set(lSource);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:315:         if (lEntity.equals("")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:316:           <!makeAll:jeo:script:entity!>!set(aComponent);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:317:         } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:318:           <!makeAll:jeo:script:entity!>!set(lEntity);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:319:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:320:         <!makeAll:jeo:script:method!>!set("createView");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:321:         <!makeAll:jeo:script:compile!>!set("true");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:322:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:323:       else if (lType.equals("Jeo")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:324:         <!makeAll:jeo:script!>!set(lSource);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:325:         if (lEntity.equals("")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:326:           <!makeAll:jeo:script:entity!>!set(aComponent);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:327:         } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:328:           <!makeAll:jeo:script:entity!>!set(lEntity);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:329:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:330:         <!makeAll:jeo:script:method!>!set("createJeo");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:331:         <!makeAll:jeo:script:compile!>!set("true");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:332:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:333:       else if (lType.equals("Services")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:334:         <!makeAll:make:script!>!set("com.esarks.arm.model.GenerateService");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:335:         <!makeAll:make:script:method!>!set("generateServices");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:336:         <!makeAll:make:script:argument!>!set(lSource);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:337:         <!makeAll:make:script!>!set(aComponent);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:338:         <!makeAll:make:script:context!>!set("?");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:339:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:340:       else if (lType.equals("Report")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:341:         <!makeAll:make:script!>!set("com.esarks.arm.report.GenerateReport");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:342:         <!makeAll:make:script:method!>!set("generateReport");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:343:         <!makeAll:make:script:argument!>!set(lSource);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:344:         <!makeAll:make:script!>!set(aComponent);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:345:         <!makeAll:make:script:context!>!set("?");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:346:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:347: /*
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:348:       else if (lType.equals("View")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:349:         <!makeAll:make:script!>!set();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:350:         <!makeAll:make:script:method!>!set();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:351:         <!makeAll:make:script:argument!>!set();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:352:         <!makeAll:make:script!>!set();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:353:         <!makeAll:make:script:context!>!set();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:354:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:355: */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:356:       else if (lType.equals("Script")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:357:         <!makeAll:make:script!>!set(lSource);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:358:         <!makeAll:make:script:context!>!set("?");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:359:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:360:       else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:361:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:362:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\make\MakeAll.script:363: }
+C:\ArchitectsCompanion\jac\conf\micPostfix.script:1: }

@@ -1,0 +1,41 @@
+C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ErrorJeo.java:348: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        Method lMethod = this.getClass().getMethod("getAttributeName_" + aAttributeName.toLowerCase(), null);
+                                                                                                       ^
+  cast to Class<?> for a varargs call
+  cast to Class<?>[] for a non-varargs call and to suppress this warning
+C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ErrorJeo.java:349: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        return (String) lMethod.invoke(this, null);
+                                             ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ErrorJeo.java:362: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "PropertyValue", null);
+                                                                                                           ^
+  cast to Class<?> for a varargs call
+  cast to Class<?>[] for a non-varargs call and to suppress this warning
+C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ErrorJeo.java:363: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        return (PropertyValue) lMethod.invoke(this, null);
+                                                    ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ErrorJeo.java:391: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueType", null);
+                                                                                                       ^
+  cast to Class<?> for a varargs call
+  cast to Class<?>[] for a non-varargs call and to suppress this warning
+C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ErrorJeo.java:392: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        return (String) lMethod.invoke(this, null);
+                                             ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ErrorJeo.java:405: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueStereotype", null);
+                                                                                                             ^
+  cast to Class<?> for a varargs call
+  cast to Class<?>[] for a non-varargs call and to suppress this warning
+C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ErrorJeo.java:406: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        return (String) lMethod.invoke(this, null);
+                                             ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+8 warnings

@@ -1,0 +1,149 @@
+<%
+
+  parseXmlPath(<![$jac:path:home]\\temp\\maintainStdQuestionnaire.xml!>);
+  parseXmlPath(<![$jac:path:home]\\temp\\!> + <![questionnaireFile]!> + ".xml");
+
+  DbConnection lDbConnection = symbolTable.getDbConnection();
+  lDbConnection.connect("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@asdczd:1521:esarks", "system", "manager");
+
+  <!questionnaire!>!resetIterator();
+    
+  try
+  {
+      CallableStatement lCallableStatement = lDbConnection.getConnection().prepareCall(
+          "BEGIN " +
+          "INSERT INTO stdQuestionnaire (questionnaireCode,questionnaireSequence,title) " +
+          "VALUES (?,?,?); " +
+          "END;" );
+      lCallableStatement.setString(1, <![questionnaire:code]!>);
+      lCallableStatement.setString(2, <![questionnaire:sequence]!>);
+      lCallableStatement.setString(3, <![questionnaire:title]!>);
+      lCallableStatement.execute();
+      lCallableStatement.close();
+  }
+  catch (Exception e)
+  {
+    System.out.println(e);
+  }
+
+  <!questionnaire:question!>!resetIterator();
+  while (<!questionnaire:question!>!next()) {
+
+    if (<![questionnaire:sequence]!>.compareTo(<![questionnaire:question:sequence]!>) == 0) {
+
+      try {
+        CallableStatement lCallableStatement = lDbConnection.getConnection().prepareCall(
+            "BEGIN " +
+            "UPDATE stdQuestion set questionSequenceOut = ? WHERE questionnaireCode = ? AND questionCode = ? AND questionSequenceOut is Null; " +
+            "END;" );
+        lCallableStatement.setString(1, <![questionnaire:sequence]!>);
+        lCallableStatement.setString(2, <![questionnaire:code]!>);
+        lCallableStatement.setString(3, <![questionnaire:question:code]!>);
+        lCallableStatement.execute();
+        lCallableStatement.close();
+      }
+      catch (Exception e) {
+          System.out.println(e);
+      }
+
+      try {
+        CallableStatement lCallableStatement = lDbConnection.getConnection().prepareCall(
+            "BEGIN " +
+            "INSERT INTO stdQuestion (questionnaireCode,questionCode,questionSequence,questionSequenceOut,questionOrder,questionText,questionType) " +
+            "VALUES (?,?,?,?,?,?,?); " +
+            "END;" );
+        lCallableStatement.setString(1, <![questionnaire:code]!>);
+        lCallableStatement.setString(2, <![questionnaire:question:code]!>);
+        lCallableStatement.setString(3, <![questionnaire:question:sequence]!>);
+        lCallableStatement.setString(4, <![questionnaire:question:sequenceOut]!>);
+        lCallableStatement.setString(5, <![questionnaire:question:order]!>);
+        lCallableStatement.setString(6, <![questionnaire:question:text]!>);
+        lCallableStatement.setString(7, <![questionnaire:question:type]!>);
+        lCallableStatement.execute();
+        lCallableStatement.close();
+      }
+      catch (Exception e) {
+          System.out.println(e);
+      }
+    } else {
+      if (<![questionnaire:sequence]!>.compareTo(<![questionnaire:question:sequenceOut]!>) == 0) {
+        try {
+          CallableStatement lCallableStatement = lDbConnection.getConnection().prepareCall(
+              "BEGIN " +
+              "UPDATE stdQuestion set questionSequenceOut = ? WHERE questionnaireCode = ? AND questionCode = ? AND questionSequenceOut is Null; " +
+              "END;" );
+          lCallableStatement.setString(1, <![questionnaire:sequence]!>);
+          lCallableStatement.setString(2, <![questionnaire:code]!>);
+          lCallableStatement.setString(3, <![questionnaire:question:code]!>);
+          lCallableStatement.execute();
+          lCallableStatement.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+      }
+    }
+
+    <!questionnaire:question:response!>!resetIterator();
+    while (<!questionnaire:question:response!>!next()) {
+
+      if (<![questionnaire:sequence]!>.compareTo(<![questionnaire:question:response:sequence]!>) == 0) {
+
+        try {
+          CallableStatement lCallableStatement = lDbConnection.getConnection().prepareCall(
+              "BEGIN " +
+              "UPDATE stdResponse set responseSequenceOut = ? WHERE questionnaireCode = ? AND questionCode = ? AND responseCode = ? and responseSequenceOut is Null; " +
+              "END;" );
+          lCallableStatement.setString(1, <![questionnaire:sequence]!>);
+          lCallableStatement.setString(2, <![questionnaire:code]!>);
+          lCallableStatement.setString(3, <![questionnaire:question:code]!>);
+          lCallableStatement.setString(4, <![questionnaire:question:response:code]!>);
+          lCallableStatement.execute();
+          lCallableStatement.close();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
+
+        try {
+          CallableStatement lCallableStatement = lDbConnection.getConnection().prepareCall(
+              "BEGIN " +
+              "INSERT INTO stdResponse (questionnaireCode,questionCode,responseCode,responseSequence,responseSequenceOut,responseOrder,responseText) " +
+              "VALUES (?,?,?,?,?,?,?); " +
+              "END;" );
+          lCallableStatement.setString(1, <![questionnaire:code]!>);
+          lCallableStatement.setString(2, <![questionnaire:question:code]!>);
+          lCallableStatement.setString(3, <![questionnaire:question:response:code]!>);
+          lCallableStatement.setString(4, <![questionnaire:question:response:sequence]!>);
+          lCallableStatement.setString(5, <![questionnaire:question:response:sequenceOut]!>);
+          lCallableStatement.setString(6, <![questionnaire:question:response:order]!>);
+          lCallableStatement.setString(7, <![questionnaire:question:response:text]!>);
+          lCallableStatement.execute();
+          lCallableStatement.close();
+        }
+        catch (Exception e) {
+          System.out.println(e);
+        }
+      } else {
+        if (<![questionnaire:sequence]!>.compareTo(<![questionnaire:question:response:sequenceOut]!>) == 0) {
+          try {
+            CallableStatement lCallableStatement = lDbConnection.getConnection().prepareCall(
+                "BEGIN " +
+                "UPDATE stdResponse set responseSequenceOut = ? WHERE questionnaireCode = ? AND questionCode = ? AND responseCode = ? and responseSequenceOut is Null; " +
+                "END;" );
+            lCallableStatement.setString(1, <![questionnaire:sequence]!>);
+            lCallableStatement.setString(2, <![questionnaire:code]!>);
+            lCallableStatement.setString(3, <![questionnaire:question:code]!>);
+            lCallableStatement.setString(4, <![questionnaire:question:response:code]!>);
+            lCallableStatement.execute();
+            lCallableStatement.close();
+          }
+          catch (Exception e) {
+              System.out.println(e);
+          }
+        }
+      }
+    }
+  }
+
+%>

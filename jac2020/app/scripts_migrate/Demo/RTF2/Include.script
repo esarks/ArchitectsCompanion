@@ -1,0 +1,11 @@
+<%
+
+  <!paragraphs:paragraph!>!resetIterator();
+  while (<!paragraphs:paragraph!>!next()) {
+
+%>\par }{<![paragraphs:paragraph]!>
+<%
+
+  }
+
+%>\par }{

@@ -1,0 +1,273 @@
+//  Generated at 2019.09.11 08:51:42.904 AM CDT by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+
+  public void render(String aOutput, String aStereotype, com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+    renderHtml(aOutput, aJeo);
+    renderXml(aOutput, aJeo);
+  }
+
+  public void render(String aOutput, com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+    renderHtml(aOutput, aJeo);
+    renderXml(aOutput, aJeo);
+  }
+
+  public void renderHtml(String aOutput, com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+    openOutput(path(aOutput) + ".html");
+    com.esarks.arm.model.jeo.ServiceJeo lJeo = aJeo;
+    int lNbrColumns_ = 0;
+// *********************************************************************************************
+// ***** Begin XML tag: report Jeo Type: detail
+// *********************************************************************************************
+    ArrayList lArrayListx = lJeo.getJeoByTypeName("detail");
+    boolean lPrintHeadingx_detail = true;
+    int lNbrColumnsx_detail = 8;
+    String lTableEndx_detail = "</table>";
+    if (lNbrColumns_ > 0) lTableEndx_detail = "</table></td></tr>";
+    for (int lIdx=0; lIdx < lArrayListx.size(); lIdx++) {
+      com.esarks.arm.logging.ExceptionJeo lJeox = (com.esarks.arm.logging.ExceptionJeo) lArrayListx.get(lIdx);
+      if (lNbrColumns_ > 0) {
+        %><tr><td colspan="<!%lNbrColumns_!>"><%
+      }
+      if (lPrintHeadingx_detail) {
+        lPrintHeadingx_detail=false;
+        %><table cellspacing="0" cellpadding="0" border="1"><%
+        %><tr><%
+        %><td width="">Time&nbsp;</td><%
+        %><td width="">Module&nbsp;</td><%
+        %><td width="">Method&nbsp;</td><%
+        %><td width="">Severity&nbsp;</td><%
+        %><td width="">Location&nbsp;</td><%
+        %><td width="">Description&nbsp;</td><%
+        %><td width="">Action&nbsp;</td><%
+        %><td width="">Resolution&nbsp;</td><%
+        %></tr><%
+      }
+      %><tr><%
+      %><td><!%lJeox.getTimePropertyValue().toString()!>&nbsp;</td><%
+      %><td><!%lJeox.getModulePropertyValue().toString()!>&nbsp;</td><%
+      %><td><!%lJeox.getMethodPropertyValue().toString()!>&nbsp;</td><%
+      %><td><!%lJeox.getSeverityPropertyValue().toString()!>&nbsp;</td><%
+      %><td><!%lJeox.getLocationPropertyValue().toString()!>&nbsp;</td><%
+      %><td><!%lJeox.getDescriptionPropertyValue().toString()!>&nbsp;</td><%
+      %><td><!%lJeox.getActionPropertyValue().toString()!>&nbsp;</td><%
+      %><td><!%lJeox.getResolutionPropertyValue().toString()!>&nbsp;</td><%
+      %></tr><%
+// *********************************************************************************************
+// ***** Begin XML tag: report:jeo Jeo Type: trace
+// *********************************************************************************************
+      ArrayList lArrayListxx = lJeox.getJeoByTypeName("trace");
+      boolean lPrintHeadingxx_trace = true;
+      int lNbrColumnsxx_trace = 1;
+      String lTableEndxx_trace = "</table>";
+      if (lNbrColumnsx_detail > 0) lTableEndxx_trace = "</table></td></tr>";
+      for (int lIdxx=0; lIdxx < lArrayListxx.size(); lIdxx++) {
+        com.esarks.arm.logging.ExceptionJeo lJeoxx = (com.esarks.arm.logging.ExceptionJeo) lArrayListxx.get(lIdxx);
+        if (lNbrColumnsx_detail > 0) {
+          %><tr><td colspan="<!%lNbrColumnsx_detail!>"><%
+        }
+        if (lPrintHeadingxx_trace) {
+          lPrintHeadingxx_trace=false;
+          %><table cellspacing="0" cellpadding="0" border="1"><%
+          %><tr><%
+          %><td width="">Trace&nbsp;</td><%
+          %></tr><%
+        }
+        %><tr><%
+        %><td><!%lJeoxx.getDescriptionPropertyValue().toString()!>&nbsp;</td><%
+        %></tr><%
+        }
+        if (!lPrintHeadingxx_trace) %><!%lTableEndxx_trace!><%
+      }
+      if (!lPrintHeadingx_detail) %><!%lTableEndx_detail!><%
+    closeOutput();
+  }
+
+  public void renderXml(String aOutput, com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+    openOutput(path(aOutput) + ".xml");
+    com.esarks.arm.model.jeo.ServiceJeo lJeo = aJeo;
+    %><report name="<!%aOutput!>"><%
+    int lNbrColumns_ = 0;
+// *********************************************************************************************
+// ***** Begin XML tag: report Jeo Type: detail
+// *********************************************************************************************
+    ArrayList lArrayListx = lJeo.getJeoByTypeName("detail");
+    boolean lPrintHeadingx_detail = true;
+    int lNbrColumnsx_detail = 8;
+    String lTableEndx_detail = "</table>";
+    for (int lIdx=0; lIdx < lArrayListx.size(); lIdx++) {
+      com.esarks.arm.logging.ExceptionJeo lJeox = (com.esarks.arm.logging.ExceptionJeo) lArrayListx.get(lIdx);
+      if (lPrintHeadingx_detail) {
+        lPrintHeadingx_detail=false;
+%>
+<table>
+<%
+%>
+<header>
+<%
+%>
+<column attribute="time" width="">Time</column>
+<%
+%>
+<column attribute="module" width="">Module</column>
+<%
+%>
+<column attribute="method" width="">Method</column>
+<%
+%>
+<column attribute="severity" width="">Severity</column>
+<%
+%>
+<column attribute="location" width="">Location</column>
+<%
+%>
+<column attribute="description" width="">Description</column>
+<%
+%>
+<column attribute="action" width="">Action</column>
+<%
+%>
+<column attribute="resolution" width="">Resolution</column>
+<%
+%>
+</header>
+<%
+      }
+      String AttributeList = "";
+%>
+<row <!%AttributeList!>>
+<%
+
+      AttributeList = "";
+%>
+<time <!%AttributeList!>><!%lJeox.getTimePropertyValue().toString()!></time>
+<%
+      AttributeList = "";
+%>
+<module <!%AttributeList!>><!%lJeox.getModulePropertyValue().toString()!></module>
+<%
+      AttributeList = "";
+%>
+<method <!%AttributeList!>><!%lJeox.getMethodPropertyValue().toString()!></method>
+<%
+      AttributeList = "";
+%>
+<severity <!%AttributeList!>><!%lJeox.getSeverityPropertyValue().toString()!></severity>
+<%
+      AttributeList = "";
+%>
+<location <!%AttributeList!>><!%lJeox.getLocationPropertyValue().toString()!></location>
+<%
+      AttributeList = "";
+%>
+<description <!%AttributeList!>><!%lJeox.getDescriptionPropertyValue().toString()!></description>
+<%
+      AttributeList = "";
+%>
+<action <!%AttributeList!>><!%lJeox.getActionPropertyValue().toString()!></action>
+<%
+      AttributeList = "";
+%>
+<resolution <!%AttributeList!>><!%lJeox.getResolutionPropertyValue().toString()!></resolution>
+<%
+      AttributeList = "";
+%>
+</row>
+<%
+// *********************************************************************************************
+// ***** Begin XML tag: report:jeo Jeo Type: trace
+// *********************************************************************************************
+      ArrayList lArrayListxx = lJeox.getJeoByTypeName("trace");
+      boolean lPrintHeadingxx_trace = true;
+      int lNbrColumnsxx_trace = 1;
+      String lTableEndxx_trace = "</table>";
+      for (int lIdxx=0; lIdxx < lArrayListxx.size(); lIdxx++) {
+        com.esarks.arm.logging.ExceptionJeo lJeoxx = (com.esarks.arm.logging.ExceptionJeo) lArrayListxx.get(lIdxx);
+        if (lPrintHeadingxx_trace) {
+          lPrintHeadingxx_trace=false;
+%>
+<table>
+<%
+%>
+<header>
+<%
+%>
+<column attribute="description" width="">Trace</column>
+<%
+%>
+</header>
+<%
+        }
+        String xAttributeList = "";
+%>
+<row <!%xAttributeList!>>
+<%
+
+        xAttributeList = "";
+%>
+<description <!%xAttributeList!>><!%lJeoxx.getDescriptionPropertyValue().toString()!></description>
+<%
+        xAttributeList = "";
+%>
+</row>
+<%
+        }
+        if (!lPrintHeadingxx_trace) %><!%lTableEndxx_trace!><%
+      }
+      if (!lPrintHeadingx_detail) %><!%lTableEndx_detail!><%
+%>
+</report>
+<%
+
+    closeOutput();
+  }
+  public void renderFromXml(String aXmlFile) {
+
+    parseXmlPath(path(aXmlFile) + ".xml");
+    com.esarks.arm.model.jeo.ServiceJeo lJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+    <!report:jeo!>!resetIterator();
+    while (<!report:jeo!>!next()) {
+      com.esarks.arm.logging.ExceptionJeo lJeox = new com.esarks.arm.logging.ExceptionJeo("detail");
+      lJeo.addJeo(lJeox);
+      if (<!report:jeo!>!scan("attribute:name", "time")) {
+        lJeox.setTime(<![report:jeo:attribute:value]!>);
+      }
+      if (<!report:jeo!>!scan("attribute:name", "module")) {
+        lJeox.setModule(<![report:jeo:attribute:value]!>);
+      }
+      if (<!report:jeo!>!scan("attribute:name", "method")) {
+        lJeox.setMethod(<![report:jeo:attribute:value]!>);
+      }
+      if (<!report:jeo!>!scan("attribute:name", "severity")) {
+        lJeox.setSeverity(<![report:jeo:attribute:value]!>);
+      }
+      if (<!report:jeo!>!scan("attribute:name", "location")) {
+        lJeox.setLocation(<![report:jeo:attribute:value]!>);
+      }
+      if (<!report:jeo!>!scan("attribute:name", "description")) {
+        lJeox.setDescription(<![report:jeo:attribute:value]!>);
+      }
+      if (<!report:jeo!>!scan("attribute:name", "action")) {
+        lJeox.setAction(<![report:jeo:attribute:value]!>);
+      }
+      if (<!report:jeo!>!scan("attribute:name", "resolution")) {
+        lJeox.setResolution(<![report:jeo:attribute:value]!>);
+      }
+      <!report:jeo:jeo!>!resetIterator();
+      while (<!report:jeo:jeo!>!next()) {
+        com.esarks.arm.logging.ExceptionJeo lJeoxx = new com.esarks.arm.logging.ExceptionJeo("trace");
+        lJeox.addJeo(lJeoxx);
+        if (<!report:jeo:jeo!>!scan("attribute:name", "description")) {
+          lJeoxx.setDescription(<![report:jeo:jeo:attribute:value]!>);
+        }
+      }
+    }
+    render(aXmlFile, lJeo);
+  }
+//$Section=Deleted$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section contains orphaned code from deleted operations.
+//----------------------------------------------------------------------------
+
+//$Section=Deleted$Preserve=no
+
+//End of script---------------

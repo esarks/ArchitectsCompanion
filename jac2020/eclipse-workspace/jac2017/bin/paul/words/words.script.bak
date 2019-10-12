@@ -1,0 +1,14 @@
+
+public void execute() {
+
+%>words v20171005a
+<%
+
+String s = "I want to walk my dog, cat, and tarantula; maybe even my tortoise.";
+String[] words = s.split("\\W+");
+
+for(int i=0; i<words.length;i++) {
+     System.out.println(words[i]);
+}
+
+}

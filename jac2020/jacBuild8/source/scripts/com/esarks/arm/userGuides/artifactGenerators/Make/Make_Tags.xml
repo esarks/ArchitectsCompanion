@@ -1,0 +1,63 @@
+<tags root="makeAll">
+  <documentation><![CDATA[This is the XML defintion file used by the following scripts:<ul><li>com.esarks.arm.make.MakeAll</ul>]]></documentation>    
+
+  <tag name="componentInventory" type="element">
+    <documentation>The name of the xml that contains the component inventory.</documentation>  
+  </tag>
+  <tag name="component" type="element">
+    <documentation>The name of the component.</documentation>
+  </tag>
+  <tag name="ddl" type="element">
+    <documentation>A container tag for the table or view.</documentation>
+    
+    <tag name="script" type="element">
+      <documentation>The script used to generate the DDL.</documentation>
+      
+      <tag name="entity" type="element">
+        <documentation>The name of the Jeo needed to generate the DDL.</documentation>
+      </tag>
+      <tag name="method" type="attribute">
+        <documentation>The service called on the DDL.</documentation>
+      </tag>              
+    </tag>  
+  </tag>
+  
+  <tag name="make" type="element">
+    <documentation>A container tag for the service.</documentation>
+    
+    <tag name="script" type="element">
+      <documentation>The script used to generate.</documentation>
+    
+      <tag name="method" type="attribute">
+        <documentation>The service called on a given XML and corrisponding script.</documentation>
+      </tag>
+      <tag name="argument" type="attribute">
+        <documentation>Passes the name of a XML into the generator.</documentation>
+      </tag>
+      <tag name="context" type="attribute">
+        <documentation>?</documentation>
+      </tag>
+      <tag name="compile" type="attribute">
+        <documentation>If the value is true the script will be compiled.</documentation>
+      </tag>        
+    </tag>
+  </tag>
+
+  <tag name="jeo" type="element">
+    <documentation>Defines the generated Jeo.</documentation>
+    
+    <tag name="script" type="element">
+      <documentation>The script used to generate the Jeo.</documentation>
+      
+      <tag name="method" type="attribute">
+        <documentation>The service called on the Jeo.</documentation>
+      </tag>
+      
+      <tag name="entity" type="element">
+        <documentation>The name of the Jeo needed to generate the new Jeo.</documentation>
+      </tag>
+
+    </tag>  
+  </tag>
+
+</tags>

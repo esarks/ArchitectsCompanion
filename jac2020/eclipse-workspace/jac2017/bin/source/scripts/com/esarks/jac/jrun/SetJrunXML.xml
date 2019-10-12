@@ -1,0 +1,7 @@
+<mic.element type="Component">
+	<options>
+		<jrunXML>Jrun.xml</jrunXML>
+		<jrunDefault>Jrun.default</jrunDefault>
+		<jrunExtension>.jrun</jrunExtension>
+	</options>
+</mic.element>

@@ -1,0 +1,19 @@
+<questionnaire code="qa" sequence="1" title="Questionnaire Version 1.0">
+
+  <question code="name" sequence="1" sequenceOut="" order="1" type="" text="First and Last Name">
+    <response code="text" sequence="1" sequenceOut="" order="1" text="Name"/>
+  </question>
+  
+  <question code="q1" sequence="1" sequenceOut="" order="2" type="" text="Question one.">
+    <response code="r1" sequence="1" sequenceOut="" order="1" text="Response one"/>
+    <response code="r2" sequence="1" sequenceOut="" order="2" text="Response two"/>
+    <response code="r3" sequence="1" sequenceOut="" order="3" text="Response three"/>
+  </question>
+
+  <question code="q2" sequence="1" sequenceOut="" order="3" type="" text="Question two.">
+    <response code="r1" sequence="1" sequenceOut="" order="1" text="Response one"/>
+    <response code="r2" sequence="1" sequenceOut="" order="2" text="Response two"/>
+    <response code="r3" sequence="1" sequenceOut="" order="3" text="Response three"/>
+  </question>
+  
+</questionnaire>

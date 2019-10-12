@@ -1,0 +1,18 @@
+Multiple .jac files support functions.
+
+jac file contains actions and configurations for the function.
+
+Can configure any kind of tag.
+
+Can configure any kind of file.
+
+Can configure relationships between files.
+
+<tab>
+  <name></name>
+  <type></type>
+</tab>
+
+<tag type=xxx name=xxx/>
+
+

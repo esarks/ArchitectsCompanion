@@ -1,0 +1,236 @@
+var private String iCurrentTag = "document";
+end
+
+public void execute(String aTemplate, String aXmlData) {
+
+  <!document!>!remove();
+  // Parse the input file.
+  parseXmlPath(path(aTemplate) + ".xml");
+  parseXmlPath(path(aXmlData) + ".jrun");
+
+  if (<!document!>!size() == 0) {
+    setContext(iScript.getMasterScript());
+    <!$jac:event!>!set("Could not find <document> tag in " + path(aTemplate) + ".xml file.");
+    <!$jac:event:severity!>!set("fatal");
+    <!$jac:event:scriptPackage!>!set(iScriptPackage);
+    <!$jac:event:scriptName!>!set(iScriptName);
+    restoreContext();
+    setExit();
+    return;
+  }
+
+  if (<!xdoc!>!size() == 0 && <!jacrun:xdoc!>!size() > 0) <jacrun:xdoc!>!alias("xdoc");
+  
+  System.out.println(openOutput(path("com.esarks.arm.xmlDoc.x") + ".html"));
+  processDocumentTag();
+  closeOutput();
+
+}
+
+private boolean tagExists(String aNextTag) {
+  if (<!" + iCurrentTag + ":" + aNextTag + "!>!next()) {
+    iCurrentTag += ":" + aNextTag;
+    return true;
+  }
+  return false;
+}
+
+private void truncateTag(String aTagName) {
+  iCurrentTag = iCurrentTag.substring(0, iCurrentTag.length() - aTagName.length() -1);
+  System.out.println("***" + iCurrentTag);
+}
+
+private void processDocumentTag() {
+  <!" + iCurrentTag + ":section!>!resetIterator();
+  <!" + iCurrentTag + ":paragraph!>!resetIterator();
+  <!" + iCurrentTag + ":list!>!resetIterator();
+  <!" + iCurrentTag + ":table!>!resetIterator();
+%>
+<html>
+<%
+
+  boolean lLoopAgain = true; 
+  while (lLoopAgain) {
+    lLoopAgain = false;
+    if (tagExists("section")) {
+      processSectionTag();
+      lLoopAgain = true;
+    }
+    else if (tagExists("paragraph")) {
+      processParagraphTag();
+      lLoopAgain = true;
+    }
+    else if (tagExists("list")) {
+      processListTag();
+      lLoopAgain = true;
+    }
+    else if (tagExists("table")) {
+      processTableTag();
+      lLoopAgain = true;
+    }
+  }  
+//  truncateTag("document");
+%>
+</html>
+<%
+}
+
+private void processSectionTag() {
+  <!" + iCurrentTag + ":section!>!resetIterator();
+  <!" + iCurrentTag + ":paragraph!>!resetIterator();
+  <!" + iCurrentTag + ":list!>!resetIterator();
+  <!" + iCurrentTag + ":table!>!resetIterator();
+  String lLevel = <![" + iCurrentTag + ":level]!>;
+  System.out.println("level = " + lLevel);
+%>
+<h<!%lLevel!>><!![" + iCurrentTag + "]!></h<!%lLevel!>>
+<%
+  boolean lLoopAgain = true; 
+  while (lLoopAgain) {
+    lLoopAgain = false;
+    if (tagExists("section")) {
+      processSectionTag();
+      lLoopAgain = true;
+    }
+    else if (tagExists("paragraph")) {
+      processParagraphTag();
+      lLoopAgain = true;
+    }
+    else if (tagExists("list")) {
+      processListTag();
+      lLoopAgain = true;
+    }
+    else if (tagExists("table")) {
+      processTableTag();
+      lLoopAgain = true;
+    }
+  }  
+  truncateTag("section");
+}
+
+private void processParagraphTag() {
+  <!" + iCurrentTag + ":paragraph!>!resetIterator();
+  <!" + iCurrentTag + ":list!>!resetIterator();
+  <!" + iCurrentTag + ":table!>!resetIterator();
+%>
+<p><!![" + iCurrentTag + "]!>
+<%
+  boolean lLoopAgain = true; 
+  while (lLoopAgain) {
+    lLoopAgain = false;
+    if (tagExists("paragraph")) {
+      processParagraphTag();
+      lLoopAgain = true;
+    }
+    else if (tagExists("list")) {
+      processListTag();
+      lLoopAgain = true;
+    }
+    else if (tagExists("table")) {
+      processTableTag();
+      lLoopAgain = true;
+    }
+  }  
+  truncateTag("paragraph");
+%>
+</p>
+<%
+}
+
+private void processListTag() {
+  <!" + iCurrentTag + ":listItem!>!resetIterator();
+  boolean lLoopAgain = true; 
+  while (lLoopAgain) {
+    lLoopAgain = false;
+    if (tagExists("listItem")) {
+      processListItemTag();
+      lLoopAgain = true;
+    }
+  }  
+  truncateTag("list");
+}
+
+private void processListItemTag() {
+  <!" + iCurrentTag + ":list!>!resetIterator();
+  boolean lLoopAgain = true; 
+  while (lLoopAgain) {
+    lLoopAgain = false;
+    if (tagExists("list")) {
+      processListTag();
+      lLoopAgain = true;
+    }
+  }  
+  truncateTag("listItem");
+}
+
+private void processTableTag() {
+  <!" + iCurrentTag + ":row!>!resetIterator();
+%>
+<table width="100%" cellpadding="0" cellspacing="0" border="1">
+<%
+  boolean lLoopAgain = true; 
+  while (lLoopAgain) {
+    lLoopAgain = false;
+    if (tagExists("row")) {
+      processRowTag();
+      lLoopAgain = true;
+    }
+  }  
+  truncateTag("table");
+%>
+</table>
+<%
+}
+
+private void processRowTag() {
+  <!" + iCurrentTag + ":column!>!resetIterator();
+%>
+<tr>
+<%
+  boolean lLoopAgain = true; 
+  while (lLoopAgain) {
+    lLoopAgain = false;
+    if (tagExists("column")) {
+      processColumnTag();
+      lLoopAgain = true;
+    }
+  }  
+  truncateTag("row");
+%>
+</tr>
+<%
+}
+
+private void processColumnTag() {
+  <!" + iCurrentTag + ":section!>!resetIterator();
+  <!" + iCurrentTag + ":paragraph!>!resetIterator();
+  <!" + iCurrentTag + ":list!>!resetIterator();
+  <!" + iCurrentTag + ":table!>!resetIterator();
+%>
+<td><!![" + iCurrentTag + "]!>
+<%
+  boolean lLoopAgain = true; 
+  while (lLoopAgain) {
+    lLoopAgain = false;
+    if (tagExists("section")) {
+      processSectionTag();
+      lLoopAgain = true;
+    }
+    else if (tagExists("paragraph")) {
+      processParagraphTag();
+      lLoopAgain = true;
+    }
+    else if (tagExists("list")) {
+      processListTag();
+      lLoopAgain = true;
+    }
+    else if (tagExists("table")) {
+      processTableTag();
+      lLoopAgain = true;
+    }
+  }  
+  truncateTag("column");
+%>
+</td>
+<%
+}

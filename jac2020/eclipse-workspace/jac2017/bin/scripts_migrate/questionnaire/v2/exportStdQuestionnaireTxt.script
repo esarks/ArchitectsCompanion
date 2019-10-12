@@ -1,0 +1,40 @@
+<%
+
+  <!$outputFile!>!reset(<![$jac:path:home][$jac:fileSeparator]temp[$jac:fileSeparator][questionnaire:code]_[questionnaire:sequence].txt!>);
+  script.delete(<![$outputFile]!>);
+  outputManager.openOutputFile(<![$outputFile]!>, true);
+
+  <!questionnaire!>!resetIterator();
+
+%>
+Report of questionnaire     Code: <![questionnaire:code]!>
+                         Version: <![questionnaire:sequence]!>
+                     Description: <![questionnaire:title]!>
+
+<%
+  <!questionnaire:question!>!resetIterator();
+  while (<!questionnaire:question!>!next()) {
+
+%>
+<![questionnaire:question:order]!>.  [<![questionnaire:question:code]!>] <![questionnaire:question:text]!>
+
+<%
+
+    <!questionnaire:question:response!>!resetIterator();
+    while (<!questionnaire:question:response!>!next()) {
+
+%>
+      <![questionnaire:question:response:order]!>)  [<![questionnaire:question:response:code]!>] <![questionnaire:question:response:text]!>
+<%
+
+    }
+%>
+
+<%
+
+  }
+
+  outputManager.closeOutputFile();
+
+%>
+

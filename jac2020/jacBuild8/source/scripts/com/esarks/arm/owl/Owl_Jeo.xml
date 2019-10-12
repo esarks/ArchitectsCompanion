@@ -1,0 +1,124 @@
+<jeos>
+
+  <jeo name="OwlJeo">
+
+
+    <field name="name"         type="string" size="0" nullable="true" />
+    <field name="attribute"    type="string" size="0" nullable="true" />
+    
+
+
+    <field name="id"           type="string" size="0" nullable="true" />
+    <field name="location"     type="string" size="0" nullable="true" />
+    <field name="title"        type="string" size="0" nullable="true" />
+    <field name="text"         type="string" size="0" nullable="true" />
+    <field name="resolution"   type="string" size="0" nullable="true" />
+    <field name="severity"     type="int"    size="0" nullable="true" />    
+  </jeo>
+
+  <jeo name="ProcessJeo">
+    <field name="eventTime"    type="datetime" size="0" />
+    <field name="eventCode"    type="string"   size="0" />
+    <field name="description"  type="string"   size="0" />
+    <field name="scriptName"   type="string"   size="0" />
+    <field name="method"       type="string"   size="0" />
+    <field name="location"     type="string"   size="0" />
+    <field name="exception"    type="string"   size="0" />
+  </jeo>
+  
+</jeos>
+
+$mic
+
+  conditionAttribute
+    <attribute>
+
+  conditionFact
+    <condition>
+
+  production
+    <production name>
+
+  rule
+    production
+    symbol
+      <lhs / rhs>
+    symbolFact
+      <fact>
+
+  
+owl
+
+  condition
+    attribute
+    lhs
+    name
+    operation
+    propertyValue
+    rhs
+    type
+    value
+    
+  fact
+    attribute
+    id
+    jeo
+    name
+    propertyValue
+    type
+    value
+   
+  facts
+    fact
+      attribute
+        name
+        type
+        value
+      lid
+      name
+
+  jeos
+    name
+    facts
+      name
+    jeo
+      attribute
+        factAttribute
+        factId
+        factType
+        factValue
+        name
+        operation
+        value
+      instance
+
+  rule
+    action
+      instance
+      name
+      operation
+      parameter...
+    breakOnProduction
+    breakOnRule
+    callback
+    enable
+      name
+    disable
+      name
+    fact
+      attribute
+        name
+        type
+        value
+      lid
+      name
+    hasCondition
+      name
+    remove
+      condition
+        name
+      fact
+        name
+      rule
+        name
+        

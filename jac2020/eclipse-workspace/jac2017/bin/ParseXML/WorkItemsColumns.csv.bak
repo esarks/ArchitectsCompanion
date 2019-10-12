@@ -1,0 +1,139 @@
+Column,1,Id,Id,Number,string
+Column,2,Type,Type,String,string
+Column,3,Status,Status,String,string
+Column,4,Priority,Priority,String,string
+Column,5,Severity,Severity,String,string
+Column,6,Summary,Summary,String,string
+Column,7,Owned By,Owned_By,String,string
+Column,8,Created By,Created_By,String,string
+Column,9,Business Impact Description,Business_Impact_Description,String,string
+Column,10,Description,Description,String,string
+Column,11,Planned For,Planned_For,String,string
+Column,12,Acceptance Test,Acceptance_Test,String,string
+Column,13,Achieved Value (%),Achieved_Value__P_,String,string
+Column,14,Affected Teams,Affected_Teams,String,string
+Column,15,Application,Application,String,string
+Column,16,Applies To Release Type,Applies_To_Release_Type,String,string
+Column,17,Approvals,Approvals,String,string
+Column,18,Archived,Archived,Boolean,string
+Column,19,Blocked,Blocked,Boolean,string
+Column,20,Build Fixed,Build_Fixed,String,string
+Column,21,Build Found,Build_Found,String,string
+Column,22,Build Planned,Build_Planned,String,string
+Column,23,Business Value (actual),Business_Value__actual_,String,string
+Column,24,Business Value (planned),Business_Value__planned_,String,string
+Column,25,Change Order,Change_Order,String,string
+Column,26,Comments,Comments,String,string
+Column,27,Contingency Action Plan,Contingency_Action_Plan,String,string
+Column,28,Corrected Estimate,Corrected_Estimate,String,string
+Column,29,Creation Date,Creation_Date,DateTime,string
+Column,30,Delivered In,Delivered_In,String,string
+Column,31,Dependencies and Prerequisites,Dependencies_and_Prerequisites,String,string
+Column,32,Deployment Notes,Deployment_Notes,String,string
+Column,33,Due Date,Due_Date,String,string
+Column,34,EPS Number,EPS_Number,String,string
+Column,35,Estimate,Estimate,String,string
+Column,36,External ID,External_ID,Number,string
+Column,37,Filed Against,Filed_Against,String,string
+Column,38,Flag,Flag,String,string
+Column,39,Follow-up Date,Follow-up_Date,String,string
+Column,40,Found In,Found_In,String,string
+Column,41,Found In Environment,Found_In_Environment,String,string
+Column,42,Identified Date,Identified_Date,DateTime,string
+Column,43,Impact,Impact,String,string
+Column,44,Impact,Impact,String,string
+Column,45,IOC Applicable,IOC_Applicable,String,string
+Column,46,Issue Category,Issue_Category,String,string
+Column,47,Issue Category Other,Issue_Category_Other,String,string
+Column,48,Issue Coordinated By,Issue_Coordinated_By,String,string
+Column,49,Issue Owner Non-VA,Issue_Owner_Non-VA,String,string
+Column,50,Issue Resolution Description,Issue_Resolution_Description,String,string
+Column,51,Leadership Action Needed,Leadership_Action_Needed,String,string
+Column,52,Maximal Estimate,Maximal_Estimate,String,string
+Column,53,Minimal Estimate,Minimal_Estimate,String,string
+Column,54,Modified By,Modified_By,String,string
+Column,55,Modified Date,Modified_Date,DateTime,string
+Column,56,Module Impacted,Module_Impacted,String,string
+Column,57,National Service Desk Ticket,National_Service_Desk_Ticket,Number,string
+Column,58,OLD Created By,OLD_Created_By,String,string
+Column,59,OLD ID,OLD_ID,String,string
+Column,60,OLD Owned By,OLD_Owned_By,String,string
+Column,61,OLD Resolved By,OLD_Resolved_By,String,string
+Column,62,PI Objective Type,PI_Objective_Type,String,string
+Column,63,Portfolio,Portfolio,String,string
+Column,64,Portfolio Director,Portfolio_Director,String,string
+Column,65,Precision,Precision,String,string
+Column,66,Priority Order Number,Priority_Order_Number,Number,string
+Column,67,Probability,Probability,String,string
+Column,68,Product - Platform Management,Product_-_Platform_Management,String,string
+Column,69,Product Owner,Product_Owner,String,string
+Column,70,Program,Program,String,string
+Column,71,Program Manager,Program_Manager,String,string
+Column,72,Project,Project,String,string
+Column,73,Project Area,Project_Area,String,string
+Column,74,Project Manager,Project_Manager,String,string
+Column,75,Project_Manager,Project_Manager,String,string
+Column,76,Reason,Reason,String,string
+Column,77,Receiving Organization,Receiving_Organization,String,string
+Column,78,Release Date,Release_Date,String,string
+Column,79,Release Note,Release_Note,String,string
+Column,80,Release Scope,Release_Scope,String,string
+Column,81,Released In,Released_In,String,string
+Column,82,Released in Patch,Released_in_Patch,String,string
+Column,83,Reported By,Reported_By,String,string
+Column,84,Resolution,Resolution,String,string
+Column,85,Resolution Date,Resolution_Date,DateTime,string
+Column,86,Resolution Description,Resolution_Description,String,string
+Column,87,Resolved By (Contributor),Resolved_By__Contributor_,String,string
+Column,88,Restricted Access,Restricted_Access,String,string
+Column,89,Risk Action Owned By,Risk_Action_Owned_By,String,string
+Column,90,Risk Category,Risk_Category,String,string
+Column,91,Risk Category Other,Risk_Category_Other,String,string
+Column,92,Risk Coordinated By,Risk_Coordinated_By,String,string
+Column,93,Risk Dependencies,Risk_Dependencies,String,string
+Column,94,Risk Escalation History,Risk_Escalation_History,String,string
+Column,95,Risk Exposure Percent,Risk_Exposure_Percent,Number,string
+Column,96,Risk Owner Non-VA,Risk_Owner_Non-VA,String,string
+Column,97,Risk Response,Risk_Response,String,string
+Column,98,Risk Response Strategy,Risk_Response_Strategy,String,string
+Column,99,Risk Retirement Criteria,Risk_Retirement_Criteria,String,string
+Column,100,Risk Review Board Date,Risk_Review_Board_Date,String,string
+Column,101,Risk Timeframe,Risk_Timeframe,String,string
+Column,102,Risk Trigger,Risk_Trigger,String,string
+Column,103,Risk was Owned By,Risk_was_Owned_By,String,string
+Column,104,Root Cause,Root_Cause,String,string
+Column,105,SAFe Parent Area,SAFe_Parent_Area,String,string
+Column,106,Score,Score,String,string
+Column,107,Start Date,Start_Date,String,string
+Column,108,Status Through,Status_Through,String,string
+Column,109,Story Points,Story_Points,String,string
+Column,110,Stretch Objective,Stretch_Objective,String,string
+Column,111,Tags,Tags,String,string
+Column,112,Target Delivery Date,Target_Delivery_Date,String,string
+Column,113,TechStat,TechStat,Boolean,string
+Column,114,TechStat Notes,TechStat_Notes,String,string
+Column,115,Tested By,Tested_By,String,string
+Column,116,Tested By Non-VA,Tested_By_Non-VA,String,string
+Column,117,Time Spent,Time_Spent,String,string
+Column,118,Traceability Indicator,Traceability_Indicator,String,string
+Column,119,Version or Build,Version_or_Build,String,string
+Column,120,Work Around Explanation,Work_Around_Explanation,String,string
+Column,121,Workflow Information,Workflow_Information,String,string
+Column,122,Yellow Flag Category,Yellow_Flag_Category,String,string
+Column,123,Filed Against (Top Level),Filed_Against__Top_Level_,String,string
+Column,124,Status Category,Status_Category,Number,string
+Column,125,Status Group,Status_Group,String,string
+Column,126,Subscribed By,Subscribed_By,String,string
+Column,127,Team Area,Team_Area,String,string
+Column,128,Children,Children,String,string
+Column,129,Parent,Parent,String,string
+
+
+
+
+
+
+
+
+
+

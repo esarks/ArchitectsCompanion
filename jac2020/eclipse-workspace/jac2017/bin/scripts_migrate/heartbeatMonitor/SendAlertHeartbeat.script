@@ -1,0 +1,11 @@
+<%
+
+  <!email:server!>!set("esarks.com");
+  <!email:from!>!set("hqs_heartbeat@esarks.com");
+  <!email:to!>!set("hqs_notify@esarks.com");
+  <!email:subject!>!set("Heartbeat Failure");
+  <!email:message!>!set("Heartbeat");
+
+  sendMessage();
+
+%>

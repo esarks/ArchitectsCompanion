@@ -1,0 +1,18 @@
+package com.learning.paul.java;
+
+public class MyClass {
+
+  public MyClass() {
+  }
+
+  public void myMethod() {
+  
+    System.out.println("MyClass says Hello World!");
+
+    com.learning.paul.java.MyJeo lMyJeo = new com.learning.paul.java.MyJeo();
+    lMyJeo.setMyField("This is a test");
+    System.out.println(lMyJeo.getMyField());
+    
+  }
+  
+}

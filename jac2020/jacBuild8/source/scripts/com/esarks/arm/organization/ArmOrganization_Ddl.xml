@@ -1,0 +1,18 @@
+<com.esarks.arm.schemas.ddl.root>
+
+  <table name="ArmOrganizationNode">
+    <field name="id"            type="long"     identity="true"  nullable="false" />
+    <field name="parent"        type="long"                      nullable="true" />
+    <field name="name"          type="string"   size="64"        nullable="false" />
+    <primary name="ArmOrganizationNode_pk">
+      <field>id</field>
+    </primary>
+    <foreign name="ArmOrganizationNode_fk1">
+      <field>parent</field>
+      <references name="ArmOrganizationNode">
+        <field>id</field>
+      </references>
+    </foreign>
+  </table>
+
+</com.esarks.arm.schemas.ddl.root>

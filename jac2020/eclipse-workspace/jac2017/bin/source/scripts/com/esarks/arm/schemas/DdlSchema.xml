@@ -1,0 +1,30 @@
+<schemas>
+  <schema name='root' type='string' isEmpty='true' >
+    <element name='name' type='string' attribute='true' truncateEol='true' />
+    <element name='title' type='string' attribute='true' truncateEol='true' />
+    <element name='generateCode' type='string' attribute='true' truncateEol='true' />
+    <element name='text' type='string' cdata='true' trim='true' />
+    <element name='table' type='string' isEmpty='true' >
+      <element name='name' type='string' attribute='true' truncateEol='true' />
+      <element name='field' type='string' isEmpty='true' >
+        <element name='name' type='string' attribute='true' truncateEol='true' />
+        <element name='type' type='string' attribute='true' truncateEol='true' />
+        <element name='size' type='string' attribute='true' truncateEol='true' />
+        <element name='identity' type='string' attribute='true' truncateEol='true' />
+        <element name='nullable' type='string' attribute='true' truncateEol='true' />
+      </element>
+      <element name='primary' type='string' isEmpty='true' >
+        <element name='name' type='string' attribute='true' truncateEol='true' />
+        <element name='field' type='string' truncateEol='true' />
+      </element>
+      <element name='foreign' type='string' isEmpty='true' >
+        <element name='name' type='string' attribute='true' truncateEol='true' />
+        <element name='field' type='string' truncateEol='true' />
+        <element name='references' type='string' isEmpty='true' >
+          <element name='name' type='string' attribute='true' truncateEol='true' />
+          <element name='field' type='string' truncateEol='true' />
+        </element>
+      </element>
+    </element>
+  </schema>
+</schemas>

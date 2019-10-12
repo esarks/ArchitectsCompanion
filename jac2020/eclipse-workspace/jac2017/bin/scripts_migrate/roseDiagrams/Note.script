@@ -1,0 +1,17 @@
+{\pard\fs22 {\ul Note:\par}}
+\par
+<%
+
+  <!Diagram:NoteView:Text!>!resetIterator();
+
+  while (<!Diagram:NoteView:Text!>!next() &&
+         (<!Diagram:NoteView:Text!>!isLast() == false ||
+         (<!Diagram:NoteView:Text!>!isLast() == true &&
+          <![Diagram:NoteView:Text]!>.length() > 0))) {
+%>
+{\pard\f0\fs18\li360
+<![Diagram:NoteView:Text]!>\par}
+<%
+  }
+%>
+\par

@@ -1,0 +1,622 @@
+C:\ArchitectsCompanion\jac\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\ArchitectsCompanion\jac\conf\micImport.script:2: 
+C:\ArchitectsCompanion\jac\conf\micImport.script:3: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:4: import java.util.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:5: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:6: import java.io.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:7: import java.text.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:8: import java.net.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:9: import javax.net.ssl.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:10: import java.security.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:11: import java.sql.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:12: import javax.servlet.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:13: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:14: import java.awt.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:15: import javax.swing.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:16: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:17: 
+C:\ArchitectsCompanion\jac\conf\micImport.script:18: <#import#>
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:2: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:4:   }
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:5: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:7: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:8:     super(aScript);
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:9: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:10:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:1: set $jac:script:extends=com.esarks.mic.Component
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:2: end
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:3: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:4:   public void dropTable(String aXmlDefinition, String aTable) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:5:     resetExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:6:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:7:     %>dropTable: <!%aXmlDefinition!> - <!%aTable!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:8:     readTableXml(aXmlDefinition);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:9:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:10:     dropTable(aTable);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:11:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:12:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:13:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:14:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:15:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:16:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:17:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:18:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:19:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:20:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:21:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:22:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:23: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:24:   public void createTable(String aXmlDefinition, String aTable) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:25:     resetExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:26:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:27:     %>createTable: <!%aXmlDefinition!> - <!%aTable!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:28:     readTableXml(aXmlDefinition);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:29:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:30:     generateDbTable(aTable);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:31:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:32:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:33:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:34:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:35:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:36:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:37:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:38:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:39:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:40:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:41:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:42:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:43: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:44:   public void dropView(String aXmlDefinition, String aView) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:45:     resetExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:46:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:47:     %>dropView: <!%aXmlDefinition!> - <!%aView!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:48:     readViewXml(aXmlDefinition);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:49:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:50:     dropView(aView);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:51:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:52:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:53:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:54:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:55:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:56:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:57:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:58:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:59:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:60:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:61:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:62:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:63: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:64:   public void createView(String aXmlDefinition, String aView) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:65:     resetExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:66:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:67:     %>createView: <!%aXmlDefinition!> - <!%aView!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:68:     readViewXml(aXmlDefinition);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:69:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:70:     generateDbView(aView);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:71:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:72:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:73:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:74:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:75:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:76:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:77:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:78:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:79:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:80:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:81:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:82:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:83: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:84:   public void loadTable(String aXmlDefinition, String aTable) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:85:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:86:     %>loadTable: <!%aXmlDefinition!> - <!%aTable!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:87:     readTableXml(aXmlDefinition);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:88:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:89:     loadTable(aTable);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:90:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:91:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:92:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:93:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:94:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:95:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:96:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:97:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:98:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:99:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:100:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:101:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:102: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:103:   private void readTableXml(String aXmlDefinition) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:104:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:105:     <!tables!>!remove();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:106:     parseXmlPath(path(aXmlDefinition) + ".xml");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:107:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:108:     if (<!tables!>!size() == 0) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:109:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:110:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:111:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:112:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:113:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:114:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:115:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:116:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:117:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:118:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:119:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:120: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:121:   private void readViewXml(String aXmlDefinition) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:122:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:123:     <!views!>!remove();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:124:     parseXmlPath(path(aXmlDefinition) + ".xml");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:125:     if (checkExit()) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:126:     if (<!views!>!size() == 0) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:127:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:128:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:129:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:130:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:131:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:132:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:133:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:134:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:135:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:136:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:137:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:138: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:139:   private boolean generateKey(boolean aInsertComma) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:140:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:141:     boolean lReturn = aInsertComma;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:142:     <!tables:table:primary!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:143:     while (<!tables:table:primary!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:144:       if (lReturn) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:145:         %>,<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:146:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:147:       lReturn = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:148:       %>  CONSTRAINT <![tables:table:primary:name]!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:149:       %> PRIMARY KEY (<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:150:       <!tables:table:primary:field!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:151:       while (<!tables:table:primary:field!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:152:         %><![tables:table:primary:field]!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:153:         if (<!tables:table:primary:field!>!isLast() == false) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:154:           %>, <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:155:         } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:156:           %>)<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:157:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:158:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:159:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:160: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:161:     <!tables:table:unique!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:162:     while (<!tables:table:unique!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:163:       if (lReturn) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:164:         %>,<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:165:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:166:       lReturn = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:167:       %>  CONSTRAINT <![tables:table:unique:name]!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:168:       %> UNIQUE (<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:169:       <!tables:table:unique:field!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:170:       while (<!tables:table:unique:field!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:171:         %><![tables:table:unique:field]!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:172:         if (<!tables:table:unique:field!>!isLast() == false) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:173:           %>, <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:174:         } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:175:           %>)<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:176:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:177:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:178:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:179: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:180:     <!tables:table:foreign!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:181:     while (<!tables:table:foreign!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:182:       if (lReturn) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:183:         %>,<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:184:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:185:       lReturn = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:186:       %>  CONSTRAINT <![tables:table:foreign:name]!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:187:       %> FOREIGN KEY (<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:188:       <!tables:table:foreign:field!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:189:       while (<!tables:table:foreign:field!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:190:         %><![tables:table:foreign:field]!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:191:         if (<!tables:table:foreign:field!>!isLast() == false) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:192:           %>, <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:193:         } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:194:           %>)<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:195:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:196:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:197:       %> REFERENCES <![tables:table:foreign:references:name]!> (<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:198:       <!tables:table:foreign:references:field!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:199:       while (<!tables:table:foreign:references:field!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:200:         %><![tables:table:foreign:references:field]!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:201:         if (<!tables:table:foreign:references:field!>!isLast() == false) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:202:           %>, <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:203:         } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:204:           %>)<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:205:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:206:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:207:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:208: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:209:     return false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:210:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:211:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:212:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:213:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:214:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:215:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:216:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:217:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:218:       return false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:219:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:220:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:221: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:222:   private boolean generateDbFields() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:223:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:224:     boolean lReturn = false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:225:     <!tables:table:field!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:226:     while (<!tables:table:field!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:227:       if (lReturn) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:228:         %>,<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:229:         lReturn = false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:230:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:231:       %>  <![tables:table:field:name]!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:232:       String lType = <![tables:table:field:type]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:233:       String lIdentity = <![tables:table:field:identity]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:234:       String lSize = <![tables:table:field:size]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:235:       if (lIdentity.equals("true")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:236:         %> <!%getDbType(lType, lSize)!> identity (1, 1)<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:237:       } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:238:         %> <!%getDbType(lType, lSize)!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:239:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:240:       if (<![tables:table:field:nullable]!>.compareTo("false") == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:241:         %> NOT NULL<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:242:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:243:       lReturn = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:244:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:245:     return lReturn;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:246:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:247:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:248:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:249:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:250:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:251:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:252:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:253:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:254:       return false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:255:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:256:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:257:   
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:258:   public void generateDbTable(String aTable) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:259:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:260:     <!tables:table!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:261:     if (<!tables!>!scan("table:name", aTable) == false) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:262:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:263:       <!$jac:event!>!set("Cannot find table <!%aTable!> in XML.");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:264:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:265:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:266:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:267:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:268:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:269:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:270:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:271:     iOutputManager.addDocument("createTable");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:272:     %>CREATE TABLE <![tables:table:name]!> (<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:273:     boolean lInsertComma = false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:274:     lInsertComma = generateDbFields();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:275:     lInsertComma = generateKey(lInsertComma);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:276:     %>);<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:277:     StringBuffer lStringBuffer = iOutputManager.getDocument("createTable");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:278:     if (openOutput(path(iScriptPackage + ".ddl." + <![tables:table:name]!>) + ".sql")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:279:       %><!%lStringBuffer.toString()!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:280:       closeOutput();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:281:     } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:282:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:283:       if (iOutputManager.getExceptionMessage() != null) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:284:         <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:285:         <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:286:         <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:287:         <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:288:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:289:       <!$jac:event!>!set("Failed to open *.sql output file.");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:290:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:291:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:292:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:293:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:294:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:295:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:296:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:297:     
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:298: //    DbConnection lDbConnection = iSymbolTable.getDbConnection();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:299: //    lDbConnection.connect(getProperty("jdbcClass"), getProperty("jdbcConnection"), getProperty("jdbcUser"), getProperty("jdbcPassword"));
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:300: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:301:     DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:302:     DbConnection lDbConnection = lDbConnectionFactory.getDbConnection("application");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:303: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:304:     PreparedStatement lPreparedStatement;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:305:     lPreparedStatement = lDbConnection.getConnection().prepareStatement(lStringBuffer.toString());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:306:     lPreparedStatement.execute();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:307:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:308:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:309:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:310:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:311:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:312:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:313:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:314:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:315:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:316:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:317:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:318: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:319:   public void dropTable(String aTable) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:320:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:321: //    DbConnection lDbConnection = iSymbolTable.getDbConnection();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:322: //    lDbConnection.connect(getProperty("jdbcClass"), getProperty("jdbcConnection"), getProperty("jdbcUser"), getProperty("jdbcPassword"));
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:323: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:324:     DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:325:     DbConnection lDbConnection = lDbConnectionFactory.getDbConnection("application");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:326: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:327:     PreparedStatement lPreparedStatement;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:328:     lPreparedStatement = lDbConnection.getConnection().prepareStatement( "DROP TABLE " + aTable );
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:329:     lPreparedStatement.execute();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:330:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:331:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:332:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:333:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:334:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:335:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:336:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:337:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:338:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:339:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:340:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:341: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:342:   public void generateDbView(String aView) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:343:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:344:     <!views:view!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:345:     if (<!views!>!scan("view:name", aView) == false) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:346:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:347:       <!$jac:event!>!set("Cannot find view <!%aView!> in XML.");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:348:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:349:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:350:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:351:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:352:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:353:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:354:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:355: //    iOutputManager.addDocument("createView");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:356:     %>CREATE VIEW <![views:view:name]!> AS <!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:357:     %>SELECT <!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:358: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:359:     <!views:view:table!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:360:     boolean lComma = false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:361:     String lTables = "FROM ";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:362:     while (<!views:view:table!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:363:       String lFirstName = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:364:       String lMiddleName = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:365:       String lLastName = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:366:       String lSuffixName = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:367:       boolean lHasName = false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:368:       String lNameView = "hrmConcatName";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:369:       lTables = lTables.concat(<![views:view:table:name]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:370:       if (<!views:view:table:symbolic!>!size() > 0) lTables = lTables.concat(" " + <![views:view:table:symbolic]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:371:       if (<!views:view:table!>!isLast() == false) lTables = lTables.concat(", ");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:372:       <!views:view:table:column!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:373:       while (<!views:view:table:column!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:374:         if (lComma == true) %>,<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:375:         String lPrefix = "";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:376:         if (<!views:view:table:symbolic!>!size() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:377:           lPrefix = <![views:view:table:name]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:378:         } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:379:           lPrefix = <![views:view:table:symbolic]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:380:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:381:         if (<!views:view:table:column:name!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:382:           if (<![views:view:table:column:isColumn]!>.compareTo("false") == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:383:             %>  <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:384:           }else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:385:             %>  <!%lPrefix!>.<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:386:           }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:387:           %><![views:view:table:column:name]!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:388:           if (<!views:view:table:column:view!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:389:             %> <![views:view:table:column:view]!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:390:           }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:391:           if (<![views:view:table:column:isType]!>.compareTo("true") == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:392:             %>,<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:393:             %>  dbo.hrmGetTypeName('<![views:view:table:column:name]!>', <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:394:             if (<!views:view:table:symbolic!>!size() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:395:               %>  <![views:view:table:name]!>.<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:396:             } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:397:               %>  <![views:view:table:symbolic]!>.<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:398:             }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:399:             %><![views:view:table:column:name]!>) <![views:view:table:column:name]!>Name<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:400:           }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:401:           if (<!views:view:table:column:isName!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:402:             if (<!views:view:table:column:nameView!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:403:               lNameView = <![views:view:table:column:nameView]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:404:             }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:405:             String lNameType = <![views:view:table:column:isName]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:406:             if (lNameType.compareTo("first") == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:407:               lHasName = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:408:               lFirstName = lPrefix + "." + <![views:view:table:column:name]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:409:             }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:410:             else if (lNameType.compareTo("middle") == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:411:               lHasName = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:412:               lMiddleName = lPrefix + "." + <![views:view:table:column:name]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:413:             }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:414:             else if (lNameType.compareTo("last") == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:415:               lHasName = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:416:               lLastName = lPrefix + "." + <![views:view:table:column:name]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:417:             }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:418:             else if (lNameType.compareTo("suffix") == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:419:               lHasName = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:420:               lSuffixName = lPrefix + "." + <![views:view:table:column:name]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:421:             }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:422:           }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:423:           lComma = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:424:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:425:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:426:       if (lHasName == true) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:427:         if (lFirstName == null) lFirstName = "''";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:428:         if (lMiddleName == null) lMiddleName = "''";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:429:         if (lLastName == null) lLastName = "''";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:430:         if (lSuffixName == null) lSuffixName = "''";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:431:         if (lComma == true) %>,<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:432:         %>  dbo.hrmConcatName(<!%lLastName!>, <!%lFirstName!>, <!%lMiddleName!>, <!%lSuffixName!>) <!%lNameView!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:433:         lComma = true;        
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:434:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:435:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:436:     if (<!views:view:from!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:437:       %><!%"\r\n"!>FROM <![views:view:from]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:438:     } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:439:       %><!%"\r\n"!><!%lTables!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:440:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:441:     if (<!views:view:where!>!size() > 0) %>WHERE <![views:view:where]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:442:     if (<!views:view:order!>!size() > 0) %>ORDER BY <![views:view:order]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:443: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:444:     StringBuffer lStringBuffer = iOutputManager.getDocument("createView");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:445:     if (openOutput(path(iScriptPackage + ".ddl." + <![views:view:name]!>) + ".sql")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:446:       %><!%lStringBuffer.toString()!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:447:       closeOutput();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:448:     } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:449:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:450:       if (iOutputManager.getExceptionMessage() != null) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:451:         <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:452:         <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:453:         <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:454:         <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:455:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:456:       <!$jac:event!>!set("Failed to open *.sql output file.");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:457:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:458:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:459:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:460:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:461:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:462:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:463:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:464: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:465: //    DbConnection lDbConnection = iSymbolTable.getDbConnection();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:466: //    lDbConnection.connect(getProperty("jdbcClass"), getProperty("jdbcConnection"), getProperty("jdbcUser"), getProperty("jdbcPassword"));
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:467: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:468:     DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:469:     DbConnection lDbConnection = lDbConnectionFactory.getDbConnection("application");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:470: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:471:     PreparedStatement lPreparedStatement;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:472:     lPreparedStatement = lDbConnection.getConnection().prepareStatement(lStringBuffer.toString());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:473:     lPreparedStatement.execute();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:474:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:475:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:476:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:477:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:478:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:479:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:480:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:481:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:482:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:483:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:484:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:485: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:486:   public void dropView(String aView) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:487:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:488: //    DbConnection lDbConnection = iSymbolTable.getDbConnection();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:489: //    lDbConnection.connect(getProperty("jdbcClass"), getProperty("jdbcConnection"), getProperty("jdbcUser"), getProperty("jdbcPassword"));
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:490: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:491:     DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:492:     DbConnection lDbConnection = lDbConnectionFactory.getDbConnection("application");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:493: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:494:     PreparedStatement lPreparedStatement;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:495:     lPreparedStatement = lDbConnection.getConnection().prepareStatement( "DROP VIEW " + aView );
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:496:     lPreparedStatement.execute();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:497:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:498:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:499:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:500:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:501:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:502:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:503:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:504:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:505:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:506:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:507:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:508: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:509:   public void loadTable(String aTable) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:510:     %>loadTable: <!%aTable!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:511:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:512: //    DbConnection lDbConnection = iSymbolTable.getDbConnection();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:513: //    lDbConnection.connect(getProperty("jdbcClass"), getProperty("jdbcConnection"), getProperty("jdbcUser"), getProperty("jdbcPassword"));
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:514: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:515:     DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:516:     DbConnection lDbConnection = lDbConnectionFactory.getDbConnection("application");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:517: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:518:     PreparedStatement lDeletePreparedStatement = lDbConnection.getConnection().prepareStatement("DELETE FROM " + aTable);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:519:     lDeletePreparedStatement.execute();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:520:     lDeletePreparedStatement.close();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:521:     
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:522:     <!tables:table!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:523:     if (<!tables!>!scan("table:name", aTable) == false) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:524:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:525:       <!$jac:event!>!set("Cannot find table <!%aTable!> in XML.");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:526:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:527:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:528:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:529:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:530:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:531:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:532:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:533:     <!tables:table:row!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:534:     while (<!tables:table:row!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:535:       String lStatement = "INSERT INTO " + aTable + "(";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:536:       String lQuestion = "";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:537:       <!tables:table:row:column!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:538:       while (<!tables:table:row:column!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:539:         lStatement = lStatement.concat(<![tables:table:row:column:name]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:540:         lQuestion = lQuestion.concat("?");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:541:         if (<!tables:table:row:column!>!isLast() == false) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:542:           lStatement = lStatement.concat(",");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:543:           lQuestion = lQuestion.concat(",");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:544:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:545:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:546:       lStatement = lStatement.concat(") VALUES (" + lQuestion + ")");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:547: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:548:       %>loadTable:Statement: <!%lStatement!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:549: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:550:       PreparedStatement lPreparedStatement;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:551:       lPreparedStatement = lDbConnection.getConnection().prepareStatement(lStatement);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:552:       <!tables:table:row:column!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:553:       int lIdx = 1;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:554:       while (<!tables:table:row:column!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:555:         lPreparedStatement.setString(lIdx++, <![tables:table:row:column]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:556:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:557:       lPreparedStatement.execute();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:558:       lPreparedStatement.close();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:559:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:560:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:561: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:562:       %>loadTable:Exception: <!%e.getMessage()!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:563: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:564:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:565:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:566:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:567:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:568:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:569:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:570:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:571:       return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:572:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:573:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:574:   
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:575:   public String getDbType(String aType, String aSize) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:576:     try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:577:     String lSize = "";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:578:     if (getProperty("dbTypes:" + aType + ":size").equals("true")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:579:       lSize = "(" + aSize + ")";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:580:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:581:     return getProperty("dbTypes:" + aType) + lSize;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:582:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:583:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:584:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:585:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:586:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:587:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:588:       restoreContext();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:589:       setExit();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:590:       return "";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:591:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:592:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\MakeDdl.script:593: 
+C:\ArchitectsCompanion\jac\conf\micPostfix.script:1: }

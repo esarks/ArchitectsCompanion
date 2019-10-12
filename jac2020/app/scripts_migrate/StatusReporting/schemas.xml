@@ -1,0 +1,4 @@
+<schemas>
+  <schema name='description' type='string' truncateEol='false' replaceNewLine=' ' trim='true'>
+  </schema>
+</schemas>

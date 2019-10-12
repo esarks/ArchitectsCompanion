@@ -1,0 +1,70 @@
+context micScriptComponent
+import com.esarks.arm.model.jeo.*
+import java.awt.*
+import javax.swing.*
+end
+
+//$Section=Class$Preserve=yes
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="execute" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>
+
+  executeTest(null);
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="executeTest" visibility="public" return="void" >
+     <document></document>
+     <argument type="com.esarks.arm.owl.JeoOwlEngine" name="aJeoOwlEngine"  document="" />
+   </method>
+&>
+
+    System.out.println("Getting DbConnection...1");
+
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    DbConnection lDbConnection = lDbConnectionFactory.getDbConnection("application");
+
+    System.out.println("Getting DbConnection...2");
+
+    if (lDbConnection.getSuccess() == true) {
+      System.out.println("*** PASSED ***");
+      if (aJeoOwlEngine != null) aJeoOwlEngine.addFact("Answer TestDbConnection Pass (yes)", "", "Did TestDbConnection Pass?", "yes");
+    } else {
+      System.out.println("*** FAILED ***");
+      if (aJeoOwlEngine != null) aJeoOwlEngine.addFact("Answer TestDbConnection Pass (yes)", "", "Did TestDbConnection Pass?", "no");
+    }
+
+    if (aJeoOwlEngine != null) {
+      java.awt.Frame lFrame = new java.awt.Frame();
+      int lResult = JOptionPane.showConfirmDialog(lFrame, "The current DbConnection is: " + lDbConnection.getConnectionString() + ". Do you want to continue?");
+      switch (lResult) {
+          case JOptionPane.YES_OPTION:
+              if (aJeoOwlEngine != null) aJeoOwlEngine.addFact("Answer TestDbConnection Continue (yes)", "", "Should TestDbConnection Continue?", "yes");
+              break;
+          case JOptionPane.NO_OPTION:
+              if (aJeoOwlEngine != null) aJeoOwlEngine.addFact("Answer TestDbConnection Continue (no)", "", "Should TestDbConnection Continue?", "no");
+              break;
+          case JOptionPane.CANCEL_OPTION:
+              if (aJeoOwlEngine != null) aJeoOwlEngine.addFact("Answer TestDbConnection Continue (cancel)", "", "Should TestDbConnection Continue?", "cancel");
+              break;
+      }
+      lFrame.dispose();
+    } else {
+      java.awt.Frame lFrame = new java.awt.Frame();
+      JOptionPane.showMessageDialog(lFrame, "The current DbConnection is: " + lDbConnection.getConnectionString());
+      lFrame.dispose();
+    }
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+
+//////////////////////////////////////////////////////////////////////////////
+
+//$Section=Class$Preserve=no

@@ -1,0 +1,187 @@
+  <com.esarks.arm.schemas.services.root name="com.esarks.arm.organization.ArmOrganizationNodeCrud">
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="batchCreateArmOrganizationNode" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement>
+          INSERT INTO $ArmOrganizationNode (parent,name) VALUES (?,?)
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="com.esarks.arm.organization.ArmOrganizationNode" iterate="true">
+              <value attribute="parent" />
+              <value attribute="name" />
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="batchCreateArmOrganizationNodeWithIdentity" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement>
+          SET IDENTITY_INSERT $ArmOrganizationNode ON
+          INSERT INTO $ArmOrganizationNode (id,parent,name) VALUES (?,?,?)
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="com.esarks.arm.organization.ArmOrganizationNode" iterate="true">
+              <value attribute="id" />
+              <value attribute="parent" />
+              <value attribute="name" />
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="createArmOrganizationNode" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <procedure>
+          BEGIN
+          DECLARE @IDENT BIGINT
+          INSERT INTO $ArmOrganizationNode (parent,name) VALUES (?,?)
+          SELECT @IDENT = (SELECT @@IDENTITY)
+          SELECT * FROM $ArmOrganizationNode WHERE id = @IDENT
+          END
+        </procedure>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="com.esarks.arm.organization.ArmOrganizationNode">
+              <value attribute="parent" />
+              <value attribute="name" />
+            </jeo>
+          </jeo>
+        </value>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="com.esarks.arm.organization.ArmOrganizationNode" iterate="true" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="createArmOrganizationNodeWithIdentity" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <procedure>
+          BEGIN
+          DECLARE @IDENT BIGINT
+          SET IDENTITY_INSERT $ArmOrganizationNode ON
+          INSERT INTO $ArmOrganizationNode (id,parent,name) VALUES (?,?,?)
+          SELECT @IDENT = (SELECT @@IDENTITY)
+          SELECT * FROM $ArmOrganizationNode WHERE id = @IDENT
+          END
+        </procedure>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="com.esarks.arm.organization.ArmOrganizationNode">
+              <value attribute="parent" />
+              <value attribute="name" />
+            </jeo>
+          </jeo>
+        </value>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="com.esarks.arm.organization.ArmOrganizationNode" iterate="true" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="uidReadArmOrganizationNode" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement>
+          SELECT * FROM $ArmOrganizationNode
+        </statement>
+        <where>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="com.esarks.arm.organization.ArmOrganizationNode" >
+              <where clause="id=?" attribute="id" />
+            </jeo>
+          </jeo>
+        </where>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="com.esarks.arm.organization.ArmOrganizationNode" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="readArmOrganizationNode" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement>
+          SELECT * FROM $ArmOrganizationNode
+        </statement>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="com.esarks.arm.organization.ArmOrganizationNode" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="deleteArmOrganizationNode" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement>
+          DELETE $ArmOrganizationNode
+        </statement>
+        <where>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="com.esarks.arm.organization.ArmOrganizationNode" >
+              <where clause="id=?" attribute="id" />
+            </jeo>
+          </jeo>
+        </where>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="uidUpdateArmOrganizationNode" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement>
+          UPDATE $ArmOrganizationNode SET parent=?, name=? WHERE id=?
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="com.esarks.arm.organization.ArmOrganizationNode">
+              <value attribute="parent" />
+              <value attribute="name" />
+              <value attribute="id" />
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+    </service>
+
+  </com.esarks.arm.schemas.services.root>

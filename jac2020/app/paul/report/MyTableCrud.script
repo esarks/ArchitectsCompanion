@@ -1,0 +1,436 @@
+
+//$Section=License$Preserve=no
+//  Generated at 2005.01.21 03:07:59.468 PM EST by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+
+//$Section=ChangeLog$Preserve=yes
+
+/* ========================================================================= *
+   Contributor        Description
+   ------------------ ------------------------------------------------------
+                      Author
+
+ * ========================================================================= */
+
+//$Section=ChangeLog$Preserve=no
+
+//----------------------------------------------------------------------------
+// This section is for custom operations.
+//----------------------------------------------------------------------------
+//$Section=CustomOperations$Preserve=yes
+//$Section=CustomOperations$Preserve=no
+    public void batchCreateMyTable(com.esarks.arm.model.jeo.service aJeo) {
+
+      Log lLog = Log.getInstance();
+      if (lLog.test(Log._DEBUG))
+        iLog.println(Log._DEBUG, "Enter com.learning.paul.report.MyTableCrud.batchCreateMyTable" + "!");
+
+      DbConnection lDbConnection = getDbConnection();
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : batchCreateMyTable");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        String lSql = "INSERT INTO MyTable (myField) VALUES (?) ";
+        if (!aJeo.getWhereClause().equals("")) {
+          lWhere = aJeo.getWhereClause();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+          lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+        }
+        {
+          com.esarks.arm.model.jeo.service lJeox = aJeo;
+          com.esarks.arm.model.jeo.request lJeoxx = (com.esarks.arm.model.jeo.request) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.request", 0);
+          ArrayList arrayList_lJeoxxx = lJeoxx.getJeoByInstanceName("com.learning.paul.report.MyTable");
+          for (int idx_lJeoxxx=0; idx_lJeoxxx < arrayList_lJeoxxx.size(); idx_lJeoxxx++) {
+          com.learning.paul.report.MyTable lJeoxxx = (com.learning.paul.report.MyTable) arrayList_lJeoxxx.get(idx_lJeoxxx);
+          if(lJeoxxx.isMyFieldNull()) {
+            lStatement.setNull(1, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setString(1, lJeoxxx.getMyFieldPropertyValue().toString());
+          }
+        lStatement.addBatch();
+        }
+        }
+        lStatement.executeBatch();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : batchCreateMyTable");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : batchCreateMyTable");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+    }
+    public void createMyTable(com.esarks.arm.model.jeo.service aJeo) {
+
+      Log lLog = Log.getInstance();
+      if (lLog.test(Log._DEBUG))
+        iLog.println(Log._DEBUG, "Enter com.learning.paul.report.MyTableCrud.createMyTable" + "!");
+
+      DbConnection lDbConnection = getDbConnection();
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : createMyTable");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        String lSql = "BEGIN INSERT INTO MyTable (myField) VALUES (?) SELECT * FROM MyTable WHERE myField=? END ";
+        if (!aJeo.getWhereClause().equals("")) {
+          lWhere = aJeo.getWhereClause();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        CallableStatement lStatement = lDbConnection.getConnection().prepareCall(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+          lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+        }
+        {
+          com.esarks.arm.model.jeo.service lJeox = aJeo;
+          com.esarks.arm.model.jeo.request lJeoxx = (com.esarks.arm.model.jeo.request) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.request", 0);
+          com.learning.paul.report.MyTable lJeoxxx = (com.learning.paul.report.MyTable) lJeoxx.getJeoByInstanceNameAt("com.learning.paul.report.MyTable", 0);
+          if(lJeoxxx.isMyFieldNull()) {
+            lStatement.setNull(1, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setString(1, lJeoxxx.getMyFieldPropertyValue().toString());
+          }
+          if(lJeoxxx.isMyFieldNull()) {
+            lStatement.setNull(2, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setString(2, lJeoxxx.getMyFieldPropertyValue().toString());
+          }
+        }
+        ResultSet lResultSet = lStatement.executeQuery();
+        if (lResultSet.next() == false) {
+          aJeo.addError();
+          aJeo.setErrorId("");
+          aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : createMyTable");
+          aJeo.setErrorTitle("No Data Returned");
+          aJeo.setErrorText("No data was returned from the database request.");
+          aJeo.setErrorResolution("The application user may submit another request.");
+          aJeo.setErrorSeverity(4);
+          aJeo.getMostSevereError();
+          lResultSet.close();
+          lStatement.close();
+          return;
+        }
+        {
+          com.esarks.arm.model.jeo.service lJeox = aJeo;
+          com.esarks.arm.model.jeo.reply lJeoxx = (com.esarks.arm.model.jeo.reply) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.reply", 0);
+          do {
+            com.learning.paul.report.MyTable lJeoxxx = new com.learning.paul.report.MyTable();
+            lJeoxx.addJeo(lJeoxxx);
+            lJeoxxx.mapFromResultSet(lResultSet, true, true);
+          } while (lResultSet.next());
+        }
+        lResultSet.close();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : createMyTable");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : createMyTable");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+    }
+    public void uidReadMyTable(com.esarks.arm.model.jeo.service aJeo) {
+
+      Log lLog = Log.getInstance();
+      if (lLog.test(Log._DEBUG))
+        iLog.println(Log._DEBUG, "Enter com.learning.paul.report.MyTableCrud.uidReadMyTable" + "!");
+
+      DbConnection lDbConnection = getDbConnection();
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : uidReadMyTable");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        String lSql = "SELECT * FROM MyTable ";
+        if (aJeo.getWhereClause().equals("") && aJeo.getWhereName().equals("")) {
+          com.esarks.arm.model.jeo.service lJeox = aJeo;
+          com.esarks.arm.model.jeo.request lJeoxx = (com.esarks.arm.model.jeo.request) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.request", 0);
+          com.learning.paul.report.MyTable lJeoxxx = (com.learning.paul.report.MyTable) lJeoxx.getJeoByInstanceNameAt("com.learning.paul.report.MyTable", 0);
+          {
+            {
+              lWhere = lWhere.trim() + " myField=?";
+              lWhereList.add(lJeoxxx.getMyFieldPropertyValue());
+            }
+          }
+        }
+        if (!aJeo.getWhereClause().equals("")) {
+          lWhere = aJeo.getWhereClause();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+          lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+        }
+        ResultSet lResultSet = lStatement.executeQuery();
+        if (lResultSet.next() == false) {
+          aJeo.addError();
+          aJeo.setErrorId("");
+          aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : uidReadMyTable");
+          aJeo.setErrorTitle("No Data Returned");
+          aJeo.setErrorText("No data was returned from the database request.");
+          aJeo.setErrorResolution("The application user may submit another request.");
+          aJeo.setErrorSeverity(4);
+          aJeo.getMostSevereError();
+          lResultSet.close();
+          lStatement.close();
+          return;
+        }
+        {
+          com.esarks.arm.model.jeo.service lJeox = aJeo;
+          com.esarks.arm.model.jeo.reply lJeoxx = (com.esarks.arm.model.jeo.reply) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.reply", 0);
+          do {
+            com.learning.paul.report.MyTable lJeoxxx = new com.learning.paul.report.MyTable();
+            lJeoxx.addJeo(lJeoxxx);
+            lJeoxxx.mapFromResultSet(lResultSet, true, true);
+          } while (lResultSet.next());
+        }
+        lResultSet.close();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : uidReadMyTable");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : uidReadMyTable");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+    }
+    public void readMyTable(com.esarks.arm.model.jeo.service aJeo) {
+
+      Log lLog = Log.getInstance();
+      if (lLog.test(Log._DEBUG))
+        iLog.println(Log._DEBUG, "Enter com.learning.paul.report.MyTableCrud.readMyTable" + "!");
+
+      DbConnection lDbConnection = getDbConnection();
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : readMyTable");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        String lSql = "SELECT * FROM MyTable ";
+        if (!aJeo.getWhereClause().equals("")) {
+          lWhere = aJeo.getWhereClause();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+          lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+        }
+        ResultSet lResultSet = lStatement.executeQuery();
+        if (lResultSet.next() == false) {
+          aJeo.addError();
+          aJeo.setErrorId("");
+          aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : readMyTable");
+          aJeo.setErrorTitle("No Data Returned");
+          aJeo.setErrorText("No data was returned from the database request.");
+          aJeo.setErrorResolution("The application user may submit another request.");
+          aJeo.setErrorSeverity(4);
+          aJeo.getMostSevereError();
+          lResultSet.close();
+          lStatement.close();
+          return;
+        }
+        {
+          com.esarks.arm.model.jeo.service lJeox = aJeo;
+          com.esarks.arm.model.jeo.reply lJeoxx = (com.esarks.arm.model.jeo.reply) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.reply", 0);
+          do {
+            com.learning.paul.report.MyTable lJeoxxx = new com.learning.paul.report.MyTable();
+            lJeoxx.addJeo(lJeoxxx);
+            lJeoxxx.mapFromResultSet(lResultSet, true, true);
+          } while (lResultSet.next());
+        }
+        lResultSet.close();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : readMyTable");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : readMyTable");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+    }
+    public void uidUpdateMyTable(com.esarks.arm.model.jeo.service aJeo) {
+
+      Log lLog = Log.getInstance();
+      if (lLog.test(Log._DEBUG))
+        iLog.println(Log._DEBUG, "Enter com.learning.paul.report.MyTableCrud.uidUpdateMyTable" + "!");
+
+      DbConnection lDbConnection = getDbConnection();
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : uidUpdateMyTable");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        String lSql = "UPDATE MyTable SET WHERE myField=? ";
+        if (!aJeo.getWhereClause().equals("")) {
+          lWhere = aJeo.getWhereClause();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+          lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+        }
+        ResultSet lResultSet = lStatement.executeQuery();
+        if (lResultSet.next() == false) {
+          aJeo.addError();
+          aJeo.setErrorId("");
+          aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : uidUpdateMyTable");
+          aJeo.setErrorTitle("No Data Returned");
+          aJeo.setErrorText("No data was returned from the database request.");
+          aJeo.setErrorResolution("The application user may submit another request.");
+          aJeo.setErrorSeverity(4);
+          aJeo.getMostSevereError();
+          lResultSet.close();
+          lStatement.close();
+          return;
+        }
+        {
+          com.esarks.arm.model.jeo.service lJeox = aJeo;
+          com.esarks.arm.model.jeo.reply lJeoxx = (com.esarks.arm.model.jeo.reply) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.reply", 0);
+          do {
+            com.learning.paul.report.MyTable lJeoxxx = new com.learning.paul.report.MyTable();
+            lJeoxx.addJeo(lJeoxxx);
+            lJeoxxx.mapFromResultSet(lResultSet, true, true);
+          } while (lResultSet.next());
+        }
+        lResultSet.close();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : uidUpdateMyTable");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.learning.paul.report.MyTable_Services : uidUpdateMyTable");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+    }
+//$Section=Deleted$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section contains orphaned code from deleted operations.
+//----------------------------------------------------------------------------
+
+//$Section=Deleted$Preserve=no
+
+//End of script---------------

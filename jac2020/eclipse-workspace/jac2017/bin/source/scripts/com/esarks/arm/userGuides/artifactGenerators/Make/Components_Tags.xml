@@ -1,0 +1,25 @@
+<tags root="components">
+  <documentation><![CDATA[This is a XML definition file used by the following scripts:<ul><li>com.esarks.arm.make.MakeAll</ul>]]></documentation>
+
+  <tag name="component" type="element">
+    <documentation>This is a container tag for the component.</documentation>
+    <tag name="name" type="attribute">
+      <documentation>The name of the component.</documentation>
+    </tag>
+    <tag name="type" type="attribute">
+      <documentation><![CDATA[The type of component.<ul><li>Ex. DbTable, DbView</ul>]]></documentation>
+    </tag>
+    <tag name="source" type="attribute">
+      <documentation>The xml containing the table or view definition.</documentation>
+    </tag>
+    
+    <tag name="dependsOn" type="element">
+      <documentation>A container tag for component dependencies.</documentation>
+      <tag name="name" type="attribute">
+        <documentation>The name of a component that must be generated before the current component may be generated.</documentation>
+      </tag>
+    
+    </tag>
+  </tag>
+  
+</tags>

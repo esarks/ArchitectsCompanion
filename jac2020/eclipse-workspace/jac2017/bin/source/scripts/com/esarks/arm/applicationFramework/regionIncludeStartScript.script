@@ -1,0 +1,9 @@
+<script language="JavaScript"><!--
+function popup(strUrl,strName,strHeight,strWidth) {
+var strParams = "height=" + strHeight + ",width=" + strWidth + ",scrollbars=yes,resizable=yes,status=no,menubar=no,toolbar=no";
+window.open(strUrl, strName, strParams);
+window.opener=self;
+window.close();
+}
+// -->
+</script>

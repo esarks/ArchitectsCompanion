@@ -1,0 +1,160 @@
+
+  public URL execute(URL aUrl, String aParams, String aMethod, String aReferer, boolean aRedirects, Hashtable aCookies) {
+
+    try {
+      System.out.println(">> URL    : " + aUrl);
+      System.out.println(">> Params : " + aParams);
+      System.out.println(">> Referer: " + aReferer);
+            
+      Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
+
+      HttpURLConnection lConnection = (HttpURLConnection) aUrl.openConnection();
+
+      lConnection.setDoInput(true);
+      lConnection.setDoOutput(true);
+      lConnection.setFollowRedirects(aRedirects);
+      lConnection.setAllowUserInteraction(true);
+      lConnection.setUseCaches(false);
+
+      writeCookies(lConnection, true);
+
+      lConnection.setRequestProperty("Accept", "image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/vnd.ms-powerpoint, application/vnd.ms-excel, application/msword, */*");
+      lConnection.setRequestProperty("Accept-Language", "en-us");
+      lConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded"); 
+      lConnection.setRequestProperty("Accept-Encoding", "gzip, deflate");
+      lConnection.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Q312461)");
+      lConnection.setRequestProperty("Connection", "Keep-Alive");
+      lConnection.setRequestProperty("Cache-Control", "no-cache");
+
+      if (aReferer.length() > 0) {
+        lConnection.setRequestProperty("Referer", aReferer);
+      }
+
+      lConnection.setRequestMethod(aMethod);
+
+      if (aParams.length() > 0 || aMethod.equals("POST")) {
+        byte[] bytes = aParams.getBytes();
+        lConnection.setRequestProperty("Content-length", String.valueOf(bytes.length));
+        OutputStream lOs = lConnection.getOutputStream();
+        lOs.write(bytes);
+        lOs.flush();
+        lOs.close();
+      }
+            
+      iResponseCode = lConnection.getResponseCode();
+      System.out.println("Response Code: " + iResponseCode + " " + lConnection.getResponseMessage());
+      System.out.println("URL: " + lConnection.getURL());
+            
+      readCookies(lConnection, true, false);
+
+      if (iResponseCode == 301 || iResponseCode == 302) {
+        String lHeader = lConnection.getHeaderField("location");
+        if (lHeader != null) {
+          System.out.println("Redirected to " + lHeader);
+          try {
+            URL lReturnUrl = new URL(lHeader);
+            return lReturnUrl;
+          } catch(MalformedURLException e) {return null;}
+        } else {
+          System.out.println("Redirected to IS NULL");
+        }
+        return lConnection.getURL();
+      }
+            
+      InputStream lIs = lConnection.getInputStream();
+      InputStreamReader lIsr = new InputStreamReader(lIs);
+      BufferedReader lBr = new BufferedReader(lIsr);
+      String lLine = null;
+
+      while ( (lLine = lBr.readLine()) != null) {
+        System.out.println("line: " + lLine);
+      }
+
+      String lHdrKey;
+      String lHdrString;
+      int i=1;
+      while ((lHdrKey = lConnection.getHeaderFieldKey(i)) != null) {
+        lHdrString = lConnection.getHeaderField(i);
+        System.out.println("hdrKeybbb: " + lHdrKey);
+        System.out.println("hdrString: " + lHdrString);
+        i++;
+      }
+
+      return lConnection.getURL();
+
+    } catch (Throwable t) {}
+
+    return null;
+        
+  }
+
+ /**
+  * Send the Hashtable (theCookies) as cookies, and write them to
+  *  the specified URLconnection
+  *
+  * @param   urlConn  The connection to write the cookies to.
+  * @param   printCookies  Print or not the action taken.
+  *
+  * @return  The urlConn with the all the cookies in it.
+ */
+  public URLConnection writeCookies(URLConnection urlConn, boolean printCookies, Hashtable theCookies) {
+    String cookieString = "";
+    Enumeration keys = theCookies.keys();
+    while (keys.hasMoreElements()) {
+      String key = (String)keys.nextElement();
+      cookieString += key + "=" + theCookies.get(key);
+      if (keys.hasMoreElements()) cookieString += "; ";
+    }
+    urlConn.setRequestProperty("Cookie", cookieString);
+    if (printCookies) System.out.println("Wrote cookies:\n   " + cookieString);
+    return urlConn;
+  }
+
+ /**
+  * Read cookies from a specified URLConnection, and insert them
+  *   to the Hashtable
+  *  The hashtable represents the Cookies.
+  *
+  * @param   urlConn  the connection to read from
+  * @param   printCookies  Print the cookies or not, for debugging
+  * @param   reset  Clean the Hashtable or not
+ */
+  public void readCookies(URLConnection urlConn, boolean printCookies, boolean reset, Hashtable theCookies){
+    if (reset) aCookies.clear();
+    int i=1;
+    String hdrKey;
+    String hdrString;
+    String aCookie;
+    while ((hdrKey = urlConn.getHeaderFieldKey(i)) != null) {
+      if (hdrKey.equals("Set-Cookie")) {
+        hdrString = urlConn.getHeaderField(i);
+        StringTokenizer st = new StringTokenizer(hdrString,",");
+        while (st.hasMoreTokens()) {
+          String s = st.nextToken();
+          aCookie = s.substring(0, s.indexOf(";"));
+          // aCookie = hdrString.substring(0, s.indexOf(";"));
+          int j = aCookie.indexOf("=");
+          if (j != -1) {
+             if (!theCookies.containsKey(aCookie.substring(0, j))) {
+               // if the Cookie do not already exist then when keep it,
+               // you may want to add some logic to update the stored Cookie instead.
+               // thanks to rwhelan
+               theCookies.put(aCookie.substring(0, j),aCookie.substring(j + 1));
+               if (printCookies){
+                  System.out.println("Reading Key: " + aCookie.substring(0, j));
+                  System.out.println("        Val: " + aCookie.substring(j + 1));
+                  }
+               }
+             }
+          }
+      }
+      i++;
+     }
+  }
+
+  public void addCookie(String aKey, String aValue, Hashtable aCookies) {
+    if (!aCookies.containsKey(aKey)){
+      aCookies.put(aKey, aValue);
+    }
+  }
+

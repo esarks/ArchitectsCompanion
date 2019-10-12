@@ -1,0 +1,114 @@
+  <services name="com.learning.paul.report.MyTableCrud">
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="batchCreateMyTable" jeo="com.esarks.arm.model.jeo.service">
+      <sql>
+        <statement>
+          INSERT INTO MyTable (myField) VALUES (?)
+        </statement>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.request">
+            <jeo name="com.learning.paul.report.MyTable" iterate="true">
+              <value attribute="myField" />
+            </jeo>
+          </jeo>
+        </value>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="createMyTable" jeo="com.esarks.arm.model.jeo.service">
+      <sql>
+        <procedure>
+          BEGIN
+          INSERT INTO MyTable (myField) VALUES (?)
+          SELECT * FROM MyTable WHERE myField=?
+          END
+        </procedure>
+        <value>
+          <jeo name="com.esarks.arm.model.jeo.request">
+            <jeo name="com.learning.paul.report.MyTable">
+              <value attribute="myField" />
+              <value attribute="myField" />
+            </jeo>
+          </jeo>
+        </value>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.reply">
+            <jeo name="com.learning.paul.report.MyTable" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="uidReadMyTable" jeo="com.esarks.arm.model.jeo.service">
+      <sql>
+        <statement>
+          SELECT * FROM MyTable
+        </statement>
+        <where>
+          <jeo name="com.esarks.arm.model.jeo.request">
+            <jeo name="com.learning.paul.report.MyTable" >
+              <where clause="myField=?" attribute="myField" />
+            </jeo>
+          </jeo>
+        </where>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.reply">
+            <jeo name="com.learning.paul.report.MyTable" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="readMyTable" jeo="com.esarks.arm.model.jeo.service">
+      <sql>
+        <statement>
+          SELECT * FROM MyTable
+        </statement>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.reply">
+            <jeo name="com.learning.paul.report.MyTable" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="uidUpdateMyTable" jeo="com.esarks.arm.model.jeo.service">
+      <sql>
+        <statement>
+          UPDATE MyTable SET  WHERE myField=?
+        </statement>
+        <update>
+          <jeo name="com.esarks.arm.model.jeo.request">
+            <jeo name="com.learning.paul.report.MyTable">
+              <value attribute="myField" />
+            </jeo>
+          </jeo>
+        </update>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.reply">
+            <jeo name="com.learning.paul.report.MyTable"/>
+          </jeo>
+        </result>
+      </sql>
+    </service>
+  </services>

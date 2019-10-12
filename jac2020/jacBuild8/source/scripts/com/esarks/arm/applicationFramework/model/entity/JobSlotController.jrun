@@ -1,0 +1,4 @@
+<jacrun>
+  <script name="com.esarks.arm.applicationFramework.model.entity.JobSlotController" method="initialize" argument="100" />
+  <script name="com.esarks.arm.applicationFramework.model.entity.JobSlotController" method="reserveArmJobSlot" />
+</jacrun>

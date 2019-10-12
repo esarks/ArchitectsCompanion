@@ -1,0 +1,9 @@
+C:\ArchitectsCompanion\jac2017\classes\ehrm\Parse.java:334: error: incompatible types: XPN[] cannot be converted to PN
+        PN patientName = adtMsg.getPID().getPatientName();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+                                                       ^
+C:\ArchitectsCompanion\jac2017\classes\ehrm\Parse.java:337: error: cannot find symbol
+        String familyName = patientName.getFamilyName().getValue();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                                       ^
+  symbol:   method getValue()
+  location: class FN
+2 errors

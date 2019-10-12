@@ -1,0 +1,33 @@
+
+  public void execute(MicScriptHelper aMicScriptHelper) {
+  
+%>
+  <table width="100%" valign="top" border="0" cellspacing="0" cellpadding="0" frame="void">
+  <tr><td width="3"></td><td width="3" bgcolor="blue"></td><td>
+  <table width="100%" valign="top" border="1" cellspacing="0" cellpadding="0">
+    <% iScript.execMethod(aMicScriptHelper, "renderSection", new Object[] {"frameWindowBar"}); %>
+    <tr bgcolor="#EFEDDE" bordercolor="#EFEDDE">
+      <td>
+        <table height="20" border="0" cellspacing="3" cellpadding="0" frame="void">
+          <tr>
+            <% iScript.execMethod(aMicScriptHelper, "renderSection", new Object[] {"frameToolMenu"}); %>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table width="100%" valign="top" border="0" cellspacing="0" cellpadding="0" frame="void">
+          <tr>
+            <td valign="top" bgcolor="white" bordercolor="white">
+              <% iScript.execMethod(aMicScriptHelper, "renderSection", new Object[] {"frameAppContent"}); %>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  </td></tr></table>
+<%
+
+  }

@@ -1,0 +1,204 @@
+C:\ArchitectsCompanion\jac\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\ArchitectsCompanion\jac\conf\micImport.script:2: 
+C:\ArchitectsCompanion\jac\conf\micImport.script:3: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:4: import java.util.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:5: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:6: import java.io.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:7: import java.text.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:8: import java.net.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:9: import javax.net.ssl.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:10: import java.security.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:11: import java.sql.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:12: import javax.servlet.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:13: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:14: import java.awt.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:15: import javax.swing.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:16: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:17: 
+C:\ArchitectsCompanion\jac\conf\micImport.script:18: <#import#>
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:2: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:4:   }
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:5: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:7: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:8:     super(aScript);
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:9: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:10:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:1: set $jac:script:extends=com.esarks.mic.MicScriptHelper
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:2: source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micImport.script
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:3: source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micPrefix.script
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:4: source [$jac:path:scripts][$jac:fileSeparator][$jac:script:path][$jac:fileSeparator][$jac:script].script
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:5: source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micPostfix.script
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:6: end
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:7: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:8:   public void execute() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:9: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:10:     if (<!micImages!>!size() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:11:       parseXml("com.hqsonline.conf.micImages");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:12: //      loadXmlSchema("mic", path("com.hqsonline.conf.schemas") + ".xml");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:13:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:14:     if (<!$jac:phase!>!size() == 0) <!$jac:phase!>!reset(<![$jac:loc:phase]!>); 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:15:     if (<!properties!>!size() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:16:       loadXmlSchema("com.hqsonline.arm.properties.conf", path("com.hqsonline.arm.properties.conf.Schemas") + ".xml");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:17:       parseXmlSchema("com.hqsonline.arm.properties.conf.Properties");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:18:       boolean lScan = <!properties:com.hqsonline.arm.properties.conf.properties!>!scan("sqlServer");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:19:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:20: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:21:     if (iSecurityManager == null) iSecurityManager = new com.esarks.mic.SecurityManager();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:22: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:23: //    if (<!$jac:security!>!size() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:24: //      <!$jac:security!>!set(<![$jac:loc:security]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:25: //      lSecurityManager = (com.esarks.mic.SecurityManager) loadScript(<![$jac:security]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:26: //      <!$jac:security:object!>!set(lSecurityManager);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:27: //    } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:28: //      lSecurityManager = (com.esarks.mic.SecurityManager) <!$jac:security:object!>!getValueObject();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:29: //    }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:30: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:31:     ServletRequest lServletRequest = getServletRequest();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:32: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:33:     String lScript = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:34:     String lInstance = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:35:     String lMethod = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:36:     String lArgument = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:37:     String lAction = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:38:     
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:39:     String lHref = lServletRequest.getParameter("href");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:40:     if (lHref != null) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:41:       <!$jac:href!>!resetIterator(Integer.parseInt(lHref));
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:42:       lScript = (String) <![$jac:href:script]!>!getValueObject();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:43:       lInstance = (String) <![$jac:href:instance]!>!getValueObject();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:44:       lMethod = (String) <![$jac:href:method]!>!getValueObject();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:45:       lArgument = (String) <![$jac:href:argument]!>!getValueObject();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:46:       lAction = (String) <![$jac:href:action]!>!getValueObject();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:47:     } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:48:       lScript = lServletRequest.getParameter("script");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:49:       lInstance = lServletRequest.getParameter("instance");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:50:       lMethod = lServletRequest.getParameter("method");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:51:       lArgument = lServletRequest.getParameter("argument");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:52:       lAction = lServletRequest.getParameter("action");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:53:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:54:     
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:55:     <!$mic:securityError!>!remove();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:56:     if (iSecurityManager != null &&
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:57:         (lMethod.compareTo("openHas") != 0 && iSecurityManager.checkScript(lScript) == true ||
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:58:          lMethod.compareTo("openHas") == 0 && iSecurityManager.checkScript(lScript) == true && iSecurityManager.checkScript(lArgument) == true)) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:59: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:60:       if (lInstance == null) lInstance="";    
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:61:       ScriptHelper lScriptHelper = (ScriptHelper) loadScript(lScript, lInstance);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:62: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:63:       if (lArgument == null) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:64:         iScript.execMethod(lScriptHelper, lMethod);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:65:       } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:66:         iScript.execMethod(lScriptHelper, lMethod, new Object[] {lArgument});
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:67:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:68: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:69:       if (lAction != null && lAction.compareTo("init") == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:70:         register(iScript, lScript, "", lScriptHelper);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:71:         iScript.execMethod(lScriptHelper, "execute", new Object[] {"open"});
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:72:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:73:     } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:74:       <!$mic:securityError!>!set("true");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:75:       if (iSecurityManager != null) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:76: //        lSecurityManager.execute("violation");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:77:         <!$mic:securityError!>!remove();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:78:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:79:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:80:     
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:81: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:82: <!-- enter micTemplate -->
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:83: <html>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:84: <head>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:85: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:86:   if (<!$jac:title!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:87: %><title><![$jac:title]!></title><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:88:   } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:89: %><title><![$jac:loc:title]!></title><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:90:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:91:   <!$jac:loc:stylesheet!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:92:   while (<!$jac:loc:stylesheet!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:93:     iScript.execMethod(iScript.loadScript(<![$jac:loc:stylesheet]!>, <![$jac:loc:stylesheet:context]!>), <![$jac:loc:stylesheet:method]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:94:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:95:   <!$jac:loc:head!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:96:   while (<!$jac:loc:head!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:97:     iScript.execMethod(iScript.loadScript(<![$jac:loc:head]!>, <![$jac:loc:head:context]!>), <![$jac:loc:head:method]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:98:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:99:   <!$jac:loc:script!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:100:   while (<!$jac:loc:script!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:101:     iScript.execMethod(iScript.loadScript(<![$jac:loc:script]!>, <![$jac:loc:script:context]!>), <![$jac:loc:script:method]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:102:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:103: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:104: </head>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:105: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:106:   <!$jac:loc:body!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:107:   while (<!$jac:loc:body!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:108: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:109: <body <![$jac:loc:body]!> />
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:110: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:111:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:112: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:113: <!-- Page -->
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:114: <table <![$jac:loc:page]!>>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:115:   <tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:116:     <td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:117: <!-- Site Banner -->
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:118: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:119:   <!$jac:loc:banner!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:120:   while (<!$jac:loc:banner!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:121:     iScript.execMethod(iScript.loadScript(<![$jac:loc:banner]!>, <![$jac:loc:banner:context]!>), <![$jac:loc:banner:method]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:122:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:123: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:124:     </td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:125:   </tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:126:   <tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:127:     <td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:128: <!-- Page Header -->
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:129: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:130:   <!$jac:loc:header!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:131:   while (<!$jac:loc:header!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:132:     iScript.execMethod(iScript.loadScript(<![$jac:loc:header]!>, <![$jac:loc:header:context]!>), <![$jac:loc:header:method]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:133:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:134: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:135:     </td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:136:   </tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:137:   <tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:138:     <td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:139: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:140:     if (<!$mic:securityError!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:141:       %><table width="100%" valign="top" border="0" cellspacing="0" cellpadding="0"><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:142:       %><tr><td style="background-color:darkred; color:white;"><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:143:       %>A security violation has prevented processing your last request.<%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:144:       %></td></tr></table><%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:145:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:146:     <!$jac:registry:script!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:147:     while (<!$jac:registry:script!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:148:       <!$jac:registry:script:instance!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:149:       while (<!$jac:registry:script:instance!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:150:         MicScriptHelper lContextObject = (MicScriptHelper) <!$jac:registry:script:instance:object!>!getValueObject();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:151:         <!$jac:loc:content!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:152:         while (<!$jac:loc:content!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:153:           String lContentScript = <![$jac:loc:content]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:154:           String lContentScriptMethod = <![$jac:loc:content:method]!>;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:155:           MicScriptHelper lMicScriptHelper = (MicScriptHelper) loadScript(lContentScript);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:156:           lMicScriptHelper.execute(lContextObject);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:157:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:158:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:159:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:160: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:161:     </td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:162:   </tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:163: </table>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:164: <!-- Site Footer -->
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:165: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:166:   <!$jac:loc:footer!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:167:   while (<!$jac:loc:footer!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:168:     iScript.execMethod(iScript.loadScript(<![$jac:loc:footer]!>, <![$jac:loc:footer:context]!>), <![$jac:loc:footer:method]!>);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:169:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:170: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:171: </html>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:172: <!-- exit micTemplate -->
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:173: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:174:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\applicationFramework\micTemplateApp.script:175:   
+C:\ArchitectsCompanion\jac\conf\micPostfix.script:1: }

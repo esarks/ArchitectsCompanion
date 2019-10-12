@@ -1,0 +1,24 @@
+execute(com.learning.paul.report.MyReportMake)
+makeDdl
+createTable: com.learning.paul.report.MyTable_DbTable - MyTable
+createTableJeo: com.learning.paul.report.MyTable_DbTable - MyTable
+Making MyTable
+Compile \Program Files\Apache Software Foundation\Tomcat 5.0\micClasses\com\learning\paul\report\MyTable.java
+Compiling Scripts...
+*** Events:
+[Microsoft][SQLServer 2000 Driver for JDBC][SQLServer]There is already an object named 'MyTable' in the database.
+makeJeo
+createJeo: com.learning.paul.report.MyReport_Jeo - MyReportJeo
+Making MyReportJeo
+createTableJeo: com.learning.paul.report.MyTable_DbTable - MyTable
+Compile \Program Files\Apache Software Foundation\Tomcat 5.0\micClasses\com\learning\paul\report\MyReportJeo.java
+Compiling Scripts...
+make
+generateReport: com.learning.paul.report.MyReport_Report
+Making MyReport
+Compile \Program Files\Apache Software Foundation\Tomcat 5.0\micClasses\com\learning\paul\report\MyReport.java
+Compiling Scripts...
+generateServices: com.learning.paul.report.MyTable_Services
+Making MyTableCrud
+Compile \Program Files\Apache Software Foundation\Tomcat 5.0\micClasses\com\learning\paul\report\MyTableCrud.java
+Compiling Scripts...

@@ -1,0 +1,94 @@
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>set JAVA_HOME=C:\ArchitectsCompanion\jac2017\jdk1.8.0_112 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>call phase1 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>set JAC_BUILD=C:\ArchitectsCompanion\jac2017\jacBuild8 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>if EXIST C:\ArchitectsCompanion\jac2017\jacBuild8\phase1Classes rmdir/q/s C:\ArchitectsCompanion\jac2017\jacBuild8\phase1Classes 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>mkdir C:\ArchitectsCompanion\jac2017\jacBuild8\phase1Classes 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>rem set CLASSPATH=C:\ArchitectsCompanion\jac2017\jacBuild8\source\java 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>rem set CLASSPATH=;C:\ArchitectsCompanion\jac2017\jacBuild8\lib\jetty\javax.servlet.jar 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>set CLASSPATH=C:\ArchitectsCompanion\jac2017\jacBuild8\lib\jetty\javax.servlet.jar 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>set CLASSPATH=C:\ArchitectsCompanion\jac2017\jacBuild8\lib\jetty\javax.servlet.jar;C:\ArchitectsCompanion\jac2017\jacBuild8\lib\oreilly\cos.jar 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>set CLASSPATH=C:\ArchitectsCompanion\jac2017\jacBuild8\lib\jetty\javax.servlet.jar;C:\ArchitectsCompanion\jac2017\jacBuild8\lib\oreilly\cos.jar;C:\ArchitectsCompanion\jac2017\jacBuild8\lib\jetty\org.mortbay.jetty.jar 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>set CLASSPATH=C:\ArchitectsCompanion\jac2017\jacBuild8\lib\jetty\javax.servlet.jar;C:\ArchitectsCompanion\jac2017\jacBuild8\lib\oreilly\cos.jar;C:\ArchitectsCompanion\jac2017\jacBuild8\lib\jetty\org.mortbay.jetty.jar;C:\ArchitectsCompanion\jac2017\jdk1.8.0_112\lib\tools.jar 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>"C:\ArchitectsCompanion\jac2017\jdk1.8.0_112\bin\javac" -d C:\ArchitectsCompanion\jac2017\jacBuild8\phase1Classes -g -sourcepath C:\ArchitectsCompanion\jac2017\jacBuild8\source\java @C:\ArchitectsCompanion\jac2017\jacBuild8\bin\phase1List.txt 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>if EXIST C:\ArchitectsCompanion\jac2017\jacBuild8\lib\jac rmdir/q/s C:\ArchitectsCompanion\jac2017\jacBuild8\lib\jac 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>mkdir C:\ArchitectsCompanion\jac2017\jacBuild8\lib\jac 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>"C:\ArchitectsCompanion\jac2017\jdk1.8.0_112\bin\jar" cf C:\ArchitectsCompanion\jac2017\jacBuild8\lib\jac\jac.jar -C "C:\ArchitectsCompanion\jac2017\jacBuild8\phase1Classes" . 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>if EXIST C:\ArchitectsCompanion\jac2017\jacBuild8\phase1Classes rmdir/q/s C:\ArchitectsCompanion\jac2017\jacBuild8\phase1Classes 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>call phase2 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>set JAC_BUILD=C:\ArchitectsCompanion\jac2017\jacBuild8 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>if EXIST C:\ArchitectsCompanion\jac2017\jacBuild8\classes rmdir/q/s C:\ArchitectsCompanion\jac2017\jacBuild8\classes 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>mkdir C:\ArchitectsCompanion\jac2017\jacBuild8\classes 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>if EXIST C:\ArchitectsCompanion\jac2017\jacBuild8\lib\mic rmdir/q/s C:\ArchitectsCompanion\jac2017\jacBuild8\lib\mic 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>mkdir C:\ArchitectsCompanion\jac2017\jacBuild8\lib\mic 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>if EXIST C:\ArchitectsCompanion\jac2017\jacBuild8\phase2Classes rmdir/q/s C:\ArchitectsCompanion\jac2017\jacBuild8\phase2Classes 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>mkdir C:\ArchitectsCompanion\jac2017\jacBuild8\phase2Classes 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>set JAC_BASE=C:\ArchitectsCompanion\jac2017\jacBuild8 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>cd C:\ArchitectsCompanion\jac2017\jacBuild8\bin 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>call Job jac com.esarks.arm.scripts.ExitMethod         ! jac 
+
+C:\ArchitectsCompanion\jac2017\jacBuild8\bin>echo off 
+Job.bat jacBuild8
+Job.bat 1=jac
+Job.bat 2=com.esarks.arm.scripts.ExitMethod
+Job.bat 3=!
+Job.bat 4=jac
+SetJob.bat jacBuild8
+JAC_BASE=C:\ArchitectsCompanion\jac2017\jacBuild8
+JAC_HOME=C:\ArchitectsCompanion\jac2017\jacBuild8
+JAC_WORK=C:\ArchitectsCompanion\jac2017\jacBuild8\classes
+JAC_SCRIPTS=C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts
+Architects Companion
+jac v2009.02.01
+(c) Copyright 2009, Architects of Software Design, Corp.  ALL RIGHTS RESERVED.
+Terminate batch job (Y/N)? 
+Job.bat jacBuild8
+Job.bat 1=jac
+Job.bat 2=com.esarks.arm.scripts.FinalReturnMethod
+Job.bat 3=!
+Job.bat 4=jac
+SetJob.bat jacBuild8
+JAC_BASE=C:\ArchitectsCompanion\jac2017\jacBuild8
+JAC_HOME=C:\ArchitectsCompanion\jac2017\jacBuild8
+JAC_WORK=C:\ArchitectsCompanion\jac2017\jacBuild8\classes
+JAC_SCRIPTS=C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts
+Terminate batch job (Y/N)? 
+Job.bat jacBuild8
+Job.bat 1=jac
+Job.bat 2=com.esarks.arm.scripts.GetEffecitveDate
+Job.bat 3=!
+Job.bat 4=jac
+SetJob.bat jacBuild8
+JAC_BASE=C:\ArchitectsCompanion\jac2017\jacBuild8
+JAC_HOME=C:\ArchitectsCompanion\jac2017\jacBuild8
+JAC_WORK=C:\ArchitectsCompanion\jac2017\jacBuild8\classes
+JAC_SCRIPTS=C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts
+Architects Companion
+jac v2009.02.01
+(c) Copyright 2009, Architects of Software Design, Corp.  ALL RIGHTS RESERVED.

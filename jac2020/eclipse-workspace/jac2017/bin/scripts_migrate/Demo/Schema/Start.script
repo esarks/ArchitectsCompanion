@@ -1,0 +1,8 @@
+<%
+
+  loadXmlSchema("Demo.Schema.schemas");
+  parseXmlSchema("Demo.Schema.records");
+
+%>
+****************************
+<![records:Demo.Schema.description]!>

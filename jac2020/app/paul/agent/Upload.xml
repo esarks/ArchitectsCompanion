@@ -1,0 +1,59 @@
+<mic.element type="Component" title="">
+
+  <urlRequest>
+    <method>GET</method>
+    <url>http://mail.themarshalls.us</url>
+    <find name="uid">
+      <range>
+        <startsWith inclusive="false">"uid" value="</startsWith>
+        <endsWith inclusive="false">"</endsWith>
+      </range>
+    </find>
+  </urlRequest>
+
+  <urlRequest>
+    <method>POST</method>
+    <url>http://mail.themarshalls.us/login.html</url>
+    <parameter name="username">paul@themarshalls.us</parameter>
+    <parameter name="password">sniffer</parameter>
+    <parameter name="Login_x">Login</parameter>
+    <parameter name="mdpass"></parameter>
+    <symbol>uid</symbol>
+    <find name="id">
+      <range>
+        <startsWith inclusive="false">"writemail.html?id=</startsWith>
+        <endsWith inclusive="false">"</endsWith>
+      </range>
+    </find>
+  </urlRequest>
+
+  <urlRequest>
+    <method>GET</method>
+    <url>http://mail.themarshalls.us/writemail.html</url>
+    <symbol>id</symbol>
+  </urlRequest>
+
+  <urlRequest>
+    <method>POST</method>
+    <url>http://mail.themarshalls.us/writeaction.html</url>
+    <parameter name="folder">inbox</parameter>
+    <parameter name="forwardfile"></parameter>
+    <parameter name="Send_x">1</parameter>
+    <parameter name="Delete_Message"></parameter>
+    <parameter name="attachcount">2</parameter>
+    <parameter name="nosignature">1</parameter>
+    <parameter name="morebutton"></parameter>
+    <parameter name="showlite"></parameter>
+    <parameter name="redirectfile"></parameter>
+    <parameter name="sendtimezone"></parameter>
+    <parameter name="Send_x1">Send Message</parameter>
+    <parameter name="writepriority">1</parameter>
+    <parameter name="writeto">ptm@esarks.com</parameter>
+    <parameter name="writecc"></parameter>
+    <parameter name="writesubject">test upload</parameter>
+    <parameter name="writebody">test</parameter>
+    <file name="writeattach[]">c:\status.wri</file>
+    <symbol>id</symbol>
+  </urlRequest>
+
+</mic.element>

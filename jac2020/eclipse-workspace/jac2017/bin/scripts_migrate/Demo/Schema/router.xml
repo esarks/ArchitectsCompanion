@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<router>
+
+  <Demo.Schema.loc>default
+    <template>elumn8.pageTemplateA</template>
+    <stylesheet>elumn8.regionIncludeStyleSheetA
+      <style>.sansa {font-family: Arial, Helvetica, sans-serif}</style>
+      <style>p {font-family: Arial, Helvetica, sans-serif; color: #990000; line-height: 120%; margin-top: .75em; margin-bottom: .75em;}</style>
+    </stylesheet>
+    <title>eLumN8 Online</title>
+    <body>bgcolor="#FFFFFF"</body>
+    <body>leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"</body>
+    <page>align="center" width="100%" border="0" cellspacing="0" cellpadding="0"</page>
+    <header text="header text">elumn8.regionIncludeHeader</header>
+    <footer>elumn8.regionIncludeSiteFooterA
+      <textStyle>color: #990000; font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold; font-variant: small-caps;</textStyle>
+      <text>&amp;copy;copyright &lt;small&gt;1998-2003&lt;/small&gt; architects of software design, corp. | phone: &lt;small&gt;727-804-0148&lt;/small&gt;</text>
+      <lineStyle>color: #990000; height: 1px;</lineStyle>
+    </footer>
+    <menu style='color: #FFBB55' bgcolor='#FFFFFF'>
+      <item tdstyle='color: #990000; line-height: 60%' bgcolor='#FF9900' tdtitle='&lt;b&gt;About&lt;/b&gt;' />
+      <item astyle='color: #990000' href='Index.jsp?loc=Index' atitle='&#149; Home' />
+      <item astyle='color: #990000' href='Index.jsp?loc=Overview' atitle='&#149; Overview' />
+      <item astyle='color: #990000' href='Index.jsp?loc=GettingStarted' atitle='&#149; Getting Started' />
+      <item tdstyle='color: #990000; line-height: 60%' bgcolor='#FF9900' tdtitle='&lt;b&gt;Community&lt;/b&gt;' />
+      <item astyle='color: #990000' href='Index.jsp?loc=Contributors' atitle='&#149; Contributors' />
+      <item astyle='color: #990000' href='Index.jsp?loc=GetInvolved' atitle='&#149; Get Involved' />
+      <item astyle='color: #990000' href='Index.jsp?loc=MailingList' atitle='&#149; Mailing List' />
+      <item tdstyle='color: #990000; line-height: 60%' bgcolor='#FF9900' tdtitle='&lt;b&gt;Documents&lt;/b&gt;' />
+      <item astyle='color: #990000' href='Index.jsp?loc=Charter' atitle='&#149; Charter' />
+      <item astyle='color: #990000' href='Index.jsp?loc=License' atitle='&#149; License' />
+      <item astyle='color: #990000' href='Index.jsp?loc=CodingStandards' atitle='&#149; Coding Standards' />
+      <item astyle='color: #990000' href='Index.jsp?loc=ToDo' atitle='&#149; To Do' />
+      <item tdstyle='color: #990000; line-height: 60%' bgcolor='#FF9900' tdtitle='&lt;b&gt;Tools&lt;/b&gt;' />
+      <item astyle='color: #990000' href='Index.jsp?loc=Download' atitle='&#149; Download' />
+    </menu>
+  </Demo.Schema.loc>
+
+  <Demo.Schema.loc extends='default'>Index
+    <banner>elumn8.regionIncludeBanner</banner>
+    <header text="Index">elumn8.regionIncludeHeader</header>
+    <content>elumn8.regionIncludeContentStyleMultipleColumn
+      <tableStyle>width='100%' valign='top' border='0' cellspacing='3' cellpadding'0'</tableStyle>
+      <column style="width: 200;" content="elumn8.regionIncludeSidebar" />
+      <column style="" content="elumn8.contentIndex" />
+    </content>
+  </Demo.Schema.loc>
+
+
+</router>

@@ -1,0 +1,120 @@
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:2: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:3: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:4: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:5: import java.time.Duration;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:6: import java.time.Instant;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:7: import java.time.Period;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:8: import java.time.ZoneId;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:9: import java.time.LocalDate;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:10: import java.time.LocalDateTime;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:11: import java.time.LocalTime;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:12: import java.time.format.DateTimeFormatter;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:13: import java.time.format.FormatStyle;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:14: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:15: import java.util.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:16: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:17: import java.io.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:18: import java.text.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:19: import java.net.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:20: import javax.net.ssl.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:21: import java.security.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:22: import java.sql.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:23: import javax.servlet.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:24: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:25: import java.awt.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:26: import javax.swing.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:27: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:28: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:29: import java.nio.file.Files;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:30: import java.nio.file.Paths;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:31: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:32: import java.io.FileNotFoundException;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:33: import java.io.FileReader;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:34: import java.io.IOException;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:35: import java.util.Iterator;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:36: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:37: import org.json.simple.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:38: import org.json.simple.parser.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:39: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:40: <#import#>
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:2: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:4:   }
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:5: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:7: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:8:     super(aScript);
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:9: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:10:   }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:1: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:2: public void execute() {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:3: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:4: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:5: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:6: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:7: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:8: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:9:   <!sprintFile!>!set("Sprint 1 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:10:   <!sprintFile!>!set("Sprint 2 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:11:   <!sprintFile!>!set("Sprint 3 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:12:   <!sprintFile!>!set("Sprint 4 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:13:   <!sprintFile!>!set("Sprint 5 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:14:   <!sprintFile!>!set("Sprint 6 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:15:   <!sprintFile!>!set("Sprint 7 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:16:   <!sprintFile!>!set("Sprint 8 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:17:   <!sprintFile!>!set("Sprint 9 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:18:   <!sprintFile!>!set("Sprint 10 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:19:   <!sprintFile!>!set("Sprint 11 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:20:   <!sprintFile!>!set("Sprint 12 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:21:   <!sprintFile!>!set("Sprint 13 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:22:   <!sprintFile!>!set("Sprint 14 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:23:   <!sprintFile!>!set("Sprint 15 Backlog.xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:24:   <!sprintFile!>!set("Sprint 1 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:25:   <!sprintFile!>!set("Sprint 2 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:26:   <!sprintFile!>!set("Sprint 3 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:27:   <!sprintFile!>!set("Sprint 4 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:28:   <!sprintFile!>!set("Sprint 5 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:29:   <!sprintFile!>!set("Sprint 6 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:30:   <!sprintFile!>!set("Sprint 7 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:31:   <!sprintFile!>!set("Sprint 8 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:32:   <!sprintFile!>!set("Sprint 9 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:33:   <!sprintFile!>!set("Sprint 10 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:34:   <!sprintFile!>!set("Sprint 11 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:35:   <!sprintFile!>!set("Sprint 12 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:36:   <!sprintFile!>!set("Sprint 13 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:37:   <!sprintFile!>!set("Sprint 14 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:38:   <!sprintFile!>!set("Sprint 15 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:39:   <!sprintFile!>!set("Sprint 16 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:40:   <!sprintFile!>!set("Sprint 17 Backlog (OY1).xml"); 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:41: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:42:   <!sprintFile!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:43:   while (<!sprintFile!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:44:   iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\Agile_Transformation\\Kingston\\Experiment v20190605a\\Rational 20190603a\\" + <![sprintFile]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:45: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:46:   if (<![Project:StartDate]!>.length() > 1) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:47:     <!subString1!>!reset(<![Project:StartDate]!>.substring(0,10));
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:48:     <!subString2!>!reset(<![Project:StartDate]!>.substring(11,19));
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:49:     <!StartDate!>!reset(<![subString1]!> + " " + <![subString2]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:50:   }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:51:   if (<![Project:FinishDate]!>.length() > 1) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:52:     <!subString1!>!reset(<![Project:FinishDate]!>.substring(0,10));
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:53:     <!subString2!>!reset(<![Project:FinishDate]!>.substring(11,19));
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:54:     <!FinishDate!>!reset(<![subString1]!> + " " + <![subString2]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:55:   }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:56:   
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:57: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:58: <![Project:Name]!>,<![StartDate]!>,<![FinishDate]!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:59: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:60:   <!Project!>!remove();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:61:   }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:62: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:63: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:64: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:65: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:66: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:67: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:68: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\Parse.script:69: }
+C:\ArchitectsCompanion\jac2017\conf\micPostfix.script:1: }

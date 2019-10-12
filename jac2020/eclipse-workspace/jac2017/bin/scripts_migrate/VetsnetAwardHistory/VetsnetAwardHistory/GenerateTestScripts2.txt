@@ -1,0 +1,146 @@
+<$kill [$homeDirectory]\\com\\esarks\\ac\\scripts\\GenerateDocs.java>
+<$kill [$homeDirectory]\\com\\esarks\\ac\\scripts\\GenerateDocs.class>
+<$openoutput [$homeDirectory]\\com\\esarks\\ac\\scripts\\GenerateDocs.java>
+package com.esarks.ac.scripts;
+
+import com.esarks.ac.*;
+import java.util.*;
+
+public class GenerateDocs {
+
+private ArrayList iArrayList = new ArrayList();
+private Script iScript;
+
+  private GenerateDocs(  ) {
+  }
+
+  public GenerateDocs(com.esarks.ac.Script aScript) {
+    iScript = (Script) aScript;
+  }
+
+  public void addCppItem(String aItem, String aType, String aSize, String aOracleType, String aOracleSize, String aBaseType) {
+
+    if (addItem(aItem) == true) {
+      iScript.getSymbolTable().setLocalProperty("Items", aItem);
+      iScript.getSymbolTable().setLocalProperty("Items:Type", aType);
+      iScript.getSymbolTable().setLocalProperty("Items:Size", aSize);
+      iScript.getSymbolTable().setLocalProperty("Items:OracleType", aOracleType);
+      iScript.getSymbolTable().setLocalProperty("Items:OracleSize", aOracleSize);
+      iScript.getSymbolTable().setLocalProperty("Items:BaseType", aBaseType);
+    }
+
+  }
+
+  public boolean addItem(String aItem) {
+
+    for(int i=0; i<iArrayList.size(); i++) {
+      if (((String) iArrayList.get(i)).compareTo(aItem) == 0) return false;
+      if (((String) iArrayList.get(i)).compareTo(aItem) > 0) {
+        iArrayList.add(i, aItem);
+//        System.out.println(">>" + aItem);
+        return true;
+      }
+    }
+    iArrayList.add(aItem);
+//    System.out.println(">>" + aItem);
+    return true;
+  }
+
+  public void xferItems(String toProperty) {
+    for(int i=0; i<iArrayList.size(); i++) {
+      iScript.getSymbolTable().setLocalProperty(toProperty, (String) iArrayList.get(i));
+    }
+    iArrayList = new ArrayList();
+  }
+}
+<$close>
+<$compile [$homeDirectory]\\com\\esarks\\ac\\scripts\\GenerateDocs.java>
+<$script>
+
+<$reset $outputFile=[$tempDirectory][$backSlash]TestScripts2.wri>
+<$kill [$outputFile]>
+<$openoutput [$outputFile]>
+
+<$foreach decisionRules:decision>
+
+  <$unset Entity=>
+  <$setxml [$scriptDirectory][$backSlash][decisionRules:decision:type].xml>
+  <$find Entity:name=[decisionRules:decision:type]>
+  <$notfound>
+    <$println Entity:name=[decisionRules:decision:type] NOT FOUND!>
+  <$endfind>
+
+  <$println [decisionRules:decision:type]>
+  <$println >
+  <$foreach decisionRules:decision:rules:rule>
+    <$foreach decisionRules:decision:rules:rule:condition>
+      <$unset phrase>
+      <$if [decisionRules:decision:rules:rule:condition:appendsTo]=>
+        <$reset thisCondition=[decisionRules:decision:rules:rule:condition:sequence]>
+
+        <$unset oneFields>
+        <$load oneFields=com.esarks.ac.scripts.GenerateDocs>
+        <$foreach decisionRules:decision:rules:rule:condition:field>
+          <$exec oneFields!addItem([decisionRules:decision:rules:rule:condition:field])>
+        <$endfor>
+
+        <$foreach decisionRules:decision:rules:rule:condition:phrase>
+          <$if [decisionRules:decision:rules:rule:condition:phrase:text]=><$else>
+            <$reset phrase=[phrase][decisionRules:decision:rules:rule:condition:phrase:text]>
+          <$endif>
+          <$if [decisionRules:decision:rules:rule:condition:phrase:field]=><$else>
+            <$reset phrase=[phrase][decisionRules:decision:rules:rule:condition:phrase:field]>
+
+            <$if [decisionRules:decision:rules:rule:condition:phrase:participant]=true>
+              <$exec oneFields!addItem(FULL_NM)>
+            <$else>
+              <$exec oneFields!addItem([decisionRules:decision:rules:rule:condition:phrase:field])>
+            <$endif>
+
+          <$endif>
+        <$endfor>
+
+        <$println   [phrase]>
+
+        <$if [decisionRules:decision:rules:rule:condition:appendsTo]=>
+          <$foreach decisionRules:decision:rules:rule:condition>
+            <$foreach decisionRules:decision:rules:rule:condition:appendsTo>
+              <$if [decisionRules:decision:rules:rule:condition:appendsTo]=[thisCondition]>
+                <$unset phrase>
+
+                <$foreach decisionRules:decision:rules:rule:condition:phrase>
+                  <$if [decisionRules:decision:rules:rule:condition:phrase:text]=><$else>
+                    <$reset phrase=[phrase][decisionRules:decision:rules:rule:condition:phrase:text]>
+                  <$endif>
+                  <$if [decisionRules:decision:rules:rule:condition:phrase:field]=><$else>
+                    <$reset phrase=[phrase][decisionRules:decision:rules:rule:condition:phrase:field]>
+                    <$if [decisionRules:decision:rules:rule:condition:phrase:participant]=true>
+                      <$exec oneFields!addItem(FULL_NM)>
+                    <$else>
+                      <$exec oneFields!addItem([decisionRules:decision:rules:rule:condition:field])>
+                    <$endif>
+                  <$endif>
+                <$endfor>
+
+                <$println   Optional:[phrase]>
+
+              <$endif>
+            <$endfor>
+          <$endfor>
+        <$endif>
+        <$println >
+
+        <$unset Fields>
+        <$exec oneFields!xferItems(Fields)>
+        <$print AWD_DECN_TYPE ,>
+        <$foreach Fields>
+        <$last>
+          <$println [Fields]>
+        <$every>
+          <$print [Fields] ,>
+        <$endfor>
+
+      <$endif>
+    <$endfor>
+  <$endfor>
+<$endfor>

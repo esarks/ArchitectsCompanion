@@ -1,0 +1,18 @@
+<report name="com.esarks.arm.logging.ProcessRpt" inJeo="com.esarks.arm.model.jeo.ServiceJeo">
+
+  <jeo instance="com.esarks.arm.model.jeo.ProcessJeo" type="process">
+
+    <attribute name="eventTime" value="eventTime" />
+    <attribute name="eventCode" value="eventCode" />
+    <attribute name="description" value="description" />
+    <jeo instance="com.esarks.arm.model.jeo.ProcessJeo" type="item">
+
+      <attribute name="eventTime" value="eventTime" />
+      <attribute name="eventCode" value="eventCode" />
+      <attribute name="description" value="description" />
+
+    </jeo>
+
+  </jeo>
+
+</report>

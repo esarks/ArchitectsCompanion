@@ -1,0 +1,246 @@
+<properties base="com.esarks.arm.properties.conf.properties">
+  
+  <com.esarks.arm.properties.conf.properties>default
+    <context>default</context>
+    <logPath>logs</logPath> 
+
+    <dbObjects>
+
+      <dbConnection name="iccrep">
+
+        <object name="casemixlog" />
+        <object name="changelog" />
+        <object name="changeloghboc" />
+        <object name="copylog" />
+        <object name="copylogdetail" />
+        <object name="deposit" />
+        <object name="f485v2" />
+        <object name="goals" />
+        <object name="gptable" />
+        <object name="iccrep_agency_master" />
+        <object name="iccrep_corporate_master" />
+        <object name="iccrep_customer_master" />
+        <object name="idlist" />
+        <object name="meds" />
+        <object name="oasis" />
+        <object name="oasisr" />
+        <object name="orders" />
+        <object name="reporting_branch" />
+        <object name="smartedittable" />
+        <object name="statereports" />
+        <object name="statereportslog" />
+        <object name="tfauditlog" />
+
+      </dbConnection>
+        
+      <dbConnection name="hrm">
+
+<!-- Temporarily assigned to hrm -->
+        <object name="hrmprocesslist" />
+
+<!-- Tables -->
+        <object name="armsearchdocuments" />
+        <object name="armsearchdocumentswords" />
+        <object name="hrmassessment" />
+        <object name="hrmassessmentanalysis" />
+        <object name="hrmassessmentoasis" />
+        <object name="hrmassessmentversion" />
+        <object name="hrmepisode" />
+        <object name="hrmmedicationhistory" />
+        <object name="hrmmedicationitem" />
+        <object name="hrmmedsdnoteen" />
+        <object name="hrmmedsdnotegfc" />
+        <object name="hrmmedsdnoteidx" />
+        <object name="hrmmedsdpndc" />
+        <object name="hrmmedsdpsyn" />
+        <object name="hrmmedsdpthp" />
+        <object name="hrmmedsdptsmono" />
+        <object name="hrmmedsdpttl" />
+        <object name="hrmmedsmasalg" />
+        <object name="hrmmedsmasdx" />
+        <object name="hrmmedsmasgcr" />
+        <object name="hrmmedsmasgfc" />
+        <object name="hrmmedsmasgfcin" />
+        <object name="hrmmedsmasgm" />
+        <object name="hrmmedsmasicdi" />
+        <object name="hrmmedsmasmono" />
+        <object name="hrmmedsmasmonot" />
+        <object name="hrmmedsmaspkgin" />
+        <object name="hrmmedsmasscitm" />
+        <object name="hrmmedsmastc" />
+        <object name="hrmmedsmaswrn" />
+        <object name="hrmmedsmaswrnm" />
+        <object name="hrmmedsproduct" />
+        <object name="hrmoasisdiary" />
+        <object name="hrmoasisdomain" />
+        <object name="hrmoasisindex" />
+        <object name="hrmoasismigration" />
+        <object name="hrmpassword" />
+        <object name="hrmpatient" />
+        <object name="hrmperson" />
+        <object name="hrmpersonaddress" />
+        <object name="hrmpersonaudit" />
+        <object name="hrmpersonemailaddress" />
+        <object name="hrmpersonethnicity" />
+        <object name="hrmpersonnumber" />
+        <object name="hrmpersonwords" />
+        <object name="hrmqstnr" />
+        <object name="hrmqstnrresponse" />
+        <object name="hrmqstnrversion" />
+        <object name="hrmstdqstnr" />
+        <object name="hrmstdqstnrversion" />
+        <object name="hrmstdquest" />
+        <object name="hrmstdresponse" />
+        <object name="hrmtypelist" />
+        <object name="hrmtypetranslation" />
+        <object name="oasisversion" />
+
+<!-- Views -->
+        <object name="armsearchview" />
+        <object name="hrmoasisview" />
+        <object name="hrmindexoasisview" />
+        <object name="hrmindexoasisview2" />
+        <object name="hrmoasischangelogview" />
+        <object name="hrmoasischangeloghbocview" />
+        <object name="hrmoasisassessmentview" />
+        <object name="hrmoasismaxversionview" />
+        <object name="hrmpatientsearchview" />
+        <object name="hrmpatienttreeview" />
+        <object name="hrmpersonview" />
+        <object name="hrmpersonethnicityview" />
+        <object name="hrmpersonnumberview" />
+        <object name="hrmpersonaddressview" />
+        <object name="hrmppsanalysisview" />
+        <object name="hrmppsanalysisview1" />
+        <object name="hrmppsanalysisview2" />
+        <object name="hrmassessmentanalysisview" />
+        <object name="hrmdashview" />
+        <object name="hrmdashview2" />
+        <object name="hrmsmarteditview" />
+        <object name="hrmassessmentstatusview" />        
+        <object name="hrmpasswordview" />
+        <object name="hrmtypelistview" />
+        <object name="hrmmedsdnoteenview" />
+        <object name="hrmmedsscreeningitem" />
+        <object name="hrmmedsscreeningview" />
+
+<!-- Functions -->       
+        <object name="hrmconcatname" />
+        <object name="hrmgetethnicitytype" />
+        <object name="hrmgetpersonnumbervalue" />
+        <object name="hrmgettypename" />
+
+      </dbConnection>
+      
+    </dbObjects>
+
+    <dbTypes name="sqlServer">
+      <boolean             property="getValueBoolean"                                  java="boolean"             setString="boolean"                          jdbc="Boolean"   >bit</boolean>
+      <byte                property="getValueByte"                                     java="byte"                setString="byte"                             jdbc="Byte"      >tinyint</byte>
+      <short               property="getValueShort"                                    java="short"               setString="short"                            jdbc="Short"     >smallint</short>
+      <int                 property="getValueInt"                                      java="int"                 setString="int"                              jdbc="Int"       >int</int>
+      <long                property="getValueLong"                                     java="long"                setString="long"                             jdbc="Long"      >bigint</long>
+      <char    size="true" property="getValueChar"                                     java="char"                setString="char"                             jdbc="Char"      >char</char>
+      <float               property="getValueFloat"                                    java="float"               setString="float"                            jdbc="Float"     >real</float>
+      <double              property="getValueDouble"                                   java="double"              setString="double"                           jdbc="Double"    >float</double>
+      <string  size="true" property="getValueString"                                   java="String"                                                           jdbc="String"    >varchar</string>
+      <date                property="getValueDate"      jdbcProperty="getValueSqlDate" java="java.util.Date"      setString="date:yyyy-MM-dd"                  jdbc="Date"      >datetime</date>
+      <time                property="getValueTime"                                     java="java.sql.Time"       setString="time:yyyy-MM-dd HH:mm:ss.S"       jdbc="Time"      >datetime</time>
+      <datetime            property="getValueTimestamp"                                java="java.sql.Timestamp"  setString="timestamp:yyyy-MM-dd HH:mm:ss.S"  jdbc="Timestamp" >datetime</datetime>
+      <object              property="getValueObject"                                   java="Object"              setString="string"                                            >blob</object>
+    </dbTypes>
+
+  </com.esarks.arm.properties.conf.properties> 
+
+  <com.esarks.arm.properties.conf.properties extends="default">dev01
+    <context>dev01</context>
+
+    <dbConnection name="hrm" openCount="20" >
+      <alias>application</alias>
+      <jdbcClass>com.microsoft.jdbc.sqlserver.SQLServerDriver</jdbcClass>
+      <jdbcConnection>jdbc:microsoft:sqlserver://dev01\rd:1809;DatabaseName=Hrm0730;SelectMethod=Cursor</jdbcConnection>
+      <jdbcUser>iusr_hrm</jdbcUser>
+      <jdbcPassword>pw4hrmaccess</jdbcPassword>
+      <dbTypes>sqlServer</dbTypes>
+      <catalog>Hrm0730</catalog>
+      <owner>iusr_hrm</owner>
+      <stereotype>sqlServer</stereotype>
+    </dbConnection>
+
+    <dbConnection name="iccrep">
+      <jdbcClass>com.microsoft.jdbc.sqlserver.SQLServerDriver</jdbcClass>
+      <jdbcConnection>jdbc:microsoft:sqlserver://dev01\rd:1809;DatabaseName=Iccrep;SelectMethod=Cursor</jdbcConnection>
+      <jdbcUser>iusr_hrm</jdbcUser>
+      <jdbcPassword>pw4hrmaccess</jdbcPassword>
+      <dbTypes>sqlServer</dbTypes>
+      <catalog>Iccrep</catalog>
+      <owner>dbo</owner>
+      <stereotype>sqlServer</stereotype>
+    </dbConnection>
+
+  </com.esarks.arm.properties.conf.properties>
+
+  <com.esarks.arm.properties.conf.properties extends="default">localhost
+    <context>localhost</context>
+
+    <dbConnection name="hrmDefault" openCount="6" >
+      <alias>application</alias>
+      <jdbcClass>com.microsoft.jdbc.sqlserver.SQLServerDriver</jdbcClass>
+      <jdbcConnection>jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=HrmDefault;SelectMethod=Cursor</jdbcConnection>
+      <jdbcUser>sa</jdbcUser>
+      <jdbcPassword>sniffer</jdbcPassword>
+      <dbTypes>sqlServer</dbTypes>
+      <catalog>HrmDefault</catalog>
+      <owner>dbo</owner>
+      <stereotype>sqlServer</stereotype>
+    </dbConnection>
+
+    <dbConnection name="hrm">
+      <jdbcClass>com.microsoft.jdbc.sqlserver.SQLServerDriver</jdbcClass>
+      <jdbcConnection>jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=Hrm;SelectMethod=Cursor</jdbcConnection>
+      <jdbcUser>sa</jdbcUser>
+      <jdbcPassword>sniffer</jdbcPassword>
+      <dbTypes>sqlServer</dbTypes>
+      <catalog>Hrm</catalog>
+      <owner>dbo</owner>
+      <stereotype>sqlServer</stereotype>
+    </dbConnection>
+    
+    <dbConnection name="iccrep">
+      <jdbcClass>com.microsoft.jdbc.sqlserver.SQLServerDriver</jdbcClass>
+      <jdbcConnection>jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=Iccrep;SelectMethod=Cursor</jdbcConnection>
+      <jdbcUser>sa</jdbcUser>
+      <jdbcPassword>sniffer</jdbcPassword>
+      <dbTypes>sqlServer</dbTypes>
+      <catalog>Iccrep</catalog>
+      <owner>dbo</owner>
+      <stereotype>sqlServer</stereotype>
+    </dbConnection>
+
+  </com.esarks.arm.properties.conf.properties>
+
+  <com.esarks.arm.properties.conf.properties extends="default">mySql
+    <context>mySql</context>
+    <jdbcClass>com.mysql.jdbc.Driver</jdbcClass>
+    <jdbcConnection>jdbc:mysql:///esarks</jdbcConnection>
+    <jdbcUser>root</jdbcUser>
+    <jdbcPassword>sniffer</jdbcPassword>
+
+    <dbTypes>
+      <boolean             property="getValueBoolean"                                  java="boolean"             setString="boolean"                          jdbc="Boolean"   >bit</boolean>
+      <byte                property="getValueByte"                                     java="byte"                setString="byte"                             jdbc="Byte"      >tinyint</byte>
+      <short               property="getValueShort"                                    java="short"               setString="short"                            jdbc="Short"     >smallint</short>
+      <int                 property="getValueInt"                                      java="int"                 setString="int"                              jdbc="Int"       >int</int>
+      <long                property="getValueLong"                                     java="long"                setString="long"                             jdbc="Long"      >bigint</long>
+      <char    size="true" property="getValueChar"                                     java="char"                setString="char"                             jdbc="Char"      >char</char>
+      <float               property="getValueFloat"                                    java="float"               setString="float"                            jdbc="Float"     >real</float>
+      <double              property="getValueDouble"                                   java="double"              setString="double"                           jdbc="Double"    >float</double>
+      <string  size="true" property="getValueString"                                   java="String"                                                           jdbc="String"    >varchar</string>
+      <date                property="getValueDate"      jdbcProperty="getValueSqlDate" java="java.util.Date"      setString="date:yyyy-MM-dd"                  jdbc="Date"      >datetime</date>
+      <time                property="getValueTime"                                     java="java.sql.Time"       setString="time:yyyy-MM-dd HH:mm:ss.S"       jdbc="Time"      >datetime</time>
+      <datetime            property="getValueTimestamp"                                java="java.sql.Timestamp"  setString="timestamp:yyyy-MM-dd HH:mm:ss.S"  jdbc="Timestamp" >datetime</datetime>
+    </dbTypes>
+
+  </com.esarks.arm.properties.conf.properties>
+
+</properties>

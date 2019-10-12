@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="Jac2017 Java Source"/>
+	<classpathentry kind="src" path="conf"/>
+	<classpathentry kind="src" path="jrun"/>
+	<classpathentry kind="src" path="jacBuild8"/>
+	<classpathentry kind="src" path="app"/>
+	<classpathentry kind="src" path="classes"/>
+	<classpathentry kind="lib" path="C:/ArchitectsCompanion/jac2017/lib/jac/jac.jar"/>
+	<classpathentry kind="lib" path="C:/ArchitectsCompanion/jac2017/lib/mic/mic.jar"/>
+	<classpathentry kind="lib" path="C:/ArchitectsCompanion/jac2017/lib/jetty/org.mortbay.jetty.jar"/>
+	<classpathentry kind="lib" path="C:/ArchitectsCompanion/jac2017/lib/jetty/org.mortbay.jmx.jar"/>
+	<classpathentry kind="lib" path="C:/ArchitectsCompanion/jac2017/lib/jetty/javax.servlet.jar"/>
+	<classpathentry kind="lib" path="C:/ArchitectsCompanion/jac2017/lib/mysql-connector-java-5.1.18/mysql-connector-java-5.1.18-bin.jar"/>
+	<classpathentry kind="lib" path="C:/ArchitectsCompanion/jac2017/lib/crimson/crimson.jar"/>
+	<classpathentry kind="lib" path="C:/ArchitectsCompanion/jac2017/lib/jacob-1.17-M2/jacob.jar"/>
+	<classpathentry kind="lib" path="C:/ArchitectsCompanion/jac2017/lib/jni4net-0.8.6.0-bin/lib/jni4net.j-0.8.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/ArchitectsCompanion/jac2017/lib/json-simple-1.1.jar/json-simple-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/ArchitectsCompanion/jac2017/lib/tools.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

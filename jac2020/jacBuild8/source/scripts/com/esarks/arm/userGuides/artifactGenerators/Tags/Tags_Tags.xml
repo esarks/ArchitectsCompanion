@@ -1,0 +1,32 @@
+<tags root="tags">
+  <documentation>
+    <![CDATA[
+<p>This is the XML defintion file used by the following scripts:
+<ul><li>com.esarks.arm.userGuides.GenerateTagHtml
+</ul>
+    ]]>
+  </documentation>
+
+  <tag name="root" type="attribute">
+    <documentation>Specifies the root tag of the XML file.</documentation>
+  </tag>
+    
+  <tag name="documentation" type="element">
+    <documentation>Used to describe the purpose of the XML file.</documentation>
+  </tag>
+
+  <tag name="tag..." type="element">
+    <documentation>Defines each tag element or attribute of the file.</documentation>
+       
+      <tag name="name" type="attribute">
+        <documentation>Specifies the name of the tag being described.</documentation>
+      </tag>
+      <tag name="type" type="attribute">
+        <documentation>Specifies if the tag is an XML 'element' or 'attribute'.</documentation>
+      </tag>
+      <tag name="documentation" type="element">
+        <documentation>Specifies the purpose of the tag.</documentation>
+      </tag>
+    </tag>
+
+</tags>

@@ -1,0 +1,174 @@
+
+<business name="VBA">
+
+<products>
+ <AdvInterop description="Advanced Interop"                     owner="Cerner"/>
+ <AmbOrg     description="Ambulatory Organizer"                 owner="Cerner"/>
+ <AmbSched   description="Revenue Cycle / Amulatory Scheduling" owner="Cerner"/>
+ <CAPRI      description="CAPRI"                                owner="VA"/>
+ <ERRA       description="ERRA"                                 owner="VA"/>
+ <HeR        description="Healthy Record"                       owner="Cerner"/>
+ <JLV        description="JLV"                                  owner="VA"/>
+ <MsgCtr     description="Message Center"                       owner="Cerner"/>
+ <PChart     description="PowerChart"                           owner="Cerner"/>
+ <PForms     description="PowerForms"                           owner="Cerner"/>
+ <PatTrack   description="PowerChart / Patient Tracking"        owner="Cerner"/>
+ <Sched      description="Scheduling"                           owner="Cerner"/>
+ <VBMS       description="VBMS"                                 owner="VA"/>
+</products>
+
+<phases>
+ <p1  description="IOC Entry"/>
+</phases>
+
+<wfds>
+ <un1  description="Unspecified 1"/>
+ <un2  description="Unspecified 2"/>
+</wfds>
+
+<interfaces>
+ <orm  description="HL7 ORM"/>
+ <siu  description="HL7 SIU"/>
+</interfaces>
+
+<dates>
+<a1 date1="10/15/2019" date2="10/31/2019"/>
+<a2 date1="10/4/2019" date2=""/>
+<a3 date1="10/15/2019" date2="10/31/2019"/>
+<a4 date1="10/4/2019" date2="10/15/2019"/>
+<a5 date1="10/15/2019" date2="10/31/2019"/>
+<a6 date1="10/15/2019" date2="10/31/2019"/>
+<a7 date1="" date2=""/>
+<a8 date1="10/4/2019" date2="10/15/2019"/>
+<a9 date1="10/15/2019" date2="10/31/2019"/>
+<a10 date1="10/4/2019" date2="10/15/2019"/>
+<a11 date1="10/15/2019" date2="10/31/2019"/>
+<a12 date1="10/15/2019" date2="10/31/2019"/>
+<a13 date1="10/4/2019" date2="10/15/2019"/>
+<a14 date1="10/4/2019" date2="10/15/2019"/>
+<a15 date1="" date2=""/>
+<a16 date1="10/15/2019" date2="10/31/2019"/>
+<a17 date1="10/15/2019" date2="10/31/2019"/>
+<a18 date1="10/15/2019" date2="10/31/2019"/>
+<a19 date1="10/15/2019" date2=""/>
+<a20 date1="10/15/1031" date2="10/31/2019"/>
+<a21 date1="10/15/2019" date2="10/31/2019"/>
+<a22 date1="" date2=""/>
+<a23 date1="10/15/2019" date2=""/>	
+<a24 date1="10/15/2019" date2=""/>
+<a25 date1="10/15/2019" date2=""/>
+<a26 date1="10/15/2019" date2=""/>
+</dates>
+
+  <major name="Request Examination / Evaluation">
+  
+    <workflow name="Determination of Capacity and Capability">
+      <product name="ERRA"             reviewed="No" phase="p1"/>
+      <product name="AdvInterop"       reviewed="No" phase="p1"/>
+    </workflow>
+
+    <workflow name="Request Examinations / Evaluation to Cerner Site">
+      <product name="PChart"           reviewed="No" phase="p1"/>
+      <product name="PForms"           reviewed="No" phase="p1"/>
+    </workflow>
+
+    <workflow name="Status Examination">
+    </workflow>
+
+  </major>
+
+  <major name="Review Examination / Evaluation Request">
+
+    <workflow name="Review Examination / Evaluation Request">
+      <product name="MsgCtr"           reviewed="No" phase="p1"/>
+      <product name="PForms"           reviewed="No" phase="p1"/>
+    </workflow>   
+    
+    <workflow name="Request Clarification">
+      <product name="MsgCtr"           reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Cancel Examination Request">
+      <product name="PChart"           reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Modify Examination Request">
+    </workflow>   
+
+
+    <workflow name="Generate Detail Orders">
+      <product name="PChart"           reviewed="No" phase="p1"/>
+    </workflow>   
+
+
+  </major>
+
+  <major name="Schedule Examination">
+
+    <workflow name="Review Detailed Orders">
+      <product name="AmbOrg"           reviewed="No" phase="p1"/>
+      <product name="MsgCtr"           reviewed="No" phase="p1"/>
+      <wfdesigner name="un1"           reviewed="No" phase="p1"/>
+      <wfdesigner name="un2"           reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Schedule the Examination / Evaluation">
+      <product name="Sched"            reviewed="No" phase="p1"/>
+      <interface name="siu"            reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Manage Appointment">
+      <product name="Sched"            reviewed="No" phase="p1"/>
+    </workflow>   
+
+  </major>
+  
+  <major name="Conduct Examinations">
+  
+    <workflow name="Conduct Examinations">
+      <product name="AmbSched"         reviewed="No" phase="p1"/>
+      <product name="PatTrack"         reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Perform Examination">
+      <product name="PForms"           reviewed="No" phase="p1"/>
+      <product name="PChart"           reviewed="No" phase="p1"/>
+      <product name="HeR"              reviewed="No" phase="p1"/>
+      <product name="VBMS"                 reviewed="No" phase="p1"/>
+      <product name="JLV"                  reviewed="No" phase="p1"/>
+      <product name="CAPRI"                reviewed="No" phase="p1"/>
+    </workflow>   
+
+    <workflow name="Deliver Examination Results">
+      <product name="PForms"           reviewed="No" phase="p1"/>
+      <product name="PChart"           reviewed="No" phase="p1"/>
+    </workflow>   
+
+  </major>
+ 
+  <major name="Claims Establishment">
+    <workflow name="Route Claim"/>
+  </major>
+
+  <major name="Medical Records Review">
+    <workflow name="Enterprise Search"/>
+    <workflow name="Search Within"/>
+    <workflow name="Assemble Record Extract"/>
+    <workflow name="Transmit Medical Records"/>
+    <workflow name="Form 7131"/>
+  </major>
+
+  <major name="Major: Review Examinations">
+    <workflow name="Request Examination Re-Work - Insufficient"/>
+  </major>
+
+  <major name="VRE">
+    <workflow name="Medical Records Search (covered)"/>
+    <workflow name="Request Medical Services"/>
+    <workflow name="Manage Service Requests"/>
+    <workflow name="Deliver Medical Services"/>
+    <workflow name="Review Results"/>
+  </major>
+
+</business>
+

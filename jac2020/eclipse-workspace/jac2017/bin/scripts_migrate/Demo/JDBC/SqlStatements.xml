@@ -1,0 +1,63 @@
+<statements>
+
+  <statement>
+    DROP TABLE calendar_item
+  </statement>
+
+  <statement>
+    CREATE TABLE calendar_item(
+      calendar_item_id number(10,0) NOT NULL,
+      on_date          date NOT NULL,
+      start_time       varchar2(4),
+      end_time         varchar2(4),
+      short_title      varchar2(64),
+      description      varchar2(4000),
+      link             varchar2(128),
+      on_date_descr    varchar2(32),
+      time_descr       varchar2(256),
+      loc_descr        varchar2(256),
+      show_public      varchar2(1),
+      is_blackout      varchar2(1),
+      group_code       varchar2(8),
+      is_calendar      varchar2(1),
+      is_announce      varchar2(1),
+        CONSTRAINT calendar_item_pk PRIMARY KEY (calendar_item_id) USING INDEX TABLESPACE indx
+      ) TABLESPACE users
+  </statement>
+
+  <statement>
+    DROP SEQUENCE calendar_item_seq
+  </statement>
+
+  <statement>
+    CREATE SEQUENCE calendar_item_seq
+      NOCYCLE
+      MAXVALUE 9999999999
+      START WITH 1
+  </statement>
+
+  <statement>
+    CREATE OR REPLACE TRIGGER set_calendar_item_id
+      BEFORE INSERT ON calendar_item
+      FOR EACH ROW
+      DECLARE
+          next_calendar_item_id NUMBER;
+      BEGIN
+          SELECT calendar_item_seq.NEXTVAL
+          INTO next_calendar_item_id
+          FROM dual;
+          :new.calendar_item_id := next_calendar_item_id;
+      END
+  </statement>
+
+  <statement>
+    CREATE OR REPLACE TRIGGER upd_calendar_item_id
+      BEFORE UPDATE OF calendar_item_id ON calendar_item
+      FOR EACH ROW
+      BEGIN
+          RAISE_APPLICATION_ERROR ( - 20000,
+              'UPD_CALENDAR_ITEM_ID Trigger: Updates of the CALENDAR_ITEM_ID are not allowed.');
+      END
+  </statement>
+
+</statements>

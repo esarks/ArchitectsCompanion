@@ -1,0 +1,217 @@
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="onLoad" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>
+  setContext(iScript.getMasterScript());
+  String lPropertySet = <![com.esarks.arm.schemas.router.root:loc:propertySet]!>;
+  System.out.println("RegionsTemplate PropertySet = " + lPropertySet);
+  XmlSchemaFactory lXmlSchemaFactory = iSymbolTable.getXmlSchemaFactory();
+  if (lXmlSchemaFactory.getXmlSchemaElement("com.esarks.arm.schemas.properties.root") == null) {
+    loadXmlSchema("com.esarks.arm.schemas.properties", path(<![com.esarks.arm.schemas.router.root:loc:propertySet:path]!> + "Schema") + ".xml");
+    parseXmlSchema(<![com.esarks.arm.schemas.router.root:loc:propertySet:path]!>);
+    boolean lScan = <!com.esarks.arm.schemas.properties.root!>!scan("property:context", lPropertySet);
+    System.out.println("RegionsTemplate Scan = " + lScan);
+    // Open all the DbConnections possible...
+System.out.println("RegionsTemplate DbConnections = " + <!com.esarks.arm.schemas.properties.root:property:dbConnection!>!size());
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    <!com.esarks.arm.schemas.properties.root:property:dbConnection!>!resetIterator();
+    while (<!com.esarks.arm.schemas.properties.root:property:dbConnection!>!next()) {
+      String lName = <![com.esarks.arm.schemas.properties.root:property:dbConnection:name]!>;
+      String lJdbcClass = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcClass]!>;
+      String lJdbcConnection = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcConnection]!>;
+      String lJdbcUser = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcUser]!>;
+      String lJdbcPassword = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcPassword]!>;
+      String lDbTypes = <![com.esarks.arm.schemas.properties.root:property:dbConnection:dbTypes]!>;
+      String lCatalog = <![com.esarks.arm.schemas.properties.root:property:dbConnection:catalog]!>;
+      String lOwner = <![com.esarks.arm.schemas.properties.root:property:dbConnection:owner]!>;
+      String lStereotype = <![com.esarks.arm.schemas.properties.root:property:dbConnection:stereotype]!>;
+      String lOpenCountString = <![com.esarks.arm.schemas.properties.root:property:dbConnection:openCount]!>;
+      int lOpenCount = 1;
+      if (!lOpenCountString.equals("")) lOpenCount = Integer.parseInt(lOpenCountString);
+
+      for (int lIdx=0; lIdx < lOpenCount; lIdx++) {
+        DbConnection lDbConnection = new DbConnection(lName);
+        lDbConnection.setCatalog(lCatalog);
+        lDbConnection.setOwner(lOwner);
+        lDbConnection.setDbTypes(lDbTypes);
+        lDbConnection.setStereotype(lStereotype);
+        lDbConnectionFactory.register(lDbConnection);
+System.out.println("Connection(" + lStereotype + ") " + lIdx + " at " + lName + "=" + lDbConnection.connect(lJdbcClass, lJdbcConnection, lJdbcUser, lJdbcPassword));
+      }
+      
+      <!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!resetIterator();
+      while (<!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!next()) {
+        lDbConnectionFactory.alias(lName, <![com.esarks.arm.schemas.properties.root:property:dbConnection:alias]!>);
+      }  
+    }
+
+    try {
+      // Associate all the objects to a DbConnection...
+      <!com.esarks.arm.schemas.properties.root:dbObjects:dbConnection!>!resetIterator();
+      while (<!com.esarks.arm.schemas.properties.root:dbObjects:dbConnection!>!next()) {
+        DbConnection lDbConnection = lDbConnectionFactory.getDbConnection(<![com.esarks.arm.schemas.properties.root:dbObjects:dbConnection:name]!>);
+        <!com.esarks.arm.schemas.properties.root:dbObjects:dbConnection:object!>!resetIterator();
+        while (<!com.esarks.arm.schemas.properties.root:dbObjects:dbConnection:object!>!next()) {
+          lDbConnectionFactory.associateObjectConnection(<![com.esarks.arm.schemas.properties.root:dbObjects:dbConnection:object:name]!>, lDbConnection);
+        }
+      }
+    } catch(Throwable e) {
+      System.out.println(e);
+      System.out.println("Failed to associate all database objects to a DbConnection.  Please verify the <dbObjects> section of Properties.xml.");
+      restoreContext();
+      return;
+    }
+  }
+  restoreContext();
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="handlePost" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>
+
+  <:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:template:region!>& {
+    String lRegion = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:template:region]!>;
+    com.esarks.mic.View lView = (com.esarks.mic.View)<!regions:" + lRegion + "!>!getValueObject();
+    lView.handlePost();
+  }
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="prepareRender" visibility="public" return="boolean" >
+     <document></document>
+   </method>
+&>
+
+  boolean lReturn = true;
+  
+  executeThis();
+
+  if (<:iScript.getMasterScript():><!$jac:router.changeloc!>!size() > 0) {
+    // Detected change in location...signal to abort rendering...
+    lReturn = false;
+  }
+      
+<& com.esarks.arm.scripts.FinalReturnMethod
+  <return normal="lReturn" error="false" />
+&>
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="execute" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>
+
+  executeThis();
+  
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="executeThis" visibility="private" return="void" >
+     <document></document>
+   </method>
+&>
+
+  if (<:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:securityManager!>!size() > 0) {
+System.out.println("Custom SecurityManager");
+    iSecurityManager = (com.esarks.mic.SecurityManager) loadScript(<:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:securityManager:script]!>);
+  } else {
+System.out.println("Generic SecurityManager");
+    iSecurityManager = new com.esarks.mic.SecurityManager();
+  }
+
+  <!regions!>!remove();
+  <:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:template:region!>& {
+    String lRegion = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:template:region]!>;
+    com.esarks.mic.View lView = (com.esarks.mic.View) loadScript(<:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":script]!>, <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":instance]!>);
+    lView.setMicSecurityManager(iSecurityManager);
+System.out.println("Region: " + lRegion);
+    <:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add!>& {
+System.out.println("Add: " + <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>);
+      com.esarks.mic.View lAdd = (com.esarks.mic.View) loadScript(<:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>, <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:instance]!>);
+      lView.addView(lAdd);
+    }      
+    <!regions:" + lRegion + "!>!reset(lView);
+  }
+
+  ServletRequest lServletRequest = getServletRequest();
+
+  boolean lHrefError = false;
+  String lScript = "";
+  String lInstance = "";
+  String lMethod = "";
+  String lArgument = null;
+  
+  String lHref = lServletRequest.getParameter("href");
+  if (lHref != null && lHref != "") {
+System.out.println("href = " + lHref);
+    <:iScript.getMasterScript():><!$jac:href:id!>!resetIterator();
+    if (<:iScript.getMasterScript():><!$jac:href!>!scan("id", lHref)) {
+System.out.println("TRUE");
+      lScript = (String) <:iScript.getMasterScript():><![$jac:href:id:script]!>;
+      lInstance = (String) <:iScript.getMasterScript():><![$jac:href:id:instance]!>;
+      lMethod = (String) <:iScript.getMasterScript():><![$jac:href:id:method]!>;
+      if (<:iScript.getMasterScript():><!$jac:href:id:argument!>!size() > 0) lArgument = (String) <:iScript.getMasterScript():><![$jac:href:id:argument]!>;
+    } else {
+System.out.println("FALSE");
+      lHrefError = true;
+    }
+  } else {
+    lScript = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:script:path]!>;
+    lInstance = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:script:instance]!>;
+    lMethod = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:script:method]!>;
+    if (<:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:script:argument!>!size() > 0) lArgument = <:iScript.getMasterScript():><![com.esarks.arm.schemas.router.root:loc:script:argument]!>;
+  }
+
+System.out.println("s:" + lScript + " i:" + lInstance + " m:" + lMethod + " a:" + lArgument);
+
+  if (!lScript.equals("")) handlePost();
+
+  if (!lScript.equals("") && !lMethod.equals("handlePost")) {
+    MicScriptHelper lScriptHelper = (MicScriptHelper) loadScript(lScript, lInstance);
+    lScriptHelper.setMicSecurityManager(iSecurityManager);
+    if (lArgument == null) {
+      iScript.execMethod(lScriptHelper, lMethod);
+    } else {
+      iScript.execMethod(lScriptHelper, lMethod, new Object[] {lArgument});
+    }
+  }
+
+  <:iScript.getMasterScript():><!$jac:href:id!>!removeValue();
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="findRegion" visibility="public" return="boolean" >
+     <document></document>
+     <argument type="String" name="aRegion" />
+   </method>
+&>
+
+  if (<:iScript.getMasterScript():><!com.esarks.arm.schemas.router.root:loc:" + aRegion + "!>!size() > 0) return true;
+  
+<& com.esarks.arm.scripts.FinalReturnMethod
+  <return>
+    <normal>false</normal>
+    <error>false</error>
+  </return>
+&>
+  

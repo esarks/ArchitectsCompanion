@@ -1,0 +1,1299 @@
+
+//$Section=License$Preserve=no
+//  Generated at 2005.07.01 09:58:57.341 AM EDT by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+
+//$Section=ChangeLog$Preserve=yes
+
+/* ========================================================================= *
+   Contributor        Description
+   ------------------ ------------------------------------------------------
+                      Author
+
+ * ========================================================================= */
+
+//$Section=ChangeLog$Preserve=no
+
+//----------------------------------------------------------------------------
+// This section is for custom operations.
+//----------------------------------------------------------------------------
+//$Section=CustomOperations$Preserve=yes
+//$Section=CustomOperations$Preserve=no
+    public void batchCreateArmSearchDocumentsWords(com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+      java.util.Date lStartTime = null;
+      if (iMicLog.test(Log._APP)) {
+        lStartTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:batchCreateArmSearchDocumentsWords" + "!Enter method");
+      }
+      DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+      DbConnection lDbConnection = null;
+
+      PropertyValue lDbConnectionPropertyValue = aJeo.getPropertyValue("DbConnection");
+      if (lDbConnectionPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL) {
+        lDbConnection = (DbConnection) lDbConnectionPropertyValue.getValueObject();
+      } else {
+        lDbConnection = lDbConnectionFactory.getDbConnection("application");
+      }
+
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : batchCreateArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:batchCreateArmSearchDocumentsWords" + "!DbConnection is null");
+        }
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        if (!aJeo.getRequest().getOrderClausePropertyValue().toString().equals("")) {
+          lOrder = aJeo.getRequest().getOrderClausePropertyValue().toString();
+        }
+        String lSql = "INSERT INTO $ArmSearchDocumentsWords (urlId,word) VALUES (?,?) ";
+
+        if (!aJeo.getRequest().getSelectClausePropertyValue().toString().equals("")) {
+          lSql = aJeo.getRequest().getSelectClausePropertyValue().toString();
+        }
+        if (lSql.indexOf(" $*top ") > -1) {
+          int lIndexOf = lSql.indexOf(" $*top ");
+          lSql = lSql.substring(0, lIndexOf + 1) + aJeo.getRequest().getTopPropertyValue().toString() + lSql.substring(lIndexOf + 6);
+        }
+
+        int lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$*")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) + aJeo.getRequest().getPropertyValue(lSql.substring(lTagSearchIndex+2, lSize)).toString() + lSql.substring(lSize);
+        }
+
+        lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          int lSize2 = lSql.substring(lTagSearchIndex).indexOf(".");
+          if (lSize2 > -1 && lSize2 < lSize) lSize = lSize2;
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) +
+                   getObjectPrefix(lSql.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lSql.substring(lTagSearchIndex+1, lSize) +
+                   lSql.substring(lSize);
+        }
+
+        if (!aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+          lWhere = aJeo.getRequest().getWhereClausePropertyValue().toString();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        if (aJeo.getRequest().getValueList() != null) {
+          ArrayList lValueList = aJeo.getRequest().getValueList();
+          for (int lValueListIdx=0; lValueListIdx < lValueList.size(); lValueListIdx++) {
+            lStatement.setString(lValueListIdx+1, (String) lValueList.get(lValueListIdx));
+          }
+        } else {
+          for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+            lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+          }
+        }
+        {
+          com.esarks.arm.model.jeo.ServiceJeo lJeox = aJeo;
+          com.esarks.arm.model.jeo.RequestJeo lJeoxx = (com.esarks.arm.model.jeo.RequestJeo) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.RequestJeo", 0);
+          ArrayList arrayList_lJeoxxx = lJeoxx.getJeoByInstanceName("com.esarks.arm.wordSearch.ArmSearchDocumentsWords");
+          for (int idx_lJeoxxx=0; idx_lJeoxxx < arrayList_lJeoxxx.size(); idx_lJeoxxx++) {
+          com.esarks.arm.wordSearch.ArmSearchDocumentsWords lJeoxxx = (com.esarks.arm.wordSearch.ArmSearchDocumentsWords) arrayList_lJeoxxx.get(idx_lJeoxxx);
+          if(lJeoxxx.isUrlIdNull()) {
+            lStatement.setNull(1, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setLong(1, lJeoxxx.getUrlIdPropertyValue().getValueLong());
+          }
+          if(lJeoxxx.isWordNull()) {
+            lStatement.setNull(2, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setString(2, lJeoxxx.getWordPropertyValue().getValueString());
+          }
+        lStatement.addBatch();
+        }
+        }
+        lStatement.executeBatch();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : batchCreateArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:batchCreateArmSearchDocumentsWords" + "!Exception caught!" + e.getMessage());
+        }
+
+        if (aJeo.getSuppressException() == false) {
+          com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+          com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+          lExceptionServiceJeo.addJeo(lExceptionJeo);
+          java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+          lExceptionJeo.setTime(lExceptionTimestamp);
+          lExceptionJeo.setModule("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud");
+          lExceptionJeo.setMethod("batchCreateArmSearchDocumentsWords");
+          lExceptionJeo.setSeverity("unknown");
+          lExceptionJeo.setLocation("");
+          lExceptionJeo.setDescription(e.getMessage());
+          lExceptionJeo.setAction("unknown");
+          lExceptionJeo.setResolution("unknown");
+
+          StackTraceElement[] lStackTraceElements = e.getStackTrace();
+          for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+            com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+            lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+            lExceptionJeo.addJeo(lStackExceptionJeo);
+          }
+
+          iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+        }
+
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : batchCreateArmSearchDocumentsWords");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+      if (iMicLog.test(Log._APP)) {
+        java.util.Date lStopTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:batchCreateArmSearchDocumentsWords" + "!Normal return!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+      }
+    }
+    public void batchCreateArmSearchDocumentsWordsWithIdentity(com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+      java.util.Date lStartTime = null;
+      if (iMicLog.test(Log._APP)) {
+        lStartTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:batchCreateArmSearchDocumentsWordsWithIdentity" + "!Enter method");
+      }
+      DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+      DbConnection lDbConnection = null;
+
+      PropertyValue lDbConnectionPropertyValue = aJeo.getPropertyValue("DbConnection");
+      if (lDbConnectionPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL) {
+        lDbConnection = (DbConnection) lDbConnectionPropertyValue.getValueObject();
+      } else {
+        lDbConnection = lDbConnectionFactory.getDbConnection("application");
+      }
+
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : batchCreateArmSearchDocumentsWordsWithIdentity");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:batchCreateArmSearchDocumentsWordsWithIdentity" + "!DbConnection is null");
+        }
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        if (!aJeo.getRequest().getOrderClausePropertyValue().toString().equals("")) {
+          lOrder = aJeo.getRequest().getOrderClausePropertyValue().toString();
+        }
+        String lSql = "SET IDENTITY_INSERT $ArmSearchDocumentsWords ON INSERT INTO $ArmSearchDocumentsWords (urlId,word) VALUES (?,?) ";
+
+        if (!aJeo.getRequest().getSelectClausePropertyValue().toString().equals("")) {
+          lSql = aJeo.getRequest().getSelectClausePropertyValue().toString();
+        }
+        if (lSql.indexOf(" $*top ") > -1) {
+          int lIndexOf = lSql.indexOf(" $*top ");
+          lSql = lSql.substring(0, lIndexOf + 1) + aJeo.getRequest().getTopPropertyValue().toString() + lSql.substring(lIndexOf + 6);
+        }
+
+        int lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$*")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) + aJeo.getRequest().getPropertyValue(lSql.substring(lTagSearchIndex+2, lSize)).toString() + lSql.substring(lSize);
+        }
+
+        lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          int lSize2 = lSql.substring(lTagSearchIndex).indexOf(".");
+          if (lSize2 > -1 && lSize2 < lSize) lSize = lSize2;
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) +
+                   getObjectPrefix(lSql.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lSql.substring(lTagSearchIndex+1, lSize) +
+                   lSql.substring(lSize);
+        }
+
+        if (!aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+          lWhere = aJeo.getRequest().getWhereClausePropertyValue().toString();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        if (aJeo.getRequest().getValueList() != null) {
+          ArrayList lValueList = aJeo.getRequest().getValueList();
+          for (int lValueListIdx=0; lValueListIdx < lValueList.size(); lValueListIdx++) {
+            lStatement.setString(lValueListIdx+1, (String) lValueList.get(lValueListIdx));
+          }
+        } else {
+          for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+            lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+          }
+        }
+        {
+          com.esarks.arm.model.jeo.ServiceJeo lJeox = aJeo;
+          com.esarks.arm.model.jeo.RequestJeo lJeoxx = (com.esarks.arm.model.jeo.RequestJeo) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.RequestJeo", 0);
+          ArrayList arrayList_lJeoxxx = lJeoxx.getJeoByInstanceName("com.esarks.arm.wordSearch.ArmSearchDocumentsWords");
+          for (int idx_lJeoxxx=0; idx_lJeoxxx < arrayList_lJeoxxx.size(); idx_lJeoxxx++) {
+          com.esarks.arm.wordSearch.ArmSearchDocumentsWords lJeoxxx = (com.esarks.arm.wordSearch.ArmSearchDocumentsWords) arrayList_lJeoxxx.get(idx_lJeoxxx);
+          if(lJeoxxx.isUrlIdNull()) {
+            lStatement.setNull(1, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setLong(1, lJeoxxx.getUrlIdPropertyValue().getValueLong());
+          }
+          if(lJeoxxx.isWordNull()) {
+            lStatement.setNull(2, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setString(2, lJeoxxx.getWordPropertyValue().getValueString());
+          }
+        lStatement.addBatch();
+        }
+        }
+        lStatement.executeBatch();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : batchCreateArmSearchDocumentsWordsWithIdentity");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:batchCreateArmSearchDocumentsWordsWithIdentity" + "!Exception caught!" + e.getMessage());
+        }
+
+        if (aJeo.getSuppressException() == false) {
+          com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+          com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+          lExceptionServiceJeo.addJeo(lExceptionJeo);
+          java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+          lExceptionJeo.setTime(lExceptionTimestamp);
+          lExceptionJeo.setModule("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud");
+          lExceptionJeo.setMethod("batchCreateArmSearchDocumentsWordsWithIdentity");
+          lExceptionJeo.setSeverity("unknown");
+          lExceptionJeo.setLocation("");
+          lExceptionJeo.setDescription(e.getMessage());
+          lExceptionJeo.setAction("unknown");
+          lExceptionJeo.setResolution("unknown");
+
+          StackTraceElement[] lStackTraceElements = e.getStackTrace();
+          for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+            com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+            lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+            lExceptionJeo.addJeo(lStackExceptionJeo);
+          }
+
+          iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+        }
+
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : batchCreateArmSearchDocumentsWordsWithIdentity");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+      if (iMicLog.test(Log._APP)) {
+        java.util.Date lStopTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:batchCreateArmSearchDocumentsWordsWithIdentity" + "!Normal return!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+      }
+    }
+    public void createArmSearchDocumentsWords(com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+      java.util.Date lStartTime = null;
+      if (iMicLog.test(Log._APP)) {
+        lStartTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:createArmSearchDocumentsWords" + "!Enter method");
+      }
+      DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+      DbConnection lDbConnection = null;
+
+      PropertyValue lDbConnectionPropertyValue = aJeo.getPropertyValue("DbConnection");
+      if (lDbConnectionPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL) {
+        lDbConnection = (DbConnection) lDbConnectionPropertyValue.getValueObject();
+      } else {
+        lDbConnection = lDbConnectionFactory.getDbConnection("application");
+      }
+
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : createArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:createArmSearchDocumentsWords" + "!DbConnection is null");
+        }
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        if (!aJeo.getRequest().getOrderClausePropertyValue().toString().equals("")) {
+          lOrder = aJeo.getRequest().getOrderClausePropertyValue().toString();
+        }
+        String lSql = "BEGIN INSERT INTO $ArmSearchDocumentsWords (urlId,word) VALUES (?,?) SELECT * FROM $ArmSearchDocumentsWords WHERE urlId=? AND word=? END ";
+
+        if (!aJeo.getRequest().getSelectClausePropertyValue().toString().equals("")) {
+          lSql = aJeo.getRequest().getSelectClausePropertyValue().toString();
+        }
+        if (lSql.indexOf(" $*top ") > -1) {
+          int lIndexOf = lSql.indexOf(" $*top ");
+          lSql = lSql.substring(0, lIndexOf + 1) + aJeo.getRequest().getTopPropertyValue().toString() + lSql.substring(lIndexOf + 6);
+        }
+
+        int lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$*")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) + aJeo.getRequest().getPropertyValue(lSql.substring(lTagSearchIndex+2, lSize)).toString() + lSql.substring(lSize);
+        }
+
+        lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          int lSize2 = lSql.substring(lTagSearchIndex).indexOf(".");
+          if (lSize2 > -1 && lSize2 < lSize) lSize = lSize2;
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) +
+                   getObjectPrefix(lSql.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lSql.substring(lTagSearchIndex+1, lSize) +
+                   lSql.substring(lSize);
+        }
+
+        if (!aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+          lWhere = aJeo.getRequest().getWhereClausePropertyValue().toString();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        CallableStatement lStatement = lDbConnection.getConnection().prepareCall(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        if (aJeo.getRequest().getValueList() != null) {
+          ArrayList lValueList = aJeo.getRequest().getValueList();
+          for (int lValueListIdx=0; lValueListIdx < lValueList.size(); lValueListIdx++) {
+            lStatement.setString(lValueListIdx+1, (String) lValueList.get(lValueListIdx));
+          }
+        } else {
+          for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+            lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+          }
+        }
+        {
+          com.esarks.arm.model.jeo.ServiceJeo lJeox = aJeo;
+          com.esarks.arm.model.jeo.RequestJeo lJeoxx = (com.esarks.arm.model.jeo.RequestJeo) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.RequestJeo", 0);
+          com.esarks.arm.wordSearch.ArmSearchDocumentsWords lJeoxxx = (com.esarks.arm.wordSearch.ArmSearchDocumentsWords) lJeoxx.getJeoByInstanceNameAt("com.esarks.arm.wordSearch.ArmSearchDocumentsWords", 0);
+          if(lJeoxxx.isUrlIdNull()) {
+            lStatement.setNull(1, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setLong(1, lJeoxxx.getUrlIdPropertyValue().getValueLong());
+          }
+          if(lJeoxxx.isWordNull()) {
+            lStatement.setNull(2, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setString(2, lJeoxxx.getWordPropertyValue().getValueString());
+          }
+          if(lJeoxxx.isUrlIdNull()) {
+            lStatement.setNull(3, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setLong(3, lJeoxxx.getUrlIdPropertyValue().getValueLong());
+          }
+          if(lJeoxxx.isWordNull()) {
+            lStatement.setNull(4, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setString(4, lJeoxxx.getWordPropertyValue().getValueString());
+          }
+        }
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:createArmSearchDocumentsWords" + "!Before executeQuery()!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        ResultSet lResultSet = lStatement.executeQuery();
+        if (lResultSet.next() == false) {
+          aJeo.addError();
+          aJeo.setErrorId("");
+          aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : createArmSearchDocumentsWords");
+          aJeo.setErrorTitle("No Data Returned");
+          aJeo.setErrorText("No data was returned from the database request.");
+          aJeo.setErrorResolution("The application user may submit another request.");
+          aJeo.setErrorSeverity(4);
+          aJeo.getMostSevereError();
+          lResultSet.close();
+          lStatement.close();
+          if (iMicLog.test(Log._APP)) {
+            java.util.Date lStopTime = new java.util.Date();
+            iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:createArmSearchDocumentsWords" + "!Exit method!No data was returned from the database request!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+          }
+          return;
+        }
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:createArmSearchDocumentsWords" + "!After executeQuery()!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        int lResultRowsReturned = 0;
+        {
+          com.esarks.arm.model.jeo.ServiceJeo lJeox = aJeo;
+          com.esarks.arm.model.jeo.ReplyJeo lJeoxx = (com.esarks.arm.model.jeo.ReplyJeo) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.ReplyJeo", 0);
+          do {
+            com.esarks.arm.wordSearch.ArmSearchDocumentsWords lJeoxxx = (com.esarks.arm.wordSearch.ArmSearchDocumentsWords) com.esarks.jac.JeoFactory.getInstance().reserveJeo("com.esarks.arm.wordSearch.ArmSearchDocumentsWords");
+            lJeoxx.addJeo(lJeoxxx);
+            lJeoxxx.mapFromResultSet(lResultSet, true, false);
+            lResultRowsReturned++;
+          } while (lResultSet.next());
+        }
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:createArmSearchDocumentsWords" + "!Result rows returned = " + Integer.toString(lResultRowsReturned) + "!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        lResultSet.close();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : createArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:createArmSearchDocumentsWords" + "!Exception caught!" + e.getMessage());
+        }
+
+        if (aJeo.getSuppressException() == false) {
+          com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+          com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+          lExceptionServiceJeo.addJeo(lExceptionJeo);
+          java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+          lExceptionJeo.setTime(lExceptionTimestamp);
+          lExceptionJeo.setModule("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud");
+          lExceptionJeo.setMethod("createArmSearchDocumentsWords");
+          lExceptionJeo.setSeverity("unknown");
+          lExceptionJeo.setLocation("");
+          lExceptionJeo.setDescription(e.getMessage());
+          lExceptionJeo.setAction("unknown");
+          lExceptionJeo.setResolution("unknown");
+
+          StackTraceElement[] lStackTraceElements = e.getStackTrace();
+          for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+            com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+            lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+            lExceptionJeo.addJeo(lStackExceptionJeo);
+          }
+
+          iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+        }
+
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : createArmSearchDocumentsWords");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+      if (iMicLog.test(Log._APP)) {
+        java.util.Date lStopTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:createArmSearchDocumentsWords" + "!Normal return!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+      }
+    }
+    public void uidReadArmSearchDocumentsWords(com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+      java.util.Date lStartTime = null;
+      if (iMicLog.test(Log._APP)) {
+        lStartTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidReadArmSearchDocumentsWords" + "!Enter method");
+      }
+      DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+      DbConnection lDbConnection = null;
+
+      PropertyValue lDbConnectionPropertyValue = aJeo.getPropertyValue("DbConnection");
+      if (lDbConnectionPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL) {
+        lDbConnection = (DbConnection) lDbConnectionPropertyValue.getValueObject();
+      } else {
+        lDbConnection = lDbConnectionFactory.getDbConnection("application");
+      }
+
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : uidReadArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidReadArmSearchDocumentsWords" + "!DbConnection is null");
+        }
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        if (!aJeo.getRequest().getOrderClausePropertyValue().toString().equals("")) {
+          lOrder = aJeo.getRequest().getOrderClausePropertyValue().toString();
+        }
+        String lSql = "SELECT * FROM $ArmSearchDocumentsWords ";
+
+        if (!aJeo.getRequest().getSelectClausePropertyValue().toString().equals("")) {
+          lSql = aJeo.getRequest().getSelectClausePropertyValue().toString();
+        }
+        if (lSql.indexOf(" $*top ") > -1) {
+          int lIndexOf = lSql.indexOf(" $*top ");
+          lSql = lSql.substring(0, lIndexOf + 1) + aJeo.getRequest().getTopPropertyValue().toString() + lSql.substring(lIndexOf + 6);
+        }
+
+        int lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$*")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) + aJeo.getRequest().getPropertyValue(lSql.substring(lTagSearchIndex+2, lSize)).toString() + lSql.substring(lSize);
+        }
+
+        lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          int lSize2 = lSql.substring(lTagSearchIndex).indexOf(".");
+          if (lSize2 > -1 && lSize2 < lSize) lSize = lSize2;
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) +
+                   getObjectPrefix(lSql.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lSql.substring(lTagSearchIndex+1, lSize) +
+                   lSql.substring(lSize);
+        }
+
+        if (aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+          com.esarks.arm.model.jeo.ServiceJeo lJeox = aJeo;
+          com.esarks.arm.model.jeo.RequestJeo lJeoxx = (com.esarks.arm.model.jeo.RequestJeo) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.RequestJeo", 0);
+          com.esarks.arm.wordSearch.ArmSearchDocumentsWords lJeoxxx = (com.esarks.arm.wordSearch.ArmSearchDocumentsWords) lJeoxx.getJeoByInstanceNameAt("com.esarks.arm.wordSearch.ArmSearchDocumentsWords", 0);
+          {
+            {
+              lWhere = lWhere.trim() + " urlId=?";
+              lWhereList.add(lJeoxxx.getUrlIdPropertyValue());
+            }
+          }
+          {
+            {
+              lWhere = lWhere.trim() + " AND word=?";
+              lWhereList.add(lJeoxxx.getWordPropertyValue());
+            }
+          }
+        }
+        if (!aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+          lWhere = aJeo.getRequest().getWhereClausePropertyValue().toString();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        if (aJeo.getRequest().getValueList() != null) {
+          ArrayList lValueList = aJeo.getRequest().getValueList();
+          for (int lValueListIdx=0; lValueListIdx < lValueList.size(); lValueListIdx++) {
+            lStatement.setString(lValueListIdx+1, (String) lValueList.get(lValueListIdx));
+          }
+        } else {
+          for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+            lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+          }
+        }
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidReadArmSearchDocumentsWords" + "!Before executeQuery()!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        ResultSet lResultSet = lStatement.executeQuery();
+        if (lResultSet.next() == false) {
+          aJeo.addError();
+          aJeo.setErrorId("");
+          aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : uidReadArmSearchDocumentsWords");
+          aJeo.setErrorTitle("No Data Returned");
+          aJeo.setErrorText("No data was returned from the database request.");
+          aJeo.setErrorResolution("The application user may submit another request.");
+          aJeo.setErrorSeverity(4);
+          aJeo.getMostSevereError();
+          lResultSet.close();
+          lStatement.close();
+          if (iMicLog.test(Log._APP)) {
+            java.util.Date lStopTime = new java.util.Date();
+            iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidReadArmSearchDocumentsWords" + "!Exit method!No data was returned from the database request!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+          }
+          return;
+        }
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidReadArmSearchDocumentsWords" + "!After executeQuery()!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        int lResultRowsReturned = 0;
+        {
+          com.esarks.arm.model.jeo.ServiceJeo lJeox = aJeo;
+          com.esarks.arm.model.jeo.ReplyJeo lJeoxx = (com.esarks.arm.model.jeo.ReplyJeo) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.ReplyJeo", 0);
+          do {
+            com.esarks.arm.wordSearch.ArmSearchDocumentsWords lJeoxxx = (com.esarks.arm.wordSearch.ArmSearchDocumentsWords) com.esarks.jac.JeoFactory.getInstance().reserveJeo("com.esarks.arm.wordSearch.ArmSearchDocumentsWords");
+            lJeoxx.addJeo(lJeoxxx);
+            lJeoxxx.mapFromResultSet(lResultSet, true, false);
+            lResultRowsReturned++;
+          } while (lResultSet.next());
+        }
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidReadArmSearchDocumentsWords" + "!Result rows returned = " + Integer.toString(lResultRowsReturned) + "!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        lResultSet.close();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : uidReadArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidReadArmSearchDocumentsWords" + "!Exception caught!" + e.getMessage());
+        }
+
+        if (aJeo.getSuppressException() == false) {
+          com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+          com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+          lExceptionServiceJeo.addJeo(lExceptionJeo);
+          java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+          lExceptionJeo.setTime(lExceptionTimestamp);
+          lExceptionJeo.setModule("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud");
+          lExceptionJeo.setMethod("uidReadArmSearchDocumentsWords");
+          lExceptionJeo.setSeverity("unknown");
+          lExceptionJeo.setLocation("");
+          lExceptionJeo.setDescription(e.getMessage());
+          lExceptionJeo.setAction("unknown");
+          lExceptionJeo.setResolution("unknown");
+
+          StackTraceElement[] lStackTraceElements = e.getStackTrace();
+          for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+            com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+            lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+            lExceptionJeo.addJeo(lStackExceptionJeo);
+          }
+
+          iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+        }
+
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : uidReadArmSearchDocumentsWords");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+      if (iMicLog.test(Log._APP)) {
+        java.util.Date lStopTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidReadArmSearchDocumentsWords" + "!Normal return!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+      }
+    }
+    public void readArmSearchDocumentsWords(com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+      java.util.Date lStartTime = null;
+      if (iMicLog.test(Log._APP)) {
+        lStartTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:readArmSearchDocumentsWords" + "!Enter method");
+      }
+      DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+      DbConnection lDbConnection = null;
+
+      PropertyValue lDbConnectionPropertyValue = aJeo.getPropertyValue("DbConnection");
+      if (lDbConnectionPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL) {
+        lDbConnection = (DbConnection) lDbConnectionPropertyValue.getValueObject();
+      } else {
+        lDbConnection = lDbConnectionFactory.getDbConnection("application");
+      }
+
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : readArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:readArmSearchDocumentsWords" + "!DbConnection is null");
+        }
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        if (!aJeo.getRequest().getOrderClausePropertyValue().toString().equals("")) {
+          lOrder = aJeo.getRequest().getOrderClausePropertyValue().toString();
+        }
+        String lSql = "SELECT * FROM $ArmSearchDocumentsWords ";
+
+        if (!aJeo.getRequest().getSelectClausePropertyValue().toString().equals("")) {
+          lSql = aJeo.getRequest().getSelectClausePropertyValue().toString();
+        }
+        if (lSql.indexOf(" $*top ") > -1) {
+          int lIndexOf = lSql.indexOf(" $*top ");
+          lSql = lSql.substring(0, lIndexOf + 1) + aJeo.getRequest().getTopPropertyValue().toString() + lSql.substring(lIndexOf + 6);
+        }
+
+        int lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$*")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) + aJeo.getRequest().getPropertyValue(lSql.substring(lTagSearchIndex+2, lSize)).toString() + lSql.substring(lSize);
+        }
+
+        lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          int lSize2 = lSql.substring(lTagSearchIndex).indexOf(".");
+          if (lSize2 > -1 && lSize2 < lSize) lSize = lSize2;
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) +
+                   getObjectPrefix(lSql.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lSql.substring(lTagSearchIndex+1, lSize) +
+                   lSql.substring(lSize);
+        }
+
+        if (!aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+          lWhere = aJeo.getRequest().getWhereClausePropertyValue().toString();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        if (aJeo.getRequest().getValueList() != null) {
+          ArrayList lValueList = aJeo.getRequest().getValueList();
+          for (int lValueListIdx=0; lValueListIdx < lValueList.size(); lValueListIdx++) {
+            lStatement.setString(lValueListIdx+1, (String) lValueList.get(lValueListIdx));
+          }
+        } else {
+          for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+            lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+          }
+        }
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:readArmSearchDocumentsWords" + "!Before executeQuery()!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        ResultSet lResultSet = lStatement.executeQuery();
+        if (lResultSet.next() == false) {
+          aJeo.addError();
+          aJeo.setErrorId("");
+          aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : readArmSearchDocumentsWords");
+          aJeo.setErrorTitle("No Data Returned");
+          aJeo.setErrorText("No data was returned from the database request.");
+          aJeo.setErrorResolution("The application user may submit another request.");
+          aJeo.setErrorSeverity(4);
+          aJeo.getMostSevereError();
+          lResultSet.close();
+          lStatement.close();
+          if (iMicLog.test(Log._APP)) {
+            java.util.Date lStopTime = new java.util.Date();
+            iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:readArmSearchDocumentsWords" + "!Exit method!No data was returned from the database request!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+          }
+          return;
+        }
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:readArmSearchDocumentsWords" + "!After executeQuery()!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        int lResultRowsReturned = 0;
+        {
+          com.esarks.arm.model.jeo.ServiceJeo lJeox = aJeo;
+          com.esarks.arm.model.jeo.ReplyJeo lJeoxx = (com.esarks.arm.model.jeo.ReplyJeo) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.ReplyJeo", 0);
+          do {
+            com.esarks.arm.wordSearch.ArmSearchDocumentsWords lJeoxxx = (com.esarks.arm.wordSearch.ArmSearchDocumentsWords) com.esarks.jac.JeoFactory.getInstance().reserveJeo("com.esarks.arm.wordSearch.ArmSearchDocumentsWords");
+            lJeoxx.addJeo(lJeoxxx);
+            lJeoxxx.mapFromResultSet(lResultSet, true, false);
+            lResultRowsReturned++;
+          } while (lResultSet.next());
+        }
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:readArmSearchDocumentsWords" + "!Result rows returned = " + Integer.toString(lResultRowsReturned) + "!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        lResultSet.close();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : readArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:readArmSearchDocumentsWords" + "!Exception caught!" + e.getMessage());
+        }
+
+        if (aJeo.getSuppressException() == false) {
+          com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+          com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+          lExceptionServiceJeo.addJeo(lExceptionJeo);
+          java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+          lExceptionJeo.setTime(lExceptionTimestamp);
+          lExceptionJeo.setModule("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud");
+          lExceptionJeo.setMethod("readArmSearchDocumentsWords");
+          lExceptionJeo.setSeverity("unknown");
+          lExceptionJeo.setLocation("");
+          lExceptionJeo.setDescription(e.getMessage());
+          lExceptionJeo.setAction("unknown");
+          lExceptionJeo.setResolution("unknown");
+
+          StackTraceElement[] lStackTraceElements = e.getStackTrace();
+          for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+            com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+            lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+            lExceptionJeo.addJeo(lStackExceptionJeo);
+          }
+
+          iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+        }
+
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : readArmSearchDocumentsWords");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+      if (iMicLog.test(Log._APP)) {
+        java.util.Date lStopTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:readArmSearchDocumentsWords" + "!Normal return!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+      }
+    }
+    public void deleteArmSearchDocumentsWords(com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+      java.util.Date lStartTime = null;
+      if (iMicLog.test(Log._APP)) {
+        lStartTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:deleteArmSearchDocumentsWords" + "!Enter method");
+      }
+      DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+      DbConnection lDbConnection = null;
+
+      PropertyValue lDbConnectionPropertyValue = aJeo.getPropertyValue("DbConnection");
+      if (lDbConnectionPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL) {
+        lDbConnection = (DbConnection) lDbConnectionPropertyValue.getValueObject();
+      } else {
+        lDbConnection = lDbConnectionFactory.getDbConnection("application");
+      }
+
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : deleteArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:deleteArmSearchDocumentsWords" + "!DbConnection is null");
+        }
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        if (!aJeo.getRequest().getOrderClausePropertyValue().toString().equals("")) {
+          lOrder = aJeo.getRequest().getOrderClausePropertyValue().toString();
+        }
+        String lSql = "DELETE $ArmSearchDocumentsWords ";
+
+        if (!aJeo.getRequest().getSelectClausePropertyValue().toString().equals("")) {
+          lSql = aJeo.getRequest().getSelectClausePropertyValue().toString();
+        }
+        if (lSql.indexOf(" $*top ") > -1) {
+          int lIndexOf = lSql.indexOf(" $*top ");
+          lSql = lSql.substring(0, lIndexOf + 1) + aJeo.getRequest().getTopPropertyValue().toString() + lSql.substring(lIndexOf + 6);
+        }
+
+        int lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$*")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) + aJeo.getRequest().getPropertyValue(lSql.substring(lTagSearchIndex+2, lSize)).toString() + lSql.substring(lSize);
+        }
+
+        lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          int lSize2 = lSql.substring(lTagSearchIndex).indexOf(".");
+          if (lSize2 > -1 && lSize2 < lSize) lSize = lSize2;
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) +
+                   getObjectPrefix(lSql.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lSql.substring(lTagSearchIndex+1, lSize) +
+                   lSql.substring(lSize);
+        }
+
+        if (aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+          com.esarks.arm.model.jeo.ServiceJeo lJeox = aJeo;
+          com.esarks.arm.model.jeo.RequestJeo lJeoxx = (com.esarks.arm.model.jeo.RequestJeo) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.RequestJeo", 0);
+          com.esarks.arm.wordSearch.ArmSearchDocumentsWords lJeoxxx = (com.esarks.arm.wordSearch.ArmSearchDocumentsWords) lJeoxx.getJeoByInstanceNameAt("com.esarks.arm.wordSearch.ArmSearchDocumentsWords", 0);
+          {
+            {
+              lWhere = lWhere.trim() + " urlId=?";
+              lWhereList.add(lJeoxxx.getUrlIdPropertyValue());
+            }
+          }
+          {
+            {
+              lWhere = lWhere.trim() + " AND word=?";
+              lWhereList.add(lJeoxxx.getWordPropertyValue());
+            }
+          }
+        }
+        if (!aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+          lWhere = aJeo.getRequest().getWhereClausePropertyValue().toString();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        if (aJeo.getRequest().getValueList() != null) {
+          ArrayList lValueList = aJeo.getRequest().getValueList();
+          for (int lValueListIdx=0; lValueListIdx < lValueList.size(); lValueListIdx++) {
+            lStatement.setString(lValueListIdx+1, (String) lValueList.get(lValueListIdx));
+          }
+        } else {
+          for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+            lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+          }
+        }
+        boolean lResult = lStatement.execute();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : deleteArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:deleteArmSearchDocumentsWords" + "!Exception caught!" + e.getMessage());
+        }
+
+        if (aJeo.getSuppressException() == false) {
+          com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+          com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+          lExceptionServiceJeo.addJeo(lExceptionJeo);
+          java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+          lExceptionJeo.setTime(lExceptionTimestamp);
+          lExceptionJeo.setModule("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud");
+          lExceptionJeo.setMethod("deleteArmSearchDocumentsWords");
+          lExceptionJeo.setSeverity("unknown");
+          lExceptionJeo.setLocation("");
+          lExceptionJeo.setDescription(e.getMessage());
+          lExceptionJeo.setAction("unknown");
+          lExceptionJeo.setResolution("unknown");
+
+          StackTraceElement[] lStackTraceElements = e.getStackTrace();
+          for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+            com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+            lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+            lExceptionJeo.addJeo(lStackExceptionJeo);
+          }
+
+          iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+        }
+
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : deleteArmSearchDocumentsWords");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+      if (iMicLog.test(Log._APP)) {
+        java.util.Date lStopTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:deleteArmSearchDocumentsWords" + "!Normal return!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+      }
+    }
+    public void uidUpdateArmSearchDocumentsWords(com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+      java.util.Date lStartTime = null;
+      if (iMicLog.test(Log._APP)) {
+        lStartTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidUpdateArmSearchDocumentsWords" + "!Enter method");
+      }
+      DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+      DbConnection lDbConnection = null;
+
+      PropertyValue lDbConnectionPropertyValue = aJeo.getPropertyValue("DbConnection");
+      if (lDbConnectionPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL) {
+        lDbConnection = (DbConnection) lDbConnectionPropertyValue.getValueObject();
+      } else {
+        lDbConnection = lDbConnectionFactory.getDbConnection("application");
+      }
+
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : uidUpdateArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidUpdateArmSearchDocumentsWords" + "!DbConnection is null");
+        }
+        return;
+      }
+
+      try {
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+        String lOrder = "";
+        if (!aJeo.getRequest().getOrderClausePropertyValue().toString().equals("")) {
+          lOrder = aJeo.getRequest().getOrderClausePropertyValue().toString();
+        }
+        String lSql = "UPDATE $ArmSearchDocumentsWords SET WHERE urlId=? AND word=? ";
+
+        if (!aJeo.getRequest().getSelectClausePropertyValue().toString().equals("")) {
+          lSql = aJeo.getRequest().getSelectClausePropertyValue().toString();
+        }
+        if (lSql.indexOf(" $*top ") > -1) {
+          int lIndexOf = lSql.indexOf(" $*top ");
+          lSql = lSql.substring(0, lIndexOf + 1) + aJeo.getRequest().getTopPropertyValue().toString() + lSql.substring(lIndexOf + 6);
+        }
+
+        int lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$*")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) + aJeo.getRequest().getPropertyValue(lSql.substring(lTagSearchIndex+2, lSize)).toString() + lSql.substring(lSize);
+        }
+
+        lTagSearchIndex = -1;
+        while ( (lTagSearchIndex = lSql.indexOf("$")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          int lSize2 = lSql.substring(lTagSearchIndex).indexOf(".");
+          if (lSize2 > -1 && lSize2 < lSize) lSize = lSize2;
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) +
+                   getObjectPrefix(lSql.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lSql.substring(lTagSearchIndex+1, lSize) +
+                   lSql.substring(lSize);
+        }
+
+        if (!aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+          lWhere = aJeo.getRequest().getWhereClausePropertyValue().toString();
+        }
+        if (lWhere.trim().length() > 0) lWhere = " WHERE " + lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = " ORDER BY " + lOrder.trim();
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim() + " " + lWhere.trim() + " " + lOrder.trim());
+        if (aJeo.getRequest().getValueList() != null) {
+          ArrayList lValueList = aJeo.getRequest().getValueList();
+          for (int lValueListIdx=0; lValueListIdx < lValueList.size(); lValueListIdx++) {
+            lStatement.setString(lValueListIdx+1, (String) lValueList.get(lValueListIdx));
+          }
+        } else {
+          for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+            lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+          }
+        }
+        {
+          com.esarks.arm.model.jeo.ServiceJeo lJeox = aJeo;
+          com.esarks.arm.model.jeo.RequestJeo lJeoxx = (com.esarks.arm.model.jeo.RequestJeo) lJeox.getJeoByInstanceNameAt("com.esarks.arm.model.jeo.RequestJeo", 0);
+          com.esarks.arm.wordSearch.ArmSearchDocumentsWords lJeoxxx = (com.esarks.arm.wordSearch.ArmSearchDocumentsWords) lJeoxx.getJeoByInstanceNameAt("com.esarks.arm.wordSearch.ArmSearchDocumentsWords", 0);
+          if(lJeoxxx.isUrlIdNull()) {
+            lStatement.setNull(1, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setLong(1, lJeoxxx.getUrlIdPropertyValue().getValueLong());
+          }
+          if(lJeoxxx.isWordNull()) {
+            lStatement.setNull(2, java.sql.Types.VARCHAR);
+          } else {
+            lStatement.setString(2, lJeoxxx.getWordPropertyValue().getValueString());
+          }
+        }
+        boolean lResult = lStatement.execute();
+        lStatement.close();
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : uidUpdateArmSearchDocumentsWords");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidUpdateArmSearchDocumentsWords" + "!Exception caught!" + e.getMessage());
+        }
+
+        if (aJeo.getSuppressException() == false) {
+          com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+          com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+          lExceptionServiceJeo.addJeo(lExceptionJeo);
+          java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+          lExceptionJeo.setTime(lExceptionTimestamp);
+          lExceptionJeo.setModule("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud");
+          lExceptionJeo.setMethod("uidUpdateArmSearchDocumentsWords");
+          lExceptionJeo.setSeverity("unknown");
+          lExceptionJeo.setLocation("");
+          lExceptionJeo.setDescription(e.getMessage());
+          lExceptionJeo.setAction("unknown");
+          lExceptionJeo.setResolution("unknown");
+
+          StackTraceElement[] lStackTraceElements = e.getStackTrace();
+          for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+            com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+            lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+            lExceptionJeo.addJeo(lStackExceptionJeo);
+          }
+
+          iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+        }
+
+        return;
+      }
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud_Crud : uidUpdateArmSearchDocumentsWords");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+      if (iMicLog.test(Log._APP)) {
+        java.util.Date lStopTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-com.esarks.arm.wordSearch.ArmSearchDocumentsWordsCrud:uidUpdateArmSearchDocumentsWords" + "!Normal return!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+      }
+    }
+
+  private String getObjectPrefix(String aObjectName) {
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    DbConnection lDbConnection = lDbConnectionFactory.getAssociatedDbConnection(aObjectName.toLowerCase());
+    if (lDbConnection == null) {
+      if (iMicLog.test(Log._APP)) {
+        iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":getObjectPrefix(" + aObjectName + ")!Object name not in known list.");
+      }
+      return "";
+    }
+    return lDbConnection.getPrefix();
+  }
+
+//$Section=Deleted$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section contains orphaned code from deleted operations.
+//----------------------------------------------------------------------------
+
+//$Section=Deleted$Preserve=no
+
+//End of script---------------

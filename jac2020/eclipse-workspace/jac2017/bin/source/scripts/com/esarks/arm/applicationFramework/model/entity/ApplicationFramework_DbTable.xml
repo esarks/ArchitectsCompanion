@@ -1,0 +1,14 @@
+<tables>
+  
+  <table name="ArmJobSlot">
+
+    <field name="slot"          type="long"                     nullable="false"/>
+    <field name="reserved"      type="datetime"                 nullable="true"/>
+
+    <primary name="ArmJobSlot_pk">
+      <field>slot</field>
+    </primary>
+   
+  </table> 
+
+</tables>

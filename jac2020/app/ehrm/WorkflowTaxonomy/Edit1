@@ -1,0 +1,160 @@
+Capacity and Capability
+
+Products:
+
+- ERRA tool : Determine location to send request
+
+Enterprise Medical Records Search
+
+Products:
+
+- CAPRI : Enterprise Search
+
+Products: 
+
+- VBMS
+
+Products:
+
+- TBD
+
+Products:
+
+- JLV
+
+Products:
+
+- Clinical Reporting XR
+
+Note: May access Clinical Reporting XR from AccessHIM
+
+
+Exam Management
+
+Products:
+
+- PowerChart : Search and View Medical Records
+
+Products:
+
+- PowerForm : Form 2507 to Document Requested DBQs
+
+Products:
+
+- Clinical Reporting XR : Generic Encounter
+
+Interfaces:
+
+- Manual upload to VBMS Folder
+
+Products:
+
+- Message Center : 2507 Message Template
+
+Products:
+
+- Message Center : Message Pool
+
+Products:
+
+- PowerChart : Review Order
+
+Products:
+
+- Outlook (TBD)
+- Message Center (TBD)
+
+Note: Sub-flow belongs to Scheduling Council
+
+Products:
+
+- Cerner Scheduling
+
+
+Products:
+
+- Ambulatory Organizer : Clinician's view of scheduled appointments
+
+Products:
+
+- PowerChart : Mpage : Assessment Component
+
+Products:
+
+- Revenue Cycle : Patient Access
+
+Products:
+
+- Revenue Cycle : Patient Access
+
+Interfaces:
+
+- HL7 SIU -> VBMS
+
+
+Products:
+
+- Revenue Cycle : Patient Access
+
+Interfaces:
+
+- HL7 SIU -> VBMS
+
+Products:
+
+- TBD
+
+Exam Management - Child
+
+Products:
+
+- PowerChart : ?
+
+
+Perform Examination
+
+Products:
+
+- PowerForm : 2507
+
+
+Products:
+
+- PowerChart : 
+- VBMS
+- CAPRI
+- JLV
+- AHLTA
+
+Products:
+
+- PowerChart : PowerForm : Specific DBQ
+
+VR&E Block 1
+
+Products:
+
+- PowerChart : Veteran Orders
+
+7131
+
+Products:
+
+- AccessHIM : ROI
+
+Deliver Exam
+
+Interfaces:
+
+to DAS...  HL7 ORU?
+
+VBA Record an Appt
+
+Products:
+
+- Revenue Cycle : Appointments Perspective
+
+
+
+
+

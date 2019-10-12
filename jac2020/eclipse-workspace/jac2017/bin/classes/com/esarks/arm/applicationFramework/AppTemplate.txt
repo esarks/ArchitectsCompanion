@@ -1,0 +1,226 @@
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:1: package <#[$jac:script:package]#>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:2: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:3: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:4: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:5: import java.util.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:6: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:7: import java.io.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:8: import java.text.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:9: import java.net.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:10: import javax.net.ssl.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:11: import java.security.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:12: import java.sql.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:13: import javax.servlet.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:14: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:15: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImportView.script:16: <#import#>
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:2: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:4: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:6:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:7: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:9: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:11: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:12:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:1: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:2: //////////////////////////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:3: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:4: <& com.esarks.arm.scripts.Method
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:5:    <method name="onLoad" visibility="public" return="void" >
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:6:      <document></document>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:7:    </method>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:8: &>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:9: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:10:     setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:11:     String lPropertySet = <![com.esarks.arm.schemas.router.root:loc:propertySet]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:12:     System.out.println("AppTemplate PropertySet = " + lPropertySet);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:13:     XmlSchemaFactory lXmlSchemaFactory = iSymbolTable.getXmlSchemaFactory();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:14:     if (lXmlSchemaFactory.getXmlSchemaElement("com.esarks.arm.schemas.properties.root") == null) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:15:       loadXmlSchema("com.esarks.arm.schemas.properties", path("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:16:       parseXmlSchema(<![com.esarks.arm.schemas.router.root:loc:propertySet:path]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:17: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:18:       boolean lScan = <!com.esarks.arm.schemas.properties.root:property!>!scan(lPropertySet);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:19:       // Open all the DbConnections possible...
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:20:       DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:21:       <!com.esarks.arm.schemas.properties.root:property:dbConnection!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:22:       while (<!com.esarks.arm.schemas.properties.root:property:dbConnection!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:23:         String lName = <![com.esarks.arm.schemas.properties.root:property:dbConnection:name]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:24:         String lJdbcClass = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcClass]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:25:         String lJdbcConnection = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcConnection]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:26:         String lJdbcUser = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcUser]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:27:         String lJdbcPassword = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcPassword]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:28:         String lDbTypes = <![com.esarks.arm.schemas.properties.root:property:dbConnection:dbTypes]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:29:         String lCatalog = <![com.esarks.arm.schemas.properties.root:property:dbConnection:catalog]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:30:         String lOwner = <![com.esarks.arm.schemas.properties.root:property:dbConnection:owner]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:31:         String lStereotype = <![com.esarks.arm.schemas.properties.root:property:dbConnection:stereotype]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:32:         String lOpenCountString = <![com.esarks.arm.schemas.properties.root:property:dbConnection:openCount]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:33:         int lOpenCount = 1;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:34:         if (!lOpenCountString.equals("")) lOpenCount = Integer.parseInt(lOpenCountString);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:35:   
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:36:         for (int lIdx=0; lIdx < lOpenCount; lIdx++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:37:           DbConnection lDbConnection = new DbConnection(lName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:38:           lDbConnection.setCatalog(lCatalog);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:39:           lDbConnection.setOwner(lOwner);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:40:           lDbConnection.setDbTypes(lDbTypes);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:41:           lDbConnection.setStereotype(lStereotype);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:42:           lDbConnectionFactory.register(lDbConnection);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:43:           System.out.println("Connection " + lIdx + " at " + lName + "=" + lDbConnection.connect(lJdbcClass, lJdbcConnection, lJdbcUser, lJdbcPassword));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:44:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:45:         
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:46:         <!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:47:         while (<!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:48:           lDbConnectionFactory.alias(lName, <![com.esarks.arm.schemas.properties.root:property:dbConnection:alias]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:49:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:50:   
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:51:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:52:   
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:53:       try {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:54:         // Associate all the objects to a DbConnection...
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:55:         <!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:56:         while (<!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:57:           DbConnection lDbConnection = lDbConnectionFactory.getDbConnection(<![com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:name]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:58:           <!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:59:           while (<!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:60:             lDbConnectionFactory.associateObjectConnection(<![com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object:name]!>, lDbConnection);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:61:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:62:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:63:       } catch(Throwable e) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:64:         System.out.println(e);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:65:         System.out.println("Failed to associate all database objects to a DbConnection.  Please verify the <dbObjects> section of Properties.xml.");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:66:         restoreContext();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:67:         return;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:68:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:69:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:70: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:71:     if (<!com.esarks.arm.schemas.router.root:loc:securityManager!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:72:       iSecurityManager = (com.esarks.mic.SecurityManager) loadScript(<![com.esarks.arm.schemas.router.root:loc:securityManager]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:73:     } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:74:       iSecurityManager = new com.esarks.mic.SecurityManager();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:75:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:76: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:77:     String lInstance = Long.toString(new java.util.Date().getTime());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:78:     int lInstanceCount = 0;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:79:     <!com.esarks.arm.schemas.router.root:loc:template:region!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:80:       // Instantiate the region.
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:81:       String lRegion = <![com.esarks.arm.schemas.router.root:loc:template:region]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:82:       com.esarks.mic.View lView = (com.esarks.mic.View) loadScript(<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":script]!>, "com.esarks.schemas.router.loc:" + lRegion);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:83: System.out.println("Region: " + lRegion);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:84:       <!com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:85: System.out.println("Add: " + <![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:86: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:87:         if (<!com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:instance!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:88:           com.esarks.mic.View lAdd = (com.esarks.mic.View) loadScript(<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>, <![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:instance]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:89:           lView.addView(lAdd);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:90:         } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:91:           lView.addView(<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:92:           if (<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:open]!>.equals("true")) lView.openView(<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":add:script]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:93:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:94:       }      
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:95:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:96: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:97:     restoreContext();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:98: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:99: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:100: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:101: //////////////////////////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:102: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:103: <& com.esarks.arm.scripts.Method
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:104:    <method name="handlePost" visibility="public" return="void" >
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:105:      <document></document>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:106:    </method>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:107: &>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:108: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:109:     <!com.esarks.arm.schemas.router.root:loc:template:region!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:110:       String lRegion = <![com.esarks.arm.schemas.router.root:loc:template:region]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:111:       iScript.execMethod(loadScript(<![com.esarks.arm.schemas.router.root:loc:" + lRegion + ":script]!>, lRegion), "handlePost");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:112:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:113: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:114: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:115: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:116: //////////////////////////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:117: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:118: <& com.esarks.arm.scripts.Method
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:119:    <method name="execute" visibility="public" return="void" >
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:120:      <document></document>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:121:    </method>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:122: &>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:123: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:124:     setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:125: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:126:     ServletRequest lServletRequest = getServletRequest();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:127: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:128:     boolean lHrefError = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:129:     String lScript = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:130:     String lInstance = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:131:     String lMethod = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:132:     String lArgument = null;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:133:     
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:134:     String lHref = lServletRequest.getParameter("href");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:135:     if (lHref != null && lHref != "") {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:136: System.out.println("href = " + lHref);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:137:       <!$jac:href:id!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:138:       if (<!$jac:href!>!scan("id", lHref)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:139: System.out.println("TRUE");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:140:         lScript = (String) <![$jac:href:id:script]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:141:         lInstance = (String) <![$jac:href:id:instance]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:142:         lMethod = (String) <![$jac:href:id:method]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:143:         if (<!$jac:href:id:argument!>!size() > 0) lArgument = (String) <![$jac:href:id:argument]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:144:       } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:145: System.out.println("FALSE");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:146:         lHrefError = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:147:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:148:     } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:149:       lScript = <![com.esarks.arm.schemas.router.root:loc:script:path]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:150:       lInstance = <![com.esarks.arm.schemas.router.root:loc:script:instance]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:151:       lMethod = <![com.esarks.arm.schemas.router.root:loc:script:method]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:152:       if (<!com.esarks.arm.schemas.router.root:loc:script:argument!>!size() > 0) lArgument = <![com.esarks.arm.schemas.router.root:loc:script:argument]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:153:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:154: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:155: System.out.println("-->1 " + lScript + " " + lInstance + " " + lMethod + " " + lArgument);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:156: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:157:     if (!lScript.equals("")) handlePost();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:158: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:159: System.out.println("-->2 " + lScript + " " + lInstance + " " + lMethod + " " + lArgument);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:160: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:161:     if (!lScript.equals("") && !lMethod.equals("handlePost")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:162:       MicScriptHelper lScriptHelper = (MicScriptHelper) loadScript(lScript, lInstance);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:163:       if (true) { // || lScriptHelper.checkSecurity(iSecurityManager)) {        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:164:         if (lArgument == null) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:165:           iScript.execMethod(lScriptHelper, lMethod);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:166:         } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:167:           iScript.execMethod(lScriptHelper, lMethod, new Object[] {lArgument});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:168:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:169:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:170:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:171: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:172: System.out.println("-->3 " + lScript + " " + lInstance + " " + lMethod + " " + lArgument);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:173: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:174:     <!$jac:href!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:175: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:176:   restoreContext();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:177: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:178: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:179: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:180: //////////////////////////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:181: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:182: <& com.esarks.arm.scripts.Method
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:183:    <method name="findRegion" visibility="public" return="boolean" >
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:184:      <document></document>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:185:      <argument type="String" name="aRegion" />
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:186:    </method>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:187: &>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:188: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:189:   if (<!com.esarks.arm.schemas.router.root:loc:" + aRegion + "!>!size() > 0) return true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:190:   
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:191: <& com.esarks.arm.scripts.FinalReturnMethod
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:192:   <return>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:193:     <normal>false</normal>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:194:     <error>false</error>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:195:   </return>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:196: &>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\applicationFramework\AppTemplate.script:197:   
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPostfix.script:1: }

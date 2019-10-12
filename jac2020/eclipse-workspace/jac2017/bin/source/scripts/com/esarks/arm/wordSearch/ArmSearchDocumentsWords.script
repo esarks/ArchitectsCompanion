@@ -1,0 +1,569 @@
+//$Section=License$Preserve=no
+//  Generated at 2005.07.01 09:58:57.341 AM EDT by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+//  XML Definition: com.esarks.arm.wordSearch.Search_DbTable
+//     Module Name: com.esarks.arm.wordSearch.ArmSearchDocumentsWords
+
+//$Section=ChangeLog$Preserve=yes
+
+/* ========================================================================= *
+   Contributor        Description
+   ------------------ ------------------------------------------------------
+                      Author
+
+ * ========================================================================= */
+
+//$Section=Class$Preserve=no
+
+package com.esarks.arm.wordSearch;
+
+/**
+ *
+ */
+
+//----------------------------------------------------------------------------
+// This section is for generated import delcarations.
+//----------------------------------------------------------------------------
+// Additional Import Declarations
+import com.esarks.jac.*;
+import com.esarks.mic.*;
+import java.util.*;
+import java.lang.reflect.*;
+import java.io.*;
+import java.text.*;
+import java.net.*;
+import java.sql.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+//$Section=CustomDeclare$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section is for custom declarations.
+//----------------------------------------------------------------------------
+
+//$Section=CustomDeclare$Preserve=no
+
+public class ArmSearchDocumentsWords extends com.esarks.jac.Jeo {
+
+//----------------------------------------------------------------------------
+// This section is for generated declarations.
+//----------------------------------------------------------------------------
+// Attributes
+
+//UrlId  Type: long  Size:   Nullable: false
+    private PropertyValue iUrlId = new PropertyValue();
+    private boolean iUrlIdIsNullable = false;
+    private boolean iUrlIdUpdate = false;
+    private int iUrlIdSize = -1;
+//Word  Type: string  Size: 32  Nullable: false
+    private PropertyValue iWord = new PropertyValue();
+    private boolean iWordIsNullable = false;
+    private boolean iWordUpdate = false;
+    private int iWordSize = 32;
+
+//$Section=CustomClassDeclare$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section is for custom class declarations.
+//----------------------------------------------------------------------------
+
+//$Section=CustomClassDeclare$Preserve=no
+
+//----------------------------------------------------------------------------
+// Generated constructors.
+//----------------------------------------------------------------------------
+
+/**
+ * Default constructor.
+ */
+    public ArmSearchDocumentsWords() {
+      super("com.esarks.arm.wordSearch.ArmSearchDocumentsWords");
+//$Section=DefaultConstructor$Preserve=yes
+//$Section=DefaultConstructor$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmSearchDocumentsWords( com.esarks.jac.JeoFactory aJeoFactory ) {
+      super(aJeoFactory);
+      init("com.esarks.arm.wordSearch.ArmSearchDocumentsWords");
+//$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=yes
+//$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmSearchDocumentsWords( Script aScript ) {
+      super("com.esarks.arm.wordSearch.ArmSearchDocumentsWords", aScript);
+//$Section=Operation$Jeo( String aScript )$Preserve=yes
+//$Section=Operation$Jeo( String aScript )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmSearchDocumentsWords( String aTypeName ) {
+      super("com.esarks.arm.wordSearch.ArmSearchDocumentsWords", aTypeName);
+//$Section=Operation$Jeo( String aTypeName )$Preserve=yes
+//$Section=Operation$Jeo( String aTypeName )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmSearchDocumentsWords( String aTypeName, Script aScript ) {
+      super("com.esarks.arm.wordSearch.ArmSearchDocumentsWords", aTypeName, aScript);
+//$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=yes
+//$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Default finalize is generated.
+//----------------------------------------------------------------------------
+
+/**
+ * Default finalize.
+ */
+    public void finalize() {
+    	freeResources();
+//$Section=DefaultDestructor$Preserve=yes
+//$Section=DefaultDestructor$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Default freeResources is generated.
+//----------------------------------------------------------------------------
+
+/**
+ * Default freeResources.
+ */
+    public void freeResources() {
+    	super.freeResources();
+    iUrlId = null;
+    iWord = null;
+//$Section=DefaultFreeResources$Preserve=yes
+//$Section=DefaultFreeResources$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// This section is for custom operations.
+//----------------------------------------------------------------------------
+//$Section=CustomOperations$Preserve=yes
+//$Section=CustomOperations$Preserve=no
+
+    public void init() {
+    	super.init();
+//UrlId
+    iUrlId = new PropertyValue();
+    iUrlIdUpdate = false;
+//Word
+    iWord = new PropertyValue();
+    iWordUpdate = false;
+    }
+
+//----------------------------------------------------------------------------
+// This section is for mapping views to tables.
+//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
+// This section is for mapping from result sets.
+//----------------------------------------------------------------------------
+
+  public void mapFromResultSet( ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+//$Section=Operation$mapFromResultSet$Preserve=no
+    mapFromResultSetTable("*", aResultSet, aTrim, aSpacesToNull);
+//$Section=Operation$mapFromResultSet$Preserve=no
+  }
+
+  public void mapFromResultSetTable( String aTable, ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+    // DEPRECATED METHOD!!!!
+    // Use of Trim and SpacesToNull is not functional.
+    mapFromResultSetTable(aTable, aResultSet);
+  }
+
+  public void mapFromResultSetTable( String aTable, ResultSet aResultSet) {
+//$Section=Operation$mapFromResultSetTable$Preserve=no
+//    String lValue = null;
+      if (aTable.equals("*") || aTable.equals("ArmSearchDocumentsWords")) {
+// UrlId in ArmSearchDocumentsWords
+        try {
+          long lValue = aResultSet.getLong("urlId");
+          if (aResultSet.wasNull()) {
+            setUrlIdNull();
+          } else {
+            setUrlId(lValue);
+          }
+        } catch (Throwable e) {}
+// Word in ArmSearchDocumentsWords
+        try {
+          String lValue = aResultSet.getString("word");
+          if (aResultSet.wasNull()) {
+            setWordNull();
+          } else {
+            setWord(lValue);
+          }
+        } catch (Throwable e) {}
+      }
+//$Section=Operation$mapFromResultSetTable$Preserve=no
+  }
+//----------------------------------------------------------------------------
+// This section is for mapping from and to Jeo's.
+//----------------------------------------------------------------------------
+
+  public void mapToJeo( Jeo aJeo) {
+//$Section=Operation$mapFromJeo$Preserve=no
+    String lType = null;
+    PropertyValue lValue = null;
+// UrlId
+      try {
+        lValue = aJeo.getPropertyValueByName("urlId");
+        if (lValue != null) {
+          lType = aJeo.getTypeByName("urlId");
+          if (!isUrlIdNull()) {
+            lValue.reset(lType, getUrlIdPropertyValue().toString());
+          } else {
+            lValue.reset("null", "");
+          }
+        }
+      } catch(Throwable e) {}
+// Word
+      try {
+        lValue = aJeo.getPropertyValueByName("word");
+        if (lValue != null) {
+          lType = aJeo.getTypeByName("word");
+          if (!isWordNull()) {
+            lValue.reset(lType, getWordPropertyValue().toString());
+          } else {
+            lValue.reset("null", "");
+          }
+        }
+      } catch(Throwable e) {}
+//$Section=Operation$mapToJeo$Preserve=no
+  }
+
+  public void mapFromJeo( Jeo aJeo) {
+//$Section=Operation$mapFromJeo$Preserve=no
+    String lType = null;
+    PropertyValue lValue = null;
+// UrlId
+      try {
+        lValue = aJeo.getPropertyValueByName("urlId");
+        if (lValue != null) {
+          setUrlId(lValue);
+        }
+      } catch(Throwable e) {}
+// Word
+      try {
+        lValue = aJeo.getPropertyValueByName("word");
+        if (lValue != null) {
+          setWord(lValue);
+        }
+      } catch(Throwable e) {}
+//$Section=Operation$mapFromJeo$Preserve=no
+  }
+
+//----------------------------------------------------------------------------
+// This section is for the get by string name related methods.
+//----------------------------------------------------------------------------
+
+  public String getCasedName ( String aAttributeName) {
+//$Section=Operation$getCasedName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("getAttributeName_" + aAttributeName.toLowerCase(), null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getCasedName$Preserve=no
+  }
+
+  public PropertyValue getPropertyValueByName ( String aAttributeName) {
+//$Section=Operation$getPropertyValueByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "PropertyValue", null);
+        return (PropertyValue) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getPropertyValueByName$Preserve=no
+  }
+
+  public void setStringValueByName ( String aAttributeName, String aValue) {
+//$Section=Operation$setStringValueByName$Preserve=no
+
+    try {
+        Class lClassParams[] = new Class[]{"".getClass()};
+        Object lArguments[] = new Object[] {aValue};
+        Method lMethod = this.getClass().getMethod("set" + getCasedName(aAttributeName), lClassParams);
+        lMethod.invoke(this, lArguments);
+    } catch (Throwable e) {
+        //System.out.println(e);
+    }
+
+//$Section=Operation$setStringValueByName$Preserve=no
+  }
+
+  public String getTypeByName ( String aAttributeName) {
+//$Section=Operation$getTypeByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueType", null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getTypeByName$Preserve=no
+  }
+
+  public String getStereotypeByName ( String aAttributeName) {
+//$Section=Operation$getStereotypeByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueStereotype", null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getStereotypeByName$Preserve=no
+  }
+
+  public String getNameByIndex ( int aIndex) {
+//$Section=Operation$getNameByIndex$Preserve=no
+
+    switch(aIndex) {
+      case 1: return "urlid";
+      case 2: return "word";
+    }
+    return null;
+//$Section=Operation$getNameByIndex$Preserve=no
+  }
+
+//----------------------------------------------------------------------------
+// This section is for generated attribute accessor methods.
+//----------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------
+// UrlId
+//----------------------------------------------------------------------------
+    public long getUrlId() {
+//$Section=Attribute get$UrlId$Preserve=no
+        return iUrlId.getValueLong();
+//$Section=Attribute get$UrlId$Preserve=no
+    }
+    public long getUrlId(long aValue) {
+//$Section=Attribute get$UrlId(long)$Preserve=no
+      if (isUrlIdNull()) return aValue;
+      return iUrlId.getValueLong();
+//$Section=Attribute get$UrlId(long)$Preserve=no
+    }
+    public void setUrlId(long aValue) {
+//$Section=Attribute set$UrlId$Preserve=no
+        iUrlId.reset(aValue);
+//$Section=Attribute set$UrlId$Preserve=no
+    }
+    public void setUrlId(PropertyValue aValue) {
+//$Section=Attribute setPropertyValue$UrlId$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setUrlIdNull();
+          return;
+        }
+        setUrlId(aValue.toString());
+//$Section=Attribute setPropertyValue$UrlId$Preserve=no
+    }
+    public void setUrlId(PropertyValue aValue, String aFormat) {
+//$Section=Attribute setPropertyValueFormat$UrlId$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setUrlIdNull();
+          return;
+        }
+        setUrlId(aValue.toString(), aFormat);
+//$Section=Attribute setPropertyValueFormat$UrlId$Preserve=no
+    }
+    public void setUrlId(String aValue) {
+//$Section=Attribute setAsString$UrlId$Preserve=no
+        iUrlId.reset("long", aValue);
+//$Section=Attribute setAsString$UrlId$Preserve=no
+    }
+    public void setUrlId(String aValue, String aType) {
+//$Section=Attribute setAsStringType$UrlId$Preserve=no
+        iUrlId.reset(aType, aValue);
+//$Section=Attribute setAsStringType$UrlId$Preserve=no
+    }
+    public PropertyValue getUrlIdPropertyValue() {
+//$Section=Attribute getPropertyValue$UrlId$Preserve=no
+        return iUrlId;
+//$Section=Attribute getPropertyValue$UrlId$Preserve=no
+    }
+    public String getAttributeName_urlid() {
+//$Section=Attribute getAttributeName$urlid$Preserve=no
+        return "UrlId";
+//$Section=Attribute getAttributeName_$urlid$Preserve=no
+    }
+    public int sizeUrlId() {
+//$Section=Attribute size$UrlId$Preserve=no
+        return iUrlIdSize;
+//$Section=Attribute size$UrlId$Preserve=no
+    }
+    public boolean isUrlIdNullable() {
+//$Section=Attribute isNullable$UrlId$Preserve=no
+        return iUrlIdIsNullable;
+//$Section=Attribute isNullable$UrlId$Preserve=no
+    }
+    public boolean isUrlIdNull() {
+//$Section=Attribute isNull$UrlId$Preserve=no
+        if (iUrlId.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+        return false;
+//$Section=Attribute isNull$UrlId$Preserve=no
+    }
+    public void setUrlIdNull() {
+//$Section=Attribute setNull$UrlId$Preserve=no
+        iUrlId.reset();
+//$Section=Attribute setNull$UrlId$Preserve=no
+    }
+    public void setUrlIdSpaceToNull() {
+//$Section=Attribute setSpaceToNull$UrlId$Preserve=no
+        if (getUrlIdPropertyValue().toString().trim().equals("")) setUrlIdNull();
+//$Section=Attribute setSpaceToNull$UrlId$Preserve=no
+    }
+    public void setUrlIdUpdate(boolean aUpdate) {
+//$Section=Attribute setUpdate$UrlId$Preserve=no
+        iUrlIdUpdate = aUpdate;
+//$Section=Attribute setUpdate$UrlId$Preserve=no
+    }
+    public boolean getUrlIdUpdate() {
+//$Section=Attribute getUpdate$UrlId$Preserve=no
+        return iUrlIdUpdate;
+//$Section=Attribute getUpdate$UrlId$Preserve=no
+    }
+    public String getUrlIdValueType() {
+//$Section=Attribute getValueType$UrlId$Preserve=no
+        return "long";
+//$Section=Attribute getValueType$UrlId$Preserve=no
+    }
+    public String getUrlIdValueStereotype() {
+//$Section=Attribute getValueStereotype$UrlId$Preserve=no
+        return "";
+//$Section=Attribute getValueStereotype$UrlId$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Word
+//----------------------------------------------------------------------------
+    public String getWord() {
+//$Section=Attribute get$Word$Preserve=no
+        return iWord.getValueString();
+//$Section=Attribute get$Word$Preserve=no
+    }
+    public String getWord(String aValue) {
+//$Section=Attribute get$Word(String)$Preserve=no
+      if (isWordNull()) return aValue;
+      return iWord.getValueString();
+//$Section=Attribute get$Word(String)$Preserve=no
+    }
+    public void setWord(String aValue) {
+//$Section=Attribute set$Word$Preserve=no
+        iWord.reset(aValue);
+//$Section=Attribute set$Word$Preserve=no
+    }
+    public void setWord(PropertyValue aValue) {
+//$Section=Attribute setPropertyValue$Word$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setWordNull();
+          return;
+        }
+        setWord(aValue.toString());
+//$Section=Attribute setPropertyValue$Word$Preserve=no
+    }
+    public void setWord(PropertyValue aValue, String aFormat) {
+//$Section=Attribute setPropertyValueFormat$Word$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setWordNull();
+          return;
+        }
+        setWord(aValue.toString(), aFormat);
+//$Section=Attribute setPropertyValueFormat$Word$Preserve=no
+    }
+    public void setWord(String aValue, String aType) {
+//$Section=Attribute setAsStringType$Word$Preserve=no
+        iWord.reset(aType, aValue);
+//$Section=Attribute setAsStringType$Word$Preserve=no
+    }
+    public PropertyValue getWordPropertyValue() {
+//$Section=Attribute getPropertyValue$Word$Preserve=no
+        return iWord;
+//$Section=Attribute getPropertyValue$Word$Preserve=no
+    }
+    public String getAttributeName_word() {
+//$Section=Attribute getAttributeName$word$Preserve=no
+        return "Word";
+//$Section=Attribute getAttributeName_$word$Preserve=no
+    }
+    public int sizeWord() {
+//$Section=Attribute size$Word$Preserve=no
+        return iWordSize;
+//$Section=Attribute size$Word$Preserve=no
+    }
+    public boolean isWordNullable() {
+//$Section=Attribute isNullable$Word$Preserve=no
+        return iWordIsNullable;
+//$Section=Attribute isNullable$Word$Preserve=no
+    }
+    public boolean isWordNull() {
+//$Section=Attribute isNull$Word$Preserve=no
+        if (iWord.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+        return false;
+//$Section=Attribute isNull$Word$Preserve=no
+    }
+    public void setWordNull() {
+//$Section=Attribute setNull$Word$Preserve=no
+        iWord.reset();
+//$Section=Attribute setNull$Word$Preserve=no
+    }
+    public void setWordSpaceToNull() {
+//$Section=Attribute setSpaceToNull$Word$Preserve=no
+        if (getWordPropertyValue().toString().trim().equals("")) setWordNull();
+//$Section=Attribute setSpaceToNull$Word$Preserve=no
+    }
+    public void setWordUpdate(boolean aUpdate) {
+//$Section=Attribute setUpdate$Word$Preserve=no
+        iWordUpdate = aUpdate;
+//$Section=Attribute setUpdate$Word$Preserve=no
+    }
+    public boolean getWordUpdate() {
+//$Section=Attribute getUpdate$Word$Preserve=no
+        return iWordUpdate;
+//$Section=Attribute getUpdate$Word$Preserve=no
+    }
+    public String getWordValueType() {
+//$Section=Attribute getValueType$Word$Preserve=no
+        return "string";
+//$Section=Attribute getValueType$Word$Preserve=no
+    }
+    public String getWordValueStereotype() {
+//$Section=Attribute getValueStereotype$Word$Preserve=no
+        return "";
+//$Section=Attribute getValueStereotype$Word$Preserve=no
+    }
+
+
+//$Section=Deleted$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section contains orphaned code from deleted operations.
+//----------------------------------------------------------------------------
+
+//$Section=Deleted$Preserve=no
+
+//End of class---------------
+}

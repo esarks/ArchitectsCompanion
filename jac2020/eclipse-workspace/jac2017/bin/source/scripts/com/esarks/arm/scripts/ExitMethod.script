@@ -1,0 +1,68 @@
+// Begin: com.esarks.arm.scripts.EndMethod
+<%
+  if (<!$jac:script:xml:return!>!size() > 0) {
+  }
+  if (<!$jac:script:xml:normalReturn!>!size() == 0) {
+  }
+%>
+
+<%
+  if (<!$jac:script:xml:return!>!size() == 0 || <!$jac:script:xml:normalReturn!>!size() > 0) {
+%>
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "Exit " + iScriptFullName + ":" + lMethodSignature + "!Normal exit!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+<%
+  }
+  if (<!$jac:script:xml:normalReturn!>!size() > 0) {
+%>
+    return <![$jac:script:xml:normalReturn]!>;
+<%
+  }
+%>
+
+  } catch (Throwable e) {
+    setContext(iScript.getMasterScript());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event")).set(e.getMessage());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:severity")).set("fatal");
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptPackage")).set(iScriptPackage);
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptName")).set(iScriptName);
+    restoreContext();
+    setExit();
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRptController", "execute", new Object[]{"", iScriptFullName, lMethodSignature, "fatal", lMethodLocation, e.getMessage(), "Unhandled exception.", "Review this exception to determine proper handling."});
+
+    System.out.println("ExceptionRptController called..." + e.getMessage());
+
+    com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+    com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+    lExceptionServiceJeo.addJeo(lExceptionJeo);
+    java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+    lExceptionJeo.setTime(lExceptionTimestamp);
+    lExceptionJeo.setModule(iScriptFullName);
+    lExceptionJeo.setMethod(lMethodSignature);
+    lExceptionJeo.setSeverity("unknown");
+    lExceptionJeo.setLocation(lMethodLocation);
+    lExceptionJeo.setDescription(e.getMessage());
+    lExceptionJeo.setAction("unknown");
+    lExceptionJeo.setResolution("unknown");
+
+    StackTraceElement[] lStackTraceElements = e.getStackTrace();
+    for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+      com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+      lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+      lExceptionJeo.addJeo(lStackExceptionJeo);
+    }
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception", lExceptionServiceJeo});
+
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "Exit " + iScriptFullName + ":" + lMethodSignature + "!Exception caught!" + e.getMessage() + "!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+
+    return <![$jac:script:xml:return]!>;
+  }
+  }
+// End: com.esarks.arm.scripts.EndMethod

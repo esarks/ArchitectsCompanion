@@ -1,0 +1,18 @@
+--- 
+name: JACOB 1.14.3 Binary
+platform_id: all
+platform_version: all
+distribution_file_uuid_string: openlogic-jacob-1.14.3-all-bin-1
+platform_vendor: all
+version_visibility: public
+description: JACOB 1.14.3 Binary
+platform_arch: all
+distribution_file_uuid: ba821261d733590c938d46edf3060195df80c3132e9e8f91989b5df608dd9821
+distribution_version: 1
+distribution_flavor: ""
+distribution_raw_file: jacob-1.14.3.zip
+package_version: 1.14.3
+package_id: jacob
+release_date: "2008-09-26"
+distribution_notes: ""
+distribution_type: bin

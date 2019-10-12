@@ -1,0 +1,8 @@
+<schemas>
+
+  <schema name="root" extendsKey="extends" >
+    <element name="test" type="int" />
+    <element name="property" type="string" truncateEol="true" />
+  </schema>
+
+</schemas>

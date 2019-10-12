@@ -1,0 +1,9 @@
+<jeos>
+
+  <jeo name="MyReportJeo">
+
+    <field name="myField" type="string" />
+
+  </jeo>
+
+</jeos>

@@ -1,0 +1,330 @@
+
+public void execute() {
+
+  parseItems();
+  parseSprints();
+  
+}
+
+
+public void parseItems() {
+
+%>
+********************************
+********************************
+********************************
+<%
+
+// Establish Type translation from Excel to XSD
+
+   <!Type:Boolean!>!set("boolean");
+   <!Type:DateTime!>!set("dateTime");
+   <!Type:Number!>!set("integer");
+   <!Type:String!>!set("string");
+
+// Parse the WorkItems XML exported and converted from Rational RTC
+
+  iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\Agile_Transformation\\Kingston\\Experiment v20190605a\\Copy of All Items.xml");
+
+// Iterate Workbook
+
+  <!Workbook!>!resetIterator();
+  while (<!Workbook!>!next()) {
+
+%>
+Workbook
+<%
+
+// Iterate Worksheet
+   
+    <!Workbook:Worksheet!>!resetIterator();
+    while (<!Workbook:Worksheet!>!next()) { 
+
+%>
+Worksheet <![Workbook:Worksheet:ss:Name]!>
+<%
+
+// Iterate Table
+  
+      <!Workbook:Worksheet:Table!>!resetIterator();
+      while (<!Workbook:Worksheet:Table!>!next()) {
+
+%>
+Table
+<%
+
+
+// Iterate Row and keep count
+              
+        int lRow = 0;
+        <!Workbook:Worksheet:Table:Row!>!resetIterator();
+        while (<!Workbook:Worksheet:Table:Row!>!next()) {
+
+          lRow = lRow + 1;
+          if (lRow > 1) {
+            <!Workitem!>!set("");
+          }
+
+          int lCell = 0;
+                  
+          <!Workbook:Worksheet:Table:Row:Cell!>!resetIterator();
+          while (<!Workbook:Worksheet:Table:Row:Cell!>!next()) {
+
+            lCell = lCell + 1;
+            
+            if (lRow == 1) {
+
+              <!Column!>!set(lCell);
+              <!Column:Heading!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+              <!Column:XmlHeading!>!set(<![Column:Heading]!>.replace(' ','_').replace('(','_').replace(')','_').replace('%','P'));
+              <!Column:Type!>!set("N/A");
+              <!Column:XmlType!>!set("string");
+              
+            } else {
+
+              if (<![Workbook:Worksheet:Table:Row:Cell:ss~Index]!>.equals("")) {
+
+              } else {
+                lCell = Integer.parseInt(<![Workbook:Worksheet:Table:Row:Cell:ss~Index]!>);
+              }
+
+              <!Workitem:Column!>!set(lCell);
+              <!Workitem:Column:Data!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+              <!Workitem:Column:Type!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data:ss~Type]!>);
+              <!Column!>!find(lCell);
+              <!Column:Type!>!reset(<![Workbook:Worksheet:Table:Row:Cell:Data:ss~Type]!>);
+              <!Column:XmlType!>!reset(<![Type:[Workbook:Worksheet:Table:Row:Cell:Data:ss~Type]]!>);
+              <!Workitem:Column:Heading!>!set(<![Column:Heading]!>);
+              if (lCell == 1) <!Workitem:Id!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+              <!Workitem:[Column:Heading]!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  <!Column!>!resetIterator();
+  while (<!Column!>!next()) {
+
+%>
+Column,<![Column]!>,<![Column:Heading]!>,<![Column:XmlHeading]!>,<![Column:Type]!>,<![Column:XmlType]!>
+<%
+
+  }
+
+  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ParseXML\\WorkItems.xml", false);
+
+%>
+<Row>
+<%
+
+  <!Column!>!resetIterator();
+  while (<!Column!>!next()) {
+%>
+<Cell ss:Index="<![Column]!>"><Data><![Column:Heading]!></Data></Cell>
+<%
+  }
+
+%>
+</Row>
+<%
+
+  <!Workitem!>!resetIterator();
+  while (<!Workitem!>!next()) {
+
+%>
+Workitem Id <![Workitem:Id]!>
+<%
+
+    <!Workitem:Column!>!resetIterator();
+    while (<!Workitem:Column!>!next()) {
+
+%>
+Workitem Column <![Workitem:Column]!> (<![Workitem:Column:Heading]!>) [<![Workitem:Column:Type]!>] <![Workitem:Column:Data]!>
+<%
+    }
+  }
+
+  iOutputManager.closeOutputFile();
+
+}
+
+
+public void parseSprints() {
+
+%>
+********************************
+********************************
+********************************
+<%
+
+  <!sprintFile!>!set("Sprint 1 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 2 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 3 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 4 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 5 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 6 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 7 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 8 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 9 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 10 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 11 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 12 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 13 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 14 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 15 Backlog.xml"); 
+  <!sprintFile!>!set("Sprint 1 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 2 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 3 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 4 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 5 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 6 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 7 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 8 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 9 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 10 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 11 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 12 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 13 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 14 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 15 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 16 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Sprint 17 Backlog (OY1).xml"); 
+  <!sprintFile!>!set("Product Backlog.xml"); 
+ 
+  <!sprintFile!>!resetIterator();
+  while (<!sprintFile!>!next()) {
+  iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\Agile_Transformation\\Kingston\\Experiment v20190605a\\Rational 20190603a\\" + <![sprintFile]!>);
+
+  if (<![Project:StartDate]!>.length() > 1) {
+    <!subString1!>!reset(<![Project:StartDate]!>.substring(0,10));
+    <!subString2!>!reset(<![Project:StartDate]!>.substring(11,19));
+    <!StartDate!>!reset(<![subString1]!> + " " + <![subString2]!>);
+  }
+  if (<![Project:FinishDate]!>.length() > 1) {
+    <!subString1!>!reset(<![Project:FinishDate]!>.substring(0,10));
+    <!subString2!>!reset(<![Project:FinishDate]!>.substring(11,19));
+    <!FinishDate!>!reset(<![subString1]!> + " " + <![subString2]!>);
+  }
+ 
+  <!sprint!>!set(<![sprintFile]!>);
+  <!sprint:name!>!set(<![Project:Name]!>);
+  <!sprint:startDate!>!set(<![StartDate]!>);
+  <!sprint:finishDate!>!set(<![FinishDate]!>);
+  <!sprint:idList!>!set("");
+  
+%>
+<![Project:Name]!>,<![StartDate]!>,<![FinishDate]!>
+<%
+ 
+  <!Project:Tasks!>!resetIterator();
+  <!Project:Tasks:Task!>!resetIterator();
+  while (<!Project:Tasks:Task!>!next()) {
+
+    <!Project:Tasks:Task:ExtendedAttribute!>!resetIterator();
+    while (<!Project:Tasks:Task:ExtendedAttribute!>!next()) {
+
+      if (<![Project:Tasks:Task:ExtendedAttribute:FieldID]!>.equals("188743767")) {
+
+        <!sprint:idList:id!>!set(<![Project:Tasks:Task:ExtendedAttribute:Value]!>);
+        addCounter("dupList", <![Project:Tasks:Task:ExtendedAttribute:Value]!>);
+      }
+    }
+  }
+
+  <!Project!>!remove();
+  }
+
+%>
+********************************
+********************************
+********************************
+<%
+ 
+  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ParseXML\\SprintsList.csv", false);
+
+  <!sprint!>!resetIterator();
+  while (<!sprint!>!next()) {
+
+%>
+<![sprint]!>,<![sprint:name]!>,<![sprint:startDate]!>,<![sprint:finishDate]!>
+<%
+
+  }
+
+  iOutputManager.closeOutputFile();
+
+  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ParseXML\\SprintsListIds.csv", false);
+
+%>
+File Name,Sprint Name,Planned For,ID,Type,Status,Parent ID,Parent Type,Count,Summary
+<%
+
+  <!sprint!>!resetIterator();  
+  while (<!sprint!>!next()) {
+
+%>
+***********
+<%
+
+    <!sprint:idList:id!>!resetIterator();  
+    while (<!sprint:idList:id!>!next()) {
+
+      <!Workitem:Id!>!scan(<![sprint:idList:id]!>);
+      <!Workitem!>!alias("aWorkitem");
+      <!Workitem:Id!>!scan(<![Workitem:Parent ID]!>);
+      <!Workitem!>!alias("bWorkitem");
+
+      <!dupList:id!>!scan(<![sprint:idList:id]!>);
+
+%>
+<![sprint]!>,<![sprint:name]!>,<![aWorkitem:Planned For]!>,<![sprint:idList:id]!>,<![aWorkitem:Type]!>,<![aWorkitem:Status]!>,<![aWorkitem:Parent ID]!>,<![bWorkitem:Type]!>,<![dupList:id:count]!>,"<![aWorkitem:Summary]!>"
+<%
+
+/*
+      <!col1!>!reset(<![sprint]!>);
+      <!col2!>!reset(<![sprint:name]!>);
+      <!col2a!>!reset(<![Workitem:Planned For]!>);
+      <!col3!>!reset(<![sprint:idList:id]!>);
+      <!col4!>!reset(<![Workitem:Type]!>);
+      <!col4a!>!reset(<![Workitem:Status]!>);
+      <!col4b!>!reset(<![Workitem:Summary]!>);
+      <!col4c!>!reset(<![Workitem:Description]!>);
+
+      <!col5!>!reset(<![Workitem:Parent ID]!>);
+      <!col6!>!reset(<![dupList:id:count]!>);
+      <!Workitem:Id!>!scan(<![col5]!>);
+      <!col7!>!reset(<![Workitem:Type]!>);      
+           
+%>
+<![col1]!>,<![col2]!>,<![col2a]!>,<![col3]!>,<![col4]!>,<![col4a]!>,<![col5]!>,<![col7]!>,<![col6]!>,<![col4b]!>
+<%
+*/
+
+    }
+  }
+
+  iOutputManager.closeOutputFile();
+  
+}
+
+public void addCounter(String aList, String aId) {
+
+<!temp1!>!reset(aList);
+
+if (<![temp1]:id!>!scan(aId)) {
+
+int lValue = Integer.parseInt(<![[temp1]:id:count]!>) + 1;
+
+<![temp1]:id:count!>!reset(new Integer(lValue));
+
+} else {
+
+<![temp1]:id!>!set(aId);
+<![temp1]:id:count!>!set(new Integer(1));
+
+}
+
+}
+

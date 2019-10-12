@@ -1,0 +1,8 @@
+<mic.element type="Component" title="">
+
+  <tables name="com.projects.validationModel.oasisIndex.scenario1" >
+    <table name="Oasis" jeo="com.hqsonline.hrm.model.entity.Oasis" service="com.hqsonline.hrm.model.entity.OasisCrud" method="readOasis" />
+    <table name="HrmOasisIndex" jeo="com.hqsonline.hrm.model.entity.HrmOasisIndex" service="com.hqsonline.hrm.model.entity.HrmOasisIndexCrud" method="readHrmOasisIndex" />
+  </tables>
+  
+</mic.element>

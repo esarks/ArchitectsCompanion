@@ -1,0 +1,11 @@
+<%
+
+<!directory!>!loadScript("util.directory");
+<!directory!>!execMethod("execute", new String[]{<![$jac:path:scripts]\\util!>});
+
+<!files:file!>!resetIterator();
+while (<!files:file!>!next()) {
+%>*** <![files:file]!>
+<%
+}
+%>

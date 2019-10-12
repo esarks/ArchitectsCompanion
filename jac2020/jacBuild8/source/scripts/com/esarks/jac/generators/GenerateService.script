@@ -1,0 +1,979 @@
+context micScriptComponent
+var String iOpenSymbol = "<" + "!";
+var String iCloseSymbol = "!" + ">";
+end
+
+  public void generateServices(String aXmlDefinition) {
+    resetExit();
+    try {
+%>generateServices: <!%aXmlDefinition!>
+<%
+    <!com.esarks.arm.schemas.services.root!>!remove();
+    parseXmlDefinition(aXmlDefinition);
+    if (<!com.esarks.arm.schemas.services.root!>!size() == 0) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Could not find <services> tag in " + path(aXmlDefinition) + ".xml file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+    boolean lForce = false;
+    setContext(iScript.getMasterScript());
+    if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+    restoreContext();
+    if (!lForce) {
+      File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateService") + ".script");
+      File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+      File lNewFile = new File(path(<![com.esarks.arm.schemas.services.root:name]!>) + ".script");
+      if (lNewFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+          ((lGeneratorFile.exists() && lNewFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) || !lGeneratorFile.exists())) {
+        String lServicesName = <![com.esarks.arm.schemas.services.root:name]!>;
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("File " + lServicesName + ".script is not stale.  Generation bypassed.");
+        <!$jac:event:severity!>!set("info");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;
+      }
+    }
+    
+    setContext(iScript.getMasterScript());
+    <!$jac:merge:sectionMarker!>!reset("//$Section=");
+    <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
+    <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
+    <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
+    <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
+    <!$jac:merge:preservePreamble!>!reset("no");
+    <!$jac:merge:comments!>!reset("//");
+    <!$jac:merge:excludeCompare!>!reset("//  Generated at");
+    <!$jac:merge:trimOutput!>!reset("yes");
+    <!$jac:merge:keepSections!>!reset("no");
+    restoreContext();
+
+//    String lLineNbr = "<" + "#" + "[$jac:script:lineNumber]#>";
+//    boolean lResultSetExists = false;
+
+    if (!openOutput(path(<![com.esarks.arm.schemas.services.root:name]!>) + ".xml")) {
+      setContext(iScript.getMasterScript());
+      if (iOutputManager.getExceptionMessage() != null) {
+        <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+      }
+      <!$jac:event!>!set("Failed to open " + path(<![com.esarks.arm.schemas.services.root:name]!>) + ".xml file for output.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    DbConnection lDbConnection = lDbConnectionFactory.getDbConnection("application");
+
+%>
+<mic.element type="Service" title="">  
+</mic.element>
+<%
+    closeOutput();
+    
+    if (!openOutput(path(<![com.esarks.arm.schemas.services.root:name]!>) + ".new")) {
+      setContext(iScript.getMasterScript());
+      if (iOutputManager.getExceptionMessage() != null) {
+        <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+      }
+      <!$jac:event!>!set("Failed to open " + path(<![com.esarks.arm.schemas.services.root:name]!>) + ".new file for output.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+    setContext(iScript.getMasterScript());
+    String lDateTime = <![$jac:dateTime]!>;
+    restoreContext();
+%>
+
+//$Section=License$Preserve=no
+//  Generated at <!%lDateTime!> by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+
+//$Section=ChangeLog$Preserve=yes
+
+/* ========================================================================= *
+   Contributor        Description
+   ------------------ ------------------------------------------------------
+                      Author
+
+ * ========================================================================= */
+
+//$Section=ChangeLog$Preserve=no
+
+//----------------------------------------------------------------------------
+// This section is for custom operations.
+//----------------------------------------------------------------------------
+//$Section=CustomOperations$Preserve=yes
+//$Section=CustomOperations$Preserve=no
+<%
+
+    iOutputManager.setDocument("createHtml");
+    %><html><%
+    %><table border=1 cellpadding=5 cellspacing=0><%
+    %><tr><td align="right">Specification File Name</td><td><!%aXmlDefinition!>.xml</td></tr><%
+    %><tr><td align="right">Service Script Name</td><td><![com.esarks.arm.schemas.services.root:name]!></td></tr><%
+    %></table><br><%    
+    iOutputManager.setDocument("");
+
+    <!com.esarks.arm.schemas.services.root:service!>!resetIterator();
+    while (<!com.esarks.arm.schemas.services.root:service!>!next()) {
+
+      iOutputManager.setDocument("createHtml");
+      %><table width=100% border=1 cellpadding=5 cellspacing=0><%
+      %><tr><td colspan=2><b><![com.esarks.arm.schemas.services.root:service:name]!></b> ( <![com.esarks.arm.schemas.services.root:service:jeo]!> )</td></tr><%
+      iOutputManager.setDocument("");
+
+%>
+    public void <![com.esarks.arm.schemas.services.root:service:name]!>(<![com.esarks.arm.schemas.services.root:service:jeo]!> aJeo) {
+      java.util.Date lStartTime = null;
+      if (iMicLog.test(Log._APP)) {
+        lStartTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Enter method");
+      }
+<%  
+
+      if (<!com.esarks.arm.schemas.services.root:service:sql!>!size() > 0) {
+
+%>
+      DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+      DbConnection lDbConnection = null;
+
+      PropertyValue lDbConnectionPropertyValue = aJeo.getPropertyValue("DbConnection");
+      if (lDbConnectionPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL) {
+        lDbConnection = (DbConnection) lDbConnectionPropertyValue.getValueObject();
+      } else {
+        lDbConnection = lDbConnectionFactory.getDbConnection("application");
+      }
+
+      if (lDbConnection == null) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+        aJeo.setErrorTitle("Database Connection Failed");
+        aJeo.setErrorText("The service failed to obtain a database connection.");
+        aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+        aJeo.setErrorSeverity(0);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!DbConnection is null");
+        }
+        return;
+      }
+
+<%
+        <!com.esarks.arm.schemas.services.root:service:sql!>& {
+        if (!<![com.esarks.arm.schemas.services.root:service:sql:stereotype]!>.equals("") &&
+            !<![com.esarks.arm.schemas.services.root:service:sql:stereotype]!>.equals(lDbConnection.getStereotype())) continue;
+%>      
+      try {
+        String lTop = "";
+        String lWhere = "";
+        ArrayList lWhereList = new ArrayList();
+<%
+        iOutputManager.setDocument("createHtml");
+        %><tr><td>Order By</td><td><![com.esarks.arm.schemas.services.root:service:sql:orderBy]!>&nbsp;</td></tr><%
+        iOutputManager.setDocument("");
+
+        if (<!com.esarks.arm.schemas.services.root:service:sql:orderBy!>!size() > 0) {
+%>
+        String lOrder = "<![com.esarks.arm.schemas.services.root:service:sql:orderBy]!>";
+<%
+        } else {
+%>
+        String lOrder = "";
+<%
+        }
+%>
+        if (!aJeo.getRequest().getOrderClausePropertyValue().toString().equals("")) {
+          lOrder = aJeo.getRequest().getOrderClausePropertyValue().toString();
+        }
+<%
+        String lProcedure = "";
+        String lCompact = "";
+        String lDocument = "";
+
+        if (<!com.esarks.arm.schemas.services.root:service:sql:statement!>!size() > 0) {
+          <!com.esarks.arm.schemas.services.root:service:sql:statement!>!resetIterator();
+          while (<!com.esarks.arm.schemas.services.root:service:sql:statement!>!next()) {
+            if (<![com.esarks.arm.schemas.services.root:service:sql:statement:stereotype]!>.equals("")) break;
+            if (<![com.esarks.arm.schemas.services.root:service:sql:statement:stereotype]!>.equals(lDbConnection.getStereotype())) break;
+          }
+          lProcedure = <![com.esarks.arm.schemas.services.root:service:sql:statement]!>;
+        }
+        boolean lSkipSpace = true;
+        for (int lIdx=0; lIdx < lProcedure.length(); lIdx++) {
+          if (lProcedure.charAt(lIdx) == '\\' && lProcedure.charAt(lIdx+1) == 'n') {
+            lCompact = lCompact.concat("\" + \"\\n\" + \"");
+            lDocument = lDocument.concat("<br>");
+            lIdx++;
+            continue;
+          }
+          if (lProcedure.charAt(lIdx) <= ' ') {
+            if (lProcedure.charAt(lIdx) < ' ') lDocument = lDocument.concat("<br>");
+            if (lSkipSpace == true) continue;
+            lSkipSpace = true;
+            lCompact = lCompact.concat(" ");
+            lDocument = lDocument.concat(" ");
+            continue;
+          }
+          lSkipSpace = false;
+          lCompact = lCompact.concat(lProcedure.substring(lIdx, lIdx+1));
+          lDocument = lDocument.concat(lProcedure.substring(lIdx, lIdx+1));
+        }
+
+        iOutputManager.setDocument("createHtml");
+        %><tr><td>Statement</td><td><!%lDocument!>&nbsp;</td></tr><%
+        iOutputManager.setDocument("");
+
+%>
+        String lSql = "<!%lCompact!>";
+        if (!aJeo.getRequest().getSelectClausePropertyValue().toString().equals("")) {
+          lSql = aJeo.getRequest().getSelectClausePropertyValue().toString();
+        }
+<%
+
+        <!com.esarks.arm.schemas.services.root:service:sql:where!>!resetIterator();
+        while (<!com.esarks.arm.schemas.services.root:service:sql:where!>!next()) {
+
+          iOutputManager.setDocument("createHtml");
+          %><tr><td colspan=2>Where</td></tr><%
+          %><tr><td colspan=2><table border=0 cellpadding=0 cellspacing=0><%
+          iOutputManager.setDocument("");
+
+          if (!<!com.esarks.arm.schemas.services.root:service:sql:where!>!isFirst()) {
+
+%>
+        else
+<%
+          }
+%>
+        if (aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+          <![com.esarks.arm.schemas.services.root:service:jeo]!> lJeox = aJeo;
+<%
+          String lJeoName = "lJeox";
+          String lResultJeo = "com.esarks.arm.schemas.services.root:service:sql:where";
+          int lJeoCount = 0;
+          while (<!" + lResultJeo + ":jeo!>!size() > 0) {
+
+            iOutputManager.setDocument("createHtml");
+            lJeoCount++;
+            %><tr><td><table border=1 cellpadding=5 cellspacing=0><%
+            %><tr><td colspan=5><![" + lResultJeo + ":jeo:name]!></td></tr><%
+            iOutputManager.setDocument("");
+
+%>
+          <![" + lResultJeo + ":jeo:name]!> <!%lJeoName!>x = (<![" + lResultJeo + ":jeo:name]!>) <!%lJeoName!>.getJeoByInstanceNameAt("<![" + lResultJeo + ":jeo:name]!>", 0);
+<%
+            lJeoName = lJeoName + "x";
+            lResultJeo = lResultJeo + ":jeo";
+          }
+          <!" + lResultJeo + ":where!>!resetIterator();
+          while(<!" + lResultJeo + ":where!>!next()) {
+
+            iOutputManager.setDocument("createHtml");
+            if (<!" + lResultJeo + ":where!>!isFirst()) {
+              %><tr><td><table border=1 cellpadding=5 cellspacing=0><%
+              %><tr><td><b>Attribute</b></td><td><b>Property</b></td><td><b>Clause</b></td><td><b>Skip If Null</b></td><td><b>Skip If Blank</b></td></tr><%
+            }
+            %><tr><td><![" + lResultJeo + ":where:attribute]!>&nbsp;</td><td><![" + lResultJeo + ":where:property]!>&nbsp;</td><td><![" + lResultJeo + ":where:clause]!>&nbsp;</td><td><![" + lResultJeo + ":where:skipIfNull]!>&nbsp;</td><td><![" + lResultJeo + ":where:skipIfBlank]!>&nbsp;</td></tr><%
+            iOutputManager.setDocument("");
+
+            if (<![" + lResultJeo + ":where:skipIfNull]!>.equals("true") || <![" + lResultJeo + ":where:skipIfBlank]!>.equals("true")) {
+              if (<!" + lResultJeo + ":where:property!>!size() > 0) {
+%>
+          {
+            PropertyValue lPropertyValue = <!%lJeoName!>.getPropertyValue("<![" + lResultJeo + ":where:property]!>");
+<%
+                if (<![" + lResultJeo + ":where:skipIfBlank]!>.equals("true")) {
+%>
+            if (lPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL && lPropertyValue.toString().trim().length() > 0) {
+<%
+                } else {
+%>
+            if (lPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL) {
+<%
+                }
+              }
+              if (<!" + lResultJeo + ":where:attribute!>!size() > 0) {
+%>
+          {
+<%
+                if (<![" + lResultJeo + ":where:skipIfBlank]!>.equals("true")) {
+%>
+            if(!<!%lJeoName!>.is<![cap@[" + lResultJeo + ":where:attribute]]!>Null() && <!%lJeoName!>.get<![cap@[" + lResultJeo + ":where:attribute]]!>PropertyValue().toString().trim().length() > 0) {
+<%
+                } else {
+%>
+            if(!<!%lJeoName!>.is<![cap@[" + lResultJeo + ":where:attribute]]!>Null()) {
+<%
+                }
+              }
+            } else {
+              if (<!" + lResultJeo + ":where:property!>!size() > 0) {
+%>
+          {
+            {
+              PropertyValue lPropertyValue = <!%lJeoName!>.getPropertyValue("<![" + lResultJeo + ":where:property]!>");
+<%
+              } else {
+%>
+          {
+            {
+<%
+              }
+            }
+            <!" + lResultJeo + ":where:conjunction!>!resetIterator();
+            while(<!" + lResultJeo + ":where:conjunction!>!next()) {
+
+              iOutputManager.setDocument("createHtml");
+              if (<!" + lResultJeo + ":where:conjunction!>!isFirst()) {
+                %><tr><td colspan=5><table border=1 cellpadding=5 cellspacing=0><%
+                %><tr><td><b>Equals</b></td><td><b>Ends With</b></td><td><b>Clause</b></td></tr><%
+              }
+              %><tr><td><![" + lResultJeo + ":where:conjunction:equals]!>&nbsp;</td><td><![" + lResultJeo + ":where:conjunction:endsWith]!>&nbsp;</td><td><![" + lResultJeo + ":where:conjunction:clause]!>&nbsp;</td></tr><%
+              iOutputManager.setDocument("");
+
+              if (<!" + lResultJeo + ":where:conjunction:equals!>!size() > 0) {
+%>
+              if (lWhere.equals("<![" + lResultJeo + ":where:conjunction:equals]!>")) lWhere = lWhere.trim() + " <![" + lResultJeo + ":where:conjunction:clause]!>";
+<%
+              }
+              if (<!" + lResultJeo + ":where:conjunction:endsWith!>!size() > 0) {
+%>
+              if (lWhere.endsWith("<![" + lResultJeo + ":where:conjunction:endsWith]!>")) lWhere = lWhere.trim() + " <![" + lResultJeo + ":where:conjunction:clause]!>";
+<%
+              }
+
+              iOutputManager.setDocument("createHtml");
+              if (<!" + lResultJeo + ":where:conjunction!>!isLast()) {
+                %></table><%
+              }
+              iOutputManager.setDocument("");
+
+            }
+            if (<!" + lResultJeo + ":where:clause!>!size() > 0) {
+%>
+              lWhere = lWhere.trim() + " <![" + lResultJeo + ":where:clause]!>";
+<%
+            }
+            if (<!" + lResultJeo + ":where:property!>!size() > 0) {
+%>
+              lWhereList.add(lPropertyValue);
+<%
+            }
+            if (<!" + lResultJeo + ":where:attribute!>!size() > 0) {
+%>
+              lWhereList.add(<!%lJeoName!>.get<![cap@[" + lResultJeo + ":where:attribute]]!>PropertyValue());
+<%
+            }
+%>
+            }
+          }
+<%
+            iOutputManager.setDocument("createHtml");
+            if (<!" + lResultJeo + ":where!>!isLast()) {
+              %></table><%
+            }
+            iOutputManager.setDocument("");
+          }
+%>
+        }
+<%
+          for (int lIdx=0; lIdx < lJeoCount; lIdx++) {
+            iOutputManager.setDocument("createHtml");
+            %></td></tr></table><%
+            iOutputManager.setDocument("");
+          }
+
+          iOutputManager.setDocument("createHtml");
+          %></table></td></tr><%
+          iOutputManager.setDocument("");
+
+        } // while (!com.esarks.arm.schemas.services.root:service:sql:where!next()) {
+%>
+        if (!aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+          lWhere = aJeo.getRequest().getWhereClausePropertyValue().toString();
+        }
+        if (lWhere.trim().length() > 0) lWhere = lWhere.trim();
+        if (lOrder.trim().length() > 0) lOrder = lOrder.trim();
+
+        int lTagSearchIndex = 0;
+        if ((lTagSearchIndex = lSql.indexOf("$*top")) > -1) {
+          if (lDbConnection.getStereotype().equals("sqlServer")) {
+            if (aJeo.getRequest().getTopPropertyValue().toString().equals("")) {
+              lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 5);
+            } else {
+              lSql = lSql.substring(0, lTagSearchIndex) + "TOP " + aJeo.getRequest().getTopPropertyValue().toString() + lSql.substring(lTagSearchIndex + 5);
+            }
+          } else {
+            lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 5);
+          }
+        }
+        if ((lTagSearchIndex = lSql.indexOf("$*limit")) > -1) {
+          if (lDbConnection.getStereotype().equals("mySql") || lDbConnection.getStereotype().equals("postgreSql")) {
+            if (aJeo.getRequest().getTopPropertyValue().toString().equals("")) {
+              lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 7);
+            } else {
+              lSql = lSql.substring(0, lTagSearchIndex) + "LIMIT " + aJeo.getRequest().getTopPropertyValue().toString() + lSql.substring(lTagSearchIndex + 7);
+            }
+          } else {
+            lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 7);
+          }
+        }
+        if ((lTagSearchIndex = lSql.indexOf("$*where")) > -1) {
+          lWhere = lWhere.trim();
+          if (lWhere.equals("")) {
+            lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 7);
+          } else {
+            lSql = lSql.substring(0, lTagSearchIndex) + "WHERE " + lWhere + lSql.substring(lTagSearchIndex + 7);
+          }
+        }
+        if ((lTagSearchIndex = lSql.indexOf("$*order")) > -1) {
+          lOrder = lOrder.trim();
+          if (lOrder.equals("")) {
+            lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 7);
+          } else {
+            lSql = lSql.substring(0, lTagSearchIndex) + "ORDER BY " + lOrder + lSql.substring(lTagSearchIndex + 7);
+          }
+        }
+        while ( (lTagSearchIndex = lSql.indexOf("$*")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          String lTag = lSql.substring(lTagSearchIndex+2, lSize);
+          lSql = lSql.substring(0, lTagSearchIndex) + aJeo.getRequest().getPropertyValue(lTag).toString() + lSql.substring(lSize);
+        }
+        while ( (lTagSearchIndex = lSql.indexOf("$")) > -1) {
+          int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+          int lSize2 = lSql.substring(lTagSearchIndex).indexOf(".");
+          if (lSize2 > -1 && lSize2 < lSize) lSize = lSize2;
+          if (lSize == -1) {
+            lSize = lSql.length();
+          } else {
+            lSize += lTagSearchIndex;
+          }
+          lSize = lSize;
+          lSql = lSql.substring(0, lTagSearchIndex) + 
+                   getObjectPrefix(lSql.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lSql.substring(lTagSearchIndex+1, lSize) +
+                   lSql.substring(lSize);
+        }
+<%                
+        if (<![com.esarks.arm.schemas.services.root:service:sql:statement:type]!>.equals("CallableStatement")) {
+%>
+        if (iMicLog.test(Log._APP)) {
+          iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!CallableStatement=" + lSql.trim());
+        }
+        CallableStatement lStatement = lDbConnection.getConnection().prepareCall(lSql.trim());
+<%
+        } else if (<![com.esarks.arm.schemas.services.root:service:sql:statement:type]!>.equals("PreparedStatement")) {
+%>
+        if (iMicLog.test(Log._APP)) {
+          iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!PreparedStatement=" + lSql.trim());
+        }
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim());
+<%
+        } else {
+%>
+        if (iMicLog.test(Log._APP)) {
+          iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!PreparedStatement=" + lSql.trim());
+        }
+        PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim());
+<%
+        }        
+%>
+        if (aJeo.getRequest().getValueList() != null) {
+          ArrayList lValueList = aJeo.getRequest().getValueList();
+          for (int lValueListIdx=0; lValueListIdx < lValueList.size(); lValueListIdx++) {
+            lStatement.setString(lValueListIdx+1, (String) lValueList.get(lValueListIdx));
+          }
+        } else {
+          for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+            lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+          }
+        }
+<%
+        boolean lExecuteBatch = false;
+        if (<!com.esarks.arm.schemas.services.root:service:sql:value!>!size() > 0) {
+%>
+        {
+          <![com.esarks.arm.schemas.services.root:service:jeo]!> lJeox = aJeo;
+<%
+          String lJeoName = "lJeox";
+          String lResultJeo = "com.esarks.arm.schemas.services.root:service:sql:value";
+          String lJeoClassName = "";
+          int lColumn = 0;
+          while (<!" + lResultJeo + ":jeo!>!size() > 0) {
+            lJeoClassName = <![" + lResultJeo + ":jeo:name]!>;
+            boolean lIterate = false;
+            if (<![" + lResultJeo + ":jeo:iterate]!>.equals("true")) {
+              lIterate = true;
+              lExecuteBatch = true;
+%>
+          ArrayList arrayList_<!%lJeoName!>x = <!%lJeoName!>.getJeoByInstanceName("<![" + lResultJeo + ":jeo:name]!>");
+          for (int idx_<!%lJeoName!>x=0; idx_<!%lJeoName!>x < arrayList_<!%lJeoName!>x.size(); idx_<!%lJeoName!>x++) {
+          <![" + lResultJeo + ":jeo:name]!> <!%lJeoName!>x = (<![" + lResultJeo + ":jeo:name]!>) arrayList_<!%lJeoName!>x.get(idx_<!%lJeoName!>x);
+<%
+            } else {
+%>
+          <![" + lResultJeo + ":jeo:name]!> <!%lJeoName!>x = (<![" + lResultJeo + ":jeo:name]!>) <!%lJeoName!>.getJeoByInstanceNameAt("<![" + lResultJeo + ":jeo:name]!>", 0);
+<%
+            }
+            lJeoName = lJeoName + "x";
+            lResultJeo = lResultJeo + ":jeo";
+            Jeo lJeoInstance = null;
+            try {
+              Class lJeoClass = ClassLoader.getSystemClassLoader().loadClass(lJeoClassName);
+              Constructor lConstructor = lJeoClass.getConstructor(new Class[]{});
+              lJeoInstance = (Jeo) lConstructor.newInstance(new Object[]{});
+            } catch (Exception e) {
+              setContext(iScript.getMasterScript());
+              <!$jac:event!>!set(e.getMessage() + " For class " + lJeoClassName + ".");
+              <!$jac:event:severity!>!set("error");
+              <!$jac:event:scriptPackage!>!set(iScriptPackage);
+              <!$jac:event:scriptName!>!set(iScriptName);
+              restoreContext();
+            }
+
+            <!" + lResultJeo + ":value!>!resetIterator();
+            while(<!" + lResultJeo + ":value!>!next()) {
+              if (<!" + lResultJeo + ":value:property!>!size() > 0) {
+                lColumn++;
+                String lPropertyGet = "toString";
+                String lStatementSet = "setString";
+                if (<!" + lResultJeo + ":value:property:get!>!size() > 0) lPropertyGet = <![" + lResultJeo + ":value:property:get]!>;
+                if (<!" + lResultJeo + ":value:property:set!>!size() > 0) lStatementSet = <![" + lResultJeo + ":value:property:set]!>;
+%>
+          {
+            PropertyValue lPropertyValue = <!%lJeoName!>.getPropertyValue("<![" + lResultJeo + ":value:property]!>");
+            if (lPropertyValue.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) {
+<%
+                  if (<!" + lResultJeo + ":value:ifNull!>!size() > 0) {
+%>
+              lStatement.setString(<!%lColumn!>, "<![" + lResultJeo + ":value:ifNull]!>");
+<%
+                  } else {
+%>
+              lStatement.setNull(<!%lColumn!>, java.sql.Types.VARCHAR);
+<%
+                  }
+%>
+            } else {
+              lStatement.<!%lStatementSet!>(<!%lColumn!>, lPropertyValue.<!%lPropertyGet!>());
+            }
+          }
+<%             
+              }
+              if (<!" + lResultJeo + ":value:attribute!>!size() > 0) {
+                String lValueType = "";
+                if (lJeoInstance != null) lValueType = lJeoInstance.getTypeByName(<![" + lResultJeo + ":value:attribute]!>);
+                if (lValueType == null || lValueType.equals("")) {
+                  String lAttributeName = <![" + lResultJeo + ":value:attribute]!>;
+                  setContext(iScript.getMasterScript());
+                  <!$jac:event!>!set("Cannot find attribute " + lAttributeName + " in Jeo " + lJeoClassName + ".");
+                  <!$jac:event:severity!>!set("error");
+                  <!$jac:event:scriptPackage!>!set(iScriptPackage);
+                  <!$jac:event:scriptName!>!set(iScriptName);
+                  restoreContext();
+                }
+                lColumn++;
+%>
+          if(<!%lJeoName!>.is<![cap@[" + lResultJeo + ":value:attribute]]!>Null()) {
+            lStatement.setNull(<!%lColumn!>, java.sql.Types.VARCHAR);
+          } else {
+<%
+                String lTypeJdbc = getProperty("dbTypes:" + lValueType + ":jdbc");
+                String lTypeProperty = getProperty("dbTypes:" + lValueType + ":jdbcProperty");
+                String lCastProperty = "";
+                if (lTypeProperty.equals("")) lTypeProperty = getProperty("dbTypes:" + lValueType + ":property");
+                if (lTypeProperty.startsWith("(")) {
+                  lCastProperty = lTypeProperty + " ";
+                  lTypeProperty = "getValueObject";
+                }
+%>
+            lStatement.set<!%lTypeJdbc!>(<!%lColumn!>, <!%lCastProperty!><!%lJeoName!>.get<![cap@[" + lResultJeo + ":value:attribute]]!>PropertyValue().<!%lTypeProperty!>());
+          }
+<%
+              }
+            }
+            if (lIterate) {
+%>
+        lStatement.addBatch();
+        }
+<%
+            }
+          }
+%>
+        }
+<%
+        }
+       
+        if (<!com.esarks.arm.schemas.services.root:service:sql:result!>!size() > 0) {
+
+          iOutputManager.setDocument("createHtml");
+          %><tr><td colspan=2>Result</td></tr><%
+          %><tr><td colspan=2><table border=0 cellpadding=0 cellspacing=0><%
+          iOutputManager.setDocument("");
+
+%>
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Before <![com.esarks.arm.schemas.services.root:service:sql:statement:method]!>" + "!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+<%                
+          if (<![com.esarks.arm.schemas.services.root:service:sql:statement:method]!>.equals("executeUpdate")) {
+%>
+        lStatement.executeUpdate();
+        ResultSet lResultSet = lStatement.getResultSet();
+<%
+          } else if (<![com.esarks.arm.schemas.services.root:service:sql:statement:method]!>.equals("executeQuery")) {
+%>
+        ResultSet lResultSet = lStatement.executeQuery();
+<%
+          } else if (<![com.esarks.arm.schemas.services.root:service:sql:statement:method]!>.equals("execute")) {
+%>
+        lStatement.execute();
+        ResultSet lResultSet = lStatement.getResultSet();
+<%
+          } else {
+%>
+        lStatement.execute();
+        ResultSet lResultSet = lStatement.getResultSet();
+<%
+          }
+%>
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!After <![com.esarks.arm.schemas.services.root:service:sql:statement:method]!>" + "!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        if (lResultSet == null) {
+          aJeo.addError();
+          aJeo.setErrorId("");
+          aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+          aJeo.setErrorTitle("No ResultSet Returned");
+          aJeo.setErrorText("No ResultSet was returned from the database request.");
+          aJeo.setErrorResolution("The application user may submit another request.");
+          aJeo.setErrorSeverity(4);
+          aJeo.getMostSevereError();
+          lStatement.close();
+          if (iMicLog.test(Log._APP)) {
+            java.util.Date lStopTime = new java.util.Date();
+            iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Exit method!No ResultSet was returned from the database request");
+          }
+          return;
+        }
+        if (lResultSet.next() == false) {
+          aJeo.addError();
+          aJeo.setErrorId("");
+          aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+          aJeo.setErrorTitle("No Data Returned");
+          aJeo.setErrorText("No data was returned from the database request.");
+          aJeo.setErrorResolution("The application user may submit another request.");
+          aJeo.setErrorSeverity(4);
+          aJeo.getMostSevereError();
+          lResultSet.close();
+          lStatement.close();
+          if (iMicLog.test(Log._APP)) {
+            java.util.Date lStopTime = new java.util.Date();
+            iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Exit method!No data was returned from the database request");
+          }
+          return;
+        }
+        int lResultRowsReturned = 0;
+        {
+          <![com.esarks.arm.schemas.services.root:service:jeo]!> lJeox = aJeo;
+<%
+          String lJeoName = "lJeox";
+          String lResultJeo = "com.esarks.arm.schemas.services.root:service:sql:result";
+          int lJeoCount = 0;
+          while (<!" + lResultJeo + ":jeo!>!size() > 0) {
+
+            iOutputManager.setDocument("createHtml");               lJeoCount++;
+            %><tr><td><table border=1  cellpadding=5 cellspacing=0><%
+            String lMapFromResultSet = "true";
+            if (<![" + lResultJeo + ":jeo:mapFromResultSet]!>.equals("false")) lMapFromResultSet = "false";
+            %><tr><td><![" + lResultJeo + ":jeo:name]!>; mapFromResultSet = <!%lMapFromResultSet!></td></tr><%
+            iOutputManager.setDocument("");
+
+            if (<!" + lResultJeo + ":jeo:jeo!>!size() == 0) break;
+%>
+          <![" + lResultJeo + ":jeo:name]!> <!%lJeoName!>x = (<![" + lResultJeo + ":jeo:name]!>) <!%lJeoName!>.getJeoByInstanceNameAt("<![" + lResultJeo + ":jeo:name]!>", 0);
+<%
+            lJeoName = lJeoName + "x";
+            lResultJeo = lResultJeo + ":jeo";
+          }
+%>
+          do {
+            <![" + lResultJeo + ":jeo:name]!> <!%lJeoName!>x = (<![" + lResultJeo + ":jeo:name]!>) com.esarks.jac.JeoFactory.getInstance().reserveJeo("<![" + lResultJeo + ":jeo:name]!>");
+            <!%lJeoName!>.addJeo(<!%lJeoName!>x);
+<%
+            if (!<![" + lResultJeo + ":jeo:mapFromResultSet]!>.equals("false")) {
+
+%>
+            <!%lJeoName!>x.mapFromResultSet(lResultSet, true, false);
+<%
+            }
+            if (<!" + lResultJeo + ":jeo:property!>!size() > 0) {
+              <!" + lResultJeo + ":jeo:property!>!resetIterator();
+              while (<!" + lResultJeo + ":jeo:property!>!next()) {
+                String lJavaType = getProperty("dbTypes:" + <![" + lResultJeo + ":jeo:property:type]!> + ":java");
+                String lJdbcType = getProperty("dbTypes:" + <![" + lResultJeo + ":jeo:property:type]!> + ":jdbc");
+
+                iOutputManager.setDocument("createHtml");
+                if (<!" + lResultJeo + ":jeo:property!>!isFirst()) {
+                  %><tr><td><table border=1 cellpadding=5 cellspacing=0><%
+                  %><tr><td><b>Property Name</b></td><td><b>Type</b></td><td><b>Java Type</b></td><td><b>JDBC Type</b></td></tr><%
+                }
+                %><tr><td><![" + lResultJeo + ":jeo:property:name]!>&nbsp;</td><td><![" + lResultJeo + ":jeo:property:type]!>&nbsp;</td><td><!%lJavaType!>&nbsp;</td><td><!%lJdbcType!>&nbsp;</td></tr><%
+                iOutputManager.setDocument("");
+
+%>
+              try {
+                <!%lJavaType!> lValue = lResultSet.get<!%lJdbcType!>("<![" + lResultJeo + ":jeo:property:name]!>");
+                if (lResultSet.wasNull()) {
+                  <!%lJeoName!>x.setPropertyValue("<![" + lResultJeo + ":jeo:property:name]!>", new PropertyValue());
+                } else {
+                  <!%lJeoName!>x.setPropertyValue("<![" + lResultJeo + ":jeo:property:name]!>", new PropertyValue(lValue));
+                }
+              } catch (Throwable e) {}
+<%
+                iOutputManager.setDocument("createHtml");
+                if (<!" + lResultJeo + ":jeo:property!>!isLast()) {
+                  %></table><%
+                }
+                iOutputManager.setDocument("");
+              }
+            }
+%>
+            lResultRowsReturned++;
+          } while (lResultSet.next());
+        }
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Result rows returned = " + Integer.toString(lResultRowsReturned) + "!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        lResultSet.close();
+        lStatement.close();
+<%
+
+          for (int lIdx=0; lIdx < lJeoCount; lIdx++) {
+            iOutputManager.setDocument("createHtml");
+            %></td></tr></table><%
+            iOutputManager.setDocument("");
+          }
+
+          iOutputManager.setDocument("createHtml");
+          %></table></td></tr><%
+          iOutputManager.setDocument("");
+
+        } else {
+          if (lExecuteBatch) {
+%>
+        lStatement.executeBatch();
+        lStatement.close();
+<%
+          } else {
+%>
+        boolean lResult = lStatement.execute();
+        int lUpdateCount = lStatement.getUpdateCount();
+        if (iMicLog.test(Log._APP)) {
+          java.util.Date lStopTime = new java.util.Date();
+          iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!getUpdateCount = " + Integer.toString(lUpdateCount) + "!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+        }
+        aJeo.getReply().setPropertyValue("getUpdateCount", new PropertyValue(lUpdateCount));
+        lStatement.close();
+<%
+          }
+        }
+%>
+      } catch (SQLException e) {
+        while (e != null) {
+          aJeo.addError();
+          aJeo.setErrorId("");
+          aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+          aJeo.setErrorTitle("Database Exception");
+          aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+          aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+          aJeo.setErrorSeverity(3);
+          aJeo.getMostSevereError();
+          if (iMicLog.test(Log._ERR)) {
+            iMicLog.println(Log._ERR, "ERR-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Exception caught!" + e.getMessage());
+          }
+  
+          if (aJeo.getSuppressException() == false) {
+            com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+            com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+            lExceptionServiceJeo.addJeo(lExceptionJeo);
+            java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+            lExceptionJeo.setTime(lExceptionTimestamp);
+            lExceptionJeo.setModule("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:name]!>");
+            lExceptionJeo.setMethod("<![com.esarks.arm.schemas.services.root:service:name]!>");
+            lExceptionJeo.setSeverity("unknown");
+            lExceptionJeo.setLocation("");
+            lExceptionJeo.setDescription(e.getMessage());
+            lExceptionJeo.setAction("unknown");
+            lExceptionJeo.setResolution("unknown");
+      
+            StackTraceElement[] lStackTraceElements = e.getStackTrace();
+            for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+              com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+              lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+              lExceptionJeo.addJeo(lStackExceptionJeo);
+            }
+      
+            iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+          }
+          e = e.getNextException();
+        }
+        return;
+      } catch (Throwable e) {
+        aJeo.addError();
+        aJeo.setErrorId("");
+        aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+        aJeo.setErrorTitle("Database Exception");
+        aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+        aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+        aJeo.setErrorSeverity(3);
+        aJeo.getMostSevereError();
+        if (iMicLog.test(Log._ERR)) {
+          iMicLog.println(Log._ERR, "ERR-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Exception caught!" + e.getMessage());
+        }
+
+        if (aJeo.getSuppressException() == false) {
+          com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+          com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+          lExceptionServiceJeo.addJeo(lExceptionJeo);
+          java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+          lExceptionJeo.setTime(lExceptionTimestamp);
+          lExceptionJeo.setModule("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:name]!>");
+          lExceptionJeo.setMethod("<![com.esarks.arm.schemas.services.root:service:name]!>");
+          lExceptionJeo.setSeverity("unknown");
+          lExceptionJeo.setLocation("");
+          lExceptionJeo.setDescription(e.getMessage());
+          lExceptionJeo.setAction("unknown");
+          lExceptionJeo.setResolution("unknown");
+    
+          StackTraceElement[] lStackTraceElements = e.getStackTrace();
+          for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+            com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+            lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+            lExceptionJeo.addJeo(lStackExceptionJeo);
+          }    
+          iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+        }
+        return;
+      }
+<%
+      }  // <!com.esarks.arm.schemas.services.root:service:sql!> loop
+      }  // if (<!com.esarks.arm.schemas.services.root:service:sql!>!size() > 0) {
+%>
+      aJeo.addError();
+      aJeo.setErrorId("");
+      aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+      aJeo.setErrorTitle("Success");
+      aJeo.setErrorText("The service completed successfully.");
+      aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+      aJeo.setErrorSeverity(10);
+      aJeo.getMostSevereError();
+      if (iMicLog.test(Log._APP)) {
+        java.util.Date lStopTime = new java.util.Date();
+        iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Normal return!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+      }
+    }
+<%
+      iOutputManager.setDocument("createHtml");
+      %></table><%
+      iOutputManager.setDocument("");
+
+    } // while (<!com.esarks.arm.schemas.services.root:service!>!next()) {
+
+%>
+
+  private String getObjectPrefix(String aObjectName) {
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    DbConnection lDbConnection = lDbConnectionFactory.getAssociatedDbConnection(aObjectName.toLowerCase());
+    if (lDbConnection == null) {
+      if (iMicLog.test(Log._APP)) {
+        iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":getObjectPrefix(" + aObjectName + ")!Object name not in known list.");
+      }
+      return "";
+    }
+    return lDbConnection.getPrefix();    
+  }
+
+//$Section=Deleted$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section contains orphaned code from deleted operations.
+//----------------------------------------------------------------------------
+
+//$Section=Deleted$Preserve=no
+
+//End of script---------------
+<%
+      closeOutput();
+      Merge.getInstance().doMerge(path(<![com.esarks.arm.schemas.services.root:name]!>) + ".script", path(<![com.esarks.arm.schemas.services.root:name]!>) + ".new", iScript.getMasterScript());
+
+      StringBuffer lStringBuffer1 = iOutputManager.getDocument("createHtml");
+  
+      if (openOutput(path(aXmlDefinition) + ".html")) {
+        %><!%lStringBuffer1.toString()!><%
+        %></html><%
+        closeOutput();
+      }
+
+      if (Merge.getInstance().getExceptionMessage() != null) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set(Merge.getInstance().getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;      
+      }
+      
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+  }
+
+  private void parseXmlDefinition(String aXmlDefinition) {
+    XmlSchemaFactory lXmlSchemaFactory = iSymbolTable.getXmlSchemaFactory();
+    if (lXmlSchemaFactory.getXmlSchemaElement("com.esarks.arm.schemas.services.root") == null) {
+      loadXmlSchema("com.esarks.arm.schemas.services", path("com.esarks.arm.schemas.ServicesSchema") + ".xml");
+    }
+    parseXmlSchema(aXmlDefinition);
+  }

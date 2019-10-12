@@ -1,0 +1,301 @@
+  public void execute() {
+
+    java.util.Date lNow = new java.util.Date();
+    System.out.println("Time = " + lNow.getTime());
+
+    String lReferer = "";
+
+    <!mic.element:urlRequest!>!resetIterator();
+    while (<!mic.element:urlRequest!>!next()) {
+      <!$mic:urlRequest!>!remove();
+      <!mic.element:urlRequest!>!alias("$mic:urlRequest");
+      <!$mic:urlRequest:referer!>!set(lReferer);
+      doPage();
+      lReferer = <![$mic:urlResponse:responseUrl]!>;
+%>
+New Referer  : <!%lReferer!>
+<%
+
+      System.out.println("1Pause...");
+      try {
+        System.in.skip(System.in.available());
+        System.in.read();
+      } catch (Throwable e) {}
+
+      while (<!$mic:urlResponse:responseCode!>!getValueInt() == 301 || <!$mic:urlResponse:responseCode!>!getValueInt() == 302) {
+        String lSave = null;
+        if (<!$mic:urlRequest:save!>!size() > 0) {
+          lSave = <![$mic:urlRequest:save]!>;
+        }
+        <!$mic:urlRequest!>!remove();
+        if (lSave != null) <!$mic:urlRequest:save!>!set(lSave);
+        <!$mic:urlRequest:method!>!set("GET");
+        if (<!$mic:urlResponse!>!scan("header", "Location")) {
+
+          String lLocation = <![$mic:urlResponse:header:value]!>;
+          try {
+            URL lTest = new URL(lLocation);
+          } catch(Throwable e) {lLocation = null;}
+
+          if (lLocation == null) {
+            try {
+              String lResponseUrl = <![$mic:urlResponse:responseUrl]!>;
+              URL lTest = new URL(lResponseUrl);
+              lLocation = lTest.getProtocol() + "://" + lTest.getHost() + <![$mic:urlResponse:header:value]!>;
+//              System.out.println("*********************" + lLocation);
+            } catch(Throwable e) {lLocation = "";}
+          }
+
+          <!$mic:urlRequest:url!>!set(lLocation);
+          <!$mic:urlRequest:referer!>!set(lReferer);
+          if (<!mic.element:urlRequest:find!>!size() > 0) {
+            <!mic.element:urlRequest:find!>!alias("$mic:urlRequest:find");
+          }
+          doPage();
+          if (<!$mic:urlResponse!>!size() == 0) {
+%>
+COULD NOT PROCESS PAGE
+<%
+            break;
+          }
+          lReferer = <![$mic:urlResponse:responseUrl]!>;
+%>
+New Referer  : <!%lReferer!>
+<%
+          System.out.println("2Pause...");
+          try {
+            System.in.skip(System.in.available());
+            System.in.read();
+          } catch (Throwable e) {}
+        } else {
+%>
+UNABLE TO FIND LOCATION HEADER
+<%
+          break;
+        }
+      }
+    }
+  }
+
+
+  public void doPage() {
+
+    <!$mic:urlResponse!>!set("");
+
+    if (<![$mic:urlRequest:url]!>.equals("")) {
+%>
+NOTHING TO REQUEST
+<%
+      return;
+    }
+    
+    try {
+      Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
+
+      String lUrlString = "";
+      if (<![$mic:urlRequest:url:useReferer]!>.equals("true")) {
+        lUrlString = <![$mic:urlRequest:referer]!>;
+      } else {
+        lUrlString = <![$mic:urlRequest:url]!>;
+      }
+      <!$mic:urlRequest:appendUrl!>!resetIterator();
+      while(<!$mic:urlRequest:appendUrl!>!next()) {
+%>
+APPEND - <![$mic:urlRequest:appendUrl]!>
+<%
+        String lAppendName = <![$mic:urlRequest:appendUrl]!>;
+        lUrlString += <![$mic:symbols:" + lAppendName + "]!>;
+      }
+      
+      URL lUrl = null;
+      try {
+        lUrl = new URL(lUrlString);
+      } catch(Throwable e) { <!$mic:urlResponse!>!remove(); return;}
+        
+      HttpURLConnection lConnection = (HttpURLConnection) lUrl.openConnection();
+
+      lConnection.setDoInput(true);
+      lConnection.setDoOutput(true);
+      lConnection.setFollowRedirects(false);
+      lConnection.setAllowUserInteraction(true);
+      lConnection.setUseCaches(false);
+
+      String lCookies = "";
+      <!$mic:cookies:key!>!resetIterator();
+      while (<!$mic:cookies:key!>!next()) {
+        lCookies += <![$mic:cookies:key]!> + "=" + <![$mic:cookies:key:value]!>;
+        if (!<!$mic:cookies:key!>!isLast()) lCookies += "; ";
+      }
+      if (lCookies.length() > 0) lConnection.setRequestProperty("Cookie", lCookies);
+      lConnection.setRequestProperty("Accept", "image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/vnd.ms-powerpoint, application/vnd.ms-excel, application/msword, */*");
+      lConnection.setRequestProperty("Accept-Language", "en-us");
+      lConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded"); 
+      lConnection.setRequestProperty("Accept-Encoding", "gzip, deflate");
+      lConnection.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Q312461)");
+      lConnection.setRequestProperty("Connection", "Keep-Alive");
+      lConnection.setRequestProperty("Cache-Control", "no-cache");
+
+      if (<!$mic:urlRequest:referer!>!size() > 0) {
+        lConnection.setRequestProperty("Referer", <![$mic:urlRequest:referer]!>);
+      }
+      
+      lConnection.setRequestMethod(<![$mic:urlRequest:method]!>);
+
+      String lParams = "";
+      <!$mic:urlRequest:parameter!>!resetIterator();
+      while (<!$mic:urlRequest:parameter!>!next()) {
+        if (!<!$mic:urlRequest:parameter!>!isFirst()) lParams += "&";
+        lParams += URLEncoder.encode(<![$mic:urlRequest:parameter:name]!>) + "=" + URLEncoder.encode(<![$mic:urlRequest:parameter]!>);
+      }
+
+      if (<![$mic:urlRequest:method]!>.equals("POST")) {
+        byte[] bytes = lParams.getBytes();
+        lConnection.setRequestProperty("Content-length", String.valueOf(bytes.length));
+        OutputStream lOs = lConnection.getOutputStream();
+        lOs.write(bytes);
+        lOs.flush();
+        lOs.close();
+      }
+
+      <!$mic:urlResponse!>!set(lConnection.getURL().toString());
+      <!$mic:urlResponse:responseCode!>!set(lConnection.getResponseCode());
+      <!$mic:urlResponse:responseMessage!>!set(lConnection.getResponseMessage());
+
+      String lHdrKey;
+      String lHdrString;
+      String lCookie;
+      int lIdx=1;
+      while ((lHdrKey = lConnection.getHeaderFieldKey(lIdx)) != null) {
+        lHdrString = lConnection.getHeaderField(lIdx);
+        <!$mic:urlResponse:header!>!set(lHdrKey);
+        <!$mic:urlResponse:header:value!>!set(lHdrString);
+        if (lHdrKey.equals("Set-Cookie")) {
+          StringTokenizer lSt = new StringTokenizer(lHdrString,",");
+          while (lSt.hasMoreTokens()) {
+            String lS = lSt.nextToken();
+            lCookie = lS.substring(0, lS.indexOf(";"));
+            int lJ = lCookie.indexOf("=");
+            if (lJ != -1) {
+              if (<!$mic:cookies!>!scan("key", lCookie.substring(0, lJ))) <!$mic:cookies:key!>!removeValue();
+              <!$mic:cookies:key!>!set(lCookie.substring(0, lJ));
+              <!$mic:cookies:key:value!>!set(lCookie.substring(lJ + 1));
+            }
+          }
+        }
+        lIdx++;
+      }
+            
+      InputStream lIs = lConnection.getInputStream();
+      InputStreamReader lIsr = new InputStreamReader(lIs);
+      BufferedReader lBr = new BufferedReader(lIsr);
+      String lLine = null;
+
+//      if (<!$mic:urlRequest:save!>!size() > 0) {
+//        openOutput(path(<![$mic:urlRequest:save]!>) + ".html");
+//      }
+
+//      openOutput(path("com.learning.paul.agent.Save") + ".html");
+      while ( (lLine = lBr.readLine()) != null) {
+
+        //*********************************************************************************
+        //*********************************************************************************
+        //*********************************************************************************
+        // This section of code finds substrings within the HTML output, and stores them as symbols for later reuse.
+        String lSymbol = "";
+        int lSymbolIdx;
+        boolean lBreak = true;
+        <!$mic:urlRequest:find!>!resetIterator();
+        while(<!$mic:urlRequest:find!>!next()) {
+          lBreak = false;
+          lSymbol = lLine;
+          <!$mic:urlRequest:find:range!>!resetIterator();
+          while(<!$mic:urlRequest:find:range!>!next()) {
+            if (<!$mic:urlRequest:find:range:startsWith!>!size() > 0) {
+              if (<!$mic:urlRequest:find:range:startsWith!>!size() > 0 && (lSymbolIdx = lSymbol.indexOf(<![$mic:urlRequest:find:range:startsWith]!>)) > -1) {
+                if (<![$mic:urlRequest:find:range:startsWith:inclusive]!>.equals("true")) {
+                  lSymbol = lSymbol.substring(lSymbolIdx);
+                } else {
+                  lSymbol = lSymbol.substring(lSymbolIdx + <![$mic:urlRequest:find:range:startsWith]!>.length());
+                }
+              } else {
+                lBreak = true;
+              }
+            }
+            if (<!$mic:urlRequest:find:range:endsWith!>!size() > 0) {
+              if (!lBreak && (lSymbolIdx = lSymbol.indexOf(<![$mic:urlRequest:find:range:endsWith]!>)) > -1) {
+                if (<![$mic:urlRequest:find:range:endsWith:inclusive]!>.equals("true")) {
+                  lSymbol = lSymbol.substring(0, lSymbolIdx);
+                } else {
+                  lSymbol = lSymbol.substring(0, lSymbolIdx);
+                }
+              } else {
+                lBreak = true;
+              }
+            }
+            if (lBreak) break;
+          }
+          if (!lBreak) {
+            String lSymbolName = <![$mic:urlRequest:find:name]!>;
+            System.out.println("*****************" + lSymbolName + "=" + lSymbol);
+            <!$mic:symbols:" + lSymbolName + "!>!reset(lSymbol);
+          }
+          if (lBreak) break;
+        }
+        //*********************************************************************************
+        //*********************************************************************************
+        //*********************************************************************************
+%>
+<!%lLine!>
+<%
+        <!$mic:urlResponse:line!>!set(lLine);
+      }
+//      closeOutput();
+//      java.lang.Runtime.getRuntime().exec("explorer " + path("com.learning.paul.agent.Save") + ".html");
+//      if (<!$mic:urlRequest:save!>!size() > 0) {
+//        closeOutput();
+//        java.lang.Runtime.getRuntime().exec("explorer " + path(<![$mic:urlRequest:save]!>) + ".html");
+//      }
+
+      <!$mic:urlResponse:responseUrl!>!set(lConnection.getURL().toString());
+      <!$mic:urlResponse:responseCode!>!set(lConnection.getResponseCode());
+      <!$mic:urlResponse:responseMessage!>!set(lConnection.getResponseMessage());
+
+%>
+*******************************************************************************
+*******************************************************************************
+<%
+      if (<![$mic:urlRequest:url:useReferer]!>.equals("true")) {
+%>
+Request URL  : <![$mic:urlRequest:referer]!>
+Use Referer  : True
+<%
+      } else {
+%>
+Request URL  : <![$mic:urlRequest:url]!>
+Referer URL  : <![$mic:urlRequest:referer]!>
+<%
+      }
+%>
+Method       : <![$mic:urlRequest:method]!>
+Parameters   : <!%lParams!>
+Response URL : <![$mic:urlResponse:responseUrl]!>
+Response code: <![$mic:urlResponse:responseCode]!> <![$mic:urlResponse:responseMessage]!>
+<%
+      <!$mic:urlResponse:header!>!resetIterator();
+      while (<!$mic:urlResponse:header!>!next()) {
+%>
+Header       : <![$mic:urlResponse:header]!> = <![$mic:urlResponse:header:value]!>
+<%
+      }
+      
+      <!$mic:cookies:key!>!resetIterator();
+      while (<!$mic:cookies:key!>!next()) {
+%>
+Cookie       : <![$mic:cookies:key]!> = <![$mic:cookies:key:value]!>
+<%
+      }
+
+    } catch (Throwable t) {}
+       
+  }
+

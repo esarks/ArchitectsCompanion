@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>IceWarp Web Mail (Paul Marshall) - Read Messages</TITLE>
+
+
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<LINK REL="StyleSheet" HREF="skins/Classic4/skin.css" type="text/css">
+<SCRIPT type="text/javascript" src="skins/Classic4/script.js"></SCRIPT>
+</HEAD>
+<BODY bgcolor="#FFFFFF">
+<div align="center">
+<img src="images/logo.gif" border="0" alt="IceWarp Web Mail"/>
+</div>
+<DIV >
+<TABLE width="100%" height="25" background="skins/Classic4/images/menu.gif" border="0" cellspacing="0">
+<TR>
+        <TD>
+                <TABLE background=images/space.gif>
+                <TR>
+                        <TD ><A HREF="readmail.html?folder=inbox&id=4a73d566153df3a0986b1e31384386fd&get=1" CLASS="menulink">Get Messages</A></TD>
+                        <td>|</td>
+                        <TD ><A HREF="writemail.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">New Message</A></TD>
+                        <td>|</td>
+                        <TD ><A HREF="folders.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">Folders</A></TD>
+                        <td>|</td>
+                        <TD ><A HREF="address.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">Address Book</A></TD>
+    
+                        <td>|</td>
+                        <TD ><A HREF="calendar.html?id=4a73d566153df3a0986b1e31384386fd&extview=1" CLASS="menulink">Calendar</A></TD>
+    
+                        <td>|</td>
+                        <TD ><A HREF="settings.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">Settings</A></TD>
+                </TR>
+                </TABLE>
+        </TD>
+        <TD >
+                <TABLE align="right" background=images/space.gif>
+                <TR>
+                        <TD ><A HREF="logout.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">Logout</A></TD>
+                        <td>|</td>
+                        <TD ><A HREF="help.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">Help</A></TD>
+                </TR>
+                </TABLE>
+        </TD>
+</TR>
+</TABLE>
+</DIV>
+
+
+
+        <DIV class="pagetitle">
+			&nbsp;&nbsp;&nbsp;&nbsp;List Of Messages
+        </DIV>
+
+
+<div align="center">
+	<div align=center class="message">
+		Your message has been sent.
+	</div>
+</div>
+<div align="center">
+<DIV>
+
+<SCRIPT LANGUAGE="javascript">
+function searchopen()
+{
+ var www="search.html?id=4a73d566153df3a0986b1e31384386fd&xfolder=inbox";
+ var wsetup="resizable=yes,scrollbars=yes,status=0,width=640,height=480";
+ searchwin = window.open(www, "Search",wsetup);
+ return true;
+}
+</SCRIPT>
+                    <FORM METHOD="POST" ACTION="readmail.html" NAME="main">
+                    <INPUT TYPE="hidden" NAME="id" VALUE="4a73d566153df3a0986b1e31384386fd">
+                    <INPUT TYPE="hidden" NAME="startindex" VALUE="">
+                    <TABLE width="100%">
+                    <TR>
+                    <TD>
+    <DIV>
+    <TABLE border="0" width="100%" cellpadding="0" cellspacing="0" >
+        <TR >
+            <TD>
+                    <TABLE >
+                    <TR>
+                      <TD><INPUT name="checkall" type="checkbox" CLASS="checkbox"  onClick="CheckAll();"></TD>
+                      <TD CLASS="standardtext">Select All Messages</TD>
+                    </TR>
+                    </TABLE>
+            </TD>
+            <TD align=right>
+                <TABLE>
+                <TR>
+                  <TD CLASS="standardtext">Folder :</TD>
+                        <TD>
+                        <SELECT NAME="folder" SIZE=1 CLASS="fr_combo" onChange="SendForm(); return true"><OPTION VALUE="inbox"  SELECTED >Inbox (0 Message(s), 0 Unread) </OPTION> <OPTION VALUE="drafts"  >Drafts (0 Message(s), 0 Unread) </OPTION> <OPTION VALUE="sent"  >Sent (5 Message(s), 0 Unread) </OPTION> <OPTION VALUE="trash"  >Trash (7 Message(s), 6 Unread) </OPTION> </SELECT>
+                        </TD>
+                        <TD><INPUT TYPE="submit" NAME="go" VALUE=" Go " CLASS="fr_button"></TD>
+                </TR>
+                </TABLE>
+        </TD>
+</TR>
+</TABLE>
+</DIV><DIV >
+    <div id="tool1">
+    <div class="max">
+        <span>
+        <SELECT NAME="actiontype" SIZE="1" CLASS="fr_combo" >
+        <OPTION VALUE="Proceed_x"> Move </OPTION>
+        <OPTION VALUE="Copy_x"> Copy </OPTION>
+        <OPTION VALUE="">----------------------------</OPTION>
+        <OPTION VALUE="MarkRead_x">Mark As Read</OPTION>
+        <OPTION VALUE="MarkUnread_x">Mark As Unread</OPTION>
+        </SELECT>
+
+        Selected Messages To :
+
+        <SELECT NAME="actionfolder" SIZE="1" CLASS="fr_combo" >
+                 <OPTION VALUE="inbox"  SELECTED >Inbox</OPTION> <OPTION VALUE="drafts"  >Drafts</OPTION> <OPTION VALUE="sent"  >Sent</OPTION> <OPTION VALUE="trash"  >Trash</OPTION> 
+        </SELECT>
+        </span>
+
+        <INPUT id=okbutton TYPE="submit" NAME="OK_x" VALUE="OK" CLASS="fr_button" >
+
+         </div>
+
+        <span id="emptybuttons">
+        <INPUT TYPE="button" NAME="bsearch" VALUE="Search" CLASS="fr_button" onclick="searchopen()">
+        <INPUT TYPE="submit" NAME="Delete_x" VALUE="Delete Selected" CLASS="fr_button" >
+        </span>
+    </div>
+    
+</DIV>
+</TD>
+</TR>
+</TABLE><BR><DIV align="center" CLASS="copy">Powered by  <A HREF="http://www.icewarp.com/" target="_blank" CLASS="copylink">IceWarp Software</A> <A HREF="http://icewarp.com/Products/Merak_Email_Server_Software/" target="_blank" CLASS="copylink">Merak Email Server</A></DIV>
+</div>
+
+
+<DIV >
+<TABLE width="100%" height="25" background="skins/Classic4/images/menu.gif" border="0" cellspacing="0">
+<TR>
+        <TD>
+                <TABLE background=images/space.gif>
+                <TR>
+                        <TD ><A HREF="readmail.html?folder=inbox&id=4a73d566153df3a0986b1e31384386fd&get=1" CLASS="menulink">Get Messages</A></TD>
+                        <td>|</td>
+                        <TD ><A HREF="writemail.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">New Message</A></TD>
+                        <td>|</td>
+                        <TD ><A HREF="folders.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">Folders</A></TD>
+                        <td>|</td>
+                        <TD ><A HREF="address.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">Address Book</A></TD>
+    
+                        <td>|</td>
+                        <TD ><A HREF="calendar.html?id=4a73d566153df3a0986b1e31384386fd&extview=1" CLASS="menulink">Calendar</A></TD>
+    
+                        <td>|</td>
+                        <TD ><A HREF="settings.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">Settings</A></TD>
+                </TR>
+                </TABLE>
+        </TD>
+        <TD >
+                <TABLE align="right" background=images/space.gif>
+                <TR>
+                        <TD ><A HREF="logout.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">Logout</A></TD>
+                        <td>|</td>
+                        <TD ><A HREF="help.html?id=4a73d566153df3a0986b1e31384386fd" CLASS="menulink">Help</A></TD>
+                </TR>
+                </TABLE>
+        </TD>
+</TR>
+</TABLE>
+</DIV>
+
+</BODY>
+</HTML>

@@ -1,0 +1,63 @@
+<domainModel>
+	<goals>
+  	<goal name="Maintain project plan" />
+	</goals>
+	<actor name="Project Manager">
+		<goal name="Update project plan from status report"/>
+		<goal name="Approve invoices based on reported status"/>
+		<goal name="Identify overtime violations"/>
+	</actor>
+	<actor name="Accounts Payable">
+		<goal name="Authorize invoice for payment"/>
+	</actor>
+	<actor name="Project Resource">
+		<goal name="Account for time on projects"/>
+		<goal name="Report time and progress"/>
+		<goal name="Invoice for time on project"/>
+		<goal name="Identify need for additional PO"/>
+	</actor>
+	<useCase name="Record time on project">
+	</useCase>
+	<useCase name="Produce status report">
+	</useCase>
+	<useCase name="Produce invoice">
+	</useCase>
+	<useCase name="Maintain project information">
+	</useCase>
+	<domain name="Project">
+		<attribute name="Id" type="long"/>
+		<attribute name="Name" type="String"/>
+	</domain>
+	<domainMap name="createProject" stereotype="callableStatement">
+		<argument name="aProject" type="Project"/>
+		<callableStatement>BEGIN INSERT INTO project (name) VALUES (?) RETURNING id INTO ?; END;</callableStatement>
+		<setStatement>lCallableStatement.setString(1, aProject.getName());</setStatement>
+	</domainMap>
+	<domainMap name="readProjectId" stereotype="executeStatement">
+		<argument name="aId" type="long"/>
+		<executeStatement>"SELECT * FROM project WHERE id = " + aId</executeStatement>
+	</domainMap>
+	<domainMap name="readProjectWhereIdIn" stereotype="executeStatement">
+		<argument name="aWhere" type="String"/>
+		<executeStatement>"SELECT * FROM project WHERE id IN (" + aWhere + ") ORDER BY name"</executeStatement>
+	</domainMap>
+	<domainMap name="updateProject" stereotype="preparedStatement">
+		<argument name="aProject" type="Project"/>
+		<preparedStatement>UPDATE project SET name=? WHERE id=" + aProject.getId()</preparedStatement>
+		<setStatement>lPreparedStatement.setString(1, aProject.getName());</setStatement>
+	</domainMap>
+	<domainMap name="deleteProjectId" stereotype="executeStatement">
+		<argument name="aId" type="long"/>
+		<executeStatement>"DELETE project WHERE id=" + aId</executeStatement>
+	</domainMap>
+	<domainMap name="deleteProjectWhereIdIn" stereotype="executeStatement">
+		<argument name="aWhere" type="String"/>
+		<executeStatement>"DELETE project WHERE id IN (" + aWhere + ")"</executeStatement>
+	</domainMap>
+	<table name="project">
+		<attribute name="id" type="number(10,0)" nullable="false"/>
+		<attribute name="name" type="varchar2(64)" nullable="true"/>
+		<constraint name="project_id_pk" stereotype="primary" fields="(id)"/>
+		<sequence name="project_id_seq" stereotype="sequence"/>
+	</table>
+</domainModel>

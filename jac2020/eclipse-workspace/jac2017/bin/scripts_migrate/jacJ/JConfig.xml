@@ -1,0 +1,15 @@
+<JConfig>true
+  <Operation>
+    <Abstract>abstract</Abstract>
+  </Operation>
+  <ModuleExtension>
+    <ACClass>java</ACClass>
+    <ACDb>txt</ACDb>
+  </ModuleExtension>
+  <ExportControl>
+    <PublicAccess>public</PublicAccess>
+    <ProtectedAccess>protected</ProtectedAccess>
+    <PrivateAccess>private</PrivateAccess>
+    <ImplementationAccess>*</ImplementationAccess>
+  </ExportControl>
+</JConfig>

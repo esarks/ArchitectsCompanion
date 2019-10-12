@@ -1,0 +1,129 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fswiss Arial;}{\f1\fmodern Courier New;}}
+\f0\fs20\par
+{\fs28 Introduction:\par}
+\par
+This documents the CPGenerationPaidDueResume:execute() method when called from the Tuxedo service.\par
+\par
+\par
+{\fs28 Business Object: \par}
+\par
+The CPGeneratePaidAndDueResume object is instantiated by the Tuxedo service.\par
+\par
+\par
+{\fs28 Bussiness Object Class: CPGeneratePaidDueResume\par}
+\par
+This class implements the business logic for Awards Paid And Due functionality.\par
+\par
+Paid And Due is a business function that compares data related to two award generation events.  One is considered the "paid" event, and the other is considered the "due" event.  The "paid" award event is the current award from which payments are being made to one or more recipients.\par
+\par
+When a new set of award lines are generated, the historical payments (what has been paid) are compared to the new award lines (what is due) to determine if new award decisions effect past payments.  These historical adjustments can be payables or receivables and will be reflected in business transactions created by this class and sent to FAS.\par
+\par
+In addition, this class produces FAS Recurring Payable transactions, and Future Recurring Payables.\par
+\par
+This class is also used to calculate the net effect between two award generation events for Suspend / Resume processing, by calling the executeResume operation.\par
+\par
+The class object should be instantiated and destroyed for each invocation, as the destructor performs necessary memory management to release objects.\par
+\par
+See process specification "Paid And Due".\par
+\par
+\par
+{\fs28 Business Object Operation: execute\par}
+\par
+This operation implements the functions of Paid And Due for determining the Net Effect between two award generation events.\par
+\par
+Up to two award generation events are submitted for comparison, according to the input parameters.\par
+\par
+\par
+{\fs28 Operation Prototype:\par}
+\par
+{\f1\fs18\li720 PublicAccess void execute(CP_BENE_CTRL*, CrudCol&, CrudCol&, CrudCol&, VNBool, CrudCol&)\par}
+\par
+Parameters:\par
+\par
+\pard \ql \fi-540\li540\ri0\nowidctlpar\tqr\tx360\faauto\rin0\lin480\itap0 {
+{\tab 1.\tab CP_BENE_CTRL* cp_bene_ctrl\par}
+{\tab 2.\tab CrudCol& currentCrudCol\par}
+{\tab 3.\tab CrudCol& proposedCrudCol\par}
+{\tab 4.\tab CrudCol& outputCrudCol\par}
+{\tab 5.\tab VNBool authFlag\par}
+{\tab 6.\tab CrudCol& otherInputCrudCol\par}
+}\par\pard
+\pard \ql \fi-540\li540\ri0\nowidctlpar\tqr\tx360\faauto\rin0\lin480\itap0 {
+{\tab 1.\tab CP_BENE_CTRL* cp_bene_ctrl\par}
+}\par
+\pard \li540
+Attributes vet_id, awd_tc, and bene_id are required.\par
+\par
+This is the parent object of any award generation events passed into the class for processing.\par
+\par
+It is not necessary that this object come directly from Oracle.  That is, it could be instantiated as a control object (or sent from the GUI) as long as it contains the three necessary attributes, without having been read directly from Oracle.\par
+\par
+\pard \ql \fi-540\li540\ri0\nowidctlpar\tqr\tx360\faauto\rin0\lin480\itap0 {
+{\tab 2.\tab CrudCol& currentCrudCol\par}
+}\par
+\pard \li540
+CrudCol object is required (i.e. cannot be null).\par
+\par
+The contents are optional.  That is, a current award may not exist.\par
+\par
+When a current award exists, this collection contains the objects as described.\par
+\par
+The "current award" is the data associated with the most recently authorized award generation event.  This is the set of award lines from which payments are being made by FAS.\par
+\par
+CP_AWD_GEN_EVNT\par
+\par
+CP_AWD_LINE\par
+\par
+CP_AWDLINE_RECIP\par
+\par
+CP_AWD_REASON\par
+\par
+CP_AWD_RECIP\par
+\par
+\pard \ql \fi-540\li540\ri0\nowidctlpar\tqr\tx360\faauto\rin0\lin480\itap0 {
+{\tab 3.\tab CrudCol& proposedCrudCol\par}
+}\par
+\pard \li540
+CrudCol object is required (i.e. cannot be null).\par
+\par
+The contents are required.  There must always be at least a proposed award sent to the object.\par
+\par
+This collection contains the objects as described.\par
+\par
+The "proposed award" is the data associated with the most recently generated, but not authorized, award generation event.  This is the set of award lines that are proposed to replace the current award, and represents what is due to the award recipients.\par
+\par
+CP_AWD_GEN_EVNT\par
+\par
+CP_AWD_LINE\par
+\par
+CP_AWDLINE_RECIP\par
+\par
+CP_AWD_REASON\par
+\par
+CP_AWD_RECIP\par
+\par
+\pard \ql \fi-540\li540\ri0\nowidctlpar\tqr\tx360\faauto\rin0\lin480\itap0 {
+{\tab 4.\tab CrudCol& outputCrudCol\par}
+}\par
+\pard \li540
+CrudCol object is required (i.e. cannot be null).\par
+\par
+This is the output collection where objects are returned from the business logic.  Contents are as described.\par
+\par
+\pard \ql \fi-540\li540\ri0\nowidctlpar\tqr\tx360\faauto\rin0\lin480\itap0 {
+{\tab 5.\tab VNBool authFlag\par}
+}\par
+\pard \li540
+\par
+\pard \ql \fi-540\li540\ri0\nowidctlpar\tqr\tx360\faauto\rin0\lin480\itap0 {
+{\tab 6.\tab CrudCol& otherInputCrudCol\par}
+}\par
+\pard \li540
+CrudCol object is required (i.e. cannot be null).\par
+\par
+Additional entities are sent to the business logic via this collection.\par
+\par
+Contents are as described.\par
+\par
+}\pard
+}

@@ -1,0 +1,197 @@
+
+Introduction:
+
+This documents the CPGenerationPaidDueResume:execute() method when called from the Tuxedo service.
+
+
+Business Object: 
+
+The CPGeneratePaidAndDueResume object is instantiated by the Tuxedo service.
+
+
+Bussiness Object Class: CPGeneratePaidDueResume
+
+This class implements the business logic for Awards Paid And Due functionality.
+
+Paid And Due is a business function that compares data related to two award generation events.  One is considered the "paid" event, and the other is considered the "due" event.  The "paid" award event is the current award from which payments are being made to one or more recipients.
+
+When a new set of award lines are generated, the historical payments (what has been paid) are compared to the new award lines (what is due) to determine if new award decisions effect past payments.  These historical adjustments can be payables or receivables and will be reflected in business transactions created by this class and sent to FAS.
+
+In addition, this class produces FAS Recurring Payable transactions, and Future Recurring Payables.
+
+This class is also used to calculate the net effect between two award generation events for Suspend / Resume processing, by calling the executeResume operation.
+
+The class object should be instantiated and destroyed for each invocation, as the destructor performs necessary memory management to release objects.
+
+See process specification "Paid And Due".
+
+
+Business Object Operation: execute
+
+This operation implements the functions of Paid And Due for determining the Net Effect between two award generation events.
+
+Up to two award generation events are submitted for comparison, according to the input parameters.
+
+
+Operation Prototype: PublicAccess void execute(CP_BENE_CTRL*, CrudCol&, CrudCol&, CrudCol&, VNBool, CrudCol&)
+
+Parameters:
+CP_BENE_CTRL* cp_bene_ctrl
+CrudCol& currentCrudCol
+CrudCol& proposedCrudCol
+CrudCol& outputCrudCol
+VNBool authFlag
+CrudCol& otherInputCrudCol
+
+CP_BENE_CTRL* cp_bene_ctrl
+
+Attributes vet_id, awd_tc, and bene_id are required.
+
+This is the parent object of any award generation events passed into the class for processing.
+
+It is not necessary that this object come directly from Oracle.  That is, it could be instantiated as a control object (or sent from the GUI) as long as it contains the three necessary attributes, without having been read directly from Oracle.
+
+
+CrudCol& currentCrudCol
+
+CrudCol object is required (i.e. cannot be null).
+
+The contents are optional.  That is, a current award may not exist.
+
+When a current award exists, this collection contains the objects as described.
+
+The "current award" is the data associated with the most recently authorized award generation event.  This is the set of award lines from which payments are being made by FAS.
+
+
+CP_AWD_GEN_EVNT
+
+Read from Oracle, the current award, child of CP_BENE_CTRL.
+
+The current award is the most recently generated authorized award event.
+
+Parent Name, Parent Id are not required.
+
+
+CP_AWD_LINE
+
+Read from Oracle, children of CP_AWD_GEN_EVNT.
+
+Parent Name, Parent Id are not required.
+
+
+CP_AWDLINE_RECIP
+
+Read from Oracle, children of CP_AWD_LINE.
+
+Parent Name, Parent Id are not required.
+
+
+CP_AWD_REASON
+
+Read from Oracle, children of CP_AWD_LINE.
+
+Parent Name, Parent Id are not required.
+
+
+CP_AWD_RECIP
+
+Read from Oracle, children of CP_BENE_CTRL.
+
+Parent Name, Parent Id are not required.
+
+
+CrudCol& proposedCrudCol
+
+CrudCol object is required (i.e. cannot be null).
+
+The contents are required.  There must always be at least a proposed award sent to the object.
+
+This collection contains the objects as described.
+
+The "proposed award" is the data associated with the most recently generated, but not authorized, award generation event.  This is the set of award lines that are proposed to replace the current award, and represents what is due to the award recipients.
+
+
+CP_AWD_GEN_EVNT
+
+
+
+CP_AWD_LINE
+
+
+
+CP_AWDLINE_RECIP
+
+
+
+CP_AWD_REASON
+
+
+
+CP_AWD_RECIP
+
+
+
+CP_RECIP_EVNT
+
+
+
+CrudCol& outputCrudCol
+
+CrudCol object is required (i.e. cannot be null).
+
+This is the output collection where objects are returned from the business logic.  Contents are as described.
+
+
+FA_BUSNS_TRAN
+
+
+
+FA_RECRNG_PYBL
+
+
+
+CP_FTR_AWD_LINE
+
+
+
+CP_AWD_RECIP
+
+
+
+CP_AWD_GEN_EVNT
+
+
+
+VNBool authFlag
+
+This modifies the behavior of the business logic.
+
+When authFlag is TRUE...
+
+When authFlag is FALSE...
+
+
+CrudCol& otherInputCrudCol
+
+CrudCol object is required (i.e. cannot be null).
+
+Additional entities are sent to the business logic via this collection.
+
+Contents are as described.
+
+
+CP_AWD_BTRAN
+
+
+
+CP_AWD_PROF
+
+
+
+CP_AWD_RECIP
+
+
+
+VN_FAMILY_RLNSHP
+
+

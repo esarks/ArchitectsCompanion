@@ -1,0 +1,124 @@
+C:\ArchitectsCompanion\jac\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\ArchitectsCompanion\jac\conf\micImport.script:2: 
+C:\ArchitectsCompanion\jac\conf\micImport.script:3: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:4: import java.util.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:5: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:6: import java.io.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:7: import java.text.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:8: import java.net.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:9: import javax.net.ssl.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:10: import java.security.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:11: import java.sql.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:12: import javax.servlet.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:13: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:14: import java.awt.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:15: import javax.swing.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:16: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac\conf\micImport.script:17: 
+C:\ArchitectsCompanion\jac\conf\micImport.script:18: <#import#>
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:2: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:4:   }
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:5: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:7: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:8:     super(aScript);
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:9: 
+C:\ArchitectsCompanion\jac\conf\micPrefix.script:10:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:1: set $jac:script:extends=com.esarks.mic.Component
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:2: end
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:3:   
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:4:   public void generateTagHtml(String aXmlDefinition) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:5: %>generateTagHtml: <!%aXmlDefinition!>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:6: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:7:     <!tags!>!remove();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:8:     parseXmlPath(path(aXmlDefinition) + ".xml");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:9:     if (<!tags!>!size() == 0) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:10: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:11:     openOutput(path(aXmlDefinition) + ".html");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:12: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:13:     int lSize = 200;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:14:     
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:15: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:16: <html>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:17: <head>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:18: <style type="text/css">
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:19: p {font-family: Arial, Helvetica, sans-serif; font-size: x-small; color: #000000;}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:20: tr {font-family: Arial, Helvetica, sans-serif; font-size: x-small; color: #000000;}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:21: td {font-family: Arial, Helvetica, sans-serif; font-size: x-small; color: #000000;}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:22: </style>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:23: </head>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:24: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:25: <body />
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:26:   <table width="100%" valign="top" border="0" cellspacing="0" cellpadding="0">
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:27:     <tr><td width="6" bgcolor="gray"></td><td width="6"></td><td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:28:       <hr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:29:       <table width="100%" valign="top" border="0" cellspacing="0" cellpadding="0">
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:30:         <tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:31:           <th width="<!%lSize!>" align='left'>Element</th>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:32:           <th align='left'>Description</th>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:33:         </tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:34:         <tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:35:           <td valign='top' align='left'><![tags:root]!></td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:36:           <td valign='top' align='left'><![tags:documentation]!></td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:37:         </tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:38:       </table>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:39: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:40: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:41:     String lIndent="      ";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:42:     String lTag = "tags";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:43:     if (<!" + lTag + ":tag!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:44:       lTag += ":tag";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:45:       <!" + lTag + "!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:46:       lSize -= 12;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:47: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:48:       <table width="100%" valign="top" border="0" cellspacing="0" cellpadding="0">
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:49:         <tr><td width="6" bgcolor="gray"></td><td width="6"></td><td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:50: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:51:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:52: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:53:     while (!lTag.equals("tags")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:54: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:55:       while (<!" + lTag + "!>!next()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:56: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:57: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:58:       <hr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:59:       <table width="100%" valign="top" border="0" cellspacing="0" cellpadding="0">
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:60:         <tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:61:           <th width="<!%lSize!>" align='left'><![cap@[" + lTag + ":type]]!></th>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:62:           <th align='left'>Description</th>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:63:         </tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:64:         <tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:65:           <td valign='top' align='left'><![" + lTag + ":name]!></td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:66:           <td valign='top' align='left'><![" + lTag + ":documentation]!></td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:67:         </tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:68:       </table>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:69: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:70:     
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:71:         if (<!" + lTag + ":tag!>!size() > 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:72:           lTag += ":tag";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:73:           <!" + lTag + "!>!resetIterator();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:74:           lSize -= 12;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:75: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:76:       <table width="100%" valign="top" border="0" cellspacing="0" cellpadding="0">
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:77:         <tr><td width="6" bgcolor="gray"></td><td width="6"></td><td>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:78: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:79:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:80: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:81:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:82: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:83: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:84:     </td></tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:85:   </table>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:86: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:87:       lTag = lTag.substring(0, lTag.length() - 4);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:88:       lSize += 12;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:89:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:90: %>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:91:     </td></tr>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:92:   </table>
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:93: <%
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:94: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\userGuides\GenerateTagHtml.script:95:   }    
+C:\ArchitectsCompanion\jac\conf\micPostfix.script:1: }

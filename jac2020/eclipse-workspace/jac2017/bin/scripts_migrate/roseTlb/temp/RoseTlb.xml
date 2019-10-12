@@ -1,0 +1,2416 @@
+<RoseTlb>
+  <Class Name="RoseAbstractState">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ParentStateMachine" Type="RoseStateMachine"/>
+    <Attribute Name="Transitions" Type="RoseTransitionCollection"/>
+    <Attribute Name="SubStates" Type="RoseStateCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Parent" Type="RoseStateVertex"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Attribute Name="SubActivities" Type="RoseActivityCollection"/>
+    <Attribute Name="SubDecisions" Type="RoseDecisionCollection"/>
+    <Attribute Name="SubSynchronizations" Type="RoseSyncItemCollection"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllSubStates" Return="RoseStateCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetUserDefinedEvents" Return="RoseEventCollection"/>
+    <Operation Name="GetEntryActions" Return="RoseActionCollection"/>
+    <Operation Name="GetExitActions" Return="RoseActionCollection"/>
+    <Operation Name="GetDoActions" Return="RoseActionCollection"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetSwimLanes" Return="RoseSwimLaneCollection"/>
+    <Operation Name="GetActions" Return="RoseActionCollection"/>
+    <Operation Name="GetStateMachines" Return="RoseStateMachineCollection"/>
+    <Operation Name="GetAllSubActivities" Return="RoseActivityCollection"/>
+    <Operation Name="GetAllSubDecisions" Return="RoseDecisionCollection"/>
+    <Operation Name="GetAllSubSynchronizations" Return="RoseSyncItemCollection"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseAbstractStateCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseAction">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Arguments" Type="BSTR"/>
+    <Attribute Name="Target" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseActionCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseActivity">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ParentStateMachine" Type="RoseStateMachine"/>
+    <Attribute Name="Transitions" Type="RoseTransitionCollection"/>
+    <Attribute Name="SubStates" Type="RoseStateCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Parent" Type="RoseStateVertex"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Attribute Name="SubActivities" Type="RoseActivityCollection"/>
+    <Attribute Name="SubDecisions" Type="RoseDecisionCollection"/>
+    <Attribute Name="SubSynchronizations" Type="RoseSyncItemCollection"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllSubStates" Return="RoseStateCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetUserDefinedEvents" Return="RoseEventCollection"/>
+    <Operation Name="GetEntryActions" Return="RoseActionCollection"/>
+    <Operation Name="GetExitActions" Return="RoseActionCollection"/>
+    <Operation Name="GetDoActions" Return="RoseActionCollection"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetSwimLanes" Return="RoseSwimLaneCollection"/>
+    <Operation Name="GetActions" Return="RoseActionCollection"/>
+    <Operation Name="GetStateMachines" Return="RoseStateMachineCollection"/>
+    <Operation Name="GetAllSubActivities" Return="RoseActivityCollection"/>
+    <Operation Name="GetAllSubDecisions" Return="RoseDecisionCollection"/>
+    <Operation Name="GetAllSubSynchronizations" Return="RoseSyncItemCollection"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetObjectFlows" Return="RoseObjectFlowCollection"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseActivityCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseActivityView">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="YPosition" Type="short"/>
+    <Attribute Name="XPosition" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="FillColor" Type="RoseView_FillColor"/>
+    <Attribute Name="LineColor" Type="RoseView_LineColor"/>
+    <Attribute Name="SubViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="ParentView" Type="RoseItemView"/>
+    <Attribute Name="Item" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Attribute Name="Font" Type="RoseView_Font"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LineVertices" Type="RoseLineVertexCollection"/>
+    <Attribute Name="StereotypeDisplay" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="SupportsFillColor" Return="VARIANT_BOOL"/>
+    <Operation Name="SupportsLineColor" Return="VARIANT_BOOL"/>
+    <Operation Name="IsSelected" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDefaultWidth" Return="short"/>
+    <Operation Name="GetDefaultHeight" Return="short"/>
+    <Operation Name="GetMinWidth" Return="short"/>
+    <Operation Name="GetMinHeight" Return="short"/>
+    <Operation Name="HasItem" Return="VARIANT_BOOL"/>
+    <Operation Name="HasParentView" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetActivity" Return="RoseActivity"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAttachedNotes" Return="RoseNoteViewCollection"/>
+  </Class>
+  <Class Name="RoseActivityViewCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseAddIn">
+    <Attribute Name="EventHandler" Type="IDispatch"/>
+    <Attribute Name="Version" Type="BSTR"/>
+    <Attribute Name="CompanyName" Type="BSTR"/>
+    <Attribute Name="HelpFilePath" Type="BSTR"/>
+    <Attribute Name="MenuFilePath" Type="BSTR"/>
+    <Attribute Name="PropertyFilePath" Type="BSTR"/>
+    <Attribute Name="InstallDirectory" Type="BSTR"/>
+    <Attribute Name="RootRegistryPath" Type="BSTR"/>
+    <Attribute Name="FundamentalTypes" Type="RoseStringCollection"/>
+    <Attribute Name="ToolNames" Type="RoseStringCollection"/>
+    <Attribute Name="ServerName" Type="BSTR"/>
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Copyright" Type="BSTR"/>
+    <Operation Name="IsLanguageAddIn" Return="VARIANT_BOOL"/>
+    <Operation Name="IsActive" Return="VARIANT_BOOL"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetDisplayName" Return="BSTR"/>
+    <Operation Name="LoadFundamentalTypes" Return="VARIANT_BOOL"/>
+  </Class>
+  <Class Name="RoseAddInCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseAddInManager">
+    <Attribute Name="AddIns" Type="RoseAddInCollection"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+  </Class>
+  <Class Name="RoseApplication">
+    <Attribute Name="Visible" Type="VARIANT_BOOL"/>
+    <Attribute Name="Top" Type="short"/>
+    <Attribute Name="Left" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="CurrentModel" Type="RoseModel"/>
+    <Attribute Name="PathMap" Type="RosePathMap"/>
+    <Attribute Name="Version" Type="BSTR"/>
+    <Attribute Name="ProductName" Type="BSTR"/>
+    <Attribute Name="ApplicationPath" Type="BSTR"/>
+    <Attribute Name="AddInManager" Type="RoseAddInManager"/>
+    <Attribute Name="CommandLine" Type="BSTR"/>
+    <Attribute Name="IsInitialized" Type="VARIANT_BOOL"/>
+    <Operation Name="NewModel" Return="RoseModel"/>
+    <Operation Name="GetRoseIniPath" Return="BSTR"/>
+    <Operation Name="EditorGetOpenFiles" Return="RoseStringCollection"/>
+  </Class>
+  <Class Name="RoseAssociation">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Roles" Type="IDispatch"/>
+    <Attribute Name="Role1" Type="RoseRole"/>
+    <Attribute Name="Role2" Type="RoseRole"/>
+    <Attribute Name="LinkClass" Type="RoseClass"/>
+    <Attribute Name="Derived" Type="VARIANT_BOOL"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Constraints" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Attribute Name="ParentCategory" Type="RoseCategory"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="NameIsDirectional" Return="VARIANT_BOOL"/>
+    <Operation Name="GetRoleForNameDirection" Return="RoseRole"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseAssociationCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseAttribute">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="InitValue" Type="BSTR"/>
+    <Attribute Name="Type" Type="BSTR"/>
+    <Attribute Name="Static" Type="VARIANT_BOOL"/>
+    <Attribute Name="ExportControl" Type="RoseRichType"/>
+    <Attribute Name="Containment" Type="RoseRichType"/>
+    <Attribute Name="Derived" Type="VARIANT_BOOL"/>
+    <Attribute Name="ParentClass" Type="RoseClass"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+    <Operation Name="GetTypeClass" Return="RoseClass"/>
+  </Class>
+  <Class Name="RoseAttributeCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseCategory">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Global" Type="VARIANT_BOOL"/>
+    <Attribute Name="Classes" Type="RoseClassCollection"/>
+    <Attribute Name="Categories" Type="RoseCategoryCollection"/>
+    <Attribute Name="ParentCategory" Type="RoseCategory"/>
+    <Attribute Name="ClassDiagrams" Type="RoseClassDiagramCollection"/>
+    <Attribute Name="Associations" Type="RoseAssociationCollection"/>
+    <Attribute Name="ScenarioDiagrams" Type="RoseScenarioDiagramCollection"/>
+    <Attribute Name="UseCases" Type="RoseUseCaseCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllClasses" Return="RoseClassCollection"/>
+    <Operation Name="GetAllCategories" Return="RoseCategoryCollection"/>
+    <Operation Name="GetAssignedSubsystem" Return="RoseSubsystem"/>
+    <Operation Name="HasAssignedSubsystem" Return="VARIANT_BOOL"/>
+    <Operation Name="TopLevel" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllUseCases" Return="RoseUseCaseCollection"/>
+    <Operation Name="IsRootPackage" Return="VARIANT_BOOL"/>
+    <Operation Name="IsControlled" Return="VARIANT_BOOL"/>
+    <Operation Name="IsLoaded" Return="VARIANT_BOOL"/>
+    <Operation Name="Load" Return="VARIANT_BOOL"/>
+    <Operation Name="IsModifiable" Return="VARIANT_BOOL"/>
+    <Operation Name="Unload" Return="VARIANT_BOOL"/>
+    <Operation Name="GetFileName" Return="BSTR"/>
+    <Operation Name="Save" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IsModified" Return="VARIANT_BOOL"/>
+    <Operation Name="Uncontrol" Return="VARIANT_BOOL"/>
+    <Operation Name="GetCategoryDependencies" Return="RoseCategoryDependencyCollection"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="IsLocked" Return="VARIANT_BOOL"/>
+    <Operation Name="NeedsRefreshing" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseCategoryCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseCategoryDependency">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="GetContextCategory" Return="RoseCategory"/>
+    <Operation Name="GetSupplierCategory" Return="RoseCategory"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseCategoryDependencyCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseClass">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Abstract" Type="VARIANT_BOOL"/>
+    <Attribute Name="Cardinality" Type="BSTR"/>
+    <Attribute Name="Persistence" Type="VARIANT_BOOL"/>
+    <Attribute Name="ParentCategory" Type="RoseCategory"/>
+    <Attribute Name="Attributes" Type="RoseAttributeCollection"/>
+    <Attribute Name="Operations" Type="RoseOperationCollection"/>
+    <Attribute Name="ExportControl" Type="RoseRichType"/>
+    <Attribute Name="ClassKind" Type="RoseRichType"/>
+    <Attribute Name="Concurrency" Type="RoseRichType"/>
+    <Attribute Name="FundamentalType" Type="VARIANT_BOOL"/>
+    <Attribute Name="Space" Type="BSTR"/>
+    <Attribute Name="StateMachine" Type="RoseStateMachine"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="ParentClass" Type="RoseClass"/>
+    <Attribute Name="Parameters" Type="RoseParameterCollection"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetHasRelations" Return="RoseHasRelationshipCollection"/>
+    <Operation Name="GetInheritRelations" Return="RoseInheritRelationCollection"/>
+    <Operation Name="GetSuperclasses" Return="RoseClassCollection"/>
+    <Operation Name="GetAssociations" Return="RoseAssociationCollection"/>
+    <Operation Name="IsALinkClass" Return="VARIANT_BOOL"/>
+    <Operation Name="GetLinkAssociation" Return="RoseAssociation"/>
+    <Operation Name="GetRoles" Return="RoseRoleCollection"/>
+    <Operation Name="GetAssociateRoles" Return="RoseRoleCollection"/>
+    <Operation Name="GetNestedClasses" Return="RoseClassCollection"/>
+    <Operation Name="GetAssignedModules" Return="RoseModuleCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetRealizeRelations" Return="RoseRealizeRelationCollection"/>
+    <Operation Name="GetAssignedLanguage" Return="BSTR"/>
+    <Operation Name="IsNestedClass" Return="VARIANT_BOOL"/>
+    <Operation Name="GetSubclasses" Return="RoseClassCollection"/>
+    <Operation Name="GetClassDependencies" Return="RoseClassDependencyCollection"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetInstantiateRelations" Return="RoseInstantiateRelationCollection"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllNestedClasses" Return="RoseClassCollection"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAssignedUnloadedComponents" Return="RoseStringCollection"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseClassCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseClassDependency">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="ClientCardinality" Type="BSTR"/>
+    <Attribute Name="SupplierCardinality" Type="BSTR"/>
+    <Attribute Name="InvolvesFriendship" Type="VARIANT_BOOL"/>
+    <Attribute Name="ExportControl" Type="RoseRichType"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetContextClass" Return="RoseClass"/>
+    <Operation Name="GetSupplierClass" Return="RoseClass"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseClassDependencyCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseClassDiagram">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="ItemViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="Visible" Type="VARIANT_BOOL"/>
+    <Attribute Name="Items" Type="RoseItemCollection"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ParentCategory" Type="RoseCategory"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="ZoomFactor" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="IsActive" Return="VARIANT_BOOL"/>
+    <Operation Name="GetNoteViews" Return="RoseNoteViewCollection"/>
+    <Operation Name="GetSelectedCategories" Return="RoseCategoryCollection"/>
+    <Operation Name="GetSelectedClasses" Return="RoseClassCollection"/>
+    <Operation Name="GetClasses" Return="RoseClassCollection"/>
+    <Operation Name="GetCategories" Return="RoseCategoryCollection"/>
+    <Operation Name="GetAssociations" Return="RoseAssociationCollection"/>
+    <Operation Name="GetUseCases" Return="RoseUseCaseCollection"/>
+    <Operation Name="IsUseCaseDiagram" Return="VARIANT_BOOL"/>
+    <Operation Name="GetSelectedItems" Return="RoseItemCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetParentContext" Return="RoseItem"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="IsDataModelingDiagram" Return="VARIANT_BOOL"/>
+  </Class>
+  <Class Name="RoseClassDiagramCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseClassRelation">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetContextClass" Return="RoseClass"/>
+    <Operation Name="GetSupplierClass" Return="RoseClass"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseClassView">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="YPosition" Type="short"/>
+    <Attribute Name="XPosition" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="FillColor" Type="RoseView_FillColor"/>
+    <Attribute Name="LineColor" Type="RoseView_LineColor"/>
+    <Attribute Name="SubViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="ParentView" Type="RoseItemView"/>
+    <Attribute Name="Item" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Attribute Name="AutomaticResize" Type="VARIANT_BOOL"/>
+    <Attribute Name="ShowOperationSignature" Type="VARIANT_BOOL"/>
+    <Attribute Name="ShowAllAttributes" Type="VARIANT_BOOL"/>
+    <Attribute Name="ShowAllOperations" Type="VARIANT_BOOL"/>
+    <Attribute Name="SuppressAttributes" Type="VARIANT_BOOL"/>
+    <Attribute Name="SuppressOperations" Type="VARIANT_BOOL"/>
+    <Attribute Name="Font" Type="RoseView_Font"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LineVertices" Type="RoseLineVertexCollection"/>
+    <Attribute Name="Visibility" Type="VARIANT_BOOL"/>
+    <Attribute Name="StereotypeDisplay" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="SupportsFillColor" Return="VARIANT_BOOL"/>
+    <Operation Name="SupportsLineColor" Return="VARIANT_BOOL"/>
+    <Operation Name="IsSelected" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDefaultWidth" Return="short"/>
+    <Operation Name="GetDefaultHeight" Return="short"/>
+    <Operation Name="GetMinWidth" Return="short"/>
+    <Operation Name="GetMinHeight" Return="short"/>
+    <Operation Name="HasItem" Return="VARIANT_BOOL"/>
+    <Operation Name="HasParentView" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetDisplayedAttributes" Return="RoseItemCollection"/>
+    <Operation Name="GetDisplayedOperations" Return="RoseItemCollection"/>
+    <Operation Name="GetAttachedNotes" Return="RoseNoteViewCollection"/>
+  </Class>
+  <Class Name="RoseClassViewCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseComponentView">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="YPosition" Type="short"/>
+    <Attribute Name="XPosition" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="FillColor" Type="RoseView_FillColor"/>
+    <Attribute Name="LineColor" Type="RoseView_LineColor"/>
+    <Attribute Name="SubViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="ParentView" Type="RoseItemView"/>
+    <Attribute Name="Item" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Attribute Name="Font" Type="RoseView_Font"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LineVertices" Type="RoseLineVertexCollection"/>
+    <Attribute Name="StereotypeDisplay" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="SupportsFillColor" Return="VARIANT_BOOL"/>
+    <Operation Name="SupportsLineColor" Return="VARIANT_BOOL"/>
+    <Operation Name="IsSelected" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDefaultWidth" Return="short"/>
+    <Operation Name="GetDefaultHeight" Return="short"/>
+    <Operation Name="GetMinWidth" Return="short"/>
+    <Operation Name="GetMinHeight" Return="short"/>
+    <Operation Name="HasItem" Return="VARIANT_BOOL"/>
+    <Operation Name="HasParentView" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetComponent" Return="RoseModule"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAttachedNotes" Return="RoseNoteViewCollection"/>
+  </Class>
+  <Class Name="RoseComponentViewCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseConnectionRelation">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Attribute Name="Characteristics" Type="BSTR"/>
+    <Attribute Name="SupplierIsDevice" Type="VARIANT_BOOL"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseConnectionRelationCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseContextMenuItem">
+    <Attribute Name="Caption" Type="BSTR"/>
+    <Attribute Name="InternalName" Type="BSTR"/>
+    <Attribute Name="MenuID" Type="short"/>
+    <Attribute Name="MenuState" Type="short"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+  </Class>
+  <Class Name="RoseContextMenuItemCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseControllableUnit">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="IsControlled" Return="VARIANT_BOOL"/>
+    <Operation Name="IsLoaded" Return="VARIANT_BOOL"/>
+    <Operation Name="Load" Return="VARIANT_BOOL"/>
+    <Operation Name="IsModifiable" Return="VARIANT_BOOL"/>
+    <Operation Name="Unload" Return="VARIANT_BOOL"/>
+    <Operation Name="GetFileName" Return="BSTR"/>
+    <Operation Name="Save" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IsModified" Return="VARIANT_BOOL"/>
+    <Operation Name="Uncontrol" Return="VARIANT_BOOL"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="IsLocked" Return="VARIANT_BOOL"/>
+    <Operation Name="NeedsRefreshing" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseControllableUnitCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseDecision">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ParentStateMachine" Type="RoseStateMachine"/>
+    <Attribute Name="Transitions" Type="RoseTransitionCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Parent" Type="RoseStateVertex"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetSwimLanes" Return="RoseSwimLaneCollection"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseDecisionCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseDecisionView">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="YPosition" Type="short"/>
+    <Attribute Name="XPosition" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="FillColor" Type="RoseView_FillColor"/>
+    <Attribute Name="LineColor" Type="RoseView_LineColor"/>
+    <Attribute Name="SubViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="ParentView" Type="RoseItemView"/>
+    <Attribute Name="Item" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Attribute Name="Font" Type="RoseView_Font"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LineVertices" Type="RoseLineVertexCollection"/>
+    <Attribute Name="StereotypeDisplay" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="SupportsFillColor" Return="VARIANT_BOOL"/>
+    <Operation Name="SupportsLineColor" Return="VARIANT_BOOL"/>
+    <Operation Name="IsSelected" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDefaultWidth" Return="short"/>
+    <Operation Name="GetDefaultHeight" Return="short"/>
+    <Operation Name="GetMinWidth" Return="short"/>
+    <Operation Name="GetMinHeight" Return="short"/>
+    <Operation Name="HasItem" Return="VARIANT_BOOL"/>
+    <Operation Name="HasParentView" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetDecision" Return="RoseDecision"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAttachedNotes" Return="RoseNoteViewCollection"/>
+  </Class>
+  <Class Name="RoseDecisionViewCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseDefaultModelProperties">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="IsControlled" Return="VARIANT_BOOL"/>
+    <Operation Name="IsLoaded" Return="VARIANT_BOOL"/>
+    <Operation Name="Load" Return="VARIANT_BOOL"/>
+    <Operation Name="IsModifiable" Return="VARIANT_BOOL"/>
+    <Operation Name="Unload" Return="VARIANT_BOOL"/>
+    <Operation Name="GetFileName" Return="BSTR"/>
+    <Operation Name="Save" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IsModified" Return="VARIANT_BOOL"/>
+    <Operation Name="Uncontrol" Return="VARIANT_BOOL"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="IsLocked" Return="VARIANT_BOOL"/>
+    <Operation Name="NeedsRefreshing" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseDependencyRelation">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseDependencyRelationCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseDeploymentDiagram">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="ItemViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="Visible" Type="VARIANT_BOOL"/>
+    <Attribute Name="Items" Type="RoseItemCollection"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="ZoomFactor" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="IsActive" Return="VARIANT_BOOL"/>
+    <Operation Name="GetNoteViews" Return="RoseNoteViewCollection"/>
+    <Operation Name="GetProcessors" Return="RoseProcessorCollection"/>
+    <Operation Name="GetDevices" Return="RoseDeviceCollection"/>
+    <Operation Name="GetSelectedItems" Return="RoseItemCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetParentContext" Return="RoseItem"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+  </Class>
+  <Class Name="RoseDeploymentDiagramCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseDeploymentUnit">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="IsControlled" Return="VARIANT_BOOL"/>
+    <Operation Name="IsLoaded" Return="VARIANT_BOOL"/>
+    <Operation Name="Load" Return="VARIANT_BOOL"/>
+    <Operation Name="IsModifiable" Return="VARIANT_BOOL"/>
+    <Operation Name="Unload" Return="VARIANT_BOOL"/>
+    <Operation Name="GetFileName" Return="BSTR"/>
+    <Operation Name="Save" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IsModified" Return="VARIANT_BOOL"/>
+    <Operation Name="Uncontrol" Return="VARIANT_BOOL"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="IsLocked" Return="VARIANT_BOOL"/>
+    <Operation Name="NeedsRefreshing" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseDevice">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Characteristics" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Attribute Name="Connections" Type="RoseConnectionRelationCollection"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetConnectedProcessors" Return="RoseProcessorCollection"/>
+    <Operation Name="GetConnectedDevices" Return="RoseDeviceCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseDeviceCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseDiagram">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="ItemViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="Visible" Type="VARIANT_BOOL"/>
+    <Attribute Name="Items" Type="RoseItemCollection"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="ZoomFactor" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="IsActive" Return="VARIANT_BOOL"/>
+    <Operation Name="GetNoteViews" Return="RoseNoteViewCollection"/>
+    <Operation Name="GetSelectedItems" Return="RoseItemCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetParentContext" Return="RoseItem"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+  </Class>
+  <Class Name="RoseDiagramCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseElement">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+  </Class>
+  <Class Name="RoseEvent">
+    <Attribute Name="Arguments" Type="BSTR"/>
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="GuardCondition" Type="BSTR"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetAction" Return="RoseAction"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+  </Class>
+  <Class Name="RoseEventCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseExternalDocument">
+    <Attribute Name="Path" Type="BSTR"/>
+    <Attribute Name="URL" Type="BSTR"/>
+    <Attribute Name="ParentCategory" Type="RoseCategory"/>
+    <Attribute Name="ParentItem" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Operation Name="IsURL" Return="VARIANT_BOOL"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+  </Class>
+  <Class Name="RoseExternalDocumentCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseHasRelationship">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="ClientCardinality" Type="BSTR"/>
+    <Attribute Name="SupplierCardinality" Type="BSTR"/>
+    <Attribute Name="Static" Type="VARIANT_BOOL"/>
+    <Attribute Name="ExportControl" Type="RoseRichType"/>
+    <Attribute Name="Containment" Type="RoseRichType"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetContextClass" Return="RoseClass"/>
+    <Operation Name="GetSupplierClass" Return="RoseClass"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseHasRelationshipCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseInheritRelation">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="Virtual" Type="VARIANT_BOOL"/>
+    <Attribute Name="FriendshipRequired" Type="VARIANT_BOOL"/>
+    <Attribute Name="ExportControl" Type="RoseRichType"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetContextClass" Return="RoseClass"/>
+    <Operation Name="GetSupplierClass" Return="RoseClass"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseInheritRelationCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseInstanceView">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="YPosition" Type="short"/>
+    <Attribute Name="XPosition" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="FillColor" Type="RoseView_FillColor"/>
+    <Attribute Name="LineColor" Type="RoseView_LineColor"/>
+    <Attribute Name="SubViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="ParentView" Type="RoseItemView"/>
+    <Attribute Name="Item" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Attribute Name="Font" Type="RoseView_Font"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LineVertices" Type="RoseLineVertexCollection"/>
+    <Attribute Name="StereotypeDisplay" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="SupportsFillColor" Return="VARIANT_BOOL"/>
+    <Operation Name="SupportsLineColor" Return="VARIANT_BOOL"/>
+    <Operation Name="IsSelected" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDefaultWidth" Return="short"/>
+    <Operation Name="GetDefaultHeight" Return="short"/>
+    <Operation Name="GetMinWidth" Return="short"/>
+    <Operation Name="GetMinHeight" Return="short"/>
+    <Operation Name="HasItem" Return="VARIANT_BOOL"/>
+    <Operation Name="HasParentView" Return="VARIANT_BOOL"/>
+    <Operation Name="GetInstance" Return="RoseObjectInstance"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAttachedNotes" Return="RoseNoteViewCollection"/>
+  </Class>
+  <Class Name="RoseInstanceViewCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseInstantiateRelation">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetContextClass" Return="RoseClass"/>
+    <Operation Name="GetSupplierClass" Return="RoseClass"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseInstantiateRelationCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseItem">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseItemCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseItemView">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="YPosition" Type="short"/>
+    <Attribute Name="XPosition" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="FillColor" Type="RoseView_FillColor"/>
+    <Attribute Name="LineColor" Type="RoseView_LineColor"/>
+    <Attribute Name="SubViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="ParentView" Type="RoseItemView"/>
+    <Attribute Name="Item" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Attribute Name="Font" Type="RoseView_Font"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LineVertices" Type="RoseLineVertexCollection"/>
+    <Attribute Name="StereotypeDisplay" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="SupportsFillColor" Return="VARIANT_BOOL"/>
+    <Operation Name="SupportsLineColor" Return="VARIANT_BOOL"/>
+    <Operation Name="IsSelected" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDefaultWidth" Return="short"/>
+    <Operation Name="GetDefaultHeight" Return="short"/>
+    <Operation Name="GetMinWidth" Return="short"/>
+    <Operation Name="GetMinHeight" Return="short"/>
+    <Operation Name="HasItem" Return="VARIANT_BOOL"/>
+    <Operation Name="HasParentView" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAttachedNotes" Return="RoseNoteViewCollection"/>
+  </Class>
+  <Class Name="RoseItemViewCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseLineVertex">
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetXPosition" Return="short"/>
+    <Operation Name="GetYPosition" Return="short"/>
+  </Class>
+  <Class Name="RoseLineVertexCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseLink">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="LinkRole1" Type="RoseObjectInstance"/>
+    <Attribute Name="LinkRole2" Type="RoseObjectInstance"/>
+    <Attribute Name="LinkRole1Shared" Type="VARIANT_BOOL"/>
+    <Attribute Name="LinkRole2Visibility" Type="RoseRichType"/>
+    <Attribute Name="LinkRole1Visibility" Type="RoseRichType"/>
+    <Attribute Name="LinkRole2Shared" Type="VARIANT_BOOL"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetMessages" Return="RoseMessageCollection"/>
+    <Operation Name="UnassignAssociation" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAssociation" Return="RoseAssociation"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseLinkCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseMessage">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Synchronization" Type="short"/>
+    <Attribute Name="Frequency" Type="short"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetSenderObject" Return="RoseObjectInstance"/>
+    <Operation Name="GetReceiverObject" Return="RoseObjectInstance"/>
+    <Operation Name="IsMessageToSelf" Return="VARIANT_BOOL"/>
+    <Operation Name="IsOperation" Return="VARIANT_BOOL"/>
+    <Operation Name="GetOperation" Return="RoseOperation"/>
+    <Operation Name="GetLink" Return="RoseLink"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetSequenceInformation" Return="BSTR"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseMessageCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseModel">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="RootCategory" Type="RoseCategory"/>
+    <Attribute Name="RootSubsystem" Type="RoseSubsystem"/>
+    <Attribute Name="DeploymentDiagram" Type="RoseDeploymentDiagram"/>
+    <Attribute Name="UseCases" Type="RoseUseCaseCollection"/>
+    <Attribute Name="RootUseCaseCategory" Type="RoseCategory"/>
+    <Attribute Name="DefaultProperties" Type="RoseDefaultModelProperties"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="DeploymentUnit" Type="RoseDeploymentUnit"/>
+    <Attribute Name="DefaultLanguage" Type="BSTR"/>
+    <Attribute Name="Notation" Type="short"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllAssociations" Return="RoseAssociationCollection"/>
+    <Operation Name="GetSelectedClasses" Return="RoseClassCollection"/>
+    <Operation Name="GetSelectedCategories" Return="RoseCategoryCollection"/>
+    <Operation Name="GetSelectedModules" Return="RoseModuleCollection"/>
+    <Operation Name="GetSelectedSubsystems" Return="RoseSubsystemCollection"/>
+    <Operation Name="GetAllClasses" Return="RoseClassCollection"/>
+    <Operation Name="GetAllCategories" Return="RoseCategoryCollection"/>
+    <Operation Name="GetAllModules" Return="RoseModuleCollection"/>
+    <Operation Name="GetAllSubsystems" Return="RoseSubsystemCollection"/>
+    <Operation Name="GetAllProcessors" Return="RoseProcessorCollection"/>
+    <Operation Name="GetAllDevices" Return="RoseDeviceCollection"/>
+    <Operation Name="GetSelectedUseCases" Return="RoseUseCaseCollection"/>
+    <Operation Name="GetAllUseCases" Return="RoseUseCaseCollection"/>
+    <Operation Name="IsRootPackage" Return="VARIANT_BOOL"/>
+    <Operation Name="IsControlled" Return="VARIANT_BOOL"/>
+    <Operation Name="IsLoaded" Return="VARIANT_BOOL"/>
+    <Operation Name="Load" Return="VARIANT_BOOL"/>
+    <Operation Name="IsModifiable" Return="VARIANT_BOOL"/>
+    <Operation Name="Unload" Return="VARIANT_BOOL"/>
+    <Operation Name="GetFileName" Return="BSTR"/>
+    <Operation Name="Save" Return="VARIANT_BOOL"/>
+    <Operation Name="GetActiveDiagram" Return="RoseDiagram"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IsModified" Return="VARIANT_BOOL"/>
+    <Operation Name="Uncontrol" Return="VARIANT_BOOL"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetSelectedItems" Return="RoseItemCollection"/>
+    <Operation Name="GetSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="IsLocked" Return="VARIANT_BOOL"/>
+    <Operation Name="NeedsRefreshing" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetSelectedExternalDocuments" Return="RoseExternalDocumentCollection"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetSelectedDiagrams" Return="RoseDiagramCollection"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseModule">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Path" Type="BSTR"/>
+    <Attribute Name="ParentSubsystem" Type="RoseSubsystem"/>
+    <Attribute Name="Type" Type="RoseRichType"/>
+    <Attribute Name="Part" Type="RoseRichType"/>
+    <Attribute Name="Declarations" Type="BSTR"/>
+    <Attribute Name="OtherPart" Type="RoseModule"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="AssignedLanguage" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAssignedClasses" Return="RoseClassCollection"/>
+    <Operation Name="GetDependencies" Return="RoseModuleVisibilityRelationshipCollection"/>
+    <Operation Name="GetAllDependencies" Return="RoseModuleVisibilityRelationshipCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetRealizeRelations" Return="RoseRealizeRelationCollection"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseModuleCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseModuleDiagram">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="ItemViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="Visible" Type="VARIANT_BOOL"/>
+    <Attribute Name="Items" Type="RoseItemCollection"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ParentSubsystem" Type="RoseSubsystem"/>
+    <Attribute Name="ComponentViews" Type="RoseComponentViewCollection"/>
+    <Attribute Name="SubsystemViews" Type="RoseSubsystemViewCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="ZoomFactor" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="IsActive" Return="VARIANT_BOOL"/>
+    <Operation Name="GetNoteViews" Return="RoseNoteViewCollection"/>
+    <Operation Name="GetModules" Return="RoseModuleCollection"/>
+    <Operation Name="GetSubsystems" Return="RoseSubsystemCollection"/>
+    <Operation Name="GetSelectedModules" Return="RoseModuleCollection"/>
+    <Operation Name="GetSelectedSubsystems" Return="RoseSubsystemCollection"/>
+    <Operation Name="GetSelectedItems" Return="RoseItemCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetParentContext" Return="RoseItem"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+  </Class>
+  <Class Name="RoseModuleDiagramCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseModuleVisibilityRelationship">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="ContextModule" Type="RoseModule"/>
+    <Attribute Name="SupplierModule" Type="RoseModule"/>
+    <Attribute Name="ContextSubsystem" Type="RoseSubsystem"/>
+    <Attribute Name="SupplierSubsystem" Type="RoseSubsystem"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="ContextClass" Type="RoseClass"/>
+    <Attribute Name="SupplierClass" Type="RoseClass"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseModuleVisibilityRelationshipCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseNoteView">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="YPosition" Type="short"/>
+    <Attribute Name="XPosition" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="FillColor" Type="RoseView_FillColor"/>
+    <Attribute Name="LineColor" Type="RoseView_LineColor"/>
+    <Attribute Name="SubViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="ParentView" Type="RoseItemView"/>
+    <Attribute Name="Item" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Attribute Name="Text" Type="BSTR"/>
+    <Attribute Name="Font" Type="RoseView_Font"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LineVertices" Type="RoseLineVertexCollection"/>
+    <Attribute Name="StereotypeDisplay" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="SupportsFillColor" Return="VARIANT_BOOL"/>
+    <Operation Name="SupportsLineColor" Return="VARIANT_BOOL"/>
+    <Operation Name="IsSelected" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDefaultWidth" Return="short"/>
+    <Operation Name="GetDefaultHeight" Return="short"/>
+    <Operation Name="GetMinWidth" Return="short"/>
+    <Operation Name="GetMinHeight" Return="short"/>
+    <Operation Name="HasItem" Return="VARIANT_BOOL"/>
+    <Operation Name="HasParentView" Return="VARIANT_BOOL"/>
+    <Operation Name="GetNoteViewType" Return="short"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDiagramLink" Return="RoseDiagram"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAttachedNotes" Return="RoseNoteViewCollection"/>
+  </Class>
+  <Class Name="RoseNoteViewCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseObject">
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+  </Class>
+  <Class Name="RoseObjectFlow">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetState" Return="RoseState"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseObjectFlowCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseObjectInstance">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ClassName" Type="BSTR"/>
+    <Attribute Name="MultipleInstances" Type="VARIANT_BOOL"/>
+    <Attribute Name="Links" Type="RoseLinkCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Persistence" Type="short"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="IsClass" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClass" Return="RoseClass"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetObjectFlows" Return="RoseObjectFlowCollection"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseObjectInstanceCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseOperation">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ReturnType" Type="BSTR"/>
+    <Attribute Name="Parameters" Type="RoseParameterCollection"/>
+    <Attribute Name="ExportControl" Type="RoseRichType"/>
+    <Attribute Name="Concurrency" Type="RoseRichType"/>
+    <Attribute Name="Preconditions" Type="BSTR"/>
+    <Attribute Name="Semantics" Type="BSTR"/>
+    <Attribute Name="Postconditions" Type="BSTR"/>
+    <Attribute Name="Protocol" Type="BSTR"/>
+    <Attribute Name="Qualification" Type="BSTR"/>
+    <Attribute Name="Exceptions" Type="BSTR"/>
+    <Attribute Name="Size" Type="BSTR"/>
+    <Attribute Name="Time" Type="BSTR"/>
+    <Attribute Name="Virtual" Type="VARIANT_BOOL"/>
+    <Attribute Name="ParentClass" Type="RoseClass"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Attribute Name="Abstract" Type="VARIANT_BOOL"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+    <Operation Name="GetResultClass" Return="RoseClass"/>
+    <Operation Name="GetExceptionClasses" Return="RoseClassCollection"/>
+  </Class>
+  <Class Name="RoseOperationCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RosePackage">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="IsRootPackage" Return="VARIANT_BOOL"/>
+    <Operation Name="IsControlled" Return="VARIANT_BOOL"/>
+    <Operation Name="IsLoaded" Return="VARIANT_BOOL"/>
+    <Operation Name="Load" Return="VARIANT_BOOL"/>
+    <Operation Name="IsModifiable" Return="VARIANT_BOOL"/>
+    <Operation Name="Unload" Return="VARIANT_BOOL"/>
+    <Operation Name="GetFileName" Return="BSTR"/>
+    <Operation Name="Save" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IsModified" Return="VARIANT_BOOL"/>
+    <Operation Name="Uncontrol" Return="VARIANT_BOOL"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="IsLocked" Return="VARIANT_BOOL"/>
+    <Operation Name="NeedsRefreshing" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RosePackageCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseParameter">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Const" Type="VARIANT_BOOL"/>
+    <Attribute Name="Type" Type="BSTR"/>
+    <Attribute Name="InitValue" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+    <Operation Name="GetTypeClass" Return="RoseClass"/>
+  </Class>
+  <Class Name="RoseParameterCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RosePathMap">
+  </Class>
+  <Class Name="RoseProcess">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="MyProcessor" Type="RoseProcessor"/>
+    <Attribute Name="Priority" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseProcessCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseProcessor">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Processes" Type="RoseProcessCollection"/>
+    <Attribute Name="Characteristics" Type="BSTR"/>
+    <Attribute Name="Scheduling" Type="RoseRichType"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Attribute Name="Connections" Type="RoseConnectionRelationCollection"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetConnectedDevices" Return="RoseDeviceCollection"/>
+    <Operation Name="GetConnectedProcessors" Return="RoseProcessorCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseProcessorCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseProperty">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Value" Type="BSTR"/>
+    <Attribute Name="ToolName" Type="BSTR"/>
+    <Attribute Name="Type" Type="BSTR"/>
+  </Class>
+  <Class Name="RosePropertyCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseRealizeRelation">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetContextClass" Return="RoseClass"/>
+    <Operation Name="GetContextComponent" Return="RoseModule"/>
+    <Operation Name="GetSupplierClass" Return="RoseClass"/>
+    <Operation Name="GetSupplierComponent" Return="RoseModule"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseRealizeRelationCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseRelation">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseRichType">
+    <Attribute Name="Value" Type="short"/>
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Types" Type="RoseRichTypeValuesCollection"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+  </Class>
+  <Class Name="RoseRichTypeValuesCollection">
+    <Attribute Name="Count" Type="short"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+  </Class>
+  <Class Name="RoseRole">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="Aggregate" Type="VARIANT_BOOL"/>
+    <Attribute Name="Static" Type="VARIANT_BOOL"/>
+    <Attribute Name="Navigable" Type="VARIANT_BOOL"/>
+    <Attribute Name="Cardinality" Type="BSTR"/>
+    <Attribute Name="ExportControl" Type="RoseRichType"/>
+    <Attribute Name="Containment" Type="RoseRichType"/>
+    <Attribute Name="Association" Type="RoseAssociation"/>
+    <Attribute Name="Class" Type="RoseClass"/>
+    <Attribute Name="Keys" Type="RoseAttributeCollection"/>
+    <Attribute Name="AssociateItem" Type="RoseItem"/>
+    <Attribute Name="UseCase" Type="RoseUseCase"/>
+    <Attribute Name="Constraints" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Friend" Type="VARIANT_BOOL"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Attribute Name="ShowSpecifier" Type="VARIANT_BOOL"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClassName" Return="BSTR"/>
+    <Operation Name="IsAssociateClass" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetNameBase" Return="BSTR"/>
+    <Operation Name="GetSpecifier" Return="BSTR"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseRoleCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseScenarioDiagram">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="ItemViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="Visible" Type="VARIANT_BOOL"/>
+    <Attribute Name="Items" Type="RoseItemCollection"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="InstanceViews" Type="RoseInstanceViewCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="ZoomFactor" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="IsActive" Return="VARIANT_BOOL"/>
+    <Operation Name="GetNoteViews" Return="RoseNoteViewCollection"/>
+    <Operation Name="GetObjects" Return="RoseObjectInstanceCollection"/>
+    <Operation Name="GetSelectedObjects" Return="RoseObjectInstanceCollection"/>
+    <Operation Name="GetMessages" Return="RoseMessageCollection"/>
+    <Operation Name="GetSelectedMessages" Return="RoseMessageCollection"/>
+    <Operation Name="GetSelectedLinks" Return="RoseLinkCollection"/>
+    <Operation Name="GetDiagramType" Return="short"/>
+    <Operation Name="GetSelectedItems" Return="RoseItemCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetParentContext" Return="RoseItem"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+  </Class>
+  <Class Name="RoseScenarioDiagramCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseState">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ParentStateMachine" Type="RoseStateMachine"/>
+    <Attribute Name="History" Type="VARIANT_BOOL"/>
+    <Attribute Name="Transitions" Type="RoseTransitionCollection"/>
+    <Attribute Name="StateKind" Type="RoseRichType"/>
+    <Attribute Name="SubStates" Type="RoseStateCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Parent" Type="RoseStateVertex"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Attribute Name="SubActivities" Type="RoseActivityCollection"/>
+    <Attribute Name="SubDecisions" Type="RoseDecisionCollection"/>
+    <Attribute Name="SubSynchronizations" Type="RoseSyncItemCollection"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllSubStates" Return="RoseStateCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetUserDefinedEvents" Return="RoseEventCollection"/>
+    <Operation Name="GetEntryActions" Return="RoseActionCollection"/>
+    <Operation Name="GetExitActions" Return="RoseActionCollection"/>
+    <Operation Name="GetDoActions" Return="RoseActionCollection"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetSwimLanes" Return="RoseSwimLaneCollection"/>
+    <Operation Name="GetActions" Return="RoseActionCollection"/>
+    <Operation Name="GetStateMachines" Return="RoseStateMachineCollection"/>
+    <Operation Name="GetAllSubActivities" Return="RoseActivityCollection"/>
+    <Operation Name="GetAllSubDecisions" Return="RoseDecisionCollection"/>
+    <Operation Name="GetAllSubSynchronizations" Return="RoseSyncItemCollection"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseStateCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseStateDiagram">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="ItemViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="Visible" Type="VARIANT_BOOL"/>
+    <Attribute Name="Items" Type="RoseItemCollection"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Parent" Type="RoseStateMachine"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="ZoomFactor" Type="short"/>
+    <Attribute Name="IsActivityDiagram" Type="VARIANT_BOOL"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="IsActive" Return="VARIANT_BOOL"/>
+    <Operation Name="GetNoteViews" Return="RoseNoteViewCollection"/>
+    <Operation Name="GetSelectedStateViews" Return="RoseStateViewCollection"/>
+    <Operation Name="GetStateViews" Return="RoseStateViewCollection"/>
+    <Operation Name="GetSelectedTransitions" Return="RoseTransitionCollection"/>
+    <Operation Name="GetSelectedStates" Return="RoseStateCollection"/>
+    <Operation Name="GetSelectedItems" Return="RoseItemCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetSelectedActivities" Return="RoseActivityCollection"/>
+    <Operation Name="GetSelectedDecisions" Return="RoseDecisionCollection"/>
+    <Operation Name="GetSelectedActivityViews" Return="RoseActivityViewCollection"/>
+    <Operation Name="GetSelectedDecisionViews" Return="RoseDecisionViewCollection"/>
+    <Operation Name="GetSelectedSynchronizations" Return="RoseSyncItemCollection"/>
+    <Operation Name="GetSelectedSynchronizationViews" Return="RoseSyncItemViewCollection"/>
+    <Operation Name="GetDiagramStateVertexViews" Return="RoseItemViewCollection"/>
+    <Operation Name="GetDiagramActivityViews" Return="RoseActivityViewCollection"/>
+    <Operation Name="GetDiagramDecisionViews" Return="RoseDecisionViewCollection"/>
+    <Operation Name="GetDiagramSynchronizationViews" Return="RoseSyncItemViewCollection"/>
+    <Operation Name="GetSelectedSwimLaneViews" Return="RoseSwimLaneViewCollection"/>
+    <Operation Name="GetDiagramSwimLaneViews" Return="RoseSwimLaneViewCollection"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetParentContext" Return="RoseItem"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetDiagramObjectInstanceViews" Return="RoseInstanceViewCollection"/>
+  </Class>
+  <Class Name="RoseStateDiagramCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseStateMachine">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ParentClass" Type="RoseClass"/>
+    <Attribute Name="States" Type="RoseStateCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="SwimLanes" Type="RoseSwimLaneCollection"/>
+    <Attribute Name="Activities" Type="RoseActivityCollection"/>
+    <Attribute Name="AbstractStates" Type="RoseAbstractStateCollection"/>
+    <Attribute Name="Decisions" Type="RoseDecisionCollection"/>
+    <Attribute Name="StateVertices" Type="RoseStateVertexCollection"/>
+    <Attribute Name="Diagrams" Type="RoseStateDiagramCollection"/>
+    <Attribute Name="Synchronizations" Type="RoseSyncItemCollection"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Attribute Name="ObjectInstances" Type="RoseObjectInstanceCollection"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllStates" Return="RoseStateCollection"/>
+    <Operation Name="GetAllTransitions" Return="RoseTransitionCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetTransitions" Return="RoseTransitionCollection"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetAllActivities" Return="RoseActivityCollection"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllAbstractStates" Return="RoseAbstractStateCollection"/>
+    <Operation Name="GetAllDecisions" Return="RoseDecisionCollection"/>
+    <Operation Name="GetAllStateVertices" Return="RoseStateVertexCollection"/>
+    <Operation Name="GetAllDiagrams" Return="RoseStateDiagramCollection"/>
+    <Operation Name="GetAllSynchronizations" Return="RoseSyncItemCollection"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAllObjectInstances" Return="RoseObjectInstanceCollection"/>
+  </Class>
+  <Class Name="RoseStateMachineCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseStateMachineOwner">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="StateMachines" Type="RoseStateMachineCollection"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetParentItem" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseStateVertex">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ParentStateMachine" Type="RoseStateMachine"/>
+    <Attribute Name="Transitions" Type="RoseTransitionCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Parent" Type="RoseStateVertex"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetSwimLanes" Return="RoseSwimLaneCollection"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseStateVertexCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseStateView">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="YPosition" Type="short"/>
+    <Attribute Name="XPosition" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="FillColor" Type="RoseView_FillColor"/>
+    <Attribute Name="LineColor" Type="RoseView_LineColor"/>
+    <Attribute Name="SubViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="ParentView" Type="RoseItemView"/>
+    <Attribute Name="Item" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Attribute Name="Font" Type="RoseView_Font"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LineVertices" Type="RoseLineVertexCollection"/>
+    <Attribute Name="StereotypeDisplay" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="SupportsFillColor" Return="VARIANT_BOOL"/>
+    <Operation Name="SupportsLineColor" Return="VARIANT_BOOL"/>
+    <Operation Name="IsSelected" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDefaultWidth" Return="short"/>
+    <Operation Name="GetDefaultHeight" Return="short"/>
+    <Operation Name="GetMinWidth" Return="short"/>
+    <Operation Name="GetMinHeight" Return="short"/>
+    <Operation Name="HasItem" Return="VARIANT_BOOL"/>
+    <Operation Name="HasParentView" Return="VARIANT_BOOL"/>
+    <Operation Name="GetState" Return="RoseState"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAttachedNotes" Return="RoseNoteViewCollection"/>
+  </Class>
+  <Class Name="RoseStateViewCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseStringCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseSubsystem">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Modules" Type="RoseModuleCollection"/>
+    <Attribute Name="Subsystems" Type="RoseSubsystemCollection"/>
+    <Attribute Name="ParentSubsystem" Type="RoseSubsystem"/>
+    <Attribute Name="ModuleDiagrams" Type="RoseModuleDiagramCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAllModules" Return="RoseModuleCollection"/>
+    <Operation Name="GetAllSubsystems" Return="RoseSubsystemCollection"/>
+    <Operation Name="GetAssignedCategories" Return="RoseCategoryCollection"/>
+    <Operation Name="GetAssignedClasses" Return="RoseClassCollection"/>
+    <Operation Name="GetVisibleSubsystems" Return="RoseSubsystemCollection"/>
+    <Operation Name="TopLevel" Return="VARIANT_BOOL"/>
+    <Operation Name="IsRootPackage" Return="VARIANT_BOOL"/>
+    <Operation Name="IsControlled" Return="VARIANT_BOOL"/>
+    <Operation Name="IsLoaded" Return="VARIANT_BOOL"/>
+    <Operation Name="Load" Return="VARIANT_BOOL"/>
+    <Operation Name="IsModifiable" Return="VARIANT_BOOL"/>
+    <Operation Name="Unload" Return="VARIANT_BOOL"/>
+    <Operation Name="GetFileName" Return="BSTR"/>
+    <Operation Name="Save" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IsModified" Return="VARIANT_BOOL"/>
+    <Operation Name="Uncontrol" Return="VARIANT_BOOL"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="IsLocked" Return="VARIANT_BOOL"/>
+    <Operation Name="NeedsRefreshing" Return="VARIANT_BOOL"/>
+    <Operation Name="GetVisibilityRelations" Return="RoseModuleVisibilityRelationshipCollection"/>
+    <Operation Name="GetAllSubUnitItems" Return="RoseControllableUnitCollection"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseSubsystemCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseSubsystemView">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="YPosition" Type="short"/>
+    <Attribute Name="XPosition" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="FillColor" Type="RoseView_FillColor"/>
+    <Attribute Name="LineColor" Type="RoseView_LineColor"/>
+    <Attribute Name="SubViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="ParentView" Type="RoseItemView"/>
+    <Attribute Name="Item" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Attribute Name="Font" Type="RoseView_Font"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LineVertices" Type="RoseLineVertexCollection"/>
+    <Attribute Name="StereotypeDisplay" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="SupportsFillColor" Return="VARIANT_BOOL"/>
+    <Operation Name="SupportsLineColor" Return="VARIANT_BOOL"/>
+    <Operation Name="IsSelected" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDefaultWidth" Return="short"/>
+    <Operation Name="GetDefaultHeight" Return="short"/>
+    <Operation Name="GetMinWidth" Return="short"/>
+    <Operation Name="GetMinHeight" Return="short"/>
+    <Operation Name="HasItem" Return="VARIANT_BOOL"/>
+    <Operation Name="HasParentView" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="GetSubsystem" Return="RoseSubsystem"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAttachedNotes" Return="RoseNoteViewCollection"/>
+  </Class>
+  <Class Name="RoseSubsystemViewCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseSwimLane">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ClassName" Type="BSTR"/>
+    <Attribute Name="MultipleInstances" Type="VARIANT_BOOL"/>
+    <Attribute Name="Links" Type="RoseLinkCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Persistence" Type="short"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="IsClass" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClass" Return="RoseClass"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetStateVertices" Return="RoseStateVertexCollection"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetObjectFlows" Return="RoseObjectFlowCollection"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseSwimLaneCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseSwimLaneView">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="YPosition" Type="short"/>
+    <Attribute Name="XPosition" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="FillColor" Type="RoseView_FillColor"/>
+    <Attribute Name="LineColor" Type="RoseView_LineColor"/>
+    <Attribute Name="SubViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="ParentView" Type="RoseItemView"/>
+    <Attribute Name="Item" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Attribute Name="Font" Type="RoseView_Font"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LineVertices" Type="RoseLineVertexCollection"/>
+    <Attribute Name="StereotypeDisplay" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="SupportsFillColor" Return="VARIANT_BOOL"/>
+    <Operation Name="SupportsLineColor" Return="VARIANT_BOOL"/>
+    <Operation Name="IsSelected" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDefaultWidth" Return="short"/>
+    <Operation Name="GetDefaultHeight" Return="short"/>
+    <Operation Name="GetMinWidth" Return="short"/>
+    <Operation Name="GetMinHeight" Return="short"/>
+    <Operation Name="HasItem" Return="VARIANT_BOOL"/>
+    <Operation Name="HasParentView" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAttachedNotes" Return="RoseNoteViewCollection"/>
+  </Class>
+  <Class Name="RoseSwimLaneViewCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseSyncItem">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="ParentStateMachine" Type="RoseStateMachine"/>
+    <Attribute Name="Transitions" Type="RoseTransitionCollection"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="Parent" Type="RoseStateVertex"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetSwimLanes" Return="RoseSwimLaneCollection"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseSyncItemCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseSyncItemView">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="YPosition" Type="short"/>
+    <Attribute Name="XPosition" Type="short"/>
+    <Attribute Name="Height" Type="short"/>
+    <Attribute Name="Width" Type="short"/>
+    <Attribute Name="FillColor" Type="RoseView_FillColor"/>
+    <Attribute Name="LineColor" Type="RoseView_LineColor"/>
+    <Attribute Name="SubViews" Type="RoseItemViewCollection"/>
+    <Attribute Name="ParentView" Type="RoseItemView"/>
+    <Attribute Name="Item" Type="RoseItem"/>
+    <Attribute Name="ParentDiagram" Type="RoseDiagram"/>
+    <Attribute Name="Font" Type="RoseView_Font"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LineVertices" Type="RoseLineVertexCollection"/>
+    <Attribute Name="Horizontal" Type="VARIANT_BOOL"/>
+    <Attribute Name="StereotypeDisplay" Type="short"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="SupportsFillColor" Return="VARIANT_BOOL"/>
+    <Operation Name="SupportsLineColor" Return="VARIANT_BOOL"/>
+    <Operation Name="IsSelected" Return="VARIANT_BOOL"/>
+    <Operation Name="GetDefaultWidth" Return="short"/>
+    <Operation Name="GetDefaultHeight" Return="short"/>
+    <Operation Name="GetMinWidth" Return="short"/>
+    <Operation Name="GetMinHeight" Return="short"/>
+    <Operation Name="HasItem" Return="VARIANT_BOOL"/>
+    <Operation Name="HasParentView" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="GetSynchronization" Return="RoseSyncItem"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetAttachedNotes" Return="RoseNoteViewCollection"/>
+  </Class>
+  <Class Name="RoseSyncItemViewCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseTransition">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="SupplierName" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="HasClient" Return="VARIANT_BOOL"/>
+    <Operation Name="HasSupplier" Return="VARIANT_BOOL"/>
+    <Operation Name="GetClient" Return="RoseItem"/>
+    <Operation Name="GetSupplier" Return="RoseItem"/>
+    <Operation Name="GetTriggerAction" Return="RoseAction"/>
+    <Operation Name="GetSendAction" Return="RoseAction"/>
+    <Operation Name="GetTargetState" Return="RoseState"/>
+    <Operation Name="GetSourceState" Return="RoseState"/>
+    <Operation Name="GetTriggerEvent" Return="RoseEvent"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetTargetStateVertex" Return="RoseStateVertex"/>
+    <Operation Name="GetSourceStateVertex" Return="RoseStateVertex"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseTransitionCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseUseCase">
+    <Attribute Name="Name" Type="BSTR"/>
+    <Attribute Name="Documentation" Type="BSTR"/>
+    <Attribute Name="Stereotype" Type="BSTR"/>
+    <Attribute Name="ExternalDocuments" Type="RoseExternalDocumentCollection"/>
+    <Attribute Name="Abstract" Type="VARIANT_BOOL"/>
+    <Attribute Name="ParentCategory" Type="RoseCategory"/>
+    <Attribute Name="ClassDiagrams" Type="RoseClassDiagramCollection"/>
+    <Attribute Name="ScenarioDiagrams" Type="RoseScenarioDiagramCollection"/>
+    <Attribute Name="StateMachine" Type="RoseStateMachine"/>
+    <Attribute Name="Rank" Type="BSTR"/>
+    <Attribute Name="Application" Type="IDispatch"/>
+    <Attribute Name="Model" Type="RoseModel"/>
+    <Attribute Name="LocalizedStereotype" Type="BSTR"/>
+    <Attribute Name="StateMachineOwner" Type="RoseStateMachineOwner"/>
+    <Operation Name="GetUniqueID" Return="BSTR"/>
+    <Operation Name="GetAllProperties" Return="RosePropertyCollection"/>
+    <Operation Name="GetPropertyClassName" Return="BSTR"/>
+    <Operation Name="GetToolNames" Return="RoseStringCollection"/>
+    <Operation Name="GetRoseItem" Return="RoseItem"/>
+    <Operation Name="OpenSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="GetAssociations" Return="RoseAssociationCollection"/>
+    <Operation Name="GetSuperUseCases" Return="RoseUseCaseCollection"/>
+    <Operation Name="GetInheritRelations" Return="RoseInheritRelationCollection"/>
+    <Operation Name="GetRoles" Return="RoseRoleCollection"/>
+    <Operation Name="GetQualifiedName" Return="BSTR"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+    <Operation Name="OpenCustomSpecification" Return="VARIANT_BOOL"/>
+    <Operation Name="RenderIconToClipboard" Return="VARIANT_BOOL"/>
+    <Operation Name="GetIconIndex" Return="short"/>
+    <Operation Name="GetContext" Return="RoseItem"/>
+  </Class>
+  <Class Name="RoseUseCaseCollection">
+    <Attribute Name="Count" Type="short"/>
+  </Class>
+  <Class Name="RoseView_FillColor">
+    <Attribute Name="Red" Type="short"/>
+    <Attribute Name="Transparent" Type="VARIANT_BOOL"/>
+    <Attribute Name="Blue" Type="short"/>
+    <Attribute Name="Green" Type="short"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+  </Class>
+  <Class Name="RoseView_Font">
+    <Attribute Name="Size" Type="short"/>
+    <Attribute Name="FaceName" Type="BSTR"/>
+    <Attribute Name="Blue" Type="short"/>
+    <Attribute Name="Green" Type="short"/>
+    <Attribute Name="Red" Type="short"/>
+    <Attribute Name="Bold" Type="VARIANT_BOOL"/>
+    <Attribute Name="Italic" Type="VARIANT_BOOL"/>
+    <Attribute Name="Underline" Type="VARIANT_BOOL"/>
+    <Attribute Name="StrikeThrough" Type="VARIANT_BOOL"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+  </Class>
+  <Class Name="RoseView_LineColor">
+    <Attribute Name="Blue" Type="short"/>
+    <Attribute Name="Green" Type="short"/>
+    <Attribute Name="Red" Type="short"/>
+    <Operation Name="IdentifyClass" Return="BSTR"/>
+  </Class>
+</RoseTlb>

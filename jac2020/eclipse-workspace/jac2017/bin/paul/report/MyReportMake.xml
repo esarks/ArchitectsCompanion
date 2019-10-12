@@ -1,0 +1,20 @@
+<makeAll>
+
+  <ddl>
+    <script entity="MyTable"     method="createTable">com.learning.paul.report.MyTable_DbTable</script>
+  </ddl>
+  
+  <jeo>
+    <script entity="MyReportJeo" method="createJeo">com.learning.paul.report.MyReport_Jeo</script>
+    <script entity="MyTable"     method="createTable">com.learning.paul.report.MyTable_DbTable</script>
+  </jeo>
+  
+  <make>
+    <script method="generateReport" argument="com.learning.paul.report.MyReport_Report">com.esarks.arm.report.GenerateReport</script>
+    <script context="?" compile="true">com.learning.paul.report.MyReport</script>
+
+    <script method="generateServices" argument="com.learning.paul.report.MyTable_Services">com.esarks.arm.model.GenerateService</script>
+    <script context="?" compile="true">com.learning.paul.report.MyTableCrud</script>
+  </make>
+  
+</makeAll>

@@ -1,0 +1,10 @@
+package <#[$jac:script:package]#>;
+
+import com.esarks.jac.*;
+import java.util.*;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.net.*;
+import java.sql.*;
+

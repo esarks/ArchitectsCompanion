@@ -1,0 +1,9 @@
+<report name="com.learning.paul.report.MyReport" inJeo="com.esarks.arm.model.jeo.service">
+
+  <jeo instance="com.learning.paul.report.MyReportJeo" type="detail">
+
+    <myField>myField</myField>
+
+  </jeo>
+
+</report>

@@ -1,0 +1,9 @@
+
+<%
+
+  iScript.loadScript("com.esarks.arm.model.jeo.ErrorJeo", "java");
+  iScript.loadScript("com.esarks.arm.model.jeo.ReplyJeo", "java");
+  iScript.loadScript("com.esarks.arm.model.jeo.RequestJeo", "java");
+  iScript.loadScript("com.esarks.arm.model.jeo.ServiceJeo", "java");
+
+%>

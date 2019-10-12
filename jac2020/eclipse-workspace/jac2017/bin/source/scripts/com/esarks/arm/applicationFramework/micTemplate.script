@@ -1,0 +1,85 @@
+extends com.esarks.mic.MicScriptHelper
+source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micImport.script
+source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micPrefix.script
+source [$jac:path:scripts][$jac:fileSeparator][$jac:script:path][$jac:fileSeparator][$jac:script].script
+source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micPostfix.script
+end
+
+  public void execute() {
+
+%>
+<!-- enter micTemplate -->
+<html>
+<head>
+<title><![$jac:loc:title]!></title>
+<%
+  <!$jac:loc:stylesheet!>!resetIterator();
+  while (<!$jac:loc:stylesheet!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:stylesheet]!>, <![$jac:loc:stylesheet:context]!>), <![$jac:loc:stylesheet:method]!>);
+  }
+  <!$jac:loc:head!>!resetIterator();
+  while (<!$jac:loc:head!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:head]!>, <![$jac:loc:head:context]!>), <![$jac:loc:head:method]!>);
+  }
+  <!$jac:loc:script!>!resetIterator();
+  while (<!$jac:loc:script!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:script]!>, <![$jac:loc:script:context]!>), <![$jac:loc:script:method]!>);
+  }
+%>
+</head>
+<%
+  <!$jac:loc:body!>!resetIterator();
+  while (<!$jac:loc:body!>!next()) {
+%>
+<body <![$jac:loc:body]!> />
+<%
+  }
+%>
+<!-- Page -->
+<table <![$jac:loc:page]!>>
+  <tr>
+    <td>
+<!-- Site Banner -->
+<%
+  <!$jac:loc:banner!>!resetIterator();
+  while (<!$jac:loc:banner!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:banner]!>, <![$jac:loc:banner:context]!>), <![$jac:loc:banner:method]!>);
+  }
+%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<!-- Page Header -->
+<%
+  <!$jac:loc:header!>!resetIterator();
+  while (<!$jac:loc:header!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:header]!>, <![$jac:loc:header:context]!>), <![$jac:loc:header:method]!>);
+  }
+%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<!-- Content from components -->
+<%
+  <!$jac:loc:content!>!resetIterator();
+  while (<!$jac:loc:content!>!next()) {
+    iScript.execMethod(loadScript(<![$jac:loc:content]!>), <![$jac:loc:content:method]!>);
+  }
+%>
+    </td>
+  </tr>
+</table>
+<!-- Site Footer -->
+<%
+  <!$jac:loc:footer!>!resetIterator();
+  while (<!$jac:loc:footer!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:footer]!>, <![$jac:loc:footer:context]!>), <![$jac:loc:footer:method]!>);
+  }
+%>
+</html>
+<!-- exit micTemplate -->
+<%
+  }
+  

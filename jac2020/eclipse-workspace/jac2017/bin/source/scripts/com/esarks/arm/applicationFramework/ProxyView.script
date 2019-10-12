@@ -1,0 +1,34 @@
+
+
+<& com.esarks.arm.scripts.Method
+   <method name="setMessage" visibility="public" return="void" >
+     <document></document>
+     <argument type="String" name="aMessage" />
+   </method>
+&>
+
+  <!$mic:message!>!set(aMessage);
+  
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+
+<& com.esarks.arm.scripts.Method
+   <method name="render" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>
+
+%>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td bgcolor="#FFFFFF" style="color:red">
+<%
+    <!$mic:message!>& {
+      %><![$mic:message]!><%
+    }
+%>
+    </td>
+  </tr>
+</table>
+<%
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>

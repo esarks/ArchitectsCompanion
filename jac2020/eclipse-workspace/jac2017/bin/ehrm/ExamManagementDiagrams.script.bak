@@ -1,0 +1,69 @@
+import java.io.*
+import net.sourceforge.plantuml.SourceStringReader
+
+public void execute() {
+
+%>EHRM Hello World! v20190816a
+<%
+
+/**
+* @startuml
+* actor Veteran
+* actor VSR
+* participant "VBA\nCompensation\nClaim" as Claim
+* participant "VBA\nGeneric\nEncounter" as VBAGenericEncounter
+* actor "VHA Triage\nScheduling" as Triage
+* participant "VHA\nChild\nOrder" as VHAChildOrder
+* participant "VHA\nAppointment" as VHAAppointment
+* participant "C&P Clinic" as Clinic
+* actor Clinician
+* participant DBQ
+* Veteran -> VSR : Submit Claim\nContentions
+* VSR -> Claim : CEST
+* VSR -> VBAGenericEncounter : Create Generic Order
+* VBAGenericEncounter o->o Claim : Generic Order Created Status
+* VBAGenericEncounter -> Triage : Get Generic Order
+* Triage -> VHAChildOrder : Create Child Order(s)
+* VHAChildOrder o->o Claim : Child Order Created Status
+* Triage -> VHAAppointment : Create Order Appointment(s)
+* VHAAppointment o->o Claim : Appointment Created Status
+* VHAAppointment -> Clinic : Prep for Veteran
+* Veteran -> Clinic : Veteran Presents
+* Clinician -> Veteran : Perform Exam
+* Clinician -> DBQ : Complete DBQ
+* Clinician -> VHAAppointment : Close Appointment
+* Clinician -> VHAChildOrder : Close Order
+* VHAChildOrder o->o Claim : Close Order Status
+* DBQ o->o Claim : Update eFolder with DBQ
+* DBQ o->o Claim : Update Appointment Status
+
+* @enduml
+*/
+
+        StringBuilder plantUmlSource = new StringBuilder();
+        
+        plantUmlSource.append("@startuml\n");
+
+        plantUmlSource.append("Alice -> Bob: Authentication Request\n");
+
+        plantUmlSource.append("Bob --> Alice: Authentication Response\n");
+
+        plantUmlSource.append("@enduml");
+
+//        SourceStringReader reader = new SourceStringReader(plantUmlSource.toString());
+
+//        FileOutputStream output = new FileOutputStream(new File("/your/path/to/plantuml/test.svg"));
+
+//        reader.generateImage(output, new FileFormatOption(FileFormat.SVG, false));
+          
+//SourceStringReader reader = new SourceStringReader(source);
+//final ByteArrayOutputStream os = new ByteArrayOutputStream();
+//// Write the first image to "os"
+//String desc = reader.generateImage(os, new FileFormatOption(FileFormat.SVG));
+//os.close();
+
+//// The XML is stored into svg
+//final String svg = new String(os.toByteArray(), Charset.forName("UTF-8"));
+
+}
+

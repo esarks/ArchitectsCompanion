@@ -1,0 +1,127 @@
+<$kill [$homeDirectory]\\com\\esarks\\ac\\scripts\\GenerateDocs.java>
+<$kill [$homeDirectory]\\com\\esarks\\ac\\scripts\\GenerateDocs.class>
+<$openoutput [$homeDirectory]\\com\\esarks\\ac\\scripts\\GenerateDocs.java>
+package com.esarks.ac.scripts;
+
+import com.esarks.ac.*;
+import java.util.*;
+
+public class GenerateDocs {
+
+private ArrayList iArrayList = new ArrayList();
+private Script iScript;
+
+  private GenerateDocs(  ) {
+  }
+
+  public GenerateDocs(com.esarks.ac.Script aScript) {
+    iScript = (Script) aScript;
+  }
+
+  public void addItem(String aItem) {
+
+    for(int i=0; i<iArrayList.size(); i++) {
+      if (((String) iArrayList.get(i)).compareTo(aItem) == 0) return;
+      if (((String) iArrayList.get(i)).compareTo(aItem) > 0) {
+        iArrayList.add(i, aItem);
+        System.out.println(">>" + aItem);
+        return;
+      }
+    }
+    iArrayList.add(aItem);
+    System.out.println(">>" + aItem);
+  }
+
+  public void xferItems() {
+    for(int i=0; i<iArrayList.size(); i++) {
+      iScript.getSymbolTable().setLocalProperty("CFields", (String) iArrayList.get(i));
+    }
+  }
+}
+<$close>
+<$compile [$homeDirectory]\\com\\esarks\\ac\\scripts\\GenerateDocs.java>
+<$load addItem=com.esarks.ac.scripts.GenerateDocs>
+<$script>
+
+<$reset $outputFile=[$tempDirectory][$backSlash]cp_awd_decn.wri>
+<$kill [$outputFile]>
+<$openoutput [$outputFile]>
+
+<$foreach decisionRules:decision>
+
+  <$println  >
+  <$println Decision Type: [decisionRules:decision:type]>
+
+  <$unset Entity=>
+  <$reset Fields=>
+  <$setxml [$scriptDirectory][$backSlash][decisionRules:decision:type].xml>
+  <$find Entity:name=[decisionRules:decision:type]>
+  <$notfound>
+    <$debug Entity:name=[decisionRules:decision:type] NOT FOUND!>
+  <$endfind>
+
+  <$foreach decisionRules:decision:rules:rule>
+
+    <$foreach decisionRules:decision:rules:rule:condition>
+
+      <$foreach decisionRules:decision:rules:rule:condition:field>
+
+        <$exec addItem!addItem([decisionRules:decision:rules:rule:condition:field])>
+
+        <$find Fields=[decisionRules:decision:rules:rule:condition:field]>
+        <$notfound>
+          <$set Fields=[decisionRules:decision:rules:rule:condition:field]>
+          <$scan Entity:Field:fmlName=[decisionRules:decision:rules:rule:condition:field]>
+          <$failscan>
+            <$debug Entity:Field:fmlName=[decisionRules:decision:rules:rule:condition:field] NOT FOUND!>
+          <$endscan>
+          <$println    [Entity:Field:fmlName], [Entity:Field:oracleTable], [Entity:Field:oracleTableColumn]>
+        <$endfind>
+      <$endfor>
+
+      <$foreach decisionRules:decision:rules:rule:condition:phrase>
+        <$if [decisionRules:decision:rules:rule:condition:phrase:subfield]=>
+        <$else>
+
+          <$exec addItem!addItem([decisionRules:decision:rules:rule:condition:phrase:subfield])>
+
+          <$find Fields=[decisionRules:decision:rules:rule:condition:phrase:subfield]>
+          <$notfound>
+            <$set Fields=[decisionRules:decision:rules:rule:condition:phrase:subfield]>
+            <$scan Entity:Field:fmlName=[decisionRules:decision:rules:rule:condition:phrase:subfield]>
+            <$failscan>
+              <$debug Entity:Field:fmlName=[decisionRules:decision:rules:rule:condition:phrase:subfield] NOT FOUND!>
+            <$endscan>
+            <$println    [Entity:Field:fmlName], [Entity:Field:oracleTable], [Entity:Field:oracleTableColumn]>
+          <$endfind>
+        <$endif>
+        <$if [decisionRules:decision:rules:rule:condition:phrase:field]=>
+        <$else>
+
+          <$exec addItem!addItem([decisionRules:decision:rules:rule:condition:phrase:field])>
+
+          <$find Fields=[decisionRules:decision:rules:rule:condition:phrase:field]>
+          <$notfound>
+            <$set Fields=[decisionRules:decision:rules:rule:condition:phrase:field]>
+            <$scan Entity:Field:fmlName=[decisionRules:decision:rules:rule:condition:phrase:field]>
+            <$failscan>
+              <$debug Entity:Field:fmlName=[decisionRules:decision:rules:rule:condition:phrase:field] NOT FOUND!>
+            <$endscan>
+            <$println    [Entity:Field:fmlName], [Entity:Field:oracleTable], [Entity:Field:oracleTableColumn]>
+          <$endfind>
+        <$endif>
+      <$endfor>
+
+    <$endfor>
+
+  <$endfor>
+
+<$endfor>
+
+<$println **************************>
+<$println **************************>
+<$println **************************>
+<$exec addItem!xferItems()>
+<$foreach CFields>
+  <$println [CFields]>
+<$endfor>

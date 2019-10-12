@@ -1,0 +1,54 @@
+  <services name="com.esarks.arm.wordSearch.SearchFactory">
+      
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="countArmWordsList2" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement><![CDATA[
+          SELECT urlId, COUNT(urlId) AS urlCount FROM $ArmSearchDocumentsWords
+          WHERE $*whereClause
+          GROUP BY urlId
+          ORDER BY urlCount desc
+        ]]></statement>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo" mapFromResultSet="false" >
+            <jeo name="com.esarks.arm.model.jeo.ReplyJeo" mapFromResultSet="false" >
+              <property name="urlId"     type="long" />
+              <property name="urlCount"  type="int" />
+            </jeo>
+          </jeo>
+        </result>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="countArmWordsList" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <statement><![CDATA[
+          SELECT TOP 5 protocol, url, COUNT(url) AS urlCount
+          FROM $ArmSearchView
+          WHERE $*whereClause
+          GROUP BY protocol, url
+          ORDER BY urlCount desc
+        ]]></statement>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo" mapFromResultSet="false" >
+            <jeo name="com.esarks.arm.model.jeo.ReplyJeo" mapFromResultSet="false" >
+              <property name="url"       type="string" />
+              <property name="urlCount"  type="int" />
+            </jeo>
+          </jeo>
+        </result>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+  </services>

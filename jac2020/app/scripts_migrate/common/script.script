@@ -1,0 +1,77 @@
+package <#[$jac:script:package]#>;
+
+import com.esarks.jac.*;
+import java.util.*;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.net.*;
+
+public class <#[$jac:script]#> {
+
+  protected Script script;
+  protected SymbolTable symbolTable;
+  protected OutputManager outputManager;
+  protected PropertyHelper propertyHelper;
+  protected Log log;
+  protected int logClass = 0;
+
+  protected <#[$jac:script]#>() {
+  }
+
+  public <#[$jac:script]#>(Script aScript) {
+
+    script = aScript;
+    symbolTable = script.getSymbolTable();
+    outputManager = script.getOutputManager();
+    propertyHelper = new PropertyHelper(script);
+    log = Log.getInstance();
+
+  }
+
+  protected String path(String aPackage) {
+    return symbolTable.getFilePath(aPackage);
+  }
+
+  protected void appendOutput(String aOutput) {
+    outputManager.openOutputFile(aOutput, true);
+  }
+
+  protected void openOutput(String aOutput) {
+    outputManager.openOutputFile(aOutput, false);
+  }
+
+  protected void closeOutput() {
+    outputManager.closeOutputFile();
+  }
+
+  protected void merge(String aOutputFile, String aInputFile) {
+    Merge.getInstance().doMerge(aOutputFile, aInputFile, script);
+  }
+
+  protected void loadXmlSchema(String aFile) {
+    symbolTable.loadXmlSchema(aFile);
+  }
+
+  protected void parseXmlSchema(String aFile) {
+    symbolTable.parseXmlSchema(path(aFile) + ".xml");
+  }
+
+  protected void parseXmlSchemaPath(String aFile) {
+    symbolTable.parseXmlSchema(aFile);
+  }
+
+  protected void parseXml(String aFile) {
+    symbolTable.parseXml(path(aFile) + ".xml");
+  }
+
+  protected void parseXmlPath(String aFile) {
+    symbolTable.parseXml(aFile);
+  }
+
+  public void execute(String scriptArguments[]) {
+%>
+>> common.script
+<%
+  }
+}

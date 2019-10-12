@@ -1,0 +1,191 @@
+extends com.esarks.mic.MicScriptHelper
+source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micImport.script
+source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micPrefix.script
+source [$jac:path:scripts][$jac:fileSeparator][$jac:script:path][$jac:fileSeparator][$jac:script].script
+source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micPostfix.script
+end
+
+  public void execute() {
+
+%>
+<!-- enter com.esarks.arm.applicationFramework.micTemplateApp -->
+<%
+    if (<!micImages!>!size() == 0) {
+      parseXml("com.esarks.arm.properties.conf.micImages");
+//      parseXml("com.hqsonline.conf.micImages");
+//      loadXmlSchema("mic", path("com.hqsonline.conf.schemas") + ".xml");
+    }
+
+%>
+<!-- Prepare to parse properties -->
+<%
+    setContext(iScript.getMasterScript());
+    if (<!$jac:phase!>!size() == 0) <!$jac:phase!>!reset(<![$jac:loc:phase]!>); 
+    if (<!properties!>!size() == 0) {
+      loadXmlSchema("com.esarks.arm.properties.conf", path("com.esarks.arm.properties.conf.Schemas") + ".xml");
+      parseXmlSchema("com.esarks.arm.properties.conf.Properties");
+      boolean lScan = <!properties:com.esarks.arm.properties.conf.properties!>!scan("sqlServer");
+%>
+<!-- Scan result = <!%lScan!> -->
+<%
+    }
+    restoreContext();
+%>
+<!-- Exit parse properties -->
+<%
+
+    if (iSecurityManager == null) iSecurityManager = new com.esarks.mic.SecurityManager();
+
+//    if (<!$jac:security!>!size() == 0) {
+//      <!$jac:security!>!set(<![$jac:loc:security]!>);
+//      lSecurityManager = (com.esarks.mic.SecurityManager) loadScript(<![$jac:security]!>);
+//      <!$jac:security:object!>!set(lSecurityManager);
+//    } else {
+//      lSecurityManager = (com.esarks.mic.SecurityManager) <!$jac:security:object!>!getValueObject();
+//    }
+
+    ServletRequest lServletRequest = getServletRequest();
+
+    String lScript = null;
+    String lInstance = null;
+    String lMethod = null;
+    String lArgument = null;
+    String lAction = null;
+    
+    String lHref = lServletRequest.getParameter("href");
+    if (lHref != null) {
+      <!$jac:href!>!resetIterator(Integer.parseInt(lHref));
+      lScript = (String) <![$jac:href:script]!>!getValueObject();
+      lInstance = (String) <![$jac:href:instance]!>!getValueObject();
+      lMethod = (String) <![$jac:href:method]!>!getValueObject();
+      lArgument = (String) <![$jac:href:argument]!>!getValueObject();
+      lAction = (String) <![$jac:href:action]!>!getValueObject();
+    } else {
+      lScript = lServletRequest.getParameter("script");
+      lInstance = lServletRequest.getParameter("instance");
+      lMethod = lServletRequest.getParameter("method");
+      lArgument = lServletRequest.getParameter("argument");
+      lAction = lServletRequest.getParameter("action");
+    }
+    
+    <!$mic:securityError!>!remove();
+    if (iSecurityManager != null &&
+        (lMethod.compareTo("openHas") != 0 && iSecurityManager.checkScript(lScript) == true ||
+         lMethod.compareTo("openHas") == 0 && iSecurityManager.checkScript(lScript) == true && iSecurityManager.checkScript(lArgument) == true)) {
+
+      if (lInstance == null) lInstance="";    
+      ScriptHelper lScriptHelper = (ScriptHelper) loadScript(lScript, lInstance);
+
+      if (lArgument == null) {
+        iScript.execMethod(lScriptHelper, lMethod);
+      } else {
+        iScript.execMethod(lScriptHelper, lMethod, new Object[] {lArgument});
+      }
+
+      if (lAction != null && lAction.compareTo("init") == 0) {
+        register(iScript, lScript, "", lScriptHelper);
+        iScript.execMethod(lScriptHelper, "execute", new Object[] {"open"});
+      }
+    } else {
+      <!$mic:securityError!>!set("true");
+      if (iSecurityManager != null) {
+//        lSecurityManager.execute("violation");
+        <!$mic:securityError!>!remove();
+      }
+    }
+    
+%>
+<!-- enter micTemplate -->
+<html>
+<head>
+<%
+  if (<!$jac:title!>!size() > 0) {
+%><title><![$jac:title]!></title><%
+  } else {
+%><title><![$jac:loc:title]!></title><%
+  }
+  <!$jac:loc:stylesheet!>!resetIterator();
+  while (<!$jac:loc:stylesheet!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:stylesheet]!>, <![$jac:loc:stylesheet:context]!>), <![$jac:loc:stylesheet:method]!>);
+  }
+  <!$jac:loc:head!>!resetIterator();
+  while (<!$jac:loc:head!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:head]!>, <![$jac:loc:head:context]!>), <![$jac:loc:head:method]!>);
+  }
+  <!$jac:loc:script!>!resetIterator();
+  while (<!$jac:loc:script!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:script]!>, <![$jac:loc:script:context]!>), <![$jac:loc:script:method]!>);
+  }
+%>
+</head>
+<%
+  <!$jac:loc:body!>!resetIterator();
+  while (<!$jac:loc:body!>!next()) {
+%>
+<body <![$jac:loc:body]!> />
+<%
+  }
+%>
+<!-- Page -->
+<table <![$jac:loc:page]!>>
+  <tr>
+    <td>
+<!-- Site Banner -->
+<%
+  <!$jac:loc:banner!>!resetIterator();
+  while (<!$jac:loc:banner!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:banner]!>, <![$jac:loc:banner:context]!>), <![$jac:loc:banner:method]!>);
+  }
+%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<!-- Page Header -->
+<%
+  <!$jac:loc:header!>!resetIterator();
+  while (<!$jac:loc:header!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:header]!>, <![$jac:loc:header:context]!>), <![$jac:loc:header:method]!>);
+  }
+%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<%
+    if (<!$mic:securityError!>!size() > 0) {
+      %><table width="100%" valign="top" border="0" cellspacing="0" cellpadding="0"><%
+      %><tr><td style="background-color:darkred; color:white;"><%
+      %>A security violation has prevented processing your last request.<%
+      %></td></tr></table><%
+    }
+    <!$jac:registry:script!>!resetIterator();
+    while (<!$jac:registry:script!>!next()) {
+      <!$jac:registry:script:instance!>!resetIterator();
+      while (<!$jac:registry:script:instance!>!next()) {
+        MicScriptHelper lContextObject = (MicScriptHelper) <!$jac:registry:script:instance:object!>!getValueObject();
+        <!$jac:loc:content!>!resetIterator();
+        while (<!$jac:loc:content!>!next()) {
+          String lContentScript = <![$jac:loc:content]!>;
+          String lContentScriptMethod = <![$jac:loc:content:method]!>;
+          MicScriptHelper lMicScriptHelper = (MicScriptHelper) loadScript(lContentScript);
+          lMicScriptHelper.execute(lContextObject);
+        }
+      }
+    }
+%>
+    </td>
+  </tr>
+</table>
+<!-- Site Footer -->
+<%
+  <!$jac:loc:footer!>!resetIterator();
+  while (<!$jac:loc:footer!>!next()) {
+    iScript.execMethod(iScript.loadScript(<![$jac:loc:footer]!>, <![$jac:loc:footer:context]!>), <![$jac:loc:footer:method]!>);
+  }
+%>
+</html>
+<!-- exit micTemplate -->
+<%
+  }
+  

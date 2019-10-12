@@ -1,0 +1,35 @@
+<jacrun>
+  <script name="com.esarks.arm.xmlDoc.XmlDoc" method="execute" />
+  <script name="com.esarks.arm.xmlDoc.TRX_Template" method="execute" argument="?this" />
+  <script name="com.esarks.arm.applicationFramework.HttpServer" method="execute" argument="com/esarks/arm/xmlDoc/TRX_Data.html" />
+
+  <xdoc>
+    <reason><![CDATA[
+
+       <p>The purpose of this release is to submit the <b>Access Control Management</b> Use Case document for initial review.
+       <p>Please inform applicable reviewers on your staff of this release.
+       <p><i>Note:</i> Some Word documents within a set of documents may contain links.  For example some documents will contain
+          links to the Project Glossary document.  For the links to work correctly, all documents in the set must reside in the same
+          directory on your system.  Therefore, you may copy all the documents in the set (e.g. the Access Control Management set of
+          documents) from the location indicated below.
+          
+    ]]></reason>
+
+    <response><![CDATA[
+
+      <p>Please provide feedback to the first person on the contact list below no later than <u>close of business Friday, 3/4/2005</u>.
+      
+    ]]></response>
+
+    <product name="Project Glossary" version="20050219a (1.0)" location="C:\R&amp;D\project\Access Control Management\GL_AccessControlManagement.doc" />
+    <product name="Requirements" version="20050219a (1.0)" location="C:\R&amp;D\project\Access Control Management\RS_AccessControlManagement.doc" />
+    <product name="Actors and Goals" version="20050219a (1.0)" location="C:\R&amp;D\project\Access Control Management\AG_AccessControlManagement.doc" />
+    <product name="Inception Use Case" version="20050219a (1.0)" location="C:\R&amp;D\project\Access Control Management\UC_AccessControlManagement.doc" />
+
+    <contact name="Mickey Mouse" telephone="1-800-MMOUSE" email="mickey.mouse@disney.com" />
+    <contact name="Minnie Mouse" telephone="1-800-MMOUSE" email="minnie.mouse@disney.com" />
+    
+    
+  </xdoc>
+  
+</jacrun>

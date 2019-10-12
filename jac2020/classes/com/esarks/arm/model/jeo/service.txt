@@ -1,0 +1,289 @@
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:1: //$Section=License$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:2: //  Generated at 2005.01.07 01:29:15.843 PM EST by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:3: //  XML Definition: com.esarks.arm.model.jeo.Service_Jeo
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:4: //     Module Name: com.esarks.arm.model.jeo.service
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:5: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:6: //$Section=ChangeLog$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:7: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:8: /* ========================================================================= *
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:9:    Contributor        Description
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:10:    ------------------ ------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:11:                       Author
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:12: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:13:  * ========================================================================= */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:14: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:15: //$Section=Class$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:16: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:17: package com.esarks.arm.model.jeo;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:18: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:19: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:20:  *
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:21:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:22: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:23: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:24: // This section is for generated import delcarations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:25: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:26: // Additional Import Declarations
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:27: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:28: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:29: import java.util.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:30: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:31: import java.io.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:32: import java.text.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:33: import java.net.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:34: import java.sql.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:35: import javax.servlet.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:36: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:37: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:38: //$Section=CustomDeclare$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:39: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:40: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:41: // This section is for custom declarations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:42: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:43: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:44: //$Section=CustomDeclare$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:45: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:46: public class service extends com.esarks.jac.Jeo {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:47: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:48: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:49: // This section is for generated declarations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:50: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:51: // Attributes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:52: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:53: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:54: //$Section=CustomClassDeclare$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:55: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:56: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:57: // This section is for custom class declarations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:58: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:59: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:60:     private com.esarks.arm.model.jeo.request iRequest = new com.esarks.arm.model.jeo.request();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:61:     private com.esarks.arm.model.jeo.reply iReply = new com.esarks.arm.model.jeo.reply();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:62:     private com.esarks.arm.model.jeo.error iError = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:63: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:64: //$Section=CustomClassDeclare$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:65: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:66: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:67: // Generated constructors.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:68: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:69: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:70: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:71:  * Default constructor.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:72:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:73:     public service() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:74:       super("com.esarks.arm.model.jeo.service");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:75: //$Section=DefaultConstructor$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:76:       addJeo(iRequest);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:77:       addJeo(iReply);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:78: //$Section=DefaultConstructor$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:79:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:80: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:81: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:82:  *
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:83:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:84:     public service( Script aScript ) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:85:       super("com.esarks.arm.model.jeo.service", aScript);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:86: //$Section=Operation$Jeo( String aScript )$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:87: //$Section=Operation$Jeo( String aScript )$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:88:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:89: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:90: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:91:  *
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:92:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:93:     public service( String aTypeName ) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:94:       super("com.esarks.arm.model.jeo.service", aTypeName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:95: //$Section=Operation$Jeo( String aTypeName )$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:96: //$Section=Operation$Jeo( String aTypeName )$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:97:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:98: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:99: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:100:  *
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:101:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:102:     public service( String aTypeName, Script aScript ) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:103:       super("com.esarks.arm.model.jeo.service", aTypeName, aScript);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:104: //$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:105: //$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:106:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:107: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:108: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:109: // Default finalize is generated.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:110: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:111: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:112: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:113:  * Default finalize.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:114:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:115:     public void finalize() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:116:     	freeResources();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:117: //$Section=DefaultDestructor$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:118: //$Section=DefaultDestructor$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:119:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:120: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:121: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:122: // Default freeResources is generated.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:123: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:124: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:125: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:126:  * Default freeResources.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:127:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:128:     public void freeResources() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:129:     	super.freeResources();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:130: //$Section=DefaultFreeResources$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:131: //$Section=DefaultFreeResources$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:132:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:133: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:134: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:135: // This section is for custom operations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:136: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:137: //$Section=CustomOperations$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:138: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:139:   public com.esarks.arm.model.jeo.request getRequest() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:140:     return iRequest;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:141:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:142: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:143:   public com.esarks.arm.model.jeo.reply getReply() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:144:     return iReply;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:145:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:146: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:147:   public com.esarks.arm.model.jeo.error getError() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:148:     return iError;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:149:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:150: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:151:   public com.esarks.arm.model.jeo.error addError() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:152:     iError = new com.esarks.arm.model.jeo.error();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:153:     addJeo(iError);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:154:     return iError;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:155:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:156: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:157:   public com.esarks.arm.model.jeo.error getMostSevereError() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:158:     com.esarks.arm.model.jeo.error lReturnError = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:159:     iError = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:160:     ArrayList lArrayList = getErrors();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:161:     if (lArrayList == null || lArrayList.size() == 0) return lReturnError;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:162:     int lSevere = 99;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:163:     for (int lIdx=0; lIdx < lArrayList.size(); lIdx++) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:164:       com.esarks.arm.model.jeo.error lError = (com.esarks.arm.model.jeo.error) lArrayList.get(lIdx);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:165:       if (lError.getSeverity() < lSevere) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:166:         lSevere = lError.getSeverity();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:167:         lReturnError = lError;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:168:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:169:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:170:     iError = lReturnError;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:171:     return lReturnError;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:172:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:173: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:174:   public int getErrorSize() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:175:     return getJeoByInstanceNameSize("com.esarks.arm.model.jeo.error");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:176:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:177: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:178:   public ArrayList getErrors() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:179:     return getJeoByInstanceName("com.esarks.arm.model.jeo.error");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:180:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:181: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:182:   public void setErrorId(String aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:183:     if (iError == null) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:184:     iError.setId(aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:185:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:186: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:187:   public void setErrorLocation(String aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:188:     if (iError == null) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:189:     iError.setLocation(aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:190:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:191: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:192:   public void setErrorTitle(String aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:193:     if (iError == null) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:194:     iError.setTitle(aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:195:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:196: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:197:   public void setErrorText(String aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:198:     if (iError == null) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:199:     iError.setText(aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:200:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:201: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:202:   public void setErrorResolution(String aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:203:     if (iError == null) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:204:     iError.setResolution(aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:205:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:206: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:207:   public void setErrorSeverity(int aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:208:     if (iError == null) return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:209:     iError.setSeverity(aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:210:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:211: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:212: //$Section=CustomOperations$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:213: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:214: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:215: // This section is for mapping views to tables.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:216: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:217: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:218: // This section is for mapping from result sets.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:219: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:220: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:221:   public void mapFromResultSet( ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:222: //$Section=Operation$mapFromResultSet$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:223:     mapFromResultSetTable("*", aResultSet, aTrim, aSpacesToNull);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:224: //$Section=Operation$mapFromResultSet$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:225:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:226: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:227:   public void mapFromResultSetTable( String aTable, ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:228: //$Section=Operation$mapFromResultSetTable$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:229:     String lValue = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:230: //$Section=Operation$mapFromResultSetTable$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:231:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:232: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:233: // This section is for mapping from and to Jeo's.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:234: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:235: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:236:   public void mapToJeo( Jeo aJeo) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:237: //$Section=Operation$mapFromJeo$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:238:     String lType = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:239:     PropertyValue lValue = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:240: //$Section=Operation$mapToJeo$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:241:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:242: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:243:   public void mapFromJeo( Jeo aJeo) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:244: //$Section=Operation$mapFromJeo$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:245:     String lType = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:246:     PropertyValue lValue = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:247: //$Section=Operation$mapFromJeo$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:248:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:249: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:250: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:251: // This section is for the get PropertyValue by attribute string name method.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:252: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:253: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:254:   public PropertyValue getPropertyValueByName ( String aAttributeName) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:255: //$Section=Operation$getPropertyValueByName$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:256:       return null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:257: //$Section=Operation$getPropertyValueByName$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:258:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:259: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:260:   public String getTypeByName ( String aAttributeName) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:261: //$Section=Operation$getTypeByName$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:262:       return null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:263: //$Section=Operation$getTypeByName$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:264:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:265: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:266:   public String getNameByIndex ( int aIndex) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:267: //$Section=Operation$getNameByIndex$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:268: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:269:     switch(aIndex) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:270:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:271:     return null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:272: //$Section=Operation$getNameByIndex$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:273:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:274: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:275: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:276: // This section is for generated attribute accessor methods.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:277: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:278: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:279: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:280: //$Section=Deleted$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:281: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:282: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:283: // This section contains orphaned code from deleted operations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:284: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:285: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:286: //$Section=Deleted$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:287: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:288: //End of class---------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\service.script:289: }

@@ -1,0 +1,110 @@
+context micScriptComponent
+end
+
+  public void execute(String aScript, String aMethod) {
+    execute(aScript, aMethod, null);
+  }
+  
+  public void execute(String aScript, String aMethod, String aArgument) {
+
+    MicScriptHelper lLoadObject = (MicScriptHelper) loadScript(aScript);
+    if (lLoadObject == null) {
+      System.out.println("Job: !WARNING! Cannot open script " + aScript);
+    }
+
+    System.out.println("Job " + aScript + "::" + aMethod + "(" + aArgument + ")");
+
+    parseXmlPath(homePath("bin.Job") + ".xml");
+
+    String lPropertiesPath = <![mic.element:options:properties]!>;
+    String lPropertySet = <![mic.element:options:propertySet]!>;
+    System.out.println("Job Properties  = " + lPropertiesPath);
+    System.out.println("Job PropertySet = " + lPropertySet);
+    setContext(iScript.getMasterScript());
+    // Search for the Schemas...
+
+    File lSchemaFile = new File(path("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+    if (lSchemaFile.exists()) {
+      loadXmlSchema("com.esarks.arm.schemas.properties", path("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+    } else {
+
+      lSchemaFile = new File(homePath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+      if (lSchemaFile.exists()) {
+        loadXmlSchema("com.esarks.arm.schemas.properties", homePath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+      } else {
+
+        lSchemaFile = new File(workPath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+        if (lSchemaFile.exists()) {
+          loadXmlSchema("com.esarks.arm.schemas.properties", workPath("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+        } else {
+          System.out.println("!! WARNING !! PropertiesSchema.xml not found.");
+        }
+      }
+    }
+
+    parseXmlSchemaPath(homePath(lPropertiesPath + ".Properties") + ".xml");
+    boolean lScan = <!com.esarks.arm.schemas.properties.root:property:context!>!scan(lPropertySet);
+    System.out.println("Job Context = " + <![com.esarks.arm.schemas.properties.root:property:context]!>);
+
+    // Open all the DbConnections possible...
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    <!com.esarks.arm.schemas.properties.root:property:dbConnection!>!resetIterator();
+    while (<!com.esarks.arm.schemas.properties.root:property:dbConnection!>!next()) {
+      String lName = <![com.esarks.arm.schemas.properties.root:property:dbConnection:name]!>;
+      String lJdbcClass = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcClass]!>;
+      String lJdbcConnection = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcConnection]!>;
+      String lJdbcUser = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcUser]!>;
+      String lJdbcPassword = <![com.esarks.arm.schemas.properties.root:property:dbConnection:jdbcPassword]!>;
+      String lDbTypes = <![com.esarks.arm.schemas.properties.root:property:dbConnection:dbTypes]!>;
+      String lCatalog = <![com.esarks.arm.schemas.properties.root:property:dbConnection:catalog]!>;
+      String lOwner = <![com.esarks.arm.schemas.properties.root:property:dbConnection:owner]!>;
+      String lStereotype = <![com.esarks.arm.schemas.properties.root:property:dbConnection:stereotype]!>;
+      String lOpenCountString = <![com.esarks.arm.schemas.properties.root:property:dbConnection:openCount]!>;
+      String iMake = <![com.esarks.arm.schemas.properties.root:property:dbConnection:make]!>;
+      int lOpenCount = 1;
+      if (!lOpenCountString.equals("")) lOpenCount = Integer.parseInt(lOpenCountString);
+
+      for (int lIdx=0; lIdx < lOpenCount; lIdx++) {
+        DbConnection lDbConnection = new DbConnection(lName);
+        lDbConnection.setCatalog(lCatalog);
+        lDbConnection.setOwner(lOwner);
+        lDbConnection.setDbTypes(lDbTypes);
+        lDbConnection.setStereotype(lStereotype);
+        if (iMake.equals("false")) lDbConnection.setMake(false);
+        lDbConnectionFactory.register(lDbConnection);
+        System.out.println("Connection " + lIdx + " at " + lName + "=" + lDbConnection.connect(lJdbcClass, lJdbcConnection, lJdbcUser, lJdbcPassword));
+      }
+      
+      <!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!resetIterator();
+      while (<!com.esarks.arm.schemas.properties.root:property:dbConnection:alias!>!next()) {
+        lDbConnectionFactory.alias(lName, <![com.esarks.arm.schemas.properties.root:property:dbConnection:alias]!>);
+      }
+
+    }
+
+    try {
+      // Associate all the objects to a DbConnection...
+      <!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection!>!resetIterator();
+      while (<!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection!>!next()) {
+        DbConnection lDbConnection = lDbConnectionFactory.getDbConnection(<![com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:name]!>);
+        <!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object!>!resetIterator();
+        while (<!com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object!>!next()) {
+          lDbConnectionFactory.associateObjectConnection(<![com.esarks.arm.schemas.properties.root:property:dbObjects:dbConnection:object:name]!>, lDbConnection);
+        }
+      }
+    } catch(Throwable e) {
+      System.out.println(e);
+      System.out.println("Failed to associate all database objects to a DbConnection.  Please verify the <dbObjects> section of Properties.xml.");
+      restoreContext();
+      return;
+    }
+    
+    restoreContext();
+    
+    if (aArgument == null || aArgument.equals("")) {
+      iScript.execMethod(lLoadObject, aMethod);
+    } else {
+      iScript.execMethod(lLoadObject, aMethod, new Object[]{aArgument});
+    }
+    
+}

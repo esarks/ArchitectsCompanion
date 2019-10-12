@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.jrun]
+@="jrun_auto_file"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\jrun_auto_file]
+@=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\jrun_auto_file\shell]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\jrun_auto_file\shell\open]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\jrun_auto_file\shell\open\command]
+@="\"C:\\jetty-4.2.23\\webapps\\elumn8\\WEB-INF\\jac\\com\\esarks\\jac\\jrun\\Jrun.bat\" \"%1\"@="\"
+

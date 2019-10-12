@@ -1,0 +1,249 @@
+
+public void execute() {
+
+  JSONParser jsonParser = new JSONParser();
+  
+  try {
+    JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("C:\ArchitectsCompanion\jac2017\app\paul\basics\HellowWorld.json"));
+
+}
+
+
+public void execute1() {
+
+%>Hello World! v20190515a
+
+JSON
+<%
+
+try {
+
+JSONObject jsonObject = new JSONObject();
+jsonObject.put("tableID", 1);
+jsonObject.put("price", 53);
+jsonObject.put("payment", "cash");
+jsonObject.put("quantity", 3);
+
+JSONArray products = new JSONArray();
+
+//product1
+JSONObject product1 = new JSONObject();
+product1.put("ID", 1);
+product1.put("quantity", 1);
+products.put(product1); //add to products
+
+//product3
+JSONObject product3 = new JSONObject();
+product3.put("ID", 3);
+product3.put("quantity", 2);
+products.put(product3); //add to products
+
+jsonObject.put("products", products); //add products array to the top-level json object
+
+
+// My stored keys and values from the json object
+HashMap<String,String> myKeyValues = new HashMap<String,String>();
+
+// Used for constructing the path to the key in the json object
+Stack<String> key_path = new Stack<String>();
+
+//loadJson(jsonObject, myKeyValues, key_path);
+
+iterateJsonObject(jsonObject);
+
+} catch (JSONException e) {%>Exception 1<%}
+
+
+}
+
+
+
+/*
+                if (iterator != null) {
+                    while (iterator.hasNext()) {
+
+                        String key = iterator.next();
+                        Object value = json.get(key);
+                        String dataType = value.getClass().getSimpleName();
+
+                        if (dataType.equalsIgnoreCase("Integer")) {
+                            Log.i("Read Json", "Key :" + key + " | type :int | value:" + value);
+
+                        } else if (dataType.equalsIgnoreCase("Long")) {
+                            Log.i("Read Json", "Key :" + key + " | type :long | value:" + value);
+
+                        } else if (dataType.equalsIgnoreCase("Float")) {
+                            Log.i("Read Json", "Key :" + key + " | type :float | value:" + value);
+
+                        } else if (dataType.equalsIgnoreCase("Double")) {
+                            Log.i("Read Json", "Key :" + key + " | type :double | value:" + value);
+
+                        } else if (dataType.equalsIgnoreCase("Boolean")) {
+                            Log.i("Read Json", "Key :" + key + " | type :bool | value:" + value);
+
+                        } else if (dataType.equalsIgnoreCase("String")) {
+                            Log.i("Read Json", "Key :" + key + " | type :string | value:" + value);
+
+                        }
+                    }
+
+                }
+*/
+
+
+private void iterateJsonObject(JSONObject aJsonObject){
+%>
+*** Enter iterateJson
+<%
+
+Set<String> keys = posts.keySet();
+
+
+try{
+
+  Iterator<?> keys = resobj.keys().iterator();
+  while(keys.hasNext() ) {
+  }
+
+
+  Iterator<?> lJsonKeys = aJsonObject.keys();
+
+  while (lJsonKeys.hasNext()) {
+    
+    String lJsonKey = (String)lJsonKeys.next();
+    Object lValue = aJsonObject.get(lJsonKey);
+    String lDataType = lValue.getClass().getSimpleName();
+    
+%>
+lJsonKey: <!%lJsonKey!>; lDataType: <!%lDataType!>;
+<%
+
+    if (lDataType.equalsIgnoreCase("JSONArray")) {
+%>
+** Handle Array
+<%
+
+      JSONArray lJsonArray = aJsonObject.getJSONArray(lJsonKey);
+      iterateJsonArray(lJsonArray);
+    }
+       
+    if (lDataType.equalsIgnoreCase("JSONObject")) {
+%>
+** Handle Object
+<%
+    }
+
+  }       
+
+}catch (JSONException e5){
+%>
+Exception 5 <!%e5!>
+<%
+}
+
+}
+
+private void iterateJsonArray(JSONArray aJsonArray){
+
+try{
+
+      int lLength = aJsonArray.length();
+      
+      for (int lIdx = 0; lIdx < lLength; lIdx++) {
+%>
+** Handle Array Item
+<%
+        Object lValue = aJsonArray.get(lIdx);
+        String lDataType = lValue.getClass().getSimpleName();
+%>
+lDataType: <!%lDataType!>;
+<%
+
+        if (lDataType.equalsIgnoreCase("JSONArray")) {
+%>
+** Handle Array2
+<%
+        }
+       
+        if (lDataType.equalsIgnoreCase("JSONObject")) {
+%>
+** Handle Object2
+<%
+        }
+
+      }
+
+}catch (JSONException e6){
+%>
+Exception 6 <!%e6!>
+<%
+}
+
+}
+
+
+private void loadJson(JSONObject json, HashMap myKeyValues, Stack<String> key_path){
+%>
+*** Enter loadjson
+<%
+try{
+
+    Iterator<?> json_keys = json.keys();
+
+    while( json_keys.hasNext() ){
+        String json_key = (String)json_keys.next();
+        Object value = json.get(json_key);
+        String dataType = value.getClass().getSimpleName();
+        
+%>
+json_key: <!%json_key!> dataType: <!%dataType!>
+<%
+        try{
+            key_path.push(json_key);
+            loadJson(json.getJSONObject(json_key), myKeyValues, key_path);
+        }catch (JSONException e){
+
+%>
+Exception 2 <!%e!>
+<%
+
+           // Build the path to the key
+           String key = "";
+           for(String sub_key: key_path){
+               key += sub_key+".";
+           }
+
+           key = key.substring(0,key.length()-1);
+
+           try{
+             System.out.println(key+": "+json.getString(json_key));
+           }catch (JSONException e1){
+%>
+Exception 3 <!%e1!>
+<%
+}
+
+           key_path.pop();
+
+           try{
+             myKeyValues.put(key, json.getString(json_key));
+           }catch (JSONException e2){
+%>
+Exception 4 <!%e2!>
+<%
+}
+        }
+    }
+ 
+   if(key_path.size() > 0){
+        key_path.pop();
+    }
+
+}catch (JSONException e3){
+%>
+Exception 5 <!%e3!>
+<%
+}
+
+
+}

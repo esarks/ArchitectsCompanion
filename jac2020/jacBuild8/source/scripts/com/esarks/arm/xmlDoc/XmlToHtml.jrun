@@ -1,0 +1,3 @@
+<jacrun>
+  <script name="com.esarks.arm.xmlDoc.XmlToHtml" method="execute" argument="com.esarks.arm.xmlDoc.TRX" />
+</jacrun>

@@ -1,0 +1,12 @@
+<%
+
+  <!email:server!>!set("esarks.com");
+  <!email:from!>!set("ptm@esarks.com");
+  <!email:to!>!set("ptm@esarks.com");
+  <!email:subject!>!set("subject line");
+  <!email:message!>!set("Line 1");
+  <!email:message!>!set("Line 2");
+
+  sendMessage();
+
+%>

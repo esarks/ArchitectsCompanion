@@ -1,0 +1,37 @@
+import com.jacob.activeX.ActiveXComponent;
+import com.jacob.com.*;
+private static final String inputFile = "C:\\ArchitectsCompanion\\jac20120811a\\app\\com\\learning\\paul\\jacob\\Requirements Management Framework-V2.pptx";
+
+public void execute() {
+
+%>
+Hello World! 1a
+<%
+
+//                iRqPrj = iRqApp.Application.OpenProject(Me.txtRequisiteProProjectFrom.Text, _
+//                                                            ReqPro40.enumOpenProjectOptions.eOpenProjOpt_RQSFile, _
+//                                                            Me.txtUserFrom.Text, _
+//                                                            Me.txtPasswordFrom.Text, _
+//                                                            ReqPro40.enumProjectFlags.eProjFlag_Normal, _
+//                                                            ReqPro40.enumRelatedProjectOptions.eRelatedProjOption_ConnectAsSpecified)
+
+//        ActiveXComponent ReqPro = new ActiveXComponent("ReqPro40.Application");
+//        ActiveXComponent ReqProApplication = ReqPro.getPropertyAsComponent("Application");
+//        ReqProApplication.invoke("OpenProject");
+//        ComThread.Release();
+
+
+        ActiveXComponent wordApp = new ActiveXComponent("Word.Application");
+        wordApp.setProperty("Visible", new Variant(true));
+        ActiveXComponent presentations = slideApp.getPropertyAsComponent("Presentations");
+        ActiveXComponent presentation = presentations.invokeGetComponent("Open",new Variant(inputFile), new Variant(true));
+        ComThread.Release();
+
+//       ActiveXComponent slideApp = new ActiveXComponent("PowerPoint.Application");
+//       slideApp.setProperty("Visible", new Variant(true));
+//       ActiveXComponent presentations = slideApp.getPropertyAsComponent("Presentations");
+//       ActiveXComponent presentation = presentations.invokeGetComponent("Open",new Variant(inputFile), new Variant(true));
+//       ComThread.Release();
+            
+}
+        

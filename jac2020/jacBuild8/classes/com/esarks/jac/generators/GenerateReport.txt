@@ -1,0 +1,1013 @@
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:2: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:3: import java.util.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:5: import java.io.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:6: import java.text.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:7: import java.sql.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:8: //import java.net.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:10: //import java.security.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:13: //import java.awt.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:15: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:18: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:19: <#import#>
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:2: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:4: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:6:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:7: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:9: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:11: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:12:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:1: context micScriptComponent
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:2: end
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:3: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:4:   public void generateReport(String aXmlDefinition) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:5:     resetExit();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:6:     try {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:7: %>generateReport: <!%aXmlDefinition!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:8: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:9:     <!report!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:10:     parseXmlPath(path(aXmlDefinition) + ".xml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:11:     if (<!report!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:12:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:13:       <!$jac:event!>!set("Could not find <report> tag in " + path(aXmlDefinition) + ".xml file.");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:14:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:15:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:16:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:17:       restoreContext();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:18:       setExit();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:19:       return;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:20:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:21:         
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:22:     boolean lForce = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:23:     setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:24:     if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:25:     restoreContext();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:26:     if (!lForce) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:27:       File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateReport") + ".script");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:28:       File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:29:       File lNewFile = new File(path(<![report:name]!>) + ".script");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:30:       if (lNewFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:31:           ((lGeneratorFile.exists() && lNewFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) || !lGeneratorFile.exists())) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:32:         String lReportName = <![report:name]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:33:         setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:34:         <!$jac:event!>!set("File " + lReportName + ".script is not stale.  Generation bypassed.");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:35:         <!$jac:event:severity!>!set("info");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:36:         <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:37:         <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:38:         restoreContext();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:39:         setExit();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:40:         return;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:41:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:42:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:43: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:44:     setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:45:     <!$jac:merge:sectionMarker!>!reset("//$Section=");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:46:     <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:47:     <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:48:     <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:49:     <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:50:     <!$jac:merge:preservePreamble!>!reset("no");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:51:     <!$jac:merge:comments!>!reset("//");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:52:     <!$jac:merge:excludeCompare!>!reset("//  Generated at");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:53:     <!$jac:merge:trimOutput!>!reset("yes");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:54:     <!$jac:merge:keepSections!>!reset("no");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:55:     restoreContext();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:56: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:57: //    String lLineNbr = "<" + "#" + "[$jac:script:lineNumber]#>";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:58: //    boolean lResultSetExists = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:59: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:60:     openOutput(path(<![report:name]!>) + ".xml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:61: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:62: <mic.element type="Report" title="">  
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:63: </mic.element>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:64: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:65:     closeOutput();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:66: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:67:     openOutput(path(<![report:name]!>) + ".new");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:68: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:69:     setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:70:     String lDateTime = <![$jac:dateTime]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:71:     restoreContext();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:72: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:73: //  Generated at <!%lDateTime!> by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:74: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:75:   public void render(String aOutput, String aStereotype, <![report:inJeo]!> aJeo) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:76:     renderHtml(aOutput, aJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:77:     renderXml(aOutput, aJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:78:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:79: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:80:   public void render(String aOutput, <![report:inJeo]!> aJeo) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:81:     renderHtml(aOutput, aJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:82:     renderXml(aOutput, aJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:83:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:84: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:85:   public void renderHtml(String aOutput, <![report:inJeo]!> aJeo) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:86:     openOutput(path(aOutput) + ".html");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:87:     <![report:inJeo]!> lJeo = aJeo;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:88: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:89: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:90:     String lStart = "%" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:91:     String lStop = "<" + "%";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:92:     String lVarStart = "<" + "!";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:93:     String lVarEnd = "!" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:94:     String lJeoName = "report";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:95:     String lX = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:96:     int lXCount = 0;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:97:     String lIndent = "  ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:98: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:99:     iOutputManager.setDocument("createHtml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:100:     %><html><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:101:     %><table border=1 cellpadding=5 cellspacing=0><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:102:     %><tr><td align="right">Specification File Name</td><td><!%aXmlDefinition!>.xml</td></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:103:     %><tr><td align="right">Report Name</td><td><![report:name]!></td></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:104:     %><tr><td align="right">Incoming Jeo Type</td><td><![report:inJeo]!></td></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:105:     %></table><br><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:106:     iOutputManager.setDocument("");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:107: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:108:     parseXmlPath(path(aXmlDefinition) + ".xml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:109: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:110: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:111:     int lNbrColumns_ = 0;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:112: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:113: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:114: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:115: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:116: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:117: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:118:     <!" + lJeoName + ":jeo!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:119:     while(<!" + lJeoName + ":jeo!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:120: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:121: //System.out.println(lJeoName + ":jeo is type " + <![" + lJeoName + ":jeo:type]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:122: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:123: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:124: // *********************************************************************************************
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:125: // ***** Begin XML tag: <!%lJeoName!> Jeo Type: <![" + lJeoName + ":jeo:type]!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:126: // *********************************************************************************************
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:127: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:128: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:129:       iOutputManager.setDocument("createHtml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:130:       %><table border=1 cellpadding=3 cellspacing=0><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:131:       %><tr><td><b><![" + lJeoName + ":jeo:instance]!></b></td><td><b><![" + lJeoName + ":jeo:type]!></b></td><tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:132:       %><tr><td colspan=2><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:133:       iOutputManager.setDocument("createHtml2");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:134:       %><table border=1 cellpadding=5 cellspacing=0><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:135:       %><tr><td><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:136:       iOutputManager.setDocument("");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:137: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:138:       lXCount++;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:139:       if (<!" + lJeoName + ":jeo:type!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:140:         if (<!" + lJeoName + ":jeo!>!isFirst()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:141: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:142:   <!%lIndent!>ArrayList lArrayList<!%lX!>x = lJeo<!%lX!>.getJeoByTypeName("<![" + lJeoName + ":jeo:type]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:143: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:144:         } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:145: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:146:   <!%lIndent!>lArrayList<!%lX!>x = lJeo<!%lX!>.getJeoByTypeName("<![" + lJeoName + ":jeo:type]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:147: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:148:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:149:       } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:150:         if (<!" + lJeoName + ":jeo!>!isFirst()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:151: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:152:   <!%lIndent!>ArrayList lArrayList<!%lX!>x = lJeo<!%lX!>.getJeoByInstanceName("<![" + lJeoName + ":jeo:instance]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:153: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:154:         } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:155: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:156:   <!%lIndent!>lArrayList<!%lX!>x = lJeo<!%lX!>.getJeoByInstanceName("<![" + lJeoName + ":jeo:instance]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:157: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:158:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:159:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:160: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:161:       <!$mic:sortfields!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:162: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:163:       <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:164:         if (<!" + lJeoName + ":jeo:column:sort!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:165:           <!" + lJeoName + ":jeo:column:attribute!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:166:           <!$mic:sortfields!>!set(<![" + lJeoName + ":jeo:column:attribute]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:167:           <!$mic:sortfields:order!>!set(<![" + lJeoName + ":jeo:column:sort:ascending]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:168:           <!$mic:sortfields:importance!>!set(<![" + lJeoName + ":jeo:column:sort]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:169:           <!$mic:sortfields:type!>!set(<![" + lJeoName + ":jeo:column:sort:type]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:170:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:171:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:172:       if (<!$mic:sortfields!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:173:         <!$mic:sortfields!>!sort("importance", false);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:174:         <!$mic:sortfields!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:175: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:176:   <!%lIndent!>for (int lIdx<!%lX!>=0; lIdx<!%lX!> < lArrayList<!%lX!>x.size(); lIdx<!%lX!>++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:177:     <!%lIndent!>Jeo lSortJeo = (Jeo) lArrayList<!%lX!>x.get(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:178:     <!%lIndent!>PropertyValue lSortPropertyValue = lSortJeo.getPropertyValueByName("<![$mic:sortfields]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:179:     <!%lIndent!>if (lSortPropertyValue == null) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:180:       <!%lIndent!>lSortPropertyValue = lSortJeo.getPropertyValue("<![$mic:sortfields]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:181:       <!%lIndent!>if (lSortPropertyValue == null) lSortPropertyValue = new PropertyValue();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:182:     <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:183:     <!%lIndent!>String lSort = lSortPropertyValue.toString();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:184: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:185:           if (<![$mic:sortfields:type]!>.equals("string")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:186: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:187:     <!%lIndent!>lSort += (new DecimalFormat("00000000000")).format(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:188: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:189:           } else if (<![$mic:sortfields:type]!>.equals("date")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:190: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:191:     <!%lIndent!>lSort += "0000000000000000000000";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:192:     <!%lIndent!>lSort = lSort.substring(6,10) + lSort.substring(0,5) + (new DecimalFormat("00000000000")).format(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:193: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:194:           } else if (<![$mic:sortfields:type]!>.equals("int")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:195: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:196:     <!%lIndent!>lSort = "0000000000000000000000".substring(0, 20 - lSort.length()) + lSort + (new DecimalFormat("00000000000")).format(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:197: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:198:           } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:199: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:200:     <!%lIndent!>lSort += (new DecimalFormat("00000000000")).format(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:201: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:202:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:203: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:204:     <!%lIndent!>lSortJeo.setPropertyValue("<![$mic:sortfields]!>.sort", new PropertyValue(lSort));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:205:   <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:206: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:207:           boolean lAscending = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:208:           if (<![$mic:sortfields:order]!>.equals("false")) lAscending = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:209: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:210:   <!%lIndent!>Jeo.sort(lArrayList<!%lX!>x, "<![$mic:sortfields]!>.sort", <!%lAscending!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:211: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:212:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:213:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:214: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:215:       int lNbrColumns = <!" + lJeoName + ":jeo:column!>!size();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:216: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:217:   <!%lIndent!>boolean lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!> = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:218:   <!%lIndent!>int lNbrColumns<!%lX!>x_<![" + lJeoName + ":jeo:type]!> = <!%lNbrColumns!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:219:   <!%lIndent!>String lTableEnd<!%lX!>x_<![" + lJeoName + ":jeo:type]!> = "</table>";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:220:   <!%lIndent!>if (lNbrColumns<!%lX!>_<![" + lJeoName + ":type]!> > 0) lTableEnd<!%lX!>x_<![" + lJeoName + ":jeo:type]!> = "</table></td></tr>";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:221:   <!%lIndent!>for (int lIdx<!%lX!>=0; lIdx<!%lX!> < lArrayList<!%lX!>x.size(); lIdx<!%lX!>++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:222:     <!%lIndent!><![" + lJeoName + ":jeo:instance]!> lJeo<!%lX!>x = (<![" + lJeoName + ":jeo:instance]!>) lArrayList<!%lX!>x.get(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:223: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:224:       if (lNbrColumns > 0) {      
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:225: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:226:     <!%lIndent!>if (lNbrColumns<!%lX!>_<![" + lJeoName + ":type]!> > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:227:       <!%lIndent!><!%lStart!><tr><td colspan="<!%lVarStart!>%lNbrColumns<!%lX!>_<![" + lJeoName + ":type]!><!%lVarEnd!>"><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:228:     <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:229:     <!%lIndent!>if (lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!>) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:230:       <!%lIndent!>lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!>=false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:231: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:232: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:233: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:234:         iOutputManager.setDocument("createHtml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:235:         <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:236: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:237:           if (<!" + lJeoName + ":jeo:column!>!isFirst()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:238:             %><table width=100% border=1 cellpadding=3 cellspacing=0><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:239:             %><tr><td><b>Attribute</b></td><td><b>Heading</b></td><td><b>Width</b></td></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:240:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:241: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:242:           %><tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:243:           %><td><![" + lJeoName + ":jeo:column:attribute]!>&nbsp;<%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:244:           %><td><![" + lJeoName + ":jeo:column:heading]!>&nbsp;<%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:245:           %><td><![" + lJeoName + ":jeo:column:width]!>&nbsp;<%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:246:           %></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:247: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:248:           <!" + lJeoName + ":jeo:column:tag!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:249:             if (<!" + lJeoName + ":jeo:column:tag!>!isFirst()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:250:               %><tr><td colspan=3><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:251:               %><table width=100% border=1 cellpadding=3 cellspacing=0><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:252:               %><tr><td><b>Tag Name</b></td><td><b>Default</b></td><td><b>Property</b></td></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:253:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:254:             %><tr><td><![" + lJeoName + ":jeo:column:tag:name]!>&nbsp;</td><td><![" + lJeoName + ":jeo:column:tag:default]!>&nbsp;</td><td><![" + lJeoName + ":jeo:column:tag]!>&nbsp;</td></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:255:             if (<!" + lJeoName + ":jeo:column:tag!>!isLast()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:256:               %></table></td></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:257:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:258:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:259: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:260:           <!" + lJeoName + ":jeo:column:sort!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:261:             if (<!" + lJeoName + ":jeo:column:sort!>!isFirst()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:262:               %><tr><td colspan=3><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:263:               %><table width=100% border=1 cellpadding=3 cellspacing=0><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:264:               %><tr><td><b>Sort Type</b></td><td><b>Ascending</b></td><td><b>Priority</b></td></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:265:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:266:             %><tr><td><![" + lJeoName + ":jeo:column:sort:type]!>&nbsp;</td><td><![" + lJeoName + ":jeo:column:sort:ascending]!>&nbsp;</td><td><![" + lJeoName + ":jeo:column:sort]!>&nbsp;</td></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:267:             if (<!" + lJeoName + ":jeo:column:sort!>!isLast()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:268:               %></table></td></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:269:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:270:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:271: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:272:           if (<!" + lJeoName + ":jeo:column!>!isLast()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:273:             %></table><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:274:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:275:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:276:         iOutputManager.setDocument("createHtml2");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:277:         <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:278:           if (<!" + lJeoName + ":jeo:column!>!isFirst()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:279:             %><table width=100% border=1 cellpadding=3 cellspacing=0><tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:280:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:281:           %><td><![" + lJeoName + ":jeo:column:heading]!>&nbsp;</td><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:282:           if (<!" + lJeoName + ":jeo:column!>!isLast()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:283:             %></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:284:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:285:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:286:         <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:287:           if (<!" + lJeoName + ":jeo:column!>!isFirst()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:288:             %><tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:289:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:290:           %><td><![" + lJeoName + ":jeo:column:attribute]!>&nbsp;</td><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:291:           if (<!" + lJeoName + ":jeo:column!>!isLast()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:292:             %></tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:293:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:294:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:295:         <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:296:           if (<!" + lJeoName + ":jeo:column!>!isFirst()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:297:             %><tr><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:298:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:299:           if (<!" + lJeoName + ":jeo:column!>!scan("tag:name", "type")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:300:             if (<![" + lJeoName + ":jeo:column:tag:default]!>.equals("string")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:301:               %><td>Abcdefgh</td><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:302:             } else if (<![" + lJeoName + ":jeo:column:tag:default]!>.equals("date")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:303:               %><td>01/01/2005</td><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:304:             } else if (<![" + lJeoName + ":jeo:column:tag:default]!>.equals("int")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:305:               %><td>12345</td><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:306:             } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:307:               %><td>???</td><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:308:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:309:           } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:310:             %><td>???</td><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:311:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:312:           if (<!" + lJeoName + ":jeo:column!>!isLast()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:313:             %></tr></table><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:314:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:315:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:316:         iOutputManager.setDocument("");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:317: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:318:         <!" + lJeoName + ":jeo:column!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:319:         if (<!" + lJeoName + ":jeo:column:heading!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:320: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:321:       <!%lIndent!><!%lStart!><table cellspacing="0" cellpadding="0" border="1"><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:322:       <!%lIndent!><!%lStart!><tr><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:323: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:324:           <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:325: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:326:       <!%lIndent!><!%lStart!><td width="<![" + lJeoName + ":jeo:column:width]!>"><![" + lJeoName + ":jeo:column:heading]!>&nbsp;</td><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:327: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:328:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:329: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:330:       <!%lIndent!><!%lStart!></tr><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:331: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:332:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:333: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:334:     <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:335:     <!%lIndent!><!%lStart!><tr><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:336: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:337:         <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:338:           <!" + lJeoName + ":jeo:column:attribute!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:339:           if (<!" + lJeoName + ":jeo:column:attribute!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:340: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:341:     <!%lIndent!><!%lStart!><td><!%lVarStart!>%lJeo<!%lX!>x.get<![cap@[" + lJeoName + ":jeo:column:attribute]]!>PropertyValue().toString()<!%lVarEnd!>&nbsp;</td><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:342: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:343:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:344:           if (<!" + lJeoName + ":jeo:column:property!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:345: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:346:     <!%lIndent!><!%lStart!><td><!%lVarStart!>%lJeo<!%lX!>x.getPropertyValue("<![" + lJeoName + ":jeo:column:property]!>").toString()<!%lVarEnd!>&nbsp;</td><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:347: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:348:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:349:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:350: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:351:     <!%lIndent!><!%lStart!></tr><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:352: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:353:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:354: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:355: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:356: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:357: //System.out.println("1> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:358: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:359:       if (<!" + lJeoName + ":jeo:jeo!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:360: //System.out.println("2> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:361:         <!" + lJeoName + ":jeo:jeo!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:362:         lJeoName += ":jeo";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:363:         lX += "x";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:364:         lIndent += "  ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:365: //System.out.println("3> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:366:       } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:367: //System.out.println("4> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:368:         if (lJeoName.endsWith(":jeo")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:369:           while (<!" + lJeoName + ":jeo!>!isLast()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:370: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:371:     <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:372:     <!%lIndent!>if (!lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!>) <!%lStart!><!%lVarStart!>%lTableEnd<!%lX!>x_<![" + lJeoName + ":jeo:type]!><!%lVarEnd!><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:373: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:374:             if (lJeoName.endsWith(":jeo")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:375: //System.out.println("5> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:376:               lJeoName = lJeoName.substring(0, lJeoName.length() - 4);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:377:               lIndent = lIndent.substring(0, lIndent.length() - 2);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:378:               lX = lX.substring(0, lX.length() - 1);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:379: //System.out.println("6> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:380:             } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:381: //System.out.println("7> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:382:               break;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:383:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:384:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:385:           if (<!" + lJeoName + ":jeo!>!isLast()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:386:           } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:387: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:388:   <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:389:   <!%lIndent!>if (!lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!>) <!%lStart!><!%lVarStart!>%lTableEnd<!%lX!>x_<![" + lJeoName + ":jeo:type]!><!%lVarEnd!><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:390: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:391:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:392:         } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:393: //System.out.println("8> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:394: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:395:   <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:396:   <!%lIndent!>if (!lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!>) <!%lStart!><!%lVarStart!>%lTableEnd<!%lX!>x_<![" + lJeoName + ":jeo:type]!><!%lVarEnd!><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:397: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:398:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:399:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:400: //System.out.println("9> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:401:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:402: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:403: //System.out.println("*> ");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:404: //??
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:405:     iOutputManager.setDocument("createHtml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:406:     %></td></tr></table><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:407:     iOutputManager.setDocument("createHtml2");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:408:     %></td></tr></table><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:409:     iOutputManager.setDocument("");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:410: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:411:     iOutputManager.setDocument("createHtml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:412:     %></td></tr></table><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:413:     iOutputManager.setDocument("");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:414: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:415: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:416:     closeOutput();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:417:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:418: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:419: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:420: //=============================================================================
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:421: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:422: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:423: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:424:   public void renderXml(String aOutput, <![report:inJeo]!> aJeo) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:425:     openOutput(path(aOutput) + ".xml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:426:     <![report:inJeo]!> lJeo = aJeo;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:427: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:428: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:429:     lStart = "%" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:430:     lStop = "<" + "%";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:431:     lVarStart = "<" + "!";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:432:     lVarEnd = "!" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:433:     lJeoName = "report";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:434:     lX = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:435:     lXCount = 0;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:436:     lIndent = "  ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:437:     
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:438: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:439:     <!%lStart!><report name="<!%lVarStart!>%aOutput<!%lVarEnd!>"><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:440:     int lNbrColumns_ = 0;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:441: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:442: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:443: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:444: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:445: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:446: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:447:     <!" + lJeoName + ":jeo!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:448:     while(<!" + lJeoName + ":jeo!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:449: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:450: //System.out.println(lJeoName + ":jeo is type " + <![" + lJeoName + ":jeo:type]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:451: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:452: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:453: // *********************************************************************************************
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:454: // ***** Begin XML tag: <!%lJeoName!> Jeo Type: <![" + lJeoName + ":jeo:type]!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:455: // *********************************************************************************************
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:456: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:457: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:458:       lXCount++;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:459:       if (<!" + lJeoName + ":jeo:type!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:460:         if (<!" + lJeoName + ":jeo!>!isFirst()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:461: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:462:   <!%lIndent!>ArrayList lArrayList<!%lX!>x = lJeo<!%lX!>.getJeoByTypeName("<![" + lJeoName + ":jeo:type]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:463: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:464:         } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:465: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:466:   <!%lIndent!>lArrayList<!%lX!>x = lJeo<!%lX!>.getJeoByTypeName("<![" + lJeoName + ":jeo:type]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:467: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:468:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:469:       } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:470:         if (<!" + lJeoName + ":jeo!>!isFirst()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:471: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:472:   <!%lIndent!>ArrayList lArrayList<!%lX!>x = lJeo<!%lX!>.getJeoByInstanceName("<![" + lJeoName + ":jeo:instance]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:473: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:474:         } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:475: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:476:   <!%lIndent!>lArrayList<!%lX!>x = lJeo<!%lX!>.getJeoByInstanceName("<![" + lJeoName + ":jeo:instance]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:477: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:478:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:479:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:480: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:481:       <!$mic:sortfields!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:482: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:483:       <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:484:         if (<!" + lJeoName + ":jeo:column:sort!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:485:           <!" + lJeoName + ":jeo:column:attribute!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:486:           <!$mic:sortfields!>!set(<![" + lJeoName + ":jeo:column:attribute]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:487:           <!$mic:sortfields:order!>!set(<![" + lJeoName + ":jeo:column:sort:ascending]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:488:           <!$mic:sortfields:importance!>!set(<![" + lJeoName + ":jeo:column:sort]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:489:           <!$mic:sortfields:type!>!set(<![" + lJeoName + ":jeo:column:sort:type]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:490:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:491:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:492:       if (<!$mic:sortfields!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:493:         <!$mic:sortfields!>!sort("importance", false);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:494:         <!$mic:sortfields!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:495: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:496:   <!%lIndent!>for (int lIdx<!%lX!>=0; lIdx<!%lX!> < lArrayList<!%lX!>x.size(); lIdx<!%lX!>++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:497:     <!%lIndent!>Jeo lSortJeo = (Jeo) lArrayList<!%lX!>x.get(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:498:     <!%lIndent!>PropertyValue lSortPropertyValue = lSortJeo.getPropertyValueByName("<![$mic:sortfields]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:499:     <!%lIndent!>if (lSortPropertyValue == null) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:500:       <!%lIndent!>lSortPropertyValue = lSortJeo.getPropertyValue("<![$mic:sortfields]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:501:       <!%lIndent!>if (lSortPropertyValue == null) lSortPropertyValue = new PropertyValue();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:502:     <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:503:     <!%lIndent!>String lSort = lSortPropertyValue.toString();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:504: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:505:           if (<![$mic:sortfields:type]!>.equals("string")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:506: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:507:     <!%lIndent!>lSort += (new DecimalFormat("00000000000")).format(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:508: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:509:           } else if (<![$mic:sortfields:type]!>.equals("date")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:510: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:511:     <!%lIndent!>lSort += "0000000000000000000000";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:512:     <!%lIndent!>lSort = lSort.substring(6,10) + lSort.substring(0,5) + (new DecimalFormat("00000000000")).format(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:513: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:514:           } else if (<![$mic:sortfields:type]!>.equals("int")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:515: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:516:     <!%lIndent!>lSort = "0000000000000000000000".substring(0, 20 - lSort.length()) + lSort + (new DecimalFormat("00000000000")).format(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:517: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:518:           } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:519: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:520:     <!%lIndent!>lSort += (new DecimalFormat("00000000000")).format(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:521: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:522:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:523: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:524:     <!%lIndent!>lSortJeo.setPropertyValue("<![$mic:sortfields]!>.sort", new PropertyValue(lSort));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:525:   <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:526: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:527:           boolean lAscending = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:528:           if (<![$mic:sortfields:order]!>.equals("false")) lAscending = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:529: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:530:   <!%lIndent!>Jeo.sort(lArrayList<!%lX!>x, "<![$mic:sortfields]!>.sort", <!%lAscending!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:531: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:532:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:533:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:534: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:535:       int lNbrColumns = <!" + lJeoName + ":jeo:column!>!size();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:536: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:537:   <!%lIndent!>boolean lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!> = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:538:   <!%lIndent!>int lNbrColumns<!%lX!>x_<![" + lJeoName + ":jeo:type]!> = <!%lNbrColumns!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:539:   <!%lIndent!>String lTableEnd<!%lX!>x_<![" + lJeoName + ":jeo:type]!> = "</table>";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:540:   <!%lIndent!>for (int lIdx<!%lX!>=0; lIdx<!%lX!> < lArrayList<!%lX!>x.size(); lIdx<!%lX!>++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:541:     <!%lIndent!><![" + lJeoName + ":jeo:instance]!> lJeo<!%lX!>x = (<![" + lJeoName + ":jeo:instance]!>) lArrayList<!%lX!>x.get(lIdx<!%lX!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:542: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:543:       if (lNbrColumns > 0) {      
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:544: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:545:     <!%lIndent!>if (lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!>) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:546:       <!%lIndent!>lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!>=false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:547: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:548:         <!" + lJeoName + ":jeo:column!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:549:         if (<!" + lJeoName + ":jeo:column:heading!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:550: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:551: <!%lStart!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:552: <table>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:553: <!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:554: <!%lStart!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:555: <header>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:556: <!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:557: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:558:           <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:559: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:560: <!%lStart!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:561: <column attribute="<![" + lJeoName + ":jeo:column:attribute]!>" width="<![" + lJeoName + ":jeo:column:width]!>"><![" + lJeoName + ":jeo:column:heading]!></column>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:562: <!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:563: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:564:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:565: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:566: <!%lStart!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:567: </header>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:568: <!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:569: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:570:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:571: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:572:     <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:573:     <!%lIndent!>String <!%lX!>AttributeList = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:574: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:575:         <!" + lJeoName + ":jeo:tag!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:576:           if (<!" + lJeoName + ":jeo:tag:name!>!size() != 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:577:             String lTag = <![" + lJeoName + ":jeo:tag:name]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:578:             String lTagProperty = <![" + lJeoName + ":jeo:tag]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:579:             String lTagDefault = <![" + lJeoName + ":jeo:tag:default]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:580: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:581:     <!%lIndent!>{
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:582:     <!%lIndent!>  PropertyValue lTagPropertyValue = lJeo<!%lX!>x.getPropertyValue("<!%lTagProperty!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:583: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:584:             if (<!" + lJeoName + ":jeo:tag:default!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:585: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:586:     <!%lIndent!>  if (lTagPropertyValue.getType().equals("null")) lTagPropertyValue.reset("<!%lTagDefault!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:587: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:588:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:589: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:590:     <!%lIndent!>  if (!lTagPropertyValue.getType().equals("null")) <!%lX!>AttributeList += "<!%lTag!>" + "=\\\"" + lTagPropertyValue.toString() + "\\\" ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:591:     <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:592: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:593:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:594:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:595: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:596: <!%lStart!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:597: <row <!%lVarStart!>%<!%lX!>AttributeList<!%lVarEnd!>>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:598: <!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:599: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:600:     <!%lIndent!><!%lX!>AttributeList = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:601: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:602:         <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:603: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:604:           <!" + lJeoName + ":jeo:column:tag!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:605: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:606:             if (<!" + lJeoName + ":jeo:column:tag:name!>!size() != 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:607:               String lTag = <![" + lJeoName + ":jeo:column:tag:name]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:608:               String lTagProperty = <![" + lJeoName + ":jeo:column:tag]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:609:               String lTagDefault = <![" + lJeoName + ":jeo:column:tag:default]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:610: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:611:     <!%lIndent!>{
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:612:     <!%lIndent!>  PropertyValue lTagPropertyValue = lJeo<!%lX!>x.getPropertyValue("<!%lTagProperty!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:613: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:614:             if (<!" + lJeoName + ":jeo:column:tag:default!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:615: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:616:     <!%lIndent!>  if (lTagPropertyValue.getType().equals("null")) lTagPropertyValue.reset("<!%lTagDefault!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:617: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:618:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:619: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:620:     <!%lIndent!>  if (!lTagPropertyValue.getType().equals("null")) <!%lX!>AttributeList += "<!%lTag!>" + "=\\\"" + lTagPropertyValue.toString() + "\\\" ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:621:     <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:622: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:623:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:624:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:625: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:626:           <!" + lJeoName + ":jeo:column:attribute!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:627:           if (<!" + lJeoName + ":jeo:column:attribute!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:628:             String aColumnName = <![" + lJeoName + ":jeo:column:attribute]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:629: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:630: <!%lStart!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:631: <<!%aColumnName!> <!%lVarStart!>%<!%lX!>AttributeList<!%lVarEnd!>><!%lVarStart!>%lJeo<!%lX!>x.get<![cap@[" + lJeoName + ":jeo:column:attribute]]!>PropertyValue().toString()<!%lVarEnd!></<!%aColumnName!>>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:632: <!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:633:     <!%lIndent!><!%lX!>AttributeList = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:634: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:635:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:636:           if (<!" + lJeoName + ":jeo:column:property!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:637:             String aColumnName = <![" + lJeoName + ":jeo:column:property]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:638: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:639: <!%lStart!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:640: <<!%aColumnName!> <!%lVarStart!>%<!%lX!>AttributeList<!%lVarEnd!>><!%lVarStart!>%lJeo<!%lX!>x.getPropertyValue("<![" + lJeoName + ":jeo:column:property]!>").toString()<!%lVarEnd!></<!%aColumnName!>>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:641: <!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:642:     <!%lIndent!><!%lX!>AttributeList = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:643: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:644:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:645: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:646:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:647: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:648: <!%lStart!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:649: </row>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:650: <!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:651: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:652:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:653: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:654: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:655: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:656: ///////////////////////////////////////////////////////////
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:657: //System.out.println("1> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:658: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:659:       if (<!" + lJeoName + ":jeo:jeo!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:660: //System.out.println("2> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:661:         <!" + lJeoName + ":jeo:jeo!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:662:         lJeoName += ":jeo";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:663:         lX += "x";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:664:         lIndent += "  ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:665: //System.out.println("3> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:666:       } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:667: //System.out.println("4> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:668:         if (lJeoName.endsWith(":jeo")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:669:           while (<!" + lJeoName + ":jeo!>!isLast()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:670: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:671:     <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:672:     <!%lIndent!>if (!lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!>) <!%lStart!><!%lVarStart!>%lTableEnd<!%lX!>x_<![" + lJeoName + ":jeo:type]!><!%lVarEnd!><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:673: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:674:             if (lJeoName.endsWith(":jeo")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:675: //System.out.println("5> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:676:               lJeoName = lJeoName.substring(0, lJeoName.length() - 4);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:677:               lIndent = lIndent.substring(0, lIndent.length() - 2);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:678:               lX = lX.substring(0, lX.length() - 1);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:679: //System.out.println("6> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:680:             } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:681: //System.out.println("7> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:682:               break;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:683:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:684:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:685:           if (<!" + lJeoName + ":jeo!>!isLast()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:686:           } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:687: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:688:   <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:689:   <!%lIndent!>if (!lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!>) <!%lStart!><!%lVarStart!>%lTableEnd<!%lX!>x_<![" + lJeoName + ":jeo:type]!><!%lVarEnd!><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:690: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:691:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:692:         } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:693: //System.out.println("8> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:694: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:695:   <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:696:   <!%lIndent!>if (!lPrintHeading<!%lX!>x_<![" + lJeoName + ":jeo:type]!>) <!%lStart!><!%lVarStart!>%lTableEnd<!%lX!>x_<![" + lJeoName + ":jeo:type]!><!%lVarEnd!><!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:697: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:698:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:699:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:700: //System.out.println("9> " + lJeoName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:701:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:702: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:703: //System.out.println("*> ");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:704: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:705: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:706: <!%lStart!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:707: </report>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:708: <!%lStop!>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:709: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:710:     closeOutput();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:711:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:712: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:713: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:714: //=============================================================================
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:715: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:716: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:717: //=============================================================================
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:718: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:719: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:720:   public void renderFromXml(String aXmlFile) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:721: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:722:     parseXmlPath(path(aXmlFile) + ".xml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:723:     <![report:inJeo]!> lJeo = new <![report:inJeo]!>();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:724: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:725: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:726:     lStart = "%" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:727:     lStop = "<" + "%";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:728:     lVarStart = "<" + "!";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:729:     lVarEnd = "!" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:730:     lJeoName = "report";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:731:     lX = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:732:     lXCount = 0;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:733:     lIndent = "  ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:734: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:735:     while(<!" + lJeoName + ":jeo!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:736: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:737: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:738:   <!%lIndent!><!%lVarStart!><!%lJeoName!>:jeo<!%lVarEnd!><!%"!"!>resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:739:   <!%lIndent!>while (<!%lVarStart!><!%lJeoName!>:jeo<!%lVarEnd!><!%"!"!>next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:740: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:741: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:742:       lXCount++;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:743:       if (<!" + lJeoName + ":jeo:type!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:744: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:745:     <!%lIndent!><![" + lJeoName + ":jeo:instance]!> lJeo<!%lX!>x = new <![" + lJeoName + ":jeo:instance]!>("<![" + lJeoName + ":jeo:type]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:746:     <!%lIndent!>lJeo<!%lX!>.addJeo(lJeo<!%lX!>x);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:747: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:748:       } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:749: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:750:     <!%lIndent!><![" + lJeoName + ":jeo:instance]!> lJeo<!%lX!>x = new <![" + lJeoName + ":jeo:instance]!>();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:751:     <!%lIndent!>lJeo<!%lX!>.addJeo(lJeo<!%lX!>x);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:752: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:753:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:754:       <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:755:         String lAttributeName = <![" + lJeoName + ":jeo:column:attribute]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:756: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:757:     <!%lIndent!>if (<!%lVarStart!><!%lJeoName!>:jeo!>!scan("attribute:name", "<!%lAttributeName!>")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:758:     <!%lIndent!>  lJeo<!%lX!>x.set<![cap@[" + lJeoName + ":jeo:column:attribute]]!>(<!%lVarStart!>[<!%lJeoName!>:jeo:attribute:value]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:759:     <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:760: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:761:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:762: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:763:       lJeoName += ":jeo";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:764:       lX += "x";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:765:       lIndent+="  ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:766: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:767:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:768: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:769:     lIndent = lIndent.substring(0, lIndent.length() - 2);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:770:     for (int lIdx=0; lIdx < lXCount; lIdx++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:771:       lIndent = lIndent.substring(0, lIndent.length() - 2);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:772: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:773:     <!%lIndent!>}
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:774: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:775:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:776: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:777: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:778:     render(aXmlFile, lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:779:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:780: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:781: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:782: //=============================================================================
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:783: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:784: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:785: //$Section=Deleted$Preserve=yes
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:786: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:787: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:788: // This section contains orphaned code from deleted operations.
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:789: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:790: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:791: //$Section=Deleted$Preserve=no
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:792: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:793: //End of script---------------
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:794: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:795:     closeOutput();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:796:     Merge.getInstance().doMerge(path(<![report:name]!>) + ".script", path(<![report:name]!>) + ".new", iScript.getMasterScript());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:797: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:798:     StringBuffer lStringBuffer1 = iOutputManager.getDocument("createHtml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:799:     StringBuffer lStringBuffer2 = iOutputManager.getDocument("createHtml2");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:800: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:801:     if (openOutput(path(aXmlDefinition) + ".html")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:802:       %><!%lStringBuffer1.toString()!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:803:       %><br><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:804:       %><!%lStringBuffer2.toString()!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:805:       %></html><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:806:       closeOutput();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:807:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:808: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:809:     openOutput(path(<![report:name]!>) + "_Test.xml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:810:     lStart = "%" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:811:     lStop = "<" + "%";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:812:     lVarStart = "<" + "!";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:813:     lVarEnd = "!" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:814:     lJeoName = "report";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:815:     lX = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:816:     lXCount = 0;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:817:     lIndent = "  ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:818: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:819: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:820: <report name="<![report:name]!>" inJeo="<![report:inJeo]!>">
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:821: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:822: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:823: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:824:     while(<!" + lJeoName + ":jeo!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:825:       lXCount++;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:826:       if (<!" + lJeoName + ":jeo:type!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:827: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:828: <!%lIndent!><jeo instance="<![" + lJeoName + ":jeo:instance]!>" type="<![" + lJeoName + ":jeo:type]!>">
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:829: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:830: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:831:       } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:832: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:833: <!%lIndent!><jeo instance="<![" + lJeoName + ":jeo:instance]!>">
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:834: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:835: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:836:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:837:       <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:838: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:839:   <!%lIndent!><attribute name="<![" + lJeoName + ":jeo:column:attribute]!>" value="<![" + lJeoName + ":jeo:column:attribute]!>" />
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:840: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:841:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:842: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:843:       lJeoName += ":jeo";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:844:       lX += "x";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:845:       lIndent+="  ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:846: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:847:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:848: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:849:     lIndent = lIndent.substring(0, lIndent.length() - 2);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:850:     for (int lIdx=0; lIdx < lXCount; lIdx++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:851:       lIndent = lIndent.substring(0, lIndent.length() - 2);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:852: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:853: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:854:   <!%lIndent!></jeo>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:855: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:856:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:857: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:858: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:859: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:860: </report>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:861: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:862:     closeOutput();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:863: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:864:     openOutput(path(<![report:name]!>) + "Controller.new");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:865:     lStart = "%" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:866:     lStop = "<" + "%";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:867:     lVarStart = "<" + "!";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:868:     lVarEnd = "!" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:869:     lJeoName = "report";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:870:     lX = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:871:     lXCount = 0;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:872:     lIndent = "  ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:873: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:874: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:875: //  Generated at <!%lDateTime!> by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:876: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:877:   public void execute() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:878: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:879:     ArrayList lCollection = performService();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:880: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:881:     com.esarks.arm.model.jeo.ServiceJeo lDocumentServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:882: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:883:     iScript.execMethod("<![report:name]!>", "render", new Object[]{"<![report:name]!>", lDocumentServiceJeo});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:884: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:885:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:886:   
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:887:   public void performService() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:888: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:889:     // Create the service jeo
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:890:     com.esarks.arm.model.jeo.ServiceJeo lServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:891: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:892:     // Call the service
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:893:     iScript.execMethod("!!com...!!", "!!serviceName!!", new Object[]{lServiceJeo});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:894:     if (lServiceJeo.getError() != null && lServiceJeo.getError().getSeverity() < 5) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:895:       System.out.println(lServiceJeo.getError().getTitle());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:896:       System.out.println(lServiceJeo.getError().getText());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:897:       System.out.println(lServiceJeo.getError().getLocation());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:898:       return;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:899:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:900: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:901:     // Get the reply objects
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:902:     Jeo lReplyJeo = lServiceJeo.getReply();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:903:     ArrayList lArrayList = lReplyJeo.getJeoByInstanceName("!!com...!!");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:904: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:905:     int lIdx = 0;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:906:     for (lIdx=0; lIdx < lArrayList.size(); lIdx++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:907:       !!com...!! lJeo = (!!com...!!) lArrayList.get(lIdx);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:908:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:909: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:910:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:911:   
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:912: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:913:     while(<!" + lJeoName + ":jeo!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:914: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:915:       lXCount++;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:916:       if (<!" + lJeoName + ":jeo:type!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:917: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:918: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:919:   public Jeo create<![cap@[" + lJeoName + ":jeo:type]]!>(Jeo aJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:920: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:921:     <![" + lJeoName + ":jeo:instance]!> lJeo = new <![" + lJeoName + ":jeo:instance]!>("<![" + lJeoName + ":jeo:type]!>");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:922: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:923: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:924:       } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:925: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:926:   public Jeo create!!NoType!!(Jeo aJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:927: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:928:     <![" + lJeoName + ":jeo:instance]!> lJeo = new <![" + lJeoName + ":jeo:instance]!>();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:929: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:930: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:931:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:932:       <!" + lJeoName + ":jeo:column!>& {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:933: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:934:     lJeo.set<![cap@[" + lJeoName + ":jeo:column:attribute]]!>(aJeo.get!!Attribute!!PropertyValue().toString());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:935: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:936:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:937: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:938:       lJeoName += ":jeo";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:939:       lX += "x";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:940:       lIndent+="  ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:941: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:942: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:943: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:944:     return lJeo;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:945:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:946: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:947: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:948:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:949: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:950: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:951: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:952:     closeOutput();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:953: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:954:     openOutput(path(<![report:name]!>) + "Controller.xml");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:955:     lStart = "%" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:956:     lStop = "<" + "%";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:957:     lVarStart = "<" + "!";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:958:     lVarEnd = "!" + ">";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:959:     lJeoName = "report";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:960:     lX = "";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:961:     lXCount = 0;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:962:     lIndent = "  ";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:963: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:964: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:965: <mic.element type="Component" title="">
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:966: </mic.element>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:967: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:968:     closeOutput();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:969: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:970:     } catch (Throwable e) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:971:       setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:972:       <!$jac:event!>!set(e.getMessage());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:973:       <!$jac:event:severity!>!set("fatal");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:974:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:975:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:976:       restoreContext();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:977:       setExit();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:978:       return;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:979:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:980: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateReport.script:981:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPostfix.script:1: }

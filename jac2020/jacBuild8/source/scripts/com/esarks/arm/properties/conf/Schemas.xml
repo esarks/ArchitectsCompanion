@@ -1,0 +1,4 @@
+<schemas>
+  <schema name="properties" type="string" truncateEol="true" extendsKey="extends" >
+  </schema>
+</schemas>

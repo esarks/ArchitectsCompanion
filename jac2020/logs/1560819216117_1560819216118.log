@@ -1,0 +1,21 @@
+Mon Jun 17 20:53:36 EDT 2019: Start
+0: Open log file.
+30: DEBUG-com.esarks.jac.jac:getScript()!Log opened by jac!Debug=9!DebugClass=9
+1612: DEBUG-com.esarks.jac.jac:getScript()!$jac:context=jac
+1612: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:classpath=C:\ArchitectsCompanion\jac2017\classes;C:\ArchitectsCompanion\jac2017\lib\jac\jac.jar;C:\ArchitectsCompanion\jac2017\lib\mic\mic.jar;C:\ArchitectsCompanion\jac2017\lib\jetty\org.mortbay.jetty.jar;C:\ArchitectsCompanion\jac2017\lib\jetty\org.mortbay.jmx.jar;C:\ArchitectsCompanion\jac2017\lib\jetty\javax.servlet.jar;C:\ArchitectsCompanion\jac2017\jdk1.8.0_112\lib\tools.jar;C:\ArchitectsCompanion\jac2017\lib\mysql-connector-java-5.1.18\mysql-connector-java-5.1.18-bin.jar;C:\ArchitectsCompanion\jac2017\lib\crimson\crimson.jar;C:\ArchitectsCompanion\jac2017\lib\jacob-1.17-M2\jacob.jar;C:\ArchitectsCompanion\jac2017\lib\jni4net-0.8.6.0-bin\lib\jni4net.j-0.8.6.0.jar;C:\ArchitectsCompanion\jac2017\lib\java-json.jar\java-json.jar
+1612: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:home=C:\ArchitectsCompanion\jac2017
+1612: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:work=C:\ArchitectsCompanion\jac2017\classes
+1612: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:scripts=C:\ArchitectsCompanion\jac2017\app
+1612: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:document=C:\Users\ptm
+1612: DEBUG-com.esarks.jac.jac:getScript()!$jac:fileSeparator=\
+1612: DEBUG-com.esarks.jac.jac:getScript()!$jac:verifyScripts=true
+1613: DEBUG-com.esarks.jac.jac:getScript()!$jac:compile=true
+1613: DEBUG-com.esarks.jac.jac:getScript()!$jac:dateTime=2019.06.17 08:53:37.733 PM EDT
+1613: DEBUG-com.esarks.jac.jac:getScript()!Script=com.esarks.jac.jrun.Job
+1613: DEBUG-com.esarks.jac.jac:getScript()!Method=execute
+1613: DEBUG-com.esarks.jac.jac:getScript()!Argument=com.esarks.jac.jrun.Jrun
+1613: DEBUG-com.esarks.jac.jac:getScript()!Argument=execute
+1613: DEBUG-com.esarks.jac.jac:getScript()!Argument=C:\ArchitectsCompanion\jac2017\app\paul\basics\HelloWorld.jrun
+1613: DEBUG-com.esarks.jac.jac:getScript()!Calling Script.execMethod with arguments...
+1658: APP-com.esarks.jac.jrun.Jrun:execute(String)!Enter method!aXml="C:\ArchitectsCompanion\jac2017\app\paul\basics\HelloWorld.jrun"
+2440: APP-com.esarks.jac.jrun.Jrun:execute(String)!Normal final exit method!Elapsed time = 782

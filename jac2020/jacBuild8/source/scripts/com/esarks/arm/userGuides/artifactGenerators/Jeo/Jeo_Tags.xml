@@ -1,0 +1,29 @@
+<tags root="jeos">
+  <documentation><![CDATA[This is the XML defintion file used by the following scripts:<ul><li>com.esarks.arm.model.MakeJeo.script</ul>]]></documentation>
+
+  <tag name="jeo" type="element">
+    <documentation>A container tag for the Jeo.</documentation>
+  
+    <tag name="name" type="attribute">
+      <documentation>The name of the Jeo to be generated.</documentation>
+    </tag>
+    
+    <tag name="field" type="element">
+      <documentation>A container tag for the field.</documentation>
+
+      <tag name="name" type="attribute">
+        <documentation>The name of the field.</documentation>
+      </tag>
+      <tag name="type" type="attribute">
+        <documentation>The data type of the field.</documentation>
+      </tag>
+      <tag name="size" type="attribute">
+        <documentation>The size of the field. (not currently used)</documentation>
+      </tag>
+      <tag name="nullable" type="attribute">
+        <documentation>Identifies if the field can contain an null value. (not currently used)</documentation>
+      </tag>
+    </tag>
+  </tag>
+
+</tags>

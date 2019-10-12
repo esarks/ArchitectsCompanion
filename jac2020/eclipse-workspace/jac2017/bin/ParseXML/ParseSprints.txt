@@ -1,0 +1,490 @@
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:2: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:3: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:4: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:5: import java.time.Duration;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:6: import java.time.Instant;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:7: import java.time.Period;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:8: import java.time.ZoneId;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:9: import java.time.LocalDate;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:10: import java.time.LocalDateTime;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:11: import java.time.LocalTime;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:12: import java.time.format.DateTimeFormatter;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:13: import java.time.format.FormatStyle;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:14: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:15: import java.util.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:16: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:17: import java.io.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:18: import java.text.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:19: import java.net.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:20: import javax.net.ssl.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:21: import java.security.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:22: import java.sql.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:23: import javax.servlet.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:24: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:25: import java.awt.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:26: import javax.swing.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:27: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:28: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:29: import java.nio.file.Files;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:30: import java.nio.file.Paths;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:31: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:32: import java.io.FileNotFoundException;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:33: import java.io.FileReader;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:34: import java.io.IOException;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:35: import java.util.Iterator;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:36: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:37: import org.json.simple.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:38: import org.json.simple.parser.*;
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:39: 
+C:\ArchitectsCompanion\jac2017\conf\micImport.script:40: <#import#>
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:2: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:4:   }
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:5: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:7: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:8:     super(aScript);
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:9: 
+C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:10:   }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:1: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:2: public void execute() {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:3: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:4: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:5: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:6: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:7: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:8: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:9: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:10:   iOutputManager.openOutputFile(<![mic.element:mapFile]!>, false);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:11:   iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:12: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:13:   iOutputManager.openOutputFile(<![mic.element:logFile]!>, false);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:14: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:15: RTC Workitems are contained in <![mic.element:rtcFile]!>.
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:16: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:17:   iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:18: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:19: //Number of Rows in Worksheet
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:20:   int lRow = 0;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:21: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:22: // Establish Type translation from Excel to XSD
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:23: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:24:   <!Type:Boolean!>!set("boolean");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:25:   <!Type:DateTime!>!set("dateTime");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:26:   <!Type:Number!>!set("integer");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:27:   <!Type:String!>!set("string");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:28: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:29: // Get the data out of the RTC data file
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:30: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:31: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:32: mic.element:type = <![mic.element:type]!> : mic.element:rtcFile = <![mic.element:rtcFile]!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:33: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:34: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:35:   iSymbolTable.parseXml(<![mic.element:rtcFile]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:36: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:37: // Iterate Workbook
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:38: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:39:   <!Workbook!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:40:   while (<!Workbook!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:41: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:42: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:43: Workbook
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:44: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:45: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:46: // Iterate Worksheet
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:47:    
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:48:     <!Workbook:Worksheet!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:49:     while (<!Workbook:Worksheet!>!next()) { 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:50: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:51: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:52: Worksheet <![Workbook:Worksheet:ss:Name]!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:53: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:54: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:55: // Iterate Table
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:56:   
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:57:       <!Workbook:Worksheet:Table!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:58:       while (<!Workbook:Worksheet:Table!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:59: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:60: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:61: Table
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:62: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:63: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:64: // Iterate Row and keep count
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:65:               
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:66:         <!Workbook:Worksheet:Table:Row!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:67:         while (<!Workbook:Worksheet:Table:Row!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:68: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:69: %>.<%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:70:           lRow = lRow + 1;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:71:           if (lRow > 1) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:72:             <!Workitem!>!set("");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:73:           }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:74: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:75:           int lCell = 0;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:76:                   
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:77:           <!Workbook:Worksheet:Table:Row:Cell!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:78:           while (<!Workbook:Worksheet:Table:Row:Cell!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:79: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:80:             lCell = lCell + 1;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:81:             
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:82:             if (lRow == 1) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:83: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:84:               <!Column!>!set(lCell);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:85:               <!Column:Heading!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:86:               <!Column:XmlHeading!>!set(<![Column:Heading]!>.replace(' ','_').replace('(','_').replace(')','_').replace('%','P'));
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:87:               <!Column:Type!>!set("N/A");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:88:               <!Column:XmlType!>!set("string");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:89:               
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:90:             } else {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:91: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:92:               if (<![Workbook:Worksheet:Table:Row:Cell:ss~Index]!>.equals("")) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:93: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:94:               } else {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:95:                 lCell = Integer.parseInt(<![Workbook:Worksheet:Table:Row:Cell:ss~Index]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:96:               }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:97: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:98:               <!Workitem:Column!>!set(lCell);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:99:               <!Workitem:Column:Data!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:100:               <!Workitem:Column:Type!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data:ss~Type]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:101:               <!Column!>!find(lCell);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:102:               <!Column:Type!>!reset(<![Workbook:Worksheet:Table:Row:Cell:Data:ss~Type]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:103:               <!Column:XmlType!>!reset(<![Type:[Workbook:Worksheet:Table:Row:Cell:Data:ss~Type]]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:104:               <!Workitem:Column:Heading!>!set(<![Column:Heading]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:105:               if (lCell == 1) <!Workitem:Id!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:106:               <!Workitem:[Column:Heading]!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:107:             }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:108:           }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:109:         }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:110:       }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:111:     }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:112:   }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:113: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:114: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:115: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:116: Rows processed: <!%lRow!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:117: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:118: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:119:   lRow--;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:120: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:121:   iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:122: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:123: Number of data rows: <!%lRow!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:124: Create a list of Column Names in WorkItemColumns.csv.
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:125: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:126:   iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:127: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:128:   iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ParseXML\\WorkItemColumns.csv", false);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:129: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:130:   <!Column!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:131:   while (<!Column!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:132: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:133: <![Column]!>,<![Column:Heading]!>,<![Column:Type]!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:134: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:135:   }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:136: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:137:   iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:138: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:139:   iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:140: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:141: Build headers for *_import tables.
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:142: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:143:   iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:144: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:145: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:146: Import Sprints
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:147: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:148: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:149: // Create header rows in _import files
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:150: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:151:   <!mic.element:map:type!>!scan("rm_sprint");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:152:   writeHeadingLog("rm_sprint");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:153:   <!mic.element:map:type!>!scan("rm_sprint");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:154:   writeHeading();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:155:   
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:156:   <!mic.element:map:type!>!scan("rm_epic");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:157:   writeHeadingLog("rm_epic");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:158:   <!mic.element:map:type!>!scan("rm_epic");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:159:   writeHeading();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:160:   
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:161:   <!mic.element:map:type!>!scan("rm_story");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:162:   writeHeadingLog("rm_story");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:163:   <!mic.element:map:type!>!scan("rm_story");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:164:   writeHeading();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:165:   
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:166:   <!mic.element:map:type!>!scan("rm_defect");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:167:   writeHeadingLog("rm_defect");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:168:   <!mic.element:map:type!>!scan("rm_defect");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:169:   writeHeading();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:170: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:171:   <!mic.element:map:type!>!scan("rm_scrum_task");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:172:   writeHeadingLog("rm_scrum_task");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:173:   <!mic.element:map:type!>!scan("rm_scrum_task");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:174:   writeHeading();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:175: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:176:   <!mic.element:map:type!>!scan("rm_backlog");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:177:   writeHeadingLog("rm_backlog");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:178:   <!mic.element:map:type!>!scan("rm_backlog");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:179:   writeHeading();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:180: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:181:   <!mic.element:map:type!>!scan("rm_orphan");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:182:   writeHeadingLog("rm_orphan");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:183:   <!mic.element:map:type!>!scan("rm_orphan");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:184:   writeHeading();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:185: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:186:   iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:187: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:188: Process the Sprints from the XML files extracted from RTC.
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:189: Format Sprint dates to yyyy-MM-dd HH:mm:ss.
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:190: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:191:   iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:192:   
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:193:   <!mic.element:sprintFile!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:194:   while (<!mic.element:sprintFile!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:195: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:196:     iSymbolTable.parseXml(<![mic.element:sprintFile]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:197: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:198:     iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:199: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:200: Sprint File: <![Project:Name]!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:201: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:202:     iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:203:     
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:204: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:205: mic.element:sprintFile = <![mic.element:sprintFile]!> : <![mic.element:sprintFile:number]!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:206: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:207:    
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:208:     if (!<![mic.element:sprintFile:noSprint]!>.equalsIgnoreCase("true")) {  // noSprint != true
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:209:     
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:210:     DateTimeFormatter lDTF1 = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:211:     DateTimeFormatter lDTF2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:212:     LocalDateTime lLDT1 = LocalDateTime.parse(<![Project:StartDate]!>, lDTF1);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:213:     <!StartDate!>!reset(lLDT1.format(lDTF2));
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:214: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:215:     LocalDateTime lLDT2 = LocalDateTime.parse(<![Project:FinishDate]!>, lDTF1);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:216:     <!FinishDate!>!reset(lLDT2.format(lDTF2));
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:217: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:218:     Duration lDuration = Duration.between(lLDT1, lLDT2);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:219:     Long lSeconds = lDuration.getSeconds();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:220:     <!Duration!>!reset(lSeconds);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:221: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:222:     <!mic.element:map:type!>!scan("rm_sprint");    
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:223: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:224:     writeData();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:225: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:226:     } // noSprint != True
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:227:    
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:228: // Get all the Sprint Stories and Tasks
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:229:  
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:230:     <!Project:Tasks!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:231:     <!Project:Tasks:Task!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:232:     while (<!Project:Tasks:Task!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:233: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:234: // Get the Extended Attribute for the Task ID
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:235: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:236:       <!Project:Tasks:Task:ExtendedAttribute!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:237:       while (<!Project:Tasks:Task:ExtendedAttribute!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:238: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:239:         if (<![Project:Tasks:Task:ExtendedAttribute:FieldID]!>.equals("188743767")) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:240:           <!Project:Tasks:Task:Id!>!set(<![Project:Tasks:Task:ExtendedAttribute:Value]!>);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:241:           continue;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:242:         }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:243:       }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:244: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:245: // Find Workitem
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:246:       if (<!Workitem:Id!>!scan(<![Project:Tasks:Task:Id]!>) == false) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:247:         continue;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:248:       }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:249: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:250:     iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:251: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:252:           String lLogColumn = <![Workitem:Summary]!>;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:253:           lLogColumn = "\"" + lLogColumn.replaceAll("\"", "\"\"") + "\"";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:254:           
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:255:           String lUsed = "";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:256:           if (<![Workitem:Used]!>.equalsIgnoreCase("true")) lUsed = "Used in Future Sprint";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:257: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:258: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:259: ,<![Project:Tasks:Task:Id]!>,<![Workitem:Type]!>,<![Workitem:Parent]!>,<!%lUsed!>,<!%lLogColumn!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:260: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:261:     iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:262: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:263: // Check if this has already been used.
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:264: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:265:       if (<![Workitem:Used]!>.equalsIgnoreCase("true")) continue;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:266:       <!Workitem:Used!>!reset("true");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:267: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:268:       <!mic.element:map:type!>!scan("rm_story");    
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:269:       if (<![Workitem:Type]!>.equalsIgnoreCase("Epic")) <!mic.element:map:type!>!scan("rm_epic");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:270:       if (<![Workitem:Type]!>.equalsIgnoreCase("Defect")) <!mic.element:map:type!>!scan("rm_defect");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:271:       if (<![Workitem:Type]!>.equalsIgnoreCase("Task")) <!mic.element:map:type!>!scan("rm_scrum_task");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:272: //      if (<![mic.element:sprintFile:noSprint]!>.equalsIgnoreCase("true")) <!mic.element:map:type!>!scan("rm_backlog");
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:273:        
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:274:       writeData();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:275:       
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:276:     }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:277:      
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:278:   <!Project!>!remove();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:279:   }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:280: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:281: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:282: Orphans
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:283: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:284: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:285:   iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:286: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:287: Orphans (Workitems not contained in a Sprint or Backlog)
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:288: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:289:   iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:290: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:291:   int lCount = 0;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:292:   int lTotal = 0;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:293: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:294:   <!mic.element:map:type!>!scan("rm_orphan");    
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:295:   
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:296:   <!Workitem!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:297:   while (<!Workitem!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:298: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:299:     lTotal++;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:300:     if (<![Workitem:Used]!>.equalsIgnoreCase("true")) continue;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:301: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:302:     {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:303:       iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:304: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:305:       String lLogColumn = <![Workitem:Summary]!>;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:306:       lLogColumn = "\"" + lLogColumn.replaceAll("\"", "\"\"") + "\"";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:307: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:308: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:309: ,<![Workitem:Id]!>,<![Workitem:Type]!>,<![Workitem:Parent]!>,<!%lLogColumn!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:310: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:311: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:312:       iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:313:     }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:314:          
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:315:     lCount++;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:316: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:317:     writeData();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:318:   }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:319: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:320: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:321: Total = <!%lTotal!> Orphans = <!%lCount!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:322: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:323: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:324: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:325: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:326: ********************************
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:327: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:328:   
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:329: }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:330: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:331: private void writeHeadingLog(String aName) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:332: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:333: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:334:       iOutputManager.openOutputFile(<![mic.element:mapFile]!>, true);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:335: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:336: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:337: *** Data Maps for <!%aName!> ***
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:338: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:339: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:340:       String lColumn = "";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:341:       String lComma = "";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:342: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:343:       <!mic.element:map:column!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:344:       while (<!mic.element:map:column!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:345: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:346:         if (<![mic.element:map:column:constant]!>.length() > 0) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:347: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:348:           lColumn = "\"" + <![mic.element:map:column:constant]!> + "\"";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:349: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:350:         } else if (<![mic.element:map:column:rule]!>.length() > 0) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:351: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:352:           if (<![mic.element:sprintFile:number]!>.length() > 0) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:353:             lColumn = "\"false\"";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:354:           } else {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:355:             lColumn = "\"true\"";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:356:           }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:357: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:358:         } else {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:359: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:360:           lColumn = <![mic.element:map:column:from]!>;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:361: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:362:         }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:363: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:364: <!%lColumn!>,<![mic.element:map:column:to]!>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:365: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:366:         lComma = ",";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:367:       }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:368: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:369: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:370: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:371:       iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:372: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:373: }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:374: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:375: private void writeHeading() {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:376: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:377:       iOutputManager.openOutputFile(<![mic.element:map:file]!>, false);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:378: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:379:       String lColumn = "";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:380:       String lComma = "";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:381: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:382:       <!mic.element:map:column!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:383:       while (<!mic.element:map:column!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:384: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:385:         lColumn = <![mic.element:map:column:to]!>;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:386: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:387: %><!%lComma!><!%lColumn!><%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:388: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:389:         lComma = ",";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:390:       }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:391: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:392: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:393: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:394:       iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:395: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:396: }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:397: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:398: private void writeData() {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:399: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:400:       iOutputManager.openOutputFile(<![mic.element:map:file]!>, true);
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:401: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:402:       String lColumn = "";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:403:       String lComma = "";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:404: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:405:       <!mic.element:map:column!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:406:       while (<!mic.element:map:column!>!next()) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:407: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:408:         if (<![mic.element:map:column:constant]!>.length() > 0) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:409: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:410:           lColumn = <![mic.element:map:column:constant]!>;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:411: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:412:         } else if (<![mic.element:map:column:rule]!>.length() > 0) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:413: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:414:           if (<![mic.element:sprintFile:number]!>.length() > 0) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:415:             lColumn = "\"false\"";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:416:           } else {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:417:             lColumn = "\"true\"";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:418:           }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:419: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:420:         } else {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:421: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:422:           lColumn = <![[mic.element:map:column:from]]!>;
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:423:           if (<![mic.element:map:column:string]!>.equalsIgnoreCase("true")) {
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:424:             lColumn = "\"" + lColumn.replaceAll("\"", "\"\"") + "\"";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:425:           }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:426: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:427:         }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:428: %><!%lComma!><!%lColumn!><%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:429:         lComma = ",";
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:430:       }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:431: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:432: %>
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:433: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:434: <%
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:435: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:436:       iOutputManager.closeOutputFile();
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:437: 
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:438: }
+C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.script:439: 
+C:\ArchitectsCompanion\jac2017\conf\micPostfix.script:1: }

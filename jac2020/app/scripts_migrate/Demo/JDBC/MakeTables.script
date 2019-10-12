@@ -1,0 +1,23 @@
+<%
+
+  DbConnection lDbConnection = symbolTable.getDbConnection();
+  lDbConnection.connect("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@hp5185:1521:asdc", "asdc", "asdcnt");
+
+  symbolTable.parseXml(<![$jac:path:scripts]\\Demo\\JDBC\\SqlStatements.xml!>);
+
+  <!statements:statement!>!resetIterator();
+  while (<!statements:statement!>!next()) {
+    executeStatement(lDbConnection, <![statements:statement]!>);
+  }
+
+}
+
+private void executeStatement(DbConnection aDbConnection, String aStatement) {
+
+  try {
+    Statement lStatement = aDbConnection.getConnection().createStatement();
+    lStatement.execute(aStatement);
+    lStatement.close();
+  } catch (Exception e) { System.err.println(e); }
+
+%>

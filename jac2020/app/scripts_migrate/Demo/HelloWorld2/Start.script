@@ -1,0 +1,40 @@
+***********************************
+***********************************
+***********************************
+
+
+Hello World1!
+
+
+***********************************
+***********************************
+***********************************
+<%
+
+  // Java code goes here
+  // Code is executed in a method of signature execute(String aArguments[])
+  // Other methods can be created and called...
+
+  execute2();
+
+  // Other scripts can be loaded and called...
+
+  <!aScript!>!loadScript("Demo.HelloWorld2.MyScript");
+  <!aScript!>!execMethod("execute");
+
+}
+
+private void execute2() {
+
+%>
+***********************************
+***********************************
+***********************************
+
+
+Hello World2!
+
+
+***********************************
+***********************************
+***********************************

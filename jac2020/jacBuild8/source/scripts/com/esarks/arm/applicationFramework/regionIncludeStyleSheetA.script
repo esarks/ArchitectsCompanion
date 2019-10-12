@@ -1,0 +1,12 @@
+<!-- enter regionIncludeStyleSheetA -->
+<style type="text/css">
+<%
+  <!$jac:loc:stylesheet:style!>!resetIterator();
+  while (<!$jac:loc:stylesheet:style!>!next()) {
+%>
+<![$jac:loc:stylesheet:style]!>
+<%
+  }
+%>
+</style>
+<!-- enter regionIncludeStyleSheetA -->

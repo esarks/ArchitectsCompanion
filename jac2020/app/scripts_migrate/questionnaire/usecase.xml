@@ -1,0 +1,163 @@
+<questionnaire code="usecase" sequence="1" title="Use Case Questionnaire" sequenceDescription="Version 1.0">
+
+  <question code="q1" sequence="1" sequenceOut="" text="Describe the events or circumstances which cause this action to commence.">
+    <response code="r1" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q1.1" sequence="1" sequenceOut="" text="Who is the primary actor performing this action?">
+    <response code="r1.1" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q1.2" sequence="1" sequenceOut="" text="What other primary or secondary actors are involved?">
+    <response code="r1.2" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q1.3" sequence="1" sequenceOut="" text="How is the actor notified to start the action?">
+    <response code="r1.3" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q1.5" sequence="1" sequenceOut="" text="When must the action commence?">
+    <response code="r1.5" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q1.6" sequence="1" sequenceOut="" text="What are the constraints for scheduling and completing the action?">
+    <response code="r1.6" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q1.7" sequence="1" sequenceOut="" text="What dependencies exist between this action and other actions?">
+    <response code="r1.7" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q1.8" sequence="1" sequenceOut="" text="What conditions or constraints must be satisified prior to commencing this action?">
+    <response code="r1.8" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q2" sequence="1" sequenceOut="" text="What actions are performed by the actor?">
+    <response code="r2" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q2.1" sequence="1" sequenceOut="" text="What are the step-by-step procedures or tasks performed by the actor?">
+    <response code="r2.1" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q2.2" sequence="1" sequenceOut="" text="What regulations, policies, or procedures are followed or referenced?">
+    <response code="r2.2" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q2.3" sequence="1" sequenceOut="" text="What calculations, schedules, computations, or algorithms are involved in completing the action?">
+    <response code="r2.3" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q2.4" sequence="1" sequenceOut="" text="What other actors are involved?">
+    <response code="r2.4" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q2.5" sequence="1" sequenceOut="" text="What computer systems (besides the target system) are involved?">
+    <response code="r2.5" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q2.6" sequence="1" sequenceOut="" text="What decisions are made by the actor?">
+    <response code="r2.6" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q2.7" sequence="1" sequenceOut="" text="What exceptional processing or error processing occurs?">
+    <response code="r2.7" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q3" sequence="1" sequenceOut="" text="What information does the actor contribute?">
+    <response code="r3" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q3.1" sequence="1" sequenceOut="" text="What knowledge or skill does the actor posses that's required to complete this action?">
+    <response code="r3.1" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q3.2" sequence="1" sequenceOut="" text="What does the actor need to know before completing this action?">
+    <response code="r3.2" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q3.3" sequence="1" sequenceOut="" text="How is the actor dependent on other actors to complete this operation?">
+    <response code="r3.3" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q3.4" sequence="1" sequenceOut="" text="What does the actor know about other actors or non-actors?">
+    <response code="r3.4" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q4" sequence="1" sequenceOut="" text="What information does the actor expect to receive?">
+    <response code="r4" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q4.1" sequence="1" sequenceOut="" text="What information does the actor receive from the computer system?">
+    <response code="r4.1" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q4.2" sequence="1" sequenceOut="" text="What information does the actor receive from the other actors?">
+    <response code="r4.2" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q5" sequence="1" sequenceOut="" text="What are the results of this operation?">
+    <response code="r5" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q5.1" sequence="1" sequenceOut="" text="What happens as a result of this operation?">
+    <response code="r5.1" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q5.2" sequence="1" sequenceOut="" text="How does data change internally or externally to the system?">
+    <response code="r5.2" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q5.3" sequence="1" sequenceOut="" text="What physical changes occur?">
+    <response code="r5.3" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q5.4" sequence="1" sequenceOut="" text="What previous values should be retained for historical reference?">
+    <response code="r5.4" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q6" sequence="1" sequenceOut="" text="What algorithms or processing considerations are involved?">
+    <response code="r6" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q6.1" sequence="1" sequenceOut="" text="What calculations are involved in the action?">
+    <response code="r6.1" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q6.2" sequence="1" sequenceOut="" text="What special processing (e.g. sorting, matching, schedules) is involved in the action?">
+    <response code="r6.2" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q6.3" sequence="1" sequenceOut="" text="How is data transformed or changed?">
+    <response code="r6.3" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q6.4" sequence="1" sequenceOut="" text="What data formats are used?">
+    <response code="r6.4" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q6.5" sequence="1" sequenceOut="" text="What are the sources for algorithms or schedules (e.g. regulating agencies, professional organizations)?">
+    <response code="r6.5" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q7" sequence="1" sequenceOut="" text="Should this action be recorded as an event?">
+    <response code="r7" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q7.1" sequence="1" sequenceOut="" text="Is this action time sensitive, or does it relate to other time sensitive actions?">
+    <response code="r7.1" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q7.2" sequence="1" sequenceOut="" text="Does this action 'start the clock'?">
+    <response code="r7.2" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q7.3" sequence="1" sequenceOut="" text="Would the recording of this action assist in unrelated actions?">
+    <response code="r7.3" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+  <question code="q7.4" sequence="1" sequenceOut="" text="Do performance constraints apply which should be measured for conformance?">
+    <response code="r7.4" sequence="1" sequenceOut="" order="1" text=""/>
+  </question>
+
+</questionnaire>

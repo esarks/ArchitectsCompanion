@@ -1,0 +1,199 @@
+
+public void execute() {
+
+%>EHRM Hello World! v20190816a
+<%
+
+  iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+
+  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.txt", false);
+
+boolean lPrint = false;
+
+
+  <!business:pdfs:pdf!>!resetIterator();
+  while (<!business:pdfs:pdf!>!next()) {
+
+try {
+
+String fileName = <![business:pdfs:folder]!> + "\\" + <![business:pdfs:pdf:name]!>;
+File file = new File(fileName);
+FileReader fr = new FileReader(file);
+BufferedReader br = new BufferedReader(fr);
+String line;
+
+%>
+****** <!%fileName!>
+<%  
+
+while((line = br.readLine()) != null){
+
+  if (line.startsWith("Comments:")) lPrint = true;
+  if (line.startsWith("Work Step")) lPrint = false;
+  if (line.startsWith("System")) lPrint = false;
+  if (line.startsWith("Decision")) lPrint = false;
+  if (line.startsWith("Start/Stop")) lPrint = false;
+  if (line.startsWith("Off Page Reference")) lPrint = false;
+  if (line.startsWith("Document")) lPrint = false;
+  if (line.startsWith("© Cerner Corporation.")) lPrint = false;
+  if (line.startsWith("Swim Lane/Role")) lPrint = false;
+if (lPrint) {
+%>
+<!%line!>
+<%
+}
+   
+}
+
+} catch (IOException lException) 
+{
+%>
+<!%lException!>
+<%
+}
+
+}
+
+  iOutputManager.closeOutputFile();
+
+}
+
+public void execute2() {
+
+%>EHRM Hello World! v20190816a
+<%
+
+  iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+
+  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy1.csv", false);
+
+  <!business!>!resetIterator();
+  while (<!business!>!next()) {
+
+    <!business:wfreport:wf!>!resetIterator();
+    while (<!business:wfreport:wf!>!next()) {
+
+%>
+<![business:wfreport:wf:name]!>,<![business:wfds:[business:wfreport:wf:name]:description]!>
+<%
+
+      <!business:wfreport:wf:subflow!>!resetIterator();
+      while (<!business:wfreport:wf:subflow!>!next()) {
+%>
+,SUBFLOW,<![business:wfreport:wf:subflow:name]!>,<![business:wfds:[business:wfreport:wf:subflow:name]:description]!>
+<%
+      }
+
+    }
+  }
+
+  iOutputManager.closeOutputFile();
+}
+
+public void execute1() {
+
+%>EHRM Hello World! v20190816a
+<%
+
+  iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+
+  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.csv", false);
+
+  int lRow = 0;
+  Integer lWorkflow = 0;
+  Boolean lIncludeDetail = true;
+  
+%>
+,,,,,,Wf Designer,Interfaces
+<%    
+  <!business!>!resetIterator();
+  while (<!business!>!next()) {
+
+    <!business:major!>!resetIterator();
+    while (<!business:major!>!next()) {
+    lRow++;
+%>
+<![business:major:name]!>,,,,,,,,,group,<!%lRow!>
+<%
+
+      <!business:major:workflow!>!resetIterator();
+
+      while (<!business:major:workflow!>!next()) {
+        int lWorkflowSize = <!business:major:workflow:wfdesigner!>!size();
+        int lProdSize = <!business:major:workflow:product!>!size();
+        int lInterfaceSize = <!business:major:workflow:interface!>!size();
+        lRow++;
+        lWorkflow++;
+
+ 
+%>
+<![business:major:name]!>,<![business:major:workflow:name]!>,#<!%lWorkflow!>: # Wf Designer = <!%lWorkflowSize!> Page = <![business:major:workflow:page]!>,,,,<![business:major:workflow:date1]!>,<![business:major:workflow:date2]!>,,workflow,<!%lRow!>
+<%
+
+        <!business:major:workflow:wfdesigner!>!resetIterator();
+        while (<!business:major:workflow:wfdesigner!>!next()) {
+          lRow++;
+          String lWfd = <![business:wfds:[business:major:workflow:wfdesigner:name]:description]!>;
+
+%>
+<![business:major:name]!>,,Wf Designer = <!%lWfd!>,Reviewed = <![business:wfds:[business:major:workflow:wfdesigner:name]:reviewed]!>,Phase = <![business:phases:[business:wfds:[business:major:workflow:wfdesigner:name]:phase]:description]!>,,,,,wfdesigner,<!%lRow!>
+<%
+
+          <!business:wfds:[business:major:workflow:wfdesigner:name]:product!>!resetIterator();
+          while (<!business:wfds:[business:major:workflow:wfdesigner:name]:product!>!next()) {
+            lRow++;
+/*
+<![business:major:name]!>,,Product = <![business:products:[business:wfds:[business:major:workflow:wfdesigner:name]:product:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:product:description]!>,Reviewed = <![business:major:workflow:product:reviewed]!>,Phase = <![business:phases:[business:major:workflow:product:phase]:description]!>,,,,,product,<!%lRow!>
+*/
+%>
+<![business:major:name]!>,,Product = <![business:products:[business:wfds:[business:major:workflow:wfdesigner:name]:product:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:product:description]!>,,,,,,,product,<!%lRow!>
+<%
+          }
+
+
+          <!business:wfds:[business:major:workflow:wfdesigner:name]:interface!>!resetIterator();
+          while (<!business:wfds:[business:major:workflow:wfdesigner:name]:interface!>!next()) {
+            lRow++;
+/*
+<![business:major:name]!>,,Interface = <![business:interfaces:[business:wfds:[business:major:workflow:wfdesigner:name]:interface:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:interface:description]!>,Reviewed = <![business:major:workflow:interface:reviewed]!>,Phase = <![business:phases:[business:major:workflow:interface:phase]:description]!>,,,,,interface,<!%lRow!>
+*/
+%>
+<![business:major:name]!>,,Interface = <![business:interfaces:[business:wfds:[business:major:workflow:wfdesigner:name]:interface:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:interface:description]!>,,,,,,,interface,<!%lRow!>
+<%
+          }
+
+        }
+
+        <!business:major:workflow:product!>!resetIterator();
+        while (<!business:major:workflow:product!>!next()) {
+          lRow++;
+          String lProduct = <![business:products:[business:major:workflow:product:name]:description]!> + " <" + <![business:products:[business:major:workflow:product:name]:owner]!> + ">";
+
+%>
+<![business:major:name]!>,,Product = <!%lProduct!>,Reviewed = <![business:major:workflow:product:reviewed]!>,Phase = <![business:phases:[business:major:workflow:product:phase]:description]!>,,,,,product,<!%lRow!>
+<%
+
+        }
+
+        <!business:major:workflow:interface!>!resetIterator();
+        while (<!business:major:workflow:interface!>!next()) {
+          lRow++;
+          String lInterface = <![business:interfaces:[business:major:workflow:interface:name]:description]!>;
+
+%>
+<![business:major:name]!>,,Interface = <!%lInterface!>,Reviewed = <![business:major:workflow:interface:reviewed]!>,Phase = <![business:phases:[business:major:workflow:interface:phase]:description]!>,,,,,interface,<!%lRow!>
+<%
+        }
+
+      }
+
+    }
+
+  }
+
+  iOutputManager.closeOutputFile();
+
+
+
+}
+

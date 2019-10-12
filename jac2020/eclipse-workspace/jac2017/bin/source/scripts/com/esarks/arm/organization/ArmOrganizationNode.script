@@ -1,0 +1,731 @@
+//$Section=License$Preserve=no
+//  Generated at 2005.12.11 03:04:33.312 PM EST by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+//  XML Definition: com.esarks.arm.organization.ArmOrganization_Ddl
+//     Module Name: com.esarks.arm.organization.ArmOrganizationNode
+
+//$Section=ChangeLog$Preserve=yes
+
+/* ========================================================================= *
+   Contributor        Description
+   ------------------ ------------------------------------------------------
+                      Author
+
+ * ========================================================================= */
+
+//$Section=Class$Preserve=no
+
+package com.esarks.arm.organization;
+
+/**
+ *
+ */
+
+//----------------------------------------------------------------------------
+// This section is for generated import delcarations.
+//----------------------------------------------------------------------------
+// Additional Import Declarations
+import com.esarks.jac.*;
+import com.esarks.mic.*;
+import java.util.*;
+import java.lang.reflect.*;
+import java.io.*;
+import java.text.*;
+import java.net.*;
+import java.sql.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+//$Section=CustomDeclare$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section is for custom declarations.
+//----------------------------------------------------------------------------
+
+//$Section=CustomDeclare$Preserve=no
+
+public class ArmOrganizationNode extends com.esarks.jac.Jeo {
+
+//----------------------------------------------------------------------------
+// This section is for generated declarations.
+//----------------------------------------------------------------------------
+// Attributes
+
+//Id  Type: long  Size:   Nullable: false
+    private PropertyValue iId = new PropertyValue();
+    private boolean iIdIsNullable = false;
+    private boolean iIdUpdate = false;
+    private int iIdSize = -1;
+//Parent  Type: long  Size:   Nullable: true
+    private PropertyValue iParent = new PropertyValue();
+    private boolean iParentIsNullable = true;
+    private boolean iParentUpdate = false;
+    private int iParentSize = -1;
+//Name  Type: string  Size: 64  Nullable: false
+    private PropertyValue iName = new PropertyValue();
+    private boolean iNameIsNullable = false;
+    private boolean iNameUpdate = false;
+    private int iNameSize = 64;
+
+//$Section=CustomClassDeclare$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section is for custom class declarations.
+//----------------------------------------------------------------------------
+
+//$Section=CustomClassDeclare$Preserve=no
+
+//----------------------------------------------------------------------------
+// Generated constructors.
+//----------------------------------------------------------------------------
+
+/**
+ * Default constructor.
+ */
+    public ArmOrganizationNode() {
+      super("com.esarks.arm.organization.ArmOrganizationNode");
+//$Section=DefaultConstructor$Preserve=yes
+//$Section=DefaultConstructor$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmOrganizationNode( com.esarks.jac.JeoFactory aJeoFactory ) {
+      super(aJeoFactory);
+      init("com.esarks.arm.organization.ArmOrganizationNode");
+//$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=yes
+//$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmOrganizationNode( Script aScript ) {
+      super("com.esarks.arm.organization.ArmOrganizationNode", aScript);
+//$Section=Operation$Jeo( String aScript )$Preserve=yes
+//$Section=Operation$Jeo( String aScript )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmOrganizationNode( String aTypeName ) {
+      super("com.esarks.arm.organization.ArmOrganizationNode", aTypeName);
+//$Section=Operation$Jeo( String aTypeName )$Preserve=yes
+//$Section=Operation$Jeo( String aTypeName )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmOrganizationNode( String aTypeName, Script aScript ) {
+      super("com.esarks.arm.organization.ArmOrganizationNode", aTypeName, aScript);
+//$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=yes
+//$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Default finalize is generated.
+//----------------------------------------------------------------------------
+
+/**
+ * Default finalize.
+ */
+    public void finalize() {
+    	freeResources();
+//$Section=DefaultDestructor$Preserve=yes
+//$Section=DefaultDestructor$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Default freeResources is generated.
+//----------------------------------------------------------------------------
+
+/**
+ * Default freeResources.
+ */
+    public void freeResources() {
+    	super.freeResources();
+    iId = null;
+    iParent = null;
+    iName = null;
+//$Section=DefaultFreeResources$Preserve=yes
+//$Section=DefaultFreeResources$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// This section is for custom operations.
+//----------------------------------------------------------------------------
+//$Section=CustomOperations$Preserve=yes
+//$Section=CustomOperations$Preserve=no
+
+    public void init() {
+    	super.init();
+//Id
+    iId = new PropertyValue();
+    iIdUpdate = false;
+//Parent
+    iParent = new PropertyValue();
+    iParentUpdate = false;
+//Name
+    iName = new PropertyValue();
+    iNameUpdate = false;
+    }
+
+//----------------------------------------------------------------------------
+// This section is for mapping views to tables.
+//----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
+// This section is for mapping from result sets.
+//----------------------------------------------------------------------------
+
+  public void mapFromResultSet( ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+//$Section=Operation$mapFromResultSet$Preserve=no
+    mapFromResultSetTable("*", aResultSet, aTrim, aSpacesToNull);
+//$Section=Operation$mapFromResultSet$Preserve=no
+  }
+
+  public void mapFromResultSetTable( String aTable, ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+    // DEPRECATED METHOD!!!!
+    // Use of Trim and SpacesToNull is not functional.
+    mapFromResultSetTable(aTable, aResultSet);
+  }
+
+  public void mapFromResultSetTable( String aTable, ResultSet aResultSet) {
+//$Section=Operation$mapFromResultSetTable$Preserve=no
+//    String lValue = null;
+      if (aTable.equals("*") || aTable.equals("ArmOrganizationNode")) {
+// Id in ArmOrganizationNode
+        try {
+          long lValue = aResultSet.getLong("id");
+          if (aResultSet.wasNull()) {
+            setIdNull();
+          } else {
+            setId(lValue);
+          }
+        } catch (Throwable e) {}
+// Parent in ArmOrganizationNode
+        try {
+          long lValue = aResultSet.getLong("parent");
+          if (aResultSet.wasNull()) {
+            setParentNull();
+          } else {
+            setParent(lValue);
+          }
+        } catch (Throwable e) {}
+// Name in ArmOrganizationNode
+        try {
+          String lValue = aResultSet.getString("name");
+          if (aResultSet.wasNull()) {
+            setNameNull();
+          } else {
+            setName(lValue);
+          }
+        } catch (Throwable e) {}
+      }
+//$Section=Operation$mapFromResultSetTable$Preserve=no
+  }
+//----------------------------------------------------------------------------
+// This section is for mapping from and to Jeo's.
+//----------------------------------------------------------------------------
+
+  public void mapToJeo( Jeo aJeo) {
+//$Section=Operation$mapFromJeo$Preserve=no
+    String lType = null;
+    PropertyValue lValue = null;
+// Id
+      try {
+        lValue = aJeo.getPropertyValueByName("id");
+        if (lValue != null) {
+          lType = aJeo.getTypeByName("id");
+          if (!isIdNull()) {
+            lValue.reset(lType, getIdPropertyValue().toString());
+          } else {
+            lValue.reset("null", "");
+          }
+        }
+      } catch(Throwable e) {}
+// Parent
+      try {
+        lValue = aJeo.getPropertyValueByName("parent");
+        if (lValue != null) {
+          lType = aJeo.getTypeByName("parent");
+          if (!isParentNull()) {
+            lValue.reset(lType, getParentPropertyValue().toString());
+          } else {
+            lValue.reset("null", "");
+          }
+        }
+      } catch(Throwable e) {}
+// Name
+      try {
+        lValue = aJeo.getPropertyValueByName("name");
+        if (lValue != null) {
+          lType = aJeo.getTypeByName("name");
+          if (!isNameNull()) {
+            lValue.reset(lType, getNamePropertyValue().toString());
+          } else {
+            lValue.reset("null", "");
+          }
+        }
+      } catch(Throwable e) {}
+//$Section=Operation$mapToJeo$Preserve=no
+  }
+
+  public void mapFromJeo( Jeo aJeo) {
+//$Section=Operation$mapFromJeo$Preserve=no
+    String lType = null;
+    PropertyValue lValue = null;
+// Id
+      try {
+        lValue = aJeo.getPropertyValueByName("id");
+        if (lValue != null) {
+          setId(lValue);
+        }
+      } catch(Throwable e) {}
+// Parent
+      try {
+        lValue = aJeo.getPropertyValueByName("parent");
+        if (lValue != null) {
+          setParent(lValue);
+        }
+      } catch(Throwable e) {}
+// Name
+      try {
+        lValue = aJeo.getPropertyValueByName("name");
+        if (lValue != null) {
+          setName(lValue);
+        }
+      } catch(Throwable e) {}
+//$Section=Operation$mapFromJeo$Preserve=no
+  }
+
+//----------------------------------------------------------------------------
+// This section is for the get by string name related methods.
+//----------------------------------------------------------------------------
+
+  public String getCasedName ( String aAttributeName) {
+//$Section=Operation$getCasedName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("getAttributeName_" + aAttributeName.toLowerCase(), null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getCasedName$Preserve=no
+  }
+
+  public PropertyValue getPropertyValueByName ( String aAttributeName) {
+//$Section=Operation$getPropertyValueByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "PropertyValue", null);
+        return (PropertyValue) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getPropertyValueByName$Preserve=no
+  }
+
+  public void setStringValueByName ( String aAttributeName, String aValue) {
+//$Section=Operation$setStringValueByName$Preserve=no
+
+    try {
+        Class lClassParams[] = new Class[]{"".getClass()};
+        Object lArguments[] = new Object[] {aValue};
+        Method lMethod = this.getClass().getMethod("set" + getCasedName(aAttributeName), lClassParams);
+        lMethod.invoke(this, lArguments);
+    } catch (Throwable e) {
+        //System.out.println(e);
+    }
+
+//$Section=Operation$setStringValueByName$Preserve=no
+  }
+
+  public String getTypeByName ( String aAttributeName) {
+//$Section=Operation$getTypeByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueType", null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getTypeByName$Preserve=no
+  }
+
+  public String getStereotypeByName ( String aAttributeName) {
+//$Section=Operation$getStereotypeByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueStereotype", null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getStereotypeByName$Preserve=no
+  }
+
+  public String getNameByIndex ( int aIndex) {
+//$Section=Operation$getNameByIndex$Preserve=no
+
+    switch(aIndex) {
+      case 1: return "id";
+      case 2: return "parent";
+      case 3: return "name";
+    }
+    return null;
+//$Section=Operation$getNameByIndex$Preserve=no
+  }
+
+  public String getXml ( ) {
+//$Section=Operation$getXml$Preserve=no
+
+    StringBuffer lXml = new StringBuffer("<jeo name='com.esarks.arm.organization.ArmOrganizationNode'>");
+    String lCdataBegin = "<" + "!" + "[CDATA[";
+// Field: Id
+    lXml.append("<field name='Id' type='long'>");
+    lXml.append(getIdPropertyValue().toString()).append("</field>");
+// Field: Parent
+    lXml.append("<field name='Parent' type='long'>");
+    lXml.append(getParentPropertyValue().toString()).append("</field>");
+// Field: Name
+    lXml.append("<field name='Name' type='string'>");
+    lXml.append(lCdataBegin).append(getNamePropertyValue().toString()).append("]]>").append("</field>");
+    lXml.append("</jeo>");
+    return lXml.toString();
+
+//$Section=Operation$getXml$Preserve=no
+  }
+
+//----------------------------------------------------------------------------
+// This section is for generated attribute accessor methods.
+//----------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------
+// Id
+//----------------------------------------------------------------------------
+    public long getId() {
+//$Section=Attribute get$Id$Preserve=no
+        return iId.getValueLong();
+//$Section=Attribute get$Id$Preserve=no
+    }
+    public long getId(long aValue) {
+//$Section=Attribute get$Id(long)$Preserve=no
+      if (isIdNull()) return aValue;
+      return iId.getValueLong();
+//$Section=Attribute get$Id(long)$Preserve=no
+    }
+    public void setId(long aValue) {
+//$Section=Attribute set$Id$Preserve=no
+        iId.reset(aValue);
+//$Section=Attribute set$Id$Preserve=no
+    }
+    public void setId(PropertyValue aValue) {
+//$Section=Attribute setPropertyValue$Id$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setIdNull();
+          return;
+        }
+        setId(aValue.toString());
+//$Section=Attribute setPropertyValue$Id$Preserve=no
+    }
+    public void setId(PropertyValue aValue, String aFormat) {
+//$Section=Attribute setPropertyValueFormat$Id$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setIdNull();
+          return;
+        }
+        setId(aValue.toString(), aFormat);
+//$Section=Attribute setPropertyValueFormat$Id$Preserve=no
+    }
+    public void setId(String aValue) {
+//$Section=Attribute setAsString$Id$Preserve=no
+        iId.reset("long", aValue);
+//$Section=Attribute setAsString$Id$Preserve=no
+    }
+    public void setId(String aValue, String aType) {
+//$Section=Attribute setAsStringType$Id$Preserve=no
+        iId.reset(aType, aValue);
+//$Section=Attribute setAsStringType$Id$Preserve=no
+    }
+    public PropertyValue getIdPropertyValue() {
+//$Section=Attribute getPropertyValue$Id$Preserve=no
+        return iId;
+//$Section=Attribute getPropertyValue$Id$Preserve=no
+    }
+    public String getAttributeName_id() {
+//$Section=Attribute getAttributeName$id$Preserve=no
+        return "Id";
+//$Section=Attribute getAttributeName_$id$Preserve=no
+    }
+    public int sizeId() {
+//$Section=Attribute size$Id$Preserve=no
+        return iIdSize;
+//$Section=Attribute size$Id$Preserve=no
+    }
+    public boolean isIdNullable() {
+//$Section=Attribute isNullable$Id$Preserve=no
+        return iIdIsNullable;
+//$Section=Attribute isNullable$Id$Preserve=no
+    }
+    public boolean isIdNull() {
+//$Section=Attribute isNull$Id$Preserve=no
+        if (iId.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+        return false;
+//$Section=Attribute isNull$Id$Preserve=no
+    }
+    public void setIdNull() {
+//$Section=Attribute setNull$Id$Preserve=no
+        iId.reset();
+//$Section=Attribute setNull$Id$Preserve=no
+    }
+    public void setIdSpaceToNull() {
+//$Section=Attribute setSpaceToNull$Id$Preserve=no
+        if (getIdPropertyValue().toString().trim().equals("")) setIdNull();
+//$Section=Attribute setSpaceToNull$Id$Preserve=no
+    }
+    public void setIdUpdate(boolean aUpdate) {
+//$Section=Attribute setUpdate$Id$Preserve=no
+        iIdUpdate = aUpdate;
+//$Section=Attribute setUpdate$Id$Preserve=no
+    }
+    public boolean getIdUpdate() {
+//$Section=Attribute getUpdate$Id$Preserve=no
+        return iIdUpdate;
+//$Section=Attribute getUpdate$Id$Preserve=no
+    }
+    public String getIdValueType() {
+//$Section=Attribute getValueType$Id$Preserve=no
+        return "long";
+//$Section=Attribute getValueType$Id$Preserve=no
+    }
+    public String getIdValueStereotype() {
+//$Section=Attribute getValueStereotype$Id$Preserve=no
+        return "";
+//$Section=Attribute getValueStereotype$Id$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Parent
+//----------------------------------------------------------------------------
+    public long getParent() {
+//$Section=Attribute get$Parent$Preserve=no
+        return iParent.getValueLong();
+//$Section=Attribute get$Parent$Preserve=no
+    }
+    public long getParent(long aValue) {
+//$Section=Attribute get$Parent(long)$Preserve=no
+      if (isParentNull()) return aValue;
+      return iParent.getValueLong();
+//$Section=Attribute get$Parent(long)$Preserve=no
+    }
+    public void setParent(long aValue) {
+//$Section=Attribute set$Parent$Preserve=no
+        iParent.reset(aValue);
+//$Section=Attribute set$Parent$Preserve=no
+    }
+    public void setParent(PropertyValue aValue) {
+//$Section=Attribute setPropertyValue$Parent$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setParentNull();
+          return;
+        }
+        setParent(aValue.toString());
+//$Section=Attribute setPropertyValue$Parent$Preserve=no
+    }
+    public void setParent(PropertyValue aValue, String aFormat) {
+//$Section=Attribute setPropertyValueFormat$Parent$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setParentNull();
+          return;
+        }
+        setParent(aValue.toString(), aFormat);
+//$Section=Attribute setPropertyValueFormat$Parent$Preserve=no
+    }
+    public void setParent(String aValue) {
+//$Section=Attribute setAsString$Parent$Preserve=no
+        iParent.reset("long", aValue);
+//$Section=Attribute setAsString$Parent$Preserve=no
+    }
+    public void setParent(String aValue, String aType) {
+//$Section=Attribute setAsStringType$Parent$Preserve=no
+        iParent.reset(aType, aValue);
+//$Section=Attribute setAsStringType$Parent$Preserve=no
+    }
+    public PropertyValue getParentPropertyValue() {
+//$Section=Attribute getPropertyValue$Parent$Preserve=no
+        return iParent;
+//$Section=Attribute getPropertyValue$Parent$Preserve=no
+    }
+    public String getAttributeName_parent() {
+//$Section=Attribute getAttributeName$parent$Preserve=no
+        return "Parent";
+//$Section=Attribute getAttributeName_$parent$Preserve=no
+    }
+    public int sizeParent() {
+//$Section=Attribute size$Parent$Preserve=no
+        return iParentSize;
+//$Section=Attribute size$Parent$Preserve=no
+    }
+    public boolean isParentNullable() {
+//$Section=Attribute isNullable$Parent$Preserve=no
+        return iParentIsNullable;
+//$Section=Attribute isNullable$Parent$Preserve=no
+    }
+    public boolean isParentNull() {
+//$Section=Attribute isNull$Parent$Preserve=no
+        if (iParent.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+        return false;
+//$Section=Attribute isNull$Parent$Preserve=no
+    }
+    public void setParentNull() {
+//$Section=Attribute setNull$Parent$Preserve=no
+        iParent.reset();
+//$Section=Attribute setNull$Parent$Preserve=no
+    }
+    public void setParentSpaceToNull() {
+//$Section=Attribute setSpaceToNull$Parent$Preserve=no
+        if (getParentPropertyValue().toString().trim().equals("")) setParentNull();
+//$Section=Attribute setSpaceToNull$Parent$Preserve=no
+    }
+    public void setParentUpdate(boolean aUpdate) {
+//$Section=Attribute setUpdate$Parent$Preserve=no
+        iParentUpdate = aUpdate;
+//$Section=Attribute setUpdate$Parent$Preserve=no
+    }
+    public boolean getParentUpdate() {
+//$Section=Attribute getUpdate$Parent$Preserve=no
+        return iParentUpdate;
+//$Section=Attribute getUpdate$Parent$Preserve=no
+    }
+    public String getParentValueType() {
+//$Section=Attribute getValueType$Parent$Preserve=no
+        return "long";
+//$Section=Attribute getValueType$Parent$Preserve=no
+    }
+    public String getParentValueStereotype() {
+//$Section=Attribute getValueStereotype$Parent$Preserve=no
+        return "";
+//$Section=Attribute getValueStereotype$Parent$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Name
+//----------------------------------------------------------------------------
+    public String getName() {
+//$Section=Attribute get$Name$Preserve=no
+        return iName.getValueString();
+//$Section=Attribute get$Name$Preserve=no
+    }
+    public String getName(String aValue) {
+//$Section=Attribute get$Name(String)$Preserve=no
+      if (isNameNull()) return aValue;
+      return iName.getValueString();
+//$Section=Attribute get$Name(String)$Preserve=no
+    }
+    public void setName(String aValue) {
+//$Section=Attribute set$Name$Preserve=no
+        iName.reset(aValue);
+//$Section=Attribute set$Name$Preserve=no
+    }
+    public void setName(PropertyValue aValue) {
+//$Section=Attribute setPropertyValue$Name$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setNameNull();
+          return;
+        }
+        setName(aValue.toString());
+//$Section=Attribute setPropertyValue$Name$Preserve=no
+    }
+    public void setName(PropertyValue aValue, String aFormat) {
+//$Section=Attribute setPropertyValueFormat$Name$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setNameNull();
+          return;
+        }
+        setName(aValue.toString(), aFormat);
+//$Section=Attribute setPropertyValueFormat$Name$Preserve=no
+    }
+    public void setName(String aValue, String aType) {
+//$Section=Attribute setAsStringType$Name$Preserve=no
+        iName.reset(aType, aValue);
+//$Section=Attribute setAsStringType$Name$Preserve=no
+    }
+    public PropertyValue getNamePropertyValue() {
+//$Section=Attribute getPropertyValue$Name$Preserve=no
+        return iName;
+//$Section=Attribute getPropertyValue$Name$Preserve=no
+    }
+    public String getAttributeName_name() {
+//$Section=Attribute getAttributeName$name$Preserve=no
+        return "Name";
+//$Section=Attribute getAttributeName_$name$Preserve=no
+    }
+    public int sizeName() {
+//$Section=Attribute size$Name$Preserve=no
+        return iNameSize;
+//$Section=Attribute size$Name$Preserve=no
+    }
+    public boolean isNameNullable() {
+//$Section=Attribute isNullable$Name$Preserve=no
+        return iNameIsNullable;
+//$Section=Attribute isNullable$Name$Preserve=no
+    }
+    public boolean isNameNull() {
+//$Section=Attribute isNull$Name$Preserve=no
+        if (iName.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+        return false;
+//$Section=Attribute isNull$Name$Preserve=no
+    }
+    public void setNameNull() {
+//$Section=Attribute setNull$Name$Preserve=no
+        iName.reset();
+//$Section=Attribute setNull$Name$Preserve=no
+    }
+    public void setNameSpaceToNull() {
+//$Section=Attribute setSpaceToNull$Name$Preserve=no
+        if (getNamePropertyValue().toString().trim().equals("")) setNameNull();
+//$Section=Attribute setSpaceToNull$Name$Preserve=no
+    }
+    public void setNameUpdate(boolean aUpdate) {
+//$Section=Attribute setUpdate$Name$Preserve=no
+        iNameUpdate = aUpdate;
+//$Section=Attribute setUpdate$Name$Preserve=no
+    }
+    public boolean getNameUpdate() {
+//$Section=Attribute getUpdate$Name$Preserve=no
+        return iNameUpdate;
+//$Section=Attribute getUpdate$Name$Preserve=no
+    }
+    public String getNameValueType() {
+//$Section=Attribute getValueType$Name$Preserve=no
+        return "string";
+//$Section=Attribute getValueType$Name$Preserve=no
+    }
+    public String getNameValueStereotype() {
+//$Section=Attribute getValueStereotype$Name$Preserve=no
+        return "";
+//$Section=Attribute getValueStereotype$Name$Preserve=no
+    }
+
+
+//$Section=Deleted$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section contains orphaned code from deleted operations.
+//----------------------------------------------------------------------------
+
+//$Section=Deleted$Preserve=no
+
+//End of class---------------
+}

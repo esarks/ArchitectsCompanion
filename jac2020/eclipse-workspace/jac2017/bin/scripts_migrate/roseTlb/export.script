@@ -1,0 +1,50 @@
+<%
+
+    symbolTable.parseXml(<![$jac:path:home]\\temp\\ACClassExport.xml!>);
+
+    outputManager.openOutputFile(<![$jac:path:home][$jac:fileSeparator]temp[$jac:fileSeparator]RoseTlb.xml!>, true);
+
+%>
+<RoseTlb>
+<%
+    <!SelectedClasses:SelectedClass!>!resetIterator();
+    while (<!SelectedClasses:SelectedClass!>!next()) {
+
+      symbolTable.parseXml(<![$jac:path:home]\\temp\\Class[SelectedClasses:SelectedClass].xml!>);
+
+      if (<!Class:UniqueId!>!scan(<![SelectedClasses:SelectedClass]!>) == true) {
+
+        <!Class!>!alias("currentClass");
+%>
+  <Class Name="<![Class:Name]!>">
+<%
+        <!Class:Attribute!>!resetIterator();
+        while (<!Class:Attribute!>!next()) {      
+%>
+    <Attribute Name="<![Class:Attribute:Name]!>" Type="<![Class:Attribute:Type]!>"/>
+<%        
+        }
+
+        <!Class:Operation!>!resetIterator();
+        while (<!Class:Operation!>!next()) {
+          if (<!Class:Operation:Parameter!>!size() == 0 &&
+              (<![Class:Operation:ReturnType]!>.compareTo("void") != 0 &&
+               <![Class:Operation:ReturnType]!>.compareTo("IDispatch*") != 0)) {
+%>
+    <Operation Name="<![Class:Operation:Name]!>" Return="<![Class:Operation:ReturnType]!>"/>
+<%
+          }
+        }        
+      } else {
+      }
+%>
+  </Class>
+<%
+    }
+%>
+</RoseTlb>
+<%
+
+  outputManager.closeOutputFile();
+
+%>

@@ -1,0 +1,3 @@
+<jacrun>
+  <script name="com.esarks.jac.make.MakeAll" method="execute" argument="com.esarks.jac.make.MakeJac" argument2="true" />
+</jacrun>

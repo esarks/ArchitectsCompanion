@@ -1,0 +1,52 @@
+extends com.esarks.mic.MicScriptHelper
+source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micImport.script
+source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micPrefix.script
+source [$jac:path:scripts][$jac:fileSeparator][$jac:script:path][$jac:fileSeparator][$jac:script].script
+source [$jac:path:home][$jac:fileSeparator]conf[$jac:fileSeparator]micPostfix.script
+end
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="execute" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>
+
+  // Router's the first micScriptHelper to get initiated...so doesn't go through normal initialization.
+  iScriptFullName = "com.esarks.arm.applicationFramework.Router";
+  
+  String lRouterPackage = <!$jac:router.package!>!getValueString();
+  String lRouterLoc = <!$jac:router.loc!>!getValueString();
+
+System.out.println("lRouterPackage=" + lRouterPackage);
+System.out.println("lRouterLoc=" + lRouterLoc);
+
+  if (iMicLog.test(Log._APP)) {
+    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!RouterPackage=" + lRouterPackage);
+    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!RouterLoc=" + lRouterLoc);
+  }
+  
+  XmlSchemaFactory lXmlSchemaFactory = iSymbolTable.getXmlSchemaFactory();
+  if (lXmlSchemaFactory.getXmlSchemaElement("com.esarks.arm.schemas.router.root") == null) {
+    loadXmlSchema("com.esarks.arm.schemas.router", path(lRouterPackage + "Schema") + ".xml");
+    parseXmlSchema(lRouterPackage);
+  }
+
+  boolean lScan = <!com.esarks.arm.schemas.router.root!>!scan("loc", lRouterLoc);
+
+System.out.println("scan " + lRouterLoc + "=" + lScan);
+System.out.println("script=" + <![com.esarks.arm.schemas.router.root:loc:template:script]!>);
+  
+  if (iMicLog.test(Log._APP)) {
+    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Scan=" + lScan);
+    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!script=" + <![com.esarks.arm.schemas.router.root:loc:template:script]!>);
+  }
+
+  if (<![com.esarks.arm.schemas.router.root:loc:template:method]!>.compareTo("") == 0) {
+    iScript.execMethod(loadScript(<![com.esarks.arm.schemas.router.root:loc:template:script]!>, lRouterLoc), "execute");
+  } else {
+    iScript.execMethod(loadScript(<![com.esarks.arm.schemas.router.root:loc:template:script]!>, lRouterLoc), <![com.esarks.arm.schemas.router.root:loc:template:method]!>);
+  }
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>

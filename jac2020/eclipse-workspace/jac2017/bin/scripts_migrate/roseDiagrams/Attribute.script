@@ -1,0 +1,18 @@
+{\pard\fs22 {\i Attribute: <![Class:Attribute:Name]!>}\par}
+\par
+{\pard\f0\fs18\li360 Type: <![Class:Attribute:Type]!>\par}
+<%
+
+  <!Class:Attribute:Documentation!>!resetIterator();
+
+  while (<!Class:Attribute:Documentation!>!next() &&
+         (<!Class:Attribute:Documentation!>!isLast() == false ||
+         (<!Class:Attribute:Documentation!>!isLast() == true &&
+          <![Class:Attribute:Documentation]!>.length() > 0))) {
+%>
+{\pard\f0\fs18\li360
+<![Class:Attribute:Documentation]!>\par}
+<%
+  }
+%>
+\par

@@ -1,0 +1,53 @@
+<schemas>
+
+  <schema name='root' >
+
+    <element name='rule' type='string' isEmpty='true' dispatcher='dispatcher' >
+      <element name='dispatcher' type='string' attribute='true' truncateEol='true' />
+      <element name='name' type='string' attribute='true' truncateEol='true' />
+      <element name='title' type='string' attribute='true' truncateEol='true' />
+      <element name='generateCode' type='string' attribute='true' truncateEol='true' />
+      <element name='text' type='string' cdata='true' trim='true' />
+
+      <element name='dtable' type='string' isEmpty='true' >
+        <element name='name' type='string' attribute='true' truncateEol='true' />
+        <element name='title' type='string' attribute='true' truncateEol='true' />
+        <element name='pageBreak' type='string' attribute='true' truncateEol='true' />
+        <element name='visibility' type='string' attribute='true' truncateEol='true' />
+        <element name='return' type='string' attribute='true' truncateEol='true' />
+
+        <element name='argument' type='string' isEmpty='true' >
+          <element name='type' type='string' attribute='true' truncateEol='true' />
+          <element name='name' type='string' attribute='true' truncateEol='true' />
+          <element name='document' type='string' attribute='true' truncateEol='true' />
+        </element>
+
+        <element name='text' type='string' cdata='true' trim='true' />
+
+        <element name='condition' type='string' isEmpty='true' >
+          <element name='id' type='string' attribute='true' />
+          <element name='symbolicId' type='string' attribute='true' />
+          <element name='text' type='string' cdata='true' trim='true' />
+        </element>
+
+        <element name='action' type='string' isEmpty='true' >
+          <element name='id' type='string' attribute='true' />
+          <element name='symbolicId' type='string' attribute='true' />
+          <element name='text' type='string' cdata='true' trim='true' />
+        </element>
+
+        <element name='scenario' type='string' isEmpty='true' >
+          <element name='condition' type='string' isEmpty='true' >
+            <element name='id' type='string' attribute='true' />
+            <element name='evaluate' type='string' attribute='true' />
+          </element>
+          <element name='action' type='string' isEmpty='true' >
+            <element name='id' type='string' attribute='true' />
+          </element>
+        </element>
+      </element>
+    </element>
+
+  </schema>
+
+</schemas>

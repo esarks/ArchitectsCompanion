@@ -1,0 +1,166 @@
+import com.esarks.arm.model.jeo.*
+import com.esarks.arm.wordSearch.*
+end
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="addUrl" visibility="public" return="long" resetExit="">
+     <document>Primary public entry point to execute the build index function.</document>
+     <argument type="String" name="aProtocol" document="" />
+     <argument type="String" name="aUrl" document="" />
+     <argument type="DbConnection" name="aDbConnection" document="" />
+   </method>
+&>
+
+    long lUrlId = getUrl(aProtocol, aUrl, aDbConnection);
+    if (lUrlId > 0) {
+      <& com.esarks.arm.scripts.ReturnMethod <return memo="Url Id is greater than zero">lUrlId</return> &>
+    }
+    
+    ServiceJeo lServiceJeo = new ServiceJeo();
+    lServiceJeo.setSuppressException(true);
+    lServiceJeo.setPropertyValue("DbConnection", new PropertyValue(aDbConnection));
+    ArmSearchDocuments lArmSearchDocuments = new ArmSearchDocuments();
+    lArmSearchDocuments.setProtocol(aProtocol);
+    lArmSearchDocuments.setUrl(aUrl);
+    lServiceJeo.getRequest().addJeo(lArmSearchDocuments);
+
+    <& com.esarks.arm.scripts.Service <script name="ArmSearchDocumentsCrud" method="createArmSearchDocuments" serviceJeo="lServiceJeo" checkError="false" /> &>
+
+    ArrayList lArrayList = lServiceJeo.getReply().getJeoByInstanceName(ArmSearchDocuments.class.getName());
+    if (lArrayList != null && lArrayList.size() > 0) {
+      lArmSearchDocuments = (ArmSearchDocuments) lArrayList.get(0);
+      return lArmSearchDocuments.getId();
+    }
+
+<& com.esarks.arm.scripts.FinalReturnMethod
+  <return>
+    <normal>-1</normal>
+    <error>-1</error>
+  </return>
+&>
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="getUrl" visibility="public" return="long" resetExit="">
+     <document>Primary public entry point to execute the build index function.</document>
+     <argument type="String" name="aProtocol" document="" />
+     <argument type="String" name="aUrl" document="" />
+     <argument type="DbConnection" name="aDbConnection" document="" />
+   </method>
+&>
+
+    ServiceJeo lServiceJeo = new ServiceJeo();
+    lServiceJeo.setPropertyValue("DbConnection", new PropertyValue(aDbConnection));
+    ArmSearchDocuments lArmSearchDocuments = new ArmSearchDocuments();
+    lArmSearchDocuments.setProtocol(aProtocol);
+    lArmSearchDocuments.setUrl(aUrl);
+    lServiceJeo.getRequest().addJeo(lArmSearchDocuments);
+    <& com.esarks.arm.scripts.Service <script name="ArmSearchDocumentsCrud" method="uidReadArmSearchDocuments" serviceJeo="lServiceJeo" checkError="false" /> &>
+
+    if (lServiceJeo.getError() != null && lServiceJeo.getError().getSeverity() == 4) {
+      <& com.esarks.arm.scripts.ReturnMethod <return memo="Error in getUrl">-1</return> &>
+    }
+
+    ArrayList lArrayList = lServiceJeo.getReply().getJeoByInstanceName(ArmSearchDocuments.class.getName());
+    if (lArrayList == null || lArrayList.size() ==0) {
+      <& com.esarks.arm.scripts.ReturnMethod <return memo="Error in getUrl">-1</return> &>
+    }
+    lArmSearchDocuments = (ArmSearchDocuments) lArrayList.get(0);
+
+<& com.esarks.arm.scripts.FinalReturnMethod
+  <return>
+    <normal>lArmSearchDocuments.getId()</normal>
+    <error>-1</error>
+  </return>
+&>
+
+//////////////////////////////////////////////////////////////////////////////
+<& com.esarks.arm.scripts.Method
+   <method name="associateUrl" visibility="public" return="boolean" resetExit="">
+     <document>Primary public entry point to execute the build index function.</document>
+     <argument type="String" name="aProtocol" document="" />
+     <argument type="String" name="aUrl" document="" />
+     <argument type="ArrayList" name="aWordList" document="" />
+     <argument type="DbConnection" name="aDbConnection" document="" />
+   </method>
+&>
+
+    ServiceJeo lSearchServiceJeo = new ServiceJeo();
+
+    if (aWordList == null || aWordList.size() == 0) {
+      <& com.esarks.arm.scripts.ReturnMethod <return memo="No word list">true</return> &>
+    }
+    ArrayList lSearchArrayList = aWordList;
+
+    long lUrlId = addUrl(aProtocol, aUrl, aDbConnection);
+    if (lUrlId <= 0) {
+      <& com.esarks.arm.scripts.ReturnMethod <return memo="Failed to get Url Id">false</return> &>
+    }
+
+    int lIndexOf;
+    lSearchServiceJeo.setPropertyValue("DbConnection", new PropertyValue(aDbConnection));
+    lSearchServiceJeo.setSuppressException(true);
+    for (int lSearchIdx=0; lSearchIdx < lSearchArrayList.size(); lSearchIdx++) {
+      ArmSearchDocumentsWords lArmSearchDocumentsWords = new ArmSearchDocumentsWords();
+      lArmSearchDocumentsWords.setUrlId(lUrlId);
+      lArmSearchDocumentsWords.setWord((String) lSearchArrayList.get(lSearchIdx));
+      lSearchServiceJeo.getRequest().addJeo(lArmSearchDocumentsWords);
+    }
+    <& com.esarks.arm.scripts.Service <script name="ArmSearchDocumentsWordsCrud" method="batchCreateArmSearchDocumentsWords" serviceJeo="lSearchServiceJeo" checkError="false" /> &>
+
+<& com.esarks.arm.scripts.FinalReturnMethod
+  <return>
+    <normal>true</normal>
+    <error>false</error>
+  </return>
+&>
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="searchWords" visibility="public" return="ServiceJeo" resetExit="">
+     <document></document>
+     <argument type="String" name="aProtocol" document="" />
+     <argument type="ArrayList" name="aWordList" document="" />
+   </method>
+&>
+
+    String lInList = "";
+    for (int lIdx=0; lIdx < aWordList.size(); lIdx++) {
+      lInList += "'" + ((String) aWordList.get(lIdx)).toLowerCase() + "'";
+      if (lIdx + 1 < aWordList.size()) lInList += ",";
+    } 
+
+    ServiceJeo lServiceJeo = new ServiceJeo();
+    lServiceJeo.getRequest().setPropertyValue("wordInList", new PropertyValue(lInList));   
+    
+    <& com.esarks.arm.scripts.Service <script name="ArmSearchViewCustomRead" method="readArmSearchView" serviceJeo="lServiceJeo" errorReturn="return lServiceJeo;" /> &>
+    
+<& com.esarks.arm.scripts.FinalReturnMethod
+  <return>
+    <normal>lServiceJeo</normal>
+    <error>null</error>
+  </return>
+&>
+
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="removeAssociations" visibility="public" return="void" resetExit="">
+     <argument type="String" name="aProtocol" document="" />
+     <argument type="String" name="aUrl" document="" />
+   </method>
+&>
+
+    long lUrlId = -1;
+//    if ((lUrlId = getUrl(aProtocol, aUrl)) == -1) return;
+
+    ServiceJeo lServiceJeo = new ServiceJeo();
+    lServiceJeo.getRequest().setWhereClause("urlId=" + Long.toString(lUrlId));
+    <& com.esarks.arm.scripts.Service <script name="ArmSearchDocumentsWordsCrud" method="deleteArmSearchDocumentsWords" serviceJeo="lServiceJeo" errorReturn="return;" /> &>
+    
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+

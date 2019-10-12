@@ -1,0 +1,35 @@
+<tags root="report">
+  <documentation><![CDATA[This is the XML defintion file used by the following scripts:<ul><li>com.esarks.arm.report.GenerateReport</ul>]]></documentation>
+
+  <tag name="jeo..." type="element">
+    <documentation>A container tag for the Jeo.</documentation>
+  
+    <tag name="instance" type="attribute">
+      <documentation>A specific instance of a Jeo.</documentation>
+    </tag>
+    
+    <tag name="type" type="attribute">
+      <documentation><![CDATA[The type of Jeo instance.<ul><li>Ex. assessment, document, detail</ul>]]></documentation>
+
+      <tag name="column" type="element">
+      <documentation>A container tag for the column.</documentation>
+      </tag>
+      <tag name="heading" type="attribute">
+      <documentation>The heading of the column.</documentation>
+      </tag>
+      <tag name="attribute" type="attribute">
+      <documentation>The field name in the Jeo.</documentation>
+      </tag>
+      <tag name="width" type="attribute">
+      <documentation>The width of the column.</documentation>
+      </tag>
+      <tag name="size" type="attribute">
+      <documentation>The size of the column.</documentation>
+      </tag>
+      <tag name="nullable" type="attribute">
+      <documentation>Indicates if the column may contain a null value.</documentation>
+      </tag>
+    </tag>
+  </tag>
+
+</tags>

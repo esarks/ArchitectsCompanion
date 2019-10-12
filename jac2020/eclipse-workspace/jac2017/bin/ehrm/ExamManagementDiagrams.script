@@ -1,0 +1,96 @@
+import java.io.*
+import net.sourceforge.plantuml.SourceStringReader
+
+public void execute() {
+
+%>EHRM Hello World! v20190816a
+<%
+
+/**
+@startuml
+note left of Veteran
+Version 20190916a
+end note
+actor Veteran
+actor VSR
+participant "[VBMS]\nVBA\nCompensation\nClaim" as VBMS
+participant "[DAS]" as DAS
+participant "[Cerner Orders1]\nVBA\nGeneric\nEncounter/\nOrder" as CernerOrders1
+actor "VHA Triage\nScheduling" as Triage
+participant "[Cerner Orders2]\nVHA\nChild\nOrder" as CernerOrders2
+participant "[Cerner Orders3]\nVHA\nAppointment" as CernerOrders3
+participant "[Cerner PowerForms]\nDBQ" as DBQ
+actor Clinician
+Veteran -> VSR :                  Submit Claim\nContentions
+VSR -> VBMS :                     CEST
+VBMS -> DAS :                     Create Generic Order [XML]
+DAS -> CernerOrders1 :            Create Generic Order [ORM]
+CernerOrders1 o->o DAS :          Generic Order Created (Status) [ORR]
+DAS o->o VBMS :                   Generic Order Created (Status) [XML]
+Triage -> CernerOrders1 :         Retrieve Ready Orders\nfrom Message Center (Internal)
+CernerOrders1 -> Triage :         Get Generic Order (Internal)
+Triage -> CernerOrders2 :         Create Child Order(s) (Internal)
+CernerOrders2 o->o DAS :          Child Order(s) Created (Status) [ORR]
+CernerOrders2 -> CernerOrders2 :  CCL Group Orders (Internal)
+Triage -> CernerOrders3 :         Create Order Appiontment(s) (Internal)
+CernerOrders3 o->o DAS :          Appointment Created (Status) [SIU]
+DAS o->o VBMS :                   Appointment Created (Status) [XML]
+Clinician -> CernerOrders3 :      Retrieve Appointments (Internal)
+CernerOrders3 -> Clinician :      Retrieved Orders (Internal)
+VHAAppointment -> Clinician :     Get Appointment
+Veteran -> Clinician : Veteran Presents
+Clinician -> Veteran : Perform Exam
+Clinician -> DBQ :                Complete DBQ
+Clinician -> CernerOrders3:       Close Appointment
+CernerOrders3 o->o DAS :          Close Order (Status) [ORM / ORR]
+DAS o->o VBMS :                   Close Order (Status) [XML]
+DBQ o->o DAS :                    Send DBQ [ORM / ORR]
+DAS o->o VBMS :                   Update eFolder
+@enduml
+*/
+
+/**
+@startuml
+note left of Veteran
+Version 20190916b
+end note
+actor Veteran
+actor VSR
+participant "[VBMS]\nVBA\nCompensation\nClaim" as Claim
+participant "[Cerner Orders]\nVBA\nGeneric\nEncounter/\nOrder" as VBAGenericEncounter
+participant "[Cerner Orders]\nMessage Pool" as MessagePool
+actor "VHA Triage\nScheduling" as Triage
+participant "[Cerner Orders]\nVHA\nChild\nOrder" as VHAChildOrder
+participant "[Cerner Orders]\nVHA\nAppointment" as VHAAppointment
+participant "[Cerner PowerForms]\nDBQ" as DBQ
+actor Clinician
+Veteran -> VSR : Submit Claim\nContentions
+VSR -> Claim : CEST
+Claim -> VSR : Return Claim #
+VSR -> VBAGenericEncounter : Create Generic Order w/ Claim #
+VBAGenericEncounter o->o Claim : Generic Order Created (Status) w/ Claim #
+VBAGenericEncounter -> MessagePool : Create Message w/ Order
+MessagePool -> Triage : Order Message from Pool
+Triage -> MessagePool : Retrieve Orders Message
+MessagePool -> VBAGenericEncounter : Query Generic Order
+VBAGenericEncounter -> Triage : Get Generic Order
+Triage -> VHAChildOrder : Create Child Order(s)
+VHAChildOrder o->o Claim : Child Order Created (Status) w/ Claim #
+VHAChildOrder -> VHAChildOrder : CCL Group Orders
+Triage -> VHAAppointment : Create Order Appointment(s)
+VHAAppointment o->o Claim : Appointment Created (Status) w/ Claim #
+Clinician -> VHAAppointment : Retrieve Appointments
+VHAAppointment -> Clinician : Get Appointment
+Veteran -> Clinician : Veteran Presents
+Clinician -> Veteran : Perform Exam
+Clinician -> DBQ : Complete DBQ
+Clinician -> VHAAppointment : Close Appointment
+Clinician -> VHAChildOrder : Close Order
+VHAChildOrder o->o Claim : Close Order (Status) w/ Claim #
+DBQ o->o Claim : Update Appointment (Status) w/ Claim #
+DBQ o->o Claim : Update eFolder with DBQ w/ Claim #
+@enduml
+*/
+
+}
+

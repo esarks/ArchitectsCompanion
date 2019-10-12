@@ -1,0 +1,18 @@
+<makeAll>
+
+  <component name="hrmPerson" />
+  <component name="hrmPatient" />
+  <component name="hrmEpisode" />
+  <component name="hrmAssessment" />
+  <component name="hrmAssessmentVersion" />
+  <component name="hrmAssessmentOasis" />
+  <component name="hrmOasisMigration" />
+  <component name="hrmOasisIndex" />
+  <component name="hrmPersonView" />
+  <component name="hrmOasisView" />
+  <component name="hrmOasisAssessmentView" />
+  <component name="hrmOasisMaxVersionView" />
+  <component name="com.hqsonline.hrm.model.factory.OasisFactory" />
+
+</makeAll>
+

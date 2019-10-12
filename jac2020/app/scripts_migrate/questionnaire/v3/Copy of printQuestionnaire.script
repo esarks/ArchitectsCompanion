@@ -1,0 +1,86 @@
+<%
+
+  parseXmlPath(<![$jac:path:home]\\temp\\printQuestionnaire.xml!>);
+
+  <!script!>!loadScript("questionnaire.exportQuestionnaireTxt");
+
+  DbConnection lDbConnection = symbolTable.getDbConnection();
+  lDbConnection.connect("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@asdczd:1521:esarks", "system", "manager");
+
+  <!print:questionnaire!>!resetIterator();
+  while (<!print:questionnaire!>!next()) {
+
+  try {        
+    PreparedStatement lPreparedStatement = lDbConnection.getConnection().prepareStatement(
+      "SELECT " +
+      " a.questionnaireId, a.questionnaireRevision, a.questionnaireCode, a.questionnaireSequence, " +
+      " b.questionCode, b.responseCode, b.responseRevision, b.responseRevisionOut, " +
+      " c.title, " +
+      " d.questionSequence, d.questionSequenceOut, d.questionOrder, d.questionText, d.questionType, " +
+      " e.responseSequence, e.responseSequenceOut, e.responseOrder, e.responseText " +
+      "FROM questionnaire a, questionnaireResponse b, stdQuestionnaire c, stdQuestion d, stdResponse e " +
+      "WHERE  a.questionnaireId = ? AND a.questionnaireRevision = ? AND " +
+      "       a.questionnaireId = b.questionnaireId AND " +
+      "       a.questionnaireRevision >= b.responseRevision AND " +
+      "      (b.responseRevisionOut is Null OR a.questionnaireRevision < b.responseRevisionOut) AND " +
+      "       a.questionnaireCode = c.questionnaireCode AND a.questionnaireSequence = c.questionnaireSequence AND " +
+      "       a.questionnaireCode = d.questionnaireCode AND " +
+      "       b.questionCode = d.questionCode AND " +
+      "       a.questionnaireSequence >= d.questionSequence AND " +
+      "      (d.questionSequenceOut is Null OR a.questionnaireSequence < d.questionSequenceOut) AND " +
+      "       a.questionnaireCode = e.questionnaireCode AND " +
+      "       b.questionCode = e.questionCode AND " +
+      "       b.responseCode = e.responseCode AND " +
+      "       a.questionnaireSequence >= e.responseSequence AND " +
+      "      (e.responseSequenceOut is Null OR a.questionnaireSequence < e.responseSequenceOut) " +
+      "ORDER BY d.questionOrder, e.responseOrder");
+
+    lPreparedStatement.setString(1, <![print:questionnaire:control]!>);
+    lPreparedStatement.setString(2, <![print:questionnaire:revision]!>);
+    <!questionnaire!>!remove();
+
+    ResultSet lResultSet = lPreparedStatement.executeQuery();
+
+    String lLastStdQuestionCode = "";
+
+    boolean lInit = false;
+
+    while (lResultSet.next()) {
+      if (lInit == false) {
+        lInit = true;
+        <!questionnaire!>!set();
+        <!questionnaire:control!>!set(lResultSet.getString("questionnaireId"));
+        <!questionnaire:revision!>!set(lResultSet.getString("questionnaireRevision"));
+        <!questionnaire:code!>!set(lResultSet.getString("questionnaireCode"));
+        <!questionnaire:sequence!>!set(lResultSet.getString("questionnaireSequence"));
+        <!questionnaire:title!>!set(lResultSet.getString("title"));
+      }
+      if (lLastStdQuestionCode.compareTo(lResultSet.getString("questionCode")) != 0) {
+        lLastStdQuestionCode = lResultSet.getString("questionCode");
+        <!questionnaire:question!>!set();
+        <!questionnaire:question:code!>!set(lResultSet.getString("questionCode"));
+        <!questionnaire:question:sequence!>!set(lResultSet.getString("questionSequence"));
+        <!questionnaire:question:order!>!set(lResultSet.getString("questionOrder"));
+        <!questionnaire:question:type!>!set(lResultSet.getString("questionType"));
+        <!questionnaire:question:text!>!set(lResultSet.getString("questionText"));
+      }
+      <!questionnaire:question:response!>!set();
+      <!questionnaire:question:response:code!>!set(lResultSet.getString("responseCode"));
+      <!questionnaire:question:response:sequence!>!set(lResultSet.getString("responseSequence"));
+      <!questionnaire:question:response:order!>!set(lResultSet.getString("responseOrder"));
+      <!questionnaire:question:response:text!>!set(lResultSet.getString("responseText"));
+    }
+
+    lResultSet.close();
+    lPreparedStatement.close();
+
+  }
+  catch (Exception e) {
+    System.out.println(e);
+  }
+
+  <!script!>!execMethod("execute");
+  }
+
+%>
+

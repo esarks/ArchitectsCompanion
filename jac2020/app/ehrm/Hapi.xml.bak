@@ -1,0 +1,9 @@
+<mic.element type="Component" title="Title">
+
+<A1 A2="2" A3="3">1
+  <A4 5="5"/>4
+  <A6>6</A6>
+</A1>
+
+
+</mic.element>

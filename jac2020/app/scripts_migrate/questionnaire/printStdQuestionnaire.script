@@ -1,0 +1,82 @@
+<%
+
+  parseXmlPath(<![$jac:path:home]\\temp\\printStdQuestionnaire.xml!>);
+
+  <!script!>!loadScript("questionnaire.exportStdQuestionnaireTxt");
+
+  DbConnection lDbConnection = symbolTable.getDbConnection();
+  lDbConnection.connect("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@asdczd:1521:esarks", "system", "manager");
+
+  <!print:questionnaire!>!resetIterator();
+  while (<!print:questionnaire!>!next()) {
+
+  try {        
+/*
+    PreparedStatement lPreparedStatement = lDbConnection.getConnection().prepareStatement(
+      "SELECT " +
+      " a.questionnaireCode, a.questionnaireSequence, a.title, " +
+      " b.questionCode, b.questionSequence, b.questionSequenceOut, b.questionOrder, b.questionText, b.questionType, " +
+      " c.responseCode, c.responseSequence, c.responseSequenceOut, c.responseOrder, c.responseText " +
+      "FROM stdQuestionnaire a, stdQuestion b, stdResponse c " +
+      "WHERE  a.questionnaireCode = ? AND a.questionnaireSequence = ? AND " +
+      "       a.questionnaireCode = b.questionnaireCode AND " +
+      "       a.questionnaireSequence >= b.questionSequence AND " +
+      "      (b.questionSequenceOut is Null OR a.questionnaireSequence < b.questionSequenceOut) AND " +
+      "       a.questionnaireCode = c.questionnaireCode AND " +
+      "       b.questionCode = c.questionCode AND " +
+      "       a.questionnaireSequence >= c.responseSequence AND " +
+      "      (c.responseSequenceOut is Null OR a.questionnaireSequence < c.responseSequenceOut) " +
+      "ORDER BY b.questionOrder, c.responseOrder");
+*/
+
+    PreparedStatement lPreparedStatement = lDbConnection.getConnection().prepareStatement(
+      "SELECT * FROM stdQuestionnaireView " +
+      "WHERE questionnaireCode = ? AND questionnaireSequence = ?");
+
+    lPreparedStatement.setString(1, <![print:questionnaire:code]!>);
+    lPreparedStatement.setString(2, <![print:questionnaire:sequence]!>);
+    <!questionnaire!>!remove();
+
+    ResultSet lResultSet = lPreparedStatement.executeQuery();
+
+    String lLastStdQuestionCode = "";
+
+    boolean lInit = false;
+
+    while (lResultSet.next()) {
+      if (lInit == false) {
+        lInit = true;
+        <!questionnaire!>!set();
+        <!questionnaire:code!>!set(lResultSet.getString("questionnaireCode"));
+        <!questionnaire:sequence!>!set(lResultSet.getString("questionnaireSequence"));
+        <!questionnaire:title!>!set(lResultSet.getString("title"));
+      }
+      if (lLastStdQuestionCode.compareTo(lResultSet.getString("questionCode")) != 0) {
+        lLastStdQuestionCode = lResultSet.getString("questionCode");
+        <!questionnaire:question!>!set();
+        <!questionnaire:question:code!>!set(lResultSet.getString("questionCode"));
+        <!questionnaire:question:sequence!>!set(lResultSet.getString("questionSequence"));
+        <!questionnaire:question:order!>!set(lResultSet.getString("questionOrder"));
+        <!questionnaire:question:type!>!set(lResultSet.getString("questionType"));
+        <!questionnaire:question:text!>!set(lResultSet.getString("questionText"));
+      }
+      <!questionnaire:question:response!>!set();
+      <!questionnaire:question:response:code!>!set(lResultSet.getString("responseCode"));
+      <!questionnaire:question:response:sequence!>!set(lResultSet.getString("responseSequence"));
+      <!questionnaire:question:response:order!>!set(lResultSet.getString("responseOrder"));
+      <!questionnaire:question:response:text!>!set(lResultSet.getString("responseText"));
+    }
+
+    lResultSet.close();
+    lPreparedStatement.close();
+
+  }
+  catch (Exception e) {
+    System.out.println(e);
+  }
+
+  <!script!>!execMethod("execute");
+  }
+
+%>
+

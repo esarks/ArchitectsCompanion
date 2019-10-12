@@ -1,0 +1,583 @@
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:1: //$Section=License$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:2: //  Generated at 2005.01.29 08:57:22.875 AM EST by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:3: //  XML Definition: com.esarks.arm.model.jeo.Service_Jeo
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:4: //     Module Name: com.esarks.arm.model.jeo.request
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:5: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:6: //$Section=ChangeLog$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:7: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:8: /* ========================================================================= *
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:9:    Contributor        Description
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:10:    ------------------ ------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:11:                       Author
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:12: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:13:  * ========================================================================= */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:14: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:15: //$Section=Class$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:16: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:17: package com.esarks.arm.model.jeo;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:18: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:19: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:20:  *
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:21:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:22: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:23: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:24: // This section is for generated import delcarations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:25: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:26: // Additional Import Declarations
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:27: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:28: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:29: import java.util.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:30: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:31: import java.io.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:32: import java.text.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:33: import java.net.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:34: import java.sql.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:35: import javax.servlet.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:36: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:37: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:38: //$Section=CustomDeclare$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:39: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:40: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:41: // This section is for custom declarations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:42: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:43: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:44: //$Section=CustomDeclare$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:45: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:46: public class request extends com.esarks.jac.Jeo {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:47: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:48: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:49: // This section is for generated declarations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:50: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:51: // Attributes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:52: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:53: //SelectClause  Type: string  Size: 0  Nullable: true
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:54:     private PropertyValue iSelectClause = new PropertyValue();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:55:     private boolean iSelectClauseIsNullable = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:56:     private boolean iSelectClauseUpdate = false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:57:     private int iSelectClauseSize = 0;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:58: //WhereClause  Type: string  Size: 0  Nullable: true
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:59:     private PropertyValue iWhereClause = new PropertyValue();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:60:     private boolean iWhereClauseIsNullable = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:61:     private boolean iWhereClauseUpdate = false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:62:     private int iWhereClauseSize = 0;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:63: //OrderClause  Type: string  Size: 0  Nullable: true
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:64:     private PropertyValue iOrderClause = new PropertyValue();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:65:     private boolean iOrderClauseIsNullable = true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:66:     private boolean iOrderClauseUpdate = false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:67:     private int iOrderClauseSize = 0;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:68: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:69: //$Section=CustomClassDeclare$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:70: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:71: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:72: // This section is for custom class declarations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:73: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:74: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:75: //$Section=CustomClassDeclare$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:76: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:77: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:78: // Generated constructors.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:79: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:80: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:81: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:82:  * Default constructor.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:83:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:84:     public request() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:85:       super("com.esarks.arm.model.jeo.request");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:86: //$Section=DefaultConstructor$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:87: //$Section=DefaultConstructor$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:88:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:89: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:90: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:91:  *
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:92:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:93:     public request( Script aScript ) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:94:       super("com.esarks.arm.model.jeo.request", aScript);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:95: //$Section=Operation$Jeo( String aScript )$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:96: //$Section=Operation$Jeo( String aScript )$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:97:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:98: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:99: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:100:  *
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:101:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:102:     public request( String aTypeName ) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:103:       super("com.esarks.arm.model.jeo.request", aTypeName);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:104: //$Section=Operation$Jeo( String aTypeName )$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:105: //$Section=Operation$Jeo( String aTypeName )$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:106:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:107: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:108: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:109:  *
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:110:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:111:     public request( String aTypeName, Script aScript ) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:112:       super("com.esarks.arm.model.jeo.request", aTypeName, aScript);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:113: //$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:114: //$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:115:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:116: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:117: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:118: // Default finalize is generated.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:119: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:120: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:121: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:122:  * Default finalize.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:123:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:124:     public void finalize() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:125:     	freeResources();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:126: //$Section=DefaultDestructor$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:127: //$Section=DefaultDestructor$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:128:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:129: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:130: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:131: // Default freeResources is generated.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:132: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:133: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:134: /**
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:135:  * Default freeResources.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:136:  */
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:137:     public void freeResources() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:138:     	super.freeResources();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:139:     iSelectClause = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:140:     iWhereClause = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:141:     iOrderClause = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:142: //$Section=DefaultFreeResources$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:143: //$Section=DefaultFreeResources$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:144:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:145: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:146: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:147: // This section is for custom operations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:148: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:149: //$Section=CustomOperations$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:150: //$Section=CustomOperations$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:151: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:152: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:153: // This section is for mapping views to tables.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:154: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:155: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:156: // This section is for mapping from result sets.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:157: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:158: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:159:   public void mapFromResultSet( ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:160: //$Section=Operation$mapFromResultSet$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:161:     mapFromResultSetTable("*", aResultSet, aTrim, aSpacesToNull);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:162: //$Section=Operation$mapFromResultSet$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:163:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:164: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:165:   public void mapFromResultSetTable( String aTable, ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:166: //$Section=Operation$mapFromResultSetTable$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:167:     String lValue = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:168:       if (aTable.equals("*") || aTable.equals("")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:169: // SelectClause in
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:170:         try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:171:           lValue = aResultSet.getString("selectClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:172:           if (aResultSet.wasNull()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:173:             setSelectClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:174:           } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:175:             if (aTrim) lValue = lValue.trim();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:176:             if (aSpacesToNull && lValue.length() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:177:               setSelectClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:178:             } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:179:               setSelectClause(lValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:180:             }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:181:           }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:182:         } catch (Throwable e) {}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:183: // WhereClause in
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:184:         try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:185:           lValue = aResultSet.getString("whereClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:186:           if (aResultSet.wasNull()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:187:             setWhereClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:188:           } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:189:             if (aTrim) lValue = lValue.trim();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:190:             if (aSpacesToNull && lValue.length() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:191:               setWhereClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:192:             } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:193:               setWhereClause(lValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:194:             }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:195:           }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:196:         } catch (Throwable e) {}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:197: // OrderClause in
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:198:         try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:199:           lValue = aResultSet.getString("orderClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:200:           if (aResultSet.wasNull()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:201:             setOrderClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:202:           } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:203:             if (aTrim) lValue = lValue.trim();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:204:             if (aSpacesToNull && lValue.length() == 0) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:205:               setOrderClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:206:             } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:207:               setOrderClause(lValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:208:             }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:209:           }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:210:         } catch (Throwable e) {}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:211:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:212: //$Section=Operation$mapFromResultSetTable$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:213:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:214: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:215: // This section is for mapping from and to Jeo's.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:216: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:217: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:218:   public void mapToJeo( Jeo aJeo) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:219: //$Section=Operation$mapFromJeo$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:220:     String lType = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:221:     PropertyValue lValue = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:222: // SelectClause
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:223:       try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:224:         lValue = aJeo.getPropertyValueByName("selectClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:225:         if (lValue != null) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:226:           lType = aJeo.getTypeByName("selectClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:227:           if (!isSelectClauseNull()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:228:             lValue.reset(lType, getSelectClausePropertyValue().toString());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:229:           } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:230:             lValue.reset("null", "");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:231:           }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:232:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:233:       } catch(Throwable e) {}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:234: // WhereClause
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:235:       try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:236:         lValue = aJeo.getPropertyValueByName("whereClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:237:         if (lValue != null) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:238:           lType = aJeo.getTypeByName("whereClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:239:           if (!isWhereClauseNull()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:240:             lValue.reset(lType, getWhereClausePropertyValue().toString());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:241:           } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:242:             lValue.reset("null", "");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:243:           }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:244:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:245:       } catch(Throwable e) {}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:246: // OrderClause
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:247:       try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:248:         lValue = aJeo.getPropertyValueByName("orderClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:249:         if (lValue != null) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:250:           lType = aJeo.getTypeByName("orderClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:251:           if (!isOrderClauseNull()) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:252:             lValue.reset(lType, getOrderClausePropertyValue().toString());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:253:           } else {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:254:             lValue.reset("null", "");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:255:           }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:256:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:257:       } catch(Throwable e) {}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:258: //$Section=Operation$mapToJeo$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:259:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:260: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:261:   public void mapFromJeo( Jeo aJeo) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:262: //$Section=Operation$mapFromJeo$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:263:     String lType = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:264:     PropertyValue lValue = null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:265: // SelectClause
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:266:       try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:267:         lValue = aJeo.getPropertyValueByName("selectClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:268:         if (lValue != null) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:269:           setSelectClause(lValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:270:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:271:       } catch(Throwable e) {}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:272: // WhereClause
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:273:       try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:274:         lValue = aJeo.getPropertyValueByName("whereClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:275:         if (lValue != null) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:276:           setWhereClause(lValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:277:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:278:       } catch(Throwable e) {}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:279: // OrderClause
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:280:       try {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:281:         lValue = aJeo.getPropertyValueByName("orderClause");
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:282:         if (lValue != null) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:283:           setOrderClause(lValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:284:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:285:       } catch(Throwable e) {}
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:286: //$Section=Operation$mapFromJeo$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:287:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:288: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:289: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:290: // This section is for the get PropertyValue by attribute string name method.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:291: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:292: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:293:   public PropertyValue getPropertyValueByName ( String aAttributeName) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:294: //$Section=Operation$getPropertyValueByName$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:295:       if (aAttributeName.toLowerCase().equals("selectclause")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:296:         return iSelectClause;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:297:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:298:       if (aAttributeName.toLowerCase().equals("whereclause")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:299:         return iWhereClause;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:300:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:301:       if (aAttributeName.toLowerCase().equals("orderclause")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:302:         return iOrderClause;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:303:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:304:       return null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:305: //$Section=Operation$getPropertyValueByName$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:306:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:307: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:308:   public String getTypeByName ( String aAttributeName) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:309: //$Section=Operation$getTypeByName$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:310:       if (aAttributeName.toLowerCase().equals("selectclause")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:311:         return "string";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:312:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:313:       if (aAttributeName.toLowerCase().equals("whereclause")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:314:         return "string";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:315:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:316:       if (aAttributeName.toLowerCase().equals("orderclause")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:317:         return "string";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:318:       }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:319:       return null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:320: //$Section=Operation$getTypeByName$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:321:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:322: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:323:   public String getNameByIndex ( int aIndex) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:324: //$Section=Operation$getNameByIndex$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:325: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:326:     switch(aIndex) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:327:       case 1: return "selectclause";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:328:       case 2: return "whereclause";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:329:       case 3: return "orderclause";
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:330:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:331:     return null;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:332: //$Section=Operation$getNameByIndex$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:333:   }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:334: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:335: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:336: // This section is for generated attribute accessor methods.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:337: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:338: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:339: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:340: // SelectClause
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:341: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:342:     public String getSelectClause() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:343: //$Section=Attribute get$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:344:         return iSelectClause.getValueString();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:345: //$Section=Attribute get$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:346:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:347:     public void setSelectClause(String aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:348: //$Section=Attribute set$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:349:         iSelectClause.reset(aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:350: //$Section=Attribute set$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:351:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:352:     public void setSelectClause(PropertyValue aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:353: //$Section=Attribute setPropertyValue$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:354:         if (aValue.getType().equals("null")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:355:           setSelectClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:356:           return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:357:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:358:         setSelectClause(aValue.toString());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:359: //$Section=Attribute setPropertyValue$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:360:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:361:     public void setSelectClause(PropertyValue aValue, String aFormat) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:362: //$Section=Attribute setPropertyValueFormat$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:363:         if (aValue.getType().equals("null")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:364:           setSelectClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:365:           return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:366:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:367:         setSelectClause(aValue.toString(), aFormat);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:368: //$Section=Attribute setPropertyValueFormat$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:369:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:370:     public void setSelectClause(String aValue, String aType) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:371: //$Section=Attribute setAsStringType$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:372:         iSelectClause.reset(aType, aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:373: //$Section=Attribute setAsStringType$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:374:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:375:     public PropertyValue getSelectClausePropertyValue() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:376: //$Section=Attribute getPropertyValue$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:377:         return iSelectClause;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:378: //$Section=Attribute getPropertyValue$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:379:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:380:     public int sizeSelectClause() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:381: //$Section=Attribute size$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:382:         return iSelectClauseSize;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:383: //$Section=Attribute size$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:384:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:385:     public boolean isSelectClauseNullable() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:386: //$Section=Attribute isNullable$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:387:         return iSelectClauseIsNullable;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:388: //$Section=Attribute isNullable$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:389:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:390:     public boolean isSelectClauseNull() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:391: //$Section=Attribute isNull$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:392:         if (iSelectClause.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:393:         return false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:394: //$Section=Attribute isNull$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:395:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:396:     public void setSelectClauseNull() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:397: //$Section=Attribute setNull$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:398:         iSelectClause.reset();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:399: //$Section=Attribute setNull$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:400:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:401:     public void setSelectClauseSpaceToNull() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:402: //$Section=Attribute setSpaceToNull$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:403:         if (getSelectClausePropertyValue().toString().trim().equals("")) setSelectClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:404: //$Section=Attribute setSpaceToNull$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:405:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:406:     public void setSelectClauseUpdate(boolean aUpdate) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:407: //$Section=Attribute setUpdate$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:408:         iSelectClauseUpdate = aUpdate;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:409: //$Section=Attribute setUpdate$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:410:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:411:     public boolean getSelectClauseUpdate() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:412: //$Section=Attribute getUpdate$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:413:         return iSelectClauseUpdate;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:414: //$Section=Attribute getUpdate$SelectClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:415:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:416: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:417: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:418: // WhereClause
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:419: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:420:     public String getWhereClause() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:421: //$Section=Attribute get$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:422:         return iWhereClause.getValueString();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:423: //$Section=Attribute get$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:424:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:425:     public void setWhereClause(String aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:426: //$Section=Attribute set$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:427:         iWhereClause.reset(aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:428: //$Section=Attribute set$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:429:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:430:     public void setWhereClause(PropertyValue aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:431: //$Section=Attribute setPropertyValue$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:432:         if (aValue.getType().equals("null")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:433:           setWhereClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:434:           return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:435:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:436:         setWhereClause(aValue.toString());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:437: //$Section=Attribute setPropertyValue$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:438:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:439:     public void setWhereClause(PropertyValue aValue, String aFormat) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:440: //$Section=Attribute setPropertyValueFormat$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:441:         if (aValue.getType().equals("null")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:442:           setWhereClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:443:           return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:444:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:445:         setWhereClause(aValue.toString(), aFormat);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:446: //$Section=Attribute setPropertyValueFormat$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:447:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:448:     public void setWhereClause(String aValue, String aType) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:449: //$Section=Attribute setAsStringType$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:450:         iWhereClause.reset(aType, aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:451: //$Section=Attribute setAsStringType$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:452:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:453:     public PropertyValue getWhereClausePropertyValue() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:454: //$Section=Attribute getPropertyValue$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:455:         return iWhereClause;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:456: //$Section=Attribute getPropertyValue$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:457:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:458:     public int sizeWhereClause() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:459: //$Section=Attribute size$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:460:         return iWhereClauseSize;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:461: //$Section=Attribute size$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:462:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:463:     public boolean isWhereClauseNullable() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:464: //$Section=Attribute isNullable$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:465:         return iWhereClauseIsNullable;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:466: //$Section=Attribute isNullable$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:467:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:468:     public boolean isWhereClauseNull() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:469: //$Section=Attribute isNull$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:470:         if (iWhereClause.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:471:         return false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:472: //$Section=Attribute isNull$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:473:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:474:     public void setWhereClauseNull() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:475: //$Section=Attribute setNull$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:476:         iWhereClause.reset();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:477: //$Section=Attribute setNull$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:478:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:479:     public void setWhereClauseSpaceToNull() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:480: //$Section=Attribute setSpaceToNull$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:481:         if (getWhereClausePropertyValue().toString().trim().equals("")) setWhereClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:482: //$Section=Attribute setSpaceToNull$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:483:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:484:     public void setWhereClauseUpdate(boolean aUpdate) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:485: //$Section=Attribute setUpdate$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:486:         iWhereClauseUpdate = aUpdate;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:487: //$Section=Attribute setUpdate$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:488:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:489:     public boolean getWhereClauseUpdate() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:490: //$Section=Attribute getUpdate$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:491:         return iWhereClauseUpdate;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:492: //$Section=Attribute getUpdate$WhereClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:493:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:494: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:495: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:496: // OrderClause
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:497: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:498:     public String getOrderClause() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:499: //$Section=Attribute get$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:500:         return iOrderClause.getValueString();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:501: //$Section=Attribute get$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:502:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:503:     public void setOrderClause(String aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:504: //$Section=Attribute set$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:505:         iOrderClause.reset(aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:506: //$Section=Attribute set$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:507:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:508:     public void setOrderClause(PropertyValue aValue) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:509: //$Section=Attribute setPropertyValue$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:510:         if (aValue.getType().equals("null")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:511:           setOrderClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:512:           return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:513:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:514:         setOrderClause(aValue.toString());
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:515: //$Section=Attribute setPropertyValue$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:516:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:517:     public void setOrderClause(PropertyValue aValue, String aFormat) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:518: //$Section=Attribute setPropertyValueFormat$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:519:         if (aValue.getType().equals("null")) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:520:           setOrderClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:521:           return;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:522:         }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:523:         setOrderClause(aValue.toString(), aFormat);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:524: //$Section=Attribute setPropertyValueFormat$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:525:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:526:     public void setOrderClause(String aValue, String aType) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:527: //$Section=Attribute setAsStringType$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:528:         iOrderClause.reset(aType, aValue);
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:529: //$Section=Attribute setAsStringType$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:530:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:531:     public PropertyValue getOrderClausePropertyValue() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:532: //$Section=Attribute getPropertyValue$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:533:         return iOrderClause;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:534: //$Section=Attribute getPropertyValue$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:535:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:536:     public int sizeOrderClause() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:537: //$Section=Attribute size$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:538:         return iOrderClauseSize;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:539: //$Section=Attribute size$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:540:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:541:     public boolean isOrderClauseNullable() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:542: //$Section=Attribute isNullable$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:543:         return iOrderClauseIsNullable;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:544: //$Section=Attribute isNullable$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:545:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:546:     public boolean isOrderClauseNull() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:547: //$Section=Attribute isNull$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:548:         if (iOrderClause.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:549:         return false;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:550: //$Section=Attribute isNull$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:551:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:552:     public void setOrderClauseNull() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:553: //$Section=Attribute setNull$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:554:         iOrderClause.reset();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:555: //$Section=Attribute setNull$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:556:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:557:     public void setOrderClauseSpaceToNull() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:558: //$Section=Attribute setSpaceToNull$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:559:         if (getOrderClausePropertyValue().toString().trim().equals("")) setOrderClauseNull();
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:560: //$Section=Attribute setSpaceToNull$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:561:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:562:     public void setOrderClauseUpdate(boolean aUpdate) {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:563: //$Section=Attribute setUpdate$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:564:         iOrderClauseUpdate = aUpdate;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:565: //$Section=Attribute setUpdate$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:566:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:567:     public boolean getOrderClauseUpdate() {
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:568: //$Section=Attribute getUpdate$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:569:         return iOrderClauseUpdate;
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:570: //$Section=Attribute getUpdate$OrderClause$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:571:     }
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:572: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:573: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:574: //$Section=Deleted$Preserve=yes
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:575: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:576: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:577: // This section contains orphaned code from deleted operations.
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:578: //----------------------------------------------------------------------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:579: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:580: //$Section=Deleted$Preserve=no
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:581: 
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:582: //End of class---------------
+C:\ArchitectsCompanion\jac\app\com\esarks\arm\model\jeo\request.script:583: }

@@ -1,0 +1,532 @@
+<%
+    //*********************************************************************
+    // Set retranslation values
+    //
+    //if (<!JConfig!>!size() == 0) symbolTable.parseXml("jacJ.Jconfig");
+    if (<!JConfig!>!size() == 0) parseXml("jacJ.Jconfig");
+
+    //*********************************************************************
+    // Kill the existing file.
+    //
+    <!$outputFile!>!reset(<![$jac:path:home][$jac:fileSeparator]temp[$jac:fileSeparator][currentModule:Name].[JConfig:ModuleExtension:[currentClass:Stereotype]]!>);
+%>Making <![$outputFile]!>
+<%
+    script.delete(<![$outputFile]!>);
+
+    //*********************************************************************
+    // Open the output module file>
+    //
+    outputManager.openOutputFile(<![$outputFile]!>, true);
+
+    //*********************************************************************
+    // Copyright and generation stats
+    //
+%>
+//$Section=License$ID=<![currentClass:UniqueId]!>$Preserve=no
+
+/* ========================================================================= *
+ *                                                                           *
+ *                       The eSarks Software License                         *
+ *                                                                           *
+ *           Copyright (c) 2003 Architects of Software Design, Corp.         *
+ *                           All rights reserved.                            *
+ *                                                                           *
+ * ========================================================================= *
+ *                                                                           *
+ * Redistribution and use in source and binary forms, with or without        *
+ * modification, are permitted provided that the following conditions        *
+ * are met:                                                                  *
+ *                                                                           *
+ * 1. Redistributions of source code must retain the above copyright notice, *
+ *    this list of conditions and the following disclaimer.                  *
+ *                                                                           *
+ * 2. Redistributions in binary form must reproduce the above copyright      *
+ *    notice, this list of conditions and the following disclaimer in the    *
+ *    documentation and/or other materials provided with the distribution.   *
+ *                                                                           *
+ * 3. The end-user documentation included with the redistribution, if any,   *
+ *    must include the following acknowlegement:                             *
+ *                                                                           *
+ *       "This product includes software developed by                        *
+ *        Architects of Software Design, Corp. <http://www.esarks.com/>."    *
+ *                                                                           *
+ *    Alternately, this acknowlegement may appear in the software itself, if *
+ *    and wherever such third-party acknowlegements normally appear.         *
+ *                                                                           *
+ * 4. The names "eSarks", "jac" or "Architects of Software Design, Corp."    *
+ *    must not be used to endorse or promote products derived from this      *
+ *    software without prior written permission.  For written permission,    *
+ *    please contact <jac@esarks.com>.                                       *
+ *                                                                           *
+ * THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESSED OR IMPLIED WARRANTIES *
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY  *
+ * AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL   *
+ * ARCHITECTS OF SOFTWARE DESIGN, CORP. OR ITS CONTRIBUTORS BE LIABLE FOR    *
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL    *
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS   *
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)     *
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,       *
+ * STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN  *
+ * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE           *
+ * POSSIBILITY OF SUCH DAMAGE.                                               *
+ *                                                                           *
+ * ========================================================================= */
+
+//  Generated at <![$jac:dateTime]!> by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+//  Module Name: <![currentModule:Name].[JConfig:ModuleExtension:[currentClass:Stereotype]]!>
+
+//$Section=ChangeLog$ID=<![currentClass:UniqueId]!>$Preserve=yes
+
+/* ========================================================================= *
+   Contributor        Description
+   ------------------ ------------------------------------------------------
+                      Author
+
+ * ========================================================================= */
+ 
+//$Section=Class$ID=<![currentClass:UniqueId]!>$Preserve=no
+
+package <![currentModule:PackageName]!>;
+
+<%
+    //*********************************************************************
+    // Class documentation
+    //
+%>
+/**
+<%
+    <!currentClass:Documentation!>!resetIterator();
+    while (<!currentClass:Documentation!>!next()) {
+%>
+ * <![currentClass:Documentation]!>
+<%
+    }
+%>
+ */
+
+<%
+//*********************************************************************
+// Additional Imports
+//
+%>
+//----------------------------------------------------------------------------
+// This section is for generated import delcarations.
+//----------------------------------------------------------------------------
+<%
+    <!currentClass:AdditionalImports!>!resetIterator();
+    while (<!currentClass:AdditionalImports!>!next()) {
+      if (<!currentClass:AdditionalImports!>!isFirst()) {
+%>
+// Additional Import Declarations
+<%
+      }
+      if (<![currentClass:AdditionalImports]!>.compareTo("") != 0) {
+%>
+import <![currentClass:AdditionalImports]!>;
+<%
+      }
+    }
+    boolean insertHeading = true;
+    <!currentClass:Dependency!>!resetIterator();
+    while (<!currentClass:Dependency!>!next()) {
+      if (<![currentClass:Dependency:PackageName]!>.compareTo(<![currentModule:PackageName]!>) != 0) {
+        if (insertHeading == true) {
+%>
+// Dependency Imports
+<%
+          insertHeading = false;
+        }
+%>
+import <![currentClass:Dependency:PackageName].[currentClass:Dependency:ClassName]!>;
+<%
+      }
+    }
+    insertHeading = true;
+    <!currentClass:Association!>!resetIterator();
+    while (<!currentClass:Association!>!next()) {
+      if (<![currentClass:Association:PackageName]!>.compareTo(<![currentModule:PackageName]!>) != 0) {
+        if (insertHeading == true) {
+%>
+// Association Imports
+<%
+          insertHeading = false;
+        }
+%>
+import <![currentClass:Association:PackageName].[currentClass:Association:RoleClassName]!>;
+<%
+      }
+    }
+    if (<![currentClass:SuperClass]!>.compareTo("") == 0) {
+      if (<![currentClass:Extends]!>.compareTo("") == 0) {
+        <!extends!>!remove();
+      } else {
+        <!extends!>!reset(<! extends [currentClass:Extends]!>);
+      }
+    } else {
+      if (<!Class:UniqueId!>!scan(<!currentClass:SuperClass!>) == false) {
+        symbolTable.parseXml(<![$tempDirectory]\\Class[currentClass:SuperClass].xml!>);
+      }
+      <!Class:UniqueId!>!scan(<![currentClass:SuperClass]!>);
+      <!Class:Module:UniqueId!>!scan(<![currentClass:SuperClass]!>);
+      <!extends!>!reset(<! extends [Class:Module:PackageName].[Class:Name]!>);
+%>
+// SuperClass
+<%
+      if (<![Class:Module:PackageName]!>.compareTo(<![currentModule:PackageName]!>) != 0) {
+%>
+import <![Class:Module:PackageName].[Class:Name]!>;
+<%
+      }
+    }
+%>
+
+<%
+//*********************************************************************
+// Provide for custom declarations section to be modified by user
+//
+%>
+//$Section=CustomDeclare$ID=<![currentClass:UniqueId]!>$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section is for custom declarations.
+//----------------------------------------------------------------------------
+
+//$Section=CustomDeclare$ID=<![currentClass:UniqueId]!>$Preserve=no
+
+<%
+    <!implements!>!reset("");
+    if (<![currentClass:Implements]!>.compareTo("") != 0) {
+      <!currentClass:Implements!>!resetIterator();
+      while (<!currentClass:Implements!>!next()) {
+        if (<!currentClass:Implements!>!isFirst() == true) <!implements!>!reset(" implements ");
+        <!implements!>!reset(<![implements]!> + <![currentClass:Implements]!>);
+        if (<!currentClass:Implements!>!isLast() == false) <!implements!>!reset(<![implements]!> + ", ");
+      }
+    }
+%>
+<![JConfig:ExportControl:[currentClass:ExportControl]]!><%if (<![currentClass:Abstract]!>.compareTo("True") == 0) {%>abstract <%} else {%> <%}%>class <![currentClass:Name][implements][extends]!> {
+
+<%
+//*********************************************************************
+// Define attributes
+//
+%>
+//----------------------------------------------------------------------------
+// This section is for generated declarations.
+//----------------------------------------------------------------------------
+<%
+    <!currentClass:Attribute!>!resetIterator();
+    while (<!currentClass:Attribute!>!next()) {
+      if (<!currentClass:Attribute!>!isFirst()) {
+%>
+// Attributes
+<%
+      }
+      <!prefix!>!reset("i");
+      if (<![currentClass:Attribute:Prefix]!>.compareTo("") != 0) <!prefix!>!reset(<![currentClass:Attribute:Prefix]!>);
+%>
+    <![JConfig:ExportControl:[currentClass:Attribute:ExportControl]]!><%%>
+<%
+      if (<![currentClass:Attribute:InitializeAsConstant]!>.compareTo("") != 0) %> final<%
+      if (<![currentClass:Attribute:Static]!>.compareTo("True") == 0) %> static<%
+%>
+ <![currentClass:Attribute:Type] [prefix][currentClass:Attribute:Name]!><%%>
+<%
+      if (<![currentClass:Attribute:InitValue]!>.compareTo("") != 0) %> = <![currentClass:Attribute:InitValue]!><%
+      if (<![currentClass:Attribute:InitializeAsConstant]!>.compareTo("") != 0) %> = <![currentClass:Attribute:InitializeAsConstant]!><%
+%>
+;
+<%
+    }
+//*********************************************************************
+// Define association attributes
+//
+    <!currentClass:Association!>!resetIterator();
+    while (<!currentClass:Association!>!next()) {
+      if (<!currentClass:Association!>!isFirst()) {
+%>
+// Associations
+<%
+      }
+      <!prefix!>!reset("i");
+      if (<![currentClass:Association:Prefix]!>.compareTo("") != 0) <!prefix!>!reset(<![currentClass:Association:Prefix]!>);
+      if (<![currentClass:Association:RoleNavigable]!>.compareTo("True") == 0) {
+        if (<![currentClass:Association:RoleName]!>.compareTo("") != 0) { %>
+    <![JConfig:ExportControl:[currentClass:Association:RoleExportControl]]!> <![currentClass:Association:RoleClassName]!> <![prefix][currentClass:Association:RoleName]!><%%>
+<%
+          if (<![currentClass:Association:InitialValue]!>.compareTo("") != 0) %> = <![currentClass:Association:InitialValue]!><%%>
+;
+<%
+        }
+      }
+    }
+%>
+
+<%
+//*********************************************************************
+// Provide for custom declarations section to be modified by user
+//
+%>
+//$Section=CustomClassDeclare$ID=<![currentClass:UniqueId]!>$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section is for custom class declarations.
+//----------------------------------------------------------------------------
+
+//$Section=CustomClassDeclare$ID=<![currentClass:UniqueId]!>$Preserve=no
+
+<%
+//*********************************************************************
+// Default constructor
+//
+    if (<![currentClass:DefaultConstructorExportControl]!>.compareTo("None") != 0) {
+%>
+//----------------------------------------------------------------------------
+// Default constructor is generated.
+//----------------------------------------------------------------------------
+
+/**
+ * Default constructor.
+ */
+    <![JConfig:ExportControl:[currentClass:DefaultConstructorExportControl]] [currentClass:Name]!>() {
+//$Section=DefaultConstructor$ID=<![currentClass:UniqueId]!>$Preserve=yes
+//$Section=DefaultConstructor$ID=<![currentClass:UniqueId]!>$Preserve=no
+    }
+<%  }
+//*********************************************************************
+// Default finalize
+//
+    if (<![currentClass:DefaultDestructorExportControl]!>.compareTo("None") != 0) {
+%>
+//----------------------------------------------------------------------------
+// Default finalize is generated.
+//----------------------------------------------------------------------------
+
+/**
+ * Default finalize.
+ */
+    <![JConfig:ExportControl:[currentClass:DefaultDestructorExportControl]]!> void finalize() {
+//$Section=DefaultDestructor$ID=<![currentClass:UniqueId]!>$Preserve=yes
+//$Section=DefaultDestructor$ID=<![currentClass:UniqueId]!>$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Default freeResources is generated.
+//----------------------------------------------------------------------------
+
+/**
+ * Default freeResources.
+ */
+    <![JConfig:ExportControl:[currentClass:DefaultDestructorExportControl]]!> void freeResources() {
+//$Section=DefaultFreeResources$ID=<![currentClass:UniqueId]!>$Preserve=yes
+//$Section=DefaultFreeResources$ID=<![currentClass:UniqueId]!>$Preserve=no
+    }
+<%  }
+//*********************************************************************
+// Insert the operations methods
+//
+%>
+
+//----------------------------------------------------------------------------
+// This section is for generated operations.
+//----------------------------------------------------------------------------
+<%
+    <!currentClass:Operation!>!resetIterator();
+    while (<!currentClass:Operation!>!next()) {
+%>
+/**
+<%
+      <!currentClass:Operation:Documentation!>!resetIterator();
+      while (<!currentClass:Operation:Documentation!>!next()) {
+%>
+ * <![currentClass:Operation:Documentation]!>
+<%
+      }
+%>
+ */
+    <![JConfig:ExportControl:[currentClass:Operation:ExportControl]]!><%%>
+<%
+      if (<![currentClass:Operation:OperationType]!>.compareTo("") != 0) {
+%>
+ <![[currentClass:Operation:OperationType]]!><%%>
+<%
+      }
+      if (<![currentClass:Operation:Static]!>.compareTo("Yes") == 0) {
+%>
+ static<%%>
+<%
+      }
+      if (<![currentClass:Operation:ReturnType]!>.compareTo("") != 0) {
+%>
+ <![currentClass:Operation:ReturnType]!><%%>
+<%
+      }
+%>
+ <![currentClass:Operation:Name]!>(<%%>
+<%
+      <!currentClass:Operation:Parameter!>!resetIterator();
+      while (<!currentClass:Operation:Parameter!>!next()) {
+%>
+ <![currentClass:Operation:Parameter:Type] [currentClass:Operation:Parameter:Name]!><%%>
+<%
+        if (<!currentClass:Operation:Parameter!>!isLast() == false) {
+%>
+,<%%>
+<%
+        }
+      }
+      if (<![currentClass:Operation:OperationType]!>.compareTo("Abstract") == 0) {
+%>
+ );
+<%
+      } else {
+        if (<![currentClass:Operation:Exceptions]!>.compareTo("") == 0) {
+%>
+ ) {
+<%
+        } else {
+%>
+ ) throws <![currentClass:Operation:Exceptions]!> {
+<%
+        }
+      }
+      if (<![currentClass:Operation:Stereotype]!>.compareTo("") == 0) {
+%>
+//$Section=Operation$ID=<![currentClass:Operation:UniqueId]!>$Preserve=yes
+//$Section=Operation$ID=<![currentClass:Operation:UniqueId]!>$Preserve=no
+    }
+
+<%
+      } else {
+%>
+<%
+      }
+    }
+
+//*********************************************************************
+// Attribute accessor methods
+//
+%>
+//----------------------------------------------------------------------------
+// This section is for generated attribute accessor methods.
+//----------------------------------------------------------------------------
+<%
+    <!currentClass:Attribute!>!resetIterator();
+    while (<!currentClass:Attribute!>!next()) {
+      <!prefix!>!reset("i");
+      if (<![currentClass:Attribute:Prefix]!>.compareTo("") != 0) <!prefix!>!reset(<![currentClass:Attribute:Prefix]!>);
+      if (<![currentClass:Attribute:OperationExportControl]!>.compareTo("None") != 0) {
+        if (<![currentClass:Attribute:Stereotype]!>.compareTo("") == 0) {
+%>
+//----------------------------------------------------------------------------
+// <![currentClass:Attribute:Name]!>
+//----------------------------------------------------------------------------
+<%
+//*********************************************************************
+// get
+//
+%>
+    <![JConfig:ExportControl:[currentClass:Attribute:OperationExportControl]]!> <%%>
+<![currentClass:Attribute:Type]!> <%%>
+get<![cap@[currentClass:Attribute:Name]]!>() {
+//$Section=Attribute get$ID=<![currentClass:Attribute:UniqueId]!>$Preserve=no
+        return <![prefix][currentClass:Attribute:Name]!>;
+//$Section=Attribute get$ID=<![currentClass:Attribute:UniqueId]!>$Preserve=no
+    }
+<%
+//*********************************************************************
+// set
+//
+%>
+    <![JConfig:ExportControl:[currentClass:Attribute:OperationExportControl]]!> void set<![cap@[currentClass:Attribute:Name]]!>(<%%>
+<![currentClass:Attribute:Type]!> <%%>
+aValue) {
+//$Section=Attribute set$ID=<![currentClass:Attribute:UniqueId]!>$Preserve=no
+        <![prefix][currentClass:Attribute:Name]!> = aValue;
+//$Section=Attribute set$ID=<![currentClass:Attribute:UniqueId]!>$Preserve=no
+    }
+<%
+        } else {
+
+//*********************************************************************
+// Generate accessor methods based on stereotype
+//
+//<$include [$scriptDirectory]\JAttributeAccessor[currentClass:Attribute:Stereotype].txt>
+        }
+      }
+    }
+//*********************************************************************
+// Association accessor methods
+//
+%>
+//----------------------------------------------------------------------------
+// This section is for generated association accessor methods.
+//----------------------------------------------------------------------------
+<%
+    <!currentClass:Association!>!resetIterator();
+    while (<!currentClass:Association!>!next()) {
+    <!prefix!>!reset("i");
+    if (<![currentClass:Association:Prefix]!>.compareTo("") != 0) <!prefix!>!reset(<![currentClass:Association:Prefix]!>);
+    if (<![currentClass:Association:OperationExportControl]!>.compareTo("None") != 0) {
+      if (<![currentClass:Association:RoleNavigable]!>.compareTo("True") == 0) {
+%>
+//----------------------------------------------------------------------------
+// <![currentClass:Association:RoleName]!>
+//----------------------------------------------------------------------------
+<%
+//*********************************************************************
+// get
+//
+%>
+    <![JConfig:ExportControl:[currentClass:Association:OperationExportControl]]!> <![currentClass:Association:RoleClassName]!> get[cap@[currentClass:Association:RoleName]]() {
+//$Section=Association get$ID=<![currentClass:Association:UniqueId]!>$Preserve=no
+        return <![prefix][currentClass:Association:RoleName]!>;
+//$Section=Association get$ID=<![currentClass:Association:UniqueId]!>$Preserve=no
+    }
+<%
+//*********************************************************************
+// set
+//
+%>
+    <![JConfig:ExportControl:[currentClass:Association:OperationExportControl]]!> void set[cap@[currentClass:Association:RoleName]](<![currentClass:Association:RoleClassName]!> aValue) {
+//$Section=Association set$ID=<![currentClass:Association:UniqueId]!>$Preserve=no
+        <![prefix][currentClass:Association:RoleName]!> = aValue;
+//$Section=Association set$ID=<![currentClass:Association:UniqueId]!>$Preserve=no
+    }
+<%
+        } else {
+//*********************************************************************
+// Generate accessor methods based on stereotype
+//
+          if (<![currentClass:Association:RoleNavigable]!>.compareTo("True") == 0) {
+
+//<$include [$scriptDirectory]\JAssociationAccessor[currentClass:Association:Stereotype].txt>
+
+          }
+        }
+      }
+    }
+//*********************************************************************
+// End sections
+//
+%>
+//$Section=CustomOperations$ID=<![currentClass:UniqueId]!>$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section is for custom operations.
+//----------------------------------------------------------------------------
+
+//$Section=Deleted$ID=<![currentClass:UniqueId]!>$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section contains orphaned code from deleted operations.
+//----------------------------------------------------------------------------
+
+//$Section=Deleted$ID=<![currentClass:UniqueId]!>$Preserve=no
+
+//End of class---------------
+}
+<%
+    outputManager.closeOutputFile();
+    Merge.getInstance().doMerge(<![currentModule:ModulePath][$jac:fileSeparator][currentModule:Name].[JConfig:ModuleExtension:[currentClass:Stereotype]]!>, <![$outputFile]!>, script);
+%>

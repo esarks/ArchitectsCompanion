@@ -1,0 +1,1166 @@
+<decisionRules>
+
+  <decision type='CP_ALLOTDEC'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when the Allotment Amount is not blank.'>
+          <field test='notBlank'>ALTMNT_AMT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Allotment Decision was '/>
+          <phrase field='ALTMNT_DECN_TN' subfield='ALTMNT_DECN_TC'/>
+          <phrase text=' in the amount of '/>
+          <phrase field='ALTMNT_AMT' format='currency'/>
+          <phrase text=' monthly to '/>
+          <phrase field='PTCPNT_ID' participant='true'/>
+          <phrase text=' effective '/>
+          <phrase field='AWD_EFCTV_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (c) when the Allotment Amount is blank.'>
+          <field test='isBlank'>ALTMNT_AMT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Allotment Decision for '/>
+          <phrase field='PTCPNT_ID' participant='true'/>
+          <phrase text=' was '/>
+          <phrase field='ALTMNT_DECN_TN' subfield='ALTMNT_DECN_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_BASELIGDEC'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when the Award Effective Date is not blank.'>
+          <field test='notBlank'>AWD_EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the decision was '/>
+          <phrase field='DECN_TN' subfield='DECN_TC'/>
+          <phrase text=' effective '/>
+          <phrase field='AWD_EFCTV_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (g) when Pay Grade is present.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank' connector='and'>AWD_EFCTV_DT</field>
+          <field test='notBlank'>PAY_GRADE_TN</field>
+          <phrase text=" The veteran's Pay Grade was recorded as "/>
+          <phrase field='PAY_GRADE_TN' subfield='PAY_GRADE_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (b) when the Award Effective Date is blank.'>
+          <field test='isBlank'>AWD_EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the decision was '/>
+          <phrase field='DECN_TN' subfield='DECN_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='4' when='Use (c) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>3</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' The decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_BRLBFT_DECN'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when a decision record exists.'>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the '/>
+          <phrase field='BURIAL_BNFT_TN' subfield='BURIAL_BNFT_TC'/>
+          <phrase text=' Decision was '/>
+          <phrase field='BURIAL_DECN_TN' subfield='BURIAL_DECN_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+     </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_BRLBEN_DECN'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when a decision record exists.'>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision for '/>
+          <phrase field='PTCPNT_ID_C' participant='true'/>
+          <phrase text=' was '/>
+          <phrase field='BENE_DECN_TN' subfield='BENE_DECN_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+     </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_BRLSUM_DECN'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when a decision record exists.'>
+          <phrase text='For the Burial Decision recorded on '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Final Disposition Date was '/>
+          <phrase field='FINAL_DISPTN_DT'/>
+          <phrase text=', the Total Burial Expenses were '/>
+          <phrase field='TL_BURIAL_EXPNS'/>
+          <phrase text=', the Transportation expenses were '/>
+          <phrase field='TRNSPN_EXPNSS'/>
+          <phrase text=' and the Marker Purchase Date was '/>
+          <phrase field='MARKER_PRCHS_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_CUSTCHLD_DECN'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when a decision record exists.'>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', '/>
+          <phrase field='PTCPNT_ID_C' participant='true'/>
+          <phrase text=' was recorded as being in the legal custody of '/>
+          <phrase field='CUSTDY_TN' subfield='CUSTDY_TC'/>
+          <phrase text=' on '/>
+          <phrase field='CUSTDY_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (f) when there is a value in Affects Childs Award On Date'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>AFFCTCHLD_DT</field>
+          <phrase text=" If an adjustment was required to the Child's award, it was to be applied on "/>
+          <phrase field='AFFCTCHLD_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_CLOTH_DECN'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when a decision record exists.'>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision on Clothing Allowance was '/>
+          <phrase field='DECN_TN' subfield='DECN_TC'/>
+          <phrase text=' for Eligibility Year '/>
+          <phrase field='ELGBTY_YR'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_DEPENDDEC'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when the Award Effective Date is not blank.'>
+          <field test='compareNotEquals' value='CPDC' connector='and'>AWD_TC</field>
+          <field test='notBlank'>AWD_EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the decision '/>
+          <phrase field='DEPNCY_DECN_TN' subfield='DEPNCY_DECN_TC'/>
+          <phrase text=' was recorded for '/>
+          <phrase field='PER_PTCPNT_ID' participant='true'/>
+          <phrase text=', along with the award status of '/>
+          <phrase field='DEPNCY_STT_TN' subfield='DEPNCY_STT_TC'/>
+          <phrase text=' and an award effective date of '/>
+          <phrase field='AWD_EFCTV_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the Award Effective Date is blank.'>
+          <field test='compareNotEquals' value='CPDC' connector='and'>AWD_TC</field>
+          <field test='isBlank'>AWD_EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the decision '/>
+          <phrase field='DEPNCY_DECN_TN' subfield='DEPNCY_DECN_TC'/>
+          <phrase text=' was recorded for '/>
+          <phrase field='PER_PTCPNT_ID' participant='true'/>
+          <phrase text=', along with the award status of '/>
+          <phrase field='DEPNCY_STT_TN' subfield='DEPNCY_STT_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (c) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <field test='compareNotEquals' value='CPDC' connector='and'>AWD_TC</field>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='4' when='Use (a) when award type is CPDC.'>
+          <field test='compareEquals' value='CPDC'>AWD_TC</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the decision '/>
+          <phrase field='DEPNCY_DECN_TN' subfield='DEPNCY_DECN_TC'/>
+          <phrase text=' was recorded for '/>
+          <phrase field='PER_PTCPNT_ID' participant='true'/>
+          <phrase text=', along with the award status '/>
+          <phrase field='DEPNCY_STT_TN' subfield='DEPNCY_STT_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='5' when='Use (b) when the award effective date is not blank.'>
+          <appendsTo>4</appendsTo>
+          <field test='compareEquals' value='CPDC' connector='and'>AWD_TC</field>
+          <field test='notBlank'>AWD_EFCTV_DT</field>
+          <phrase text=' The award effective date was recorded as '/>
+          <phrase field='AWD_EFCTV_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='6' when='Use (c) when the Invalid Decision Date is not blank.'>
+          <appendsTo>4</appendsTo>
+          <field test='compareEquals' value='CPDC' connector='and'>AWD_TC</field>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_DICSP_DECN'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when a decision record exists.'>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=", the DIC Spouse's Award Status was recorded as "/>
+          <phrase field='DICSP_TN' subfield='DICSP_TC'/>
+          <phrase text=' effective '/>
+          <phrase field='DICSPAWD_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (f) when Affected Childs Award Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>AFFCTCHLD_DT</field>
+          <phrase text=" If an adjustment to the child's award was necessary, the child's award adjustment date was recorded as "/>
+          <phrase field='AFFCTCHLD_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_DSBLTYDEC'>
+    <rules>
+      <rule>
+ 
+        <condition sequence='1' when='Use (a) when a decision record exists.'>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision was to begin recoupment of '/>
+          <phrase field='ORIGNL_BL'/>
+          <phrase text=' from the Compensation award effective '/>
+          <phrase field='AWD_EFCTV_DT'/>
+          <phrase text=' due to receipt of '/>
+          <phrase field='DIS_PAY_TN' subfield='DIS_PAY_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_DRILLPAYDEC'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when a decision record exists.'>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision was to offset '/>
+          <phrase field='DYS_NO'/>
+          <phrase text=' days of Compensation payments effective '/>
+          <phrase field='AWD_EFCTV_DT'/>
+          <phrase text=' based on Drill Periods during Fiscal Year '/>
+          <phrase field='FISCAL_YEAR_NO'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_AWDELECTDEC'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when the Award Effective Date is not blank.'>
+          <field test='notBlank'>AWD_EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision on the election of '/>
+          <phrase field='ELECTN_TN' subfield='ELECTN_TC'/>
+          <phrase text=' was '/>
+          <phrase field='ELECTN_DECN_TN' subfield='ELECTN_DECN_TC'/>
+          <phrase text=' effective '/>
+          <phrase field='AWD_EFCTV_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the Award Effective Date is blank.'>
+          <field test='isBlank'>AWD_EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision on the election of '/>
+          <phrase field='ELECTN_TN' subfield='ELECTN_TC'/>
+          <phrase text=' was '/>
+          <phrase field='ELECTN_DECN_TN' subfield='ELECTN_DECN_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (c) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_EXPNSDEC'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when From is not blank and To is blank.'>
+          <field test='notBlank' connector='and'>FROM_DT</field>
+          <field test='isBlank'>TO_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', expenses of '/>
+          <phrase field='USED_AMT' format='currency'/>
+          <phrase text=' with a frequency of '/>
+          <phrase field='FRQNCY_TN' subfield='FRQNCY_TC'/>
+          <phrase text=' was recorded from '/>
+          <phrase field='FROM_DT'/>
+          <phrase text=' with an expense type of '/>
+          <phrase field='EXPENSE_TN' subfield='EXPENSE_TC'/>
+          <phrase text=' were recorded.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when From is not blank and To is not blank.'>
+          <field test='notBlank' connector='and'>FROM_DT</field>
+          <field test='notBlank'>TO_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', expenses of '/>
+          <phrase field='USED_AMT' format='currency'/>
+          <phrase text=' with a frequency of '/>
+          <phrase field='FRQNCY_TN' subfield='FRQNCY_TC'/>
+          <phrase text=' was recorded from '/>
+          <phrase field='FROM_DT'/>
+          <phrase text=' to '/>
+          <phrase field='TO_DT'/>
+          <phrase text=' with an expense type of '/>
+          <phrase field='EXPENSE_TN' subfield='EXPENSE_TC'/>
+          <phrase text=' were recorded.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (c) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_INCOMEDEC'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when award type name is not CPD Parent, From is not blank and To is blank.'>
+          <field test='compareNotEquals' value='CPDP' connector='and'>AWD_TC</field>
+          <field test='notBlank' connector='and'>FROM_DT</field>
+          <field test='isBlank'>TO_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=' income from '/>
+          <phrase field='INCOME_TN' subfield='INCOME_TC'/>
+          <phrase text=' of '/>
+          <phrase field='USED_AMT' format='currency'/>
+          <phrase text=' '/>
+          <phrase field='FRQNCY_TN' subfield='FRQNCY_TC'/>
+          <phrase text=' from '/>
+          <phrase field='FROM_DT'/>
+          <phrase text=' was recorded for '/>
+          <phrase field='PER_PTCPNT_ID' participant='true'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when award type name is not CPD Parent, From is not blank and To is not blank.'>
+          <field test='compareNotEquals' value='CPDP' connector='and'>AWD_TC</field>
+          <field test='notBlank' connector='and'>FROM_DT</field>
+          <field test='notBlank'>TO_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=' income from '/>
+          <phrase field='INCOME_TN' subfield='INCOME_TC'/>
+          <phrase text=' of '/>
+          <phrase field='USED_AMT' format='currency'/>
+          <phrase text=' '/>
+          <phrase field='FRQNCY_TN' subfield='FRQNCY_TC'/>
+          <phrase text=' from '/>
+          <phrase field='FROM_DT'/>
+          <phrase text=' to '/>
+          <phrase field='TO_DT'/>
+          <phrase text=' was recorded for '/>
+          <phrase field='PER_PTCPNT_ID' participant='true'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (c) when award type is CPDP.'>
+          <field test='compareEquals' value='CPDP'>AWD_TC</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=' income from '/>
+          <phrase field='INCOME_TN' subfield='INCOME_TC'/>
+          <phrase text=' of '/>
+          <phrase field='CYR_REPRTD_AMT' format='currency'/>
+          <phrase text=' annually was recorded for '/>
+          <phrase field='FROM_DT'/>
+          <phrase text='. The countable portion of this income was '/>
+          <phrase field='CYR_CNTBL_AMT' format='currency'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='4' when='Use (h) when exclusion type and exclusion amount contain a value.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <appendsTo>3</appendsTo>
+          <field test='notBlank' connector='and'>EXCLSN_TC</field>
+          <field test='notBlank'>EXCLSN_AMT</field>
+          <phrase text=' An exclusion amount of '/>
+          <phrase field='EXCLSN_AMT' format='currency'/>
+          <phrase text=' was deducted due to '/>
+          <phrase field='EXCLSN_TN' subfield='EXCLSN_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='5' when='Use (d) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <appendsTo>3</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_BENEINSTDEC'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when Begin is not blank and End is not blank.'>
+          <field test='compareNotEquals' value='CA' connector='and'>AWD_TC</field>
+          <field test='notBlank' connector='and'>BEGIN_DT</field>
+          <field test='notBlank'>END_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision was to apply the '/>
+          <phrase field='INSTZN_TN' subfield='INSTZN_EFCTV_TC'/>
+          <phrase text=' from '/>
+          <phrase field='BEGIN_DT'/>
+          <phrase text=' to '/>
+          <phrase field='END_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when Begin is not blank and End is blank.'>
+          <field test='compareNotEquals' value='CA' connector='and'>AWD_TC</field>
+          <field test='notBlank' connector='and'>BEGIN_DT</field>
+          <field test='isBlank'>END_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision was to apply the '/>
+          <phrase field='INSTZN_TN' subfield='INSTZN_EFCTV_TC'/>
+          <phrase text=' from '/>
+          <phrase field='BEGIN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (c) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <field test='compareNotEquals' value='CA' connector='and'>AWD_TC</field>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='4' when='Use (d) when the award type is CA.'>
+          <field test='compareEquals' value='CA' connector='and'>AWD_TC</field>
+          <field test='isBlank' connector='and'>BEGIN_DT</field>
+          <field test='isBlank'>END_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision was to apply the Incarceration Reduction to the Clothing Allowance Payment.'/>
+        </condition>
+
+        <condition sequence='5' when='Use (h) and (i) to add related text.'>
+          <search>searchObject-&#62;getAWD_DECN_TYPEValue().compareTo("CP_INSTZN") &amp;&amp;</search>
+          <search>searchObject-&#62;getINSTZN_SNValue().compareTo(cp_awd_decn->getINSTZN_SNValue()) == 0 &amp;&amp;</search>
+          <search>searchObject-&#62;isAWD_DECN_USEDEmpty() == TRUE</search>
+        </condition>
+
+        <condition sequence='6' when='Use (c) when the Invalid Decision Date is not blank.'>
+          <appendsTo>4</appendsTo>
+          <field test='compareEquals' value='CA' connector='and'>AWD_TC</field>
+          <field test='isBlank' connector='and'>BEGIN_DT</field>
+          <field test='isBlank' connector='and'>END_DT</field>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_INSTZN'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (h) for award types other than Clothing.'>
+          <field test='compareNotEquals' value='CA' connector='and'>AWD_TC</field>
+          <field test='notBlank' connector='and'>BEGIN_DT</field>
+          <field test='notBlank'>END_DT</field>
+          <phrase text=' This was based on a '/>
+          <phrase field='INSTZN_TN' subfield='INSTZN_TC'/>
+          <phrase text=' Institutionalization from '/>
+          <phrase field='BEGIN_DT'/>
+          <phrase text=' to '/>
+          <phrase field='END_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (h) for award types other than Clothing.'>
+          <appendsTo>1</appendsTo>
+          <field test='compareNotEquals' value='CA' connector='and'>AWD_TC</field>
+          <field test='notBlank' connector='and'>BEGIN_DT</field>
+          <field test='isBlank'>END_DT</field>
+          <phrase text=' This was based on a '/>
+          <phrase field='INSTZN_TN' subfield='INSTZN_TC'/>
+          <phrase text=' Institutionalization from '/>
+          <phrase field='BEGIN_DT'/>
+          <phrase text=' to the present.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (i) for Clothing award types.'>
+          <appendsTo>1</appendsTo>
+          <field test='compareEquals' value='CA'>AWD_TC</field>
+          <phrase text=' This was based on a period of incarceration in a penal institution.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_MOH_DECN'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when the Award Effective Date is not blank.'>
+          <field test='notBlank'>AWD_EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the decision was '/>
+          <phrase field='MOH_DECN_TN' subfield='MOH_DECN_TC'/>
+          <phrase text=' effective '/>
+          <phrase field='AWD_EFCTV_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the Award Effective Date is blank.'>
+          <field test='isBlank'>AWD_EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the decision was '/>
+          <phrase field='MOH_DECN_TN' subfield='MOH_DECN_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (c) when the MOH Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <field test='notBlank'>MOH_DT</field>
+          <phrase text=' The Medal of Honor Date was '/>
+          <phrase field='MOH_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='4' when='Use (d) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_MLTYELIGDEC'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when a decision record exists.'>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Military Eligibility Decision was '/>
+          <phrase field='DECN_TN' subfield='DECN_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the Admin Decn Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>ADMIN_DECN_DT</field>
+          <phrase text=' This was based on an Administrative Decision made on '/>
+          <phrase field='ADMIN_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (c) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_MISC_DECN'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (c) the gross is \>= 0 and the award effective date is not blank.'>
+          <field test='notBlank' connector='and'>GROSS_AMT</field>
+          <field test='gtEqZero' connector='and'>GROSS_AMT</field>
+          <field test='notBlank'>EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', an award line was added with the award effective date of '/>
+          <phrase field='EFCTV_DT'/>
+          <phrase text=', a gross amount of '/>
+          <phrase field='GROSS_AMT' format='currency'/>
+          <phrase text=' and a net of '/>
+          <phrase field='NET_AMT' format='currency'/>
+          <phrase text='. The award reason was '/>
+          <phrase field='AWD_LINE_RSN_TN'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (d) when field is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>INSTN_WH_AMT</field>
+          <phrase text=' An Institutionalization Withholding of '/>
+          <phrase field='INSTN_WH_AMT' format='currency'/>
+          <phrase text=' was deducted from the gross amount.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (e) when field is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>OTH_MTHLY_AAA</field>
+          <phrase text=' An Other Monthly Withholding of '/>
+          <phrase field='OTH_MTHLY_AAA' format='currency'/>
+          <phrase text=' was deducted from the gross amount.'/>
+        </condition>
+
+        <condition sequence='4' when='Use (f) when field is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>DIS_LVL_TN</field>
+          <phrase text=' The disability level on this date was '/>
+          <phrase field='DIS_LVL_TN' subfield='DIS_LVL_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='5' when='Use (g) when field is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>SPEC_MTH_ENT_TN</field>
+          <phrase text=' A special monthly entitlement of '/>
+          <phrase field='SPEC_MTH_ENT_TN' subfield='SPEC_MTH_ENT_TC'/>
+          <phrase text=' was included on this date.'/>
+        </condition>
+
+        <condition sequence='6' when='Use (h) when field is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>PIVAP_AMT</field>
+          <phrase text=' The 1978 Protected Income for VA Purposes was '/>
+          <phrase field='PIVAP_AMT' format='currency'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='7' when='Use (i) when field is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>IVAP_AMT</field>
+          <phrase text=' The current Income for VA Purposes is '/>
+          <phrase field='IVAP_AMT' format='currency'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='8' when='Use (j) when field is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>AWD_BASIS_TXT</field>
+          <phrase text=' The pay grade and number of years service was '/>
+          <phrase field='AWD_BASIS_TXT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='9' when='Use (k) when field is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>DEPENDS_TN</field>
+          <phrase text=' The types of dependents considered on this date was '/>
+          <phrase field='DEPENDS_TN' subfield='DEPENDS_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='10' when='Use (l) when field is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>PARENT_NO</field>
+          <phrase text=' The total number of eligibile parents on this date was '/>
+          <phrase field='PARENT_NO'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='11' when='Use (m) when field is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='compareEquals' value='306C' connector='or' paren='open'>AWD_TC</field>
+          <field test='compareEquals' value='306S' connector='or'>AWD_TC</field>
+          <field test='compareEquals' value='DCC' connector='or'>AWD_TC</field>
+          <field test='compareEquals' value='DCS' connector='or'>AWD_TC</field>
+          <field test='compareEquals' value='1312S' connector='or'>AWD_TC</field>
+          <field test='compareEquals' value='OLC' connector='or'>AWD_TC</field>
+          <field test='compareEquals' value='OLS' connector='and' paren='close'>AWD_TC</field>
+          <field test='notBlank'>DEPENDS_NO</field>
+          <phrase text=' The total number of eligible children on this date was '/>
+          <phrase field='DEPENDS_NO'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='12' when='Use (n) when field is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='compareEquals' value='306V' connector='and'>AWD_TC</field>
+          <field test='notBlank'>DEPENDS_NO</field>
+          <phrase text=' The total number of elibible dependents on this date was '/>
+          <phrase field='DEPENDS_NO'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='13' when='Use (p) when field is not blank.'>
+          <field test='isBlank' connector='and'>GROSS_AMT</field>
+          <field test='isBlank'>EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', a decision was added that no benefits were payable due to the following reason '/>
+          <phrase field='AWD_LINE_RSN_TN' subfield='AWD_LINE_RSN_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='14' when='Use (o) to add related bene.'>
+          <search>searchObject-&#62;getAWD_DECN_TYPEValue().compareTo("CP_MISC_DECN_BEN") &amp;&amp;</search>
+          <search>searchObject-&#62;getMISC_DECN_IDValue().compareTo(cp_awd_decn->getMISC_DECN_IDValue()) == 0 &amp;&amp;</search>
+          <search>searchObject-&#62;isAWD_DECN_USEDEmpty() == TRUE</search>
+        </condition>
+
+        <condition sequence='15' when='Use (t) to add birth defects.'>
+          <search>searchObject-&#62;getAWD_DECN_TYPEValue().compareTo("CP_BDFCT") == 0</search>
+        </condition>
+
+        <condition sequence='16' when='Use (t) to add birth defects.'>
+          <search>searchObject-&#62;getAWD_DECN_TYPEValue().compareTo("CP_BDFCT_DTL") == 0</search>
+        </condition>
+
+        <condition sequence='17' when='Use (q) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>13</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_MISC_DECN_BEN'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (o) from CP_MISC_DECN where CP_MISC_DECN_BEN matches.'>
+          <field test='gtZero'>MISC_DECN_AMT</field>
+          <phrase text=' '/>
+          <phrase field='PTCPNT_ID_C' participant='true'/>
+          <phrase text=' was the '/>
+          <phrase field='AWD_BENE_TN' subfield='AWD_BENE_TC'/>
+          <phrase text=' and was entitled to '/>
+          <phrase field='MISC_DECN_AMT' format='currency'/>
+          <phrase text=' of the total available on this award line.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_BDFCT' setused='false'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when=''>
+          <phrase field='BIRTH_DFCT_TXT'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_BDFCT_DTL' setused='false'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when=''>
+          <phrase text='Granted Birth Defect(s):'/>
+          <phrase field='BD_TN' subfield='BD_TC'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_NETWORTHDEC'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when the Award Effective Date is not blank.'>
+          <field test='notBlank'>AWD_EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision was '/>
+          <phrase field='NW_DECN_TN' subfield='NW_DECN_TC'/>
+          <phrase text=' effective '/>
+          <phrase field='AWD_EFCTV_DT'/>
+          <phrase text=' based on Net Worth of '/>
+          <phrase field='FAM_NW_AMT' format='currency'/>
+          <phrase text=' on '/>
+          <phrase field='NW_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (c) when the Award Effective Date is blank.'>
+          <field test='isBlank'>AWD_EFCTV_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision was '/>
+          <phrase field='NW_DECN_TN' subfield='NW_DECN_TC'/>
+          <phrase text=' based on Net Worth of '/>
+          <phrase field='FAM_NW_AMT' format='currency'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text='This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_PMRRD_DECN'>
+    <rules>
+      <rule>
+
+        <condition sequence='1' when='Use (a) when the decision exists.'>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the marital status of '/>
+          <phrase field='PTCPNT_ID_C' participant='true'/>
+          <phrase text=' was recorded as '/>
+          <phrase field='PMRRD_TN'/>
+          <phrase text=' effective '/>
+          <phrase field='AWDEFCTV_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text='This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_RBA_PRFIL2'>
+    <rules>
+      <rule>
+ 
+        <condition sequence='1' when='Use for rating profile.'>
+          <phrase text='A rating dated '/>
+          <phrase field='RATING_DT'/>
+          <phrase text=' determined the following:'/>
+        </condition>
+
+        <condition sequence='2' when='Use for issue text.'>
+          <search>searchObject-&#62;getPRFL_DTValue().compareTo(cp_awd_decn->getPRFL_DTValue()) == 0</search>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_RBA_ISSUE2'>
+    <rules>
+      <rule>
+ 
+        <condition sequence='1' when='Use for rating issue.'>
+          <phrase field='DECN_TXT'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_RETDDEC'>
+    <rules>
+      <rule>
+ 
+        <condition sequence='1' when='Use (a) when the To Date is blank.'>
+          <field test='isBlank'>TO_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision was to offset Compensation in the amount of '/>
+          <phrase field='OFST_AMT' format='currency'/>
+          <phrase text=' from '/>
+          <phrase field='FROM_DT'/>
+          <phrase text=' due to receipt of '/>
+          <phrase field='RTRMNT_PAY_TN' subfield='RTRMNT_PAY_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (b) when the To Date is not blank.'>
+          <field test='notBlank'>TO_DT</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision was to offset Compensation in the amount of '/>
+          <phrase field='OFST_AMT' format='currency'/>
+          <phrase text=' from '/>
+          <phrase field='FROM_DT'/>
+          <phrase text=' to '/>
+          <phrase field='TO_DT'/>
+          <phrase text=' due to receipt of '/>
+          <phrase field='RTRMNT_PAY_TN' subfield='RTRMNT_PAY_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (e) when a Waiver Date exists.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <field test='notBlank'>TOT_WAIV_DT</field>
+          <phrase text=' Records show this is a Total Waiver case from '/>
+          <phrase field='TOT_WAIV_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='4' when='Use (c) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text=' This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+  <decision type='CP_SEPATNDEC'>
+    <rules>
+      <rule>
+ 
+        <condition sequence='1' when='Use (a) when award type is CPL.'>
+          <field test='compareEquals' value='CPL'>AWD_TC</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Decision was to begin reoupment of '/>
+          <phrase field='ORIGNL_BL'/>
+          <phrase text=' from the award effective '/>
+          <phrase field='AWD_EFCTV_DT'/>
+          <phrase text=' due to receipt of '/>
+          <phrase field='SEP_PAY_TN' subfield='SEP_PAY_TC'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='2' when='Use (e) when award type is CPD.'>
+          <field test='compareNotEquals' value='CPL'>AWD_TC</field>
+          <phrase text='On '/>
+          <phrase field='DECN_DT'/>
+          <phrase text=', the Tort for DIC Decision was to begin recoupment of a '/>
+          <phrase field='ORIGNL_BL'/>
+          <phrase text=' Tort settlement on '/>
+          <phrase field='AWD_EFCTV_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+        <condition sequence='3' when='Use (b) when the Invalid Decision Date is not blank.'>
+          <appendsTo>1</appendsTo>
+          <appendsTo>2</appendsTo>
+          <field test='notBlank'>INVLD_DECN_DT</field>
+          <phrase text='This decision was invalidated on '/>
+          <phrase field='INVLD_DECN_DT'/>
+          <phrase text='.'/>
+        </condition>
+
+      </rule>
+    </rules>
+  </decision>
+
+</decisionRules>

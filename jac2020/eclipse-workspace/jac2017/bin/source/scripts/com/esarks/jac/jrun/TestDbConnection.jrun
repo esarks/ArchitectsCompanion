@@ -1,0 +1,3 @@
+<jacrun>
+  <script name="com.esarks.jac.jrun.TestDbConnection" method="execute" />
+</jacrun>

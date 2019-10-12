@@ -1,0 +1,27 @@
+<%
+
+  DbConnection lDbConnection = symbolTable.getDbConnection();
+  lDbConnection.connect("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@hp5185:1521:asdc", "asdc", "asdcnt");
+
+  lDbConnection.getColumns(script, "CALENDAR_ITEM");
+//  lDbConnection.executeStatement("select * from calendar_item where GROUP_CODE='DEMO'");
+  lDbConnection.executeStatement("select * from calendar_item");
+
+  while (lDbConnection.next()) {
+
+%>
+***********************************
+<%
+
+    <!DbMetaData:Table:Column!>!resetIterator();
+    while (<!DbMetaData:Table:Column!>!next()) {
+
+%>
+<![DbMetaData:Table:Column] = [sqlColumn@[DbMetaData:Table:Column]]!>
+<%
+
+
+    }
+  }
+
+%>

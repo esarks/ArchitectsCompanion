@@ -1,0 +1,30 @@
+Rules Architecture:
+
+Need way to define the rule.  Each rule definition can be contextual.
+Rule definition with an XML entry point.
+
+
+Need a way to find the rule (directory and naming service).
+
+- Rule directory, pointing to rule definitions.
+- ruleDirectory:rule contains the name of the rule
+- 
+
+Need a way to trigger the rule (an action point).
+
+
+Need a way to deal with rule results.
+
+
+How to pass arguments to rules (input descriptors, result descriptors)
+
+
+
+
+I need to know how to identify the rule to process, when to trigger it, and how to find the rule.
+Then I need to be able to invoke the rule, and get the results.
+
+A rule can exist as direct text in the definition (to be put into a class with the rule name?)
+Or it can trigger a script...
+
+Can a rule be trigger upon data load?

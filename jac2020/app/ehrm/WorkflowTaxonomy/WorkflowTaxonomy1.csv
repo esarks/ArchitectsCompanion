@@ -1,0 +1,33 @@
+wf1866,1VA - VBA - Exam-Management (IOC)
+,SUBFLOW,wf1998,1VA - C&P Scheduling - Ambulatory - Orders to Scheduling
+,SUBFLOW,wf1987,1VA - VBA - Perform Examination (IOC)
+,SUBFLOW,wf1995,1VA - VBA - Exam-Management - Child Orders (IOC)
+,SUBFLOW,wf771,1VA - Scheduling - Ambulatory - No Show-Contact
+,SUBFLOW,wf1260,1VA - Registration/Scheduling - In Person Check In
+wf1987,1VA - VBA - Perform Examination (IOC)
+wf1873,1VA - VBA - VR&E Block 1
+,SUBFLOW,wf319,1VA - Scheduling - Ambulatory - Orders to Scheduling
+wf2008,1VA - VBA - 7131 Process
+wf1989,1VA - VBA - Deliver Exam Results
+,SUBFLOW,wf1987,1VA - VBA - Perform Examination (IOC)
+wf1998,1VA - C&P Scheduling - Ambulatory - Orders to Scheduling
+,SUBFLOW,wf32,1VA - Scheduling - Ambulatory - Schedule Appointment
+,SUBFLOW,wf1999,1VA - Scheduling - Ambulatory - VBA Record an Appointment Contact
+wf1353,1VA - Registration - OHI Collection
+wf1260,1VA - Registration/Scheduling - In Person Check In
+,SUBFLOW,wf1353,1VA - Registration - OHI Collection
+wf35,1VA - Scheduling - Ambulatory - No Show Process
+wf771,1VA - Scheduling - Ambulatory - No Show-Contact
+,SUBFLOW,wf222,1VA - VBA - Scheduling - Ambulatory - VBA Record an Appointment Contact
+,SUBFLOW,wf34,1VA - Scheduling - Ambulatory - Reschedule Appointment
+,SUBFLOW,wf35,1VA - Scheduling - Ambulatory - No Show Process
+wf319,1VA - Scheduling - Ambulatory - Orders to Scheduling
+,SUBFLOW,wf32,1VA - Scheduling - Ambulatory - Schedule Appointment
+,SUBFLOW,w222,
+wf222,1VA - VBA - Scheduling - Ambulatory - VBA Record an Appointment Contact
+wf34,1VA - Scheduling - Ambulatory - Reschedule Appointment
+wf32,1VA - Scheduling - Ambulatory - Schedule Appointment
+wf1999,1VA - Scheduling - Ambulatory - VBA Record an Appointment Contact
+wf1993,1VA - VBA - Capacity & Capability (IOC)
+wf1990,1VA - VBA - Enterprise Medical Records Search (IOC)
+wf1995,1VA - VBA - Exam-Management - Child Orders (IOC)

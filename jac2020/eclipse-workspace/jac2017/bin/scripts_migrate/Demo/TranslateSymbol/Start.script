@@ -1,0 +1,20 @@
+***************************************
+***************************************
+
+<%
+
+  <!visibility!>!set("Public Visibility");
+  <!java.Public Visibility!>!set("public");
+
+%>
+1. Visibility is <![visibility]!>.
+2. Java keyword for <![visibility]!> is <![java.[visibility]]!>.
+<%
+
+
+
+%>
+
+
+***************************************
+***************************************

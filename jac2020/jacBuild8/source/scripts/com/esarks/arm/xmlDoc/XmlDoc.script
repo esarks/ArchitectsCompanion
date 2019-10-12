@@ -1,0 +1,26 @@
+var protected String iXmlPath="";
+end
+
+public void execute(String aXmlPath) {
+
+  iXmlPath = aXmlPath;
+  parseXmlPath(aXmlPath);
+
+  if (<!xdoc!>!size() == 0 && <!jacrun:xdoc!>!size() > 0) <!jacrun:xdoc!>!alias("xdoc");
+  
+  int lIdx=0;
+  for (lIdx = aXmlPath.length()-1; lIdx >= 0; lIdx--) {
+    if (aXmlPath.charAt(lIdx) == '.') break;
+  }
+
+  if (!iOutputManager.isJspOpen()) openOutput(aXmlPath.substring(0,lIdx) + getDocType());
+    
+  execute();
+  
+  closeOutput();
+}
+
+protected String getDocType() {
+  return ".html";
+}
+

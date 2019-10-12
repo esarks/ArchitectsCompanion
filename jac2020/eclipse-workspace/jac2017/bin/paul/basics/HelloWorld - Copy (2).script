@@ -1,0 +1,50 @@
+
+public void execute() {
+
+
+%>
+HelloWorld w/ JSONObject7
+<%
+
+String jsonString = readAllBytesJava7("C:/ArchitectsCompanion/jac2017/app/paul/basics/HelloWorld.json");
+
+try {
+
+  JSONParser parser = new JSONParser();
+
+  Object object = parser.parse(jsonString);
+
+} catch (org.json.simple.parser.ParseException e) {
+
+JSONObject jsonObject = new JSONObject(jsonString);
+
+%>
+Exception: <!%e!>
+<%
+}
+
+
+%>
+Finished
+<%
+
+}
+
+public String readAllBytesJava7(String filePath) {
+
+//        String content = "";
+// 
+//        try
+//        {
+//            content = new String ( Files.readAllBytes( Paths.get(filePath) ) );
+//        }
+//        catch (IOException e)
+//        {
+//            e.printStackTrace();
+//        }
+// 
+//        return content;
+
+    }
+
+

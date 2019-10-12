@@ -1,0 +1,39 @@
+<mic.element type="Component" title="">
+
+  <owl title="Owl Title"/>
+  
+<knowledgeBase>
+
+  <facts>
+
+    <fact name="w1" lid="B1" attr="on"      rid="B2" />
+    <fact name="w2" lid="B1" attr="on"      rid="B3" />
+    <fact name="w3" lid="B1" attr="color"   const="red" />
+    <fact name="w4" lid="B2" attr="on"      const="table" />
+    <fact name="w5" lid="B2" attr="left-of" rid="B3" />
+    <fact name="w6" lid="B2" attr="color"   const="blue" />
+    <fact name="w7" lid="B3" attr="left-of" rid="B4" />
+    <fact name="w8" lid="B3" attr="on"      const="table" />
+    <fact name="w9" lid="B3" attr="color"   const="red" />
+
+  </facts>
+
+  <rules>
+
+    <rule name="find-stack-of-two-blocks-to-the-left-of-a-red-block">
+      <condition name="c1" lhs="X" attr="on"      rhs="Y" />
+      <condition name="c2" lhs="Y" attr="left-of" rhs="Z" />
+      <condition name="c3" lhs="Z" attr="color"   const="red" />
+    </rule>
+
+    <rule name="slightly-modified-version-of-previous-production">
+      <condition name="c1" lhs="X" attr="on"      rhs="Y" />
+      <condition name="c2" lhs="Y" attr="left-of" rhs="Z" />
+      <condition name="c3" lhs="Y" attr="color"   const="red" />
+    </rule>
+
+  </rules>
+
+</knowledgeBase>
+
+</mic.element>

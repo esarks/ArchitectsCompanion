@@ -1,0 +1,60 @@
+//  Generated at 2019.09.11 08:51:42.904 AM CDT by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+
+  public void execute() {
+
+    ArrayList lCollection = performService();
+
+    com.esarks.arm.model.jeo.ServiceJeo lDocumentServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+
+    iScript.execMethod("com.esarks.arm.logging.ProcessRpt", "render", new Object[]{"com.esarks.arm.logging.ProcessRpt", lDocumentServiceJeo});
+
+  }
+  
+  public void performService() {
+
+    // Create the service jeo
+    com.esarks.arm.model.jeo.ServiceJeo lServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+
+    // Call the service
+    iScript.execMethod("!!com...!!", "!!serviceName!!", new Object[]{lServiceJeo});
+    if (lServiceJeo.getError() != null && lServiceJeo.getError().getSeverity() < 5) {
+      System.out.println(lServiceJeo.getError().getTitle());
+      System.out.println(lServiceJeo.getError().getText());
+      System.out.println(lServiceJeo.getError().getLocation());
+      return;
+    }
+
+    // Get the reply objects
+    Jeo lReplyJeo = lServiceJeo.getReply();
+    ArrayList lArrayList = lReplyJeo.getJeoByInstanceName("!!com...!!");
+
+    int lIdx = 0;
+    for (lIdx=0; lIdx < lArrayList.size(); lIdx++) {
+      !!com...!! lJeo = (!!com...!!) lArrayList.get(lIdx);
+    }
+
+  }
+  
+  public Jeo createProcess(Jeo aJeo);
+
+    com.esarks.arm.model.jeo.ProcessJeo lJeo = new com.esarks.arm.model.jeo.ProcessJeo("process");
+
+    lJeo.setEventTime(aJeo.get!!Attribute!!PropertyValue().toString());
+    lJeo.setEventCode(aJeo.get!!Attribute!!PropertyValue().toString());
+    lJeo.setDescription(aJeo.get!!Attribute!!PropertyValue().toString());
+
+    return lJeo;
+  }
+
+  public Jeo createItem(Jeo aJeo);
+
+    com.esarks.arm.model.jeo.ProcessJeo lJeo = new com.esarks.arm.model.jeo.ProcessJeo("item");
+
+    lJeo.setEventTime(aJeo.get!!Attribute!!PropertyValue().toString());
+    lJeo.setEventCode(aJeo.get!!Attribute!!PropertyValue().toString());
+    lJeo.setDescription(aJeo.get!!Attribute!!PropertyValue().toString());
+
+    return lJeo;
+  }
+
+}

@@ -1,0 +1,125 @@
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:1: package <#[$jac:script:package]#>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:2: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:3: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:4: import java.util.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:5: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:6: import java.io.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:7: import java.util.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:8: import java.text.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:9: import java.net.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:10: //import java.sql.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:11: //import javax.servlet.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:12: //import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:13: //import javax.servlet.jsp.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptImport.script:14: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:1: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:2: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:3: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:4: <#var#>
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:5: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:6:   private String iScriptPackage = "<#[$jac:script:package]#>";
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:7:   private String iScriptName = "<#[$jac:script]#>";
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:8: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:9:   protected <#[$jac:script]#>() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:10:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:11: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:12:   public <#[$jac:script]#>(Script aScript) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:13: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:14:     super(aScript);
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:15: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:16:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:17: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:18:   public void execute() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:19:     
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPrefix.script:20: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:1: // Begin: com.esarks.arm.scripts.FinalReturnMethod
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:2: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:3:   if (<!$jac:script:xml:return:cantBeReached!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:4: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:5:     if (!<![$jac:script:xml:return:suppressLog]!>.equals("true")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:6: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:7:     if (iMicLog.test(Log._APP)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:8:       lMethodStopDate = new java.util.Date();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:9:       iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Normal final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:10:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:11: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:12:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:13:     if (<!$jac:script:xml:return:normal!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:14: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:15:     return <![$jac:script:xml:return:normal]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:16: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:17:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:18:     if (<!$jac:script:xml:return:normal!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:19: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:20:     return;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:21: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:22:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:23:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:24: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:25: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:26:   } catch (Throwable e) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:27:     setContext(iScript.getMasterScript());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:28:     iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event")).set(e.getMessage());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:29:     iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:severity")).set("fatal");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:30:     iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptPackage")).set(iScriptPackage);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:31:     iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptName")).set(iScriptName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:32:     restoreContext();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:33:     setExit();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:34: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:35: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:36:   if (!<![$jac:script:xml:return:suppressExceptionReport]!>.equals("true")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:37: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:38:     iScript.execMethod("com.esarks.arm.logging.ExceptionRptController", "execute", new Object[]{"", iScriptFullName, lMethodSignature, "fatal", lMethodLocation, e.getMessage(), "Unhandled exception.", "Review this exception to determine proper handling."});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:39: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:40:     System.out.println("ExceptionRptController called..." + e.getMessage());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:41: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:42:     com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:43:     com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:44:     lExceptionServiceJeo.addJeo(lExceptionJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:45:     java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:46:     lExceptionJeo.setTime(lExceptionTimestamp);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:47:     lExceptionJeo.setModule(iScriptFullName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:48:     lExceptionJeo.setMethod(lMethodSignature);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:49:     lExceptionJeo.setSeverity("unknown");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:50:     lExceptionJeo.setLocation(lMethodLocation);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:51:     lExceptionJeo.setDescription(e.getMessage());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:52:     lExceptionJeo.setAction("unknown");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:53:     lExceptionJeo.setResolution("unknown");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:54: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:55:     StackTraceElement[] lStackTraceElements = e.getStackTrace();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:56:     for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:57:       com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:58:       lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:59:       lExceptionJeo.addJeo(lStackExceptionJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:60:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:61: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:62:     iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:63: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:64: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:65:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:66: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:67:     if (iMicLog.test(Log._APP)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:68:       lMethodStopDate = new java.util.Date();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:69:       iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:70:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:71:     if (iMicLog.test(Log._ERR)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:72:       iMicLog.println(Log._ERR, "ERR-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!" + e.getMessage());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:73:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:74: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:75:   if (<!$jac:script:xml:return:error!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:76: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:77:     return <![$jac:script:xml:return:error]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:78: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:79:   } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:80: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:81:     return;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:82: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:83:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:84: %>
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:85:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:86:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\scripts\FinalReturnMethod.script:87: // End: com.esarks.arm.scripts.FinalReturnMethod
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:1: <%
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:2:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:3: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\ScriptPostfix.script:4: 

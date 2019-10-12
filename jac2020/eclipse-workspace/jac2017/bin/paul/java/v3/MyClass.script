@@ -1,0 +1,36 @@
+package com.learning.paul.java;
+
+import java.util.*;
+
+public class MyClass {
+
+  public MyClass() {
+  }
+
+  public void myMethod() {
+  
+    System.out.println("MyClass says Hello World!");
+
+    com.esarks.arm.model.jeo.service lServiceJeo = new com.esarks.arm.model.jeo.service();
+
+    com.learning.paul.java.MyJeo lMyJeo;
+    
+    lMyJeo = new com.learning.paul.java.MyJeo();
+    lMyJeo.setMyField("one");
+    lServiceJeo.addJeo(lMyJeo);
+    
+    lMyJeo = new com.learning.paul.java.MyJeo();
+    lMyJeo.setMyField("two");
+    lServiceJeo.addJeo(lMyJeo);
+
+    lMyJeo = new com.learning.paul.java.MyJeo();
+    lMyJeo.setMyField("three");
+    lServiceJeo.addJeo(lMyJeo);
+    
+    ArrayList lArrayList = lServiceJeo.getJeoByInstanceName("com.learning.paul.java.MyJeo");
+    lMyJeo = (com.learning.paul.java.MyJeo) lArrayList.get(1);
+    System.out.println(lMyJeo.getMyField());
+    
+  }
+  
+}

@@ -1,0 +1,20 @@
+<%
+// Set up Java generator environment variables
+
+    <!sectionMarker!>!reset("//$Section=");
+    <!preserveMarker!>!reset("$Preserve=yes");
+    <!noPreserveMarker!>!reset("$Preserve=no");
+    <!discardPreserveMarker!>!reset("$Preserve=discard");
+    <!preservePreamble!>!reset("no");
+    <!comments!>!reset("//");
+    <!excludeCompare!>!reset("//  Generated at");
+    <!trimOutput!>!reset("yes");
+
+    parseXml("temp.domainModel");
+
+    <!JGenerateClasses!>!loadScript("jacJ.JGenerateClasses");
+    <!JGenerateClass!>!loadScript("jacJ.JGenerateClass");
+    <!JGenerateModule!>!loadScript("jacJ.JGenerateModule");
+
+    <!JGenerateClasses!>!execMethod("execute");
+%>

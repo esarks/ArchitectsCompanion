@@ -1,0 +1,21 @@
+Tue Oct 01 21:15:52 EDT 2019: Start
+0: Open log file.
+17: DEBUG-com.esarks.jac.jac:getScript()!Log opened by jac!Debug=9!DebugClass=9
+391: DEBUG-com.esarks.jac.jac:getScript()!$jac:context=jac
+391: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:classpath=C:\ArchitectsCompanion\jac2017\classes;C:\ArchitectsCompanion\jac2017\lib\jac\jac.jar;C:\ArchitectsCompanion\jac2017\lib\mic\mic.jar;C:\ArchitectsCompanion\jac2017\lib\jetty\org.mortbay.jetty.jar;C:\ArchitectsCompanion\jac2017\lib\jetty\org.mortbay.jmx.jar;C:\ArchitectsCompanion\jac2017\lib\jetty\javax.servlet.jar;C:\ArchitectsCompanion\jac2017\jdk1.8.0_112\lib\tools.jar;C:\ArchitectsCompanion\jac2017\lib\mysql-connector-java-5.1.18\mysql-connector-java-5.1.18-bin.jar;C:\ArchitectsCompanion\jac2017\lib\crimson\crimson.jar;C:\ArchitectsCompanion\jac2017\lib\jacob-1.19\jacob.jar;C:\ArchitectsCompanion\jac2017\lib\jni4net-0.8.6.0-bin\lib\jni4net.j-0.8.6.0.jar;C:\ArchitectsCompanion\jac2017\lib\json-simple-1.1.jar\json-simple-1.1.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\hapi-base-2.2.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\hapi-examples-2.2.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\hapi-hl7overhttp-2.2.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\hapi-structures-v21-2.2.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\hapi-structures-v22-2.2.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\hapi-structures-v23-2.2.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\hapi-structures-v231-2.2.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\hapi-structures-v24-2.2.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\hapi-structures-v25-2.2.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\hapi-structures-v251-2.2.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\hapi-structures-v26-2.2.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\log4j-1.2.17.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\slf4j-api-1.6.6.jar;C:\ArchitectsCompanion\jac2017\lib\hapi-dist-2.2-all\lib\slf4j-log4j12-1.6.6.jar
+402: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:home=C:\ArchitectsCompanion\jac2017
+402: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:work=C:\ArchitectsCompanion\jac2017\classes
+402: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:scripts=C:\ArchitectsCompanion\jac2017\app
+402: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:document=C:\Users\ptm
+402: DEBUG-com.esarks.jac.jac:getScript()!$jac:fileSeparator=\
+402: DEBUG-com.esarks.jac.jac:getScript()!$jac:verifyScripts=true
+402: DEBUG-com.esarks.jac.jac:getScript()!$jac:compile=true
+402: DEBUG-com.esarks.jac.jac:getScript()!$jac:dateTime=2019.10.01 09:15:53.029 PM EDT
+402: DEBUG-com.esarks.jac.jac:getScript()!Script=com.esarks.jac.jrun.Job
+402: DEBUG-com.esarks.jac.jac:getScript()!Method=execute
+403: DEBUG-com.esarks.jac.jac:getScript()!Argument=com.esarks.jac.jrun.Jrun
+403: DEBUG-com.esarks.jac.jac:getScript()!Argument=execute
+403: DEBUG-com.esarks.jac.jac:getScript()!Argument=C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.jrun
+403: DEBUG-com.esarks.jac.jac:getScript()!Calling Script.execMethod with arguments...
+428: APP-com.esarks.jac.jrun.Jrun:execute(String)!Enter method!aXml="C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomyBuild.jrun"
+987: APP-com.esarks.jac.jrun.Jrun:execute(String)!Normal final exit method!Elapsed time = 559

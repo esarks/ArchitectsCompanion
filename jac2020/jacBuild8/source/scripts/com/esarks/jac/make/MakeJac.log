@@ -1,0 +1,334 @@
+makeAll using com.esarks.jac.make.MakeJac
+** Components file com.esarks.jac.make.JacComponents doesn't contain <components> tag.
+Adding Component: $All
+   depends on                 * $ArmJeos
+   depends on                 * $Scripts
+   depends on                 * $Logging
+   depends on                 * $Generators
+   depends on                 * $ArmUtils
+   depends on                 * $Owl
+   depends on                 * $Validation
+   depends on                 * $ApplicationFramework
+   depends on                 * $TestDbConnection
+Adding Component: $ArmJeos
+   depends on                 * ErrorJeo
+   depends on                 * ReplyJeo
+   depends on                 * RequestJeo
+   depends on                 * ServiceJeo
+   depends on                 * ProcessJeo
+Adding Component: ErrorJeo
+   added                      + ErrorJeo
+Adding Component: ReplyJeo
+   added                      + ReplyJeo
+Adding Component: RequestJeo
+   added                      + RequestJeo
+Adding Component: ServiceJeo
+   added                      + ServiceJeo
+Adding Component: ProcessJeo
+   added                      + ProcessJeo
+   added                      + $ArmJeos
+Adding Component: $Scripts
+   depends on                 * com.esarks.arm.scripts.ExitMethod
+   depends on                 * com.esarks.arm.scripts.FinalReturnMethod
+   depends on                 * com.esarks.arm.scripts.GetEffectiveDate
+   depends on                 * com.esarks.arm.scripts.IterateReplyJeo
+   depends on                 * com.esarks.arm.scripts.Method
+   depends on                 * com.esarks.arm.scripts.ReturnMethod
+   depends on                 * com.esarks.arm.scripts.Service
+Adding Component: com.esarks.arm.scripts.ExitMethod
+   added                      + com.esarks.arm.scripts.ExitMethod
+Adding Component: com.esarks.arm.scripts.FinalReturnMethod
+   added                      + com.esarks.arm.scripts.FinalReturnMethod
+Adding Component: com.esarks.arm.scripts.GetEffectiveDate
+   added                      + com.esarks.arm.scripts.GetEffectiveDate
+Adding Component: com.esarks.arm.scripts.IterateReplyJeo
+   added                      + com.esarks.arm.scripts.IterateReplyJeo
+Adding Component: com.esarks.arm.scripts.Method
+   added                      + com.esarks.arm.scripts.Method
+Adding Component: com.esarks.arm.scripts.ReturnMethod
+   added                      + com.esarks.arm.scripts.ReturnMethod
+Adding Component: com.esarks.arm.scripts.Service
+   added                      + com.esarks.arm.scripts.Service
+   added                      + $Scripts
+Adding Component: $Logging
+   depends on                 * ExceptionJeo
+   depends on                 * com.esarks.arm.logging.ExceptionRpt
+   depends on                 * com.esarks.arm.logging.ProcessRpt
+   depends on                 * com.esarks.arm.logging.ExceptionRptController
+Adding Component: ExceptionJeo
+   added                      + ExceptionJeo
+Adding Component: com.esarks.arm.logging.ExceptionRpt
+   added                      + com.esarks.arm.logging.ExceptionRpt
+Adding Component: com.esarks.arm.logging.ProcessRpt
+   added                      + com.esarks.arm.logging.ProcessRpt
+Adding Component: com.esarks.arm.logging.ExceptionRptController
+   added                      + com.esarks.arm.logging.ExceptionRptController
+   added                      + $Logging
+Adding Component: $Generators
+   depends on                 * com.esarks.jac.generators.GenerateDdl
+   depends on                 * com.esarks.jac.generators.GenerateDtable
+   depends on                 * com.esarks.jac.generators.GenerateFrame
+   depends on                 * com.esarks.jac.generators.GenerateJeo
+   depends on                 * com.esarks.jac.generators.GenerateReport
+   depends on                 * com.esarks.jac.generators.GenerateService
+Adding Component: com.esarks.jac.generators.GenerateDdl
+   added                      + com.esarks.jac.generators.GenerateDdl
+Adding Component: com.esarks.jac.generators.GenerateDtable
+   added                      + com.esarks.jac.generators.GenerateDtable
+Adding Component: com.esarks.jac.generators.GenerateFrame
+   added                      + com.esarks.jac.generators.GenerateFrame
+Adding Component: com.esarks.jac.generators.GenerateJeo
+   added                      + com.esarks.jac.generators.GenerateJeo
+Adding Component: com.esarks.jac.generators.GenerateReport
+   added                      + com.esarks.jac.generators.GenerateReport
+Adding Component: com.esarks.jac.generators.GenerateService
+   added                      + com.esarks.jac.generators.GenerateService
+   added                      + $Generators
+Adding Component: $ArmUtils
+   depends on                 * ArmUtils_DateTime
+   depends on                 * ArmUtils_Format
+   depends on                 * ArmUtils_ZipUtilities
+   depends on                 * ArmUtils_FileUtil
+Adding Component: ArmUtils_DateTime
+   added                      + ArmUtils_DateTime
+Adding Component: ArmUtils_Format
+   added                      + ArmUtils_Format
+Adding Component: ArmUtils_ZipUtilities
+   added                      + ArmUtils_ZipUtilities
+Adding Component: ArmUtils_FileUtil
+   added                      + ArmUtils_FileUtil
+   added                      + $ArmUtils
+Adding Component: $Owl
+   depends on                 * com.esarks.arm.owl.JeoOwlEngine
+   depends on                 * com.esarks.arm.owl.OwlDialog
+Adding Component: com.esarks.arm.owl.JeoOwlEngine
+   added                      + com.esarks.arm.owl.JeoOwlEngine
+Adding Component: com.esarks.arm.owl.OwlDialog
+   added                      + com.esarks.arm.owl.OwlDialog
+   added                      + $Owl
+Adding Component: $Validation
+   depends on                 * com.esarks.arm.validation.Table2Scenario
+Adding Component: com.esarks.arm.validation.Table2Scenario
+   added                      + com.esarks.arm.validation.Table2Scenario
+   added                      + $Validation
+Adding Component: $ApplicationFramework
+   depends on                 * com.esarks.arm.applicationFramework.Router
+   depends on                 * com.esarks.arm.applicationFramework.AppTemplate
+   depends on                 * com.esarks.arm.applicationFramework.RegionsTemplate
+   depends on                 * com.esarks.arm.applicationFramework.RegionManager
+Adding Component: com.esarks.arm.applicationFramework.Router
+   added                      + com.esarks.arm.applicationFramework.Router
+Adding Component: com.esarks.arm.applicationFramework.AppTemplate
+   added                      + com.esarks.arm.applicationFramework.AppTemplate
+Adding Component: com.esarks.arm.applicationFramework.RegionsTemplate
+   added                      + com.esarks.arm.applicationFramework.RegionsTemplate
+Adding Component: com.esarks.arm.applicationFramework.RegionManager
+   added                      + com.esarks.arm.applicationFramework.RegionManager
+   added                      + $ApplicationFramework
+Adding Component: $TestDbConnection
+   depends on                 * com.esarks.jac.jrun.TestDbConnection
+Adding Component: com.esarks.jac.jrun.TestDbConnection
+   added                      + com.esarks.jac.jrun.TestDbConnection
+   added                      + $TestDbConnection
+   added                      + $All
+Making GenerateJeo
+createJeo: XML=com.esarks.arm.model.jeo.Service_Jeo Jeo=ErrorJeo
+Making ErrorJeo
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ErrorJeo.java, Script: com.esarks.arm.model.jeo.Service_Jeo, Entity: ErrorJeo
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ErrorJeo.java
+createJeo: XML=com.esarks.arm.model.jeo.Service_Jeo Jeo=ReplyJeo
+Making ReplyJeo
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ReplyJeo.java, Script: com.esarks.arm.model.jeo.Service_Jeo, Entity: ReplyJeo
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ReplyJeo.java
+createJeo: XML=com.esarks.arm.model.jeo.Service_Jeo Jeo=RequestJeo
+Making RequestJeo
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\RequestJeo.java, Script: com.esarks.arm.model.jeo.Service_Jeo, Entity: RequestJeo
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\RequestJeo.java
+createJeo: XML=com.esarks.arm.model.jeo.Service_Jeo Jeo=ServiceJeo
+Making ServiceJeo
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ServiceJeo.java, Script: com.esarks.arm.model.jeo.Service_Jeo, Entity: ServiceJeo
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ServiceJeo.java
+createJeo: XML=com.esarks.arm.model.jeo.Service_Jeo Jeo=ProcessJeo
+Making ProcessJeo
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ProcessJeo.java, Script: com.esarks.arm.model.jeo.Service_Jeo, Entity: ProcessJeo
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\model\jeo\ProcessJeo.java
+Script.buildScript... com.esarks.arm.scripts.ExitMethod
+Making ExitMethod
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\ExitMethod.java, Script: com.esarks.arm.scripts.ExitMethod
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\ExitMethod.java
+Script.buildScript... com.esarks.arm.scripts.FinalReturnMethod
+Making FinalReturnMethod
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\FinalReturnMethod.java, Script: com.esarks.arm.scripts.FinalReturnMethod
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\FinalReturnMethod.java
+Script.buildScript... com.esarks.arm.scripts.GetEffectiveDate
+Making GetEffectiveDate
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\GetEffectiveDate.java, Script: com.esarks.arm.scripts.GetEffectiveDate
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\GetEffectiveDate.java
+Script.buildScript... com.esarks.arm.scripts.IterateReplyJeo
+Making IterateReplyJeo
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\IterateReplyJeo.java, Script: com.esarks.arm.scripts.IterateReplyJeo
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\IterateReplyJeo.java
+Script.buildScript... com.esarks.arm.scripts.Method
+Making Method
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\Method.java, Script: com.esarks.arm.scripts.Method
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\Method.java
+Script.buildScript... com.esarks.arm.scripts.ReturnMethod
+Making ReturnMethod
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\ReturnMethod.java, Script: com.esarks.arm.scripts.ReturnMethod
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\ReturnMethod.java
+Script.buildScript... com.esarks.arm.scripts.Service
+Making Service
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\Service.java, Script: com.esarks.arm.scripts.Service
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\scripts\Service.java
+createJeo: XML=com.esarks.arm.logging.ExceptionJeo_Jeo Jeo=ExceptionJeo
+Making ExceptionJeo
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\logging\ExceptionJeo.java, Script: com.esarks.arm.logging.ExceptionJeo_Jeo, Entity: ExceptionJeo
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\logging\ExceptionJeo.java
+Making GenerateReport
+generateReport: com.esarks.arm.logging.ExceptionRpt_Report
+Script.buildScript... com.esarks.arm.logging.ExceptionRpt
+Making ExceptionRpt
+compile = 
+generateReport: com.esarks.arm.logging.Process_Report
+Script.buildScript... com.esarks.arm.logging.ProcessRpt
+Making ProcessRpt
+compile = 
+Script.buildScript... com.esarks.arm.logging.ExceptionRptController
+Making ExceptionRptController
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\logging\ExceptionRpt.java, Script: com.esarks.arm.logging.ExceptionRpt
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\logging\ProcessRpt.java, Script: com.esarks.arm.logging.ProcessRpt
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\logging\ExceptionRptController.java, Script: com.esarks.arm.logging.ExceptionRptController
+Compiling 3 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\logging\ExceptionRpt.java
+2. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\logging\ProcessRpt.java
+3. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\logging\ExceptionRptController.java
+Script.buildScript... com.esarks.jac.generators.GenerateDdl
+Making GenerateDdl
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateDdl.java, Script: com.esarks.jac.generators.GenerateDdl
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateDdl.java
+Script.buildScript... com.esarks.jac.generators.GenerateDtable
+Making GenerateDtable
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateDtable.java, Script: com.esarks.jac.generators.GenerateDtable
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateDtable.java
+Script.buildScript... com.esarks.jac.generators.GenerateFrame
+Making GenerateFrame
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateFrame.java, Script: com.esarks.jac.generators.GenerateFrame
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateFrame.java
+Script.buildScript... com.esarks.jac.generators.GenerateJeo
+Making GenerateJeo
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateJeo.java, Script: com.esarks.jac.generators.GenerateJeo
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateJeo.java
+Script.buildScript... com.esarks.jac.generators.GenerateReport
+Making GenerateReport
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateReport.java, Script: com.esarks.jac.generators.GenerateReport
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateReport.java
+Script.buildScript... com.esarks.jac.generators.GenerateService
+Making GenerateService
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateService.java, Script: com.esarks.jac.generators.GenerateService
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\generators\GenerateService.java
+Script.buildScript... com.esarks.arm.util.DateTime
+Making DateTime
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\util\DateTime.java, Script: com.esarks.arm.util.DateTime
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\util\DateTime.java
+Script.buildScript... com.esarks.arm.util.Format
+Making Format
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\util\Format.java, Script: com.esarks.arm.util.Format
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\util\Format.java
+Script.buildScript... com.esarks.arm.util.ZipUtilities
+compile = true
+Script.buildScript... com.esarks.arm.util.FileUtil
+Making FileUtil
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\util\FileUtil.java, Script: com.esarks.arm.util.FileUtil
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\util\FileUtil.java
+Script.buildScript... com.esarks.arm.owl.JeoOwlEngine
+Making JeoOwlEngine
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\owl\JeoOwlEngine.java, Script: com.esarks.arm.owl.JeoOwlEngine
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\owl\JeoOwlEngine.java
+Script.buildScript... com.esarks.arm.owl.OwlDialog
+Making OwlDialog
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\owl\OwlDialog.java, Script: com.esarks.arm.owl.OwlDialog
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\owl\OwlDialog.java
+Script.buildScript... com.esarks.arm.validation.Table2Scenario
+Making Table2Scenario
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\validation\Table2Scenario.java, Script: com.esarks.arm.validation.Table2Scenario
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\validation\Table2Scenario.java
+Script.buildScript... com.esarks.arm.applicationFramework.Router
+Making Router
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\applicationFramework\Router.java, Script: com.esarks.arm.applicationFramework.Router
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\applicationFramework\Router.java
+*error* Compile Errors *********************************************************************
+C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\applicationFramework\Router.java:21: error: '{' expected
+public class Router com.esarks.mic.MicScriptHelper  {
+                   ^
+1 error
+Script.buildScript... com.esarks.arm.applicationFramework.AppTemplate
+Making AppTemplate
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\applicationFramework\AppTemplate.java, Script: com.esarks.arm.applicationFramework.AppTemplate
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\applicationFramework\AppTemplate.java
+Script.buildScript... com.esarks.arm.applicationFramework.RegionsTemplate
+Making RegionsTemplate
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\applicationFramework\RegionsTemplate.java, Script: com.esarks.arm.applicationFramework.RegionsTemplate
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\applicationFramework\RegionsTemplate.java
+Script.buildScript... com.esarks.arm.applicationFramework.RegionManager
+Making RegionManager
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\applicationFramework\RegionManager.java, Script: com.esarks.arm.applicationFramework.RegionManager
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\arm\applicationFramework\RegionManager.java
+Script.buildScript... com.esarks.jac.jrun.TestDbConnection
+Making TestDbConnection
+compile = true
+Compile: C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\jrun\TestDbConnection.java, Script: com.esarks.jac.jrun.TestDbConnection
+Compiling 1 Scripts...
+1. C:\ArchitectsCompanion\jac2017\jacBuild8\classes\com\esarks\jac\jrun\TestDbConnection.java

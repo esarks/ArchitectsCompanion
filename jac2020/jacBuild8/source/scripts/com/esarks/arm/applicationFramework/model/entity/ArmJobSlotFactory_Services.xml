@@ -1,0 +1,47 @@
+  <services name="com.esarks.arm.applicationFramework.model.entity.ArmJobSlotFactory">
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="reserveArmJobSlot" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <procedure><![CDATA[
+          BEGIN
+          DECLARE @IDENT BIGINT
+          DECLARE @SLOT BIGINT
+          SELECT @SLOT = (SELECT TOP 1 slot FROM armJobSlot (UPDLOCK) WHERE reserved IS NULL)
+          UPDATE armJobSlot set reserved=getdate() WHERE slot = @SLOT
+          SELECT * FROM armJobSlot WHERE slot = @SLOT
+          END
+        ]]></procedure>
+        <result>
+          <jeo name="com.esarks.arm.model.jeo.ReplyJeo">
+            <jeo name="com.esarks.arm.applicationFramework.model.entity.ArmJobSlot" />
+          </jeo>
+        </result>
+      </sql>
+    </service>
+
+<!-- -->
+<!-- -->
+<!-- -->
+
+    <service name="unreserveArmJobSlot" jeo="com.esarks.arm.model.jeo.ServiceJeo">
+      <sql>
+        <procedure><![CDATA[
+          BEGIN
+          UPDATE armJobSlot set reserved=null WHERE slot = ?
+          END
+        ]]></procedure>
+        <where>
+          <jeo name="com.esarks.arm.model.jeo.RequestJeo">
+            <jeo name="com.esarks.arm.applicationFramework.model.entity.ArmJobSlot" >
+              <where attribute="slot" />
+            </jeo>
+          </jeo>
+        </where>
+      </sql>
+    </service>
+
+  </services>

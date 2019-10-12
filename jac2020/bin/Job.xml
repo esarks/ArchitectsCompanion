@@ -1,0 +1,10 @@
+<mic.element type="Component">
+
+  <options>
+    
+        <propertySet>default</propertySet>
+        <properties>config.properties</properties>
+    
+  </options>
+
+</mic.element>

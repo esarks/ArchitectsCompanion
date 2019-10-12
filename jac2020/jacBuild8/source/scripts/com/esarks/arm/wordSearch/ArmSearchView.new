@@ -1,0 +1,1010 @@
+//$Section=License$Preserve=no
+//  Generated at 2005.07.01 09:58:57.341 AM EDT by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+//  XML Definition: com.esarks.arm.wordSearch.Search_DbView
+//     Module Name: com.esarks.arm.wordSearch.ArmSearchView
+
+//$Section=ChangeLog$Preserve=yes
+
+/* ========================================================================= *
+   Contributor        Description
+   ------------------ ------------------------------------------------------
+                      Author
+
+ * ========================================================================= */
+
+//$Section=Class$Preserve=no
+
+package com.esarks.arm.wordSearch;
+
+/**
+ *
+ */
+
+//----------------------------------------------------------------------------
+// This section is for generated import delcarations.
+//----------------------------------------------------------------------------
+// Additional Import Declarations
+import com.esarks.jac.*;
+import com.esarks.mic.*;
+import java.util.*;
+import java.lang.reflect.*;
+import java.io.*;
+import java.text.*;
+import java.net.*;
+import java.sql.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+//$Section=CustomDeclare$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section is for custom declarations.
+//----------------------------------------------------------------------------
+
+//$Section=CustomDeclare$Preserve=no
+
+public class ArmSearchView extends com.esarks.jac.Jeo {
+
+//----------------------------------------------------------------------------
+// This section is for generated declarations.
+//----------------------------------------------------------------------------
+// Attributes
+
+//Protocol  Type: string  Size: 0  Nullable: false
+    private PropertyValue iProtocol = new PropertyValue();
+    private boolean iProtocolIsNullable = false;
+    private boolean iProtocolUpdate = false;
+    private int iProtocolSize = 0;
+//Url  Type: string  Size: 0  Nullable: false
+    private PropertyValue iUrl = new PropertyValue();
+    private boolean iUrlIsNullable = false;
+    private boolean iUrlUpdate = false;
+    private int iUrlSize = 0;
+//ArmSearchDocumentsId  Type: long  Size: 0  Nullable: false
+    private PropertyValue iArmSearchDocumentsId = new PropertyValue();
+    private boolean iArmSearchDocumentsIdIsNullable = false;
+    private boolean iArmSearchDocumentsIdUpdate = false;
+    private int iArmSearchDocumentsIdSize = 0;
+//UrlId  Type: long  Size: 0  Nullable: false
+    private PropertyValue iUrlId = new PropertyValue();
+    private boolean iUrlIdIsNullable = false;
+    private boolean iUrlIdUpdate = false;
+    private int iUrlIdSize = 0;
+//Word  Type: string  Size: 0  Nullable: false
+    private PropertyValue iWord = new PropertyValue();
+    private boolean iWordIsNullable = false;
+    private boolean iWordUpdate = false;
+    private int iWordSize = 0;
+
+//$Section=CustomClassDeclare$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section is for custom class declarations.
+//----------------------------------------------------------------------------
+
+//$Section=CustomClassDeclare$Preserve=no
+
+//----------------------------------------------------------------------------
+// Generated constructors.
+//----------------------------------------------------------------------------
+
+/**
+ * Default constructor.
+ */
+    public ArmSearchView() {
+      super("com.esarks.arm.wordSearch.ArmSearchView");
+//$Section=DefaultConstructor$Preserve=yes
+//$Section=DefaultConstructor$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmSearchView( com.esarks.jac.JeoFactory aJeoFactory ) {
+      super(aJeoFactory);
+      init("com.esarks.arm.wordSearch.ArmSearchView");
+//$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=yes
+//$Section=Operation$Jeo( JeoFactory aJeoFactory )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmSearchView( Script aScript ) {
+      super("com.esarks.arm.wordSearch.ArmSearchView", aScript);
+//$Section=Operation$Jeo( String aScript )$Preserve=yes
+//$Section=Operation$Jeo( String aScript )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmSearchView( String aTypeName ) {
+      super("com.esarks.arm.wordSearch.ArmSearchView", aTypeName);
+//$Section=Operation$Jeo( String aTypeName )$Preserve=yes
+//$Section=Operation$Jeo( String aTypeName )$Preserve=no
+    }
+
+/**
+ *
+ */
+    public ArmSearchView( String aTypeName, Script aScript ) {
+      super("com.esarks.arm.wordSearch.ArmSearchView", aTypeName, aScript);
+//$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=yes
+//$Section=Operation$Jeo( String aTypeName, Script aScript )$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Default finalize is generated.
+//----------------------------------------------------------------------------
+
+/**
+ * Default finalize.
+ */
+    public void finalize() {
+    	freeResources();
+//$Section=DefaultDestructor$Preserve=yes
+//$Section=DefaultDestructor$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Default freeResources is generated.
+//----------------------------------------------------------------------------
+
+/**
+ * Default freeResources.
+ */
+    public void freeResources() {
+    	super.freeResources();
+    iProtocol = null;
+    iUrl = null;
+    iArmSearchDocumentsId = null;
+    iUrlId = null;
+    iWord = null;
+//$Section=DefaultFreeResources$Preserve=yes
+//$Section=DefaultFreeResources$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// This section is for custom operations.
+//----------------------------------------------------------------------------
+//$Section=CustomOperations$Preserve=yes
+//$Section=CustomOperations$Preserve=no
+
+    public void init() {
+    	super.init();
+//Protocol
+    iProtocol = new PropertyValue();
+    iProtocolUpdate = false;
+//Url
+    iUrl = new PropertyValue();
+    iUrlUpdate = false;
+//ArmSearchDocumentsId
+    iArmSearchDocumentsId = new PropertyValue();
+    iArmSearchDocumentsIdUpdate = false;
+//UrlId
+    iUrlId = new PropertyValue();
+    iUrlIdUpdate = false;
+//Word
+    iWord = new PropertyValue();
+    iWordUpdate = false;
+    }
+
+//----------------------------------------------------------------------------
+// This section is for mapping views to tables.
+//----------------------------------------------------------------------------
+
+  public com.esarks.arm.wordSearch.ArmSearchDocuments getArmSearchDocuments() {
+//$Section=Operation$getArmSearchDocuments()$Preserve=no
+
+//  com.esarks.arm.wordSearch.ArmSearchDocuments lArmSearchDocuments = (com.esarks.arm.wordSearch.ArmSearchDocuments) com.esarks.jac.JeoFactory.getInstance(iScript).reserveJeo("com.esarks.arm.wordSearch.ArmSearchDocuments");
+    com.esarks.arm.wordSearch.ArmSearchDocuments lArmSearchDocuments = new com.esarks.arm.wordSearch.ArmSearchDocuments();
+    lArmSearchDocuments.setProtocol(getProtocolPropertyValue());
+    lArmSearchDocuments.setUrl(getUrlPropertyValue());
+    lArmSearchDocuments.setId(getArmSearchDocumentsIdPropertyValue());
+    return lArmSearchDocuments;
+//$Section=Operation$getArmSearchDocuments()$Preserve=no
+  }
+
+  public com.esarks.arm.wordSearch.ArmSearchDocumentsWords getArmSearchDocumentsWords() {
+//$Section=Operation$getArmSearchDocumentsWords()$Preserve=no
+
+//  com.esarks.arm.wordSearch.ArmSearchDocumentsWords lArmSearchDocumentsWords = (com.esarks.arm.wordSearch.ArmSearchDocumentsWords) com.esarks.jac.JeoFactory.getInstance(iScript).reserveJeo("com.esarks.arm.wordSearch.ArmSearchDocumentsWords");
+    com.esarks.arm.wordSearch.ArmSearchDocumentsWords lArmSearchDocumentsWords = new com.esarks.arm.wordSearch.ArmSearchDocumentsWords();
+    lArmSearchDocumentsWords.setUrlId(getUrlIdPropertyValue());
+    lArmSearchDocumentsWords.setWord(getWordPropertyValue());
+    return lArmSearchDocumentsWords;
+//$Section=Operation$getArmSearchDocumentsWords()$Preserve=no
+  }
+//----------------------------------------------------------------------------
+// This section is for mapping from result sets.
+//----------------------------------------------------------------------------
+
+  public void mapFromResultSet( ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+//$Section=Operation$mapFromResultSet$Preserve=no
+    mapFromResultSetTable("*", aResultSet, aTrim, aSpacesToNull);
+//$Section=Operation$mapFromResultSet$Preserve=no
+  }
+
+  public void mapFromResultSetTable( String aTable, ResultSet aResultSet, boolean aTrim, boolean aSpacesToNull) {
+    // DEPRECATED METHOD!!!!
+    // Use of Trim and SpacesToNull is not functional.
+    mapFromResultSetTable(aTable, aResultSet);
+  }
+  
+  public void mapFromResultSetTable( String aTable, ResultSet aResultSet) {
+//$Section=Operation$mapFromResultSetTable$Preserve=no
+//    String lValue = null;
+      if (aTable.equals("*") || aTable.equals("ArmSearchDocuments")) {
+// Protocol in ArmSearchDocuments
+        try {
+          String lValue = aResultSet.getString("protocol");
+          if (aResultSet.wasNull()) {
+            setProtocolNull();
+          } else {
+            setProtocol(lValue);
+          }
+        } catch (Throwable e) {}
+// Url in ArmSearchDocuments
+        try {
+          String lValue = aResultSet.getString("url");
+          if (aResultSet.wasNull()) {
+            setUrlNull();
+          } else {
+            setUrl(lValue);
+          }
+        } catch (Throwable e) {}
+// ArmSearchDocumentsId in ArmSearchDocuments
+        try {
+          long lValue = aResultSet.getLong("armSearchDocumentsId");
+          if (aResultSet.wasNull()) {
+            setArmSearchDocumentsIdNull();
+          } else {
+            setArmSearchDocumentsId(lValue);
+          }
+        } catch (Throwable e) {}
+      }
+      if (aTable.equals("*") || aTable.equals("ArmSearchDocumentsWords")) {
+// UrlId in ArmSearchDocumentsWords
+        try {
+          long lValue = aResultSet.getLong("urlId");
+          if (aResultSet.wasNull()) {
+            setUrlIdNull();
+          } else {
+            setUrlId(lValue);
+          }
+        } catch (Throwable e) {}
+// Word in ArmSearchDocumentsWords
+        try {
+          String lValue = aResultSet.getString("word");
+          if (aResultSet.wasNull()) {
+            setWordNull();
+          } else {
+            setWord(lValue);
+          }
+        } catch (Throwable e) {}
+      }
+//$Section=Operation$mapFromResultSetTable$Preserve=no
+  }
+//----------------------------------------------------------------------------
+// This section is for mapping from and to Jeo's.
+//----------------------------------------------------------------------------
+
+  public void mapToJeo( Jeo aJeo) {
+//$Section=Operation$mapFromJeo$Preserve=no
+    String lType = null;
+    PropertyValue lValue = null;
+// Protocol
+      try {
+        lValue = aJeo.getPropertyValueByName("protocol");
+        if (lValue != null) {
+          lType = aJeo.getTypeByName("protocol");
+          if (!isProtocolNull()) {
+            lValue.reset(lType, getProtocolPropertyValue().toString());
+          } else {
+            lValue.reset("null", "");
+          }
+        }
+      } catch(Throwable e) {}
+// Url
+      try {
+        lValue = aJeo.getPropertyValueByName("url");
+        if (lValue != null) {
+          lType = aJeo.getTypeByName("url");
+          if (!isUrlNull()) {
+            lValue.reset(lType, getUrlPropertyValue().toString());
+          } else {
+            lValue.reset("null", "");
+          }
+        }
+      } catch(Throwable e) {}
+// ArmSearchDocumentsId
+      try {
+        lValue = aJeo.getPropertyValueByName("armSearchDocumentsId");
+        if (lValue != null) {
+          lType = aJeo.getTypeByName("armSearchDocumentsId");
+          if (!isArmSearchDocumentsIdNull()) {
+            lValue.reset(lType, getArmSearchDocumentsIdPropertyValue().toString());
+          } else {
+            lValue.reset("null", "");
+          }
+        }
+      } catch(Throwable e) {}
+// UrlId
+      try {
+        lValue = aJeo.getPropertyValueByName("urlId");
+        if (lValue != null) {
+          lType = aJeo.getTypeByName("urlId");
+          if (!isUrlIdNull()) {
+            lValue.reset(lType, getUrlIdPropertyValue().toString());
+          } else {
+            lValue.reset("null", "");
+          }
+        }
+      } catch(Throwable e) {}
+// Word
+      try {
+        lValue = aJeo.getPropertyValueByName("word");
+        if (lValue != null) {
+          lType = aJeo.getTypeByName("word");
+          if (!isWordNull()) {
+            lValue.reset(lType, getWordPropertyValue().toString());
+          } else {
+            lValue.reset("null", "");
+          }
+        }
+      } catch(Throwable e) {}
+//$Section=Operation$mapToJeo$Preserve=no
+  }
+
+  public void mapFromJeo( Jeo aJeo) {
+//$Section=Operation$mapFromJeo$Preserve=no
+    String lType = null;
+    PropertyValue lValue = null;
+// Protocol
+      try {
+        lValue = aJeo.getPropertyValueByName("protocol");
+        if (lValue != null) {
+          setProtocol(lValue);
+        }
+      } catch(Throwable e) {}
+// Url
+      try {
+        lValue = aJeo.getPropertyValueByName("url");
+        if (lValue != null) {
+          setUrl(lValue);
+        }
+      } catch(Throwable e) {}
+// ArmSearchDocumentsId
+      try {
+        lValue = aJeo.getPropertyValueByName("armSearchDocumentsId");
+        if (lValue != null) {
+          setArmSearchDocumentsId(lValue);
+        }
+      } catch(Throwable e) {}
+// UrlId
+      try {
+        lValue = aJeo.getPropertyValueByName("urlId");
+        if (lValue != null) {
+          setUrlId(lValue);
+        }
+      } catch(Throwable e) {}
+// Word
+      try {
+        lValue = aJeo.getPropertyValueByName("word");
+        if (lValue != null) {
+          setWord(lValue);
+        }
+      } catch(Throwable e) {}
+//$Section=Operation$mapFromJeo$Preserve=no
+  }
+
+//----------------------------------------------------------------------------
+// This section is for the get by string name related methods.
+//----------------------------------------------------------------------------
+
+  public String getCasedName ( String aAttributeName) {
+//$Section=Operation$getCasedName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("getAttributeName_" + aAttributeName.toLowerCase(), null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getCasedName$Preserve=no
+  }
+
+  public PropertyValue getPropertyValueByName ( String aAttributeName) {
+//$Section=Operation$getPropertyValueByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "PropertyValue", null);
+        return (PropertyValue) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getPropertyValueByName$Preserve=no
+  }
+
+  public void setStringValueByName ( String aAttributeName, String aValue) {
+//$Section=Operation$setStringValueByName$Preserve=no
+
+    try {
+        Class lClassParams[] = new Class[]{"".getClass()};
+        Object lArguments[] = new Object[] {aValue};
+        Method lMethod = this.getClass().getMethod("set" + getCasedName(aAttributeName), lClassParams);
+        lMethod.invoke(this, lArguments);
+    } catch (Throwable e) {
+        //System.out.println(e);
+    }
+
+//$Section=Operation$setStringValueByName$Preserve=no
+  }
+
+  public String getTypeByName ( String aAttributeName) {
+//$Section=Operation$getTypeByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueType", null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getTypeByName$Preserve=no
+  }
+
+  public String getStereotypeByName ( String aAttributeName) {
+//$Section=Operation$getStereotypeByName$Preserve=no
+
+    try {
+        Method lMethod = this.getClass().getMethod("get" + getCasedName(aAttributeName) + "ValueStereotype", null);
+        return (String) lMethod.invoke(this, null);
+    } catch (Throwable e) {
+        //System.out.println(e);
+        return null;
+    }
+
+//$Section=Operation$getStereotypeByName$Preserve=no
+  }
+
+  public String getNameByIndex ( int aIndex) {
+//$Section=Operation$getNameByIndex$Preserve=no
+
+    switch(aIndex) {
+      case 1: return "protocol";
+      case 2: return "url";
+      case 3: return "armsearchdocumentsid";
+      case 4: return "urlid";
+      case 5: return "word";
+    }
+    return null;
+//$Section=Operation$getNameByIndex$Preserve=no
+  }
+
+//----------------------------------------------------------------------------
+// This section is for generated attribute accessor methods.
+//----------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------
+// Protocol
+//----------------------------------------------------------------------------
+    public String getProtocol() {
+//$Section=Attribute get$Protocol$Preserve=no
+        return iProtocol.getValueString();
+//$Section=Attribute get$Protocol$Preserve=no
+    }
+    public String getProtocol(String aValue) {
+//$Section=Attribute get$Protocol(String)$Preserve=no
+      if (isProtocolNull()) return aValue;
+      return iProtocol.getValueString();
+//$Section=Attribute get$Protocol(String)$Preserve=no
+    }
+    public void setProtocol(String aValue) {
+//$Section=Attribute set$Protocol$Preserve=no
+        iProtocol.reset(aValue);
+//$Section=Attribute set$Protocol$Preserve=no
+    }
+    public void setProtocol(PropertyValue aValue) {
+//$Section=Attribute setPropertyValue$Protocol$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setProtocolNull();
+          return;
+        }
+        setProtocol(aValue.toString());
+//$Section=Attribute setPropertyValue$Protocol$Preserve=no
+    }
+    public void setProtocol(PropertyValue aValue, String aFormat) {
+//$Section=Attribute setPropertyValueFormat$Protocol$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setProtocolNull();
+          return;
+        }
+        setProtocol(aValue.toString(), aFormat);
+//$Section=Attribute setPropertyValueFormat$Protocol$Preserve=no
+    }
+    public void setProtocol(String aValue, String aType) {
+//$Section=Attribute setAsStringType$Protocol$Preserve=no
+        iProtocol.reset(aType, aValue);
+//$Section=Attribute setAsStringType$Protocol$Preserve=no
+    }
+    public PropertyValue getProtocolPropertyValue() {
+//$Section=Attribute getPropertyValue$Protocol$Preserve=no
+        return iProtocol;
+//$Section=Attribute getPropertyValue$Protocol$Preserve=no
+    }
+    public String getAttributeName_protocol() {
+//$Section=Attribute getAttributeName$protocol$Preserve=no
+        return "Protocol";
+//$Section=Attribute getAttributeName_$protocol$Preserve=no
+    }
+    public int sizeProtocol() {
+//$Section=Attribute size$Protocol$Preserve=no
+        return iProtocolSize;
+//$Section=Attribute size$Protocol$Preserve=no
+    }
+    public boolean isProtocolNullable() {
+//$Section=Attribute isNullable$Protocol$Preserve=no
+        return iProtocolIsNullable;
+//$Section=Attribute isNullable$Protocol$Preserve=no
+    }
+    public boolean isProtocolNull() {
+//$Section=Attribute isNull$Protocol$Preserve=no
+        if (iProtocol.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+        return false;
+//$Section=Attribute isNull$Protocol$Preserve=no
+    }
+    public void setProtocolNull() {
+//$Section=Attribute setNull$Protocol$Preserve=no
+        iProtocol.reset();
+//$Section=Attribute setNull$Protocol$Preserve=no
+    }
+    public void setProtocolSpaceToNull() {
+//$Section=Attribute setSpaceToNull$Protocol$Preserve=no
+        if (getProtocolPropertyValue().toString().trim().equals("")) setProtocolNull();
+//$Section=Attribute setSpaceToNull$Protocol$Preserve=no
+    }
+    public void setProtocolUpdate(boolean aUpdate) {
+//$Section=Attribute setUpdate$Protocol$Preserve=no
+        iProtocolUpdate = aUpdate;
+//$Section=Attribute setUpdate$Protocol$Preserve=no
+    }
+    public boolean getProtocolUpdate() {
+//$Section=Attribute getUpdate$Protocol$Preserve=no
+        return iProtocolUpdate;
+//$Section=Attribute getUpdate$Protocol$Preserve=no
+    }
+    public String getProtocolValueType() {
+//$Section=Attribute getValueType$Protocol$Preserve=no
+        return "string";
+//$Section=Attribute getValueType$Protocol$Preserve=no
+    }
+    public String getProtocolValueStereotype() {
+//$Section=Attribute getValueStereotype$Protocol$Preserve=no
+        return "";
+//$Section=Attribute getValueStereotype$Protocol$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Url
+//----------------------------------------------------------------------------
+    public String getUrl() {
+//$Section=Attribute get$Url$Preserve=no
+        return iUrl.getValueString();
+//$Section=Attribute get$Url$Preserve=no
+    }
+    public String getUrl(String aValue) {
+//$Section=Attribute get$Url(String)$Preserve=no
+      if (isUrlNull()) return aValue;
+      return iUrl.getValueString();
+//$Section=Attribute get$Url(String)$Preserve=no
+    }
+    public void setUrl(String aValue) {
+//$Section=Attribute set$Url$Preserve=no
+        iUrl.reset(aValue);
+//$Section=Attribute set$Url$Preserve=no
+    }
+    public void setUrl(PropertyValue aValue) {
+//$Section=Attribute setPropertyValue$Url$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setUrlNull();
+          return;
+        }
+        setUrl(aValue.toString());
+//$Section=Attribute setPropertyValue$Url$Preserve=no
+    }
+    public void setUrl(PropertyValue aValue, String aFormat) {
+//$Section=Attribute setPropertyValueFormat$Url$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setUrlNull();
+          return;
+        }
+        setUrl(aValue.toString(), aFormat);
+//$Section=Attribute setPropertyValueFormat$Url$Preserve=no
+    }
+    public void setUrl(String aValue, String aType) {
+//$Section=Attribute setAsStringType$Url$Preserve=no
+        iUrl.reset(aType, aValue);
+//$Section=Attribute setAsStringType$Url$Preserve=no
+    }
+    public PropertyValue getUrlPropertyValue() {
+//$Section=Attribute getPropertyValue$Url$Preserve=no
+        return iUrl;
+//$Section=Attribute getPropertyValue$Url$Preserve=no
+    }
+    public String getAttributeName_url() {
+//$Section=Attribute getAttributeName$url$Preserve=no
+        return "Url";
+//$Section=Attribute getAttributeName_$url$Preserve=no
+    }
+    public int sizeUrl() {
+//$Section=Attribute size$Url$Preserve=no
+        return iUrlSize;
+//$Section=Attribute size$Url$Preserve=no
+    }
+    public boolean isUrlNullable() {
+//$Section=Attribute isNullable$Url$Preserve=no
+        return iUrlIsNullable;
+//$Section=Attribute isNullable$Url$Preserve=no
+    }
+    public boolean isUrlNull() {
+//$Section=Attribute isNull$Url$Preserve=no
+        if (iUrl.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+        return false;
+//$Section=Attribute isNull$Url$Preserve=no
+    }
+    public void setUrlNull() {
+//$Section=Attribute setNull$Url$Preserve=no
+        iUrl.reset();
+//$Section=Attribute setNull$Url$Preserve=no
+    }
+    public void setUrlSpaceToNull() {
+//$Section=Attribute setSpaceToNull$Url$Preserve=no
+        if (getUrlPropertyValue().toString().trim().equals("")) setUrlNull();
+//$Section=Attribute setSpaceToNull$Url$Preserve=no
+    }
+    public void setUrlUpdate(boolean aUpdate) {
+//$Section=Attribute setUpdate$Url$Preserve=no
+        iUrlUpdate = aUpdate;
+//$Section=Attribute setUpdate$Url$Preserve=no
+    }
+    public boolean getUrlUpdate() {
+//$Section=Attribute getUpdate$Url$Preserve=no
+        return iUrlUpdate;
+//$Section=Attribute getUpdate$Url$Preserve=no
+    }
+    public String getUrlValueType() {
+//$Section=Attribute getValueType$Url$Preserve=no
+        return "string";
+//$Section=Attribute getValueType$Url$Preserve=no
+    }
+    public String getUrlValueStereotype() {
+//$Section=Attribute getValueStereotype$Url$Preserve=no
+        return "";
+//$Section=Attribute getValueStereotype$Url$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// ArmSearchDocumentsId
+//----------------------------------------------------------------------------
+    public long getArmSearchDocumentsId() {
+//$Section=Attribute get$ArmSearchDocumentsId$Preserve=no
+        return iArmSearchDocumentsId.getValueLong();
+//$Section=Attribute get$ArmSearchDocumentsId$Preserve=no
+    }
+    public long getArmSearchDocumentsId(long aValue) {
+//$Section=Attribute get$ArmSearchDocumentsId(long)$Preserve=no
+      if (isArmSearchDocumentsIdNull()) return aValue;
+      return iArmSearchDocumentsId.getValueLong();
+//$Section=Attribute get$ArmSearchDocumentsId(long)$Preserve=no
+    }
+    public void setArmSearchDocumentsId(long aValue) {
+//$Section=Attribute set$ArmSearchDocumentsId$Preserve=no
+        iArmSearchDocumentsId.reset(aValue);
+//$Section=Attribute set$ArmSearchDocumentsId$Preserve=no
+    }
+    public void setArmSearchDocumentsId(PropertyValue aValue) {
+//$Section=Attribute setPropertyValue$ArmSearchDocumentsId$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setArmSearchDocumentsIdNull();
+          return;
+        }
+        setArmSearchDocumentsId(aValue.toString());
+//$Section=Attribute setPropertyValue$ArmSearchDocumentsId$Preserve=no
+    }
+    public void setArmSearchDocumentsId(PropertyValue aValue, String aFormat) {
+//$Section=Attribute setPropertyValueFormat$ArmSearchDocumentsId$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setArmSearchDocumentsIdNull();
+          return;
+        }
+        setArmSearchDocumentsId(aValue.toString(), aFormat);
+//$Section=Attribute setPropertyValueFormat$ArmSearchDocumentsId$Preserve=no
+    }
+    public void setArmSearchDocumentsId(String aValue) {
+//$Section=Attribute setAsString$ArmSearchDocumentsId$Preserve=no
+        iArmSearchDocumentsId.reset("long", aValue);
+//$Section=Attribute setAsString$ArmSearchDocumentsId$Preserve=no
+    }
+    public void setArmSearchDocumentsId(String aValue, String aType) {
+//$Section=Attribute setAsStringType$ArmSearchDocumentsId$Preserve=no
+        iArmSearchDocumentsId.reset(aType, aValue);
+//$Section=Attribute setAsStringType$ArmSearchDocumentsId$Preserve=no
+    }
+    public PropertyValue getArmSearchDocumentsIdPropertyValue() {
+//$Section=Attribute getPropertyValue$ArmSearchDocumentsId$Preserve=no
+        return iArmSearchDocumentsId;
+//$Section=Attribute getPropertyValue$ArmSearchDocumentsId$Preserve=no
+    }
+    public String getAttributeName_armsearchdocumentsid() {
+//$Section=Attribute getAttributeName$armsearchdocumentsid$Preserve=no
+        return "ArmSearchDocumentsId";
+//$Section=Attribute getAttributeName_$armsearchdocumentsid$Preserve=no
+    }
+    public int sizeArmSearchDocumentsId() {
+//$Section=Attribute size$ArmSearchDocumentsId$Preserve=no
+        return iArmSearchDocumentsIdSize;
+//$Section=Attribute size$ArmSearchDocumentsId$Preserve=no
+    }
+    public boolean isArmSearchDocumentsIdNullable() {
+//$Section=Attribute isNullable$ArmSearchDocumentsId$Preserve=no
+        return iArmSearchDocumentsIdIsNullable;
+//$Section=Attribute isNullable$ArmSearchDocumentsId$Preserve=no
+    }
+    public boolean isArmSearchDocumentsIdNull() {
+//$Section=Attribute isNull$ArmSearchDocumentsId$Preserve=no
+        if (iArmSearchDocumentsId.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+        return false;
+//$Section=Attribute isNull$ArmSearchDocumentsId$Preserve=no
+    }
+    public void setArmSearchDocumentsIdNull() {
+//$Section=Attribute setNull$ArmSearchDocumentsId$Preserve=no
+        iArmSearchDocumentsId.reset();
+//$Section=Attribute setNull$ArmSearchDocumentsId$Preserve=no
+    }
+    public void setArmSearchDocumentsIdSpaceToNull() {
+//$Section=Attribute setSpaceToNull$ArmSearchDocumentsId$Preserve=no
+        if (getArmSearchDocumentsIdPropertyValue().toString().trim().equals("")) setArmSearchDocumentsIdNull();
+//$Section=Attribute setSpaceToNull$ArmSearchDocumentsId$Preserve=no
+    }
+    public void setArmSearchDocumentsIdUpdate(boolean aUpdate) {
+//$Section=Attribute setUpdate$ArmSearchDocumentsId$Preserve=no
+        iArmSearchDocumentsIdUpdate = aUpdate;
+//$Section=Attribute setUpdate$ArmSearchDocumentsId$Preserve=no
+    }
+    public boolean getArmSearchDocumentsIdUpdate() {
+//$Section=Attribute getUpdate$ArmSearchDocumentsId$Preserve=no
+        return iArmSearchDocumentsIdUpdate;
+//$Section=Attribute getUpdate$ArmSearchDocumentsId$Preserve=no
+    }
+    public String getArmSearchDocumentsIdValueType() {
+//$Section=Attribute getValueType$ArmSearchDocumentsId$Preserve=no
+        return "long";
+//$Section=Attribute getValueType$ArmSearchDocumentsId$Preserve=no
+    }
+    public String getArmSearchDocumentsIdValueStereotype() {
+//$Section=Attribute getValueStereotype$ArmSearchDocumentsId$Preserve=no
+        return "";
+//$Section=Attribute getValueStereotype$ArmSearchDocumentsId$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// UrlId
+//----------------------------------------------------------------------------
+    public long getUrlId() {
+//$Section=Attribute get$UrlId$Preserve=no
+        return iUrlId.getValueLong();
+//$Section=Attribute get$UrlId$Preserve=no
+    }
+    public long getUrlId(long aValue) {
+//$Section=Attribute get$UrlId(long)$Preserve=no
+      if (isUrlIdNull()) return aValue;
+      return iUrlId.getValueLong();
+//$Section=Attribute get$UrlId(long)$Preserve=no
+    }
+    public void setUrlId(long aValue) {
+//$Section=Attribute set$UrlId$Preserve=no
+        iUrlId.reset(aValue);
+//$Section=Attribute set$UrlId$Preserve=no
+    }
+    public void setUrlId(PropertyValue aValue) {
+//$Section=Attribute setPropertyValue$UrlId$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setUrlIdNull();
+          return;
+        }
+        setUrlId(aValue.toString());
+//$Section=Attribute setPropertyValue$UrlId$Preserve=no
+    }
+    public void setUrlId(PropertyValue aValue, String aFormat) {
+//$Section=Attribute setPropertyValueFormat$UrlId$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setUrlIdNull();
+          return;
+        }
+        setUrlId(aValue.toString(), aFormat);
+//$Section=Attribute setPropertyValueFormat$UrlId$Preserve=no
+    }
+    public void setUrlId(String aValue) {
+//$Section=Attribute setAsString$UrlId$Preserve=no
+        iUrlId.reset("long", aValue);
+//$Section=Attribute setAsString$UrlId$Preserve=no
+    }
+    public void setUrlId(String aValue, String aType) {
+//$Section=Attribute setAsStringType$UrlId$Preserve=no
+        iUrlId.reset(aType, aValue);
+//$Section=Attribute setAsStringType$UrlId$Preserve=no
+    }
+    public PropertyValue getUrlIdPropertyValue() {
+//$Section=Attribute getPropertyValue$UrlId$Preserve=no
+        return iUrlId;
+//$Section=Attribute getPropertyValue$UrlId$Preserve=no
+    }
+    public String getAttributeName_urlid() {
+//$Section=Attribute getAttributeName$urlid$Preserve=no
+        return "UrlId";
+//$Section=Attribute getAttributeName_$urlid$Preserve=no
+    }
+    public int sizeUrlId() {
+//$Section=Attribute size$UrlId$Preserve=no
+        return iUrlIdSize;
+//$Section=Attribute size$UrlId$Preserve=no
+    }
+    public boolean isUrlIdNullable() {
+//$Section=Attribute isNullable$UrlId$Preserve=no
+        return iUrlIdIsNullable;
+//$Section=Attribute isNullable$UrlId$Preserve=no
+    }
+    public boolean isUrlIdNull() {
+//$Section=Attribute isNull$UrlId$Preserve=no
+        if (iUrlId.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+        return false;
+//$Section=Attribute isNull$UrlId$Preserve=no
+    }
+    public void setUrlIdNull() {
+//$Section=Attribute setNull$UrlId$Preserve=no
+        iUrlId.reset();
+//$Section=Attribute setNull$UrlId$Preserve=no
+    }
+    public void setUrlIdSpaceToNull() {
+//$Section=Attribute setSpaceToNull$UrlId$Preserve=no
+        if (getUrlIdPropertyValue().toString().trim().equals("")) setUrlIdNull();
+//$Section=Attribute setSpaceToNull$UrlId$Preserve=no
+    }
+    public void setUrlIdUpdate(boolean aUpdate) {
+//$Section=Attribute setUpdate$UrlId$Preserve=no
+        iUrlIdUpdate = aUpdate;
+//$Section=Attribute setUpdate$UrlId$Preserve=no
+    }
+    public boolean getUrlIdUpdate() {
+//$Section=Attribute getUpdate$UrlId$Preserve=no
+        return iUrlIdUpdate;
+//$Section=Attribute getUpdate$UrlId$Preserve=no
+    }
+    public String getUrlIdValueType() {
+//$Section=Attribute getValueType$UrlId$Preserve=no
+        return "long";
+//$Section=Attribute getValueType$UrlId$Preserve=no
+    }
+    public String getUrlIdValueStereotype() {
+//$Section=Attribute getValueStereotype$UrlId$Preserve=no
+        return "";
+//$Section=Attribute getValueStereotype$UrlId$Preserve=no
+    }
+
+//----------------------------------------------------------------------------
+// Word
+//----------------------------------------------------------------------------
+    public String getWord() {
+//$Section=Attribute get$Word$Preserve=no
+        return iWord.getValueString();
+//$Section=Attribute get$Word$Preserve=no
+    }
+    public String getWord(String aValue) {
+//$Section=Attribute get$Word(String)$Preserve=no
+      if (isWordNull()) return aValue;
+      return iWord.getValueString();
+//$Section=Attribute get$Word(String)$Preserve=no
+    }
+    public void setWord(String aValue) {
+//$Section=Attribute set$Word$Preserve=no
+        iWord.reset(aValue);
+//$Section=Attribute set$Word$Preserve=no
+    }
+    public void setWord(PropertyValue aValue) {
+//$Section=Attribute setPropertyValue$Word$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setWordNull();
+          return;
+        }
+        setWord(aValue.toString());
+//$Section=Attribute setPropertyValue$Word$Preserve=no
+    }
+    public void setWord(PropertyValue aValue, String aFormat) {
+//$Section=Attribute setPropertyValueFormat$Word$Preserve=no
+        if (aValue.getType().equals("null")) {
+          setWordNull();
+          return;
+        }
+        setWord(aValue.toString(), aFormat);
+//$Section=Attribute setPropertyValueFormat$Word$Preserve=no
+    }
+    public void setWord(String aValue, String aType) {
+//$Section=Attribute setAsStringType$Word$Preserve=no
+        iWord.reset(aType, aValue);
+//$Section=Attribute setAsStringType$Word$Preserve=no
+    }
+    public PropertyValue getWordPropertyValue() {
+//$Section=Attribute getPropertyValue$Word$Preserve=no
+        return iWord;
+//$Section=Attribute getPropertyValue$Word$Preserve=no
+    }
+    public String getAttributeName_word() {
+//$Section=Attribute getAttributeName$word$Preserve=no
+        return "Word";
+//$Section=Attribute getAttributeName_$word$Preserve=no
+    }
+    public int sizeWord() {
+//$Section=Attribute size$Word$Preserve=no
+        return iWordSize;
+//$Section=Attribute size$Word$Preserve=no
+    }
+    public boolean isWordNullable() {
+//$Section=Attribute isNullable$Word$Preserve=no
+        return iWordIsNullable;
+//$Section=Attribute isNullable$Word$Preserve=no
+    }
+    public boolean isWordNull() {
+//$Section=Attribute isNull$Word$Preserve=no
+        if (iWord.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) return true;
+        return false;
+//$Section=Attribute isNull$Word$Preserve=no
+    }
+    public void setWordNull() {
+//$Section=Attribute setNull$Word$Preserve=no
+        iWord.reset();
+//$Section=Attribute setNull$Word$Preserve=no
+    }
+    public void setWordSpaceToNull() {
+//$Section=Attribute setSpaceToNull$Word$Preserve=no
+        if (getWordPropertyValue().toString().trim().equals("")) setWordNull();
+//$Section=Attribute setSpaceToNull$Word$Preserve=no
+    }
+    public void setWordUpdate(boolean aUpdate) {
+//$Section=Attribute setUpdate$Word$Preserve=no
+        iWordUpdate = aUpdate;
+//$Section=Attribute setUpdate$Word$Preserve=no
+    }
+    public boolean getWordUpdate() {
+//$Section=Attribute getUpdate$Word$Preserve=no
+        return iWordUpdate;
+//$Section=Attribute getUpdate$Word$Preserve=no
+    }
+    public String getWordValueType() {
+//$Section=Attribute getValueType$Word$Preserve=no
+        return "string";
+//$Section=Attribute getValueType$Word$Preserve=no
+    }
+    public String getWordValueStereotype() {
+//$Section=Attribute getValueStereotype$Word$Preserve=no
+        return "";
+//$Section=Attribute getValueStereotype$Word$Preserve=no
+    }
+
+
+//$Section=Deleted$Preserve=yes
+
+//----------------------------------------------------------------------------
+// This section contains orphaned code from deleted operations.
+//----------------------------------------------------------------------------
+
+//$Section=Deleted$Preserve=no
+
+//End of class---------------
+}

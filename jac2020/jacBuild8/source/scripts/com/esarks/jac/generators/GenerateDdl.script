@@ -1,0 +1,1092 @@
+context micScriptComponent
+end
+
+//com.esarks.arm.schemas.ddl.root
+
+  public void dropTable(String aXmlDefinition, String aTable) {
+    resetExit();
+    try {
+    %>dropTable: <!%aXmlDefinition!> - <!%aTable!><!%"\r\n"!><%
+
+    String lPackage = readTableXml(aXmlDefinition);
+    if (checkExit()) return;
+    dropTable(aTable);
+    if (checkExit()) return;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void createTable(String aXmlDefinition, String aTable) {
+
+    resetExit();
+    try {
+    %>createTable: <!%aXmlDefinition!> - <!%aTable!><!%"\r\n"!><%
+
+    String lPackage = aXmlDefinition;
+    for(int lIdx=aXmlDefinition.length(); lIdx > 0; lIdx--) {
+      if (aXmlDefinition.charAt(lIdx-1) == '.') {
+        lPackage = aXmlDefinition.substring(0, lIdx-1);
+        break;
+      }
+    }
+
+    boolean lForce = false;
+    setContext(iScript.getMasterScript());
+    if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+    restoreContext();
+    if (!lForce) {
+      File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateDdl") + ".script");
+      File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+      File lNewFile = new File(path(lPackage + "." + aTable) + ".sql");
+      if (lNewFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+          ((lGeneratorFile.exists() && lNewFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) || !lGeneratorFile.exists())) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("File " + lPackage + "." + aTable + ".sql is not stale.  Generation bypassed.");
+        <!$jac:event:severity!>!set("info");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;
+      }
+    }
+    
+    readTableXml(aXmlDefinition);
+    if (checkExit()) return;
+    generateDbTable(aXmlDefinition, lPackage, aTable);
+    if (checkExit()) return;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void dropView(String aXmlDefinition, String aView) {
+    resetExit();
+    try {
+    %>dropView: <!%aXmlDefinition!> - <!%aView!><!%"\r\n"!><%
+    readViewXml(aXmlDefinition);
+    if (checkExit()) return;
+    dropView(aView);
+    if (checkExit()) return;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void createView(String aXmlDefinition, String aView) {
+    resetExit();
+    try {
+    %>createView: <!%aXmlDefinition!> - <!%aView!><!%"\r\n"!><%
+
+    String lPackage = aXmlDefinition;
+    for(int lIdx=aXmlDefinition.length(); lIdx > 0; lIdx--) {
+      if (aXmlDefinition.charAt(lIdx-1) == '.') {
+        lPackage = aXmlDefinition.substring(0, lIdx-1);
+        break;
+      }
+    }
+
+    boolean lForce = false;
+    setContext(iScript.getMasterScript());
+    if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+    restoreContext();
+    if (!lForce) {
+      File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateDdl") + ".script");
+      File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+      File lNewFile = new File(path(lPackage + "." + aView) + ".sql");
+      if (lNewFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+          ((lGeneratorFile.exists() && lNewFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) || !lGeneratorFile.exists())) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("File " + lPackage + "." + aView + ".sql is not stale.  Generation bypassed.");
+        <!$jac:event:severity!>!set("info");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;
+      }
+    }
+    
+    readViewXml(aXmlDefinition);
+    if (checkExit()) return;
+    generateDbView(aXmlDefinition, lPackage, aView);
+    if (checkExit()) return;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void loadTable(String aXmlDefinition, String aTable) {
+    try {
+    %>loadTable: <!%aXmlDefinition!> - <!%aTable!><!%"\r\n"!><%
+    readTableXml(aXmlDefinition);
+    if (checkExit()) return;
+    loadTable(aTable);
+    if (checkExit()) return;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void performSqlFile(String aSqlFile) {
+    performSqlFile(aSqlFile, "");
+  }
+
+  public void performSqlFile(String aSqlFile, String aDbConnection) {
+    resetExit();
+    try {
+    %>performSqlFile: <!%aSqlFile!><!%"\r\n"!><%
+    FileReader lFileReader = new FileReader(path(aSqlFile) + ".sql");
+    BufferedReader lBufferedReader = new BufferedReader(lFileReader);
+    LineNumberReader lLineNumberReader = new LineNumberReader(lBufferedReader);
+    StringBuffer lStringBuffer = new StringBuffer();
+    String lLine;
+    while ((lLine = lLineNumberReader.readLine()) != null) {
+      lStringBuffer.append(lLine + "\r\n");
+    }
+    performSqlStatement(lStringBuffer, aDbConnection);
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      if (e.getMessage().startsWith("[Microsoft][SQLServer 2000 Driver for JDBC][SQLServer]There is already an object named")) {
+        <!$jac:event:severity!>!set("warning");
+      } else if (e.getMessage().indexOf(" already exists") > -1) {
+        <!$jac:event:severity!>!set("warning");
+      } else {
+        <!$jac:event:severity!>!set("fatal");
+      }
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+  
+  public void performSqlStatement(StringBuffer aSqlStatement) {
+    performSqlStatement(aSqlStatement, "");
+  }
+
+  public void performSqlStatement(StringBuffer aSqlStatement, String aDbConnection) {
+    try {
+
+    String lSqlStatement = aSqlStatement.toString();
+    int lTagSearchIndex = -1;
+    while ( (lTagSearchIndex = lSqlStatement.indexOf("$")) > -1) {
+      int lSize = lSqlStatement.substring(lTagSearchIndex).indexOf(" ");
+      if (lSize == -1) {
+        lSize = lSqlStatement.length();
+      } else {
+        lSize += lTagSearchIndex;
+      }
+      lSize = lSize;
+      lSqlStatement = lSqlStatement.substring(0, lTagSearchIndex) + 
+               getObjectPrefix(lSqlStatement.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lSqlStatement.substring(lTagSearchIndex+1, lSize) +
+               lSqlStatement.substring(lSize);
+    }
+
+    // Get the associated DbConnection of the incoming object name (aDbConnection).
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    DbConnection lDbConnection = lDbConnectionFactory.getAssociatedDbConnection(aDbConnection);
+    
+    if (lDbConnection.getMake()) {
+      PreparedStatement lPreparedStatement;
+      lPreparedStatement = lDbConnection.getConnection().prepareStatement(lSqlStatement);
+      lPreparedStatement.execute();
+    }
+
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      if (e.getMessage().startsWith("[Microsoft][SQLServer 2000 Driver for JDBC][SQLServer]There is already an object named")) {
+        <!$jac:event:severity!>!set("warning");
+      } else {
+        <!$jac:event:severity!>!set("fatal");
+      }
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  private String readTableXml(String aXmlDefinition) {
+    try {
+    String lPackage = aXmlDefinition;
+    for(int lIdx=aXmlDefinition.length(); lIdx > 0; lIdx--) {
+      if (aXmlDefinition.charAt(lIdx-1) == '.') {
+        lPackage = aXmlDefinition.substring(0, lIdx-1);
+        break;
+      }
+    }
+    <!com.esarks.arm.schemas.ddl.root!>!remove();
+    parseXmlDefinition(aXmlDefinition);
+    if (checkExit()) return lPackage;
+    if (<!com.esarks.arm.schemas.ddl.root!>!size() == 0) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Could not find <tables> tag in *.xml file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return "";
+    }
+    return lPackage;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return "";
+    }
+  }
+
+  private String readViewXml(String aXmlDefinition) {
+    try {
+    String lPackage = aXmlDefinition;
+    for(int lIdx=aXmlDefinition.length(); lIdx > 0; lIdx--) {
+      if (aXmlDefinition.charAt(lIdx-1) == '.') {
+        lPackage = aXmlDefinition.substring(0, lIdx-1);
+        break;
+      }
+    }
+
+    <!com.esarks.arm.schemas.ddl.root!>!remove();
+    parseXmlDefinition(aXmlDefinition);
+    if (checkExit()) return "";
+    if (<!com.esarks.arm.schemas.ddl.root!>!size() == 0) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Could not find <views> tag in *.xml file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return "";
+    }
+    return lPackage;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return "";
+    }
+  }
+
+  private void generateIndexes() {
+    try {
+    <!com.esarks.arm.schemas.ddl.root:table:index!>!resetIterator();
+    while (<!com.esarks.arm.schemas.ddl.root:table:index!>!next()) {
+
+      iOutputManager.setDocument("createHtml");
+      %><table border=1 cellpadding=3 cellspacing=0><%
+      %><tr><td>Index <![com.esarks.arm.schemas.ddl.root:table:index:type]!></td><td><![com.esarks.arm.schemas.ddl.root:table:index:name]!></td></tr><%
+      iOutputManager.setDocument("createTable");
+
+      %>CREATE <![com.esarks.arm.schemas.ddl.root:table:index:type]!> INDEX <![com.esarks.arm.schemas.ddl.root:table:index:name]!> ON <![com.esarks.arm.schemas.ddl.root:table:name]!> (<%
+      <!com.esarks.arm.schemas.ddl.root:table:index:field!>!resetIterator();
+      while (<!com.esarks.arm.schemas.ddl.root:table:index:field!>!next()) {
+        %><![com.esarks.arm.schemas.ddl.root:table:index:field]!><%
+        if (<!com.esarks.arm.schemas.ddl.root:table:index:field!>!isLast() == false) {
+          %>, <%
+        } else {
+          %>) <![com.esarks.arm.schemas.ddl.root:table:index:with]!><!%"\r\n"!><%
+        }
+        iOutputManager.setDocument("createHtml");
+        %><tr><td>Field</td><td><![com.esarks.arm.schemas.ddl.root:table:index:field]!></td></tr><%
+        iOutputManager.setDocument("createTable");
+      }
+      if (<!com.esarks.arm.schemas.ddl.root:table:index:with!>!size() > 0) {
+        iOutputManager.setDocument("createHtml");
+        %><tr><td>With</td><td><![com.esarks.arm.schemas.ddl.root:table:index:with]!></td></tr><%
+        iOutputManager.setDocument("createTable");
+      }
+      iOutputManager.setDocument("createHtml");
+      %></table><%
+      iOutputManager.setDocument("createTable");
+    }
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  private boolean generateKey(boolean aInsertComma) {
+    try {
+    boolean lReturn = aInsertComma;
+    <!com.esarks.arm.schemas.ddl.root:table:primary!>!resetIterator();
+    while (<!com.esarks.arm.schemas.ddl.root:table:primary!>!next()) {
+
+      iOutputManager.setDocument("createHtml");
+      %><table border=1 cellpadding=3 cellspacing=0><%
+      %><tr><td>Primary Key</td><td><![com.esarks.arm.schemas.ddl.root:table:primary:name]!></td></tr><%
+      iOutputManager.setDocument("createTable");
+
+      if (lReturn) {
+        %>,<!%"\r\n"!><%
+      }
+      lReturn = true;
+      %>  CONSTRAINT <![com.esarks.arm.schemas.ddl.root:table:primary:name]!><%
+      %> PRIMARY KEY (<%
+      <!com.esarks.arm.schemas.ddl.root:table:primary:field!>!resetIterator();
+      while (<!com.esarks.arm.schemas.ddl.root:table:primary:field!>!next()) {
+        %><![com.esarks.arm.schemas.ddl.root:table:primary:field]!><%
+        if (<!com.esarks.arm.schemas.ddl.root:table:primary:field!>!isLast() == false) {
+          %>, <%
+        } else {
+          %>)<%
+        }
+        iOutputManager.setDocument("createHtml");
+        %><tr><td>Field</td><td><![com.esarks.arm.schemas.ddl.root:table:primary:field]!></td></tr><%
+        iOutputManager.setDocument("createTable");
+      }
+
+      iOutputManager.setDocument("createHtml");
+      %></table><%
+      iOutputManager.setDocument("createTable");
+
+    }
+
+    <!com.esarks.arm.schemas.ddl.root:table:unique!>!resetIterator();
+    while (<!com.esarks.arm.schemas.ddl.root:table:unique!>!next()) {
+
+      iOutputManager.setDocument("createHtml");
+      %><table border=1 cellpadding=3 cellspacing=0><%
+      %><tr><td>Unique Constraint</td><td><![com.esarks.arm.schemas.ddl.root:table:unique:name]!></td></tr><%
+      iOutputManager.setDocument("createTable");
+
+      if (lReturn) {
+        %>,<!%"\r\n"!><%
+      }
+      lReturn = true;
+      %>  CONSTRAINT <![com.esarks.arm.schemas.ddl.root:table:unique:name]!><%
+      %> UNIQUE (<%
+      <!com.esarks.arm.schemas.ddl.root:table:unique:field!>!resetIterator();
+      while (<!com.esarks.arm.schemas.ddl.root:table:unique:field!>!next()) {
+        %><![com.esarks.arm.schemas.ddl.root:table:unique:field]!><%
+        if (<!com.esarks.arm.schemas.ddl.root:table:unique:field!>!isLast() == false) {
+          %>, <%
+        } else {
+          %>)<%
+        }
+        iOutputManager.setDocument("createHtml");
+        %><tr><td>Field</td><td><![com.esarks.arm.schemas.ddl.root:table:unique:field]!></td></tr><%
+        iOutputManager.setDocument("createTable");
+      }
+
+      iOutputManager.setDocument("createHtml");
+      %></table><%
+      iOutputManager.setDocument("createTable");
+    }
+
+    <!com.esarks.arm.schemas.ddl.root:table:foreign!>!resetIterator();
+    while (<!com.esarks.arm.schemas.ddl.root:table:foreign!>!next()) {
+
+      iOutputManager.setDocument("createHtml");
+      %><table border=1 cellpadding=3 cellspacing=0><%
+      %><tr><td>Foreign Key Constraint</td><td><![com.esarks.arm.schemas.ddl.root:table:foreign:name]!></td></tr><%
+      iOutputManager.setDocument("createTable");
+
+      if (lReturn) {
+        %>,<!%"\r\n"!><%
+      }
+      lReturn = true;
+      %>  CONSTRAINT <![com.esarks.arm.schemas.ddl.root:table:foreign:name]!><%
+      %> FOREIGN KEY (<%
+      <!com.esarks.arm.schemas.ddl.root:table:foreign:field!>!resetIterator();
+      while (<!com.esarks.arm.schemas.ddl.root:table:foreign:field!>!next()) {
+        %><![com.esarks.arm.schemas.ddl.root:table:foreign:field]!><%
+        if (<!com.esarks.arm.schemas.ddl.root:table:foreign:field!>!isLast() == false) {
+          %>, <%
+        } else {
+          %>)<%
+        }
+        iOutputManager.setDocument("createHtml");
+        %><tr><td>Field</td><td><![com.esarks.arm.schemas.ddl.root:table:foreign:field]!></td></tr><%
+        iOutputManager.setDocument("createTable");
+      }
+      String lDatabase = getObjectPrefix(<![com.esarks.arm.schemas.ddl.root:table:foreign:references:name]!>.toLowerCase());
+      %> REFERENCES <!%lDatabase!><![com.esarks.arm.schemas.ddl.root:table:foreign:references:name]!> (<%
+
+      iOutputManager.setDocument("createHtml");
+      %><tr><td>References</td><td><!%lDatabase!><![com.esarks.arm.schemas.ddl.root:table:foreign:references:name]!></td></tr><%
+      iOutputManager.setDocument("createTable");
+
+      <!com.esarks.arm.schemas.ddl.root:table:foreign:references:field!>!resetIterator();
+      while (<!com.esarks.arm.schemas.ddl.root:table:foreign:references:field!>!next()) {
+        %><![com.esarks.arm.schemas.ddl.root:table:foreign:references:field]!><%
+        if (<!com.esarks.arm.schemas.ddl.root:table:foreign:references:field!>!isLast() == false) {
+          %>, <%
+        } else {
+          %>)<%
+        }
+        iOutputManager.setDocument("createHtml");
+        %><tr><td>Field</td><td><![com.esarks.arm.schemas.ddl.root:table:references:field]!></td></tr><%
+        iOutputManager.setDocument("createTable");
+      }
+      iOutputManager.setDocument("createHtml");
+      %></table><%
+      iOutputManager.setDocument("createTable");
+    }
+
+    return false;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return false;
+    }
+  }
+
+  private boolean generateDbFields(DbConnection aDbConnection) {
+    try {
+    boolean lReturn = false;
+    <!com.esarks.arm.schemas.ddl.root:table:field!>!resetIterator();
+    while (<!com.esarks.arm.schemas.ddl.root:table:field!>!next()) {
+      if (lReturn) {
+        %>,<!%"\r\n"!><%
+        lReturn = false;
+      }
+      %>  <![com.esarks.arm.schemas.ddl.root:table:field:name]!><%
+      String lType = <![com.esarks.arm.schemas.ddl.root:table:field:type]!>;
+      String lIdentity = <![com.esarks.arm.schemas.ddl.root:table:field:identity]!>;
+      String lSize = <![com.esarks.arm.schemas.ddl.root:table:field:size]!>;
+
+      if (aDbConnection.getStereotype().equals("sqlServer")) {
+        if (lIdentity.equals("true")) {
+          %> <!%getDbType(lType, lSize)!> identity (1, 1)<%
+        } else {
+          %> <!%getDbType(lType, lSize)!><%
+        }
+        if (<![com.esarks.arm.schemas.ddl.root:table:field:nullable]!>.compareTo("false") == 0) {
+          %> NOT NULL<%
+        }
+      }
+      
+      if (aDbConnection.getStereotype().equals("postgreSql")) {
+        if (lIdentity.equals("true")) {
+          %> <!%getDbType(lType, lSize)!> AS IDENTITY<%
+        } else {
+          %> <!%getDbType(lType, lSize)!><%
+        }
+        if (<![com.esarks.arm.schemas.ddl.root:table:field:nullable]!>.compareTo("false") == 0) {
+          %> NOT NULL<%
+        }
+      }
+
+      if (aDbConnection.getStereotype().equals("mySql")) {
+        %> <!%getDbType(lType, lSize)!><%
+        if (<![com.esarks.arm.schemas.ddl.root:table:field:nullable]!>.compareTo("false") == 0) {
+          %> NOT NULL<%
+        }
+        if (lIdentity.equals("true")) {
+          %> AUTO_INCREMENT<%
+        }
+      }
+
+      lReturn = true;
+      iOutputManager.setDocument("createHtml");
+      %><tr><td><![com.esarks.arm.schemas.ddl.root:table:field:name]!>&nbsp;</td><td><![com.esarks.arm.schemas.ddl.root:table:field:identity]!>&nbsp;</td><td><![com.esarks.arm.schemas.ddl.root:table:field:type]!>&nbsp;</td><td><![com.esarks.arm.schemas.ddl.root:table:field:size]!>&nbsp;</td><td><!%getDbType(lType, lSize)!>&nbsp;</td><td><![com.esarks.arm.schemas.ddl.root:table:field:nullable]!>&nbsp;</td></tr><%
+      iOutputManager.setDocument("createTable");
+    }
+    return lReturn;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return false;
+    }
+  }
+  
+  public void generateDbTable(String aXmlDefinition, String aPackage, String aTable) {
+    try {
+    %>GenerateDdl:generateDbTable XML=<!%aXmlDefinition!>, Packge=<!%aPackage!>, Table=<!%aTable!><!%"\r\n"!><%
+    <!com.esarks.arm.schemas.ddl.root:table!>!resetIterator();
+    if (<!com.esarks.arm.schemas.ddl.root!>!scan("table:name", aTable) == false) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Cannot find table <!%aTable!> in XML.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    setContext(iScript.getMasterScript());
+    String lDateTime = <![$jac:dateTime]!>;
+    restoreContext();
+    iOutputManager.addDocument("createTable");
+    %>--  Generated at <!%lDateTime!> by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED<!%"\r\n"!><%
+
+    iOutputManager.addDocument("createHtml");
+    %><html><%
+    iOutputManager.setDocument("createTable");
+
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    DbConnection lDbConnection = lDbConnectionFactory.getAssociatedDbConnection(<![com.esarks.arm.schemas.ddl.root:table:name]!>.toLowerCase());
+
+    iOutputManager.setDocument("createHtml");
+    %><table border=1 cellpadding=3 cellspacing=0><%
+    %><tr><td><![com.esarks.arm.schemas.ddl.root:table:name]!></td></tr><%
+    %></table><%
+    iOutputManager.setDocument("createTable");
+
+    %>CREATE TABLE <![com.esarks.arm.schemas.ddl.root:table:name]!> (<!%"\r\n"!><%
+    boolean lInsertComma = false;
+
+    iOutputManager.setDocument("createHtml");
+    %><table border=1 cellpadding=3 cellspacing=0><%
+    %><tr><td><b>Field Name</b></td><td><b>Identity</b></td><td><b>Type</b></td><td><b>Size</b></td><td><b>Db Type</b></td><td><b>Nullable</b></td></tr><%
+    iOutputManager.setDocument("createTable");
+
+    lInsertComma = generateDbFields(lDbConnection);
+
+    iOutputManager.setDocument("createHtml");
+    %></table><%
+    iOutputManager.setDocument("createTable");
+
+    lInsertComma = generateKey(lInsertComma);
+    %>);<!%"\r\n"!><%
+    generateIndexes();
+
+    boolean lForce = false;
+    setContext(iScript.getMasterScript());
+    if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+    restoreContext();
+    if (!lForce) {
+      File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateDdl") + ".script");
+      File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+      File lNewFile = new File(path(aPackage + "." + aTable) + ".sql");
+      if (lNewFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+          ((lGeneratorFile.exists() && lNewFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) || !lGeneratorFile.exists())) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("File " + aPackage + "." + aTable + ".sql is not stale.  Generation bypassed.");
+        <!$jac:event:severity!>!set("info");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;
+      }
+    }
+
+    iOutputManager.setDocument("createHtml");
+    %></html><%
+    iOutputManager.setDocument("createTable");
+    StringBuffer lStringBuffer = iOutputManager.getDocument("createHtml");
+    if (openOutput(path(aPackage + "." + aTable) + ".html")) {
+      %><!%lStringBuffer.toString()!><%
+      closeOutput();
+    }
+
+    lStringBuffer = iOutputManager.getDocument("createTable");
+    if (openOutput(path(aPackage + "." + aTable) + ".new")) {
+      %><!%lStringBuffer.toString()!><%
+      closeOutput();
+
+      setContext(iScript.getMasterScript());
+      <!$jac:merge:sectionMarker!>!reset("--$Section=");
+      <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
+      <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
+      <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
+      <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
+      <!$jac:merge:preservePreamble!>!reset("no");
+      <!$jac:merge:comments!>!reset("--");
+      <!$jac:merge:excludeCompare!>!reset("--  Generated at");
+      <!$jac:merge:trimOutput!>!reset("yes");
+      <!$jac:merge:keepSections!>!reset("no");
+      restoreContext();
+
+      Merge.getInstance().doMerge(path(aPackage + "." + aTable) + ".sql", path(aPackage + "." + aTable) + ".new", iScript.getMasterScript());
+      if (Merge.getInstance().getExceptionMessage() != null) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set(Merge.getInstance().getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;      
+      }
+
+    } else {
+      setContext(iScript.getMasterScript());
+      if (iOutputManager.getExceptionMessage() != null) {
+        <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+      }
+      <!$jac:event!>!set("Failed to open " + aPackage + "." + aTable + ".sql output file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    
+    if (lDbConnection.getMake()) {
+      PreparedStatement lPreparedStatement;
+      lPreparedStatement = lDbConnection.getConnection().prepareStatement(lStringBuffer.toString());
+      lPreparedStatement.execute();
+      %>...Table created<!%"\r\n"!><%
+    } else {
+      %>...Table create bypassed<!%"\r\n"!><%
+    }
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      if (e.getMessage().startsWith("[Microsoft][SQLServer 2000 Driver for JDBC][SQLServer]There is already an object named")) {
+        <!$jac:event:severity!>!set("warning");
+      } else {
+        <!$jac:event:severity!>!set("fatal");
+      }
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void dropTable(String aTable) {
+    try {
+
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    DbConnection lDbConnection = lDbConnectionFactory.getAssociatedDbConnection(aTable.toLowerCase());
+
+    if (lDbConnection.getMake()) {
+      PreparedStatement lPreparedStatement;
+      lPreparedStatement = lDbConnection.getConnection().prepareStatement( "DROP TABLE " + aTable );
+      lPreparedStatement.execute();
+    }
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void generateDbView(String aXmlDefinition, String aPackage, String aView) {
+    try {
+    %>GenerateDdl:generateDbView XML=<!%aXmlDefinition!>, Packge=<!%aPackage!>, View=<!%aView!><!%"\r\n"!><%
+    <!com.esarks.arm.schemas.ddl.root:view!>!resetIterator();
+    if (<!com.esarks.arm.schemas.ddl.root!>!scan("view:name", aView) == false) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Cannot find view <!%aView!> in XML.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    setContext(iScript.getMasterScript());
+    String lDateTime = <![$jac:dateTime]!>;
+    restoreContext();
+    iOutputManager.addDocument("createView");
+    %>--  Generated at <!%lDateTime!> by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED<!%"\r\n"!><%
+
+    %>CREATE VIEW <![com.esarks.arm.schemas.ddl.root:view:name]!> AS <!%"\r\n"!><%
+    if (<!com.esarks.arm.schemas.ddl.root:view:select!>!size() > 0) {
+      String lSelect = <![com.esarks.arm.schemas.ddl.root:view:select]!>;
+      int lTagSearchIndex = -1;
+      while ( (lTagSearchIndex = lSelect.indexOf("$")) > -1) {
+        int lSize = lSelect.substring(lTagSearchIndex).indexOf(" ");
+        if (lSize == -1) {
+          lSize = lSelect.length();
+        } else {
+          lSize += lTagSearchIndex;
+        }
+        lSize = lSize;
+        lSelect = lSelect.substring(0, lTagSearchIndex) + 
+                 getObjectPrefix(lSelect.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lSelect.substring(lTagSearchIndex+1, lSize) +
+                 lSelect.substring(lSize);
+      }
+      %><!%lSelect!><!%"\r\n"!><%
+    } else {
+      %>SELECT <!%"\r\n"!><%
+    }
+    <!com.esarks.arm.schemas.ddl.root:view:table!>!resetIterator();
+    boolean lComma = false;
+    String lTables = "FROM ";
+    while (<!com.esarks.arm.schemas.ddl.root:view:select!>!size() == 0 && <!com.esarks.arm.schemas.ddl.root:view:table!>!next()) {
+      String lFirstName = null;
+      String lMiddleName = null;
+      String lLastName = null;
+      String lSuffixName = null;
+      boolean lHasName = false;
+      String lNameView = "hrmConcatName";
+//      lTables = lTables.concat(<![com.esarks.arm.schemas.ddl.root:view:table:name]!>);
+      lTables = lTables.concat(getObjectPrefix(<![com.esarks.arm.schemas.ddl.root:view:table:name]!>.toLowerCase()) + <![com.esarks.arm.schemas.ddl.root:view:table:name]!>);
+      if (<!com.esarks.arm.schemas.ddl.root:view:table:symbolic!>!size() > 0) lTables = lTables.concat(" " + <![com.esarks.arm.schemas.ddl.root:view:table:symbolic]!>);
+      if (<!com.esarks.arm.schemas.ddl.root:view:table!>!isLast() == false) lTables = lTables.concat(", ");
+      <!com.esarks.arm.schemas.ddl.root:view:table:column!>!resetIterator();
+      while (<!com.esarks.arm.schemas.ddl.root:view:table:column!>!next()) {
+        if (lComma == true) {
+          %>,<!%"\r\n"!><%
+        }
+        String lPrefix = "";
+        if (<!com.esarks.arm.schemas.ddl.root:view:table:symbolic!>!size() == 0) {
+          lPrefix = getObjectPrefix(<![com.esarks.arm.schemas.ddl.root:view:table:name]!>.toLowerCase()) + <![com.esarks.arm.schemas.ddl.root:view:table:name]!>;
+        } else {
+          lPrefix = <![com.esarks.arm.schemas.ddl.root:view:table:symbolic]!>;
+        }
+        if (<!com.esarks.arm.schemas.ddl.root:view:table:column:name!>!size() > 0) {
+          if (<![com.esarks.arm.schemas.ddl.root:view:table:column:isColumn]!>.compareTo("false") == 0) {
+            if (<!com.esarks.arm.schemas.ddl.root:view:table:column:prefix!>!size() == 0) {
+              %>  <%
+            } else {
+              %>  <![com.esarks.arm.schemas.ddl.root:view:table:column:prefix]!>.<%
+            }
+          }else {
+            %>  <!%lPrefix!>.<%
+          }
+          %><![com.esarks.arm.schemas.ddl.root:view:table:column:name]!><%
+          if (<!com.esarks.arm.schemas.ddl.root:view:table:column:view!>!size() > 0) {
+            %> <![com.esarks.arm.schemas.ddl.root:view:table:column:view]!><%
+          }
+          if (<![com.esarks.arm.schemas.ddl.root:view:table:column:isType]!>.compareTo("true") == 0) {
+            %>,<!%"\r\n"!><%
+            %>  <!%getObjectPrefix("hrmgettypename")!>hrmGetTypeName('<![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>', <%
+            if (<!com.esarks.arm.schemas.ddl.root:view:table:symbolic!>!size() == 0) {
+              String lTableName = getObjectPrefix(<![com.esarks.arm.schemas.ddl.root:view:table:name]!>.toLowerCase()) + <![com.esarks.arm.schemas.ddl.root:view:table:name]!>;
+              %>  <!%lTableName!>.<%
+            } else {
+              %>  <![com.esarks.arm.schemas.ddl.root:view:table:symbolic]!>.<%
+            }
+            %><![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>) <![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>Name<%
+          }
+          if (<!com.esarks.arm.schemas.ddl.root:view:table:column:isName!>!size() > 0) {
+            if (<!com.esarks.arm.schemas.ddl.root:view:table:column:nameView!>!size() > 0) {
+              lNameView = <![com.esarks.arm.schemas.ddl.root:view:table:column:nameView]!>;
+            }
+            String lNameType = <![com.esarks.arm.schemas.ddl.root:view:table:column:isName]!>;
+            if (lNameType.compareTo("first") == 0) {
+              lHasName = true;
+              lFirstName = lPrefix + "." + <![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>;
+            }
+            else if (lNameType.compareTo("middle") == 0) {
+              lHasName = true;
+              lMiddleName = lPrefix + "." + <![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>;
+            }
+            else if (lNameType.compareTo("last") == 0) {
+              lHasName = true;
+              lLastName = lPrefix + "." + <![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>;
+            }
+            else if (lNameType.compareTo("suffix") == 0) {
+              lHasName = true;
+              lSuffixName = lPrefix + "." + <![com.esarks.arm.schemas.ddl.root:view:table:column:name]!>;
+            }
+          }
+          lComma = true;
+        }
+      }
+      if (lHasName == true) {
+        if (lFirstName == null) lFirstName = "''";
+        if (lMiddleName == null) lMiddleName = "''";
+        if (lLastName == null) lLastName = "''";
+        if (lSuffixName == null) lSuffixName = "''";
+        if (lComma == true) %>,<!%"\r\n"!><%
+        %>  <!%getObjectPrefix("hrmconcatname")!>hrmConcatName(<!%lLastName!>, <!%lFirstName!>, <!%lMiddleName!>, <!%lSuffixName!>) <!%lNameView!><%
+        lComma = true;        
+      }
+    }
+
+    if (<!com.esarks.arm.schemas.ddl.root:view:from!>!size() > 0) {
+      String lFrom = <![com.esarks.arm.schemas.ddl.root:view:from]!>;
+      int lTagSearchIndex = -1;
+      while ( (lTagSearchIndex = lFrom.indexOf("$")) > -1) {
+        int lSize = lFrom.substring(lTagSearchIndex).indexOf(" ");
+        if (lSize == -1) {
+          lSize = lFrom.length();
+        } else {
+          lSize += lTagSearchIndex;
+        }
+        lSize = lSize;
+        lFrom = lFrom.substring(0, lTagSearchIndex) + 
+                 getObjectPrefix(lFrom.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lFrom.substring(lTagSearchIndex+1, lSize) +
+                 lFrom.substring(lSize);
+      }
+      %><!%"\r\n"!>FROM <!%lFrom!><!%"\r\n"!><%
+    } else {
+      if (<!com.esarks.arm.schemas.ddl.root:view:select!>!size() == 0) {
+        %><!%"\r\n"!><!%lTables!><!%"\r\n"!><%
+      }
+    }
+    if (<!com.esarks.arm.schemas.ddl.root:view:where!>!size() > 0) %>WHERE <![com.esarks.arm.schemas.ddl.root:view:where]!><!%"\r\n"!><%
+    if (<!com.esarks.arm.schemas.ddl.root:view:order!>!size() > 0) %>ORDER BY <![com.esarks.arm.schemas.ddl.root:view:order]!><!%"\r\n"!><%
+
+    boolean lForce = false;
+    setContext(iScript.getMasterScript());
+    if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+    restoreContext();
+    if (!lForce) {
+      File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateDdl") + ".script");
+      File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+      File lNewFile = new File(path(aPackage + "." + aView) + ".sql");
+      if (lNewFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+          ((lGeneratorFile.exists() && lNewFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) || !lGeneratorFile.exists())) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("File " + aPackage + "." + aView + ".sql is not stale.  Generation bypassed.");
+        <!$jac:event:severity!>!set("info");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;
+      }
+    }
+
+    StringBuffer lStringBuffer = iOutputManager.getDocument("createView");
+    if (openOutput(path(aPackage + "." + aView) + ".new")) {
+      %><!%lStringBuffer.toString()!><%
+      closeOutput();
+
+      setContext(iScript.getMasterScript());
+      <!$jac:merge:sectionMarker!>!reset("--$Section=");
+      <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
+      <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
+      <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
+      <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
+      <!$jac:merge:preservePreamble!>!reset("no");
+      <!$jac:merge:comments!>!reset("--");
+      <!$jac:merge:excludeCompare!>!reset("--  Generated at");
+      <!$jac:merge:trimOutput!>!reset("yes");
+      <!$jac:merge:keepSections!>!reset("no");
+      restoreContext();
+
+      Merge.getInstance().doMerge(path(aPackage + "." + aView) + ".sql", path(aPackage + "." + aView) + ".new", iScript.getMasterScript());
+      if (Merge.getInstance().getExceptionMessage() != null) {
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set(Merge.getInstance().getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;      
+      }
+
+    } else {
+      setContext(iScript.getMasterScript());
+      if (iOutputManager.getExceptionMessage() != null) {
+        <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+        <!$jac:event:severity!>!set("fatal");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+      }
+      <!$jac:event!>!set("Failed to open *.sql output file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    DbConnection lDbConnection = lDbConnectionFactory.getAssociatedDbConnection(<![com.esarks.arm.schemas.ddl.root:view:name]!>.toLowerCase());
+
+    if (lDbConnection.getMake()) {
+      PreparedStatement lPreparedStatement;
+      lPreparedStatement = lDbConnection.getConnection().prepareStatement(lStringBuffer.toString());
+      lPreparedStatement.execute();
+      %>...View created<!%"\r\n"!><%
+    } else {
+      %>...View create bypassed<!%"\r\n"!><%
+    }
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      if (e.getMessage().startsWith("[Microsoft][SQLServer 2000 Driver for JDBC][SQLServer]There is already an object named")) {
+        <!$jac:event:severity!>!set("warning");
+      } else {
+        <!$jac:event:severity!>!set("fatal");
+      }
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void dropView(String aView) {
+    try {
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    DbConnection lDbConnection = lDbConnectionFactory.getAssociatedDbConnection(aView.toLowerCase());
+
+    if (lDbConnection.getMake()) {
+      PreparedStatement lPreparedStatement;
+      lPreparedStatement = lDbConnection.getConnection().prepareStatement( "DROP VIEW " + aView );
+      lPreparedStatement.execute();
+    }
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+
+  public void loadTable(String aTable) {
+    try {
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    DbConnection lDbConnection = lDbConnectionFactory.getAssociatedDbConnection(aTable.toLowerCase());
+
+    PreparedStatement lDeletePreparedStatement = lDbConnection.getConnection().prepareStatement("DELETE FROM " + aTable);
+    lDeletePreparedStatement.execute();
+    lDeletePreparedStatement.close();
+    
+    <!com.esarks.arm.schemas.ddl.root:table!>!resetIterator();
+    if (<!com.esarks.arm.schemas.ddl.root!>!scan("table:name", aTable) == false) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Cannot find table <!%aTable!> in XML.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+    <!com.esarks.arm.schemas.ddl.root:table:row!>!resetIterator();
+    while (<!com.esarks.arm.schemas.ddl.root:table:row!>!next()) {
+      String lStatement = "INSERT INTO " + aTable + "(";
+      String lQuestion = "";
+      <!com.esarks.arm.schemas.ddl.root:table:row:column!>!resetIterator();
+      while (<!com.esarks.arm.schemas.ddl.root:table:row:column!>!next()) {
+        lStatement = lStatement.concat(<![com.esarks.arm.schemas.ddl.root:table:row:column:name]!>);
+        lQuestion = lQuestion.concat("?");
+        if (<!com.esarks.arm.schemas.ddl.root:table:row:column!>!isLast() == false) {
+          lStatement = lStatement.concat(",");
+          lQuestion = lQuestion.concat(",");
+        }
+      }
+      lStatement = lStatement.concat(") VALUES (" + lQuestion + ")");
+
+      PreparedStatement lPreparedStatement;
+      lPreparedStatement = lDbConnection.getConnection().prepareStatement(lStatement);
+      <!com.esarks.arm.schemas.ddl.root:table:row:column!>!resetIterator();
+      int lIdx = 1;
+      while (<!com.esarks.arm.schemas.ddl.root:table:row:column!>!next()) {
+        lPreparedStatement.setString(lIdx++, <![com.esarks.arm.schemas.ddl.root:table:row:column]!>);
+      }
+      lPreparedStatement.execute();
+      lPreparedStatement.close();
+    }
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+  }
+  
+  public String getDbType(String aType, String aSize) {
+    try {
+    String lSize = "";
+    if (getProperty("dbTypes:" + aType + ":size").equals("true")) {
+      lSize = "(" + aSize + ")";
+    }
+    return getProperty("dbTypes:" + aType) + lSize;
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return "";
+    }
+  }
+
+  private String getObjectPrefix(String aObjectName) {
+    DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+    DbConnection lDbConnection = lDbConnectionFactory.getAssociatedDbConnection(aObjectName);
+    if (lDbConnection == null) return "";
+    return lDbConnection.getPrefix();    
+  }
+
+
+  private void parseXmlDefinition(String aXmlDefinition) {
+    XmlSchemaFactory lXmlSchemaFactory = iSymbolTable.getXmlSchemaFactory();
+    if (lXmlSchemaFactory.getXmlSchemaElement("com.esarks.arm.schemas.ddl.root") == null) {
+      loadXmlSchema("com.esarks.arm.schemas.ddl", path("com.esarks.arm.schemas.DdlSchema") + ".xml");
+    }
+    parseXmlSchema(aXmlDefinition);
+  }

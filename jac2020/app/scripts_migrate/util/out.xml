@@ -1,0 +1,17 @@
+<$jac type='null'>
+  <dateTime type='string'>2003.11.12 01:48:07.401 AM EST</dateTime>
+  <fileSeparator type='string'>\</fileSeparator>
+  <path type='null'>
+    <home type='string'>C:\ArchitectsCompanion\jac</home>
+    <scripts type='string'>C:\ArchitectsCompanion\jac\scripts</scripts>
+    <work type='string'>C:\ArchitectsCompanion\jac\work</work>
+  </path>
+  <script type='string'>walkTree
+    <package type='string'>util</package>
+    <path type='string'>util</path>
+    <source type='string'>C:\ArchitectsCompanion\jac\scripts\common\scriptPrefix.script</source>
+    <source type='string'>C:\ArchitectsCompanion\jac\scripts\util\walkTree.script</source>
+    <source type='string'>C:\ArchitectsCompanion\jac\scripts\common\scriptPostfix.script</source>
+  </script>
+  <verifyScripts type='boolean'>true</verifyScripts>
+</$jac>

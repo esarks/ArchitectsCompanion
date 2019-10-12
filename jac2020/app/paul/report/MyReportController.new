@@ -1,0 +1,47 @@
+//  Generated at 2005.01.21 03:07:59.468 PM EST by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+
+  public void execute() {
+
+    ArrayList lCollection = performService();
+
+    com.esarks.arm.model.jeo.service lDocumentServiceJeo = new com.esarks.arm.model.jeo.service();
+
+    iScript.execMethod("com.learning.paul.report.MyReport", "render", new Object[]{"com.learning.paul.report.MyReport", lDocumentServiceJeo});
+
+  }
+  
+  public void performService() {
+
+    // Create the service jeo
+    com.esarks.arm.model.jeo.service lServiceJeo = new com.esarks.arm.model.jeo.service();
+
+    // Call the service
+    iScript.execMethod("!!com...!!", "!!serviceName!!", new Object[]{lServiceJeo});
+    if (lServiceJeo.getError() != null && lServiceJeo.getError().getSeverity() < 5) {
+      System.out.println(lServiceJeo.getError().getTitle());
+      System.out.println(lServiceJeo.getError().getText());
+      System.out.println(lServiceJeo.getError().getLocation());
+      return;
+    }
+
+    // Get the reply objects
+    Jeo lReplyJeo = lServiceJeo.getReply();
+    ArrayList lArrayList = lReplyJeo.getJeoByInstanceName("!!com...!!");
+
+    int lIdx = 0;
+    for (lIdx=0; lIdx < lArrayList.size(); lIdx++) {
+      !!com...!! lJeo = (!!com...!!) lArrayList.get(lIdx);
+    }
+
+  }
+  
+  public Jeo createDetail(Jeo aJeo);
+
+    com.learning.paul.report.MyReportJeo lJeo = new com.learning.paul.report.MyReportJeo("detail");
+
+    lJeo.setMyField(aJeo.get!!Attribute!!PropertyValue().toString());
+
+    return lJeo;
+  }
+
+}

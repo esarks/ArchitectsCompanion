@@ -1,0 +1,8 @@
+<makeAll>
+
+  <componentInventory>com.esarks.jac.make.JacComponents</componentInventory>
+
+  <component>$All</component>
+  
+</makeAll>
+

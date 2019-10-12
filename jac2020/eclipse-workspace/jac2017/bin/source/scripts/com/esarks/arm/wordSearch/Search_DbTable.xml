@@ -1,0 +1,43 @@
+<tables>
+
+  <table name="ArmSearchDocuments" >
+
+    <field name="protocol"  type="string" size="16"        nullable="false" />
+    <field name="url"       type="string" size="32"        nullable="false" />
+    <field name="id"        type="long"   identity="true"  nullable="false" />
+
+    <index type="UNIQUE CLUSTERED" name="ArmSearchDocuments_ix1">
+      <field>protocol</field>
+      <field>url</field>
+    </index>
+
+    <index type="UNIQUE" name="ArmSearchDocuments_ix2">
+      <field>id</field>
+    </index>
+
+  </table>
+
+  <table name="ArmSearchDocumentsWords" >
+
+    <field name="urlId"     type="long"               nullable="false" />
+    <field name="word"      type="string" size="32"   nullable="false" />
+
+    <index type="UNIQUE CLUSTERED" name="ArmSearchDocumentsWords_ix1">
+      <field>urlId</field>
+      <field>word</field>
+    </index>
+
+    <index type="" name="ArmSearchDocumentsWords_ix2">
+      <field>word</field>
+    </index>
+
+    <foreign name="ArmSearchDocumentsWords_fk1">
+      <field>urlId</field>
+      <references name="ArmSearchDocuments">
+        <field>id</field>
+      </references>
+    </foreign>
+
+  </table>
+
+</tables>

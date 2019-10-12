@@ -1,0 +1,35 @@
+<com.esarks.arm.schemas.properties.root>
+  
+  <property>default
+
+    <context>default</context>
+
+    <dbTypes name="mySql">
+      <boolean             property="getValueBoolean"                                  java="boolean"             setString="boolean"                          jdbc="Boolean"   >bit</boolean>
+      <byte                property="getValueByte"                                     java="byte"                setString="byte"                             jdbc="Byte"      >tinyint</byte>
+      <short               property="getValueShort"                                    java="short"               setString="short"                            jdbc="Short"     >smallint</short>
+      <int                 property="getValueInt"                                      java="int"                 setString="int"                              jdbc="Int"       >int</int>
+      <long                property="getValueLong"                                     java="long"                setString="long"                             jdbc="Long"      >bigint</long>
+      <char    size="true" property="getValueChar"                                     java="char"                setString="char"                             jdbc="Char"      >char</char>
+      <float               property="getValueFloat"                                    java="float"               setString="float"                            jdbc="Float"     >real</float>
+      <double              property="getValueDouble"                                   java="double"              setString="double"                           jdbc="Double"    >float</double>
+      <string  size="true" property="getValueString"                                   java="String"                                                           jdbc="String"    >varchar</string>
+      <date                property="getValueDate"      jdbcProperty="getValueSqlDate" java="java.util.Date"      setString="date:yyyy-MM-dd"                  jdbc="Date"      >datetime</date>
+      <time                property="getValueTime"                                     java="java.sql.Time"       setString="time:yyyy-MM-dd HH:mm:ss.S"       jdbc="Time"      >datetime</time>
+      <datetime            property="getValueTimestamp"                                java="java.sql.Timestamp"  setString="timestamp:yyyy-MM-dd HH:mm:ss.S"  jdbc="Timestamp" >datetime</datetime>
+    </dbTypes>
+
+    <dbConnection name="application" openCount="0" >
+      <jdbcClass>com.mysql.jdbc.Driver</jdbcClass>
+      <jdbcConnection>jdbc:mysql://localhost:3306/esarks?allowMultiQueries=true</jdbcConnection>
+      <jdbcUser>root</jdbcUser>
+      <jdbcPassword>asdcnt</jdbcPassword>
+      <dbTypes>mySql</dbTypes>
+      <catalog>esarks</catalog>
+      <owner></owner>
+      <stereotype>mySql</stereotype>
+    </dbConnection>
+
+  </property>
+
+</com.esarks.arm.schemas.properties.root>

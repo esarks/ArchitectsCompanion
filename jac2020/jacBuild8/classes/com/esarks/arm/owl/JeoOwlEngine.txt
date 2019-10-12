@@ -1,0 +1,662 @@
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:2: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:3: import java.util.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:5: import java.io.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:6: import java.text.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:7: import java.sql.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:8: //import java.net.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:10: //import java.security.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:13: //import java.awt.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:15: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:18: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micImport.script:19: <#import#>
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:2: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:4: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:6:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:7: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:9: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:11: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPrefix.script:12:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:1: var int iFactName = 0;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:2: var boolean iProcessRules = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:3: var com.esarks.arm.owl.JeoOwlEngine iJeoOwlEngine = null;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:4: var private boolean iWsChange = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:5: end
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:6: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:7: public void execute() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:8:   if (<!mic.element:owl!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:9:     <!mic.element:owl!>!alias("owl");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:10:     %>1<![mic.element:owl:title]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:11:     %>2<![owl:title]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:12:     executeRules(null);    
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:13:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:14: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:15: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:16: public void execute(com.esarks.arm.owl.JeoOwlEngine aJeoOwlEngine, String aRulesXml) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:17:   iJeoOwlEngine = aJeoOwlEngine;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:18:   execute(aRulesXml);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:19: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:20: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:21: public void execute(String aRulesXml) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:22:   loadRules(aRulesXml);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:23:   executeRules(null);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:24: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:25: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:26: public void execute(Object aCallBack, String aRulesXml, ArrayList aArrayList, String aJeosName) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:27:   loadRules(aRulesXml);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:28:   loadJeos(aArrayList, aJeosName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:29:   executeRules(aCallBack);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:30: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:31: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:32: public com.esarks.arm.owl.JeoOwlEngine loadRules(String aRulesXml) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:33: %>>>>loadRules <!%aRulesXml + "\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:34: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:35:   if (<!owl!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:36:     java.util.Date lDate = new java.util.Date();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:37:     com.esarks.arm.owl.JeoOwlEngine lJeoOwlEngine = (com.esarks.arm.owl.JeoOwlEngine) loadScript(com.esarks.arm.owl.JeoOwlEngine.class.getName(), lDate.toString());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:38:     return lJeoOwlEngine.loadRules(aRulesXml);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:39:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:40:   
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:41:   <!owl!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:42:   parseXml(aRulesXml);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:43: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:44:   <!owl:facts:fact!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:45:   while (<!owl:facts:fact!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:46:     <!owl:facts:fact:attribute!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:47:     while (<!owl:facts:fact:attribute!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:48:       String lFactName = <![owl:facts:fact:name]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:49:       if (<!owl:facts:fact:name!>!size() == 0) lFactName = Integer.toString(iFactName++);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:50:       if (<!owl:facts:fact:attribute:type!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:51:         addFact(lFactName, <![owl:facts:fact:lid]!>, <![owl:facts:fact:attribute:name]!>, new PropertyValue(<![owl:facts:fact:attribute:type]!>, <![owl:facts:fact:attribute:value]!>));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:52:       } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:53:         addFact(lFactName, <![owl:facts:fact:lid]!>, <![owl:facts:fact:attribute:name]!>, new PropertyValue(<![owl:facts:fact:attribute:value]!>));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:54:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:55:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:56:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:57:   return this;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:58: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:59: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:60: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:61: public void loadJeos(ArrayList aArrayList, String aJeosName) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:62: %>>>>loadJeos <!%aJeosName + " " + aArrayList.size() + " \r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:63: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:64:   <!owl:jeos!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:65:   <!owl!>!scan("jeos:name", aJeosName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:66: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:67:   <!owl:jeos:facts!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:68:   while (<!owl:jeos:facts!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:69:     removeFact(<![owl:jeos:facts]!>);  
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:70:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:71:   <!owl:jeos:facts!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:72: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:73:   addFact(Integer.toString(++iFactName), "", aJeosName + " numberOfItems", new PropertyValue(aArrayList.size()));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:74:   <!owl:jeos:facts!>!set(Integer.toString(iFactName));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:75:   
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:76:   for (int lIdx=0; lIdx < aArrayList.size(); lIdx++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:77: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:78:     com.esarks.jac.Jeo lJeo = (com.esarks.jac.Jeo) aArrayList.get(lIdx);   
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:79:     <!owl:jeos:jeo!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:80:     if (<!owl:jeos!>!scan("jeo:instance", lJeo.getInstanceName())) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:81: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:82:       <!owl:jeos:jeo:attribute!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:83:       while (<!owl:jeos:jeo:attribute!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:84: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:85:         String lPropertyType = lJeo.getTypeByName(<![owl:jeos:jeo:attribute:name]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:86:         if (lPropertyType == null) continue;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:87:         
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:88:         PropertyValue lLidPropertyValue = lJeo.getPropertyValueByName(<![owl:jeos:jeo:attribute:factId]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:89:         PropertyValue lPropertyValue = lJeo.getPropertyValueByName(<![owl:jeos:jeo:attribute:name]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:90:         PropertyValue lCompare = new PropertyValue(lPropertyType, <![owl:jeos:jeo:attribute:value]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:91:         String lOperation = <![owl:jeos:jeo:attribute:operation]!>.toLowerCase();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:92: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:93:         if (lOperation.equals("equal") && lPropertyValue.getType() == lCompare.getType() && lPropertyValue.compareTo(lCompare) == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:94:           String lFactType = <![owl:jeos:jeo:attribute:factType]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:95:           if (<!owl:jeos:jeo:attribute:factType!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:96:             addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), <![owl:jeos:jeo:attribute:factAttribute]!>, new PropertyValue(lFactType, <![owl:jeos:jeo:attribute:factValue]!>), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:97:           } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:98:             addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), <![owl:jeos:jeo:attribute:factAttribute]!>, new PropertyValue(<![owl:jeos:jeo:attribute:factValue]!>), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:99:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:100:           <!owl:jeos:facts!>!set(Integer.toString(iFactName));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:101:         } else if (lOperation.equals("notequal") && lPropertyValue.getType() == lCompare.getType() && lPropertyValue.compareTo(lCompare) != 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:102:           String lFactType = <![owl:jeos:jeo:attribute:factType]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:103:           if (<!owl:jeos:jeo:attribute:factType!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:104:             addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), <![owl:jeos:jeo:attribute:factAttribute]!>, new PropertyValue(lFactType, <![owl:jeos:jeo:attribute:factValue]!>), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:105:           } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:106:             addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), <![owl:jeos:jeo:attribute:factAttribute]!>, new PropertyValue(<![owl:jeos:jeo:attribute:factValue]!>), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:107:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:108:           <!owl:jeos:facts!>!set(Integer.toString(iFactName));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:109:         } else if (lOperation.equals("less") && lPropertyValue.getType() == lCompare.getType() && lPropertyValue.compareTo(lCompare) < 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:110:           String lFactType = <![owl:jeos:jeo:attribute:factType]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:111:           if (<!owl:jeos:jeo:attribute:factType!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:112:             addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), <![owl:jeos:jeo:attribute:factAttribute]!>, new PropertyValue(lFactType, <![owl:jeos:jeo:attribute:factValue]!>), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:113:           } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:114:             addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), <![owl:jeos:jeo:attribute:factAttribute]!>, new PropertyValue(<![owl:jeos:jeo:attribute:factValue]!>), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:115:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:116:           <!owl:jeos:facts!>!set(Integer.toString(iFactName));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:117:         } else if (lOperation.equals("greater") && lPropertyValue.getType() == lCompare.getType() && lPropertyValue.compareTo(lCompare) > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:118:           String lFactType = <![owl:jeos:jeo:attribute:factType]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:119:           if (<!owl:jeos:jeo:attribute:factType!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:120:             addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), <![owl:jeos:jeo:attribute:factAttribute]!>, new PropertyValue(lFactType, <![owl:jeos:jeo:attribute:factValue]!>), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:121:           } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:122:             addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), <![owl:jeos:jeo:attribute:factAttribute]!>, new PropertyValue(<![owl:jeos:jeo:attribute:factValue]!>), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:123:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:124:           <!owl:jeos:facts!>!set(Integer.toString(iFactName));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:125:         } else if (lOperation.equals("every")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:126:           String lFactType = <![owl:jeos:jeo:attribute:factType]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:127:           if (<!owl:jeos:jeo:attribute:factType!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:128:             addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), <![owl:jeos:jeo:attribute:factAttribute]!>, new PropertyValue(lFactType, <![owl:jeos:jeo:attribute:factValue]!>), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:129:           } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:130:             addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), <![owl:jeos:jeo:attribute:factAttribute]!>, new PropertyValue(<![owl:jeos:jeo:attribute:factValue]!>), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:131:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:132:           <!owl:jeos:facts!>!set(Integer.toString(iFactName));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:133:         } else if (lOperation.equals("set")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:134:           addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), <![owl:jeos:jeo:attribute:factAttribute]!>, lPropertyValue, lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:135:           <!owl:jeos:facts!>!set(Integer.toString(iFactName));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:136:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:137: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:138:         if (<!owl:jeos:jeo:attribute!>!isFirst() && lIdx == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:139:           addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), aJeosName + " isFirstItem", new PropertyValue(true), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:140:           <!owl:jeos:facts!>!set(Integer.toString(iFactName));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:141:         } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:142:           addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), aJeosName + " isFirstItem", new PropertyValue(false), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:143:           <!owl:jeos:facts!>!set(Integer.toString(iFactName));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:144:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:145:         if (<!owl:jeos:jeo:attribute!>!isLast() && lIdx == aArrayList.size() -1) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:146:           addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), aJeosName + " isLastItem", new PropertyValue(true), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:147:           <!owl:jeos:facts!>!set(Integer.toString(iFactName));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:148:         } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:149:           addFact(Integer.toString(++iFactName), lLidPropertyValue.toString(), aJeosName + " isLastItem", new PropertyValue(false), lJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:150:           <!owl:jeos:facts!>!set(Integer.toString(iFactName));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:151:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:152:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:153:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:154:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:155: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:156: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:157: public void addFact(String aLid, String aAttribute, String aConstant) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:158:   addFact(Integer.toString(iFactName++), aLid, aAttribute, new PropertyValue(aConstant));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:159: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:160: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:161: public void addFact(String aLid, String aAttribute, PropertyValue aConstant) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:162:   addFact(Integer.toString(iFactName++), aLid, aAttribute, aConstant);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:163: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:164: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:165: public void addFact(String aId, String aLid, String aAttribute, String aConstant) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:166:   addFact(aId, aLid, aAttribute, new PropertyValue(aConstant));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:167: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:168: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:169: public void addFact(String aId, String aLid, String aAttribute, PropertyValue aConstant) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:170:   removeFact(aId);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:171:   <!owl:fact!>!set("");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:172:   <!owl:fact:name!>!set(aId);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:173:   <!owl:fact:id!>!set(aLid);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:174:   <!owl:fact:attribute!>!set(aAttribute);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:175:   <!owl:fact:value!>!set(aConstant.toString());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:176:   <!owl:fact:propertyValue!>!set(aConstant);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:177: //  System.out.println("******" + aConstant.getType() + " ** " + <!owl:fact:propertyValue!>!getPropertyValue().getType());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:178:   iWsChange = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:179: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:180: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:181: public void addFact(String aLid, String aAttribute, String aConstant, Jeo aJeo) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:182:   addFact(Integer.toString(iFactName++), aLid, aAttribute, new PropertyValue(aConstant), aJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:183: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:184: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:185: public void addFact(String aLid, String aAttribute, PropertyValue aConstant, Jeo aJeo) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:186:   addFact(Integer.toString(iFactName++), aLid, aAttribute, aConstant, aJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:187: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:188: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:189: public void addFact(String aId, String aLid, String aAttribute, String aConstant, Jeo aJeo) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:190:   addFact(aId, aLid, aAttribute, new PropertyValue(aConstant), aJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:191: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:192: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:193: public void addFact(String aId, String aLid, String aAttribute, PropertyValue aConstant, Jeo aJeo) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:194:   removeFact(aId);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:195:   <!owl:fact!>!set("");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:196:   <!owl:fact:name!>!set(aId);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:197:   <!owl:fact:id!>!set(aLid);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:198:   <!owl:fact:attribute!>!set(aAttribute);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:199:   <!owl:fact:value!>!set(aConstant.toString());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:200:   <!owl:fact:propertyValue!>!set(aConstant);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:201:   <!owl:fact:jeo!>!set(aJeo);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:202: //  System.out.println("******" + aConstant.getType() + " ** " + <!owl:fact:propertyValue!>!getPropertyValue().getType());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:203:   iWsChange = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:204: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:205: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:206: private void removeFact(String aFactName) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:207:   <!rete:fact!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:208:   if (<!owl!>!scan("fact:name", aFactName)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:209:     <!owl:fact!>!removeValue();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:210:     iWsChange = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:211:   } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:212:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:213: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:214: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:215: public void setWsChange(boolean aValue) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:216:   iWsChange = aValue;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:217: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:218: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:219: public void executeRules() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:220:   executeRules(null);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:221: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:222: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:223: private void executeRules(Object aCallback) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:224: %>>>>executeRules <![owl:title]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:225: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:226:   if (!iWsChange) return;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:227:   iWsChange = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:228: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:229:   getConditionAttributes();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:230:   associateFacts();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:231:   determineRules();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:232:  
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:233:   <!$mic:rule!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:234:   while (<!$mic:rule!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:235:     %>Evaluate Rule: <![$mic:rule]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:236:     if (performProductions(aCallback)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:237:       %>return true from performProductions<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:238:       if (<![owl:rule:breakOnRule]!>.equals("true")) break;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:239:       
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:240:       if (<!owl:rule:fact!>!size() > 0) {       
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:241:         <!owl:rule:fact!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:242:         while (<!owl:rule:fact!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:243:           <!owl:rule:fact:attribute!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:244:           while (<!owl:rule:fact:attribute!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:245:             String lFactName = <![owl:rule:fact:name]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:246:             if (<!owl:rule:fact:name!>!size() == 0) lFactName = Integer.toString(iFactName++);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:247:             if (<!owl:rule:fact:attribute:type!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:248:               addFact(lFactName, <![owl:rule:fact:lid]!>, <![owl:rule:fact:attribute:name]!>, new PropertyValue(<![owl:rule:fact:attribute:type]!>, <![owl:rule:fact:attribute:value]!>));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:249:             } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:250:               addFact(lFactName, <![owl:rule:fact:lid]!>, <![owl:rule:fact:attribute:name]!>, new PropertyValue(<![owl:rule:fact:attribute:value]!>));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:251:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:252:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:253:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:254:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:255:      
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:256:       ArrayList lEnableArrayList = new ArrayList();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:257:       ArrayList lDisableArrayList = new ArrayList();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:258:       ArrayList lRemoveArrayList = new ArrayList();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:259:       if (<!owl:rule:enable!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:260:         <!owl:rule:enable!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:261:         while (<!owl:rule:enable!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:262:           lEnableArrayList.add(<![owl:rule:enable:name]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:263:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:264:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:265:       if (<!owl:rule:disable!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:266:         <!owl:rule:disable!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:267:         while (<!owl:rule:disable!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:268:           lDisableArrayList.add(<![owl:rule:disable:name]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:269:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:270:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:271:       if (<!owl:rule:remove!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:272:         if (<!owl:rule:remove:rule!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:273:           <!owl:rule:remove:rule!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:274:           while (<!owl:rule:remove:rule!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:275:             lRemoveArrayList.add(<![owl:rule:remove:rule:name]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:276:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:277:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:278:         if (<!owl:rule:remove:fact!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:279:           <!owl:rule:remove:fact!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:280:           while (<!owl:rule:remove:fact!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:281:             <!owl:fact!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:282:             if (<!owl!>!scan("fact:name", <![owl:rule:remove:fact:name]!>)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:283:               <!owl:fact!>!removeValue();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:284:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:285:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:286:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:287:         if (<!owl:rule:remove:condition!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:288:           <!owl:rule:remove:condition!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:289:           while (<!owl:rule:remove:condition!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:290:             <!owl:condition!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:291:             if (<!owl!>!scan("condition:name", <![owl:rule:remove:condition:name]!>)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:292:               <!owl:condition!>!removeValue();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:293:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:294:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:295:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:296:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:297:       for (int lListIdx=0; lListIdx < lEnableArrayList.size(); lListIdx++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:298:         <!owl:rule!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:299:         if (<!owl!>!scan("rule:name", (String) lEnableArrayList.get(lListIdx))) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:300:           <!owl:rule:disabled!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:301:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:302:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:303:       for (int lListIdx=0; lListIdx < lDisableArrayList.size(); lListIdx++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:304:         <!owl:rule!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:305:         if (<!owl!>!scan("rule:name", (String) lDisableArrayList.get(lListIdx))) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:306:           <!owl:rule:disabled!>!reset("true");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:307:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:308:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:309:       for (int lListIdx=0; lListIdx < lRemoveArrayList.size(); lListIdx++) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:310:         <!owl:rule!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:311:         if (<!owl!>!scan("rule:name", (String) lDisableArrayList.get(lListIdx))) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:312:           <!owl:rule!>!removeValue();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:313:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:314:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:315: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:316:       if (iWsChange) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:317:         getConditionAttributes();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:318:         associateFacts();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:319:         determineRules();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:320:         <!$mic:rule!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:321:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:322:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:323:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:324: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:325: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:326: private void getConditionAttributes() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:327: %>>>>getConditionAttributes<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:328: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:329:   <!$mic:conditionAttribute!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:330: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:331:   // Create list of unique condition attributes, associating conditions
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:332:   <!owl:condition!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:333:   while (<!owl:condition!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:334:     String lAttribute = <![owl:condition:attribute]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:335:     <!$mic:conditionAttribute:" + lAttribute + "!>!set(<![owl:condition:name]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:336:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:337: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:338: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:339: private void associateFacts() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:340: %>>>>associateFacts<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:341: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:342:   <!$mic:conditionFact!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:343: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:344:   // Create list of unique fact attributes, associating facts
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:345:   <!owl:fact!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:346:   while (<!owl:fact!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:347:     String lAttribute = <![owl:fact:attribute]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:348:     // Match the fact to the condition (builds a condition / fact association list)
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:349:     <!$mic:conditionAttribute:" + lAttribute + "!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:350:     while (<!$mic:conditionAttribute:" + lAttribute + "!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:351:       String lCondition = <![$mic:conditionAttribute:" + lAttribute + "]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:352:       <!$mic:conditionFact:" + lCondition + "!>!set(<![owl:fact:name]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:353:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:354:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:355: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:356: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:357: private void determineRules() {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:358: %>>>>determineRules<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:359:   
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:360:   <!$mic:rule!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:361:   <!$mic:production!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:362:     
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:363:   // Determine which rules to use, and number of potential productions in a rule
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:364:   <!owl:rule!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:365:   while (<!owl:rule!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:366: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:367:     if (<![owl:rule:disabled]!>.equals("true")) continue;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:368:     String lProductionName = "r=(" + <![owl:rule:name]!> + ")";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:369:     String lRuleName = <![owl:rule:name]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:370:     <!$mic:production:" + lProductionName + "!>!set("");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:371:     boolean lUseRule = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:372: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:373:     <!owl:rule:hasCondition!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:374:     while (<!owl:rule:hasCondition!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:375:       String lHasCondition = <![owl:rule:hasCondition:name]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:376:       if (<!$mic:conditionFact:" + lHasCondition + "!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:377:         lUseRule = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:378:         break;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:379:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:380: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:381:       <!$mic:production:" + lProductionName + "!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:382:       while (<!$mic:production:" + lProductionName + "!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:383:         <!$mic:conditionFact:" + lHasCondition + "!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:384:         while (<!$mic:conditionFact:" + lHasCondition + "!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:385:           String lFact = <![$mic:conditionFact:" + lHasCondition + "]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:386:           <!$mic:production:" + lProductionName + " c=(" + lHasCondition + ")!>!set(<![$mic:production:" + lProductionName + "]!> + "f=(" + lFact + ") ");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:387:           if (<![$mic:production:" + lProductionName + "]" + "f=(" + lFact + ") !>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:388:             <![$mic:production:" + lProductionName + "]!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:389:             while (<![$mic:production:" + lProductionName + "]!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:390:               <![$mic:production:" + lProductionName + "]" + "f=(" + lFact + ") !>!set(<![[$mic:production:" + lProductionName + "]]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:391:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:392:             <![$mic:production:" + lProductionName + "]" + "f=(" + lFact + ") !>!set(lFact);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:393:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:394:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:395:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:396:       lProductionName += " c=(" + lHasCondition + ")";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:397:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:398:    
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:399:     if (lUseRule) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:400:       if (!<![$mic:rule]!>.equals(<![owl:rule:name]!>)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:401:         <!$mic:rule!>!set(<![owl:rule:name]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:402:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:403:       <!$mic:rule:production!>!set(lProductionName);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:404:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:405:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:406: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:407: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:408: private boolean performProductions(Object aCallback) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:409: %>>>>performProductions<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:410: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:411:   boolean lProductionPassed=false;  
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:412:   <!$mic:production:[$mic:rule:production]!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:413:   while (<!$mic:production:[$mic:rule:production]!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:414: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:415:     <!$mic:rule:symbol!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:416:     <!$mic:rule:symbolFact!>!remove();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:417:     
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:418:     <!owl:rule!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:419:     if (<!owl!>!scan("rule:name", <![$mic:rule]!>)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:420:       <!owl:rule:hasCondition!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:421:       <![$mic:production:[$mic:rule:production]]!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:422:       boolean lPerformRule = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:423:       boolean lRuleResult = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:424: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:425:       while (lPerformRule) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:426:         lPerformRule = <!owl:rule:hasCondition!>!next();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:427:         if (lPerformRule) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:428:           lPerformRule = <![$mic:production:[$mic:rule:production]]!>!next();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:429:           if (lPerformRule) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:430:             <!owl:condition!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:431:             <!owl!>!scan("condition:name", <![owl:rule:hasCondition:name]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:432:             <!owl:fact!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:433:             if (<!owl!>!scan("fact:name", <![[$mic:production:[$mic:rule:production]]]!>) == false) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:434:               %><![[$mic:production:[$mic:rule:production]]]!> fact not found!<!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:435:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:436:             // Check for consistent symbol assignment (symbol to lid)
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:437:             String lLhs = <![owl:condition:lhs]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:438:             if (<!$mic:rule:symbol:" + lLhs + "!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:439:               <!$mic:rule:symbol:" + lLhs + "!>!set(<![owl:fact:id]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:440:             } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:441:               if (!<![$mic:rule:symbol:" + lLhs + "]!>.equals(<![owl:fact:id]!>)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:442:                 lPerformRule = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:443:                 lRuleResult = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:444:                 break;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:445:               }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:446:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:447:             // Check for reverse symbol assignment (lid to symbol)
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:448:             String lFact = <![owl:fact:id]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:449:             if (<!$mic:rule:symbolFact:" + lFact + "!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:450:               <!$mic:rule:symbolFact:" + lFact + "!>!set(<![owl:condition:lhs]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:451:             } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:452:               if (!<![$mic:rule:symbolFact:" + lFact + "]!>.equals(<![owl:condition:lhs]!>)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:453:                 lPerformRule = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:454:                 lRuleResult = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:455:                 break;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:456:               }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:457:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:458:             // Check for consistent symbol assignment (symbol to lid)
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:459:             if (<!owl:condition:rhs!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:460:               String lRhs = <![owl:condition:rhs]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:461:               if (<!$mic:rule:symbol:" + lRhs + "!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:462:                 <!$mic:rule:symbol:" + lRhs + "!>!set(<![owl:fact:rid]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:463:               } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:464:                 if (!<![$mic:rule:symbol:" + lRhs + "]!>.equals(<![owl:fact:rid]!>)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:465:                   lPerformRule = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:466:                   lRuleResult = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:467:                   break;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:468:                 }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:469:               }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:470:               // Check for reverse symbol assignment (rule to symbol)
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:471:               if (<!$mic:rule:symbolFact:" + lFact + "!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:472:                 <!$mic:rule:symbolFact:" + lFact + "!>!set(<![owl:condition:rhs]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:473:               } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:474:                 if (!<![$mic:rule:symbolFact:" + lFact + "]!>.equals(<![owl:condition:rhs]!>)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:475:                   lPerformRule = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:476:                   lRuleResult = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:477:                   break;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:478:                 }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:479:               }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:480:             } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:481:               if (<!owl:fact:propertyValue!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:482:                 String lPropertyType = <![owl:fact:type]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:483:                 if (<!owl:fact:type!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:484:                   <!owl:fact:propertyValue!>!set(new PropertyValue(<![owl:fact:value]!>));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:485:                 } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:486:                   <!owl:fact:propertyValue!>!set(new PropertyValue(lPropertyType, <![owl:fact:value]!>));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:487:                 }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:488:               }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:489:               if (<!owl:condition:propertyValue!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:490:                 String lPropertyType = <![owl:condition:type]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:491:                 if (<!owl:condition:type!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:492:                   <!owl:condition:propertyValue!>!set(new PropertyValue(<![owl:condition:value]!>));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:493:                 } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:494:                   <!owl:condition:propertyValue!>!set(new PropertyValue(lPropertyType, <![owl:condition:value]!>));
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:495:                 }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:496:               }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:497:               if (<!owl:fact:propertyValue!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:498:                 if (<!owl:condition:propertyValue!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:499:                   PropertyValue lFactPropertyValue = <!owl:fact:propertyValue!>!getPropertyValue();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:500:                   PropertyValue lConditionPropertyValue = <!owl:condition:propertyValue!>!getPropertyValue();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:501: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:502:                   String lOperation = <![owl:condition:operation]!>.toLowerCase();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:503:                   if (<!owl:condition:operation!>!size() == 0) lOperation = "equal";
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:504: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:505:                   if (lOperation.equals("equal") && (lFactPropertyValue.getValueType() != lConditionPropertyValue.getValueType() || lFactPropertyValue.compareTo(lConditionPropertyValue) == 0)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:506:                   } else if (lOperation.equals("notequal") && (lFactPropertyValue.getValueType() != lConditionPropertyValue.getValueType() || lFactPropertyValue.compareTo(lConditionPropertyValue) != 0)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:507:                   } else if (lOperation.equals("less") && (lFactPropertyValue.getValueType() != lConditionPropertyValue.getValueType() || lFactPropertyValue.compareTo(lConditionPropertyValue) < 0)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:508:                   } else if (lOperation.equals("greater") && (lFactPropertyValue.getValueType() != lConditionPropertyValue.getValueType() || lFactPropertyValue.compareTo(lConditionPropertyValue) > 0)) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:509:                   } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:510:                     lPerformRule = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:511:                     lRuleResult = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:512:                     break;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:513:                   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:514:                 } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:515:                   lPerformRule = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:516:                   lRuleResult = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:517:                   break;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:518:                 }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:519:               } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:520:                 lPerformRule = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:521:                 lRuleResult = false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:522:                 break;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:523:               }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:524:             }              
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:525:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:526:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:527:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:528: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:529:       if (lRuleResult) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:530: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:531:         ArrayList lJeoArrayList = new ArrayList(); 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:532:         <![$mic:production:[$mic:rule:production]]!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:533:         while (<![$mic:production:[$mic:rule:production]]!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:534:           <!owl:fact!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:535:           <!owl!>!scan("fact:name", <![[$mic:production:[$mic:rule:production]]]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:536:           if (<!owl:fact:jeo!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:537:             lJeoArrayList.add((Jeo) <!owl:fact:jeo!>!getValueObject());
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:538:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:539:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:540: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:541:         lProductionPassed = true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:542: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:543:         if (<![owl:rule:disable]!>.equals("true")) <!owl:rule:disabled!>!reset("true");
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:544: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:545:         <!owl:rule:action!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:546:         while (<!owl:rule:action!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:547:           if (<!owl:rule:action:name!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:548:           } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:549:             %>Action: <![owl:rule:action:name]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:550:             MicScriptHelper lLoadObject = this;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:551:             if (!<![owl:rule:action:name]!>.equals("?this")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:552:               if (<!owl:rule:action:instance!>!size() > 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:553:                 lLoadObject = loadScript(<![owl:rule:action:name]!>, <![owl:rule:action:instance]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:554:               } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:555:                 lLoadObject = loadScript(<![owl:rule:action:name]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:556:               }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:557:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:558: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:559:             if (<!owl:rule:action:parameter!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:560:               iScript.execMethod(lLoadObject, <![owl:rule:action:operation]!>);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:561:               %>Operation0: <![owl:rule:action:operation]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:562:             } else if (<!owl:rule:action:parameter!>!size() > 0 && <!owl:rule:action:parameter2!>!size() == 0) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:563:               Object lArgs[] = new Object[<!owl:rule:action:parameter!>!size()];
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:564:               <!owl:rule:action:parameter!>!resetIterator();
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:565:               while (<!owl:rule:action:parameter!>!next()) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:566:                 if (<![owl:rule:action:parameter]!>.equals("?script")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:567:                   lArgs[<!owl:rule:action:parameter!>!getIterator() - 1] = iScript;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:568:                 } else if (<![owl:rule:action:parameter]!>.equals("?this")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:569:                   lArgs[<!owl:rule:action:parameter!>!getIterator() - 1] = this;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:570:                 } else if (<![owl:rule:action:parameter]!>.equals("?callback")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:571:                   lArgs[<!owl:rule:action:parameter!>!getIterator() - 1] = iJeoOwlEngine;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:572:                 } else if (<![owl:rule:action:parameter]!>.equals("?jeos")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:573:                   lArgs[<!owl:rule:action:parameter!>!getIterator() - 1] = lJeoArrayList;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:574:                 } else if (<![owl:rule:action:parameter]!>.equals("?jeo")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:575:                   lArgs[<!owl:rule:action:parameter!>!getIterator() - 1] = lJeoArrayList.get(0);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:576:                 } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:577:                   lArgs[<!owl:rule:action:parameter!>!getIterator() - 1] = <![owl:rule:action:parameter]!>;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:578:                 }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:579:               }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:580:               %>Operation1: <![owl:rule:action:operation]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:581:               iScript.execMethod(lLoadObject, <![owl:rule:action:operation]!>, lArgs);
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:582:             } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:583:               if (<![owl:rule:action:parameter]!>.equals("?script")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:584:                 %>Operation2: <![owl:rule:action:operation]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:585:                 iScript.execMethod(lLoadObject, <![owl:rule:action:operation]!>, new Object[]{iScript, <![owl:rule:action:parameter2]!>});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:586:               } else if (<![owl:rule:action:parameter]!>.equals("?this")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:587:                 %>Operation3: <![owl:rule:action:operation]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:588:                 iScript.execMethod(lLoadObject, <![owl:rule:action:operation]!>, new Object[]{this, <![owl:rule:action:parameter2]!>});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:589:               } else if (<![owl:rule:action:parameter]!>.equals("?callback")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:590:                 %>Operation4: <![owl:rule:action:operation]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:591:                 iScript.execMethod(lLoadObject, <![owl:rule:action:operation]!>, new Object[]{iJeoOwlEngine, <![owl:rule:action:parameter2]!>});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:592:               } else if (<![owl:rule:action:parameter]!>.equals("?jeos")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:593:                 %>Operation5: <![owl:rule:action:operation]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:594:                 iScript.execMethod(lLoadObject, <![owl:rule:action:operation]!>, new Object[]{lJeoArrayList, <![owl:rule:action:parameter2]!>});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:595:               } else if (<![owl:rule:action:parameter]!>.equals("?jeo")) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:596:                 %>Operation6: <![owl:rule:action:operation]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:597:                 iScript.execMethod(lLoadObject, <![owl:rule:action:operation]!>, new Object[]{lJeoArrayList.get(0), <![owl:rule:action:parameter2]!>});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:598:               } else {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:599:                 %>Operation7: <![owl:rule:action:operation]!><!%"\r\n"!><%
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:600:                 iScript.execMethod(lLoadObject, <![owl:rule:action:operation]!>, new Object[]{<![owl:rule:action:parameter]!>, <![owl:rule:action:parameter2]!>});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:601:               }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:602:             }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:603:           }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:604:         }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:605:         if (aCallback != null && <!owl:rule:callback!>!size() > 0) iScript.execMethod(aCallback, <![owl:rule:callback]!>, new Object[]{<![owl:rule:name]!>});
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:606:         if (<![owl:rule:breakOnRule]!>.equals("true") || <![owl:rule:breakOnProduction]!>.equals("true")) return lProductionPassed;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:607:       }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:608:     }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:609:   }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:610:   return lProductionPassed;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:611: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:612: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:613: public void setProcessRules(boolean aValue) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:614:   iProcessRules = aValue;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:615: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:616: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:617: private boolean greaterThan(String aValue1, String aValue2) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:618:   if (aValue1.compareTo(aValue2) > 0) return true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:619:   return false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:620: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:621: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:622: private boolean lessThan(String aValue1, String aValue2) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:623:   if (aValue1.compareTo(aValue2) < 0) return true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:624:   return false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:625: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:626: 
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:627: private boolean equals(String aValue1, String aValue2) {
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:628:   if (aValue1.compareTo(aValue2) == 0) return true;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:629:   return false;
+C:\ArchitectsCompanion\jac2017\jacBuild8\source\scripts\com\esarks\arm\owl\JeoOwlEngine.script:630: }
+C:\ArchitectsCompanion\jac2017\jacBuild8\conf\micPostfix.script:1: }

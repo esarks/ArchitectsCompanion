@@ -1,0 +1,100 @@
+
+public void execute() {
+
+%>Agent.script
+<%
+
+  try {
+    int lPage = 1;
+  
+    java.net.URL lUrl = new java.net.URL("http://workforceportal.elabor.com");
+    java.net.URL lReturnUrl = null;
+
+    com.learning.paul.agent.UrlRequest lUrlRequest = new com.learning.paul.agent.UrlRequest();
+    lReturnUrl = lUrlRequest.execute(lUrl, "", "GET", "", false);
+
+    System.out.println("1Pause..." + lPage++ + " " + lReturnUrl);
+    try {
+      System.in.skip(System.in.available());
+//      System.in.read();
+    } catch (Throwable e) {}
+
+    lUrlRequest = new com.learning.paul.agent.UrlRequest();
+    lUrl = new java.net.URL("HTTP://workforceportal.elabor.com/CompanyLoginForm.asp");
+    lReturnUrl = lUrlRequest.execute(lUrl,
+                 "placeHolder=&companyId=&companyName=", "POST", lReturnUrl.toString(), false);
+
+    System.out.println("2Pause..." + lPage++ + " " + lReturnUrl);
+    try {
+      System.in.skip(System.in.available());
+//      System.in.read();
+    } catch (Throwable e) {}
+
+    lUrlRequest = new com.learning.paul.agent.UrlRequest();
+    lUrl = new java.net.URL("HTTP://workforceportal.elabor.com/CompanyLogin.asp");
+    lReturnUrl = lUrlRequest.execute(lUrl,
+                 "functionId=login&companyName=HealthcareQltySol", "POST", lReturnUrl.toString(), false);
+
+    System.out.println("3Pause..." + lPage++ + " " + lReturnUrl);
+    try {
+      System.in.skip(System.in.available());
+//      System.in.read();
+    } catch (Throwable e) {}
+
+    lUrlRequest = new com.learning.paul.agent.UrlRequest();
+    lUrl = new java.net.URL("HTTPS://portal10.elabor.com/eLaborTime/login/FormsLogin.asp");
+    lReturnUrl = lUrlRequest.execute(lUrl,
+                 "placeHolder=&companyId=10671&companyName=HealthcareQltySol", "POST", lReturnUrl.toString(), false);
+
+    System.out.println("4Pause..." + lPage++ + " " + lReturnUrl);
+    try {
+      System.in.skip(System.in.available());
+//      System.in.read();
+    } catch (Throwable e) {}
+
+    lUrlRequest = new com.learning.paul.agent.UrlRequest();
+    lUrl = new java.net.URL("HTTPS://portal10.elabor.com/eLaborTime/login/verifpwd.asp");
+    lReturnUrl = lUrlRequest.execute(lUrl,
+                 "requestedUrl=" + URLEncoder.encode ("/") + "&companyName=HealthcareQltySol&companyId=10671&userName=pmarshall&password=xxxxxxx&btnLogin=Login", "POST",
+                 lReturnUrl.toString(), false);
+                 
+    String lSid = lReturnUrl.toString();
+    int lIdx = lSid.indexOf("?sId");
+    lSid = lSid.substring(lIdx + 1);
+    if (lSid.indexOf("&erc") > -1) lSid = lSid.substring(0, lSid.indexOf("&erc"));
+    System.out.println("sId = " + lSid);
+    
+    System.out.println("5Pause..." + lPage++ + " " + lReturnUrl);
+    try {
+      System.in.skip(System.in.available());
+//      System.in.read();
+    } catch (Throwable e) {}
+
+
+    lUrlRequest = new com.learning.paul.agent.UrlRequest();
+    lUrl = new java.net.URL("https://portal10.elabor.com/eLaborTime/supervisorServices/eLaborToday.asp?" + lSid);
+    lReturnUrl = lUrlRequest.execute(lUrl,
+                 "", "GET",
+                 lReturnUrl.toString(), false);
+
+    System.out.println("6Pause..." + lPage++ + " " + lReturnUrl);
+    try {
+      System.in.skip(System.in.available());
+//      System.in.read();
+    } catch (Throwable e) {}
+
+    lUrlRequest = new com.learning.paul.agent.UrlRequest();
+    lUrl = new java.net.URL("https://portal10.elabor.com/eLaborTime/employeeServices/eLaborToday.asp?" + lSid);
+    lReturnUrl = lUrlRequest.execute(lUrl,
+                 "fId=2", "POST",
+                 lReturnUrl.toString(), false);
+
+    System.out.println("7Pause..." + lPage++ + " " + lReturnUrl);
+    try {
+      System.in.skip(System.in.available());
+//      System.in.read();
+    } catch (Throwable e) {}
+
+  } catch(Throwable e) {}
+
+}

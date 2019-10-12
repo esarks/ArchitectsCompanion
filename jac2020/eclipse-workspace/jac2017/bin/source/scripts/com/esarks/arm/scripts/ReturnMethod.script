@@ -1,0 +1,17 @@
+// Begin: com.esarks.arm.scripts.ReturnMethod
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Early exit method!Memo = " + "<![$jac:script:xml:return:memo]!>" + "!Value = " + "<![$jac:script:xml:return]!>" + "!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+<%
+  if (<!$jac:script:xml:return!>!size() > 0) {
+%>
+    return <![$jac:script:xml:return]!>;
+<%
+  } else {
+%>
+    return;
+<%
+  }
+%>
+// End: com.esarks.arm.scripts.FinalReturnMethod

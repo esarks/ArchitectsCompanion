@@ -1,0 +1,114 @@
+<%
+
+  parseXmlPath(<![$jac:path:home]\\temp\\printQuestionnaire.xml!>);
+
+  <!script!>!loadScript("questionnaire.exportQuestionnaireTxt");
+
+  DbConnection lDbConnection = symbolTable.getDbConnection();
+  lDbConnection.connect("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@asdczd:1521:esarks", "system", "manager");
+
+  <!print:questionnaire!>!resetIterator();
+  while (<!print:questionnaire!>!next()) {
+
+  try {        
+    PreparedStatement lPreparedStatement = lDbConnection.getConnection().prepareStatement(
+      "SELECT * " +
+      "FROM questionnaire a, stdQuestionnaire b " +
+      "WHERE a.questionnaireId = ? AND a.questionnaireRevision = ? AND " +
+      "      b.questionnaireCode = a.questionnaireCode AND b.questionnaireSequence = a.questionnaireSequence ");
+
+    lPreparedStatement.setString(1, <![print:questionnaire:control]!>);
+    lPreparedStatement.setString(2, <![print:questionnaire:revision]!>);
+
+    ResultSet lResultSet = lPreparedStatement.executeQuery();
+
+    if (lResultSet.next()) {
+      <!print:questionnaire:id!>!set(lResultSet.getString("questionnaireId"));
+      <!print:questionnaire:revision!>!set(lResultSet.getString("questionnaireRevision"));
+      <!print:questionnaire:code!>!set(lResultSet.getString("questionnaireCode"));
+      <!print:questionnaire:sequence!>!set(lResultSet.getString("questionnaireSequence"));
+      <!print:questionnaire:title!>!set(lResultSet.getString("title"));
+    }
+
+    lResultSet.close();
+    lPreparedStatement.close();
+
+    lPreparedStatement = lDbConnection.getConnection().prepareStatement(
+      "SELECT " +
+      "       a.questionCode questCode, a.questionInstance, a.responseCode respCode, a.responseValue, " +
+      "       b.questionCode, b.questionSequence, b.questionOrder, b.questionText, b.questionType, " +
+      "       b.responseCode, b.responseSequence, b.responseOrder, b.responseText " +
+      "FROM questionnaireView a, stdQuestionnaireView b " +
+      "WHERE a.questionnaireId = ? AND " +
+      "      a.questionnaireRevision = ? AND " +
+      "      b.questionnaireCode = ? AND " +
+      "      b.questionnaireSequence = ? AND " +
+      "      b.questionCode = a.questionCode AND " +
+      "      b.responseCode = a.responseCode " +
+      "ORDER BY b.questionOrder, a.questionInstance, b.responseOrder ");
+
+    lPreparedStatement.setString(1, <![print:questionnaire:id]!>);
+    lPreparedStatement.setString(2, <![print:questionnaire:revision]!>);
+    lPreparedStatement.setString(3, <![print:questionnaire:code]!>);
+    lPreparedStatement.setString(4, <![print:questionnaire:sequence]!>);
+
+    <!questionnaire!>!remove();
+
+    lResultSet = lPreparedStatement.executeQuery();
+
+    String lLastStdQuestionCode = "";
+    String lLastQuestionInstance = "";
+
+    boolean lInit = false;
+
+    while (lResultSet.next()) {
+      if (lInit == false) {
+        lInit = true;
+        <!questionnaire!>!set();
+        <!questionnaire:control!>!set(<![print:questionnaire:id]!>);
+        <!questionnaire:revision!>!set(<![print:questionnaire:revision]!>);
+        <!questionnaire:code!>!set(<![print:questionnaire:code]!>);
+        <!questionnaire:sequence!>!set(<![print:questionnaire:sequence]!>);
+        <!questionnaire:title!>!set(<![print:questionnaire:title]!>);
+      }
+      if (lLastStdQuestionCode.compareTo(lResultSet.getString("questionCode")) != 0) {
+        lLastStdQuestionCode = lResultSet.getString("questionCode");
+        lLastQuestionInstance = "";
+        <!questionnaire:question!>!set();
+        <!questionnaire:question:code!>!set(lResultSet.getString("questionCode"));
+        <!questionnaire:question:sequence!>!set(lResultSet.getString("questionSequence"));
+        <!questionnaire:question:order!>!set(lResultSet.getString("questionOrder"));
+        <!questionnaire:question:type!>!set(lResultSet.getString("questionType"));
+        <!questionnaire:question:text!>!set(lResultSet.getString("questionText"));
+      }
+      if (lResultSet.getString("questionInstance") != null) {
+        if (lLastQuestionInstance.compareTo(lResultSet.getString("questionInstance")) != 0) {
+          lLastQuestionInstance = lResultSet.getString("questionInstance");
+          <!questionnaire:question:instance!>!set(lResultSet.getString("questionInstance"));
+        }
+        <!questionnaire:question:instance:response!>!set();
+        <!questionnaire:question:instance:response:instance!>!set(lResultSet.getString("questionInstance"));
+        <!questionnaire:question:instance:response:code!>!set(lResultSet.getString("responseCode"));
+        <!questionnaire:question:instance:response:sequence!>!set(lResultSet.getString("responseSequence"));
+        <!questionnaire:question:instance:response:order!>!set(lResultSet.getString("responseOrder"));
+        <!questionnaire:question:instance:response:text!>!set(lResultSet.getString("responseText"));
+        <!questionnaire:question:instance:response:respCode!>!set(lResultSet.getString("respCode"));
+        <!questionnaire:question:instance:response:value!>!set(lResultSet.getString("responseValue"));
+      } else {
+        lLastQuestionInstance = "";
+      }
+    }
+
+    lResultSet.close();
+    lPreparedStatement.close();
+
+  }
+  catch (Exception e) {
+    System.out.println(e);
+  }
+
+  <!script!>!execMethod("execute");
+  }
+
+%>
+

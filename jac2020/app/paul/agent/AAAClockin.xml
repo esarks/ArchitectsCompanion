@@ -1,0 +1,64 @@
+<mic.element type="Component" title="">
+
+  <urlRequest>
+    <method>GET</method>
+    <url>http://workforceportal.elabor.com</url>
+  </urlRequest>
+
+  <urlRequest>
+    <method>POST</method>
+    <url>http://workforceportal.elabor.com/CompanyLoginForm.asp</url>
+    <parameter name="placeHolder"></parameter>
+    <parameter name="companyId"></parameter>
+    <parameter name="companyName"></parameter>
+  </urlRequest>
+
+  <urlRequest>
+    <method>POST</method>
+    <url>http://workforceportal.elabor.com/CompanyLogin.asp</url>
+    <parameter name="functionId">login</parameter>
+    <parameter name="companyName">HealthcareQltySol</parameter>
+  </urlRequest>
+
+  <urlRequest>
+    <method>POST</method>
+    <url>https://portal10.elabor.com/eLaborTime/login/FormsLogin.asp</url>
+    <parameter name="placeHolder"></parameter>
+    <parameter name="companyId">10671</parameter>
+    <parameter name="companyName">HealthcareQltySol</parameter>
+  </urlRequest>
+
+  <urlRequest>
+    <method>POST</method>
+    <url>https://portal10.elabor.com/eLaborTime/login/verifpwd.asp</url>
+    <parameter name="requestedUrl">/</parameter>
+    <parameter name="companyName">HealthcareQltySol</parameter>
+    <parameter name="companyId">10671</parameter>
+    <parameter name="userName">pmarshall</parameter>
+    <parameter name="password">sniffer</parameter>
+    <parameter name="btnLogin">Login</parameter>
+    <find name="sId">
+      <range>
+        <startsWith inclusive="true">href="/eLaborTime/employeeServices/ELaborToday.asp?</startsWith>
+        <endsWith inclusive="false">" onClick</endsWith>
+      </range>
+      <range>
+        <startsWith inclusive="false">?</startsWith>
+      </range>
+    </find>
+  </urlRequest>
+
+  <urlRequest>
+    <method>GET</method>
+    <url>https://portal10.elabor.com/eLaborTime/employeeServices/ELaborToday.asp?</url>
+    <appendUrl>sId</appendUrl>
+  </urlRequest>
+
+  <urlRequest>
+    <method>POST</method>
+    <url>https://portal10.elabor.com/eLaborTime/employeeServices/ELaborToday.asp?</url>
+    <appendUrl>sId</appendUrl>
+    <parameter name="fId">1</parameter>
+  </urlRequest>
+
+</mic.element>

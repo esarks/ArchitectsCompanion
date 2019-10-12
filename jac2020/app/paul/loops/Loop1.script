@@ -1,0 +1,36 @@
+public void about() {
+    System.out.println("About: Loop1.script v20170722a");
+}
+
+public void execute() {
+
+  // Declare a String variable, but do not set it's value
+  String lString;
+
+  // Declare an ArrayList and initialize it to an empty list
+  ArrayList lArrayList = new ArrayList();
+
+  // Declare an integer for the loop counter, but do not set it's value
+  int lIdx;
+  
+  // Loop four times
+  for (lIdx=0; lIdx < 5; lIdx++) {
+    // Set the value of lString to be the value of the lIdx counter (converted to a string)
+    lString = new Long(lIdx).toString();
+    // Print out the value of lString
+    System.out.println("lString = " + lString);
+    // Add the string the the array list
+    lArrayList.add(lString);
+  }
+
+  System.out.println("Print out the array list in reverse:");
+  
+  // Loop in reverse
+  for (lIdx=4; lIdx >= 0; lIdx--) {
+    // Get the string from from the array list
+    lString = (String) lArrayList.get(lIdx);
+    // Print out the value of the string
+    System.out.println("lString = " + lString);
+  }
+
+}

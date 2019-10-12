@@ -1,0 +1,113 @@
+  public void execute() {
+
+    <!mic.element:knowledgeBase!>!alias("knowledgeBase");
+
+    // Setup the alpha memory for Productions
+    <!knowledgeBase:rules:rule!>!resetIterator();
+    while (<!knowledgeBase:rules:rule!>!next()) {
+
+      <!knowledgeBase:rules:rule:condition!>!resetIterator();
+      while (<!knowledgeBase:rules:rule:condition!>!next()) {
+
+        if (<!knowledgeBase:rules:rule:condition:value!>!size() > 0) {
+          // Bind attribute type, value and rule condition
+          String lAttr = <![knowledgeBase:rules:rule:condition:attr]!>;
+          String lValue = <![knowledgeBase:rules:rule:condition:value]!>;
+          <!$mic:alpha:" + lAttr + ":value:" + lValue + ":rule!>!set(<![knowledgeBase:rules:rule:name]!>);
+          <!$mic:alpha:" + lAttr + ":value:" + lValue + ":rule:condition!>!set(<![knowledgeBase:rules:rule:condition:name]!>);
+          <!$mic:alpha:" + lAttr + ":value:" + lValue + ":rule:condition:id!>!set(<![knowledgeBase:rules:rule:condition:id]!>);
+          // Join?
+          String lRule = <![knowledgeBase:rules:rule:name]!>;
+          String lId = <![knowledgeBase:rules:rule:condition:id]!>;
+//          <!$mic:join:" + lRule + ":" + lId + "!>!set(some node?);
+          // Do we need to assert the rule?
+          if (<!$mic:alpha:" + lAttr + ":value:" + lValue + ":wm!>!size() > 0) {
+            // Must assert the rule(s)
+            <!$mic:alpha:" + lAttr + ":value:" + lValue + ":rule!>!resetIterator();
+            while (<!$mic:alpha:" + lAttr + ":value:" + lValue + ":rule!>!next()) {
+              addAssert("1", <![$mic:alpha:" + lAttr + ":rule]!>, <![$mic:alpha:" + lAttr + ":rule:condition]!>);
+            }
+          }
+        } else {
+          // Bind attribute type, value and rule condition
+          String lAttr = <![knowledgeBase:rules:rule:condition:attr]!>;
+          String lVar = <![knowledgeBase:rules:rule:condition:var]!>;
+          <!$mic:alpha:" + lAttr + ":rule!>!set(<![knowledgeBase:rules:rule:name]!>);
+          <!$mic:alpha:" + lAttr + ":rule:condition!>!set(<![knowledgeBase:rules:rule:condition:name]!>);
+          <!$mic:alpha:" + lAttr + ":rule:condition:id!>!set(<![knowledgeBase:rules:rule:condition:id]!>);
+          <!$mic:alpha:" + lAttr + ":rule:condition:var!>!set(<![knowledgeBase:rules:rule:condition:var]!>);
+          // Join?
+          String lRule = <![knowledgeBase:rules:rule:name]!>;
+          String lId = <![knowledgeBase:rules:rule:condition:id]!>;
+//          <!$mic:join:" + lRule + ":" + lId + "!>!set(some node?);
+//          <!$mic:join:" + lRule + ":" + lVar + "!>!set(some node?);
+          // Do we need to assert the rule?
+          if (<!$mic:alpha:" + lAttr + ":wm!>!size() > 0) {
+            // Must assert the rule(s)
+            <!$mic:alpha:" + lAttr + ":rule!>!resetIterator();
+            while (<!$mic:alpha:" + lAttr + ":rule!>!next()) {
+              addAssert("2", <![$mic:alpha:" + lAttr + ":rule]!>, <![$mic:alpha:" + lAttr + ":rule:condition]!>);
+            }
+          }
+        }
+      }
+    }
+
+    // Setup the alpha memory for WM's
+    <!knowledgeBase:facts:fact!>!resetIterator();
+    while (<!knowledgeBase:facts:fact!>!next()) {
+      if (<!knowledgeBase:facts:fact:value!>!size() > 0) {
+        String lAttr = <![knowledgeBase:facts:fact:attr]!>;
+        String lValue = <![knowledgeBase:facts:fact:value]!>;
+        String lId = <![knowledgeBase:facts:fact:id]!>;
+        <!$mic:alpha:" + lAttr + ":value:" + lValue + ":wm!>!set(<![knowledgeBase:facts:fact:name]!>);
+        <!$mic:alpha:" + lAttr + ":value:" + lValue + ":wm:id!>!set(<![knowledgeBase:facts:fact:id]!>);
+        // Do we need to assert the rule?
+        if (<!$mic:alpha:" + lAttr + ":value:" + lValue + ":rule!>!size() > 0) {
+          // Must assert the rule(s)
+          <!$mic:alpha:" + lAttr + ":value:" + lValue + ":rule!>!resetIterator();
+          while (<!$mic:alpha:" + lAttr + ":value:" + lValue + ":rule!>!next()) {
+            addAssert("3", <![$mic:alpha:" + lAttr + ":value:" + lValue + ":rule]!>, <![$mic:alpha:" + lAttr + ":value:" + lValue + ":rule:condition]!>);
+          }
+        }
+      } else {
+        String lAttr = <![knowledgeBase:facts:fact:attr]!>;
+        String lVar = <![knowledgeBase:facts:fact:var]!>;
+        String lId = <![knowledgeBase:facts:fact:id]!>;
+        <!$mic:alpha:" + lAttr + ":wm!>!set(<![knowledgeBase:facts:fact:name]!>);
+        <!$mic:alpha:" + lAttr + ":wm:var!>!set(<![knowledgeBase:facts:fact:var]!>);
+        <!$mic:alpha:" + lAttr + ":wm:id!>!set(<![knowledgeBase:facts:fact:id]!>);
+        // Do we need to assert the rule?
+        if (<!$mic:alpha:" + lAttr + ":rule!>!size() > 0) {
+          // Must assert the rule(s)
+          <!$mic:alpha:" + lAttr + ":rule!>!resetIterator();
+          while (<!$mic:alpha:" + lAttr + ":rule!>!next()) {
+            addAssert("4", <![$mic:alpha:" + lAttr + ":rule]!>, <![$mic:alpha:" + lAttr + ":rule:condition]!>);
+          }
+        }
+      }
+    }    
+
+
+
+  }
+
+  public void addAssert(String aFrom, String aAssert, String aCondition) {
+    <!$mic:assert!>!resetIterator();
+    if (<!$mic!>!scan("assert", aAssert)) {
+      <!$mic:assert:condition!>!resetIterator();
+      if (<!$mic:assert!>!scan("condition", aCondition)) {
+        return;
+      } else {
+        <!$mic:assert:condition!>!set(aCondition);
+      }
+    } else {
+      <!$mic:assert!>!set(aAssert);
+      <!$mic:assert:condition!>!set(aCondition);
+    }
+%>
+PASS addAssert: <!%aFrom!>, <!%aAssert!>, <!%aCondition!>
+<%
+    return;
+  }
+  

@@ -1,0 +1,21 @@
+
+<report name="com.esarks.arm.logging.ExceptionRpt" inJeo="com.esarks.arm.model.jeo.ServiceJeo">
+
+  <jeo instance="com.esarks.arm.logging.ExceptionJeo" type="detail">
+
+    <column heading="Time"           attribute="time" />
+    <column heading="Module"         attribute="module" />
+    <column heading="Method"         attribute="method" />
+    <column heading="Severity"       attribute="severity" />
+    <column heading="Location"       attribute="location" />
+    <column heading="Description"    attribute="description" />
+    <column heading="Action"         attribute="action" />
+    <column heading="Resolution"     attribute="resolution" />
+
+    <jeo instance="com.esarks.arm.logging.ExceptionJeo" type="trace">
+      <column heading="Trace"    attribute="description" />
+    </jeo>
+
+  </jeo>
+
+</report>

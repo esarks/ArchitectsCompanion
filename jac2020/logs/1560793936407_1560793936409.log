@@ -1,0 +1,20 @@
+Mon Jun 17 13:52:16 EDT 2019: Start
+0: Open log file.
+48: DEBUG-com.esarks.jac.jac:getScript()!Log opened by jac!Debug=9!DebugClass=9
+706: DEBUG-com.esarks.jac.jac:getScript()!$jac:context=jac
+706: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:classpath=C:\ArchitectsCompanion\jac2017\classes;C:\ArchitectsCompanion\jac2017\lib\jac\jac.jar;C:\ArchitectsCompanion\jac2017\lib\mic\mic.jar;C:\ArchitectsCompanion\jac2017\lib\jetty\org.mortbay.jetty.jar;C:\ArchitectsCompanion\jac2017\lib\jetty\org.mortbay.jmx.jar;C:\ArchitectsCompanion\jac2017\lib\jetty\javax.servlet.jar;C:\ArchitectsCompanion\jac2017\jdk1.8.0_112\lib\tools.jar;C:\ArchitectsCompanion\jac2017\lib\mysql-connector-java-5.1.18\mysql-connector-java-5.1.18-bin.jar;C:\ArchitectsCompanion\jac2017\lib\crimson\crimson.jar;C:\ArchitectsCompanion\jac2017\lib\jacob-1.17-M2\jacob.jar;C:\ArchitectsCompanion\jac2017\lib\jni4net-0.8.6.0-bin\lib\jni4net.j-0.8.6.0.jar;C:\ArchitectsCompanion\jac2017\lib\java-json.jar\java-json.jar
+706: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:home=C:\ArchitectsCompanion\jac2017
+706: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:work=C:\ArchitectsCompanion\jac2017\classes
+706: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:scripts=C:\ArchitectsCompanion\jac2017\app
+706: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:document=C:\Users\ptm
+706: DEBUG-com.esarks.jac.jac:getScript()!$jac:fileSeparator=\
+707: DEBUG-com.esarks.jac.jac:getScript()!$jac:verifyScripts=true
+707: DEBUG-com.esarks.jac.jac:getScript()!$jac:compile=true
+707: DEBUG-com.esarks.jac.jac:getScript()!$jac:dateTime=2019.06.17 01:52:17.120 PM EDT
+707: DEBUG-com.esarks.jac.jac:getScript()!Script=com.esarks.jac.jrun.Job
+707: DEBUG-com.esarks.jac.jac:getScript()!Method=execute
+707: DEBUG-com.esarks.jac.jac:getScript()!Argument=com.esarks.jac.jrun.Jrun
+707: DEBUG-com.esarks.jac.jac:getScript()!Argument=execute
+707: DEBUG-com.esarks.jac.jac:getScript()!Argument=C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.jrun
+707: DEBUG-com.esarks.jac.jac:getScript()!Calling Script.execMethod with arguments...
+778: APP-com.esarks.jac.jrun.Jrun:execute(String)!Enter method!aXml="C:\ArchitectsCompanion\jac2017\app\ParseXML\ParseSprints.jrun"

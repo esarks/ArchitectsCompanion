@@ -1,0 +1,2 @@
+set $jac:script:extends=com.make.Make
+end

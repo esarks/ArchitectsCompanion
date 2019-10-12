@@ -1,0 +1,439 @@
+
+public void execute() {
+
+%>
+********************************
+********************************
+********************************
+<%
+
+  iOutputManager.openOutputFile(<![mic.element:mapFile]!>, false);
+  iOutputManager.closeOutputFile();
+
+  iOutputManager.openOutputFile(<![mic.element:logFile]!>, false);
+%>
+RTC Workitems are contained in <![mic.element:rtcFile]!>.
+<%
+  iOutputManager.closeOutputFile();
+
+//Number of Rows in Worksheet
+  int lRow = 0;
+
+// Establish Type translation from Excel to XSD
+
+  <!Type:Boolean!>!set("boolean");
+  <!Type:DateTime!>!set("dateTime");
+  <!Type:Number!>!set("integer");
+  <!Type:String!>!set("string");
+
+// Get the data out of the RTC data file
+
+%>
+mic.element:type = <![mic.element:type]!> : mic.element:rtcFile = <![mic.element:rtcFile]!>
+<%
+
+  iSymbolTable.parseXml(<![mic.element:rtcFile]!>);
+
+// Iterate Workbook
+
+  <!Workbook!>!resetIterator();
+  while (<!Workbook!>!next()) {
+
+%>
+Workbook
+<%
+
+// Iterate Worksheet
+   
+    <!Workbook:Worksheet!>!resetIterator();
+    while (<!Workbook:Worksheet!>!next()) { 
+
+%>
+Worksheet <![Workbook:Worksheet:ss:Name]!>
+<%
+
+// Iterate Table
+  
+      <!Workbook:Worksheet:Table!>!resetIterator();
+      while (<!Workbook:Worksheet:Table!>!next()) {
+
+%>
+Table
+<%
+
+// Iterate Row and keep count
+              
+        <!Workbook:Worksheet:Table:Row!>!resetIterator();
+        while (<!Workbook:Worksheet:Table:Row!>!next()) {
+
+%>.<%
+          lRow = lRow + 1;
+          if (lRow > 1) {
+            <!Workitem!>!set("");
+          }
+
+          int lCell = 0;
+                  
+          <!Workbook:Worksheet:Table:Row:Cell!>!resetIterator();
+          while (<!Workbook:Worksheet:Table:Row:Cell!>!next()) {
+
+            lCell = lCell + 1;
+            
+            if (lRow == 1) {
+
+              <!Column!>!set(lCell);
+              <!Column:Heading!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+              <!Column:XmlHeading!>!set(<![Column:Heading]!>.replace(' ','_').replace('(','_').replace(')','_').replace('%','P'));
+              <!Column:Type!>!set("N/A");
+              <!Column:XmlType!>!set("string");
+              
+            } else {
+
+              if (<![Workbook:Worksheet:Table:Row:Cell:ss~Index]!>.equals("")) {
+
+              } else {
+                lCell = Integer.parseInt(<![Workbook:Worksheet:Table:Row:Cell:ss~Index]!>);
+              }
+
+              <!Workitem:Column!>!set(lCell);
+              <!Workitem:Column:Data!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+              <!Workitem:Column:Type!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data:ss~Type]!>);
+              <!Column!>!find(lCell);
+              <!Column:Type!>!reset(<![Workbook:Worksheet:Table:Row:Cell:Data:ss~Type]!>);
+              <!Column:XmlType!>!reset(<![Type:[Workbook:Worksheet:Table:Row:Cell:Data:ss~Type]]!>);
+              <!Workitem:Column:Heading!>!set(<![Column:Heading]!>);
+              if (lCell == 1) <!Workitem:Id!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+              <!Workitem:[Column:Heading]!>!set(<![Workbook:Worksheet:Table:Row:Cell:Data]!>);
+            }
+          }
+        }
+      }
+    }
+  }
+
+%>
+
+Rows processed: <!%lRow!>
+<%
+
+  lRow--;
+
+  iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+%>
+Number of data rows: <!%lRow!>
+Create a list of Column Names in WorkItemColumns.csv.
+<%
+  iOutputManager.closeOutputFile();
+
+  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ParseXML\\WorkItemColumns.csv", false);
+
+  <!Column!>!resetIterator();
+  while (<!Column!>!next()) {
+%>
+<![Column]!>,<![Column:Heading]!>,<![Column:Type]!>
+<%
+  }
+
+  iOutputManager.closeOutputFile();
+
+  iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+%>
+Build headers for *_import tables.
+<%
+  iOutputManager.closeOutputFile();
+
+%>
+Import Sprints
+<%
+
+// Create header rows in _import files
+
+  <!mic.element:map:type!>!scan("rm_sprint");
+  writeHeadingLog();
+  <!mic.element:map:type!>!scan("rm_sprint");
+  writeHeading();
+  
+  <!mic.element:map:type!>!scan("rm_epic");
+  writeHeadingLog();
+  <!mic.element:map:type!>!scan("rm_epic");
+  writeHeading();
+  
+  <!mic.element:map:type!>!scan("rm_story");
+  writeHeadingLog();
+  <!mic.element:map:type!>!scan("rm_story");
+  writeHeading();
+  
+  <!mic.element:map:type!>!scan("rm_defect");
+  writeHeadingLog();
+  <!mic.element:map:type!>!scan("rm_defect");
+  writeHeading();
+
+  <!mic.element:map:type!>!scan("rm_scrum_task");
+  writeHeadingLog();
+  <!mic.element:map:type!>!scan("rm_scrum_task");
+  writeHeading();
+
+  <!mic.element:map:type!>!scan("rm_backlog");
+  writeHeadingLog();
+  <!mic.element:map:type!>!scan("rm_backlog");
+  writeHeading();
+
+  <!mic.element:map:type!>!scan("rm_orphan");
+  writeHeadingLog();
+  <!mic.element:map:type!>!scan("rm_orphan");
+  writeHeading();
+
+  iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+%>
+Process the Sprints from the XML files extracted from RTC.
+Format Sprint dates to yyyy-MM-dd HH:mm:ss.
+<%
+  iOutputManager.closeOutputFile();
+  
+  <!mic.element:sprintFile!>!resetIterator();
+  while (<!mic.element:sprintFile!>!next()) {
+
+    iSymbolTable.parseXml(<![mic.element:sprintFile]!>);
+
+    iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+%>
+Sprint File: <![Project:Name]!>
+<%
+    iOutputManager.closeOutputFile();
+    
+%>
+mic.element:sprintFile = <![mic.element:sprintFile]!> : <![mic.element:sprintFile:number]!>
+<%
+   
+    if (!<![mic.element:sprintFile:noSprint]!>.equalsIgnoreCase("true")) {  // noSprint != true
+    
+    DateTimeFormatter lDTF1 = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
+    DateTimeFormatter lDTF2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    LocalDateTime lLDT1 = LocalDateTime.parse(<![Project:StartDate]!>, lDTF1);
+    <!StartDate!>!reset(lLDT1.format(lDTF2));
+
+    LocalDateTime lLDT2 = LocalDateTime.parse(<![Project:FinishDate]!>, lDTF1);
+    <!FinishDate!>!reset(lLDT2.format(lDTF2));
+
+    Duration lDuration = Duration.between(lLDT1, lLDT2);
+    Long lSeconds = lDuration.getSeconds();
+    <!Duration!>!reset(lSeconds);
+
+    <!mic.element:map:type!>!scan("rm_sprint");    
+
+    writeData();
+
+    } // noSprint != True
+   
+// Get all the Sprint Stories and Tasks
+ 
+    <!Project:Tasks!>!resetIterator();
+    <!Project:Tasks:Task!>!resetIterator();
+    while (<!Project:Tasks:Task!>!next()) {
+
+// Get the Extended Attribute for the Task ID
+
+      <!Project:Tasks:Task:ExtendedAttribute!>!resetIterator();
+      while (<!Project:Tasks:Task:ExtendedAttribute!>!next()) {
+
+        if (<![Project:Tasks:Task:ExtendedAttribute:FieldID]!>.equals("188743767")) {
+          <!Project:Tasks:Task:Id!>!set(<![Project:Tasks:Task:ExtendedAttribute:Value]!>);
+          continue;
+        }
+      }
+
+// Find Workitem
+      if (<!Workitem:Id!>!scan(<![Project:Tasks:Task:Id]!>) == false) {
+        continue;
+      }
+
+    iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+
+          String lLogColumn = <![Workitem:Summary]!>;
+          lLogColumn = "\"" + lLogColumn.replaceAll("\"", "\"\"") + "\"";
+          
+          String lUsed = "";
+          if (<![Workitem:Used]!>.equalsIgnoreCase("true")) lUsed = "Used in Future Sprint";
+
+%>
+,<![Project:Tasks:Task:Id]!>,<![Workitem:Type]!>,<![Workitem:Parent]!>,<!%lUsed!>,<!%lLogColumn!>
+<%
+    iOutputManager.closeOutputFile();
+
+// Check if this has already been used.
+
+      if (<![Workitem:Used]!>.equalsIgnoreCase("true")) continue;
+      <!Workitem:Used!>!reset("true");
+
+      <!mic.element:map:type!>!scan("rm_story");    
+      if (<![Workitem:Type]!>.equalsIgnoreCase("Epic")) <!mic.element:map:type!>!scan("rm_epic");
+      if (<![Workitem:Type]!>.equalsIgnoreCase("Defect")) <!mic.element:map:type!>!scan("rm_defect");
+      if (<![Workitem:Type]!>.equalsIgnoreCase("Task")) <!mic.element:map:type!>!scan("rm_scrum_task");
+//      if (<![mic.element:sprintFile:noSprint]!>.equalsIgnoreCase("true")) <!mic.element:map:type!>!scan("rm_backlog");
+       
+      writeData();
+      
+    }
+     
+  <!Project!>!remove();
+  }
+
+%>
+Orphans
+<%
+
+  iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+%>
+Orphans (Workitems not contained in a Sprint or Backlog)
+<%
+  iOutputManager.closeOutputFile();
+
+  int lCount = 0;
+  int lTotal = 0;
+
+  <!mic.element:map:type!>!scan("rm_orphan");    
+  
+  <!Workitem!>!resetIterator();
+  while (<!Workitem!>!next()) {
+
+    lTotal++;
+    if (<![Workitem:Used]!>.equalsIgnoreCase("true")) continue;
+
+    {
+      iOutputManager.openOutputFile(<![mic.element:logFile]!>, true);
+
+      String lLogColumn = <![Workitem:Summary]!>;
+      lLogColumn = "\"" + lLogColumn.replaceAll("\"", "\"\"") + "\"";
+
+%>
+,<![Workitem:Id]!>,<![Workitem:Type]!>,<![Workitem:Parent]!>,<!%lLogColumn!>
+<%
+
+      iOutputManager.closeOutputFile();
+    }
+         
+    lCount++;
+
+    writeData();
+  }
+
+%>
+Total = <!%lTotal!> Orphans = <!%lCount!>
+<%
+%>
+********************************
+********************************
+********************************
+<%
+  
+}
+
+private void writeHeadingLog() {
+
+
+      iOutputManager.openOutputFile(<![mic.element:mapFile]!>, true);
+
+%>
+*** Data Maps for <![mic.element:map:file]!> ***
+<%
+
+      String lColumn = "";
+      String lComma = "";
+
+      <!mic.element:map:column!>!resetIterator();
+      while (<!mic.element:map:column!>!next()) {
+
+        if (<![mic.element:map:column:constant]!>.length() > 0) {
+
+          lColumn = "\"" + <![mic.element:map:column:constant]!> + "\"";
+
+        } else if (<![mic.element:map:column:rule]!>.length() > 0) {
+
+          if (<![mic.element:sprintFile:number]!>.length() > 0) {
+            lColumn = "\"false\"";
+          } else {
+            lColumn = "\"true\"";
+          }
+
+        } else {
+
+          lColumn = <![mic.element:map:column:from]!>;
+
+        }
+%>
+<!%lColumn!>,<![mic.element:map:column:to]!>
+<%
+        lComma = ",";
+      }
+%>
+
+<%
+      iOutputManager.closeOutputFile();
+
+}
+
+private void writeHeading() {
+
+      iOutputManager.openOutputFile(<![mic.element:map:file]!>, false);
+
+      String lColumn = "";
+      String lComma = "";
+
+      <!mic.element:map:column!>!resetIterator();
+      while (<!mic.element:map:column!>!next()) {
+
+        lColumn = <![mic.element:map:column:to]!>;
+
+%><!%lComma!><!%lColumn!><%
+
+        lComma = ",";
+      }
+%>
+
+<%
+      iOutputManager.closeOutputFile();
+
+}
+
+private void writeData() {
+
+      iOutputManager.openOutputFile(<![mic.element:map:file]!>, true);
+
+      String lColumn = "";
+      String lComma = "";
+
+      <!mic.element:map:column!>!resetIterator();
+      while (<!mic.element:map:column!>!next()) {
+
+        if (<![mic.element:map:column:constant]!>.length() > 0) {
+
+          lColumn = <![mic.element:map:column:constant]!>;
+
+        } else if (<![mic.element:map:column:rule]!>.length() > 0) {
+
+          if (<![mic.element:sprintFile:number]!>.length() > 0) {
+            lColumn = "\"false\"";
+          } else {
+            lColumn = "\"true\"";
+          }
+
+        } else {
+
+          lColumn = <![[mic.element:map:column:from]]!>;
+          if (<![mic.element:map:column:string]!>.equalsIgnoreCase("true")) {
+            lColumn = "\"" + lColumn.replaceAll("\"", "\"\"") + "\"";
+          }
+
+        }
+%><!%lComma!><!%lColumn!><%
+        lComma = ",";
+      }
+
+%>
+
+<%
+
+      iOutputManager.closeOutputFile();
+
+}
+

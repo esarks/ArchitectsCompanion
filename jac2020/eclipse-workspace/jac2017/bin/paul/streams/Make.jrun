@@ -1,0 +1,1 @@
+<jacrun script="com.esarks.arm.make.MakeAll" method="execute" argument="com.hqsonline.hrm.model.indexing.Make" />

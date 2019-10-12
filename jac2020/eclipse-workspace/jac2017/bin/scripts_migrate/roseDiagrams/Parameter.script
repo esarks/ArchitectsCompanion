@@ -1,0 +1,17 @@
+{\pard\f0\fs18\li360\fs22 {\i Parameter: <![Class:Operation:Parameter:Name]!>}\par}
+{\pard\f0\fs18\li360\fs22 Type: <![Class:Operation:Parameter:Type]!>\par}
+<%
+
+  <!Class:Operation:Parameter:Documentation!>!resetIterator();
+
+  while (<!Class:Operation:Parameter:Documentation!>!next() &&
+         (<!Class:Operation:Parameter:Documentation!>!isLast() == false ||
+         (<!Class:Operation:Parameter:Documentation!>!isLast() == true &&
+          <![Class:Operation:Parameter:Documentation]!>.length() > 0))) {
+%>
+{\pard\f0\fs18\li360
+<![Class:Operation:Parameter:Documentation]!>\par}
+<%
+  }
+%>
+\par

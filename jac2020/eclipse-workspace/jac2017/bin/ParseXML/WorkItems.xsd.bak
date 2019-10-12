@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="WorkItem">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="Id" type="xs:Number"/>
+      <xs:element name="Type" type="xs:String"/>
+      <xs:element name="Status" type="xs:String"/>
+      <xs:element name="Priority" type="xs:String"/>
+      <xs:element name="Severity" type="xs:String"/>
+      <xs:element name="Summary" type="xs:String"/>
+      <xs:element name="Owned By" type="xs:String"/>
+      <xs:element name="Created By" type="xs:String"/>
+      <xs:element name="Business Impact Description" type="xs:String"/>
+      <xs:element name="Description" type="xs:String"/>
+      <xs:element name="Planned For" type="xs:String"/>
+      <xs:element name="Acceptance Test" type="xs:String"/>
+      <xs:element name="Achieved Value (%)" type="xs:String"/>
+      <xs:element name="Affected Teams" type="xs:String"/>
+      <xs:element name="Application" type="xs:String"/>
+      <xs:element name="Applies To Release Type" type="xs:String"/>
+      <xs:element name="Approvals" type="xs:String"/>
+      <xs:element name="Archived" type="xs:Boolean"/>
+      <xs:element name="Blocked" type="xs:Boolean"/>
+      <xs:element name="Build Fixed" type="xs:String"/>
+      <xs:element name="Build Found" type="xs:String"/>
+      <xs:element name="Build Planned" type="xs:String"/>
+      <xs:element name="Business Value (actual)" type="xs:String"/>
+      <xs:element name="Business Value (planned)" type="xs:String"/>
+      <xs:element name="Change Order" type="xs:String"/>
+      <xs:element name="Comments" type="xs:String"/>
+      <xs:element name="Contingency Action Plan" type="xs:String"/>
+      <xs:element name="Corrected Estimate" type="xs:String"/>
+      <xs:element name="Creation Date" type="xs:DateTime"/>
+      <xs:element name="Delivered In" type="xs:String"/>
+      <xs:element name="Dependencies and Prerequisites" type="xs:String"/>
+      <xs:element name="Deployment Notes" type="xs:String"/>
+      <xs:element name="Due Date" type="xs:String"/>
+      <xs:element name="EPS Number" type="xs:String"/>
+      <xs:element name="Estimate" type="xs:String"/>
+      <xs:element name="External ID" type="xs:Number"/>
+      <xs:element name="Filed Against" type="xs:String"/>
+      <xs:element name="Flag" type="xs:String"/>
+      <xs:element name="Follow-up Date" type="xs:String"/>
+      <xs:element name="Found In" type="xs:String"/>
+      <xs:element name="Found In Environment" type="xs:String"/>
+      <xs:element name="Identified Date" type="xs:DateTime"/>
+      <xs:element name="Impact" type="xs:String"/>
+      <xs:element name="Impact" type="xs:String"/>
+      <xs:element name="IOC Applicable" type="xs:String"/>
+      <xs:element name="Issue Category" type="xs:String"/>
+      <xs:element name="Issue Category Other" type="xs:String"/>
+      <xs:element name="Issue Coordinated By" type="xs:String"/>
+      <xs:element name="Issue Owner Non-VA" type="xs:String"/>
+      <xs:element name="Issue Resolution Description" type="xs:String"/>
+      <xs:element name="Leadership Action Needed" type="xs:String"/>
+      <xs:element name="Maximal Estimate" type="xs:String"/>
+      <xs:element name="Minimal Estimate" type="xs:String"/>
+      <xs:element name="Modified By" type="xs:String"/>
+      <xs:element name="Modified Date" type="xs:DateTime"/>
+      <xs:element name="Module Impacted" type="xs:String"/>
+      <xs:element name="National Service Desk Ticket" type="xs:Number"/>
+      <xs:element name="OLD Created By" type="xs:String"/>
+      <xs:element name="OLD ID" type="xs:String"/>
+      <xs:element name="OLD Owned By" type="xs:String"/>
+      <xs:element name="OLD Resolved By" type="xs:String"/>
+      <xs:element name="PI Objective Type" type="xs:String"/>
+      <xs:element name="Portfolio" type="xs:String"/>
+      <xs:element name="Portfolio Director" type="xs:String"/>
+      <xs:element name="Precision" type="xs:String"/>
+      <xs:element name="Priority Order Number" type="xs:Number"/>
+      <xs:element name="Probability" type="xs:String"/>
+      <xs:element name="Product - Platform Management" type="xs:String"/>
+      <xs:element name="Product Owner" type="xs:String"/>
+      <xs:element name="Program" type="xs:String"/>
+      <xs:element name="Program Manager" type="xs:String"/>
+      <xs:element name="Project" type="xs:String"/>
+      <xs:element name="Project Area" type="xs:String"/>
+      <xs:element name="Project Manager" type="xs:String"/>
+      <xs:element name="Project_Manager" type="xs:String"/>
+      <xs:element name="Reason" type="xs:String"/>
+      <xs:element name="Receiving Organization" type="xs:String"/>
+      <xs:element name="Release Date" type="xs:String"/>
+      <xs:element name="Release Note" type="xs:String"/>
+      <xs:element name="Release Scope" type="xs:String"/>
+      <xs:element name="Released In" type="xs:String"/>
+      <xs:element name="Released in Patch" type="xs:String"/>
+      <xs:element name="Reported By" type="xs:String"/>
+      <xs:element name="Resolution" type="xs:String"/>
+      <xs:element name="Resolution Date" type="xs:DateTime"/>
+      <xs:element name="Resolution Description" type="xs:String"/>
+      <xs:element name="Resolved By (Contributor)" type="xs:String"/>
+      <xs:element name="Restricted Access" type="xs:String"/>
+      <xs:element name="Risk Action Owned By" type="xs:String"/>
+      <xs:element name="Risk Category" type="xs:String"/>
+      <xs:element name="Risk Category Other" type="xs:String"/>
+      <xs:element name="Risk Coordinated By" type="xs:String"/>
+      <xs:element name="Risk Dependencies" type="xs:String"/>
+      <xs:element name="Risk Escalation History" type="xs:String"/>
+      <xs:element name="Risk Exposure Percent" type="xs:Number"/>
+      <xs:element name="Risk Owner Non-VA" type="xs:String"/>
+      <xs:element name="Risk Response" type="xs:String"/>
+      <xs:element name="Risk Response Strategy" type="xs:String"/>
+      <xs:element name="Risk Retirement Criteria" type="xs:String"/>
+      <xs:element name="Risk Review Board Date" type="xs:String"/>
+      <xs:element name="Risk Timeframe" type="xs:String"/>
+      <xs:element name="Risk Trigger" type="xs:String"/>
+      <xs:element name="Risk was Owned By" type="xs:String"/>
+      <xs:element name="Root Cause" type="xs:String"/>
+      <xs:element name="SAFe Parent Area" type="xs:String"/>
+      <xs:element name="Score" type="xs:String"/>
+      <xs:element name="Start Date" type="xs:String"/>
+      <xs:element name="Status Through" type="xs:String"/>
+      <xs:element name="Story Points" type="xs:String"/>
+      <xs:element name="Stretch Objective" type="xs:String"/>
+      <xs:element name="Tags" type="xs:String"/>
+      <xs:element name="Target Delivery Date" type="xs:String"/>
+      <xs:element name="TechStat" type="xs:Boolean"/>
+      <xs:element name="TechStat Notes" type="xs:String"/>
+      <xs:element name="Tested By" type="xs:String"/>
+      <xs:element name="Tested By Non-VA" type="xs:String"/>
+      <xs:element name="Time Spent" type="xs:String"/>
+      <xs:element name="Traceability Indicator" type="xs:String"/>
+      <xs:element name="Version or Build" type="xs:String"/>
+      <xs:element name="Work Around Explanation" type="xs:String"/>
+      <xs:element name="Workflow Information" type="xs:String"/>
+      <xs:element name="Yellow Flag Category" type="xs:String"/>
+      <xs:element name="Filed Against (Top Level)" type="xs:String"/>
+      <xs:element name="Status Category" type="xs:Number"/>
+      <xs:element name="Status Group" type="xs:String"/>
+      <xs:element name="Subscribed By" type="xs:String"/>
+      <xs:element name="Team Area" type="xs:String"/>
+      <xs:element name="Children" type="xs:String"/>
+      <xs:element name="Parent" type="xs:String"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+</xs:schema>

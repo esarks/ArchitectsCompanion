@@ -1,0 +1,219 @@
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_C_P_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-11_0746_In_Process.txt
+Comments: #VBA 
+
+Comments: "Force Medical Necessity Check Against Content" option available for new 
+Medicare patients without insurance on file 
+
+Comments: changed from Future order placed to future appointment is scheduled -la 
+
+Comments: *gap for post IOC workflow -no issues for IOC. will need to resolve 
+notification of appointment post IOC 
+
+Comments: (PR) added off page reference 3/5/18 
+
+Revisit deceased patient appointment 
+type 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_Registration_-_OHI_Collection_2019-10-11_0746_Approved.txt
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_Registration_Scheduling_-_In_Person_Check_In_2019-10-11_0746_Approved.txt
+Comments: If a patient remains in a single state for too long (for example, 15 minutes) 
+an excess wait time counter can show on Patient Tracking. 
+
+
+Comments: The default Modify Patient Conversation can launch automatically when selected 
+within the Revenue Cycle Maintenance Tool 
+
+Comments: The default Modify Encounter Conversation can launch automatically when 
+selected within the Revenue Cycle Maintenance Tool 
+
+Eligibility checking 
+requires Transaction Services Integration 
+
+Comments: Automatically launching the Images window is enabled within the Revenue Cycle 
+Maintenance Tool 
+
+Content 360 is required for images integration 
+
+Comments: Review,collect and confirm OHI 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_Scheduling_-_Ambulatory_-_No_Show-Contact_2019-10-11_0746_Approved.txt
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_Scheduling_-_Ambulatory_-_No_Show_Process_2019-10-11_0745_Approved.txt
+Comments: A tiny window opens below the "Confirmed" text with options for "Check In" and 
+"No Show" 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-11_0745_Approved.txt
+Comments: "Force Medical Necessity Check Against Content" option available for new 
+Medicare patients without insurance on file 
+
+Comments: changed from Future order placed to future appointment is scheduled -la 
+
+Comments: (PR) added off page reference 3/5/18 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_Scheduling_-_Ambulatory_-_Record_an_Appointment_Contact_2019-10-11_0745_Approved.txt
+Comments: Added application. MNelson 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_Scheduling_-_Ambulatory_-_Reschedule_Appointment_2019-10-11_0745_Approved.txt
+Comments: "Person Search" window opens 
+
+Comments: DEERS retrieve occurs before opening to patient's "Future Appointments" view 
+
+Comments: Small window opens with various menu options including "Reschedule 
+Appointment" 
+
+Comments: The "Add Appointment" tab in the bottom half of the window changes to " 
+Reschedule Appointment" with appointment details 
+
+Comments: "Reschedule Appointment" tab populates with a new additional drop-down field 
+requesting "Reschedule Reason" 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_Scheduling_-_Ambulatory_-_Schedule_Appointment_2019-10-11_0745_Approved.txt
+Comments: Buttons for 3 methods for searching for an appointment change from unavailable 
+to available (e.g. "First Available") 
+
+Comments: "First Available Times" window opens with "Suggested Results" for available 
+appointments 
+
+Comments: Appointment details populates the "Future Appointments" list 
+
+
+Comments: "Schedule" window opens with a calendar of appointment slots for the requested 
+resource(s) 
+
+Comments: "Recurring Frequencies" window opens with various search criteria -DO NOT 
+change "Patient Duration" minutes 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_Scheduling_-_Ambulatory_-_VBA_Record_an_Appointment_Contact_2019-10-11_0746_In_Process.txt
+Comments: Products: 
+
+-Revenue Cycle : Appointments Perspective 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_VBA_-_Capacity___Capability___Routing__(IOC)_2019-10-11_0746_Approved.txt
+Comments: ERRA data means the current C&P exam request inventory data, data on past 
+C&P 
+exam requests that were cancelled and/or completed, and VHA facility 
+capabilities (i.e., enabled/disabled DBQs based on VHA's internal personnel 
+and resources). High level data on C&P clinic locations (names/addresses) is 
+also included. 
+
+Comments: Products: 
+
+-ERRA tool : Determine location to send request 
+
+-Dependency on 
+the data being available for ERRA 
+
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_VBA_-_Enterprise_Medical_Records_Search_(IOC)_2019-10-11_0746_Approved.txt
+Comments: Products: 
+
+-CAPRI : Enterprise Search 
+
+Comments: Products: 
+
+-VBMS 
+
+Comments: Products: 
+
+-TBD 
+
+Comments: Products: 
+
+-JLV 
+
+Comments: Products: 
+
+-Clinical Reporting XR 
+
+Note: May access Clinical Reporting XR 
+from AccessHIM 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\1VA_-_VBA_-_Exam-Management_-_Child_Orders_(IOC)_2019-10-11_0746_Approved.txt
+Comments: Products: 
+
+-PowerChart : ? 
+
+Comments: Complete one order at a time. 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\_Proposed__1VA-VBA-7131-Process_2019-10-11_0746_Ready_For_Review.txt
+Comments: Products: 
+
+-AccessHIM : ROI 
+
+Comments: Product: AccessHIM 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\_Proposed__1VA_-_VBA_-_Exam-Management_(IOC)_2019-10-11_0746_In_Process.txt
+Comments: Products: 
+
+-PowerChart : Search and View Medical Records 
+
+Comments: Products: 
+
+-PowerForm : Form 2507 to Document Requested DBQs 
+
+Comments: Products: 
+
+-Clinical Reporting XR : Generic Encounter 
+
+Interfaces: 
+
+-Manual 
+upload to VBMS Folder 
+
+Comments: Products: 
+
+-Message Center : 2507 Message Template 
+
+Comments: Products: 
+
+-Message Center : Message Pool 
+
+Comments: Products: 
+
+-PowerChart : Review Order 
+
+Comments: VBA is requesting a pdf document be sent that can be loaded in the Veteran's 
+eFolder 
+
+Comments: Note: Sub-flow belongs to Scheduling Council 
+
+Products: 
+
+-Cerner Scheduling 
+
+
+Comments: Products: 
+
+-Ambulatory Organizer : Clinician's view of scheduled appointments 
+
+Comments: Products: 
+
+-PowerChart : Mpage : Assessment Component 
+
+Comments: Products: 
+
+-Revenue Cycle : Patient Access 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\_Proposed__1VA_-_VBA_-_Perform_Examination_(IOC)_2019-10-11_0746_Approved.txt
+Comments: Products: 
+
+-PowerForm : 2507 
+
+Comments: Products: 
+
+-PowerChart : 
+-VBMS 
+-CAPRI 
+-JLV 
+-AHLTA 
+
+
+Comments: Products: 
+
+-PowerChart : PowerForm : Specific DBQ 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\_Proposed__1VA_-_VBA_-_VR_E_Block_1_2019-10-11_0746_Ready_For_Review.txt
+Comments: Products: 
+
+-PowerChart : Veteran Orders 
+
+****** C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-11_0746\_Proposed___1VA_-_VBA_-_Deliver_Exam_Results_2019-10-11_0746_Ready_For_Review.txt

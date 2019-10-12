@@ -1,0 +1,15 @@
+C:\ArchitectsCompanion\jac2017\classes\ehrm\EHRM.java:73: error: reference to List is ambiguous
+    List<GeneratedImage> lList = lFileReader.getGeneratedImages();
+    ^
+  both class java.awt.List in java.awt and interface java.util.List in java.util match
+C:\ArchitectsCompanion\jac2017\classes\ehrm\EHRM.java:73: error: cannot find symbol
+    List<GeneratedImage> lList = lFileReader.getGeneratedImages();
+         ^
+  symbol:   class GeneratedImage
+  location: class EHRM
+C:\ArchitectsCompanion\jac2017\classes\ehrm\EHRM.java:73: error: cannot find symbol
+    List<GeneratedImage> lList = lFileReader.getGeneratedImages();
+                                            ^
+  symbol:   method getGeneratedImages()
+  location: variable lFileReader of type FileReader
+3 errors
