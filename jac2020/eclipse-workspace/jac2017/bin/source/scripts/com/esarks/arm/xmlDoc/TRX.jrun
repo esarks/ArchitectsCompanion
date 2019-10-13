@@ -1,8 +1,0 @@
-<jacrun>
-  <script name="com.esarks.arm.xmlDoc.XmlToHtml" method="execute" argument="com.esarks.arm.xmlDoc.Transmittal" argument2="?this" />
-
-  <xdoc>
-    <reason>this is the reason for the transmital</reason>
-  </xdoc>
-  
-</jacrun>

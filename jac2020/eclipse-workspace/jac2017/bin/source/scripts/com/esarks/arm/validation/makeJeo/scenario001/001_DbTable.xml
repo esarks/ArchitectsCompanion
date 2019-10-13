@@ -1,9 +1,0 @@
-<tables> 
-
-  <table name="testBadType">
-
-    <field name="id" type="xxx" nullable="false"/>
-    
-  </table>
-
-</tables>

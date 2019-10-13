@@ -1,7 +1,0 @@
-    {
-      ArrayList lArrayList = <![$jac:script:xml:script:jeo]!>.getReply().getJeoByInstanceName(<![$jac:script:xml:script:instance]!>.class.getName());
-      for (int lIdx=0; lIdx < lArrayList.size(); lIdx++) {
-        <![$jac:script:xml:script:instance]!> lInstanceJeo = (<![$jac:script:xml:script:instance]!>) lArrayList.get(lIdx);
-<![$jac:script:xml:script:custom]!>
-      }
-    }

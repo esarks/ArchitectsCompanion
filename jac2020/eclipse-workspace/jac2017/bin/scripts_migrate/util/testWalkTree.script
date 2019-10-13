@@ -1,7 +1,0 @@
-<%
-
-  outputManager.openOutputFile(<![$jac:path:scripts]\\util\\out.xml!>, false);
-  <!walkTree!>!loadScript("util.walkTree");
-  <!walkTree!>!execMethod("execute", new String[]{"$jac"});
-
-%>

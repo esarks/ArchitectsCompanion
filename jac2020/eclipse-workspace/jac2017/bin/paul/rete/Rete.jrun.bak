@@ -1,1 +1,0 @@
-<jacrun script="paul.rete.Rete" extends="com.esarks.arm.owl.JeoOwlEngine" method="execute" />

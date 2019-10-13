@@ -1,3 +1,0 @@
-<jacrun>
-  <script name="com.esarks.arm.applicationFramework.HttpServer" method="execute" argument="test.jsp" />
-</jacrun>

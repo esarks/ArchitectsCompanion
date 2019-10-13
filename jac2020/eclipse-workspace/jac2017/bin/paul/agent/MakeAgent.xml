@@ -1,7 +1,0 @@
-<mic.element type="Component" title="">
-
-  <make>
-    <script context="java" compile="true">com.learning.paul.agent.HttpAuthenticator</script>
-  </make>
-
-</mic.element>

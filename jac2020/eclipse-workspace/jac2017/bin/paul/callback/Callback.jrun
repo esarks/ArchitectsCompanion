@@ -1,6 +1,0 @@
-<jacrun>
-  <script name="paul.callback.Client" method="doNothing" />
-  <script name="paul.callback.Server" method="doNothing" />
-  <script name="paul.callback.Client" method="execute" />
-  <script name="paul.callback.Server" method="execute" />
-</jacrun>

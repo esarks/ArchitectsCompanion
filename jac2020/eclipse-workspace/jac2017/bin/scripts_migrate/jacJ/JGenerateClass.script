@@ -1,9 +1,0 @@
-<%
-    <!currentClass:Module!>!resetIterator();
-    while (<!currentClass:Module!>!next()) {
-
-        <!currentClass:Module!>!alias("currentModule");
-        <!JGenerateModule!>!execMethod("execute");
-
-    }
-%>

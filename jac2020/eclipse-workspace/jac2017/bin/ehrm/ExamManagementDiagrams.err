@@ -1,4 +1,0 @@
-C:\ArchitectsCompanion\jac2017\classes\ehrm\ExamManagementDiagrams.java:42: error: package net.sourceforge.plantuml does not exist
-import  net.sourceforge.plantuml.SourceStringReader;
-                                ^
-1 error

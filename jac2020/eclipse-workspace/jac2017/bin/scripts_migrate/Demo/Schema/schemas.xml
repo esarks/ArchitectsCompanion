@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<schemas>
-  <schema name='description' type='string' truncateEol='false' replaceNewLine=' ' trim='true'>
-  </schema>
-</schemas>

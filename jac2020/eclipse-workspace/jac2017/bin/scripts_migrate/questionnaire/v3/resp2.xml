@@ -1,7 +1,0 @@
-<questionnaire control="1" revision="2" code="qa" sequence="1">
-
-  <question revision="1" revisionOut="2" code="q2" instance="0" response="r3" value=""/>
-  <question revision="2" revisionOut="" code="q2" instance="0" response="r1" value=""/>
-  <question revision="2" revisionOut="" code="q2" instance="0" response="r2" value=""/>
-
-</questionnaire>

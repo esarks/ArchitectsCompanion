@@ -1,9 +1,0 @@
-<jeos>
-
-  <jeo name="MyJeo">
-
-    <field name="myField" type="string" />
-
-  </jeo>
-
-</jeos>

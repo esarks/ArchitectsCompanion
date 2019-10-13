@@ -1,2 +1,0 @@
-cd %JAC_HOME%\bin
-jac Demo.HelloWorld.Start

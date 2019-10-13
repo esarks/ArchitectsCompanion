@@ -1,9 +1,0 @@
-<mic.element type="Component" title="">
-
-  <urlRequest>
-    <method>GET</method>
-    <url>http://www.thebluewail.com/admin/MaintainCalendar.jsp</url>
-  </urlRequest>
-
-
-</mic.element>

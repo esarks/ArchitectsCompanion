@@ -1,2 +1,0 @@
-    com.hqsonline.hrm.model.businessObjects.EffectiveDate lEffectiveDate = (com.hqsonline.hrm.model.businessObjects.EffectiveDate) loadScript(com.hqsonline.hrm.model.businessObjects.EffectiveDate.class.getName());
-    java.util.Date <![$jac:script:xml:date]!> = lEffectiveDate.getEffectiveDate();

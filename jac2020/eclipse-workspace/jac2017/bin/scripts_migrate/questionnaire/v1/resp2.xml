@@ -1,8 +1,0 @@
-<questionnaire control="1" sequence="2" code="qa" version="3.0">
-
-  <question sequence="1" sequenceOut="" code="name" response="text"/>
-  <question sequence="1" sequenceOut="" code="q1" response="r2"/>
-  <question sequence="1" sequenceOut="" code="q2" response="r1"/>
-  <question sequence="2" sequenceOut="" code="q2" response="r3"/>
-
-</questionnaire>

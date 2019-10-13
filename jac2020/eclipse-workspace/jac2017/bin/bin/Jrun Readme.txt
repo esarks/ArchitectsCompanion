@@ -1,1 +1,0 @@
-Associate (open with) file type .jrun with C:\ArchitectsCompanion\jac2017\Jrun\bin\JrunDirect.bat
