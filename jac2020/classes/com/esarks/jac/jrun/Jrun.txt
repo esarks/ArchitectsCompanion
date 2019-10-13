@@ -1,0 +1,238 @@
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:3: import java.util.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:5: import java.io.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:6: import java.text.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:7: import java.sql.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:8: //import java.net.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:10: //import java.security.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:13: //import java.awt.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:15: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:18: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:19: <#import#>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:4: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:6:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:7: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:9: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:11: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:12:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:1: context micScriptComponent
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:2: end
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:3: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:4: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:5: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:6: <& com.esarks.arm.scripts.Method
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:7:    <method name="executePath" visibility="public" return="void" >
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:8:      <document></document>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:9:      <argument type="String" name="aXmlPath"  document="" />
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:10:    </method>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:11: &>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:12: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:13:     execute(path(aXmlPath) + ".jrun");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:14: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:15: <& com.esarks.arm.scripts.FinalReturnMethod 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:16:   <return suppressExceptionReport="true"/>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:17: &>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:18: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:19: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:20: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:21: <& com.esarks.arm.scripts.Method
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:22:    <method name="execute" visibility="public" return="void" >
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:23:      <document></document>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:24:      <argument type="String" name="aXml"  document="" />
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:25:    </method>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:26: &>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:27: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:28:     try {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:29:     System.out.println("Jrun");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:30: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:31:     parseXmlPath(aXml);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:32: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:33:     String lClasspath = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:34:     <!jacrun:classpath:path!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:35:     while (<!jacrun:classpath:path!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:36:       lClasspath = lClasspath + path(<![jacrun:classpath:path]!>) + ";";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:37:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:38:     <!jacrun:classpath:workPath!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:39:     while (<!jacrun:classpath:workPath!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:40:       lClasspath = lClasspath + workPath(<![jacrun:classpath:workPath]!>) + ";";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:41:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:42:     <!jacrun:classpath:homePath!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:43:     while (<!jacrun:classpath:homePath!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:44:       lClasspath = lClasspath + homePath(<![jacrun:classpath:homePath]!>) + ";";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:45:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:46:     if (lClasspath.length() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:47:       System.setProperty("java.class.path", System.getProperty("java.class.path") + ";" + lClasspath);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:48:       System.out.println("Classpath=" + System.getProperty("java.class.path"));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:49:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:50: //    System.out.println("Classpath=" + System.getProperty("java.class.path"));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:51:     
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:52:     <!jacrun:script!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:53:     while (<!jacrun:script!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:54:       if (<!jacrun:script:name!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:55:         int lPause = <!jacrun:script:pause!>!size();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:56:         if (lPause > 0) pause("At Jrun, before loadScript(" + <![jacrun:script:name]!> + ").  Press ENTER to continue...");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:57:         Object lLoadObject = null;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:58:         if (<!jacrun:script:noScript!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:59:           System.out.println("Jrun: noScript set");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:60:           lLoadObject = iScript.loadScript(<![jacrun:script:name]!>, null);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:61:         } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:62:           lLoadObject = loadScript(<![jacrun:script:name]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:63:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:64:         if (lLoadObject == null) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:65:           System.out.println("Jrun: !WARNING! Cannot open script " + <![jacrun:script:name]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:66:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:67:         if (<!jacrun:script:args!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:68:           System.out.print("Jrun: " + <![jacrun:script:name]!> + "::" + <![jacrun:script:method]!> + "(");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:69:           String lArgs[] = new String[<!jacrun:script:args:arg!>!size()];
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:70:           <!jacrun:script:args:arg!>& {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:71:             lArgs[<!jacrun:script:args:arg!>!getIterator()-1] = argPath("", <![jacrun:script:args:arg]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:72:             System.out.print(" ^" + lArgs[<!jacrun:script:args:arg!>!getIterator()-1] + "^ ");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:73:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:74:           System.out.println(")");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:75:           iScript.execMethod(lLoadObject, <![jacrun:script:method]!>, new Object[] {lArgs});
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:76:         } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:77:           if (<!jacrun:script:argument!>!size() == 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:78:             System.out.println("Jrun: " + <![jacrun:script:name]!> + "::" + <![jacrun:script:method]!> + "()");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:79:             iScript.execMethod(lLoadObject, <![jacrun:script:method]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:80:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:81:             if (<![jacrun:script:argument]!>.equals("?this")) <!jacrun:script:argument!>!set(aXml);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:82:             if (<![jacrun:script:argument2]!>.equals("?this")) <!jacrun:script:argument2!>!set(aXml);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:83:             if (<!jacrun:script:argument2!>!size() == 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:84:               System.out.println("Jrun: " + <![jacrun:script:name]!> + "::" + <![jacrun:script:method]!> + "(" + <![jacrun:script:argument]!> + ")");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:85:               iScript.execMethod(lLoadObject, <![jacrun:script:method]!>, new Object[]{<![jacrun:script:argument]!>});
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:86:             } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:87:               System.out.println("Jrun: " + <![jacrun:script:name]!> + "::" + <![jacrun:script:method]!> + "(" + <![jacrun:script:argument]!> + ", " + <![jacrun:script:argument2]!> + ")");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:88:               iScript.execMethod(lLoadObject, <![jacrun:script:method]!>, new Object[]{<![jacrun:script:argument]!>,<![jacrun:script:argument2]!>});
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:89:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:90:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:91:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:92:         lLoadObject = null;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:93:         if (lPause > 0) pause("At Jrun, before unloadScript(" + <![jacrun:script:name]!> + ").  Press ENTER to continue...");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:94:         unloadScript(<![jacrun:script:name]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:95:         if (lPause > 0) pause("At Jrun, after unloadScript(" + <![jacrun:script:name]!> + ").  Press ENTER to continue...");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:96:       } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:97:         int lPause = <!jacrun:pause!>!size();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:98:         if (lPause > 0) pause("At Jrun, before loadScript(" + <![jacrun:script]!> + ").  Press ENTER to continue...");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:99:         Object lLoadObject = null;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:100:         if (<!jacrun:noScript!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:101:           System.out.println("Jrun: noScript set");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:102:           lLoadObject = iScript.loadScript(<![jacrun:script]!>, null);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:103:         } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:104:           lLoadObject = loadScript(<![jacrun:script]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:105:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:106:         if (lLoadObject == null) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:107:           System.out.println("Jrun: !WARNING! Cannot open script " + <![jacrun:script]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:108:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:109:         if (<!jacrun:args!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:110:           System.out.print("Jrun: " + <![jacrun:script]!> + "::" + <![jacrun:method]!> + "(");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:111:           String lArgs[] = new String[<!jacrun:args:arg!>!size()];
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:112:           <!jacrun:args:arg!>& {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:113:             lArgs[<!jacrun:args:arg!>!getIterator()-1] = argPath("", <![jacrun:args:arg]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:114:             System.out.print(" ^" + lArgs[<!jacrun:args:arg!>!getIterator()-1] + "^ ");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:115:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:116:           System.out.println(")");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:117:           iScript.execMethod(lLoadObject, <![jacrun:method]!>, new Object[] {lArgs});
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:118:         } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:119:           if (<!jacrun:argument!>!size() == 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:120:             System.out.println("Jrun: " + <![jacrun:script]!> + "::" + <![jacrun:method]!> + "()");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:121:             iScript.execMethod(lLoadObject, <![jacrun:method]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:122:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:123:             if (<![jacrun:argument]!>.equals("?this")) <!jacrun:argument!>!set(aXml);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:124:             if (<![jacrun:argument2]!>.equals("?this")) <!jacrun:argument2!>!set(aXml);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:125:             if (<!jacrun:argument2!>!size() == 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:126:               System.out.println("Jrun: " + <![jacrun:script]!> + "::" + <![jacrun:method]!> + "(" + <![jacrun:argument]!> + ")");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:127:               iScript.execMethod(lLoadObject, <![jacrun:method]!>, new Object[]{<![jacrun:argument]!>});
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:128:             } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:129:               System.out.println("Jrun: " + <![jacrun:script]!> + "::" + <![jacrun:method]!> + "(" + <![jacrun:argument]!> + ", " + <![jacrun:argument2]!> + ")");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:130:               iScript.execMethod(lLoadObject, <![jacrun:method]!>, new Object[]{<![jacrun:argument]!>,<![jacrun:argument2]!>});
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:131:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:132:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:133:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:134:         lLoadObject = null;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:135:         if (lPause > 0) pause("At Jrun, before unloadScript(" + <![jacrun:script]!> + ").  Press ENTER to continue...");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:136:         unloadScript(<![jacrun:script]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:137:         if (lPause > 0) pause("At Jrun, after unloadScript(" + <![jacrun:script]!> + ").  Press ENTER to continue...");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:138:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:139:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:140: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:141:     } catch(Throwable e) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:142:       System.out.println(e);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:143:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:144: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:145: <& com.esarks.arm.scripts.FinalReturnMethod 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:146:   <return suppressExceptionReport="true"/>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:147: &>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:148: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:149: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:150: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:151: <& com.esarks.arm.scripts.Method
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:152:    <method name="pause" visibility="private" return="void" >
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:153:      <document></document>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:154:      <argument type="String" name="aPrompt"  document="" />
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:155:    </method>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:156: &>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:157: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:158:   try {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:159:       while (System.in.available() > 0) System.in.read();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:160:       System.out.print(aPrompt);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:161:       System.in.read();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:162:       while (System.in.available() > 0) System.in.read();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:163:   } catch (Throwable e) {}
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:164: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:165: <& com.esarks.arm.scripts.FinalReturnMethod 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:166:   <return suppressExceptionReport="true"/>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:167: &>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:168: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:169: //////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:170: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:171: <& com.esarks.arm.scripts.Method
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:172:    <method name="argPath" visibility="private" return="String" >
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:173:      <document></document>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:174:      <argument type="String" name="aType"  document="" />
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:175:      <argument type="String" name="aString"  document="" />
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:176:    </method>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:177: &>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:178: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:179:   if (aType.equals("")) aString = argPath("path", aString);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:180:   if (aType.equals("path")) aString = argPath("workPath", aString);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:181:   if (aType.equals("workPath")) aString = argPath("homePath", aString);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:182: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:183:   int lAt = 0;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:184:   while ((lAt = aString.indexOf("$" + aType + "(")) != -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:185:     int lClose = aString.indexOf(")", lAt);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:186:     if (lClose == -1) return aString;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:187: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:188:     String lPath = aString.substring(lAt + aType.length() + 2, lClose);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:189:     if (aType.equals("path")) lPath = path(lPath);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:190:     if (aType.equals("homePath")) lPath = homePath(lPath);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:191:     if (aType.equals("workPath")) lPath = workPath(lPath);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:192: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:193:     if (lAt > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:194:       aString = aString.substring(0, lAt) + lPath + aString.substring(lClose + 1);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:195:     } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:196:       aString = lPath + aString.substring(lClose + 1);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:197:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:198: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:199:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:200: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:201: <& com.esarks.arm.scripts.FinalReturnMethod
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:202:   <return suppressExceptionReport="true">
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:203:     <normal>aString</normal>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:204:     <error>""</error>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:205:   </return>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\jrun\Jrun.script:206: &>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPostfix.script:1: }

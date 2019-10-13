@@ -1,4 +1,4 @@
-echo on
+echo off
 echo ******************************************
 echo JAC2020 v20191012a Job.bat
 
@@ -22,11 +22,11 @@ set COMPILE=
 if "%JAC_COMPILE%" == "false" set COMPILE=-nocompile
 
 if not "%1" == "jac" goto jrun
-"%JAVA_HOME%\bin\java" %MEMORY% %PROFILE% %DEBUG% com.esarks.jac.jac %COMPILE% -script %2 -method %3 -context %4 -home "%JAC_HOME%" -work "%JAC_WORK%" -scripts "%JAC_SCRIPTS%" -classpath "%CLASSPATH%" %LOG%
+"%JAVA_HOME%\bin\java" %MEMORY% %PROFILE% %DEBUG% com.esarks.jac.jac %COMPILE% -script %2 -method %3 -context %4 -home "%JAC_BUILD%" -work "%JAC_WORK%" -scripts "%JAC_SCRIPTS%" -classpath "%CLASSPATH%" %LOG%
 goto exit
 
 :jrun
-if %3 == "" "%JAVA_HOME%\bin\java" %MEMORY% %PROFILE% %DEBUG% com.esarks.jac.jac %COMPILE% -script com.esarks.jac.jrun.Job -method execute -argument %1 -argument %2 -home "%JAC_HOME%" -work "%JAC_WORK%" -scripts "%JAC_SCRIPTS%" -classpath "%CLASSPATH%" %LOG%
-if NOT %3 == "" "%JAVA_HOME%\bin\java" %MEMORY% %PROFILE% %DEBUG% com.esarks.jac.jac %COMPILE% -script com.esarks.jac.jrun.Job -method execute -argument %1 -argument %2 -argument %3 -home "%JAC_HOME%" -work "%JAC_WORK%" -scripts "%JAC_SCRIPTS%" -classpath "%CLASSPATH%" %LOG%
+if %3 == "" "%JAVA_HOME%\bin\java" %MEMORY% %PROFILE% %DEBUG% com.esarks.jac.jac %COMPILE% -script com.esarks.jac.jrun.Job -method execute -argument %1 -argument %2 -home "%JAC_BUILD%" -work "%JAC_WORK%" -scripts "%JAC_SCRIPTS%" -classpath "%CLASSPATH%" %LOG%
+if NOT %3 == "" "%JAVA_HOME%\bin\java" %MEMORY% %PROFILE% %DEBUG% com.esarks.jac.jac %COMPILE% -script com.esarks.jac.jrun.Job -method execute -argument %1 -argument %2 -argument %3 -home "%JAC_BUILD%" -work "%JAC_WORK%" -scripts "%JAC_SCRIPTS%" -classpath "%CLASSPATH%" %LOG%
 
 :exit

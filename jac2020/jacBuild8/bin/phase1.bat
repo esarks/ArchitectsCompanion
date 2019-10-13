@@ -2,6 +2,8 @@ echo off
 echo ******************************************
 echo JAC2020 v20191012a phase1.bat
 
+rem This batch file builds jac.jar which includes com.esarks.arm, com.esarks.jac, com.esarks.mic classes
+
 if EXIST %JAC_BUILD%\phase1Classes rmdir/q/s %JAC_BUILD%\phase1Classes
 mkdir %JAC_BUILD%\phase1Classes
 

@@ -1,0 +1,220 @@
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:3: import java.util.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:5: import java.io.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:6: import java.text.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:7: import java.sql.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:8: //import java.net.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:10: //import java.security.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:13: //import java.awt.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:15: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:18: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:19: <#import#>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:4: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:6:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:7: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:9: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:11: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:12:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:1: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:2: public void execute() {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:3: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:4:     String lOaArch = System.getProperty("os.arch");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:5:     String lOaName = System.getProperty("os.name");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:6:     String lOaVersion = System.getProperty("os.version");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:7: //    System.out.println(lOaArch);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:8: //    System.out.println(lOaName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:9: //    System.out.println(lOaVersion);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:10: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:11:     System.out.println("Operating System is " + lOaName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:12:     if (!<!mic.element!>!scan("os:name", lOaName)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:13:       System.out.println("Exiting due to error finding Operating System command tag.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:14:       return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:15:     }   
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:16: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:17:     String lOsTag = <![mic.element:os:tag]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:18:     if (lOsTag.equals("")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:19:       System.out.println("Exiting due to empty Operating System command tag.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:20:       return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:21:     }   
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:22:     System.out.println("Using tag \"" + lOsTag + "\"");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:23:         
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:24:     String lFrom = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:25:     String lFromDir = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:26:     String lFromType = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:27:     String lFromFile = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:28:     String lTo = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:29:     String lToDir = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:30:     String lToType = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:31:     String lToFile = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:32:     String lName = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:33:     
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:34:     <!mic.element:file!>& {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:35: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:36:       if (<!mic.element:file:fromHome!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:37:         lFrom = <![mic.element:file:fromHome]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:38:         lFromDir = homePath(<![mic.element:file:fromHome]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:39:         lFromType = "home";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:40:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:41:       if (<!mic.element:file:fromWork!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:42:         lFrom = <![mic.element:file:fromWork]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:43:         lFromDir = workPath(<![mic.element:file:fromWork]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:44:         lFromType = "work";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:45:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:46:       if (<!mic.element:file:fromScript!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:47:         lFrom = <![mic.element:file:fromScript]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:48:         lFromDir = path(<![mic.element:file:fromScript]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:49:         lFromType = "script";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:50:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:51:       if (<!mic.element:file:toHome!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:52:         lTo = <![mic.element:file:toHome]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:53:         lToDir = homePath(<![mic.element:file:toHome]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:54:         lToType = "home";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:55:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:56:       if (<!mic.element:file:toWork!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:57:         lTo = <![mic.element:file:toWork]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:58:         lToDir = workPath(<![mic.element:file:toWork]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:59:         lToType = "work";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:60:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:61:       if (<!mic.element:file:toScript!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:62:         lTo = <![mic.element:file:toScript]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:63:         lToDir = path(<![mic.element:file:toScript]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:64:         lToType = "script";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:65:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:66:       if (<!mic.element:file:name!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:67:         lName = <![mic.element:file:name]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:68:         if (lFromType.equals("home")) lFromFile = homePath(lFrom + ".") + lName;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:69:         if (lFromType.equals("work")) lFromFile = workPath(lFrom + ".") + lName;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:70:         if (lFromType.equals("script")) lFromFile = path(lFrom + ".") + lName;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:71:         if (lToType.equals("home")) lToFile = homePath(lTo + ".") + lName;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:72:         if (lToType.equals("work")) lToFile = workPath(lTo + ".") + lName;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:73:         if (lToType.equals("script")) lToFile = path(lTo + ".") + lName;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:74:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:75: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:76:       String lAction = <![mic.element:file:" + lOsTag + "]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:77:       if (!lAction.equals("")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:78:         while (lAction.indexOf("$fromDir") > -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:79:           int lIndexOf = lAction.indexOf("$fromDir");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:80:           lAction = lAction.substring(0, lIndexOf) + lFromDir + lAction.substring(lIndexOf + 8);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:81:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:82:         while (lAction.indexOf("$fromFile") > -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:83:           int lIndexOf = lAction.indexOf("$fromFile");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:84:           lAction = lAction.substring(0, lIndexOf) + lFromFile + lAction.substring(lIndexOf + 9);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:85:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:86:         while (lAction.indexOf("$toDir") > -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:87:           int lIndexOf = lAction.indexOf("$toDir");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:88:           lAction = lAction.substring(0, lIndexOf) + lToDir + lAction.substring(lIndexOf + 6);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:89:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:90:         while (lAction.indexOf("$toFile") > -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:91:           int lIndexOf = lAction.indexOf("$toFile");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:92:           lAction = lAction.substring(0, lIndexOf) + lToFile + lAction.substring(lIndexOf + 7);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:93:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:94:         if (command(lAction) != 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:95:           if (<![mic.element:file:ignore]!>.equals("true")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:96:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:97:             return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:98:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:99:         } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:100:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:101:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:102:       if (<![mic.element:file:pause]!>.equals("true")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:103:         try {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:104:           while (System.in.available() > 0) System.in.read();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:105:           System.out.print("Press ENTER to continue...");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:106:           System.in.read();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:107:           while (System.in.available() > 0) System.in.read();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:108:         } catch (Throwable e) {}
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:109:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:110:       System.gc();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:111:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:112: }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:113: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:114: public int command(String aCommand)
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:115:     {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:116:         System.out.println(">" + aCommand);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:117:         try
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:118:         {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:119:             Runtime rt = Runtime.getRuntime();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:120:             Process proc = rt.exec(aCommand);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:121:             
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:122:             // any error message?
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:123:             StreamGobbler errorGobbler = new 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:124:                 StreamGobbler(proc.getErrorStream(), "ERR");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:125:                 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:126:             // any output?
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:127:             StreamGobbler outputGobbler = new 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:128:                 StreamGobbler(proc.getInputStream(), "OUT");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:129:                 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:130:             // kick them off
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:131:             errorGobbler.start();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:132:             outputGobbler.start();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:133:                                     
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:134:             // any error???
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:135:             int exitVal = proc.waitFor();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:136:             System.out.println("ExitValue: " + exitVal);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:137:             return exitVal;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:138:         } catch (Throwable t)
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:139:           {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:140:             t.printStackTrace();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:141:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:142:         return 1;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:143:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:144: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:145: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:146: class StreamGobbler extends Thread
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:147: {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:148:     InputStream is;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:149:     String type;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:150:     OutputStream os;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:151:     
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:152:     StreamGobbler(InputStream is, String type)
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:153:     {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:154:         this(is, type, null);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:155:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:156: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:157:     StreamGobbler(InputStream is, String type, OutputStream redirect)
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:158:     {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:159:         this.is = is;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:160:         this.type = type;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:161:         this.os = redirect;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:162:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:163:     
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:164:     public void run()
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:165:     {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:166:         try
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:167:         {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:168:             PrintWriter pw = null;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:169:             if (os != null)
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:170:                 pw = new PrintWriter(os);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:171:                 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:172:             InputStreamReader isr = new InputStreamReader(is);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:173:             BufferedReader br = new BufferedReader(isr);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:174:             String line=null;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:175:             while ( (line = br.readLine()) != null)
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:176:             {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:177:                 if (pw != null)
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:178:                     pw.println(line);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:179:                 System.out.println(type + ">" + line);    
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:180:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:181:             if (pw != null)
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:182:                 pw.flush();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:183:         } catch (IOException ioe)
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:184:             {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:185:             ioe.printStackTrace();  
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:186:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:187:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\util\FileUtil.script:188: }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPostfix.script:1: }

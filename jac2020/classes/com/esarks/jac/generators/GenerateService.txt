@@ -1,0 +1,1011 @@
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:3: import java.util.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:5: import java.io.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:6: import java.text.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:7: import java.sql.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:8: //import java.net.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:10: //import java.security.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:13: //import java.awt.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:15: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:18: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:19: <#import#>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:4: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:6:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:7: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:9: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:11: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:12:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:1: context micScriptComponent
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:2: var String iOpenSymbol = "<" + "!";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:3: var String iCloseSymbol = "!" + ">";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:4: end
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:5: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:6:   public void generateServices(String aXmlDefinition) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:7:     resetExit();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:8:     try {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:9: %>generateServices: <!%aXmlDefinition!>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:10: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:11:     <!com.esarks.arm.schemas.services.root!>!remove();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:12:     parseXmlDefinition(aXmlDefinition);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:13:     if (<!com.esarks.arm.schemas.services.root!>!size() == 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:14:       setContext(iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:15:       <!$jac:event!>!set("Could not find <services> tag in " + path(aXmlDefinition) + ".xml file.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:16:       <!$jac:event:severity!>!set("fatal");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:17:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:18:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:19:       restoreContext();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:20:       setExit();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:21:       return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:22:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:23: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:24:     boolean lForce = false;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:25:     setContext(iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:26:     if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:27:     restoreContext();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:28:     if (!lForce) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:29:       File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateService") + ".script");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:30:       File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:31:       File lNewFile = new File(path(<![com.esarks.arm.schemas.services.root:name]!>) + ".script");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:32:       if (lNewFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:33:           ((lGeneratorFile.exists() && lNewFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) || !lGeneratorFile.exists())) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:34:         String lServicesName = <![com.esarks.arm.schemas.services.root:name]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:35:         setContext(iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:36:         <!$jac:event!>!set("File " + lServicesName + ".script is not stale.  Generation bypassed.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:37:         <!$jac:event:severity!>!set("info");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:38:         <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:39:         <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:40:         restoreContext();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:41:         setExit();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:42:         return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:43:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:44:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:45:     
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:46:     setContext(iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:47:     <!$jac:merge:sectionMarker!>!reset("//$Section=");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:48:     <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:49:     <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:50:     <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:51:     <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:52:     <!$jac:merge:preservePreamble!>!reset("no");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:53:     <!$jac:merge:comments!>!reset("//");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:54:     <!$jac:merge:excludeCompare!>!reset("//  Generated at");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:55:     <!$jac:merge:trimOutput!>!reset("yes");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:56:     <!$jac:merge:keepSections!>!reset("no");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:57:     restoreContext();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:58: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:59: //    String lLineNbr = "<" + "#" + "[$jac:script:lineNumber]#>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:60: //    boolean lResultSetExists = false;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:61: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:62:     if (!openOutput(path(<![com.esarks.arm.schemas.services.root:name]!>) + ".xml")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:63:       setContext(iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:64:       if (iOutputManager.getExceptionMessage() != null) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:65:         <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:66:         <!$jac:event:severity!>!set("fatal");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:67:         <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:68:         <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:69:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:70:       <!$jac:event!>!set("Failed to open " + path(<![com.esarks.arm.schemas.services.root:name]!>) + ".xml file for output.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:71:       <!$jac:event:severity!>!set("fatal");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:72:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:73:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:74:       restoreContext();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:75:       setExit();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:76:       return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:77:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:78: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:79:     DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:80:     DbConnection lDbConnection = lDbConnectionFactory.getDbConnection("application");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:81: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:82: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:83: <mic.element type="Service" title="">  
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:84: </mic.element>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:85: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:86:     closeOutput();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:87:     
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:88:     if (!openOutput(path(<![com.esarks.arm.schemas.services.root:name]!>) + ".new")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:89:       setContext(iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:90:       if (iOutputManager.getExceptionMessage() != null) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:91:         <!$jac:event!>!set(iOutputManager.getExceptionMessage());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:92:         <!$jac:event:severity!>!set("fatal");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:93:         <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:94:         <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:95:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:96:       <!$jac:event!>!set("Failed to open " + path(<![com.esarks.arm.schemas.services.root:name]!>) + ".new file for output.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:97:       <!$jac:event:severity!>!set("fatal");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:98:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:99:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:100:       restoreContext();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:101:       setExit();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:102:       return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:103:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:104: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:105:     setContext(iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:106:     String lDateTime = <![$jac:dateTime]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:107:     restoreContext();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:108: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:109: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:110: //$Section=License$Preserve=no
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:111: //  Generated at <!%lDateTime!> by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:112: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:113: //$Section=ChangeLog$Preserve=yes
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:114: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:115: /* ========================================================================= *
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:116:    Contributor        Description
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:117:    ------------------ ------------------------------------------------------
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:118:                       Author
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:119: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:120:  * ========================================================================= */
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:121: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:122: //$Section=ChangeLog$Preserve=no
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:123: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:124: //----------------------------------------------------------------------------
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:125: // This section is for custom operations.
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:126: //----------------------------------------------------------------------------
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:127: //$Section=CustomOperations$Preserve=yes
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:128: //$Section=CustomOperations$Preserve=no
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:129: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:130: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:131:     iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:132:     %><html><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:133:     %><table border=1 cellpadding=5 cellspacing=0><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:134:     %><tr><td align="right">Specification File Name</td><td><!%aXmlDefinition!>.xml</td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:135:     %><tr><td align="right">Service Script Name</td><td><![com.esarks.arm.schemas.services.root:name]!></td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:136:     %></table><br><%    
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:137:     iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:138: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:139:     <!com.esarks.arm.schemas.services.root:service!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:140:     while (<!com.esarks.arm.schemas.services.root:service!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:141: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:142:       iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:143:       %><table width=100% border=1 cellpadding=5 cellspacing=0><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:144:       %><tr><td colspan=2><b><![com.esarks.arm.schemas.services.root:service:name]!></b> ( <![com.esarks.arm.schemas.services.root:service:jeo]!> )</td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:145:       iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:146: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:147: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:148:     public void <![com.esarks.arm.schemas.services.root:service:name]!>(<![com.esarks.arm.schemas.services.root:service:jeo]!> aJeo) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:149:       java.util.Date lStartTime = null;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:150:       if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:151:         lStartTime = new java.util.Date();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:152:         iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Enter method");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:153:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:154: <%  
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:155: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:156:       if (<!com.esarks.arm.schemas.services.root:service:sql!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:157: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:158: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:159:       DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:160:       DbConnection lDbConnection = null;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:161: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:162:       PropertyValue lDbConnectionPropertyValue = aJeo.getPropertyValue("DbConnection");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:163:       if (lDbConnectionPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:164:         lDbConnection = (DbConnection) lDbConnectionPropertyValue.getValueObject();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:165:       } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:166:         lDbConnection = lDbConnectionFactory.getDbConnection("application");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:167:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:168: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:169:       if (lDbConnection == null) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:170:         aJeo.addError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:171:         aJeo.setErrorId("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:172:         aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:173:         aJeo.setErrorTitle("Database Connection Failed");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:174:         aJeo.setErrorText("The service failed to obtain a database connection.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:175:         aJeo.setErrorResolution("This is an internal application error that will likely be unresolvable without technical support intervention.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:176:         aJeo.setErrorSeverity(0);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:177:         aJeo.getMostSevereError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:178:         if (iMicLog.test(Log._ERR)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:179:           iMicLog.println(Log._ERR, "ERR-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!DbConnection is null");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:180:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:181:         return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:182:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:183: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:184: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:185:         <!com.esarks.arm.schemas.services.root:service:sql!>& {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:186:         if (!<![com.esarks.arm.schemas.services.root:service:sql:stereotype]!>.equals("") &&
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:187:             !<![com.esarks.arm.schemas.services.root:service:sql:stereotype]!>.equals(lDbConnection.getStereotype())) continue;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:188: %>      
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:189:       try {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:190:         String lTop = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:191:         String lWhere = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:192:         ArrayList lWhereList = new ArrayList();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:193: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:194:         iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:195:         %><tr><td>Order By</td><td><![com.esarks.arm.schemas.services.root:service:sql:orderBy]!>&nbsp;</td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:196:         iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:197: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:198:         if (<!com.esarks.arm.schemas.services.root:service:sql:orderBy!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:199: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:200:         String lOrder = "<![com.esarks.arm.schemas.services.root:service:sql:orderBy]!>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:201: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:202:         } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:203: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:204:         String lOrder = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:205: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:206:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:207: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:208:         if (!aJeo.getRequest().getOrderClausePropertyValue().toString().equals("")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:209:           lOrder = aJeo.getRequest().getOrderClausePropertyValue().toString();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:210:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:211: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:212:         String lProcedure = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:213:         String lCompact = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:214:         String lDocument = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:215: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:216:         if (<!com.esarks.arm.schemas.services.root:service:sql:statement!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:217:           <!com.esarks.arm.schemas.services.root:service:sql:statement!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:218:           while (<!com.esarks.arm.schemas.services.root:service:sql:statement!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:219:             if (<![com.esarks.arm.schemas.services.root:service:sql:statement:stereotype]!>.equals("")) break;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:220:             if (<![com.esarks.arm.schemas.services.root:service:sql:statement:stereotype]!>.equals(lDbConnection.getStereotype())) break;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:221:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:222:           lProcedure = <![com.esarks.arm.schemas.services.root:service:sql:statement]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:223:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:224:         boolean lSkipSpace = true;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:225:         for (int lIdx=0; lIdx < lProcedure.length(); lIdx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:226:           if (lProcedure.charAt(lIdx) == '\\' && lProcedure.charAt(lIdx+1) == 'n') {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:227:             lCompact = lCompact.concat("\" + \"\\n\" + \"");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:228:             lDocument = lDocument.concat("<br>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:229:             lIdx++;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:230:             continue;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:231:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:232:           if (lProcedure.charAt(lIdx) <= ' ') {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:233:             if (lProcedure.charAt(lIdx) < ' ') lDocument = lDocument.concat("<br>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:234:             if (lSkipSpace == true) continue;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:235:             lSkipSpace = true;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:236:             lCompact = lCompact.concat(" ");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:237:             lDocument = lDocument.concat(" ");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:238:             continue;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:239:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:240:           lSkipSpace = false;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:241:           lCompact = lCompact.concat(lProcedure.substring(lIdx, lIdx+1));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:242:           lDocument = lDocument.concat(lProcedure.substring(lIdx, lIdx+1));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:243:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:244: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:245:         iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:246:         %><tr><td>Statement</td><td><!%lDocument!>&nbsp;</td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:247:         iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:248: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:249: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:250:         String lSql = "<!%lCompact!>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:251:         if (!aJeo.getRequest().getSelectClausePropertyValue().toString().equals("")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:252:           lSql = aJeo.getRequest().getSelectClausePropertyValue().toString();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:253:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:254: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:255: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:256:         <!com.esarks.arm.schemas.services.root:service:sql:where!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:257:         while (<!com.esarks.arm.schemas.services.root:service:sql:where!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:258: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:259:           iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:260:           %><tr><td colspan=2>Where</td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:261:           %><tr><td colspan=2><table border=0 cellpadding=0 cellspacing=0><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:262:           iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:263: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:264:           if (!<!com.esarks.arm.schemas.services.root:service:sql:where!>!isFirst()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:265: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:266: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:267:         else
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:268: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:269:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:270: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:271:         if (aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:272:           <![com.esarks.arm.schemas.services.root:service:jeo]!> lJeox = aJeo;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:273: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:274:           String lJeoName = "lJeox";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:275:           String lResultJeo = "com.esarks.arm.schemas.services.root:service:sql:where";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:276:           int lJeoCount = 0;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:277:           while (<!" + lResultJeo + ":jeo!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:278: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:279:             iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:280:             lJeoCount++;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:281:             %><tr><td><table border=1 cellpadding=5 cellspacing=0><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:282:             %><tr><td colspan=5><![" + lResultJeo + ":jeo:name]!></td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:283:             iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:284: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:285: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:286:           <![" + lResultJeo + ":jeo:name]!> <!%lJeoName!>x = (<![" + lResultJeo + ":jeo:name]!>) <!%lJeoName!>.getJeoByInstanceNameAt("<![" + lResultJeo + ":jeo:name]!>", 0);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:287: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:288:             lJeoName = lJeoName + "x";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:289:             lResultJeo = lResultJeo + ":jeo";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:290:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:291:           <!" + lResultJeo + ":where!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:292:           while(<!" + lResultJeo + ":where!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:293: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:294:             iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:295:             if (<!" + lResultJeo + ":where!>!isFirst()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:296:               %><tr><td><table border=1 cellpadding=5 cellspacing=0><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:297:               %><tr><td><b>Attribute</b></td><td><b>Property</b></td><td><b>Clause</b></td><td><b>Skip If Null</b></td><td><b>Skip If Blank</b></td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:298:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:299:             %><tr><td><![" + lResultJeo + ":where:attribute]!>&nbsp;</td><td><![" + lResultJeo + ":where:property]!>&nbsp;</td><td><![" + lResultJeo + ":where:clause]!>&nbsp;</td><td><![" + lResultJeo + ":where:skipIfNull]!>&nbsp;</td><td><![" + lResultJeo + ":where:skipIfBlank]!>&nbsp;</td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:300:             iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:301: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:302:             if (<![" + lResultJeo + ":where:skipIfNull]!>.equals("true") || <![" + lResultJeo + ":where:skipIfBlank]!>.equals("true")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:303:               if (<!" + lResultJeo + ":where:property!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:304: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:305:           {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:306:             PropertyValue lPropertyValue = <!%lJeoName!>.getPropertyValue("<![" + lResultJeo + ":where:property]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:307: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:308:                 if (<![" + lResultJeo + ":where:skipIfBlank]!>.equals("true")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:309: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:310:             if (lPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL && lPropertyValue.toString().trim().length() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:311: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:312:                 } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:313: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:314:             if (lPropertyValue.getValueType() != PropertyValue.CONST_VALUE_TYPE_NULL) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:315: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:316:                 }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:317:               }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:318:               if (<!" + lResultJeo + ":where:attribute!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:319: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:320:           {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:321: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:322:                 if (<![" + lResultJeo + ":where:skipIfBlank]!>.equals("true")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:323: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:324:             if(!<!%lJeoName!>.is<![cap@[" + lResultJeo + ":where:attribute]]!>Null() && <!%lJeoName!>.get<![cap@[" + lResultJeo + ":where:attribute]]!>PropertyValue().toString().trim().length() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:325: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:326:                 } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:327: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:328:             if(!<!%lJeoName!>.is<![cap@[" + lResultJeo + ":where:attribute]]!>Null()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:329: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:330:                 }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:331:               }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:332:             } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:333:               if (<!" + lResultJeo + ":where:property!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:334: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:335:           {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:336:             {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:337:               PropertyValue lPropertyValue = <!%lJeoName!>.getPropertyValue("<![" + lResultJeo + ":where:property]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:338: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:339:               } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:340: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:341:           {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:342:             {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:343: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:344:               }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:345:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:346:             <!" + lResultJeo + ":where:conjunction!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:347:             while(<!" + lResultJeo + ":where:conjunction!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:348: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:349:               iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:350:               if (<!" + lResultJeo + ":where:conjunction!>!isFirst()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:351:                 %><tr><td colspan=5><table border=1 cellpadding=5 cellspacing=0><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:352:                 %><tr><td><b>Equals</b></td><td><b>Ends With</b></td><td><b>Clause</b></td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:353:               }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:354:               %><tr><td><![" + lResultJeo + ":where:conjunction:equals]!>&nbsp;</td><td><![" + lResultJeo + ":where:conjunction:endsWith]!>&nbsp;</td><td><![" + lResultJeo + ":where:conjunction:clause]!>&nbsp;</td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:355:               iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:356: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:357:               if (<!" + lResultJeo + ":where:conjunction:equals!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:358: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:359:               if (lWhere.equals("<![" + lResultJeo + ":where:conjunction:equals]!>")) lWhere = lWhere.trim() + " <![" + lResultJeo + ":where:conjunction:clause]!>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:360: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:361:               }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:362:               if (<!" + lResultJeo + ":where:conjunction:endsWith!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:363: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:364:               if (lWhere.endsWith("<![" + lResultJeo + ":where:conjunction:endsWith]!>")) lWhere = lWhere.trim() + " <![" + lResultJeo + ":where:conjunction:clause]!>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:365: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:366:               }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:367: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:368:               iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:369:               if (<!" + lResultJeo + ":where:conjunction!>!isLast()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:370:                 %></table><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:371:               }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:372:               iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:373: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:374:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:375:             if (<!" + lResultJeo + ":where:clause!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:376: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:377:               lWhere = lWhere.trim() + " <![" + lResultJeo + ":where:clause]!>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:378: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:379:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:380:             if (<!" + lResultJeo + ":where:property!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:381: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:382:               lWhereList.add(lPropertyValue);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:383: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:384:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:385:             if (<!" + lResultJeo + ":where:attribute!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:386: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:387:               lWhereList.add(<!%lJeoName!>.get<![cap@[" + lResultJeo + ":where:attribute]]!>PropertyValue());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:388: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:389:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:390: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:391:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:392:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:393: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:394:             iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:395:             if (<!" + lResultJeo + ":where!>!isLast()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:396:               %></table><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:397:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:398:             iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:399:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:400: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:401:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:402: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:403:           for (int lIdx=0; lIdx < lJeoCount; lIdx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:404:             iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:405:             %></td></tr></table><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:406:             iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:407:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:408: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:409:           iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:410:           %></table></td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:411:           iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:412: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:413:         } // while (!com.esarks.arm.schemas.services.root:service:sql:where!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:414: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:415:         if (!aJeo.getRequest().getWhereClausePropertyValue().toString().equals("")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:416:           lWhere = aJeo.getRequest().getWhereClausePropertyValue().toString();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:417:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:418:         if (lWhere.trim().length() > 0) lWhere = lWhere.trim();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:419:         if (lOrder.trim().length() > 0) lOrder = lOrder.trim();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:420: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:421:         int lTagSearchIndex = 0;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:422:         if ((lTagSearchIndex = lSql.indexOf("$*top")) > -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:423:           if (lDbConnection.getStereotype().equals("sqlServer")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:424:             if (aJeo.getRequest().getTopPropertyValue().toString().equals("")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:425:               lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 5);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:426:             } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:427:               lSql = lSql.substring(0, lTagSearchIndex) + "TOP " + aJeo.getRequest().getTopPropertyValue().toString() + lSql.substring(lTagSearchIndex + 5);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:428:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:429:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:430:             lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 5);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:431:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:432:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:433:         if ((lTagSearchIndex = lSql.indexOf("$*limit")) > -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:434:           if (lDbConnection.getStereotype().equals("mySql") || lDbConnection.getStereotype().equals("postgreSql")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:435:             if (aJeo.getRequest().getTopPropertyValue().toString().equals("")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:436:               lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 7);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:437:             } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:438:               lSql = lSql.substring(0, lTagSearchIndex) + "LIMIT " + aJeo.getRequest().getTopPropertyValue().toString() + lSql.substring(lTagSearchIndex + 7);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:439:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:440:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:441:             lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 7);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:442:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:443:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:444:         if ((lTagSearchIndex = lSql.indexOf("$*where")) > -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:445:           lWhere = lWhere.trim();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:446:           if (lWhere.equals("")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:447:             lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 7);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:448:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:449:             lSql = lSql.substring(0, lTagSearchIndex) + "WHERE " + lWhere + lSql.substring(lTagSearchIndex + 7);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:450:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:451:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:452:         if ((lTagSearchIndex = lSql.indexOf("$*order")) > -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:453:           lOrder = lOrder.trim();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:454:           if (lOrder.equals("")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:455:             lSql = lSql.substring(0, lTagSearchIndex) + lSql.substring(lTagSearchIndex + 7);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:456:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:457:             lSql = lSql.substring(0, lTagSearchIndex) + "ORDER BY " + lOrder + lSql.substring(lTagSearchIndex + 7);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:458:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:459:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:460:         while ( (lTagSearchIndex = lSql.indexOf("$*")) > -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:461:           int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:462:           if (lSize == -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:463:             lSize = lSql.length();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:464:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:465:             lSize += lTagSearchIndex;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:466:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:467:           lSize = lSize;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:468:           String lTag = lSql.substring(lTagSearchIndex+2, lSize);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:469:           lSql = lSql.substring(0, lTagSearchIndex) + aJeo.getRequest().getPropertyValue(lTag).toString() + lSql.substring(lSize);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:470:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:471:         while ( (lTagSearchIndex = lSql.indexOf("$")) > -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:472:           int lSize = lSql.substring(lTagSearchIndex).indexOf(" ");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:473:           int lSize2 = lSql.substring(lTagSearchIndex).indexOf(".");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:474:           if (lSize2 > -1 && lSize2 < lSize) lSize = lSize2;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:475:           if (lSize == -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:476:             lSize = lSql.length();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:477:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:478:             lSize += lTagSearchIndex;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:479:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:480:           lSize = lSize;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:481:           lSql = lSql.substring(0, lTagSearchIndex) + 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:482:                    getObjectPrefix(lSql.substring(lTagSearchIndex+1, lSize).toLowerCase()) + lSql.substring(lTagSearchIndex+1, lSize) +
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:483:                    lSql.substring(lSize);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:484:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:485: <%                
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:486:         if (<![com.esarks.arm.schemas.services.root:service:sql:statement:type]!>.equals("CallableStatement")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:487: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:488:         if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:489:           iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!CallableStatement=" + lSql.trim());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:490:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:491:         CallableStatement lStatement = lDbConnection.getConnection().prepareCall(lSql.trim());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:492: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:493:         } else if (<![com.esarks.arm.schemas.services.root:service:sql:statement:type]!>.equals("PreparedStatement")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:494: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:495:         if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:496:           iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!PreparedStatement=" + lSql.trim());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:497:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:498:         PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:499: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:500:         } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:501: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:502:         if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:503:           iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!PreparedStatement=" + lSql.trim());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:504:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:505:         PreparedStatement lStatement = lDbConnection.getConnection().prepareStatement(lSql.trim());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:506: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:507:         }        
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:508: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:509:         if (aJeo.getRequest().getValueList() != null) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:510:           ArrayList lValueList = aJeo.getRequest().getValueList();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:511:           for (int lValueListIdx=0; lValueListIdx < lValueList.size(); lValueListIdx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:512:             lStatement.setString(lValueListIdx+1, (String) lValueList.get(lValueListIdx));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:513:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:514:         } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:515:           for (int lIdx=0; lIdx < lWhereList.size(); lIdx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:516:             lStatement.setString(lIdx+1, ((PropertyValue) lWhereList.get(lIdx)).toString());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:517:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:518:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:519: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:520:         boolean lExecuteBatch = false;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:521:         if (<!com.esarks.arm.schemas.services.root:service:sql:value!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:522: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:523:         {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:524:           <![com.esarks.arm.schemas.services.root:service:jeo]!> lJeox = aJeo;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:525: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:526:           String lJeoName = "lJeox";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:527:           String lResultJeo = "com.esarks.arm.schemas.services.root:service:sql:value";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:528:           String lJeoClassName = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:529:           int lColumn = 0;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:530:           while (<!" + lResultJeo + ":jeo!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:531:             lJeoClassName = <![" + lResultJeo + ":jeo:name]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:532:             boolean lIterate = false;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:533:             if (<![" + lResultJeo + ":jeo:iterate]!>.equals("true")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:534:               lIterate = true;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:535:               lExecuteBatch = true;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:536: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:537:           ArrayList arrayList_<!%lJeoName!>x = <!%lJeoName!>.getJeoByInstanceName("<![" + lResultJeo + ":jeo:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:538:           for (int idx_<!%lJeoName!>x=0; idx_<!%lJeoName!>x < arrayList_<!%lJeoName!>x.size(); idx_<!%lJeoName!>x++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:539:           <![" + lResultJeo + ":jeo:name]!> <!%lJeoName!>x = (<![" + lResultJeo + ":jeo:name]!>) arrayList_<!%lJeoName!>x.get(idx_<!%lJeoName!>x);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:540: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:541:             } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:542: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:543:           <![" + lResultJeo + ":jeo:name]!> <!%lJeoName!>x = (<![" + lResultJeo + ":jeo:name]!>) <!%lJeoName!>.getJeoByInstanceNameAt("<![" + lResultJeo + ":jeo:name]!>", 0);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:544: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:545:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:546:             lJeoName = lJeoName + "x";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:547:             lResultJeo = lResultJeo + ":jeo";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:548:             Jeo lJeoInstance = null;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:549:             try {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:550:               Class lJeoClass = ClassLoader.getSystemClassLoader().loadClass(lJeoClassName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:551:               Constructor lConstructor = lJeoClass.getConstructor(new Class[]{});
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:552:               lJeoInstance = (Jeo) lConstructor.newInstance(new Object[]{});
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:553:             } catch (Exception e) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:554:               setContext(iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:555:               <!$jac:event!>!set(e.getMessage() + " For class " + lJeoClassName + ".");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:556:               <!$jac:event:severity!>!set("error");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:557:               <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:558:               <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:559:               restoreContext();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:560:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:561: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:562:             <!" + lResultJeo + ":value!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:563:             while(<!" + lResultJeo + ":value!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:564:               if (<!" + lResultJeo + ":value:property!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:565:                 lColumn++;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:566:                 String lPropertyGet = "toString";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:567:                 String lStatementSet = "setString";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:568:                 if (<!" + lResultJeo + ":value:property:get!>!size() > 0) lPropertyGet = <![" + lResultJeo + ":value:property:get]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:569:                 if (<!" + lResultJeo + ":value:property:set!>!size() > 0) lStatementSet = <![" + lResultJeo + ":value:property:set]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:570: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:571:           {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:572:             PropertyValue lPropertyValue = <!%lJeoName!>.getPropertyValue("<![" + lResultJeo + ":value:property]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:573:             if (lPropertyValue.getValueType() == PropertyValue.CONST_VALUE_TYPE_NULL) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:574: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:575:                   if (<!" + lResultJeo + ":value:ifNull!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:576: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:577:               lStatement.setString(<!%lColumn!>, "<![" + lResultJeo + ":value:ifNull]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:578: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:579:                   } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:580: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:581:               lStatement.setNull(<!%lColumn!>, java.sql.Types.VARCHAR);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:582: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:583:                   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:584: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:585:             } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:586:               lStatement.<!%lStatementSet!>(<!%lColumn!>, lPropertyValue.<!%lPropertyGet!>());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:587:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:588:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:589: <%             
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:590:               }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:591:               if (<!" + lResultJeo + ":value:attribute!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:592:                 String lValueType = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:593:                 if (lJeoInstance != null) lValueType = lJeoInstance.getTypeByName(<![" + lResultJeo + ":value:attribute]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:594:                 if (lValueType == null || lValueType.equals("")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:595:                   String lAttributeName = <![" + lResultJeo + ":value:attribute]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:596:                   setContext(iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:597:                   <!$jac:event!>!set("Cannot find attribute " + lAttributeName + " in Jeo " + lJeoClassName + ".");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:598:                   <!$jac:event:severity!>!set("error");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:599:                   <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:600:                   <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:601:                   restoreContext();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:602:                 }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:603:                 lColumn++;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:604: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:605:           if(<!%lJeoName!>.is<![cap@[" + lResultJeo + ":value:attribute]]!>Null()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:606:             lStatement.setNull(<!%lColumn!>, java.sql.Types.VARCHAR);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:607:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:608: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:609:                 String lTypeJdbc = getProperty("dbTypes:" + lValueType + ":jdbc");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:610:                 String lTypeProperty = getProperty("dbTypes:" + lValueType + ":jdbcProperty");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:611:                 String lCastProperty = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:612:                 if (lTypeProperty.equals("")) lTypeProperty = getProperty("dbTypes:" + lValueType + ":property");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:613:                 if (lTypeProperty.startsWith("(")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:614:                   lCastProperty = lTypeProperty + " ";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:615:                   lTypeProperty = "getValueObject";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:616:                 }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:617: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:618:             lStatement.set<!%lTypeJdbc!>(<!%lColumn!>, <!%lCastProperty!><!%lJeoName!>.get<![cap@[" + lResultJeo + ":value:attribute]]!>PropertyValue().<!%lTypeProperty!>());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:619:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:620: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:621:               }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:622:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:623:             if (lIterate) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:624: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:625:         lStatement.addBatch();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:626:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:627: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:628:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:629:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:630: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:631:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:632: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:633:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:634:        
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:635:         if (<!com.esarks.arm.schemas.services.root:service:sql:result!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:636: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:637:           iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:638:           %><tr><td colspan=2>Result</td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:639:           %><tr><td colspan=2><table border=0 cellpadding=0 cellspacing=0><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:640:           iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:641: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:642: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:643:         if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:644:           java.util.Date lStopTime = new java.util.Date();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:645:           iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Before <![com.esarks.arm.schemas.services.root:service:sql:statement:method]!>" + "!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:646:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:647: <%                
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:648:           if (<![com.esarks.arm.schemas.services.root:service:sql:statement:method]!>.equals("executeUpdate")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:649: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:650:         lStatement.executeUpdate();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:651:         ResultSet lResultSet = lStatement.getResultSet();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:652: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:653:           } else if (<![com.esarks.arm.schemas.services.root:service:sql:statement:method]!>.equals("executeQuery")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:654: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:655:         ResultSet lResultSet = lStatement.executeQuery();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:656: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:657:           } else if (<![com.esarks.arm.schemas.services.root:service:sql:statement:method]!>.equals("execute")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:658: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:659:         lStatement.execute();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:660:         ResultSet lResultSet = lStatement.getResultSet();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:661: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:662:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:663: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:664:         lStatement.execute();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:665:         ResultSet lResultSet = lStatement.getResultSet();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:666: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:667:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:668: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:669:         if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:670:           java.util.Date lStopTime = new java.util.Date();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:671:           iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!After <![com.esarks.arm.schemas.services.root:service:sql:statement:method]!>" + "!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:672:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:673:         if (lResultSet == null) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:674:           aJeo.addError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:675:           aJeo.setErrorId("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:676:           aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:677:           aJeo.setErrorTitle("No ResultSet Returned");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:678:           aJeo.setErrorText("No ResultSet was returned from the database request.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:679:           aJeo.setErrorResolution("The application user may submit another request.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:680:           aJeo.setErrorSeverity(4);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:681:           aJeo.getMostSevereError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:682:           lStatement.close();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:683:           if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:684:             java.util.Date lStopTime = new java.util.Date();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:685:             iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Exit method!No ResultSet was returned from the database request");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:686:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:687:           return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:688:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:689:         if (lResultSet.next() == false) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:690:           aJeo.addError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:691:           aJeo.setErrorId("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:692:           aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:693:           aJeo.setErrorTitle("No Data Returned");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:694:           aJeo.setErrorText("No data was returned from the database request.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:695:           aJeo.setErrorResolution("The application user may submit another request.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:696:           aJeo.setErrorSeverity(4);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:697:           aJeo.getMostSevereError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:698:           lResultSet.close();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:699:           lStatement.close();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:700:           if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:701:             java.util.Date lStopTime = new java.util.Date();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:702:             iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Exit method!No data was returned from the database request");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:703:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:704:           return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:705:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:706:         int lResultRowsReturned = 0;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:707:         {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:708:           <![com.esarks.arm.schemas.services.root:service:jeo]!> lJeox = aJeo;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:709: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:710:           String lJeoName = "lJeox";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:711:           String lResultJeo = "com.esarks.arm.schemas.services.root:service:sql:result";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:712:           int lJeoCount = 0;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:713:           while (<!" + lResultJeo + ":jeo!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:714: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:715:             iOutputManager.setDocument("createHtml");               lJeoCount++;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:716:             %><tr><td><table border=1  cellpadding=5 cellspacing=0><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:717:             String lMapFromResultSet = "true";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:718:             if (<![" + lResultJeo + ":jeo:mapFromResultSet]!>.equals("false")) lMapFromResultSet = "false";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:719:             %><tr><td><![" + lResultJeo + ":jeo:name]!>; mapFromResultSet = <!%lMapFromResultSet!></td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:720:             iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:721: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:722:             if (<!" + lResultJeo + ":jeo:jeo!>!size() == 0) break;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:723: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:724:           <![" + lResultJeo + ":jeo:name]!> <!%lJeoName!>x = (<![" + lResultJeo + ":jeo:name]!>) <!%lJeoName!>.getJeoByInstanceNameAt("<![" + lResultJeo + ":jeo:name]!>", 0);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:725: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:726:             lJeoName = lJeoName + "x";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:727:             lResultJeo = lResultJeo + ":jeo";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:728:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:729: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:730:           do {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:731:             <![" + lResultJeo + ":jeo:name]!> <!%lJeoName!>x = (<![" + lResultJeo + ":jeo:name]!>) com.esarks.jac.JeoFactory.getInstance().reserveJeo("<![" + lResultJeo + ":jeo:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:732:             <!%lJeoName!>.addJeo(<!%lJeoName!>x);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:733: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:734:             if (!<![" + lResultJeo + ":jeo:mapFromResultSet]!>.equals("false")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:735: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:736: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:737:             <!%lJeoName!>x.mapFromResultSet(lResultSet, true, false);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:738: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:739:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:740:             if (<!" + lResultJeo + ":jeo:property!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:741:               <!" + lResultJeo + ":jeo:property!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:742:               while (<!" + lResultJeo + ":jeo:property!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:743:                 String lJavaType = getProperty("dbTypes:" + <![" + lResultJeo + ":jeo:property:type]!> + ":java");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:744:                 String lJdbcType = getProperty("dbTypes:" + <![" + lResultJeo + ":jeo:property:type]!> + ":jdbc");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:745: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:746:                 iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:747:                 if (<!" + lResultJeo + ":jeo:property!>!isFirst()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:748:                   %><tr><td><table border=1 cellpadding=5 cellspacing=0><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:749:                   %><tr><td><b>Property Name</b></td><td><b>Type</b></td><td><b>Java Type</b></td><td><b>JDBC Type</b></td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:750:                 }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:751:                 %><tr><td><![" + lResultJeo + ":jeo:property:name]!>&nbsp;</td><td><![" + lResultJeo + ":jeo:property:type]!>&nbsp;</td><td><!%lJavaType!>&nbsp;</td><td><!%lJdbcType!>&nbsp;</td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:752:                 iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:753: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:754: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:755:               try {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:756:                 <!%lJavaType!> lValue = lResultSet.get<!%lJdbcType!>("<![" + lResultJeo + ":jeo:property:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:757:                 if (lResultSet.wasNull()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:758:                   <!%lJeoName!>x.setPropertyValue("<![" + lResultJeo + ":jeo:property:name]!>", new PropertyValue());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:759:                 } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:760:                   <!%lJeoName!>x.setPropertyValue("<![" + lResultJeo + ":jeo:property:name]!>", new PropertyValue(lValue));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:761:                 }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:762:               } catch (Throwable e) {}
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:763: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:764:                 iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:765:                 if (<!" + lResultJeo + ":jeo:property!>!isLast()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:766:                   %></table><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:767:                 }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:768:                 iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:769:               }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:770:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:771: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:772:             lResultRowsReturned++;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:773:           } while (lResultSet.next());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:774:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:775:         if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:776:           java.util.Date lStopTime = new java.util.Date();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:777:           iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Result rows returned = " + Integer.toString(lResultRowsReturned) + "!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:778:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:779:         lResultSet.close();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:780:         lStatement.close();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:781: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:782: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:783:           for (int lIdx=0; lIdx < lJeoCount; lIdx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:784:             iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:785:             %></td></tr></table><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:786:             iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:787:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:788: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:789:           iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:790:           %></table></td></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:791:           iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:792: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:793:         } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:794:           if (lExecuteBatch) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:795: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:796:         lStatement.executeBatch();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:797:         lStatement.close();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:798: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:799:           } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:800: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:801:         boolean lResult = lStatement.execute();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:802:         int lUpdateCount = lStatement.getUpdateCount();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:803:         if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:804:           java.util.Date lStopTime = new java.util.Date();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:805:           iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!getUpdateCount = " + Integer.toString(lUpdateCount) + "!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:806:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:807:         aJeo.getReply().setPropertyValue("getUpdateCount", new PropertyValue(lUpdateCount));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:808:         lStatement.close();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:809: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:810:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:811:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:812: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:813:       } catch (SQLException e) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:814:         while (e != null) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:815:           aJeo.addError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:816:           aJeo.setErrorId("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:817:           aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:818:           aJeo.setErrorTitle("Database Exception");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:819:           aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:820:           aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:821:           aJeo.setErrorSeverity(3);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:822:           aJeo.getMostSevereError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:823:           if (iMicLog.test(Log._ERR)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:824:             iMicLog.println(Log._ERR, "ERR-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Exception caught!" + e.getMessage());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:825:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:826:   
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:827:           if (aJeo.getSuppressException() == false) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:828:             com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:829:             com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:830:             lExceptionServiceJeo.addJeo(lExceptionJeo);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:831:             java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:832:             lExceptionJeo.setTime(lExceptionTimestamp);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:833:             lExceptionJeo.setModule("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:834:             lExceptionJeo.setMethod("<![com.esarks.arm.schemas.services.root:service:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:835:             lExceptionJeo.setSeverity("unknown");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:836:             lExceptionJeo.setLocation("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:837:             lExceptionJeo.setDescription(e.getMessage());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:838:             lExceptionJeo.setAction("unknown");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:839:             lExceptionJeo.setResolution("unknown");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:840:       
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:841:             StackTraceElement[] lStackTraceElements = e.getStackTrace();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:842:             for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:843:               com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:844:               lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:845:               lExceptionJeo.addJeo(lStackExceptionJeo);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:846:             }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:847:       
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:848:             iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:849:           }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:850:           e = e.getNextException();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:851:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:852:         return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:853:       } catch (Throwable e) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:854:         aJeo.addError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:855:         aJeo.setErrorId("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:856:         aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:857:         aJeo.setErrorTitle("Database Exception");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:858:         aJeo.setErrorText("A database exception was caught: " + e.getMessage());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:859:         aJeo.setErrorResolution("The application user may evaluate the conditions that caused this problem, and may need to escalate the problem to technical support.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:860:         aJeo.setErrorSeverity(3);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:861:         aJeo.getMostSevereError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:862:         if (iMicLog.test(Log._ERR)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:863:           iMicLog.println(Log._ERR, "ERR-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Exception caught!" + e.getMessage());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:864:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:865: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:866:         if (aJeo.getSuppressException() == false) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:867:           com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:868:           com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:869:           lExceptionServiceJeo.addJeo(lExceptionJeo);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:870:           java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:871:           lExceptionJeo.setTime(lExceptionTimestamp);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:872:           lExceptionJeo.setModule("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:873:           lExceptionJeo.setMethod("<![com.esarks.arm.schemas.services.root:service:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:874:           lExceptionJeo.setSeverity("unknown");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:875:           lExceptionJeo.setLocation("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:876:           lExceptionJeo.setDescription(e.getMessage());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:877:           lExceptionJeo.setAction("unknown");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:878:           lExceptionJeo.setResolution("unknown");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:879:     
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:880:           StackTraceElement[] lStackTraceElements = e.getStackTrace();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:881:           for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:882:             com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:883:             lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:884:             lExceptionJeo.addJeo(lStackExceptionJeo);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:885:           }    
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:886:           iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:887:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:888:         return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:889:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:890: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:891:       }  // <!com.esarks.arm.schemas.services.root:service:sql!> loop
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:892:       }  // if (<!com.esarks.arm.schemas.services.root:service:sql!>!size() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:893: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:894:       aJeo.addError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:895:       aJeo.setErrorId("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:896:       aJeo.setErrorLocation("<!%aXmlDefinition!> : <![com.esarks.arm.schemas.services.root:service:name]!>");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:897:       aJeo.setErrorTitle("Success");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:898:       aJeo.setErrorText("The service completed successfully.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:899:       aJeo.setErrorResolution("This is a notification of successful completion that requires no resolution.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:900:       aJeo.setErrorSeverity(10);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:901:       aJeo.getMostSevereError();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:902:       if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:903:         java.util.Date lStopTime = new java.util.Date();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:904:         iMicLog.println(Log._APP, "APP-<![com.esarks.arm.schemas.services.root:name]!>:<![com.esarks.arm.schemas.services.root:service:name]!>" + "!Normal return!Elapsed time = " + Long.toString(lStopTime.getTime() - lStartTime.getTime()));
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:905:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:906:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:907: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:908:       iOutputManager.setDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:909:       %></table><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:910:       iOutputManager.setDocument("");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:911: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:912:     } // while (<!com.esarks.arm.schemas.services.root:service!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:913: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:914: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:915: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:916:   private String getObjectPrefix(String aObjectName) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:917:     DbConnectionFactory lDbConnectionFactory = DbConnectionFactory.getInstance();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:918:     DbConnection lDbConnection = lDbConnectionFactory.getAssociatedDbConnection(aObjectName.toLowerCase());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:919:     if (lDbConnection == null) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:920:       if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:921:         iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":getObjectPrefix(" + aObjectName + ")!Object name not in known list.");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:922:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:923:       return "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:924:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:925:     return lDbConnection.getPrefix();    
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:926:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:927: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:928: //$Section=Deleted$Preserve=yes
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:929: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:930: //----------------------------------------------------------------------------
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:931: // This section contains orphaned code from deleted operations.
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:932: //----------------------------------------------------------------------------
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:933: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:934: //$Section=Deleted$Preserve=no
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:935: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:936: //End of script---------------
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:937: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:938:       closeOutput();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:939:       Merge.getInstance().doMerge(path(<![com.esarks.arm.schemas.services.root:name]!>) + ".script", path(<![com.esarks.arm.schemas.services.root:name]!>) + ".new", iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:940: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:941:       StringBuffer lStringBuffer1 = iOutputManager.getDocument("createHtml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:942:   
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:943:       if (openOutput(path(aXmlDefinition) + ".html")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:944:         %><!%lStringBuffer1.toString()!><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:945:         %></html><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:946:         closeOutput();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:947:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:948: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:949:       if (Merge.getInstance().getExceptionMessage() != null) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:950:         setContext(iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:951:         <!$jac:event!>!set(Merge.getInstance().getExceptionMessage());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:952:         <!$jac:event:severity!>!set("fatal");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:953:         <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:954:         <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:955:         restoreContext();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:956:         setExit();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:957:         return;      
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:958:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:959:       
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:960:     } catch (Throwable e) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:961:       setContext(iScript.getMasterScript());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:962:       <!$jac:event!>!set(e.getMessage());
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:963:       <!$jac:event:severity!>!set("fatal");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:964:       <!$jac:event:scriptPackage!>!set(iScriptPackage);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:965:       <!$jac:event:scriptName!>!set(iScriptName);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:966:       restoreContext();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:967:       setExit();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:968:       return;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:969:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:970: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:971:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:972: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:973:   private void parseXmlDefinition(String aXmlDefinition) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:974:     XmlSchemaFactory lXmlSchemaFactory = iSymbolTable.getXmlSchemaFactory();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:975:     if (lXmlSchemaFactory.getXmlSchemaElement("com.esarks.arm.schemas.services.root") == null) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:976:       loadXmlSchema("com.esarks.arm.schemas.services", path("com.esarks.arm.schemas.ServicesSchema") + ".xml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:977:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:978:     parseXmlSchema(aXmlDefinition);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\jac\generators\GenerateService.script:979:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPostfix.script:1: }

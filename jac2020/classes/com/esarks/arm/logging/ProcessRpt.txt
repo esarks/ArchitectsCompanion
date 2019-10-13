@@ -1,0 +1,269 @@
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:3: import java.util.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:4: import java.lang.reflect.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:5: import java.io.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:6: import java.text.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:7: import java.sql.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:8: //import java.net.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:9: //import javax.net.ssl.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:10: //import java.security.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:11: import javax.servlet.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:12: import javax.servlet.http.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:13: //import java.awt.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:14: //import javax.swing.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:15: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:16: import com.esarks.jac.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:17: import com.esarks.mic.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:18: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micImport.script:19: <#import#>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:3: <#var#>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:4: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:6:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:7: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:9: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:11: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPrefix.script:12:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:1: //  Generated at 2005.07.29 07:31:19.265 AM EDT by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:3:   public void render(String aOutput, String aStereotype, com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:4:     renderHtml(aOutput, aJeo);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:5:     renderXml(aOutput, aJeo);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:6:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:7: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:8:   public void render(String aOutput, com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:9:     renderHtml(aOutput, aJeo);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:10:     renderXml(aOutput, aJeo);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:11:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:12: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:13:   public void renderHtml(String aOutput, com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:14:     openOutput(path(aOutput) + ".html");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:15:     com.esarks.arm.model.jeo.ServiceJeo lJeo = aJeo;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:16:     int lNbrColumns_ = 0;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:17: // *********************************************************************************************
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:18: // ***** Begin XML tag: report Jeo Type: process
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:19: // *********************************************************************************************
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:20:     ArrayList lArrayListx = lJeo.getJeoByTypeName("process");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:21:     boolean lPrintHeadingx_process = true;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:22:     int lNbrColumnsx_process = 3;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:23:     String lTableEndx_process = "</table>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:24:     if (lNbrColumns_ > 0) lTableEndx_process = "</table></td></tr>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:25:     for (int lIdx=0; lIdx < lArrayListx.size(); lIdx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:26:       com.esarks.arm.model.jeo.ProcessJeo lJeox = (com.esarks.arm.model.jeo.ProcessJeo) lArrayListx.get(lIdx);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:27:       if (lNbrColumns_ > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:28:         %><tr><td colspan="<!%lNbrColumns_!>"><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:29:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:30:       if (lPrintHeadingx_process) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:31:         lPrintHeadingx_process=false;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:32:         %><table cellspacing="0" cellpadding="0" border="1"><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:33:         %><tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:34:         %><td width="">Time&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:35:         %><td width="">Code&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:36:         %><td width="">Description&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:37:         %></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:38:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:39:       %><tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:40:       %><td><!%lJeox.getEventTimePropertyValue().toString()!>&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:41:       %><td><!%lJeox.getEventCodePropertyValue().toString()!>&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:42:       %><td><!%lJeox.getDescriptionPropertyValue().toString()!>&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:43:       %></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:44: // *********************************************************************************************
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:45: // ***** Begin XML tag: report:jeo Jeo Type: item
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:46: // *********************************************************************************************
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:47:       ArrayList lArrayListxx = lJeox.getJeoByTypeName("item");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:48:       boolean lPrintHeadingxx_item = true;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:49:       int lNbrColumnsxx_item = 3;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:50:       String lTableEndxx_item = "</table>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:51:       if (lNbrColumnsx_process > 0) lTableEndxx_item = "</table></td></tr>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:52:       for (int lIdxx=0; lIdxx < lArrayListxx.size(); lIdxx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:53:         com.esarks.arm.model.jeo.ProcessJeo lJeoxx = (com.esarks.arm.model.jeo.ProcessJeo) lArrayListxx.get(lIdxx);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:54:         if (lNbrColumnsx_process > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:55:           %><tr><td colspan="<!%lNbrColumnsx_process!>"><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:56:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:57:         if (lPrintHeadingxx_item) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:58:           lPrintHeadingxx_item=false;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:59:           %><table cellspacing="0" cellpadding="0" border="1"><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:60:           %><tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:61:           %><td width="">Time&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:62:           %><td width="">Code&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:63:           %><td width="">Description&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:64:           %></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:65:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:66:         %><tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:67:         %><td><!%lJeoxx.getEventTimePropertyValue().toString()!>&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:68:         %><td><!%lJeoxx.getEventCodePropertyValue().toString()!>&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:69:         %><td><!%lJeoxx.getDescriptionPropertyValue().toString()!>&nbsp;</td><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:70:         %></tr><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:71:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:72:         if (!lPrintHeadingxx_item) %><!%lTableEndxx_item!><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:73:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:74:       if (!lPrintHeadingx_process) %><!%lTableEndx_process!><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:75:     closeOutput();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:76:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:77: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:78:   public void renderXml(String aOutput, com.esarks.arm.model.jeo.ServiceJeo aJeo) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:79:     openOutput(path(aOutput) + ".xml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:80:     com.esarks.arm.model.jeo.ServiceJeo lJeo = aJeo;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:81:     %><report name="<!%aOutput!>"><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:82:     int lNbrColumns_ = 0;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:83: // *********************************************************************************************
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:84: // ***** Begin XML tag: report Jeo Type: process
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:85: // *********************************************************************************************
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:86:     ArrayList lArrayListx = lJeo.getJeoByTypeName("process");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:87:     boolean lPrintHeadingx_process = true;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:88:     int lNbrColumnsx_process = 3;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:89:     String lTableEndx_process = "</table>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:90:     for (int lIdx=0; lIdx < lArrayListx.size(); lIdx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:91:       com.esarks.arm.model.jeo.ProcessJeo lJeox = (com.esarks.arm.model.jeo.ProcessJeo) lArrayListx.get(lIdx);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:92:       if (lPrintHeadingx_process) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:93:         lPrintHeadingx_process=false;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:94: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:95: <table>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:96: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:97: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:98: <header>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:99: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:100: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:101: <column attribute="eventTime" width="">Time</column>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:102: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:103: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:104: <column attribute="eventCode" width="">Code</column>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:105: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:106: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:107: <column attribute="description" width="">Description</column>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:108: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:109: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:110: </header>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:111: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:112:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:113:       String AttributeList = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:114: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:115: <row <!%AttributeList!>>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:116: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:117: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:118:       AttributeList = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:119: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:120: <eventTime <!%AttributeList!>><!%lJeox.getEventTimePropertyValue().toString()!></eventTime>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:121: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:122:       AttributeList = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:123: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:124: <eventCode <!%AttributeList!>><!%lJeox.getEventCodePropertyValue().toString()!></eventCode>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:125: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:126:       AttributeList = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:127: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:128: <description <!%AttributeList!>><!%lJeox.getDescriptionPropertyValue().toString()!></description>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:129: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:130:       AttributeList = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:131: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:132: </row>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:133: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:134: // *********************************************************************************************
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:135: // ***** Begin XML tag: report:jeo Jeo Type: item
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:136: // *********************************************************************************************
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:137:       ArrayList lArrayListxx = lJeox.getJeoByTypeName("item");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:138:       boolean lPrintHeadingxx_item = true;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:139:       int lNbrColumnsxx_item = 3;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:140:       String lTableEndxx_item = "</table>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:141:       for (int lIdxx=0; lIdxx < lArrayListxx.size(); lIdxx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:142:         com.esarks.arm.model.jeo.ProcessJeo lJeoxx = (com.esarks.arm.model.jeo.ProcessJeo) lArrayListxx.get(lIdxx);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:143:         if (lPrintHeadingxx_item) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:144:           lPrintHeadingxx_item=false;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:145: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:146: <table>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:147: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:148: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:149: <header>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:150: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:151: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:152: <column attribute="eventTime" width="">Time</column>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:153: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:154: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:155: <column attribute="eventCode" width="">Code</column>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:156: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:157: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:158: <column attribute="description" width="">Description</column>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:159: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:160: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:161: </header>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:162: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:163:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:164:         String xAttributeList = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:165: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:166: <row <!%xAttributeList!>>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:167: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:168: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:169:         xAttributeList = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:170: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:171: <eventTime <!%xAttributeList!>><!%lJeoxx.getEventTimePropertyValue().toString()!></eventTime>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:172: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:173:         xAttributeList = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:174: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:175: <eventCode <!%xAttributeList!>><!%lJeoxx.getEventCodePropertyValue().toString()!></eventCode>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:176: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:177:         xAttributeList = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:178: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:179: <description <!%xAttributeList!>><!%lJeoxx.getDescriptionPropertyValue().toString()!></description>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:180: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:181:         xAttributeList = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:182: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:183: </row>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:184: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:185:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:186:         if (!lPrintHeadingxx_item) %><!%lTableEndxx_item!><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:187:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:188:       if (!lPrintHeadingx_process) %><!%lTableEndx_process!><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:189: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:190: </report>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:191: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:192: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:193:     closeOutput();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:194:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:195:   public void renderFromXml(String aXmlFile) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:196: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:197:     parseXmlPath(path(aXmlFile) + ".xml");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:198:     com.esarks.arm.model.jeo.ServiceJeo lJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:199:     <!report:jeo!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:200:     while (<!report:jeo!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:201:       com.esarks.arm.model.jeo.ProcessJeo lJeox = new com.esarks.arm.model.jeo.ProcessJeo("process");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:202:       lJeo.addJeo(lJeox);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:203:       if (<!report:jeo!>!scan("attribute:name", "eventTime")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:204:         lJeox.setEventTime(<![report:jeo:attribute:value]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:205:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:206:       if (<!report:jeo!>!scan("attribute:name", "eventCode")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:207:         lJeox.setEventCode(<![report:jeo:attribute:value]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:208:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:209:       if (<!report:jeo!>!scan("attribute:name", "description")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:210:         lJeox.setDescription(<![report:jeo:attribute:value]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:211:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:212:       <!report:jeo:jeo!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:213:       while (<!report:jeo:jeo!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:214:         com.esarks.arm.model.jeo.ProcessJeo lJeoxx = new com.esarks.arm.model.jeo.ProcessJeo("item");
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:215:         lJeox.addJeo(lJeoxx);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:216:         if (<!report:jeo:jeo!>!scan("attribute:name", "eventTime")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:217:           lJeoxx.setEventTime(<![report:jeo:jeo:attribute:value]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:218:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:219:         if (<!report:jeo:jeo!>!scan("attribute:name", "eventCode")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:220:           lJeoxx.setEventCode(<![report:jeo:jeo:attribute:value]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:221:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:222:         if (<!report:jeo:jeo!>!scan("attribute:name", "description")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:223:           lJeoxx.setDescription(<![report:jeo:jeo:attribute:value]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:224:         }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:225:       }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:226:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:227:     render(aXmlFile, lJeo);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:228:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:229: //$Section=Deleted$Preserve=yes
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:230: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:231: //----------------------------------------------------------------------------
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:232: // This section contains orphaned code from deleted operations.
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:233: //----------------------------------------------------------------------------
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:234: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:235: //$Section=Deleted$Preserve=no
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:236: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\logging\ProcessRpt.script:237: //End of script---------------
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\micPostfix.script:1: }

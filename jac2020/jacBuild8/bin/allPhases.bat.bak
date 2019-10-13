@@ -10,7 +10,7 @@ call phase1
 
 call phase2
 
-call copyJars
+rem call copyJars
 
 pause END ******************************************
 

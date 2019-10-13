@@ -8,9 +8,9 @@ cd %JAC_BUILD%\bin
 
 call phase1
 
-rem call phase2
+call phase2
 
-rem call copyJars
+call copyJars
 
 pause END ******************************************
 

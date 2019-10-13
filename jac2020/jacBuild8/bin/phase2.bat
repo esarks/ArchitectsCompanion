@@ -15,7 +15,7 @@ cd %JAC_BUILD%\bin
 
 call Job jac com.esarks.arm.scripts.ExitMethod         ! jac
 call Job jac com.esarks.arm.scripts.FinalReturnMethod  ! jac
-call Job jac com.esarks.arm.scripts.GetEffecitveDate   ! jac
+call Job jac com.esarks.arm.scripts.GetEffectiveDate   ! jac
 call Job jac com.esarks.arm.scripts.IterateReplyJeo    ! jac
 call Job jac com.esarks.arm.scripts.Method             ! jac
 call Job jac com.esarks.arm.scripts.ReturnMethod       ! jac
