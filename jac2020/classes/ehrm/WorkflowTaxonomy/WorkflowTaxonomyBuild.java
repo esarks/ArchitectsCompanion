@@ -51,13 +51,12 @@ public class WorkflowTaxonomyBuild extends com.esarks.mic.Component {
     super(aScript);
 
   }
-
 public void execute() {
 
-//ScriptWriter~~%>EHRM Hello World! v20190816a
+//ScriptWriter~~%>EHRM Hello World! v20191013a
 {
 //ScriptWriter~~~
-iOutputManager.println("EHRM Hello World! v20190816a", true);
+iOutputManager.println("EHRM Hello World! v20191013a", true);
 //ScriptWriter~~<%
 iOutputManager.println("", false);
 //ScriptWriter~~~

@@ -84,7 +84,7 @@ pause
 )
 set CLASSPATH=%CLASSPATH%;%JAC_HOME%\lib\crimson\crimson.jar
 
-rem C:\GitHub\ArchitectsCompanion\jac2020\lib\jacob-1.19\jacob-1.19
+C:\GitHub\ArchitectsCompanion\jac2020\lib\jacob-1.19\jacob-1.19
 
 rem -- Jacob
 if exist "%JAC_HOME%\lib\jacob-1.19\jacob.jar" (

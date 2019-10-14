@@ -1,5 +1,5 @@
 echo on
-echo Running... C:\GitHub\ArchitectsCompanion\jac2020\bin\JrunDirect.bat v20191013a
+echo JrunDirect.bat
 
 set JAC_BASE=J:
 set JAC_DEBUG=false

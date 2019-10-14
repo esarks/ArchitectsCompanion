@@ -1,4 +1,3 @@
-
 public void execute() {
 
 %>EHRM Hello World! v20190816a
@@ -36,7 +35,7 @@ while((line = br.readLine()) != null){
   if (line.startsWith("Off Page Reference")) lPrint = false;
   if (line.startsWith("Document")) lPrint = false;
   if (line.startsWith("© Cerner Corporation.")) lPrint = false;
-  if (line.strtsWith("Swim Lane/Role")) lPrint = false;
+  if (line.startsWith("Swim Lane/Role")) lPrint = false;
 if (lPrint) {
 %>
 <!%line!>

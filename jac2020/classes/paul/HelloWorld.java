@@ -54,10 +54,10 @@ public class HelloWorld extends com.esarks.mic.Component {
 
 public void execute() {
 
-//ScriptWriter~~%>Hello World! v20190625a
+//ScriptWriter~~%>Hello World! v20191013a
 {
 //ScriptWriter~~~
-iOutputManager.println("Hello World! v20190625a", true);
+iOutputManager.println("Hello World! v20191013a", true);
 //ScriptWriter~~<%
 iOutputManager.println("", false);
 //ScriptWriter~~~

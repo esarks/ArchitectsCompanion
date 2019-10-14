@@ -1,7 +1,6 @@
-
 public void execute() {
 
-%>EHRM Hello World! v20190816a
+%>EHRM Hello World! v20191013a
 <%
 
   iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");

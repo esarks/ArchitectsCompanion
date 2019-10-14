@@ -1,250 +1,249 @@
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:1: package <#[$jac:script:package]#>;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:2: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:3: import com.esarks.jac.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:4: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:5: import java.time.Duration;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:6: import java.time.Instant;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:7: import java.time.Period;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:8: import java.time.ZoneId;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:9: import java.time.LocalDate;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:10: import java.time.LocalDateTime;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:11: import java.time.LocalTime;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:12: import java.time.format.DateTimeFormatter;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:13: import java.time.format.FormatStyle;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:14: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:15: import java.util.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:16: import java.lang.reflect.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:17: import java.io.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:18: import java.text.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:19: import java.net.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:20: import javax.net.ssl.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:21: import java.security.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:22: import java.sql.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:23: import javax.servlet.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:24: import javax.servlet.http.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:25: import java.awt.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:26: import javax.swing.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:27: import com.esarks.mic.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:28: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:29: import java.nio.file.Files;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:30: import java.nio.file.Paths;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:31: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:32: import java.io.FileNotFoundException;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:33: import java.io.FileReader;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:34: import java.io.IOException;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:35: import java.util.Iterator;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:36: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:37: import org.json.simple.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:38: import org.json.simple.parser.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:39: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:40: <#import#>
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:2: 
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:4:   }
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:5: 
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:7: 
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:8:     super(aScript);
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:9: 
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:10:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:1: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:2: public void execute() {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:3: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:4: %>EHRM Hello World! v20190816a
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:5: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:6: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:7:   iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:8: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:9:   iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.txt", false);
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:10: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:11: boolean lPrint = false;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:12: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:13: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:14:   <!business:pdfs:pdf!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:15:   while (<!business:pdfs:pdf!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:16: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:17: try {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:18: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:19: String fileName = <![business:pdfs:folder]!> + "\\" + <![business:pdfs:pdf:name]!>;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:20: File file = new File(fileName);
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:21: FileReader fr = new FileReader(file);
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:22: BufferedReader br = new BufferedReader(fr);
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:23: String line;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:24: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:25: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:26: ****** <!%fileName!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:27: <%  
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:28: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:29: while((line = br.readLine()) != null){
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:30: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:31:   if (line.startsWith("Comments:")) lPrint = true;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:32:   if (line.startsWith("Work Step")) lPrint = false;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:33:   if (line.startsWith("System")) lPrint = false;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:34:   if (line.startsWith("Decision")) lPrint = false;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:35:   if (line.startsWith("Start/Stop")) lPrint = false;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:36:   if (line.startsWith("Off Page Reference")) lPrint = false;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:37:   if (line.startsWith("Document")) lPrint = false;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:38:   if (line.startsWith("© Cerner Corporation.")) lPrint = false;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:39:   if (line.startsWith("Swim Lane/Role")) lPrint = false;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:40: if (lPrint) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:41: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:42: <!%line!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:43: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:44: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:45:    
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:46: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:47: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:48: } catch (IOException lException) 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:49: {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:50: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:51: <!%lException!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:52: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:53: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:54: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:55: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:56: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:57:   iOutputManager.closeOutputFile();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:58: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:59: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:60: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:61: public void execute2() {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:62: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:63: %>EHRM Hello World! v20190816a
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:64: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:65: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:66:   iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:67: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:68:   iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy1.csv", false);
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:69: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:70:   <!business!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:71:   while (<!business!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:72: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:73:     <!business:wfreport:wf!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:74:     while (<!business:wfreport:wf!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:75: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:76: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:77: <![business:wfreport:wf:name]!>,<![business:wfds:[business:wfreport:wf:name]:description]!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:78: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:79: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:80:       <!business:wfreport:wf:subflow!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:81:       while (<!business:wfreport:wf:subflow!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:82: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:83: ,SUBFLOW,<![business:wfreport:wf:subflow:name]!>,<![business:wfds:[business:wfreport:wf:subflow:name]:description]!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:84: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:85:       }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:86: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:87:     }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:88:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:89: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:90:   iOutputManager.closeOutputFile();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:91: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:92: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:93: public void execute1() {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:94: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:95: %>EHRM Hello World! v20190816a
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:96: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:97: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:98:   iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:99: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:100:   iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.csv", false);
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:101: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:102:   int lRow = 0;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:103:   Integer lWorkflow = 0;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:104:   Boolean lIncludeDetail = true;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:105:   
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:106: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:107: ,,,,,,Wf Designer,Interfaces
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:108: <%    
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:109:   <!business!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:110:   while (<!business!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:111: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:112:     <!business:major!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:113:     while (<!business:major!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:114:     lRow++;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:115: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:116: <![business:major:name]!>,,,,,,,,,group,<!%lRow!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:117: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:118: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:119:       <!business:major:workflow!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:120: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:121:       while (<!business:major:workflow!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:122:         int lWorkflowSize = <!business:major:workflow:wfdesigner!>!size();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:123:         int lProdSize = <!business:major:workflow:product!>!size();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:124:         int lInterfaceSize = <!business:major:workflow:interface!>!size();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:125:         lRow++;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:126:         lWorkflow++;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:127: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:128:  
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:129: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:130: <![business:major:name]!>,<![business:major:workflow:name]!>,#<!%lWorkflow!>: # Wf Designer = <!%lWorkflowSize!> Page = <![business:major:workflow:page]!>,,,,<![business:major:workflow:date1]!>,<![business:major:workflow:date2]!>,,workflow,<!%lRow!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:131: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:132: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:133:         <!business:major:workflow:wfdesigner!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:134:         while (<!business:major:workflow:wfdesigner!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:135:           lRow++;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:136:           String lWfd = <![business:wfds:[business:major:workflow:wfdesigner:name]:description]!>;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:137: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:138: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:139: <![business:major:name]!>,,Wf Designer = <!%lWfd!>,Reviewed = <![business:wfds:[business:major:workflow:wfdesigner:name]:reviewed]!>,Phase = <![business:phases:[business:wfds:[business:major:workflow:wfdesigner:name]:phase]:description]!>,,,,,wfdesigner,<!%lRow!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:140: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:141: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:142:           <!business:wfds:[business:major:workflow:wfdesigner:name]:product!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:143:           while (<!business:wfds:[business:major:workflow:wfdesigner:name]:product!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:144:             lRow++;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:145: /*
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:146: <![business:major:name]!>,,Product = <![business:products:[business:wfds:[business:major:workflow:wfdesigner:name]:product:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:product:description]!>,Reviewed = <![business:major:workflow:product:reviewed]!>,Phase = <![business:phases:[business:major:workflow:product:phase]:description]!>,,,,,product,<!%lRow!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:147: */
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:148: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:149: <![business:major:name]!>,,Product = <![business:products:[business:wfds:[business:major:workflow:wfdesigner:name]:product:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:product:description]!>,,,,,,,product,<!%lRow!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:150: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:151:           }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:152: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:153: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:154:           <!business:wfds:[business:major:workflow:wfdesigner:name]:interface!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:155:           while (<!business:wfds:[business:major:workflow:wfdesigner:name]:interface!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:156:             lRow++;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:157: /*
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:158: <![business:major:name]!>,,Interface = <![business:interfaces:[business:wfds:[business:major:workflow:wfdesigner:name]:interface:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:interface:description]!>,Reviewed = <![business:major:workflow:interface:reviewed]!>,Phase = <![business:phases:[business:major:workflow:interface:phase]:description]!>,,,,,interface,<!%lRow!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:159: */
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:160: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:161: <![business:major:name]!>,,Interface = <![business:interfaces:[business:wfds:[business:major:workflow:wfdesigner:name]:interface:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:interface:description]!>,,,,,,,interface,<!%lRow!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:162: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:163:           }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:164: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:165:         }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:166: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:167:         <!business:major:workflow:product!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:168:         while (<!business:major:workflow:product!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:169:           lRow++;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:170:           String lProduct = <![business:products:[business:major:workflow:product:name]:description]!> + " <" + <![business:products:[business:major:workflow:product:name]:owner]!> + ">";
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:171: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:172: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:173: <![business:major:name]!>,,Product = <!%lProduct!>,Reviewed = <![business:major:workflow:product:reviewed]!>,Phase = <![business:phases:[business:major:workflow:product:phase]:description]!>,,,,,product,<!%lRow!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:174: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:175: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:176:         }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:177: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:178:         <!business:major:workflow:interface!>!resetIterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:179:         while (<!business:major:workflow:interface!>!next()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:180:           lRow++;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:181:           String lInterface = <![business:interfaces:[business:major:workflow:interface:name]:description]!>;
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:182: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:183: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:184: <![business:major:name]!>,,Interface = <!%lInterface!>,Reviewed = <![business:major:workflow:interface:reviewed]!>,Phase = <![business:phases:[business:major:workflow:interface:phase]:description]!>,,,,,interface,<!%lRow!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:185: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:186:         }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:187: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:188:       }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:189: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:190:     }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:191: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:192:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:193: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:194:   iOutputManager.closeOutputFile();
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:195: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:196: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:197: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:198: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:199: 
-C:\ArchitectsCompanion\jac2017\conf\micPostfix.script:1: }
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:3: import com.esarks.jac.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:4: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:5: import java.time.Duration;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:6: import java.time.Instant;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:7: import java.time.Period;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:8: import java.time.ZoneId;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:9: import java.time.LocalDate;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:10: import java.time.LocalDateTime;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:11: import java.time.LocalTime;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:12: import java.time.format.DateTimeFormatter;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:13: import java.time.format.FormatStyle;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:14: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:15: import java.util.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:16: import java.lang.reflect.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:17: import java.io.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:18: import java.text.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:19: import java.net.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:20: import javax.net.ssl.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:21: import java.security.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:22: import java.sql.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:23: import javax.servlet.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:24: import javax.servlet.http.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:25: import java.awt.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:26: import javax.swing.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:27: import com.esarks.mic.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:28: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:29: import java.nio.file.Files;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:30: import java.nio.file.Paths;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:31: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:32: import java.io.FileNotFoundException;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:33: import java.io.FileReader;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:34: import java.io.IOException;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:35: import java.util.Iterator;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:36: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:37: import org.json.simple.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:38: import org.json.simple.parser.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:39: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:40: <#import#>
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:4:   }
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:5: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:7: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:8:     super(aScript);
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:9: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:10:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:1: public void execute() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:3: %>EHRM Hello World! v20191013a
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:4: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:5: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:6:   iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:7: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:8:   iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.txt", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:9: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:10: boolean lPrint = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:11: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:12: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:13:   <!business:pdfs:pdf!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:14:   while (<!business:pdfs:pdf!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:15: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:16: try {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:17: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:18: String fileName = <![business:pdfs:folder]!> + "\\" + <![business:pdfs:pdf:name]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:19: File file = new File(fileName);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:20: FileReader fr = new FileReader(file);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:21: BufferedReader br = new BufferedReader(fr);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:22: String line;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:23: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:24: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:25: ****** <!%fileName!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:26: <%  
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:27: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:28: while((line = br.readLine()) != null){
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:29: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:30:   if (line.startsWith("Comments:")) lPrint = true;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:31:   if (line.startsWith("Work Step")) lPrint = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:32:   if (line.startsWith("System")) lPrint = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:33:   if (line.startsWith("Decision")) lPrint = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:34:   if (line.startsWith("Start/Stop")) lPrint = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:35:   if (line.startsWith("Off Page Reference")) lPrint = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:36:   if (line.startsWith("Document")) lPrint = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:37:   if (line.startsWith("© Cerner Corporation.")) lPrint = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:38:   if (line.startsWith("Swim Lane/Role")) lPrint = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:39: if (lPrint) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:40: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:41: <!%line!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:42: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:43: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:44:    
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:45: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:46: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:47: } catch (IOException lException) 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:48: {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:49: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:50: <!%lException!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:51: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:52: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:53: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:54: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:55: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:56:   iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:57: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:58: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:59: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:60: public void execute2() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:61: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:62: %>EHRM Hello World! v20190816a
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:63: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:64: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:65:   iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:66: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:67:   iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy1.csv", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:68: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:69:   <!business!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:70:   while (<!business!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:71: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:72:     <!business:wfreport:wf!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:73:     while (<!business:wfreport:wf!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:74: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:75: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:76: <![business:wfreport:wf:name]!>,<![business:wfds:[business:wfreport:wf:name]:description]!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:77: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:78: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:79:       <!business:wfreport:wf:subflow!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:80:       while (<!business:wfreport:wf:subflow!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:81: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:82: ,SUBFLOW,<![business:wfreport:wf:subflow:name]!>,<![business:wfds:[business:wfreport:wf:subflow:name]:description]!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:83: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:84:       }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:85: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:86:     }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:87:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:88: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:89:   iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:90: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:91: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:92: public void execute1() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:93: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:94: %>EHRM Hello World! v20190816a
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:95: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:96: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:97:   iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:98: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:99:   iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.csv", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:100: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:101:   int lRow = 0;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:102:   Integer lWorkflow = 0;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:103:   Boolean lIncludeDetail = true;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:104:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:105: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:106: ,,,,,,Wf Designer,Interfaces
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:107: <%    
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:108:   <!business!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:109:   while (<!business!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:110: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:111:     <!business:major!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:112:     while (<!business:major!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:113:     lRow++;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:114: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:115: <![business:major:name]!>,,,,,,,,,group,<!%lRow!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:116: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:117: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:118:       <!business:major:workflow!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:119: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:120:       while (<!business:major:workflow!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:121:         int lWorkflowSize = <!business:major:workflow:wfdesigner!>!size();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:122:         int lProdSize = <!business:major:workflow:product!>!size();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:123:         int lInterfaceSize = <!business:major:workflow:interface!>!size();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:124:         lRow++;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:125:         lWorkflow++;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:126: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:127:  
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:128: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:129: <![business:major:name]!>,<![business:major:workflow:name]!>,#<!%lWorkflow!>: # Wf Designer = <!%lWorkflowSize!> Page = <![business:major:workflow:page]!>,,,,<![business:major:workflow:date1]!>,<![business:major:workflow:date2]!>,,workflow,<!%lRow!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:130: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:131: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:132:         <!business:major:workflow:wfdesigner!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:133:         while (<!business:major:workflow:wfdesigner!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:134:           lRow++;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:135:           String lWfd = <![business:wfds:[business:major:workflow:wfdesigner:name]:description]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:136: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:137: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:138: <![business:major:name]!>,,Wf Designer = <!%lWfd!>,Reviewed = <![business:wfds:[business:major:workflow:wfdesigner:name]:reviewed]!>,Phase = <![business:phases:[business:wfds:[business:major:workflow:wfdesigner:name]:phase]:description]!>,,,,,wfdesigner,<!%lRow!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:139: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:140: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:141:           <!business:wfds:[business:major:workflow:wfdesigner:name]:product!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:142:           while (<!business:wfds:[business:major:workflow:wfdesigner:name]:product!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:143:             lRow++;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:144: /*
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:145: <![business:major:name]!>,,Product = <![business:products:[business:wfds:[business:major:workflow:wfdesigner:name]:product:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:product:description]!>,Reviewed = <![business:major:workflow:product:reviewed]!>,Phase = <![business:phases:[business:major:workflow:product:phase]:description]!>,,,,,product,<!%lRow!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:146: */
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:147: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:148: <![business:major:name]!>,,Product = <![business:products:[business:wfds:[business:major:workflow:wfdesigner:name]:product:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:product:description]!>,,,,,,,product,<!%lRow!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:149: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:150:           }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:151: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:152: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:153:           <!business:wfds:[business:major:workflow:wfdesigner:name]:interface!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:154:           while (<!business:wfds:[business:major:workflow:wfdesigner:name]:interface!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:155:             lRow++;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:156: /*
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:157: <![business:major:name]!>,,Interface = <![business:interfaces:[business:wfds:[business:major:workflow:wfdesigner:name]:interface:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:interface:description]!>,Reviewed = <![business:major:workflow:interface:reviewed]!>,Phase = <![business:phases:[business:major:workflow:interface:phase]:description]!>,,,,,interface,<!%lRow!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:158: */
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:159: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:160: <![business:major:name]!>,,Interface = <![business:interfaces:[business:wfds:[business:major:workflow:wfdesigner:name]:interface:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:interface:description]!>,,,,,,,interface,<!%lRow!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:161: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:162:           }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:163: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:164:         }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:165: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:166:         <!business:major:workflow:product!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:167:         while (<!business:major:workflow:product!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:168:           lRow++;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:169:           String lProduct = <![business:products:[business:major:workflow:product:name]:description]!> + " <" + <![business:products:[business:major:workflow:product:name]:owner]!> + ">";
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:170: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:171: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:172: <![business:major:name]!>,,Product = <!%lProduct!>,Reviewed = <![business:major:workflow:product:reviewed]!>,Phase = <![business:phases:[business:major:workflow:product:phase]:description]!>,,,,,product,<!%lRow!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:173: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:174: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:175:         }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:176: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:177:         <!business:major:workflow:interface!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:178:         while (<!business:major:workflow:interface!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:179:           lRow++;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:180:           String lInterface = <![business:interfaces:[business:major:workflow:interface:name]:description]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:181: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:182: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:183: <![business:major:name]!>,,Interface = <!%lInterface!>,Reviewed = <![business:major:workflow:interface:reviewed]!>,Phase = <![business:phases:[business:major:workflow:interface:phase]:description]!>,,,,,interface,<!%lRow!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:184: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:185:         }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:186: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:187:       }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:188: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:189:     }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:190: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:191:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:192: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:193:   iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:194: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:195: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:196: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:197: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:198: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPostfix.script:1: }
