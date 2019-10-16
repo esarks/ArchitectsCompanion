@@ -1,4 +1,4 @@
-echo on
+echo off
 echo Running... C:\GitHub\ArchitectsCompanion\jac2020\jrun\bin\JrunDirect.bat v20191013a
 
 echo Jrun file=%1

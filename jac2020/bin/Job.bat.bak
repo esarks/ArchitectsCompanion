@@ -1,8 +1,6 @@
 echo on
 echo Running... C:\GitHub\ArchitectsCompanion\jac2020\bin\Job.bat v20191013a
 
-echo on
-echo C:\GitHub\ArchitectsCompanion\jac2020\bin\Job.bat
 echo Job.bat 20101013a
 echo Job.bat 1=%1
 echo Job.bat 2=%2

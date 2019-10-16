@@ -1,14 +1,20 @@
 public void execute() {
 
-%>EHRM Hello World! v20190816a
+%>EHRM Hello World! v20191013a
 <%
 
-  iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+  String cdata = "<" + "!" + "[CDATA[";
+  String line;
+  boolean lPrint = false;
+  String lLastTag="";
 
-  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.txt", false);
+  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
 
-boolean lPrint = false;
+  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.txt", false);
 
+%>
+<comments>
+<%
 
   <!business:pdfs:pdf!>!resetIterator();
   while (<!business:pdfs:pdf!>!next()) {
@@ -19,28 +25,48 @@ String fileName = <![business:pdfs:folder]!> + "\\" + <![business:pdfs:pdf:name]
 File file = new File(fileName);
 FileReader fr = new FileReader(file);
 BufferedReader br = new BufferedReader(fr);
-String line;
+
+if (lLastTag != "") {
+%>
+</<!%lLastTag!>>
+<%
+}
 
 %>
-****** <!%fileName!>
+<<![business:pdfs:pdf:id]!>>
 <%  
 
+lLastTag = <![business:pdfs:pdf:id]!>;
 while((line = br.readLine()) != null){
 
-  if (line.startsWith("Comments:")) lPrint = true;
-  if (line.startsWith("Work Step")) lPrint = false;
-  if (line.startsWith("System")) lPrint = false;
-  if (line.startsWith("Decision")) lPrint = false;
-  if (line.startsWith("Start/Stop")) lPrint = false;
-  if (line.startsWith("Off Page Reference")) lPrint = false;
-  if (line.startsWith("Document")) lPrint = false;
-  if (line.startsWith("© Cerner Corporation.")) lPrint = false;
-  if (line.startsWith("Swim Lane/Role")) lPrint = false;
-if (lPrint) {
+  if (line.startsWith("Comments:") && lPrint == false) {
+    lPrint = true;
+%>
+<comment><!%cdata!><%
+  }
+
+  if ((lPrint == true) && (line.startsWith("Work Step") ||
+      line.startsWith("System") ||
+      line.startsWith("Decision") ||
+      line.startsWith("Start/Stop") ||
+      line.startsWith("Off Page Reference") ||
+      line.startsWith("Document") ||
+      line.startsWith("© Cerner Corporation.") ||
+      line.startsWith("Swim Lane/Role"))) {
+      
+      lPrint = false;
+
+%>
+]]></comment>
+<%
+
+  }
+
+  if (lPrint) {
 %>
 <!%line!>
 <%
-}
+  }
    
 }
 
@@ -53,8 +79,18 @@ if (lPrint) {
 
 }
 
+%>
+]]>
+</<!%lLastTag!>>
+</comments>
+<%
+
   iOutputManager.closeOutputFile();
 
+  execute2();
+  execute2a();
+  execute1();
+    
 }
 
 public void execute2() {
@@ -62,9 +98,45 @@ public void execute2() {
 %>EHRM Hello World! v20190816a
 <%
 
-  iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+//  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
 
-  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy1.csv", false);
+  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy1.csv", false);
+
+%>
+Flow ID,Flow Name,Status,Council,"DCW<!%Character.toString((char) 10)!>Required","DCW<!%Character.toString((char) 10)!>Completed","DDM<!%Character.toString((char) 10)!>Required","DDM<!%Character.toString((char) 10)!>Completed","Build in 81930<!%Character.toString((char) 10)!>Completed",SubFlow ID, Name,,heading
+<%
+
+  <!business!>!resetIterator();
+  while (<!business!>!next()) {
+
+    <!business:wfreport:wf!>!resetIterator();
+    while (<!business:wfreport:wf!>!next()) {
+
+%>
+<![business:wfreport:wf:name]!>,<![business:wfds:[business:wfreport:wf:name]:description]!>,<![business:states:[business:wfreport:wf:name]:status]!>,<![business:states:[business:wfreport:wf:name]:council]!>,<![business:states:[business:wfreport:wf:name]:dcwRqd]!>,<![business:states:[business:wfreport:wf:name]:dcwCmp]!>,<![business:states:[business:wfreport:wf:name]:ddmRqd]!>,<![business:states:[business:wfreport:wf:name]:ddmCmp]!>,<![business:states:[business:wfreport:wf:name]:build]!>,,,,flow
+<%
+
+      <!business:wfreport:wf:subflow!>!resetIterator();
+      while (<!business:wfreport:wf:subflow!>!next()) {
+%>
+<![business:wfreport:wf:subflow:name]!>,<![business:wfds:[business:wfreport:wf:subflow:name]:description]!>,,,,,,,,,,,subFlow
+<%
+      }
+
+    }
+  }
+
+  iOutputManager.closeOutputFile();
+}
+
+public void execute2a() {
+
+%>EHRM Hello World! v20190816a
+<%
+
+//  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+
+  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.csv", false);
 
   <!business!>!resetIterator();
   while (<!business!>!next()) {
@@ -76,13 +148,14 @@ public void execute2() {
 <![business:wfreport:wf:name]!>,<![business:wfds:[business:wfreport:wf:name]:description]!>
 <%
 
-      <!business:wfreport:wf:subflow!>!resetIterator();
-      while (<!business:wfreport:wf:subflow!>!next()) {
-%>
-,SUBFLOW,<![business:wfreport:wf:subflow:name]!>,<![business:wfds:[business:wfreport:wf:subflow:name]:description]!>
-<%
-      }
+      <!business:comments:[business:wfreport:wf:name]:comment!>!resetIterator();
+      while (<!business:comments:[business:wfreport:wf:name]:comment!>!next()) {
 
+%>
+,"<![business:comments:[business:wfreport:wf:name]:comment]!>"
+<%
+
+      }
     }
   }
 
@@ -94,9 +167,9 @@ public void execute1() {
 %>EHRM Hello World! v20190816a
 <%
 
-  iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+//  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
 
-  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.csv", false);
+  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.csv", false);
 
   int lRow = 0;
   Integer lWorkflow = 0;

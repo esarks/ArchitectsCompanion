@@ -105,11 +105,15 @@ public int iSequence = 0;
 
 public void execute() {
 
+//      loadXmlSchema("com.esarks.arm.schemas.properties", path("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+//ScriptWriter~~//      parseXmlSchema(<![com.esarks.arm.schemas.router.root:loc:propertySet:path]!>);
+//      parseXmlSchema(iSymbolTable.translateProperties("[com.esarks.arm.schemas.router.root:loc:propertySet:path]"));
+
 
 //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\MinimalGenericDbq.xml");
 
 //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\GenericDbqWithEnhancements.xml");
-    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\GeneralMedicalSeparationHealthAssessmentSample.xml");
+//    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\GeneralMedicalSeparationHealthAssessmentSample.xml");
 //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\HL7\\SHA_DBQ_v19_3.xml");
 //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\HL7\\DBQ\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\GeneralMedicalSeparationHealthAssessmentSample.xml");
 //  iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\ExamManagement-3.0rc5.iepd\\XMLschemas\\exchange\\ExamManagement-3.0.xsd");
@@ -121,6 +125,7 @@ public void execute() {
 //  PropertyCollection lPropertyCollection = iSymbolTable.getPropertyCollection();
 
 //  iterateSymbolTable(iSymbolTable.getPropertyCollection(), "em~ExamManagementEventNotification", "");
+  iterateSymbolTable(iSymbolTable);
 
 //ScriptWriter~~%>
 {
@@ -140,27 +145,22 @@ iOutputManager.println("", false);
 //  <A6>6</A6>
 //</A1>
 
-  PropertyCollection lPropertyCollection = iSymbolTable.getPropertyCollection(); 
-  PropertyValues lPropertyValues = lPropertyCollection.getPropertyValues("cld~Claim", false);
-//ScriptWriter~~%>
-{
-//ScriptWriter~~~
-iOutputManager.println("", false);
-//ScriptWriter~~lPropertyValues = <!%lPropertyValues.getName()!>
-iOutputManager.println("lPropertyValues = " + lPropertyValues.getName() + "", true);
-//ScriptWriter~~<%
-iOutputManager.println("", false);
-//ScriptWriter~~~
-}
-//ScriptWriter~~~
+//  PropertyCollection lPropertyCollection = iSymbolTable.getPropertyCollection(); 
+//  PropertyValues lPropertyValues = lPropertyCollection.getPropertyValues("cld~Claim", false);
+//  PropertyValues lPropertyValues = lPropertyCollection.getPropertyValues("$jac", false);
+//% >
+//ScriptWriter~~//lPropertyValues = <!%lPropertyValues.getName()!>
+//lPropertyValues = iSymbolTable.translateProperties(lPropertyValues.getName())
+//< %
 
+//  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", false);
+//  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\HapiOut2.txt", false);
+//  iOutputManager.closeOutputFile();
 
-  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", false);
-  iOutputManager.closeOutputFile();
 
 
 //  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut.xml", false);
-  iteratePropertyValues(lPropertyValues, lPropertyValues.getName(), "");
+//  iteratePropertyValues(lPropertyValues, lPropertyValues.getName(), "");
 //  iOutputManager.closeOutputFile();
 
 //  iteratePropertyValue(lPropertyValue, "ExamManagementEventNotification", "");
@@ -311,7 +311,8 @@ iOutputManager.println("%%%%" + aName + "****" + aPropertyValue.getValueString()
 
 
   if (aName.trim().length() > 0 && aPropertyValue.getValueString().trim().length() > 0) {
-  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", true);
+//  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2.txt", true);
+//  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", true);
 //ScriptWriter~~%>
 {
 //ScriptWriter~~~
@@ -324,9 +325,10 @@ iOutputManager.println("", false);
 }
 //ScriptWriter~~~
 
-  iOutputManager.closeOutputFile();
+//  iOutputManager.closeOutputFile();
 } else if (aName.trim().length() > 0 && aPropertyValue.getValueString().trim().length() == 0) {
-  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", true);
+//  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2.txt", true);
+//  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", true);
 //ScriptWriter~~%>
 {
 //ScriptWriter~~~
@@ -339,7 +341,7 @@ iOutputManager.println("", false);
 }
 //ScriptWriter~~~
 
-  iOutputManager.closeOutputFile();
+//  iOutputManager.closeOutputFile();
 }
 
   PropertyCollection lPropertyCollection = aPropertyValue.getPropertyCollection();

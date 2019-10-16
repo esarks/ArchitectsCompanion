@@ -1,1 +1,170 @@
 ,,,,,,Wf Designer,Interfaces
+Request Examination / Evaluation,,,,,,,,,group,1
+Request Examination / Evaluation,Determination of Capacity and Capability,#1: # Wf Designer = 1 Page = 1,,,,10/15/2019,10/31/2019,,workflow,2
+Request Examination / Evaluation,,Wf Designer = 1VA - VBA - Capacity & Capability & Routing (IOC),Reviewed = VBA Approved 10/8,Phase = IOC Entry,,,,,wfdesigner,3
+Request Examination / Evaluation,,Product = ERRA Tool : Determine location to send request,,,,,,,product,4
+Request Examination / Evaluation,Request Examinations / Evaluation to Cerner Site,#2: # Wf Designer = 1 Page = 1,,,,10/4/2019,,,workflow,5
+Request Examination / Evaluation,,Wf Designer = 1VA - VBA - Exam-Management (IOC),Reviewed = Revisit 10/8,Phase = IOC Entry,,,,,wfdesigner,6
+Request Examination / Evaluation,,Product = PowerChart : Search and view medical records,,,,,,,product,7
+Request Examination / Evaluation,,Product = PowerForms : Form 2507 to document requested DBQs,,,,,,,product,8
+Request Examination / Evaluation,,Product = Clinicical Reporting XR : Generic Encounter,,,,,,,product,9
+Request Examination / Evaluation,,Product = Message Center : 2507 Message Template,,,,,,,product,10
+Request Examination / Evaluation,,Product = Message Center : Message Pool,,,,,,,product,11
+Request Examination / Evaluation,,Product = PowerChart : Review Order,,,,,,,product,12
+Request Examination / Evaluation,,Product = MS Outlook : TBD may be Message Center,,,,,,,product,13
+Request Examination / Evaluation,,Product = Scheduling : Sub Flow belongs to Scheduling Council,,,,,,,product,14
+Request Examination / Evaluation,,Product = Ambulatory Organizer : Clinician's view of scheduled appointments,,,,,,,product,15
+Request Examination / Evaluation,,Product = PowerChart : MPage Assessment Component,,,,,,,product,16
+Request Examination / Evaluation,,Product = Revenue Cycle : Patient Access,,,,,,,product,17
+Request Examination / Evaluation,,Interface =  : Upload to VBMS eFolder,,,,,,,interface,18
+Request Examination / Evaluation,,Interface = HL7 SIU : to VBMS,,,,,,,interface,19
+Request Examination / Evaluation,Status Examination,#3: # Wf Designer = 0 Page = 1,,,,10/15/2019,10/31/2019,,workflow,20
+Triage Examination / Evaluation Request,,,,,,,,,group,21
+Triage Examination / Evaluation Request,Review Examination / Evaluation Request,#4: # Wf Designer = 1 Page = 2,,,,10/4/2019,10/15/2019,,workflow,22
+Triage Examination / Evaluation Request,,Wf Designer = 1VA - VBA - Exam-Management (IOC),Reviewed = Revisit 10/8,Phase = IOC Entry,,,,,wfdesigner,23
+Triage Examination / Evaluation Request,,Product = PowerChart : Search and view medical records,,,,,,,product,24
+Triage Examination / Evaluation Request,,Product = PowerForms : Form 2507 to document requested DBQs,,,,,,,product,25
+Triage Examination / Evaluation Request,,Product = Clinicical Reporting XR : Generic Encounter,,,,,,,product,26
+Triage Examination / Evaluation Request,,Product = Message Center : 2507 Message Template,,,,,,,product,27
+Triage Examination / Evaluation Request,,Product = Message Center : Message Pool,,,,,,,product,28
+Triage Examination / Evaluation Request,,Product = PowerChart : Review Order,,,,,,,product,29
+Triage Examination / Evaluation Request,,Product = MS Outlook : TBD may be Message Center,,,,,,,product,30
+Triage Examination / Evaluation Request,,Product = Scheduling : Sub Flow belongs to Scheduling Council,,,,,,,product,31
+Triage Examination / Evaluation Request,,Product = Ambulatory Organizer : Clinician's view of scheduled appointments,,,,,,,product,32
+Triage Examination / Evaluation Request,,Product = PowerChart : MPage Assessment Component,,,,,,,product,33
+Triage Examination / Evaluation Request,,Product = Revenue Cycle : Patient Access,,,,,,,product,34
+Triage Examination / Evaluation Request,,Interface =  : Upload to VBMS eFolder,,,,,,,interface,35
+Triage Examination / Evaluation Request,,Interface = HL7 SIU : to VBMS,,,,,,,interface,36
+Triage Examination / Evaluation Request,Request Clarification,#5: # Wf Designer = 1 Page = 2,,,,10/15/2019,10/31/2019,,workflow,37
+Triage Examination / Evaluation Request,,Wf Designer = 1VA - VBA - Exam-Management (IOC),Reviewed = Revisit 10/8,Phase = IOC Entry,,,,,wfdesigner,38
+Triage Examination / Evaluation Request,,Product = PowerChart : Search and view medical records,,,,,,,product,39
+Triage Examination / Evaluation Request,,Product = PowerForms : Form 2507 to document requested DBQs,,,,,,,product,40
+Triage Examination / Evaluation Request,,Product = Clinicical Reporting XR : Generic Encounter,,,,,,,product,41
+Triage Examination / Evaluation Request,,Product = Message Center : 2507 Message Template,,,,,,,product,42
+Triage Examination / Evaluation Request,,Product = Message Center : Message Pool,,,,,,,product,43
+Triage Examination / Evaluation Request,,Product = PowerChart : Review Order,,,,,,,product,44
+Triage Examination / Evaluation Request,,Product = MS Outlook : TBD may be Message Center,,,,,,,product,45
+Triage Examination / Evaluation Request,,Product = Scheduling : Sub Flow belongs to Scheduling Council,,,,,,,product,46
+Triage Examination / Evaluation Request,,Product = Ambulatory Organizer : Clinician's view of scheduled appointments,,,,,,,product,47
+Triage Examination / Evaluation Request,,Product = PowerChart : MPage Assessment Component,,,,,,,product,48
+Triage Examination / Evaluation Request,,Product = Revenue Cycle : Patient Access,,,,,,,product,49
+Triage Examination / Evaluation Request,,Interface =  : Upload to VBMS eFolder,,,,,,,interface,50
+Triage Examination / Evaluation Request,,Interface = HL7 SIU : to VBMS,,,,,,,interface,51
+Triage Examination / Evaluation Request,Cancel Examination Request,#6: # Wf Designer = 1 Page = 2,,,,10/15/2019,10/31/2019,,workflow,52
+Triage Examination / Evaluation Request,,Wf Designer = 1VA - VBA - Exam-Management (IOC),Reviewed = Revisit 10/8,Phase = IOC Entry,,,,,wfdesigner,53
+Triage Examination / Evaluation Request,,Product = PowerChart : Search and view medical records,,,,,,,product,54
+Triage Examination / Evaluation Request,,Product = PowerForms : Form 2507 to document requested DBQs,,,,,,,product,55
+Triage Examination / Evaluation Request,,Product = Clinicical Reporting XR : Generic Encounter,,,,,,,product,56
+Triage Examination / Evaluation Request,,Product = Message Center : 2507 Message Template,,,,,,,product,57
+Triage Examination / Evaluation Request,,Product = Message Center : Message Pool,,,,,,,product,58
+Triage Examination / Evaluation Request,,Product = PowerChart : Review Order,,,,,,,product,59
+Triage Examination / Evaluation Request,,Product = MS Outlook : TBD may be Message Center,,,,,,,product,60
+Triage Examination / Evaluation Request,,Product = Scheduling : Sub Flow belongs to Scheduling Council,,,,,,,product,61
+Triage Examination / Evaluation Request,,Product = Ambulatory Organizer : Clinician's view of scheduled appointments,,,,,,,product,62
+Triage Examination / Evaluation Request,,Product = PowerChart : MPage Assessment Component,,,,,,,product,63
+Triage Examination / Evaluation Request,,Product = Revenue Cycle : Patient Access,,,,,,,product,64
+Triage Examination / Evaluation Request,,Interface =  : Upload to VBMS eFolder,,,,,,,interface,65
+Triage Examination / Evaluation Request,,Interface = HL7 SIU : to VBMS,,,,,,,interface,66
+Triage Examination / Evaluation Request,Generate Detail Orders,#7: # Wf Designer = 1 Page = 3,,,,10/4/2019,10/15/2019,,workflow,67
+Triage Examination / Evaluation Request,,Wf Designer = 1VA - VBA - Exam-Management - Child Orders (IOC),Reviewed = VBA Approved 10/8,Phase = IOC Entry,,,,,wfdesigner,68
+Triage Examination / Evaluation Request,,Product = PowerChart : ?,,,,,,,product,69
+Triage Examination / Evaluation Request,Modify Examination Request,#8: # Wf Designer = 0 Page = 3,,,,,,,workflow,70
+Schedule Examination,,,,,,,,,group,71
+Schedule Examination,Review Detailed Orders,#9: # Wf Designer = 1 Page = 4,,,,10/15/2019,10/31/2019,,workflow,72
+Schedule Examination,,Wf Designer = 1VA - VBA - Exam-Management - Child Orders (IOC),Reviewed = VBA Approved 10/8,Phase = IOC Entry,,,,,wfdesigner,73
+Schedule Examination,,Product = PowerChart : ?,,,,,,,product,74
+Schedule Examination,Schedule the Examination / Evaluation,#10: # Wf Designer = 1 Page = 4,,,,10/4/2019,10/15/2019,,workflow,75
+Schedule Examination,,Wf Designer = 1VA - VBA - Scheduling - Ambulatory - VBA Record an Appointment Contact,Reviewed = ,Phase = ,,,,,wfdesigner,76
+Schedule Examination,Manage Appointment,#11: # Wf Designer = 1 Page = 4,,,,10/15/2019,10/31/2019,,workflow,77
+Schedule Examination,,Wf Designer = 1VA - VBA - Scheduling - Ambulatory - VBA Record an Appointment Contact,Reviewed = ,Phase = ,,,,,wfdesigner,78
+Conduct Examinations,,,,,,,,,group,79
+Conduct Examinations,Conduct Examinations,#12: # Wf Designer = 1 Page = 5,,,,10/15/2019,10/31/2019,,workflow,80
+Conduct Examinations,,Wf Designer = 1VA - VBA - Scheduling - Ambulatory - VBA Record an Appointment Contact,Reviewed = ,Phase = ,,,,,wfdesigner,81
+Conduct Examinations,Perform Examination,#13: # Wf Designer = 2 Page = 5,,,,10/4/2019,10/15/2019,,workflow,82
+Conduct Examinations,,Wf Designer = 1VA - VBA - Exam-Management (IOC),Reviewed = Revisit 10/8,Phase = IOC Entry,,,,,wfdesigner,83
+Conduct Examinations,,Product = PowerChart : Search and view medical records,,,,,,,product,84
+Conduct Examinations,,Product = PowerForms : Form 2507 to document requested DBQs,,,,,,,product,85
+Conduct Examinations,,Product = Clinicical Reporting XR : Generic Encounter,,,,,,,product,86
+Conduct Examinations,,Product = Message Center : 2507 Message Template,,,,,,,product,87
+Conduct Examinations,,Product = Message Center : Message Pool,,,,,,,product,88
+Conduct Examinations,,Product = PowerChart : Review Order,,,,,,,product,89
+Conduct Examinations,,Product = MS Outlook : TBD may be Message Center,,,,,,,product,90
+Conduct Examinations,,Product = Scheduling : Sub Flow belongs to Scheduling Council,,,,,,,product,91
+Conduct Examinations,,Product = Ambulatory Organizer : Clinician's view of scheduled appointments,,,,,,,product,92
+Conduct Examinations,,Product = PowerChart : MPage Assessment Component,,,,,,,product,93
+Conduct Examinations,,Product = Revenue Cycle : Patient Access,,,,,,,product,94
+Conduct Examinations,,Interface =  : Upload to VBMS eFolder,,,,,,,interface,95
+Conduct Examinations,,Interface = HL7 SIU : to VBMS,,,,,,,interface,96
+Conduct Examinations,,Wf Designer = 1VA - VBA - Perform Examination (IOC),Reviewed = VBA Conditional Approval 10/8,Phase = IOC Entry,,,,,wfdesigner,97
+Conduct Examinations,,Product = PowerForms : Form 2507,,,,,,,product,98
+Conduct Examinations,,Product = PowerChart : ,,,,,,,product,99
+Conduct Examinations,,Product = VBMS : ,,,,,,,product,100
+Conduct Examinations,,Product = CAPRI : ,,,,,,,product,101
+Conduct Examinations,,Product = JLV : ,,,,,,,product,102
+Conduct Examinations,,Product = AHLTA : ,,,,,,,product,103
+Conduct Examinations,,Product = PowerForms : Specific DBQ,,,,,,,product,104
+Conduct Examinations,Deliver Examination Results,#14: # Wf Designer = 1 Page = 5,,,,10/4/2019,10/15/2019,,workflow,105
+Conduct Examinations,,Wf Designer = 1VA - VBA - Exam-Management (IOC),Reviewed = Revisit 10/8,Phase = IOC Entry,,,,,wfdesigner,106
+Conduct Examinations,,Product = PowerChart : Search and view medical records,,,,,,,product,107
+Conduct Examinations,,Product = PowerForms : Form 2507 to document requested DBQs,,,,,,,product,108
+Conduct Examinations,,Product = Clinicical Reporting XR : Generic Encounter,,,,,,,product,109
+Conduct Examinations,,Product = Message Center : 2507 Message Template,,,,,,,product,110
+Conduct Examinations,,Product = Message Center : Message Pool,,,,,,,product,111
+Conduct Examinations,,Product = PowerChart : Review Order,,,,,,,product,112
+Conduct Examinations,,Product = MS Outlook : TBD may be Message Center,,,,,,,product,113
+Conduct Examinations,,Product = Scheduling : Sub Flow belongs to Scheduling Council,,,,,,,product,114
+Conduct Examinations,,Product = Ambulatory Organizer : Clinician's view of scheduled appointments,,,,,,,product,115
+Conduct Examinations,,Product = PowerChart : MPage Assessment Component,,,,,,,product,116
+Conduct Examinations,,Product = Revenue Cycle : Patient Access,,,,,,,product,117
+Conduct Examinations,,Interface =  : Upload to VBMS eFolder,,,,,,,interface,118
+Conduct Examinations,,Interface = HL7 SIU : to VBMS,,,,,,,interface,119
+Claims Establishment,,,,,,,,,group,120
+Medical Records Review,,,,,,,,,group,121
+Medical Records Review,Enterprise Search,#15: # Wf Designer = 1 Page = 6,,,,10/15/2019,10/31/2019,,workflow,122
+Medical Records Review,,Wf Designer = 1VA - VBA - Enterprise Medical Records Search (IOC),Reviewed = VBA Approved 10/8,Phase = IOC Entry,,,,,wfdesigner,123
+Medical Records Review,,Product = CAPRI : Enterprise search,,,,,,,product,124
+Medical Records Review,,Product = VBMS : ,,,,,,,product,125
+Medical Records Review,,Product = JLV : DoD records search,,,,,,,product,126
+Medical Records Review,,Product = Clinicical Reporting XR : Reports; May access from AccessHIM (TBD),,,,,,,product,127
+Medical Records Review,,Product = TBD : Pilot user retrieves claim,,,,,,,product,128
+Medical Records Review,,Interface = Manual : Drop files to a location,,,,,,,interface,129
+Medical Records Review,Search Patient Record,#16: # Wf Designer = 1 Page = 6,,,,10/15/2019,10/31/2019,,workflow,130
+Medical Records Review,,Wf Designer = 1VA - VBA - Enterprise Medical Records Search (IOC),Reviewed = VBA Approved 10/8,Phase = IOC Entry,,,,,wfdesigner,131
+Medical Records Review,,Product = CAPRI : Enterprise search,,,,,,,product,132
+Medical Records Review,,Product = VBMS : ,,,,,,,product,133
+Medical Records Review,,Product = JLV : DoD records search,,,,,,,product,134
+Medical Records Review,,Product = Clinicical Reporting XR : Reports; May access from AccessHIM (TBD),,,,,,,product,135
+Medical Records Review,,Product = TBD : Pilot user retrieves claim,,,,,,,product,136
+Medical Records Review,,Interface = Manual : Drop files to a location,,,,,,,interface,137
+Medical Records Review,Assemble Record Extract,#17: # Wf Designer = 1 Page = 6,,,,10/15/2019,10/31/2019,,workflow,138
+Medical Records Review,,Wf Designer = 1VA - VBA - Enterprise Medical Records Search (IOC),Reviewed = VBA Approved 10/8,Phase = IOC Entry,,,,,wfdesigner,139
+Medical Records Review,,Product = CAPRI : Enterprise search,,,,,,,product,140
+Medical Records Review,,Product = VBMS : ,,,,,,,product,141
+Medical Records Review,,Product = JLV : DoD records search,,,,,,,product,142
+Medical Records Review,,Product = Clinicical Reporting XR : Reports; May access from AccessHIM (TBD),,,,,,,product,143
+Medical Records Review,,Product = TBD : Pilot user retrieves claim,,,,,,,product,144
+Medical Records Review,,Interface = Manual : Drop files to a location,,,,,,,interface,145
+Medical Records Review,Transmit Medical Records,#18: # Wf Designer = 1 Page = 7,,,,10/15/2019,,,workflow,146
+Medical Records Review,,Wf Designer = 1VA - VBA - Enterprise Medical Records Search (IOC),Reviewed = VBA Approved 10/8,Phase = IOC Entry,,,,,wfdesigner,147
+Medical Records Review,,Product = CAPRI : Enterprise search,,,,,,,product,148
+Medical Records Review,,Product = VBMS : ,,,,,,,product,149
+Medical Records Review,,Product = JLV : DoD records search,,,,,,,product,150
+Medical Records Review,,Product = Clinicical Reporting XR : Reports; May access from AccessHIM (TBD),,,,,,,product,151
+Medical Records Review,,Product = TBD : Pilot user retrieves claim,,,,,,,product,152
+Medical Records Review,,Interface = Manual : Drop files to a location,,,,,,,interface,153
+Medical Records Review,Form 7131,#19: # Wf Designer = 1 Page = 7,,,,10/15/2019,10/31/2019,,workflow,154
+Medical Records Review,,Wf Designer = 1VA - VBA - 7131 Process,Reviewed = ,Phase = ,,,,,wfdesigner,155
+Medical Records Review,,Product = Access HIM : ROI,,,,,,,product,156
+Medical Records Review,,Product = Revenue Cycle : Appointments Perspective,,,,,,,product,157
+Medical Records Review,,Interface = HL7 ORU : to DAS,,,,,,,interface,158
+Review Examinations,,,,,,,,,group,159
+Review Examinations,Request Examination Re-Work - Insufficient,#20: # Wf Designer = 0 Page = 8,,,,10/15/2019,10/31/2019,,workflow,160
+VR&E,,,,,,,,,group,161
+VR&E,Request Medical Services,#21: # Wf Designer = 1 Page = 9,,,,10/15/2019,,,workflow,162
+VR&E,,Wf Designer = 1VA - VBA - VR&E Block 1,Reviewed = ,Phase = ,,,,,wfdesigner,163
+VR&E,Manage Service Requests,#22: # Wf Designer = 1 Page = 9,,,,10/15/2019,,,workflow,164
+VR&E,,Wf Designer = 1VA - VBA - VR&E Block 1,Reviewed = ,Phase = ,,,,,wfdesigner,165
+VR&E,Deliver Medical Services,#23: # Wf Designer = 1 Page = 10,,,,10/15/2019,,,workflow,166
+VR&E,,Wf Designer = 1VA - VBA - VR&E Block 1,Reviewed = ,Phase = ,,,,,wfdesigner,167
+VR&E,Review Results,#24: # Wf Designer = 1 Page = 10,,,,10/15/2019,,,workflow,168
+VR&E,,Wf Designer = 1VA - VBA - VR&E Block 1,Reviewed = ,Phase = ,,,,,wfdesigner,169

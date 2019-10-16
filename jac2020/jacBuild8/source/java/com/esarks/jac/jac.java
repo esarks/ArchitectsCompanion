@@ -193,7 +193,7 @@ public class jac {
 //$Section=Operation$ID=3F9D943B01AA$Preserve=yes
 
         System.out.println("Architects Companion");
-        System.out.println("jac v2009.02.01");
+        System.out.println("jac2020 v2019.10.15");
         System.out.println("(c) Copyright 2009-2019, Architects of Software Design, Corp.  ALL RIGHTS RESERVED.");
 
         jac ljac = new jac();

@@ -1,516 +1,525 @@
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:1: package <#[$jac:script:package]#>;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:2: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:3: import com.esarks.jac.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:4: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:5: import java.time.Duration;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:6: import java.time.Instant;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:7: import java.time.Period;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:8: import java.time.ZoneId;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:9: import java.time.LocalDate;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:10: import java.time.LocalDateTime;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:11: import java.time.LocalTime;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:12: import java.time.format.DateTimeFormatter;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:13: import java.time.format.FormatStyle;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:14: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:15: import java.util.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:16: import java.lang.reflect.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:17: import java.io.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:18: import java.text.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:19: import java.net.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:20: import javax.net.ssl.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:21: import java.security.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:22: import java.sql.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:23: import javax.servlet.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:24: import javax.servlet.http.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:25: import java.awt.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:26: import javax.swing.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:27: import com.esarks.mic.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:28: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:29: import java.nio.file.Files;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:30: import java.nio.file.Paths;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:31: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:32: import java.io.FileNotFoundException;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:33: import java.io.FileReader;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:34: import java.io.IOException;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:35: import java.util.Iterator;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:36: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:37: import org.json.simple.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:38: import org.json.simple.parser.*;
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:39: 
-C:\ArchitectsCompanion\jac2017\conf\micImport.script:40: <#import#>
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:2: 
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:4:   }
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:5: 
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:7: 
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:8:     super(aScript);
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:9: 
-C:\ArchitectsCompanion\jac2017\conf\micPrefix.script:10:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:1: import java.io.File
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:2: import java.io.FileNotFoundException
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:3: import java.io.FileOutputStream
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:4: import java.io.IOException
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:5: import java.io.OutputStream
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:6: import java.io.IOException;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:7: import java.text.SimpleDateFormat;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:8: import java.util.Date;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:9: import ca.uhn.hl7v2.DefaultHapiContext
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:10: import ca.uhn.hl7v2.HL7Exception
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:11: import ca.uhn.hl7v2.HapiContext
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:12: import ca.uhn.hl7v2.parser.Parser
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:13: import ca.uhn.hl7v2.model.Message
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:14: import ca.uhn.hl7v2.validation.builder.support.DefaultValidationBuilder
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:15: import ca.uhn.hl7v2.validation.builder.support.NoValidationBuilder
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:16: import ca.uhn.hl7v2.model.DataTypeException;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:17: import ca.uhn.hl7v2.model.v23.datatype.PL
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:18: import ca.uhn.hl7v2.model.v23.datatype.XAD
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:19: import ca.uhn.hl7v2.model.v23.datatype.XCN
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:20: import ca.uhn.hl7v2.model.v23.datatype.XPN
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:21: import ca.uhn.hl7v2.model.v23.message.SIU_S12
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:22: import ca.uhn.hl7v2.model.v23.message.SIU_S13
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:23: import ca.uhn.hl7v2.model.v23.message.SIU_S14
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:24: import ca.uhn.hl7v2.model.v23.message.SIU_S15
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:25: import ca.uhn.hl7v2.model.v23.message.SIU_S16
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:26: import ca.uhn.hl7v2.model.v23.message.SIU_S17
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:27: import ca.uhn.hl7v2.model.v23.message.SIU_S18
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:28: import ca.uhn.hl7v2.model.v23.message.SIU_S19
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:29: import ca.uhn.hl7v2.model.v23.message.SIU_S20
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:30: import ca.uhn.hl7v2.model.v23.message.SIU_S21
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:31: import ca.uhn.hl7v2.model.v23.message.SIU_S22
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:32: import ca.uhn.hl7v2.model.v23.message.SIU_S23
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:33: import ca.uhn.hl7v2.model.v23.message.SIU_S24
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:34: import ca.uhn.hl7v2.model.v23.message.SIU_S26
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:35: import ca.uhn.hl7v2.model.v23.segment.MSH
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:36: import ca.uhn.hl7v2.model.v23.segment.SCH
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:37: import ca.uhn.hl7v2.model.v23.segment.NTE
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:38: import ca.uhn.hl7v2.model.v23.segment.PID
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:39: import ca.uhn.hl7v2.model.v23.segment.PV1
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:40: import ca.uhn.hl7v2.model.v23.segment.PV2
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:41: import ca.uhn.hl7v2.model.v23.segment.OBX
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:42: import ca.uhn.hl7v2.model.v23.segment.DG1
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:43: import ca.uhn.hl7v2.model.v23.segment.RGS
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:44: import ca.uhn.hl7v2.model.v23.segment.AIS
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:45: import ca.uhn.hl7v2.model.v23.message.ORM_O01
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:46: import ca.uhn.hl7v2.model.v23.message.ORR_O02
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:47: import ca.uhn.hl7v2.model.v23.message.ORU_R01
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:48: import ca.uhn.hl7v2.model.v23.group.ORU_R01_OBSERVATION
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:49:       
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:50: public HapiContext iHapiContext = new DefaultHapiContext();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:51: public int iSequence = 0;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:52: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:53: public void execute() {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:54: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:55: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:56: //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\MinimalGenericDbq.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:57: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:58: //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\GenericDbqWithEnhancements.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:59:     iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\GeneralMedicalSeparationHealthAssessmentSample.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:60: //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\HL7\\SHA_DBQ_v19_3.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:61: //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\HL7\\DBQ\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\GeneralMedicalSeparationHealthAssessmentSample.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:62: //  iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\ExamManagement-3.0rc5.iepd\\XMLschemas\\exchange\\ExamManagement-3.0.xsd");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:63: //  iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiTest.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:64: //  iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\ExamManagement-3.0rc5.iepd\\XMLsamples\\3.0\\basic_exam_schedule_request\\1_ExamSchedulingRequestCreatedEvent.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:65: //  iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\ExamManageme//nt-3.0rc5.iepd\\XMLsamples\\3.0\\basic_exam_schedule_request\\1_ExamSchedulingRequestCreatedEvent_HL7Map.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:66: //  iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\ExamManageme//nt-3.0rc5.iepd\\XMLsamples\\3.0\\basic_exam_schedule_request\\1_ExamSchedulingRequestCreatedEvent.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:67: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:68: //  PropertyCollection lPropertyCollection = iSymbolTable.getPropertyCollection();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:69: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:70: //  iterateSymbolTable(iSymbolTable.getPropertyCollection(), "em~ExamManagementEventNotification", "");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:71: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:72: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:73: A1:A2=<![A1:A2]!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:74: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:75: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:76: //<A1 A2="2" A3="3">1
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:77: //  <A4 A5="5"/>4
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:78: //  <A6>6</A6>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:79: //</A1>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:80: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:81:   PropertyCollection lPropertyCollection = iSymbolTable.getPropertyCollection(); 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:82:   PropertyValues lPropertyValues = lPropertyCollection.getPropertyValues("cld~Claim", false);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:83: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:84: lPropertyValues = <!%lPropertyValues.getName()!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:85: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:86: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:87:   iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", false);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:88:   iOutputManager.closeOutputFile();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:89: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:90: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:91: //  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut.xml", false);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:92:   iteratePropertyValues(lPropertyValues, lPropertyValues.getName(), "");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:93: //  iOutputManager.closeOutputFile();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:94: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:95: //  iteratePropertyValue(lPropertyValue, "ExamManagementEventNotification", "");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:96: //  iterateSymbolTable(iSymbolTable);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:97: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:98: //  iOutputManager.closeOutputFile();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:99: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:100: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:101: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:102: public void iterateSymbolTableB(SymbolTable aSymbolTable) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:103: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:104: // Get the root PropertyCollection from SymbolTable
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:105: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:106:   PropertyCollection lPropertyCollection = aSymbolTable.getPropertyCollection(); 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:107: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:108: // Get the LinkedHashMap from the PropertyCollection object; then Set; then Iterator
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:109: // This will allow iteration in FIFO order
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:110:   LinkedHashMap lMap = (LinkedHashMap) lPropertyCollection.getProperties();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:111:   Set lSet = lMap.entrySet();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:112:   Iterator lIterator = lSet.iterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:113: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:114: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:115:   while (lIterator.hasNext()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:116:     PropertyValues lPropertyValues = (PropertyValues) ((Map.Entry)lIterator.next()).getValue();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:117: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:118:     lPropertyValues.resetIterator(0);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:119:     int lSize = lPropertyValues.size();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:120: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:121:     for (int lIdx = 1; lIdx <= lSize; lIdx++) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:122:       PropertyValue lPropertyValue = lPropertyValues.get(lIdx);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:123:       Object lValueObject = lPropertyValue.getValueObject();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:124:       PropertyCollection lPropertyCollection2 = lPropertyValue.getPropertyCollection();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:125:       if (lPropertyCollection2 != null) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:126:         iteratePropertyCollection(lPropertyCollection2, lPropertyValues.getName(), " ");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:127:       }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:128:     }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:129:   }  
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:130: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:131: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:132: public void iterateSymbolTable(SymbolTable aSymbolTable) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:133: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:134: // Symbol table has a PropertyCollection
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:135: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:136:   PropertyCollection lPropertyCollection = aSymbolTable.getPropertyCollection(); 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:137:   iteratePropertyCollection(lPropertyCollection, lPropertyCollection.getName(), " ");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:138:   
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:139: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:140: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:141: public void iteratePropertyCollection(PropertyCollection aPropertyCollection, String aName, String aIndent) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:142: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:143: // PropertyCollection has Name and LinkedHashList of Named PropertyValues
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:144: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:145:   LinkedHashMap lMap = (LinkedHashMap) aPropertyCollection.getProperties();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:146:   Set lSet = lMap.entrySet();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:147:   Iterator lIterator = lSet.iterator();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:148: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:149:   while (lIterator.hasNext()) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:150:     PropertyValues lPropertyValues = (PropertyValues) ((Map.Entry)lIterator.next()).getValue();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:151:     iteratePropertyValues(lPropertyValues, lPropertyValues.getName(), aIndent + " ");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:152:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:153: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:154: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:155: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:156: public void iteratePropertyValues(PropertyValues aPropertyValues, String aName, String aIndent) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:157: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:158: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:159: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:160: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:161: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:162:   iSequence++;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:163:   int lSequence = iSequence;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:164:       
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:165:   int lChar = aName.indexOf('~');
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:166:   if (lChar > -1) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:167:     aName = aName.substring(lChar+1);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:168:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:169:   
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:170:   aPropertyValues.resetIterator(0);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:171:   int lSize = aPropertyValues.size();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:172: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:173: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:174: <!%aIndent!><<!%aName!>><%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:175: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:176:   for (int lIdx = 1; lIdx <= lSize; lIdx++) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:177:     PropertyValue lPropertyValue = aPropertyValues.get(lIdx);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:178:     iteratePropertyValue(lPropertyValue, aName, aIndent + " ");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:179:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:180: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:181: //<HL7 Message="" Segment=""/></<!%aName!>>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:182: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:183:   if (lSequence == iSequence) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:184: %>@@@@</<!%aName!>><%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:185:   } else {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:186: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:187: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:188: <!%aIndent!></<!%aName!>><%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:189:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:190:   
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:191: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:192: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:193: public void iteratePropertyValue(PropertyValue aPropertyValue, String aName, String aIndent) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:194: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:195:   Object lValueObject = aPropertyValue.getValueObject();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:196: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:197: //<!%lValueObject!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:198: %>%%%%<!%aName!>****<!%aPropertyValue.getValueString()!><%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:199: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:200:   if (aName.trim().length() > 0 && aPropertyValue.getValueString().trim().length() > 0) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:201:   iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", true);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:202: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:203: <!%aName!>,<!%aPropertyValue.getValueString()!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:204: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:205:   iOutputManager.closeOutputFile();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:206: } else if (aName.trim().length() > 0 && aPropertyValue.getValueString().trim().length() == 0) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:207:   iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", true);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:208: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:209: <!%aName!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:210: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:211:   iOutputManager.closeOutputFile();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:212: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:213: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:214:   PropertyCollection lPropertyCollection = aPropertyValue.getPropertyCollection();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:215:   if (lPropertyCollection != null) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:216:     iteratePropertyCollection(lPropertyCollection, aName, aIndent + " ");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:217:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:218:   
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:219: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:220: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:221: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:222: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:223: public void executexx() {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:224: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:225: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:226: schemaLocation                ** <![em~ExamManagementEventNotification:xsi~schemaLocation]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:227: participatingSystemName       ** <![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:228: -hl7Msg                       ** <![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName:hl7:Message]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:229: -hl7Seg                       ** <![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName:hl7:Segment]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:230: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:231: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:232: participatingSystemName       ** <![em~ExamManagementEventNotification:em~Destination:participatingSystemName]!> ** VBA Contractor
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:233: contractorName                ** <![em~ExamManagementEventNotification:em~Destination:contractorName]!> ** QTC1
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:234:                               
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:235: eventUuid                     ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:eventUuid]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:236: eventDtg                      ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:eventDtg]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:237: modelVersion                  ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:modelVersion]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:238: previousEventUuid             ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:previousEventUuid]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:239: examSchedulingRequestUuid     ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:examSchedulingRequestUuid]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:240: -hl7Msg                       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:examSchedulingRequestUuid:hl7:Message]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:241: -hl7Seg                       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:examSchedulingRequestUuid:hl7:Segment]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:242: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:243: participatingSystemName       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~EventSource:participatingSystemName]!> ** VBMS2
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:244: -hl7Msg                       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~EventSource:participatingSystemName:hl7:Message]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:245: -hl7Seg                       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~EventSource:participatingSystemName:hl7:Segment]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:246: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:247: PostDischargeClaimInformation ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~PostDischargeClaimInformation:claimDate]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:248: -VeteranServiceMemberInfo     ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~PostDischargeClaimInformation:em~VeteranServiceMemberInfo:fullName]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:249: --Address                     ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~PostDischargeClaimInformation:em~VeteranServiceMemberInfo:em~Address:em~Address1]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:250: --Phone                       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~PostDischargeClaimInformation:em~VeteranServiceMemberInfo:em~Phone:primaryPhone]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:251: --PeriodsOfService            ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~PostDischargeClaimInformation:em~VeteranServiceMemberInfo:em~PeriodsOfService:em~Period:branchOfService]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:252: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:253: ExamRelatedContentions        ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:examRelatedContentionUuid]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:254: -ContentionName               ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:em~ContentionName]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:255: -Classification               ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:em~Classification:code]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:256: --name                        ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:em~Classification:name]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:257: -DbqRequest                   ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:em~DbqRequests:em~DbqRequest:name]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:258: --NarrativeEntry              ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:em~DbqRequests:em~DbqRequest:em~NarrativeEntry]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:259: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:260: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:261: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:262: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:263: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:264: public SIU_S12 createSIU_S12Message(String aSendingApplication,
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:265:                                     String aSendingFacility,
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:266:                                     String aReceivingApplication,
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:267:                                     String aReceivingFacility
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:268:                                    ) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:269: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:270:   SIU_S12 lSIU_S12 = null;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:271:   
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:272:   try {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:273:     lSIU_S12 = new SIU_S12();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:274: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:275:     MSH lmshSegment = lSIU_S12.getMSH();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:276:     lmshSegment.getFieldSeparator().setValue("|");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:277:     lmshSegment.getEncodingCharacters().setValue("^~\\&");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:278:     lmshSegment.getSendingApplication().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~Destination:participatingSystemName]!>);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:279:     lmshSegment.getSendingFacility().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:name]!>);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:280:     lmshSegment.getReceivingApplication().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName]!>);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:281:     lmshSegment.getReceivingFacility().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:name]!>);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:282: //    lmshSegment.getDateTimeOfMessage().getTimeOfAnEvent().setValue(currentDateTimeString);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:283:     lmshSegment.getMessageControlID().setValue(getSequenceNumber());
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:284: //    lmshSegment.getVersionID().getVersionID().setValue("2.3");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:285: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:286:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:287:   catch(Exception e) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:288: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:289: Here Exception <!%e!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:290: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:291:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:292: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:293:     return lSIU_S12;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:294:     
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:295: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:296: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:297:  
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:298: public void execute1() {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:299: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:300:   iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\ExamManagement-3.0rc5.iepd\\XMLsamples\\3.0\\basic_exam_schedule_request_with_mult_contentions\\1_ExamSchedulingRequestCreatedEvent.xml");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:301: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:302: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:303: participatingSystemName   ** <![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:304: contractorName            ** <![em~ExamManagementEventNotification:em~OriginatingSystem:contractorName]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:305: participatingSystemName   ** <![em~ExamManagementEventNotification:em~Destination:participatingSystemName]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:306: eventUuid                 ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:eventUuid]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:307: eventDtg                  ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:eventDtg]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:308: examName                  ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:examName]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:309: modelVersion              ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:modelVersion]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:310: examAppointmentUuid       ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:examAppointmentUuid]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:311: scheduledDateTime         ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:scheduledDateTime]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:312: previousEventUuid         ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:previousEventUuid]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:313: examSchedulingRequestUuid ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:examSchedulingRequestUuid]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:314: id                        ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:id]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:315: name                      ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:name]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:316: Address1                  ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:em~Address:em~Address1]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:317: City                      ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:em~Address:em~City]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:318: State                     ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:em~Address:em~State]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:319: ZipOrPostalCode           ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:em~Address:em~ZipOrPostalCode]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:320: Country                   ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:em~Address:em~Country]!> **
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:321: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:322: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:323:   try {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:324:     SIU_S12 lSIU_S12 = new SIU_S12();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:325: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:326:     MSH lmshSegment = lSIU_S12.getMSH();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:327:     lmshSegment.getFieldSeparator().setValue("|");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:328:     lmshSegment.getEncodingCharacters().setValue("^~\\&");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:329:     lmshSegment.getSendingApplication().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~Destination:participatingSystemName]!>);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:330:     lmshSegment.getSendingFacility().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:name]!>);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:331:     lmshSegment.getReceivingApplication().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName]!>);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:332:     lmshSegment.getReceivingFacility().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:name]!>);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:333: //    lmshSegment.getDateTimeOfMessage().getTimeOfAnEvent().setValue(currentDateTimeString);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:334:     lmshSegment.getMessageControlID().setValue(getSequenceNumber());
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:335: //    lmshSegment.getVersionID().getVersionID().setValue("2.3");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:336: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:337:     SCH lschSegment = lSIU_S12.getSCH();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:338:     lschSegment.getFillerAppointmentID().getUniversalID().setValue(<![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:eventUuid]!>);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:339: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:340:     // Now, let's encode the message and look at the output
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:341:     Parser lParser = iHapiContext.getPipeParser();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:342:     String lEncodedMessage = lParser.encode(lSIU_S12);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:343:     System.out.println("Printing ER7 Encoded Message:");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:344:     System.out.println(lEncodedMessage);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:345: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:346:     // Next, let's use the XML parser to encode as XML
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:347:     lParser = iHapiContext.getXMLParser();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:348:     lEncodedMessage = lParser.encode(lSIU_S12);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:349:     System.out.println("Printing XML Encoded Message:");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:350:     System.out.println(lEncodedMessage);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:351: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:352:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:353:   catch(Exception e) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:354: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:355: Here Exception <!%e!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:356: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:357: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:358:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:359:   
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:360: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:361: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:362: public void executex() {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:363: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:364:   iHapiContext.setValidationRuleBuilder(new NoValidationBuilder());
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:365:   Message lMessage = null;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:366:   SIU_S12 lSIU_S12 = null;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:367:   
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:368:   try {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:369:     //  Block of code to try
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:370:     lSIU_S12 = (SIU_S12) createMessage("SIU_S12");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:371: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:372:     // Populate the MSH Segment
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:373: //    MSH lMshSegment = lSIU_S12.getMSH();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:374: //    lMshSegment.getSendingApplication().getNamespaceID().setValue("TestSendingSystem");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:375: //    lMshSegment.getSequenceNumber().setValue("123");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:376: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:377:     MSH mshSegment = lSIU_S12.getMSH();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:378:     mshSegment.getFieldSeparator().setValue("|");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:379:     mshSegment.getEncodingCharacters().setValue("^~\\\\&");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:380:     mshSegment.getSendingApplication().getNamespaceID().setValue("Our System");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:381:     mshSegment.getSendingFacility().getNamespaceID().setValue("Our Facility");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:382:     mshSegment.getReceivingApplication().getNamespaceID().setValue("Their Remote System");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:383:     mshSegment.getReceivingFacility().getNamespaceID().setValue("Their Remote Facility");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:384: //    mshSegment.getDateTimeOfMessage().getTimeOfAnEvent().setValue(currentDateTimeString);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:385:     mshSegment.getMessageControlID().setValue(getSequenceNumber());
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:386: //    mshSegment.getVersionID().getVersionID().setValue("2.4");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:387:    
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:388: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:389: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:390: Here1
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:391: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:392: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:393:     // Now, let's encode the message and look at the output
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:394:     Parser lParser = iHapiContext.getPipeParser();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:395:     String lEncodedMessage = lParser.encode(lSIU_S12);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:396:     System.out.println("Printing ER7 Encoded Message:");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:397:     System.out.println(lEncodedMessage);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:398: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:399:     // Next, let's use the XML parser to encode as XML
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:400:     lParser = iHapiContext.getXMLParser();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:401:     lEncodedMessage = lParser.encode(lSIU_S12);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:402:     System.out.println("Printing XML Encoded Message:");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:403:     System.out.println(lEncodedMessage);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:404: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:405: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:406: Here1a
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:407: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:408: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:409:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:410:   catch(Exception e) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:411:     //  Block of code to handle errors
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:412: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:413: Here Exception <!%e!>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:414: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:415: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:416:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:417:  
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:418: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:419:   
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:420: %>
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:421: Here2
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:422: <%
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:423: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:424: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:425: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:426: public Message createMessage(String aMessageType) throws HL7Exception {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:427: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:428:   if (aMessageType.equals("SIU_S12")) {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:429:     return mySIUMessageBuilder();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:430:   }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:431: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:432: // Consider throwing not handled exception
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:433: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:434:   return null;
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:435:   
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:436: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:437: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:438: public Message mySIUMessageBuilder() throws HL7Exception {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:439: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:440:   return new SIU_S12();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:441: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:442: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:443: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:444: public void createMshSegment(String currentDateTimeString) throws DataTypeException {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:445: //  MSH mshSegment = _adtMessage.getMSH();
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:446: //  mshSegment.getFieldSeparator().setValue("|");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:447: //  mshSegment.getEncodingCharacters().setValue("^~\\\\&");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:448: //  mshSegment.getSendingApplication().getNamespaceID().setValue("Our System");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:449: //  mshSegment.getSendingFacility().getNamespaceID().setValue("Our Facility");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:450: //  mshSegment.getReceivingApplication().getNamespaceID().setValue("Their Remote System");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:451: //  mshSegment.getReceivingFacility().getNamespaceID().setValue("Their Remote Facility");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:452: //  mshSegment.getDateTimeOfMessage().getTimeOfAnEvent().setValue(currentDateTimeString);
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:453: //  mshSegment.getMessageControlID().setValue(getSequenceNumber());
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:454: //  mshSegment.getVersionID().getVersionID().setValue("2.4");
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:455: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:456: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:457: private String getCurrentTimeStamp() {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:458:   return new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:459: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:460: 
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:461: private String getSequenceNumber() {
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:462:   String facilityNumberPrefix = "1234"; // some arbitrary prefix for the facility
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:463:   return facilityNumberPrefix.concat(getCurrentTimeStamp());
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:464: }
-C:\ArchitectsCompanion\jac2017\app\ehrm\Hapi.script:465: 
-C:\ArchitectsCompanion\jac2017\conf\micPostfix.script:1: }
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:3: import com.esarks.jac.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:4: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:5: import java.time.Duration;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:6: import java.time.Instant;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:7: import java.time.Period;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:8: import java.time.ZoneId;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:9: import java.time.LocalDate;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:10: import java.time.LocalDateTime;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:11: import java.time.LocalTime;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:12: import java.time.format.DateTimeFormatter;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:13: import java.time.format.FormatStyle;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:14: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:15: import java.util.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:16: import java.lang.reflect.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:17: import java.io.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:18: import java.text.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:19: import java.net.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:20: import javax.net.ssl.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:21: import java.security.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:22: import java.sql.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:23: import javax.servlet.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:24: import javax.servlet.http.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:25: import java.awt.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:26: import javax.swing.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:27: import com.esarks.mic.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:28: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:29: import java.nio.file.Files;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:30: import java.nio.file.Paths;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:31: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:32: import java.io.FileNotFoundException;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:33: import java.io.FileReader;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:34: import java.io.IOException;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:35: import java.util.Iterator;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:36: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:37: import org.json.simple.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:38: import org.json.simple.parser.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:39: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:40: <#import#>
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:4:   }
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:5: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:7: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:8:     super(aScript);
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:9: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:10:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:1: import java.io.File
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:2: import java.io.FileNotFoundException
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:3: import java.io.FileOutputStream
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:4: import java.io.IOException
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:5: import java.io.OutputStream
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:6: import java.io.IOException;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:7: import java.text.SimpleDateFormat;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:8: import java.util.Date;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:9: import ca.uhn.hl7v2.DefaultHapiContext
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:10: import ca.uhn.hl7v2.HL7Exception
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:11: import ca.uhn.hl7v2.HapiContext
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:12: import ca.uhn.hl7v2.parser.Parser
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:13: import ca.uhn.hl7v2.model.Message
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:14: import ca.uhn.hl7v2.validation.builder.support.DefaultValidationBuilder
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:15: import ca.uhn.hl7v2.validation.builder.support.NoValidationBuilder
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:16: import ca.uhn.hl7v2.model.DataTypeException;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:17: import ca.uhn.hl7v2.model.v23.datatype.PL
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:18: import ca.uhn.hl7v2.model.v23.datatype.XAD
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:19: import ca.uhn.hl7v2.model.v23.datatype.XCN
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:20: import ca.uhn.hl7v2.model.v23.datatype.XPN
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:21: import ca.uhn.hl7v2.model.v23.message.SIU_S12
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:22: import ca.uhn.hl7v2.model.v23.message.SIU_S13
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:23: import ca.uhn.hl7v2.model.v23.message.SIU_S14
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:24: import ca.uhn.hl7v2.model.v23.message.SIU_S15
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:25: import ca.uhn.hl7v2.model.v23.message.SIU_S16
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:26: import ca.uhn.hl7v2.model.v23.message.SIU_S17
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:27: import ca.uhn.hl7v2.model.v23.message.SIU_S18
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:28: import ca.uhn.hl7v2.model.v23.message.SIU_S19
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:29: import ca.uhn.hl7v2.model.v23.message.SIU_S20
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:30: import ca.uhn.hl7v2.model.v23.message.SIU_S21
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:31: import ca.uhn.hl7v2.model.v23.message.SIU_S22
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:32: import ca.uhn.hl7v2.model.v23.message.SIU_S23
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:33: import ca.uhn.hl7v2.model.v23.message.SIU_S24
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:34: import ca.uhn.hl7v2.model.v23.message.SIU_S26
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:35: import ca.uhn.hl7v2.model.v23.segment.MSH
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:36: import ca.uhn.hl7v2.model.v23.segment.SCH
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:37: import ca.uhn.hl7v2.model.v23.segment.NTE
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:38: import ca.uhn.hl7v2.model.v23.segment.PID
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:39: import ca.uhn.hl7v2.model.v23.segment.PV1
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:40: import ca.uhn.hl7v2.model.v23.segment.PV2
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:41: import ca.uhn.hl7v2.model.v23.segment.OBX
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:42: import ca.uhn.hl7v2.model.v23.segment.DG1
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:43: import ca.uhn.hl7v2.model.v23.segment.RGS
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:44: import ca.uhn.hl7v2.model.v23.segment.AIS
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:45: import ca.uhn.hl7v2.model.v23.message.ORM_O01
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:46: import ca.uhn.hl7v2.model.v23.message.ORR_O02
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:47: import ca.uhn.hl7v2.model.v23.message.ORU_R01
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:48: import ca.uhn.hl7v2.model.v23.group.ORU_R01_OBSERVATION
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:49:       
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:50: public HapiContext iHapiContext = new DefaultHapiContext();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:51: public int iSequence = 0;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:52: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:53: public void execute() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:54: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:55: //      loadXmlSchema("com.esarks.arm.schemas.properties", path("com.esarks.arm.schemas.PropertiesSchema") + ".xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:56: //      parseXmlSchema(<![com.esarks.arm.schemas.router.root:loc:propertySet:path]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:57: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:58: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:59: //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\MinimalGenericDbq.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:60: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:61: //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\GenericDbqWithEnhancements.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:62: //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\GeneralMedicalSeparationHealthAssessmentSample.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:63: //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\HL7\\SHA_DBQ_v19_3.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:64: //    iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\HL7\\DBQ\\Disability_Benefit_Questionnaire_Claims-2.0rc2.iepd\\XMLsamples\\2.0\\GeneralMedicalSeparationHealthAssessmentSample.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:65: //  iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\ExamManagement-3.0rc5.iepd\\XMLschemas\\exchange\\ExamManagement-3.0.xsd");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:66: //  iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiTest.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:67: //  iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\ExamManagement-3.0rc5.iepd\\XMLsamples\\3.0\\basic_exam_schedule_request\\1_ExamSchedulingRequestCreatedEvent.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:68: //  iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\ExamManageme//nt-3.0rc5.iepd\\XMLsamples\\3.0\\basic_exam_schedule_request\\1_ExamSchedulingRequestCreatedEvent_HL7Map.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:69: //  iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\ExamManageme//nt-3.0rc5.iepd\\XMLsamples\\3.0\\basic_exam_schedule_request\\1_ExamSchedulingRequestCreatedEvent.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:70: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:71: //  PropertyCollection lPropertyCollection = iSymbolTable.getPropertyCollection();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:72: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:73: //  iterateSymbolTable(iSymbolTable.getPropertyCollection(), "em~ExamManagementEventNotification", "");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:74:   iterateSymbolTable(iSymbolTable);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:75: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:76: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:77: A1:A2=<![A1:A2]!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:78: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:79: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:80: //<A1 A2="2" A3="3">1
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:81: //  <A4 A5="5"/>4
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:82: //  <A6>6</A6>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:83: //</A1>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:84: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:85: //  PropertyCollection lPropertyCollection = iSymbolTable.getPropertyCollection(); 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:86: //  PropertyValues lPropertyValues = lPropertyCollection.getPropertyValues("cld~Claim", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:87: //  PropertyValues lPropertyValues = lPropertyCollection.getPropertyValues("$jac", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:88: //% >
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:89: //lPropertyValues = <!%lPropertyValues.getName()!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:90: //< %
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:91: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:92: //  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:93: //  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\HapiOut2.txt", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:94: //  iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:95: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:96: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:97: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:98: //  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut.xml", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:99: //  iteratePropertyValues(lPropertyValues, lPropertyValues.getName(), "");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:100: //  iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:101: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:102: //  iteratePropertyValue(lPropertyValue, "ExamManagementEventNotification", "");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:103: //  iterateSymbolTable(iSymbolTable);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:104: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:105: //  iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:106: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:107: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:108: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:109: public void iterateSymbolTableB(SymbolTable aSymbolTable) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:110: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:111: // Get the root PropertyCollection from SymbolTable
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:112: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:113:   PropertyCollection lPropertyCollection = aSymbolTable.getPropertyCollection(); 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:114: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:115: // Get the LinkedHashMap from the PropertyCollection object; then Set; then Iterator
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:116: // This will allow iteration in FIFO order
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:117:   LinkedHashMap lMap = (LinkedHashMap) lPropertyCollection.getProperties();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:118:   Set lSet = lMap.entrySet();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:119:   Iterator lIterator = lSet.iterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:120: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:121: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:122:   while (lIterator.hasNext()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:123:     PropertyValues lPropertyValues = (PropertyValues) ((Map.Entry)lIterator.next()).getValue();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:124: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:125:     lPropertyValues.resetIterator(0);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:126:     int lSize = lPropertyValues.size();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:127: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:128:     for (int lIdx = 1; lIdx <= lSize; lIdx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:129:       PropertyValue lPropertyValue = lPropertyValues.get(lIdx);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:130:       Object lValueObject = lPropertyValue.getValueObject();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:131:       PropertyCollection lPropertyCollection2 = lPropertyValue.getPropertyCollection();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:132:       if (lPropertyCollection2 != null) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:133:         iteratePropertyCollection(lPropertyCollection2, lPropertyValues.getName(), " ");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:134:       }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:135:     }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:136:   }  
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:137: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:138: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:139: public void iterateSymbolTable(SymbolTable aSymbolTable) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:140: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:141: // Symbol table has a PropertyCollection
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:142: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:143:   PropertyCollection lPropertyCollection = aSymbolTable.getPropertyCollection(); 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:144:   iteratePropertyCollection(lPropertyCollection, lPropertyCollection.getName(), " ");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:145:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:146: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:147: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:148: public void iteratePropertyCollection(PropertyCollection aPropertyCollection, String aName, String aIndent) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:149: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:150: // PropertyCollection has Name and LinkedHashList of Named PropertyValues
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:151: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:152:   LinkedHashMap lMap = (LinkedHashMap) aPropertyCollection.getProperties();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:153:   Set lSet = lMap.entrySet();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:154:   Iterator lIterator = lSet.iterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:155: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:156:   while (lIterator.hasNext()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:157:     PropertyValues lPropertyValues = (PropertyValues) ((Map.Entry)lIterator.next()).getValue();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:158:     iteratePropertyValues(lPropertyValues, lPropertyValues.getName(), aIndent + " ");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:159:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:160: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:161: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:162: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:163: public void iteratePropertyValues(PropertyValues aPropertyValues, String aName, String aIndent) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:164: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:165: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:166: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:167: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:168: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:169:   iSequence++;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:170:   int lSequence = iSequence;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:171:       
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:172:   int lChar = aName.indexOf('~');
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:173:   if (lChar > -1) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:174:     aName = aName.substring(lChar+1);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:175:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:176:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:177:   aPropertyValues.resetIterator(0);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:178:   int lSize = aPropertyValues.size();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:179: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:180: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:181: <!%aIndent!><<!%aName!>><%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:182: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:183:   for (int lIdx = 1; lIdx <= lSize; lIdx++) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:184:     PropertyValue lPropertyValue = aPropertyValues.get(lIdx);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:185:     iteratePropertyValue(lPropertyValue, aName, aIndent + " ");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:186:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:187: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:188: //<HL7 Message="" Segment=""/></<!%aName!>>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:189: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:190:   if (lSequence == iSequence) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:191: %>@@@@</<!%aName!>><%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:192:   } else {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:193: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:194: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:195: <!%aIndent!></<!%aName!>><%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:196:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:197:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:198: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:199: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:200: public void iteratePropertyValue(PropertyValue aPropertyValue, String aName, String aIndent) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:201: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:202:   Object lValueObject = aPropertyValue.getValueObject();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:203: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:204: //<!%lValueObject!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:205: %>%%%%<!%aName!>****<!%aPropertyValue.getValueString()!><%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:206: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:207:   if (aName.trim().length() > 0 && aPropertyValue.getValueString().trim().length() > 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:208: //  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2.txt", true);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:209: //  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", true);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:210: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:211: <!%aName!>,<!%aPropertyValue.getValueString()!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:212: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:213: //  iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:214: } else if (aName.trim().length() > 0 && aPropertyValue.getValueString().trim().length() == 0) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:215: //  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2.txt", true);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:216: //  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\HapiOut2 GeneralMedicalSeparationHealthAssessmentSample.csv", true);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:217: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:218: <!%aName!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:219: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:220: //  iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:221: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:222: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:223:   PropertyCollection lPropertyCollection = aPropertyValue.getPropertyCollection();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:224:   if (lPropertyCollection != null) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:225:     iteratePropertyCollection(lPropertyCollection, aName, aIndent + " ");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:226:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:227:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:228: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:229: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:230: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:231: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:232: public void executexx() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:233: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:234: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:235: schemaLocation                ** <![em~ExamManagementEventNotification:xsi~schemaLocation]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:236: participatingSystemName       ** <![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:237: -hl7Msg                       ** <![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName:hl7:Message]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:238: -hl7Seg                       ** <![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName:hl7:Segment]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:239: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:240: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:241: participatingSystemName       ** <![em~ExamManagementEventNotification:em~Destination:participatingSystemName]!> ** VBA Contractor
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:242: contractorName                ** <![em~ExamManagementEventNotification:em~Destination:contractorName]!> ** QTC1
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:243:                               
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:244: eventUuid                     ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:eventUuid]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:245: eventDtg                      ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:eventDtg]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:246: modelVersion                  ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:modelVersion]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:247: previousEventUuid             ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:previousEventUuid]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:248: examSchedulingRequestUuid     ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:examSchedulingRequestUuid]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:249: -hl7Msg                       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:examSchedulingRequestUuid:hl7:Message]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:250: -hl7Seg                       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:examSchedulingRequestUuid:hl7:Segment]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:251: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:252: participatingSystemName       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~EventSource:participatingSystemName]!> ** VBMS2
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:253: -hl7Msg                       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~EventSource:participatingSystemName:hl7:Message]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:254: -hl7Seg                       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~EventSource:participatingSystemName:hl7:Segment]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:255: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:256: PostDischargeClaimInformation ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~PostDischargeClaimInformation:claimDate]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:257: -VeteranServiceMemberInfo     ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~PostDischargeClaimInformation:em~VeteranServiceMemberInfo:fullName]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:258: --Address                     ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~PostDischargeClaimInformation:em~VeteranServiceMemberInfo:em~Address:em~Address1]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:259: --Phone                       ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~PostDischargeClaimInformation:em~VeteranServiceMemberInfo:em~Phone:primaryPhone]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:260: --PeriodsOfService            ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~PostDischargeClaimInformation:em~VeteranServiceMemberInfo:em~PeriodsOfService:em~Period:branchOfService]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:261: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:262: ExamRelatedContentions        ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:examRelatedContentionUuid]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:263: -ContentionName               ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:em~ContentionName]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:264: -Classification               ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:em~Classification:code]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:265: --name                        ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:em~Classification:name]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:266: -DbqRequest                   ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:em~DbqRequests:em~DbqRequest:name]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:267: --NarrativeEntry              ** <![em~ExamManagementEventNotification:em~ExamSchedulingRequestCreatedEvent:em~ExamRelatedContentions:em~ExamRelatedContention:em~DbqRequests:em~DbqRequest:em~NarrativeEntry]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:268: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:269: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:270: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:271: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:272: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:273: public SIU_S12 createSIU_S12Message(String aSendingApplication,
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:274:                                     String aSendingFacility,
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:275:                                     String aReceivingApplication,
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:276:                                     String aReceivingFacility
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:277:                                    ) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:278: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:279:   SIU_S12 lSIU_S12 = null;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:280:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:281:   try {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:282:     lSIU_S12 = new SIU_S12();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:283: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:284:     MSH lmshSegment = lSIU_S12.getMSH();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:285:     lmshSegment.getFieldSeparator().setValue("|");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:286:     lmshSegment.getEncodingCharacters().setValue("^~\\&");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:287:     lmshSegment.getSendingApplication().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~Destination:participatingSystemName]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:288:     lmshSegment.getSendingFacility().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:name]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:289:     lmshSegment.getReceivingApplication().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:290:     lmshSegment.getReceivingFacility().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:name]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:291: //    lmshSegment.getDateTimeOfMessage().getTimeOfAnEvent().setValue(currentDateTimeString);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:292:     lmshSegment.getMessageControlID().setValue(getSequenceNumber());
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:293: //    lmshSegment.getVersionID().getVersionID().setValue("2.3");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:294: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:295:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:296:   catch(Exception e) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:297: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:298: Here Exception <!%e!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:299: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:300:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:301: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:302:     return lSIU_S12;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:303:     
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:304: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:305: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:306:  
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:307: public void execute1() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:308: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:309:   iSymbolTable.parseXml("C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\ExamManagement-3.0rc5.iepd\\XMLsamples\\3.0\\basic_exam_schedule_request_with_mult_contentions\\1_ExamSchedulingRequestCreatedEvent.xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:310: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:311: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:312: participatingSystemName   ** <![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:313: contractorName            ** <![em~ExamManagementEventNotification:em~OriginatingSystem:contractorName]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:314: participatingSystemName   ** <![em~ExamManagementEventNotification:em~Destination:participatingSystemName]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:315: eventUuid                 ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:eventUuid]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:316: eventDtg                  ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:eventDtg]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:317: examName                  ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:examName]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:318: modelVersion              ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:modelVersion]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:319: examAppointmentUuid       ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:examAppointmentUuid]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:320: scheduledDateTime         ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:scheduledDateTime]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:321: previousEventUuid         ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:previousEventUuid]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:322: examSchedulingRequestUuid ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:examSchedulingRequestUuid]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:323: id                        ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:id]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:324: name                      ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:name]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:325: Address1                  ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:em~Address:em~Address1]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:326: City                      ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:em~Address:em~City]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:327: State                     ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:em~Address:em~State]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:328: ZipOrPostalCode           ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:em~Address:em~ZipOrPostalCode]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:329: Country                   ** <![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:em~Address:em~Country]!> **
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:330: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:331: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:332:   try {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:333:     SIU_S12 lSIU_S12 = new SIU_S12();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:334: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:335:     MSH lmshSegment = lSIU_S12.getMSH();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:336:     lmshSegment.getFieldSeparator().setValue("|");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:337:     lmshSegment.getEncodingCharacters().setValue("^~\\&");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:338:     lmshSegment.getSendingApplication().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~Destination:participatingSystemName]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:339:     lmshSegment.getSendingFacility().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:name]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:340:     lmshSegment.getReceivingApplication().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~OriginatingSystem:participatingSystemName]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:341:     lmshSegment.getReceivingFacility().getNamespaceID().setValue(<![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:em~ExaminingFacility:name]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:342: //    lmshSegment.getDateTimeOfMessage().getTimeOfAnEvent().setValue(currentDateTimeString);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:343:     lmshSegment.getMessageControlID().setValue(getSequenceNumber());
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:344: //    lmshSegment.getVersionID().getVersionID().setValue("2.3");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:345: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:346:     SCH lschSegment = lSIU_S12.getSCH();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:347:     lschSegment.getFillerAppointmentID().getUniversalID().setValue(<![em~ExamManagementEventNotification:em~AppointmentScheduledEvent:eventUuid]!>);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:348: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:349:     // Now, let's encode the message and look at the output
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:350:     Parser lParser = iHapiContext.getPipeParser();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:351:     String lEncodedMessage = lParser.encode(lSIU_S12);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:352:     System.out.println("Printing ER7 Encoded Message:");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:353:     System.out.println(lEncodedMessage);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:354: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:355:     // Next, let's use the XML parser to encode as XML
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:356:     lParser = iHapiContext.getXMLParser();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:357:     lEncodedMessage = lParser.encode(lSIU_S12);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:358:     System.out.println("Printing XML Encoded Message:");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:359:     System.out.println(lEncodedMessage);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:360: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:361:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:362:   catch(Exception e) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:363: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:364: Here Exception <!%e!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:365: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:366: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:367:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:368:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:369: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:370: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:371: public void executex() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:372: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:373:   iHapiContext.setValidationRuleBuilder(new NoValidationBuilder());
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:374:   Message lMessage = null;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:375:   SIU_S12 lSIU_S12 = null;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:376:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:377:   try {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:378:     //  Block of code to try
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:379:     lSIU_S12 = (SIU_S12) createMessage("SIU_S12");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:380: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:381:     // Populate the MSH Segment
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:382: //    MSH lMshSegment = lSIU_S12.getMSH();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:383: //    lMshSegment.getSendingApplication().getNamespaceID().setValue("TestSendingSystem");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:384: //    lMshSegment.getSequenceNumber().setValue("123");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:385: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:386:     MSH mshSegment = lSIU_S12.getMSH();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:387:     mshSegment.getFieldSeparator().setValue("|");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:388:     mshSegment.getEncodingCharacters().setValue("^~\\\\&");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:389:     mshSegment.getSendingApplication().getNamespaceID().setValue("Our System");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:390:     mshSegment.getSendingFacility().getNamespaceID().setValue("Our Facility");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:391:     mshSegment.getReceivingApplication().getNamespaceID().setValue("Their Remote System");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:392:     mshSegment.getReceivingFacility().getNamespaceID().setValue("Their Remote Facility");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:393: //    mshSegment.getDateTimeOfMessage().getTimeOfAnEvent().setValue(currentDateTimeString);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:394:     mshSegment.getMessageControlID().setValue(getSequenceNumber());
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:395: //    mshSegment.getVersionID().getVersionID().setValue("2.4");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:396:    
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:397: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:398: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:399: Here1
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:400: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:401: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:402:     // Now, let's encode the message and look at the output
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:403:     Parser lParser = iHapiContext.getPipeParser();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:404:     String lEncodedMessage = lParser.encode(lSIU_S12);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:405:     System.out.println("Printing ER7 Encoded Message:");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:406:     System.out.println(lEncodedMessage);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:407: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:408:     // Next, let's use the XML parser to encode as XML
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:409:     lParser = iHapiContext.getXMLParser();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:410:     lEncodedMessage = lParser.encode(lSIU_S12);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:411:     System.out.println("Printing XML Encoded Message:");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:412:     System.out.println(lEncodedMessage);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:413: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:414: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:415: Here1a
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:416: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:417: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:418:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:419:   catch(Exception e) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:420:     //  Block of code to handle errors
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:421: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:422: Here Exception <!%e!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:423: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:424: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:425:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:426:  
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:427: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:428:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:429: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:430: Here2
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:431: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:432: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:433: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:434: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:435: public Message createMessage(String aMessageType) throws HL7Exception {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:436: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:437:   if (aMessageType.equals("SIU_S12")) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:438:     return mySIUMessageBuilder();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:439:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:440: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:441: // Consider throwing not handled exception
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:442: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:443:   return null;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:444:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:445: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:446: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:447: public Message mySIUMessageBuilder() throws HL7Exception {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:448: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:449:   return new SIU_S12();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:450: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:451: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:452: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:453: public void createMshSegment(String currentDateTimeString) throws DataTypeException {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:454: //  MSH mshSegment = _adtMessage.getMSH();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:455: //  mshSegment.getFieldSeparator().setValue("|");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:456: //  mshSegment.getEncodingCharacters().setValue("^~\\\\&");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:457: //  mshSegment.getSendingApplication().getNamespaceID().setValue("Our System");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:458: //  mshSegment.getSendingFacility().getNamespaceID().setValue("Our Facility");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:459: //  mshSegment.getReceivingApplication().getNamespaceID().setValue("Their Remote System");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:460: //  mshSegment.getReceivingFacility().getNamespaceID().setValue("Their Remote Facility");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:461: //  mshSegment.getDateTimeOfMessage().getTimeOfAnEvent().setValue(currentDateTimeString);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:462: //  mshSegment.getMessageControlID().setValue(getSequenceNumber());
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:463: //  mshSegment.getVersionID().getVersionID().setValue("2.4");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:464: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:465: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:466: private String getCurrentTimeStamp() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:467:   return new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:468: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:469: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:470: private String getSequenceNumber() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:471:   String facilityNumberPrefix = "1234"; // some arbitrary prefix for the facility
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:472:   return facilityNumberPrefix.concat(getCurrentTimeStamp());
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:473: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\Hapi.script:474: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPostfix.script:1: }

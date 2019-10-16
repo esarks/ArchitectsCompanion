@@ -1,4 +1,4 @@
-echo on
+echo off
 echo Running... C:\GitHub\ArchitectsCompanion\jac2020\bin\Job.bat v20191013a
 
 echo Job.bat 20101013a

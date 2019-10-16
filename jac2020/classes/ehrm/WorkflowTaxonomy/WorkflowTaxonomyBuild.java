@@ -64,11 +64,26 @@ iOutputManager.println("", false);
 //ScriptWriter~~~
 
 
-  iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+  String cdata = "<" + "!" + "[CDATA[";
+  String line;
+  boolean lPrint = false;
+  String lLastTag="";
 
-  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.txt", false);
+  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
 
-boolean lPrint = false;
+  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.txt", false);
+
+//ScriptWriter~~%>
+{
+//ScriptWriter~~~
+iOutputManager.println("", false);
+//ScriptWriter~~<comments>
+iOutputManager.println("<comments>", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
 
 
 //ScriptWriter~~  <!business:pdfs:pdf!>!resetIterator();
@@ -83,14 +98,28 @@ String fileName = iSymbolTable.translateProperties("[business:pdfs:folder]") + "
 File file = new File(fileName);
 FileReader fr = new FileReader(file);
 BufferedReader br = new BufferedReader(fr);
-String line;
+
+if (lLastTag != "") {
+//ScriptWriter~~%>
+{
+//ScriptWriter~~~
+iOutputManager.println("", false);
+//ScriptWriter~~</<!%lLastTag!>>
+iOutputManager.println("</" + lLastTag + ">", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+}
 
 //ScriptWriter~~%>
 {
 //ScriptWriter~~~
 iOutputManager.println("", false);
-//ScriptWriter~~****** <!%fileName!>
-iOutputManager.println("****** " + fileName + "", true);
+//ScriptWriter~~<<![business:pdfs:pdf:id]!>>
+iOutputManager.println("<" + iSymbolTable.translateProperties("[business:pdfs:pdf:id]") + ">", true);
 //ScriptWriter~~<%  
 iOutputManager.println("", false);
 //ScriptWriter~~~
@@ -98,18 +127,51 @@ iOutputManager.println("", false);
 //ScriptWriter~~~
   
 
+//ScriptWriter~~lLastTag = <![business:pdfs:pdf:id]!>;
+lLastTag = iSymbolTable.translateProperties("[business:pdfs:pdf:id]");
 while((line = br.readLine()) != null){
 
-  if (line.startsWith("Comments:")) lPrint = true;
-  if (line.startsWith("Work Step")) lPrint = false;
-  if (line.startsWith("System")) lPrint = false;
-  if (line.startsWith("Decision")) lPrint = false;
-  if (line.startsWith("Start/Stop")) lPrint = false;
-  if (line.startsWith("Off Page Reference")) lPrint = false;
-  if (line.startsWith("Document")) lPrint = false;
-  if (line.startsWith("© Cerner Corporation.")) lPrint = false;
-  if (line.startsWith("Swim Lane/Role")) lPrint = false;
-if (lPrint) {
+  if (line.startsWith("Comments:") && lPrint == false) {
+    lPrint = true;
+//ScriptWriter~~%>
+{
+//ScriptWriter~~~
+iOutputManager.println("", false);
+//ScriptWriter~~<comment><!%cdata!><%
+iOutputManager.println("<comment>" + cdata + "", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+  }
+
+  if ((lPrint == true) && (line.startsWith("Work Step") ||
+      line.startsWith("System") ||
+      line.startsWith("Decision") ||
+      line.startsWith("Start/Stop") ||
+      line.startsWith("Off Page Reference") ||
+      line.startsWith("Document") ||
+      line.startsWith("© Cerner Corporation.") ||
+      line.startsWith("Swim Lane/Role"))) {
+      
+      lPrint = false;
+
+//ScriptWriter~~%>
+{
+//ScriptWriter~~~
+iOutputManager.println("", false);
+//ScriptWriter~~]]></comment>
+iOutputManager.println("]]></comment>", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+
+  }
+
+  if (lPrint) {
 //ScriptWriter~~%>
 {
 //ScriptWriter~~~
@@ -122,7 +184,7 @@ iOutputManager.println("", false);
 }
 //ScriptWriter~~~
 
-}
+  }
    
 }
 
@@ -144,8 +206,29 @@ iOutputManager.println("", false);
 
 }
 
+//ScriptWriter~~%>
+{
+//ScriptWriter~~~
+iOutputManager.println("", false);
+//ScriptWriter~~]]>
+iOutputManager.println("]]>", true);
+//ScriptWriter~~</<!%lLastTag!>>
+iOutputManager.println("</" + lLastTag + ">", true);
+//ScriptWriter~~</comments>
+iOutputManager.println("</comments>", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+
   iOutputManager.closeOutputFile();
 
+  execute2();
+  execute2a();
+  execute1();
+    
 }
 
 public void execute2() {
@@ -161,9 +244,86 @@ iOutputManager.println("", false);
 //ScriptWriter~~~
 
 
-  iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+//  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
 
-  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy1.csv", false);
+  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy1.csv", false);
+
+//ScriptWriter~~%>
+{
+//ScriptWriter~~~
+iOutputManager.println("", false);
+//ScriptWriter~~Flow ID,Flow Name,Status,Council,"DCW<!%Character.toString((char) 10)!>Required   ","DCW<!%Character.toString((char) 10)!>Completed   ","DDM<!%Character.toString((char) 10)!>Required   ","DDM<!%Character.toString((char) 10)!>Completed   ","Build in 81930<!%Character.toString((char) 10)!>Completed   ",,,,heading
+iOutputManager.println("Flow ID,Flow Name,Status,Council,\"DCW" + Character.toString((char) 10) + "Required   \",\"DCW" + Character.toString((char) 10) + "Completed   \",\"DDM" + Character.toString((char) 10) + "Required   \",\"DDM" + Character.toString((char) 10) + "Completed   \",\"Build in 81930" + Character.toString((char) 10) + "Completed   \",,,,heading", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+
+//ScriptWriter~~  <!business!>!resetIterator();
+  iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business")).resetIterator();
+//ScriptWriter~~  while (<!business!>!next()) {
+  while (iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business")).next()) {
+
+//ScriptWriter~~    <!business:wfreport:wf!>!resetIterator();
+    iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business:wfreport:wf")).resetIterator();
+//ScriptWriter~~    while (<!business:wfreport:wf!>!next()) {
+    while (iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business:wfreport:wf")).next()) {
+
+//ScriptWriter~~%>
+{
+//ScriptWriter~~~
+iOutputManager.println("", false);
+//ScriptWriter~~<![business:wfreport:wf:name]!>,<![business:wfds:[business:wfreport:wf:name]:description]!>,<![business:states:[business:wfreport:wf:name]:status]!>,<![business:states:[business:wfreport:wf:name]:council]!>,<![business:states:[business:wfreport:wf:name]:dcwRqd]!>,<![business:states:[business:wfreport:wf:name]:dcwCmp]!>,<![business:states:[business:wfreport:wf:name]:ddmRqd]!>,<![business:states:[business:wfreport:wf:name]:ddmCmp]!>,<![business:states:[business:wfreport:wf:name]:build]!>,,,,flow
+iOutputManager.println("" + iSymbolTable.translateProperties("[business:wfreport:wf:name]") + "," + iSymbolTable.translateProperties("[business:wfds:[business:wfreport:wf:name]:description]") + "," + iSymbolTable.translateProperties("[business:states:[business:wfreport:wf:name]:status]") + "," + iSymbolTable.translateProperties("[business:states:[business:wfreport:wf:name]:council]") + "," + iSymbolTable.translateProperties("[business:states:[business:wfreport:wf:name]:dcwRqd]") + "," + iSymbolTable.translateProperties("[business:states:[business:wfreport:wf:name]:dcwCmp]") + "," + iSymbolTable.translateProperties("[business:states:[business:wfreport:wf:name]:ddmRqd]") + "," + iSymbolTable.translateProperties("[business:states:[business:wfreport:wf:name]:ddmCmp]") + "," + iSymbolTable.translateProperties("[business:states:[business:wfreport:wf:name]:build]") + ",,,,flow", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+
+//ScriptWriter~~      <!business:wfreport:wf:subflow!>!resetIterator();
+      iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business:wfreport:wf:subflow")).resetIterator();
+//ScriptWriter~~      while (<!business:wfreport:wf:subflow!>!next()) {
+      while (iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business:wfreport:wf:subflow")).next()) {
+//ScriptWriter~~%>
+{
+//ScriptWriter~~~
+iOutputManager.println("", false);
+//ScriptWriter~~<![business:wfreport:wf:subflow:name]!>,<![business:wfds:[business:wfreport:wf:subflow:name]:description]!>,,,,,,,,,,,subFlow
+iOutputManager.println("" + iSymbolTable.translateProperties("[business:wfreport:wf:subflow:name]") + "," + iSymbolTable.translateProperties("[business:wfds:[business:wfreport:wf:subflow:name]:description]") + ",,,,,,,,,,,subFlow", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+      }
+
+    }
+  }
+
+  iOutputManager.closeOutputFile();
+}
+
+public void execute2a() {
+
+//ScriptWriter~~%>EHRM Hello World! v20190816a
+{
+//ScriptWriter~~~
+iOutputManager.println("EHRM Hello World! v20190816a", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+
+//  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+
+  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.csv", false);
 
 //ScriptWriter~~  <!business!>!resetIterator();
   iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business")).resetIterator();
@@ -188,24 +348,25 @@ iOutputManager.println("", false);
 //ScriptWriter~~~
 
 
-//ScriptWriter~~      <!business:wfreport:wf:subflow!>!resetIterator();
-      iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business:wfreport:wf:subflow")).resetIterator();
-//ScriptWriter~~      while (<!business:wfreport:wf:subflow!>!next()) {
-      while (iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business:wfreport:wf:subflow")).next()) {
+//ScriptWriter~~      <!business:comments:[business:wfreport:wf:name]:comment!>!resetIterator();
+      iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business:comments:[business:wfreport:wf:name]:comment")).resetIterator();
+//ScriptWriter~~      while (<!business:comments:[business:wfreport:wf:name]:comment!>!next()) {
+      while (iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business:comments:[business:wfreport:wf:name]:comment")).next()) {
+
 //ScriptWriter~~%>
 {
 //ScriptWriter~~~
 iOutputManager.println("", false);
-//ScriptWriter~~,SUBFLOW,<![business:wfreport:wf:subflow:name]!>,<![business:wfds:[business:wfreport:wf:subflow:name]:description]!>
-iOutputManager.println(",SUBFLOW," + iSymbolTable.translateProperties("[business:wfreport:wf:subflow:name]") + "," + iSymbolTable.translateProperties("[business:wfds:[business:wfreport:wf:subflow:name]:description]") + "", true);
+//ScriptWriter~~,"<![business:comments:[business:wfreport:wf:name]:comment]!>"
+iOutputManager.println(",\"" + iSymbolTable.translateProperties("[business:comments:[business:wfreport:wf:name]:comment]") + "\"", true);
 //ScriptWriter~~<%
 iOutputManager.println("", false);
 //ScriptWriter~~~
 }
 //ScriptWriter~~~
 
-      }
 
+      }
     }
   }
 
@@ -225,9 +386,9 @@ iOutputManager.println("", false);
 //ScriptWriter~~~
 
 
-  iSymbolTable.parseXml("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
+//  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
 
-  iOutputManager.openOutputFile("C:\\ArchitectsCompanion\\jac2017\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.csv", false);
+  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.csv", false);
 
   int lRow = 0;
   Integer lWorkflow = 0;

@@ -1,4 +1,4 @@
-echo on
+echo off
 echo Running... C:\GitHub\ArchitectsCompanion\jac2020\bin\SetJob.bat v20191013a
 
 set JAC_HOME=%JAC_BASE%
