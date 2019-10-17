@@ -301,11 +301,6 @@ compile = true
 Compile: C:\GitHub\ArchitectsCompanion\jac2020\classes\com\esarks\arm\applicationFramework\Router.java, Script: com.esarks.arm.applicationFramework.Router
 Compiling 1 Scripts...
 1. C:\GitHub\ArchitectsCompanion\jac2020\classes\com\esarks\arm\applicationFramework\Router.java
-*error* Compile Errors *********************************************************************
-C:\GitHub\ArchitectsCompanion\jac2020\classes\com\esarks\arm\applicationFramework\Router.java:21: error: '{' expected
-public class Router com.esarks.mic.MicScriptHelper  {
-                   ^
-1 error
 Script.buildScript... com.esarks.arm.applicationFramework.AppTemplate
 Making AppTemplate
 compile = true

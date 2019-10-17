@@ -1,0 +1,106 @@
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:3: import com.esarks.jac.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:4: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:5: import java.time.Duration;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:6: import java.time.Instant;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:7: import java.time.Period;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:8: import java.time.ZoneId;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:9: import java.time.LocalDate;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:10: import java.time.LocalDateTime;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:11: import java.time.LocalTime;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:12: import java.time.format.DateTimeFormatter;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:13: import java.time.format.FormatStyle;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:14: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:15: import java.util.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:16: import java.lang.reflect.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:17: import java.io.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:18: import java.text.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:19: import java.net.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:20: import javax.net.ssl.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:21: import java.security.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:22: import java.sql.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:23: import javax.servlet.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:24: import javax.servlet.http.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:25: import java.awt.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:26: import javax.swing.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:27: import com.esarks.mic.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:28: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:29: import java.nio.file.Files;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:30: import java.nio.file.Paths;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:31: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:32: import java.io.FileNotFoundException;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:33: import java.io.FileReader;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:34: import java.io.IOException;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:35: import java.util.Iterator;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:36: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:37: import org.json.simple.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:38: import org.json.simple.parser.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:39: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:40: <#import#>
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:4:   }
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:5: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:7: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:8:     super(aScript);
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:9: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:10:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:1: <& com.esarks.arm.scripts.Method
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:2:    <method name="execute" visibility="public" return="void" >
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:3:      <document>Execute method</document>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:4:    </method>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:5: &>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:6: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:7:   // Open with delete of prior file
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:8: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:9:   openOutput(path("com.esarks.demonstrations.DynamicScript.") +  "MyScript.script");
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:10: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:11: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:12: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:13: <& com.esarks.arm.scripts.Method
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:14:    <method name="execute" visibility="public" return="void" >
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:15:      <document>Execute method</document>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:16:    </method>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:17: &>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:18: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:19: <!%"%" + ">"!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:20: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:21: ***********************************
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:22: ***********************************
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:23: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:24: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:25: Hello World!
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:26: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:27: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:28: ***********************************
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:29: ***********************************
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:30: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:31: <!%"<" + "%"!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:32: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:33: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:34: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:35: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:36: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:37:   closeOutput();
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:38: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:39: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:40: ***********************************
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:41: ***********************************
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:42: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:43: Print this before running the other script...
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:44: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:45: <!%path("com.esarks.demonstrations.DynamicScript.")!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:46: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:47: ***********************************
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:48: ***********************************
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:49: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:50: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:51:   // Compile and run the script
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:52: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:53:   iScript.execMethod("com.esarks.demonstrations.DynamicScript.MyScript", "execute");
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:54:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\com\esarks\demonstrations\DynamicScript\Start.script:55: <& com.esarks.arm.scripts.FinalReturnMethod &>
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPostfix.script:1: }

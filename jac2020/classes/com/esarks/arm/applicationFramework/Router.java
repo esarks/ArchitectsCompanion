@@ -18,7 +18,7 @@ import com.esarks.jac.*;
 import com.esarks.mic.*;
 
 //ScriptWriter~~public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
-public class Router com.esarks.mic.MicScriptHelper  {
+public class Router extends com.esarks.mic.Component  {
 
 
 //ScriptWriter~~  protected <#[$jac:script]#>() {
@@ -39,7 +39,9 @@ public class Router com.esarks.mic.MicScriptHelper  {
      <document></document>
    </method>
 &>*/
+//ScriptWriter~~~
 /* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+//ScriptWriter~~~
 // Begin: com.esarks.arm.scripts.Method
 /**
  * 

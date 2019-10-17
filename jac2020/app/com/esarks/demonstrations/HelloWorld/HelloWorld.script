@@ -1,0 +1,18 @@
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="execute" visibility="public" return="void" >
+     <document>Execute method on HellowWorld</document>
+   </method>
+&>
+
+//Put Code Here
+
+%>
+Hello World! v2020
+<%
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+
+//////////////////////////////////////////////////////////////////////////////
+

@@ -1,0 +1,59 @@
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="execute" visibility="public" return="void" >
+     <document>Execute method on HellowWorld</document>
+   </method>
+&>
+
+%>
+***************************************
+Start of ComplexSymbol
+***************************************
+<%
+
+/**************************************
+  Set data values into SymbolTable
+***************************************/
+
+  <!record!>!set(12345);
+  <!record:name:last!>!set("Smith");
+  <!record:name:first!>!set("John");
+
+  <!record!>!set(12346);
+  <!record:name:last!>!set("Doe");
+  <!record:name:first!>!set("Jane");
+
+  <!record!>!set(12347);
+  <!record:name:first!>!set("Johnnie");
+
+// Reset iterator
+  <!record!>!resetIterator();
+
+/**************************************
+  Iterate through data from SymbolTable
+***************************************/
+
+  <!record!>!resetIterator();
+  while (<!record!>!next()) {
+
+%>
+1. Record number = <![record]!>
+2. Name = <![record:name:last]!><%
+
+  if (<!record:name:last!>!size() > 0) %>, <%
+
+%>
+<![record:name:first]!>
+
+<%
+  } // while (<!record!>!next()) {
+%>
+***************************************
+End of ComplexSymbol
+***************************************
+<%
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+
+//////////////////////////////////////////////////////////////////////////////

@@ -1,6 +1,8 @@
 
 <business name="VBA">
 
+<!-- Products List -->
+
 <products>
  <AcHIM      description="Access HIM"                           owner="Cerner"/>
  <AdvInterop description="Advanced Interop"                     owner="Cerner"/>
@@ -26,9 +28,13 @@
  <VBMS       description="VBMS"                                 owner="VA"/>
 </products>
 
+<!-- Phases List -->
+
 <phases>
  <p1  description="IOC Entry"/>
 </phases>
+
+<!-- Workflow Designer "Products and Interfaces" List -->
 
 <wfds>
  <wf2008   description="1VA - VBA - 7131 Process" >
@@ -110,6 +116,8 @@
 </wf1999>
 </wfds>
 
+<!-- Workflow Designer Export List -->
+
 <pdfs folder="C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-15_1538">
 <pdf id="wf1353"  name="1VA_-_Registration_-_OHI_Collection_2019-10-15_1537_Approved.txt" />
 <pdf id="wf1260"  name="1VA_-_Registration_Scheduling_-_In_Person_Check_In_2019-10-15_1537_Approved.txt" />
@@ -131,6 +139,8 @@
 <pdf id="wf1989"  name="_Proposed___1VA_-_VBA_-_Deliver_Exam_Results_2019-10-15_1537_Ready_For_Review.txt" />
 </pdfs>
 
+<!-- Steve's Status List -->
+
 <states>
 <wf1866    status="In-progress"    council="BOC/VBA     "  dcwRqd="?"   dcwCmp=" "    ddmRqd="Y"    ddmCmp="   "  build="" />
 <wf1873    status="In-Progress"    council="BOC/VBA     "  dcwRqd="?"   dcwCmp=" "    ddmRqd="N"    ddmCmp="N/A"  build="" />   
@@ -151,6 +161,8 @@
 <wf1260    status="Approved   "    council="Registration"  dcwRqd="N"   dcwCmp=" "    ddmRqd="N"    ddmCmp="N/A"  build="" />   
 <wf1353    status="Approved   "    council="Registration"  dcwRqd="N"   dcwCmp=" "    ddmRqd="N"    ddmCmp="N/A"  build="" />   
 </states>
+
+<!-- Workflow Designer Parent / Child List -->
 
 <wfreport>
 <wf name="wf1866">
@@ -224,12 +236,16 @@
 
 </wfreport>
 
+<!-- Interfaces Type List -->
+
 <interfaces>
  <orm  description="HL7 ORM"/>
  <oru  description="HL7 ORU"/>
  <siu  description="HL7 SIU"/>
  <man  description="Manual" />
 </interfaces>
+
+<!-- Workshop 8 Wall Pages List -->
 
   <major name="Request Examination / Evaluation">
   
@@ -354,371 +370,5 @@
     </workflow>
 
   </major>
-
-<comments>
-<wf1353>
-</wf1353>
-<wf1260>
-<comment><![CDATA[Comments: If a patient remains in a single state for too long (for example, 15 minutes) 
-an excess wait time counter can show on Patient Tracking. 
-
-
-]]></comment>
-<comment><![CDATA[Comments: The default Modify Patient Conversation can launch automatically when selected 
-within the Revenue Cycle Maintenance Tool 
-
-]]></comment>
-<comment><![CDATA[Comments: The default Modify Encounter Conversation can launch automatically when 
-selected within the Revenue Cycle Maintenance Tool 
-
-Eligibility checking 
-requires Transaction Services Integration 
-
-]]></comment>
-<comment><![CDATA[Comments: Automatically launching the Images window is enabled within the Revenue Cycle 
-Maintenance Tool 
-
-Content 360 is required for images integration 
-
-]]></comment>
-<comment><![CDATA[Comments: Review,collect and confirm OHI 
-
-]]></comment>
-</wf1260>
-<wf771>
-</wf771>
-<wf35>
-<comment><![CDATA[Comments: A tiny window opens below the 'Confirmed' text with options for 'Check In' and 
-'No Show' 
-
-]]></comment>
-</wf35>
-<wf319>
-<comment><![CDATA[Comments: 'Force Medical Necessity Check Against Content' option available for new 
-Medicare patients without insurance on file 
-
-]]></comment>
-<comment><![CDATA[Comments: changed from Future order placed to future appointment is scheduled -la 
-
-]]></comment>
-<comment><![CDATA[Comments: (PR) added off page reference 3/5/18 
-
-]]></comment>
-</wf319>
-<wf222>
-<comment><![CDATA[Comments: Added application. MNelson 
-
-]]></comment>
-</wf222>
-<wf34>
-<comment><![CDATA[Comments: 'Person Search' window opens 
-
-]]></comment>
-<comment><![CDATA[Comments: DEERS retrieve occurs before opening to patient's 'Future Appointments' view 
-
-]]></comment>
-<comment><![CDATA[Comments: Small window opens with various menu options including 'Reschedule 
-Appointment' 
-
-]]></comment>
-<comment><![CDATA[Comments: The 'Add Appointment' tab in the bottom half of the window changes to ' 
-Reschedule Appointment' with appointment details 
-
-]]></comment>
-<comment><![CDATA[Comments: 'Reschedule Appointment' tab populates with a new additional drop-down field 
-requesting 'Reschedule Reason' 
-
-]]></comment>
-</wf34>
-<wf32>
-<comment><![CDATA[Comments: Buttons for 3 methods for searching for an appointment change from unavailable 
-to available (e.g. 'First Available') 
-
-]]></comment>
-<comment><![CDATA[Comments: 'First Available Times' window opens with 'Suggested Results' for available 
-appointments 
-
-]]></comment>
-<comment><![CDATA[Comments: Appointment details populates the 'Future Appointments' list 
-
-
-]]></comment>
-<comment><![CDATA[Comments: 'Schedule' window opens with a calendar of appointment slots for the requested 
-resource(s) 
-
-]]></comment>
-<comment><![CDATA[Comments: 'Recurring Frequencies' window opens with various search criteria -DO NOT 
-change 'Patient Duration' minutes 
-
-]]></comment>
-</wf32>
-<wf1999>
-<comment><![CDATA[Comments: Products: 
-
--Revenue Cycle : Appointments Perspective 
-
-]]></comment>
-</wf1999>
-<wf1998>
-<comment><![CDATA[Comments: #VBA 
-
-]]></comment>
-<comment><![CDATA[Comments: 'Force Medical Necessity Check Against Content' option available for new 
-Medicare patients without insurance on file 
-
-]]></comment>
-<comment><![CDATA[Comments: changed from Future order placed to future appointment is scheduled -la 
-
-]]></comment>
-<comment><![CDATA[Comments: *gap for post IOC workflow -no issues for IOC. will need to resolve 
-notification of appointment post IOC 
-
-]]></comment>
-<comment><![CDATA[Comments: (PR) added off page reference 3/5/18 
-
-Revisit deceased patient appointment 
-type 
-
-]]></comment>
-</wf1998>
-<wf1993>
-<comment><![CDATA[Comments: ERRA data means the current C&P exam request inventory data, data on past 
-C&P 
-exam requests that were cancelled and/or completed, and VHA facility 
-capabilities (i.e., enabled/disabled DBQs based on VHA's internal personnel 
-and resources). High level data on C&P clinic locations (names/addresses) is 
-also included. 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--ERRA tool : Determine location to send request 
-
--Dependency on 
-the data being available for ERRA 
-
-
-]]></comment>
-</wf1993>
-<wf1990>
-<comment><![CDATA[Comments: Products: 
-
--CAPRI : Enterprise Search 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--VBMS 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--TBD 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--JLV 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--Clinical Reporting XR 
-
-Note: May access Clinical Reporting XR 
-from AccessHIM 
-
-]]></comment>
-</wf1990>
-<wf1995>
-<comment><![CDATA[Comments: Products: 
-
--PowerChart : ? 
-
-]]></comment>
-<comment><![CDATA[Comments: Complete one order at a time. 
-
-]]></comment>
-<comment><![CDATA[Comments: Interfaces: 
-
--SIU_S12 : C&P Exam is scheduled : Notify VBMS that exam is 
-scheduled (post IOC) 
-
--SIU_S13 : C&P Exam is rescheduled : Notify VBMS that 
-exam is rescheduled (post IOC) 
-
--SIU_S14 : C&P Exam is modified : Notify 
-VBMS that exam is modified (post IOC) 
-
--SIU_S15 : C&P Exam is cancelled : 
-Notify VBMS that exam is cancelled (post IOC) 
-
-]]></comment>
-<comment><![CDATA[Comments: Interfaces: 
-
--ORM : VHA Creates Child Orders : VHA Creates Child Order to map 
-to original request (post IOC) 
-
-]]></comment>
-</wf1995>
-<wf2008>
-<comment><![CDATA[Comments: Products: 
-
--AccessHIM : ROI 
-
-]]></comment>
-<comment><![CDATA[Comments: Product: AccessHIM 
-
-]]></comment>
-<comment><![CDATA[Comments: Add a note to the request as necessary to indicate that no records were found. 
-
-Notify any necessary parties per VA Policy. 
-
-]]></comment>
-<comment><![CDATA[Comments: Add a note to the request as necessary in accordance with VA Policy. 
-
-]]></comment>
-</wf2008>
-<wf1866>
-<comment><![CDATA[Comments: Products: 
-
--PowerChart : Search and View Medical Records 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--PowerForm : Form 2507 to Document Requested DBQs 
-
-Interfaces: 
-
--
-ORM : New Order Request Entered by VBA : Notify VBMS that exam is ordered ( 
-Post IOC) 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--Clinical Reporting XR : Generic Encounter 
-
-Interfaces: 
-
--Manual 
-upload to VBMS Folder 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--Message Center : 2507 Message Template 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--Message Center : Message Pool 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--PowerChart : Review Order 
-
-]]></comment>
-<comment><![CDATA[Comments: Interfaces: 
-
--ORR : Notify VBMS that exam request is accepted. 
-
-]]></comment>
-<comment><![CDATA[Comments: Question: How is this message sent / received at IOC? 
-
-Interfaces: 
-
--ORR : 
-VBA Staff Discontinue Order Request : Notify VBMS of order discontinued as 
-requested (post IOC) 
-
--ORR : VHA User Requests Clarification : VHA reviews 
-Exam Request and requests clarification (post IOC) 
-
--ORM : VHA User Requests 
-Clarification : VHA reviews Exam Request and requests clarification (post IOC) 
-
-
-]]></comment>
-<comment><![CDATA[Comments: VBA is requesting a pdf document be sent that can be loaded in the Veteran's 
-eFolder 
-
-Interfaces: 
-
--Reject PDF to Veteran's eFolder (IOC) 
-
--ORR : Order 
-Request Canceled by VHA Staff (Post IOC) 
-
-]]></comment>
-<comment><![CDATA[Comments: Note: Sub-flow belongs to Scheduling Council 
-
-Products: 
-
--Cerner Scheduling 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--Ambulatory Organizer : Clinician's view of scheduled appointments 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--PowerChart : Mpage : Assessment Component 
-
-]]></comment>
-<comment><![CDATA[Comments: Interfaces: 
-
--SIU_Z01 : C&P Exam is checked in : Notify VBMS that exam is 
-checked in (post IOC) 
-
--ORM : C&P Exam is Completed : Notify VBMS that exam 
-occurred (post IOC) 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--Revenue Cycle : Patient Access 
-
-]]></comment>
-</wf1866>
-<wf1987>
-<comment><![CDATA[Comments: Products: 
-
--PowerForm : 2507 
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--PowerChart : 
--VBMS 
--CAPRI 
--JLV 
--AHLTA 
-
-
-]]></comment>
-<comment><![CDATA[Comments: Products: 
-
--PowerChart : PowerForm : Specific DBQ 
-
-]]></comment>
-</wf1987>
-<wf1873>
-<comment><![CDATA[Comments: Products: 
-
--PowerChart : Veteran Orders 
-
-]]></comment>
-</wf1873>
-<wf1989>
-]]>
-</wf1989>
-</comments>
-
-
 
 </business>

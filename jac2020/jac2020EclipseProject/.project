@@ -31,6 +31,11 @@
 			<location>C:/GitHub/ArchitectsCompanion/jac2020/jacBuild8/source/java</location>
 		</link>
 		<link>
+			<name>jacBuild8</name>
+			<type>2</type>
+			<location>C:/GitHub/ArchitectsCompanion/jac2020/jacBuild8</location>
+		</link>
+		<link>
 			<name>source</name>
 			<type>2</type>
 			<location>C:/GitHub/ArchitectsCompanion/jac2020/jacBuild8/source</location>

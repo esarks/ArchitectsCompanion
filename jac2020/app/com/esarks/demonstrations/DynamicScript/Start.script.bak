@@ -1,0 +1,61 @@
+<& com.esarks.arm.scripts.Method
+   <method name="execute" visibility="public" return="void" >
+     <document>Execute method</document>
+   </method>
+&>
+
+  // Open with delete of prior file
+
+  openOutput(path("com.esarks.demonstrations.DynamicScript.") +  "MyScript.script");
+
+%>
+
+<& com.esarks.arm.scripts.Method
+   <method name="execute" visibility="public" return="void" >
+     <document>Execute method</document>
+   </method>
+&>
+
+<!%"%" + ">"!>
+
+***********************************
+***********************************
+
+
+Hello World!
+
+
+***********************************
+***********************************
+
+<!%"<" + "%"!>
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+
+<%
+
+  closeOutput();
+
+%>
+***********************************
+***********************************
+
+Print this before running the other script...
+
+<!%path("com.esarks.demonstrations.DynamicScript.")!>
+
+***********************************
+***********************************
+<%
+
+  // Compile and run the script
+
+  iScript.execMethod("com.esarks.demonstrations.DynamicScript.MyScript", "execute");
+  
+//  Script lScript = loadScript("com.esarks.demonstrations.DynamicScript.MyScript");
+//  lScript.execMethod("execute");
+ 
+//  <!aScript!>!loadScript("com.esarks.demonstrations.DynamicScript.MyScript","micScriptComponent");
+//  <!aScript!>!execMethod("execute");
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>

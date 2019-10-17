@@ -1,0 +1,23 @@
+
+<& com.esarks.arm.scripts.Method
+   <method name="execute" visibility="public" return="void" >
+     <document>Execute method</document>
+   </method>
+&>
+
+%>
+
+***********************************
+***********************************
+
+
+Hello World!
+
+
+***********************************
+***********************************
+
+<%
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+

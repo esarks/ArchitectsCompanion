@@ -1,4 +1,4 @@
-echo off
+echo on
 echo ******************************************
 echo JAC2020 v20191012a copyJars.bat
 
