@@ -51,7 +51,291 @@ public class WorkflowTaxonomyBuild extends com.esarks.mic.Component {
     super(aScript);
 
   }
-public void execute() {
+/*<& com.esarks.arm.scripts.Method
+   <method name="execute" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.Method
+/**
+ * 
+ */
+  public void execute() {
+  String lMethodSignature = "execute()";
+  String lMethodLocation = "";
+  java.util.Date lMethodStartDate = null;
+  java.util.Date lMethodStopDate = null;
+  if (iMicLog.test(Log._APP)) {
+    lMethodStartDate = new java.util.Date();
+    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Enter method");
+  }
+  try {  resetExit();
+// End: com.esarks.arm.scripts.Method
+/* *** GENERATED SECTION *** End of embedded XML expansion */
+
+//ScriptWriter~~%>
+{
+//ScriptWriter~~~
+iOutputManager.println("", false);
+//ScriptWriter~~<![$jac:path:scripts]!><!%path("ehrm.WorkflowTaxonomy.Workflowtaxonomy")!><!%".xml"!>
+iOutputManager.println("" + iSymbolTable.translateProperties("[$jac:path:scripts]") + "" + path("ehrm.WorkflowTaxonomy.Workflowtaxonomy") + "" + ".xml" + "", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+
+//ScriptWriter~~  iSymbolTable.parseXml(<![$jac:path:scripts]!> + path("ehrm.WorkflowTaxonomy.Workflowtaxonomy") + ".xml");
+  iSymbolTable.parseXml(iSymbolTable.translateProperties("[$jac:path:scripts]") + path("ehrm.WorkflowTaxonomy.Workflowtaxonomy") + ".xml");
+
+  executeExtractComments();
+//  executeWorkflowTaxonomyStatus();
+//  executeWorkflowTaxonomyComments();
+//  executeWorkflowTaxonomy();
+
+/*<& com.esarks.arm.scripts.FinalReturnMethod &>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.FinalReturnMethod
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Normal final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    return;
+
+  } catch (Throwable e) {
+    setContext(iScript.getMasterScript());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event")).set(e.getMessage());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:severity")).set("fatal");
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptPackage")).set(iScriptPackage);
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptName")).set(iScriptName);
+    restoreContext();
+    setExit();
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRptController", "execute", new Object[]{"", iScriptFullName, lMethodSignature, "fatal", lMethodLocation, e.getMessage(), "Unhandled exception.", "Review this exception to determine proper handling."});
+
+    System.out.println("ExceptionRptController called..." + e.getMessage());
+
+    com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+    com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+    lExceptionServiceJeo.addJeo(lExceptionJeo);
+    java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+    lExceptionJeo.setTime(lExceptionTimestamp);
+    lExceptionJeo.setModule(iScriptFullName);
+    lExceptionJeo.setMethod(lMethodSignature);
+    lExceptionJeo.setSeverity("unknown");
+    lExceptionJeo.setLocation(lMethodLocation);
+    lExceptionJeo.setDescription(e.getMessage());
+    lExceptionJeo.setAction("unknown");
+    lExceptionJeo.setResolution("unknown");
+
+    StackTraceElement[] lStackTraceElements = e.getStackTrace();
+    for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+      com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+      lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+      lExceptionJeo.addJeo(lStackExceptionJeo);
+    }
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    if (iMicLog.test(Log._ERR)) {
+      iMicLog.println(Log._ERR, "ERR-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!" + e.getMessage());
+    }
+    return;
+  }
+  }
+// End: com.esarks.arm.scripts.FinalReturnMethod
+/* *** GENERATED SECTION *** End of embedded XML expansion */
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// executeExtractComments
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*<& com.esarks.arm.scripts.Method
+   <method name="executeExtractComments" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.Method
+/**
+ * 
+ */
+  public void executeExtractComments() {
+  String lMethodSignature = "executeExtractComments()";
+  String lMethodLocation = "";
+  java.util.Date lMethodStartDate = null;
+  java.util.Date lMethodStopDate = null;
+  if (iMicLog.test(Log._APP)) {
+    lMethodStartDate = new java.util.Date();
+    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Enter method");
+  }
+  try {  resetExit();
+// End: com.esarks.arm.scripts.Method
+/* *** GENERATED SECTION *** End of embedded XML expansion */
+
+//ScriptWriter~~%>executeExtractComments v20191013a
+{
+//ScriptWriter~~~
+iOutputManager.println("executeExtractComments v20191013a", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+
+  String lCdata = "<" + "!" + "[CDATA[";
+  String lLine;
+  boolean lPrint = false;
+  String lLastTag="";
+
+//ScriptWriter~~//  iOutputManager.openOutputFile(<![$jac:path:scripts]!> + path("ehrm.WorkflowTaxonomy.WorkflowtaxonomyComments") + ".xml", false);
+//  iOutputManager.openOutputFile(iSymbolTable.translateProperties("[$jac:path:scripts]") + path("ehrm.WorkflowTaxonomy.WorkflowtaxonomyComments") + ".xml", false);
+
+
+//ScriptWriter~~  <!business:wfDiagramsList:wfd!>!resetIterator();
+  iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business:wfDiagramsList:wfd")).resetIterator();
+//ScriptWriter~~  while (<!business:wfDiagramsList:wfd!>!next()) {
+  while (iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("business:wfDiagramsList:wfd")).next()) {
+
+//ScriptWriter~~    String lFileName = <![business:wfExports:folder]!> + "\\" + <![business:wfExports:[business:wfDiagramsList:wfd:id]:file]!>;
+    String lFileName = iSymbolTable.translateProperties("[business:wfExports:folder]") + "\\" + iSymbolTable.translateProperties("[business:wfExports:[business:wfDiagramsList:wfd:id]:file]");
+    File lFile = new File(lFileName);
+    FileReader lFr = new FileReader(lFile);
+    BufferedReader lBr = new BufferedReader(lFr);
+    Boolean lComments = false;
+    
+//ScriptWriter~~%>
+{
+//ScriptWriter~~~
+iOutputManager.println("", false);
+//ScriptWriter~~<!%lFileName!>
+iOutputManager.println("" + lFileName + "", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+
+    while((lLine = lBr.readLine()) != null){
+     
+      if ((lPrint == true) && (lLine.startsWith("Work Step") ||
+        lLine.startsWith("System") ||
+        lLine.startsWith("Decision") ||
+        lLine.startsWith("Start/Stop") ||
+        lLine.startsWith("Off Page Reference") ||
+        lLine.startsWith("Document") ||
+        lLine.startsWith("Swim Lane/Role"))) {
+
+        if (lComments) {
+//ScriptWriter~~          <!report:line!>!resetIterator();
+          iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("report:line")).resetIterator();
+//ScriptWriter~~          while (<!report:line!>!next()) {
+          while (iPropertyHelper.setPropertyName(iScript, iSymbolTable.translateProperties("report:line")).next()) {
+//ScriptWriter~~%>
+{
+//ScriptWriter~~~
+iOutputManager.println("", false);
+//ScriptWriter~~<![report:line]!>
+iOutputManager.println("" + iSymbolTable.translateProperties("[report:line]") + "", true);
+//ScriptWriter~~<%
+iOutputManager.println("", false);
+//ScriptWriter~~~
+}
+//ScriptWriter~~~
+
+          }
+        }
+      }
+    }
+  }
+    
+/*<& com.esarks.arm.scripts.FinalReturnMethod &>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.FinalReturnMethod
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Normal final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    return;
+
+  } catch (Throwable e) {
+    setContext(iScript.getMasterScript());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event")).set(e.getMessage());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:severity")).set("fatal");
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptPackage")).set(iScriptPackage);
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptName")).set(iScriptName);
+    restoreContext();
+    setExit();
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRptController", "execute", new Object[]{"", iScriptFullName, lMethodSignature, "fatal", lMethodLocation, e.getMessage(), "Unhandled exception.", "Review this exception to determine proper handling."});
+
+    System.out.println("ExceptionRptController called..." + e.getMessage());
+
+    com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+    com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+    lExceptionServiceJeo.addJeo(lExceptionJeo);
+    java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+    lExceptionJeo.setTime(lExceptionTimestamp);
+    lExceptionJeo.setModule(iScriptFullName);
+    lExceptionJeo.setMethod(lMethodSignature);
+    lExceptionJeo.setSeverity("unknown");
+    lExceptionJeo.setLocation(lMethodLocation);
+    lExceptionJeo.setDescription(e.getMessage());
+    lExceptionJeo.setAction("unknown");
+    lExceptionJeo.setResolution("unknown");
+
+    StackTraceElement[] lStackTraceElements = e.getStackTrace();
+    for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+      com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+      lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+      lExceptionJeo.addJeo(lStackExceptionJeo);
+    }
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    if (iMicLog.test(Log._ERR)) {
+      iMicLog.println(Log._ERR, "ERR-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!" + e.getMessage());
+    }
+    return;
+  }
+  }
+// End: com.esarks.arm.scripts.FinalReturnMethod
+/* *** GENERATED SECTION *** End of embedded XML expansion */
+
+/*<& com.esarks.arm.scripts.Method
+   <method name="executeExtractComments2" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.Method
+/**
+ * 
+ */
+  public void executeExtractComments2() {
+  String lMethodSignature = "executeExtractComments2()";
+  String lMethodLocation = "";
+  java.util.Date lMethodStartDate = null;
+  java.util.Date lMethodStopDate = null;
+  if (iMicLog.test(Log._APP)) {
+    lMethodStartDate = new java.util.Date();
+    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Enter method");
+  }
+  try {  resetExit();
+// End: com.esarks.arm.scripts.Method
+/* *** GENERATED SECTION *** End of embedded XML expansion */
 
 //ScriptWriter~~%>EHRM Hello World! v20191013a
 {
@@ -69,9 +353,8 @@ iOutputManager.println("", false);
   boolean lPrint = false;
   String lLastTag="";
 
-  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
-
-  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.txt", false);
+//ScriptWriter~~  iOutputManager.openOutputFile(<![$jac:path:scripts]!> + path("ehrm.WorkflowTaxonomy.WorkflowtaxonomyComments") + ".xml", false);
+  iOutputManager.openOutputFile(iSymbolTable.translateProperties("[$jac:path:scripts]") + path("ehrm.WorkflowTaxonomy.WorkflowtaxonomyComments") + ".xml", false);
 
 //ScriptWriter~~%>
 {
@@ -224,14 +507,87 @@ iOutputManager.println("", false);
 
 
   iOutputManager.closeOutputFile();
-
-  execute2();
-  execute2a();
-  execute1();
     
-}
+/*<& com.esarks.arm.scripts.FinalReturnMethod &>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.FinalReturnMethod
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Normal final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    return;
 
-public void execute2() {
+  } catch (Throwable e) {
+    setContext(iScript.getMasterScript());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event")).set(e.getMessage());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:severity")).set("fatal");
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptPackage")).set(iScriptPackage);
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptName")).set(iScriptName);
+    restoreContext();
+    setExit();
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRptController", "execute", new Object[]{"", iScriptFullName, lMethodSignature, "fatal", lMethodLocation, e.getMessage(), "Unhandled exception.", "Review this exception to determine proper handling."});
+
+    System.out.println("ExceptionRptController called..." + e.getMessage());
+
+    com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+    com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+    lExceptionServiceJeo.addJeo(lExceptionJeo);
+    java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+    lExceptionJeo.setTime(lExceptionTimestamp);
+    lExceptionJeo.setModule(iScriptFullName);
+    lExceptionJeo.setMethod(lMethodSignature);
+    lExceptionJeo.setSeverity("unknown");
+    lExceptionJeo.setLocation(lMethodLocation);
+    lExceptionJeo.setDescription(e.getMessage());
+    lExceptionJeo.setAction("unknown");
+    lExceptionJeo.setResolution("unknown");
+
+    StackTraceElement[] lStackTraceElements = e.getStackTrace();
+    for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+      com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+      lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+      lExceptionJeo.addJeo(lStackExceptionJeo);
+    }
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    if (iMicLog.test(Log._ERR)) {
+      iMicLog.println(Log._ERR, "ERR-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!" + e.getMessage());
+    }
+    return;
+  }
+  }
+// End: com.esarks.arm.scripts.FinalReturnMethod
+/* *** GENERATED SECTION *** End of embedded XML expansion */
+
+
+/*<& com.esarks.arm.scripts.Method
+   <method name="executeWorkflowTaxonomyStatus" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.Method
+/**
+ * 
+ */
+  public void executeWorkflowTaxonomyStatus() {
+  String lMethodSignature = "executeWorkflowTaxonomyStatus()";
+  String lMethodLocation = "";
+  java.util.Date lMethodStartDate = null;
+  java.util.Date lMethodStopDate = null;
+  if (iMicLog.test(Log._APP)) {
+    lMethodStartDate = new java.util.Date();
+    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Enter method");
+  }
+  try {  resetExit();
+// End: com.esarks.arm.scripts.Method
+/* *** GENERATED SECTION *** End of embedded XML expansion */
 
 //ScriptWriter~~%>EHRM Hello World! v20190816a
 {
@@ -244,9 +600,7 @@ iOutputManager.println("", false);
 //ScriptWriter~~~
 
 
-//  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
-
-  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy1.csv", false);
+  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyStatus.csv", false);
 
 //ScriptWriter~~%>
 {
@@ -306,9 +660,86 @@ iOutputManager.println("", false);
   }
 
   iOutputManager.closeOutputFile();
-}
 
-public void execute2a() {
+/*<& com.esarks.arm.scripts.FinalReturnMethod &>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.FinalReturnMethod
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Normal final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    return;
+
+  } catch (Throwable e) {
+    setContext(iScript.getMasterScript());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event")).set(e.getMessage());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:severity")).set("fatal");
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptPackage")).set(iScriptPackage);
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptName")).set(iScriptName);
+    restoreContext();
+    setExit();
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRptController", "execute", new Object[]{"", iScriptFullName, lMethodSignature, "fatal", lMethodLocation, e.getMessage(), "Unhandled exception.", "Review this exception to determine proper handling."});
+
+    System.out.println("ExceptionRptController called..." + e.getMessage());
+
+    com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+    com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+    lExceptionServiceJeo.addJeo(lExceptionJeo);
+    java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+    lExceptionJeo.setTime(lExceptionTimestamp);
+    lExceptionJeo.setModule(iScriptFullName);
+    lExceptionJeo.setMethod(lMethodSignature);
+    lExceptionJeo.setSeverity("unknown");
+    lExceptionJeo.setLocation(lMethodLocation);
+    lExceptionJeo.setDescription(e.getMessage());
+    lExceptionJeo.setAction("unknown");
+    lExceptionJeo.setResolution("unknown");
+
+    StackTraceElement[] lStackTraceElements = e.getStackTrace();
+    for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+      com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+      lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+      lExceptionJeo.addJeo(lStackExceptionJeo);
+    }
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    if (iMicLog.test(Log._ERR)) {
+      iMicLog.println(Log._ERR, "ERR-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!" + e.getMessage());
+    }
+    return;
+  }
+  }
+// End: com.esarks.arm.scripts.FinalReturnMethod
+/* *** GENERATED SECTION *** End of embedded XML expansion */
+
+/*<& com.esarks.arm.scripts.Method
+   <method name="executeWorkflowTaxonomyComments" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.Method
+/**
+ * 
+ */
+  public void executeWorkflowTaxonomyComments() {
+  String lMethodSignature = "executeWorkflowTaxonomyComments()";
+  String lMethodLocation = "";
+  java.util.Date lMethodStartDate = null;
+  java.util.Date lMethodStopDate = null;
+  if (iMicLog.test(Log._APP)) {
+    lMethodStartDate = new java.util.Date();
+    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Enter method");
+  }
+  try {  resetExit();
+// End: com.esarks.arm.scripts.Method
+/* *** GENERATED SECTION *** End of embedded XML expansion */
 
 //ScriptWriter~~%>EHRM Hello World! v20190816a
 {
@@ -320,8 +751,6 @@ iOutputManager.println("", false);
 }
 //ScriptWriter~~~
 
-
-//  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
 
   iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.csv", false);
 
@@ -371,9 +800,86 @@ iOutputManager.println("", false);
   }
 
   iOutputManager.closeOutputFile();
-}
 
-public void execute1() {
+/*<& com.esarks.arm.scripts.FinalReturnMethod &>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.FinalReturnMethod
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Normal final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    return;
+
+  } catch (Throwable e) {
+    setContext(iScript.getMasterScript());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event")).set(e.getMessage());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:severity")).set("fatal");
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptPackage")).set(iScriptPackage);
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptName")).set(iScriptName);
+    restoreContext();
+    setExit();
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRptController", "execute", new Object[]{"", iScriptFullName, lMethodSignature, "fatal", lMethodLocation, e.getMessage(), "Unhandled exception.", "Review this exception to determine proper handling."});
+
+    System.out.println("ExceptionRptController called..." + e.getMessage());
+
+    com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+    com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+    lExceptionServiceJeo.addJeo(lExceptionJeo);
+    java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+    lExceptionJeo.setTime(lExceptionTimestamp);
+    lExceptionJeo.setModule(iScriptFullName);
+    lExceptionJeo.setMethod(lMethodSignature);
+    lExceptionJeo.setSeverity("unknown");
+    lExceptionJeo.setLocation(lMethodLocation);
+    lExceptionJeo.setDescription(e.getMessage());
+    lExceptionJeo.setAction("unknown");
+    lExceptionJeo.setResolution("unknown");
+
+    StackTraceElement[] lStackTraceElements = e.getStackTrace();
+    for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+      com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+      lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+      lExceptionJeo.addJeo(lStackExceptionJeo);
+    }
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    if (iMicLog.test(Log._ERR)) {
+      iMicLog.println(Log._ERR, "ERR-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!" + e.getMessage());
+    }
+    return;
+  }
+  }
+// End: com.esarks.arm.scripts.FinalReturnMethod
+/* *** GENERATED SECTION *** End of embedded XML expansion */
+
+/*<& com.esarks.arm.scripts.Method
+   <method name="executeWorkflowTaxonomy" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.Method
+/**
+ * 
+ */
+  public void executeWorkflowTaxonomy() {
+  String lMethodSignature = "executeWorkflowTaxonomy()";
+  String lMethodLocation = "";
+  java.util.Date lMethodStartDate = null;
+  java.util.Date lMethodStopDate = null;
+  if (iMicLog.test(Log._APP)) {
+    lMethodStartDate = new java.util.Date();
+    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Enter method");
+  }
+  try {  resetExit();
+// End: com.esarks.arm.scripts.Method
+/* *** GENERATED SECTION *** End of embedded XML expansion */
 
 //ScriptWriter~~%>EHRM Hello World! v20190816a
 {
@@ -385,8 +891,6 @@ iOutputManager.println("", false);
 }
 //ScriptWriter~~~
 
-
-//  iSymbolTable.parseXml("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.xml");
 
   iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.csv", false);
 
@@ -580,8 +1084,61 @@ iOutputManager.println("", false);
 
   iOutputManager.closeOutputFile();
 
+/*<& com.esarks.arm.scripts.FinalReturnMethod &>*/
+/* *** GENERATED SECTION *** Beginning of embedded XML expansion */
+// Begin: com.esarks.arm.scripts.FinalReturnMethod
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Normal final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    return;
 
+  } catch (Throwable e) {
+    setContext(iScript.getMasterScript());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event")).set(e.getMessage());
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:severity")).set("fatal");
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptPackage")).set(iScriptPackage);
+    iPropertyHelper.setPropertyName(iSymbolTable.translateProperties("$jac:event:scriptName")).set(iScriptName);
+    restoreContext();
+    setExit();
 
-}
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRptController", "execute", new Object[]{"", iScriptFullName, lMethodSignature, "fatal", lMethodLocation, e.getMessage(), "Unhandled exception.", "Review this exception to determine proper handling."});
+
+    System.out.println("ExceptionRptController called..." + e.getMessage());
+
+    com.esarks.arm.model.jeo.ServiceJeo lExceptionServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+    com.esarks.arm.logging.ExceptionJeo lExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+    lExceptionServiceJeo.addJeo(lExceptionJeo);
+    java.sql.Timestamp lExceptionTimestamp = new java.sql.Timestamp(new java.util.Date().getTime());
+    lExceptionJeo.setTime(lExceptionTimestamp);
+    lExceptionJeo.setModule(iScriptFullName);
+    lExceptionJeo.setMethod(lMethodSignature);
+    lExceptionJeo.setSeverity("unknown");
+    lExceptionJeo.setLocation(lMethodLocation);
+    lExceptionJeo.setDescription(e.getMessage());
+    lExceptionJeo.setAction("unknown");
+    lExceptionJeo.setResolution("unknown");
+
+    StackTraceElement[] lStackTraceElements = e.getStackTrace();
+    for (int lTraceIdx=0; lTraceIdx < lStackTraceElements.length; lTraceIdx++) {
+      com.esarks.arm.logging.ExceptionJeo lStackExceptionJeo = new com.esarks.arm.logging.ExceptionJeo("trace");
+      lStackExceptionJeo.setDescription(lStackTraceElements[lTraceIdx].toString());
+      lExceptionJeo.addJeo(lStackExceptionJeo);
+    }
+
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{"logs.Exception_" + Long.toString(new java.util.Date().getTime()), lExceptionServiceJeo});
+
+    if (iMicLog.test(Log._APP)) {
+      lMethodStopDate = new java.util.Date();
+      iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!Elapsed time = " + Long.toString(lMethodStopDate.getTime() - lMethodStartDate.getTime()));
+    }
+    if (iMicLog.test(Log._ERR)) {
+      iMicLog.println(Log._ERR, "ERR-" + iScriptFullName + ":" + lMethodSignature + "!Error final exit method!" + e.getMessage());
+    }
+    return;
+  }
+  }
+// End: com.esarks.arm.scripts.FinalReturnMethod
+/* *** GENERATED SECTION *** End of embedded XML expansion */
 
 }

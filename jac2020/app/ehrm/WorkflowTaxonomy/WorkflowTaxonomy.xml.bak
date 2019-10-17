@@ -28,15 +28,52 @@
  <VBMS       description="VBMS"                                 owner="VA"/>
 </products>
 
+<!-- Interfaces Type List -->
+
+<interfaces>
+ <orm  description="HL7 ORM"/>
+ <oru  description="HL7 ORU"/>
+ <siu  description="HL7 SIU"/>
+ <man  description="Manual" />
+</interfaces>
+
+<!-- Workshop 8 Wall Pages List -->
+
 <!-- Phases List -->
 
 <phases>
  <p1  description="IOC Entry"/>
 </phases>
 
+<!-- Workflow Diagrams in Alpha Order -->
+
+
+<wfDiagramsList>
+  <wfd id="wf1353"  name="1VA - Registration - OHI Collection" />
+  <wfd id="wf1260"  name="1VA - Registration/Scheduling - In Person Check In" />
+  <wfd id="wf35"    name="1VA - Scheduling - Ambulatory - No Show Process" />
+  <wfd id="wf771"   name="1VA - Scheduling - Ambulatory - No Show-Contact" />
+  <wfd id="wf319"   name="1VA - Scheduling - Ambulatory - Orders to Scheduling" />
+  <wfd id="wf222"   name="1VA - Scheduling - Ambulatory - Record an Appointment Contact" />
+  <wfd id="wf34"    name="1VA - Scheduling - Ambulatory - Reschedule Appointment" />
+  <wfd id="wf32"    name="1VA - Scheduling - Ambulatory - Schedule Appointment" />
+  <wfd id="wf1993"  name="1VA - VBA - Capacity &#038; Capability &#038; Routing (IOC)" />
+  <wfd id="wf1989"  name="1VA - VBA - Deliver Exam Results" />
+  <wfd id="wf1990"  name="1VA - VBA - Enterprise Medical Records Search (IOC)" />
+  <wfd id="wf1995"  name="1VA - VBA - Exam-Management - Child Orders (IOC)" />
+  <wfd id="wf1866"  name="1VA - VBA - Exam-Management (IOC)" />
+  <wfd id="wf2048"  name="1VA - VBA - Letter - Response - Workflow" />
+  <wfd id="wf1987"  name="1VA - VBA - Perform Examination (IOC)" />
+  <wfd id="wf1999"  name="1VA - VBA - Scheduling - Ambulatory - Record a Contact" />
+  <wfd id="wf1873"  name="1VA - VBA - VR&#038;E Block 1" />
+  <wfd id="wf1998"  name="1VA - VBA Scheduling - Ambulatory - Orders to Scheduling" />
+  <wfd id="wf2008"  name="1VA - VBA-7131-Process" />
+</wfDiagramsList>
+
 <!-- Workflow Designer "Products and Interfaces" List -->
 
-<wfds>
+<wfProducts>
+
  <wf2008   description="1VA - VBA - 7131 Process" >
       <product   name="AcHIM"  description="ROI" />
       <product   name="RevCyc" description="Appointments Perspective" />
@@ -114,34 +151,36 @@
 </wf32>
 <wf1999 description="1VA - Scheduling - Ambulatory - VBA Record an Appointment Contact"> 
 </wf1999>
-</wfds>
+<wf2048 description="1VA - VBA - Letter - Response - Workflow">
+</wf2048>
+</wfProducts>
 
 <!-- Workflow Designer Export List -->
 
-<pdfs folder="C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-15_1538">
-<pdf id="wf1353"  name="1VA_-_Registration_-_OHI_Collection_2019-10-15_1537_Approved.txt" />
-<pdf id="wf1260"  name="1VA_-_Registration_Scheduling_-_In_Person_Check_In_2019-10-15_1537_Approved.txt" />
-<pdf id="wf771"   name="1VA_-_Scheduling_-_Ambulatory_-_No_Show-Contact_2019-10-15_1537_Approved.txt" />
-<pdf id="wf35"    name="1VA_-_Scheduling_-_Ambulatory_-_No_Show_Process_2019-10-15_1537_Approved.txt" />
-<pdf id="wf319"   name="1VA_-_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-15_1537_Approved.txt" />
-<pdf id="wf222"   name="1VA_-_Scheduling_-_Ambulatory_-_Record_an_Appointment_Contact_2019-10-15_1537_Approved.txt" />
-<pdf id="wf34"    name="1VA_-_Scheduling_-_Ambulatory_-_Reschedule_Appointment_2019-10-15_1537_Approved.txt" />
-<pdf id="wf32"    name="1VA_-_Scheduling_-_Ambulatory_-_Schedule_Appointment_2019-10-15_1537_Approved.txt" />
-<pdf id="wf1999"  name="1VA_-_VBA_-_Scheduling_-_Ambulatory_-_Record_an_Appointment_Contact_2019-10-15_1538_In_Process.txt" />
-<pdf id="wf1998"  name="1VA_-_VBA_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-15_1538_In_Process.txt" />
-<pdf id="wf1993"  name="1VA_-_VBA_-_Capacity___Capability___Routing__(IOC)_2019-10-15_1538_Approved.txt" />
-<pdf id="wf1990"  name="1VA_-_VBA_-_Enterprise_Medical_Records_Search_(IOC)_2019-10-15_1537_Approved.txt" />
-<pdf id="wf1995"  name="1VA_-_VBA_-_Exam-Management_-_Child_Orders_(IOC)_2019-10-15_1538_Approved.txt" />
-<pdf id="wf2008"  name="_Proposed__1VA-VBA-7131-Process_2019-10-15_1538_Ready_For_Review.txt" />
-<pdf id="wf1866"  name="_Proposed__1VA_-_VBA_-_Exam-Management_(IOC)_2019-10-15_1537_In_Process.txt" />
-<pdf id="wf1987"  name="1VA_-_VBA_-_Perform_Examination_(IOC)_2019-10-15_1537_Approved.txt" />
-<pdf id="wf1873"  name="_Proposed__1VA_-_VBA_-_VR_E_Block_1_2019-10-15_1537_Ready_For_Review.txt" />
-<pdf id="wf1989"  name="_Proposed___1VA_-_VBA_-_Deliver_Exam_Results_2019-10-15_1537_Ready_For_Review.txt" />
-</pdfs>
+<wfExports folder="C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-15_1538">
+<wf1353  file="1VA_-_Registration_-_OHI_Collection_2019-10-15_1537_Approved.txt" />
+<wf1260  file="1VA_-_Registration_Scheduling_-_In_Person_Check_In_2019-10-15_1537_Approved.txt" />
+<wf771   file="1VA_-_Scheduling_-_Ambulatory_-_No_Show-Contact_2019-10-15_1537_Approved.txt" />
+<wf35    file="1VA_-_Scheduling_-_Ambulatory_-_No_Show_Process_2019-10-15_1537_Approved.txt" />
+<wf319   file="1VA_-_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-15_1537_Approved.txt" />
+<wf222   file="1VA_-_Scheduling_-_Ambulatory_-_Record_an_Appointment_Contact_2019-10-15_1537_Approved.txt" />
+<wf34    file="1VA_-_Scheduling_-_Ambulatory_-_Reschedule_Appointment_2019-10-15_1537_Approved.txt" />
+<wf32    file="1VA_-_Scheduling_-_Ambulatory_-_Schedule_Appointment_2019-10-15_1537_Approved.txt" />
+<wf1999  file="1VA_-_VBA_-_Scheduling_-_Ambulatory_-_Record_an_Appointment_Contact_2019-10-15_1538_In_Process.txt" />
+<wf1998  file="1VA_-_VBA_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-15_1538_In_Process.txt" />
+<wf1993  file="1VA_-_VBA_-_Capacity___Capability___Routing__(IOC)_2019-10-15_1538_Approved.txt" />
+<wf1990  file="1VA_-_VBA_-_Enterprise_Medical_Records_Search_(IOC)_2019-10-15_1537_Approved.txt" />
+<wf1995  file="1VA_-_VBA_-_Exam-Management_-_Child_Orders_(IOC)_2019-10-15_1538_Approved.txt" />
+<wf2008  file="_Proposed__1VA-VBA-7131-Process_2019-10-15_1538_Ready_For_Review.txt" />
+<wf1866  file="_Proposed__1VA_-_VBA_-_Exam-Management_(IOC)_2019-10-15_1537_In_Process.txt" />
+<wf1987  file="1VA_-_VBA_-_Perform_Examination_(IOC)_2019-10-15_1537_Approved.txt" />
+<wf1873  file="_Proposed__1VA_-_VBA_-_VR_E_Block_1_2019-10-15_1537_Ready_For_Review.txt" />
+<wf1989  file="_Proposed___1VA_-_VBA_-_Deliver_Exam_Results_2019-10-15_1537_Ready_For_Review.txt" />
+</wfExports>
 
 <!-- Steve's Status List -->
 
-<states>
+<wfStates>
 <wf1866    status="In-progress"    council="BOC/VBA     "  dcwRqd="?"   dcwCmp=" "    ddmRqd="Y"    ddmCmp="   "  build="" />
 <wf1873    status="In-Progress"    council="BOC/VBA     "  dcwRqd="?"   dcwCmp=" "    ddmRqd="N"    ddmCmp="N/A"  build="" />   
 <wf1989    status="In-progress"    council="BOC/VBA     "  dcwRqd="N"   dcwCmp=" "    ddmRqd="N"    ddmCmp="N/A"  build="" />   
@@ -160,90 +199,58 @@
 <wf771     status="Approved   "    council="Scheduling  "  dcwRqd=" "   dcwCmp=" "    ddmRqd=" "    ddmCmp="   "  build="" />
 <wf1260    status="Approved   "    council="Registration"  dcwRqd="N"   dcwCmp=" "    ddmRqd="N"    ddmCmp="N/A"  build="" />   
 <wf1353    status="Approved   "    council="Registration"  dcwRqd="N"   dcwCmp=" "    ddmRqd="N"    ddmCmp="N/A"  build="" />   
-</states>
+</wfStates>
 
 <!-- Workflow Designer Parent / Child List -->
 
-<wfreport>
-<wf name="wf1866">
-  <subflow name="wf1998"/>
-  <subflow name="wf1987"/>
-  <subflow name="wf1995"/>
-  <subflow name="wf771"/>
-  <subflow name="wf1260"/>
-</wf>
-
-<wf name="wf1987">
-</wf>
-
-<wf name="wf1873">
-  <subflow name="wf319"/>
-</wf>
-
-<wf name="wf2008">
-</wf>
-
-<wf name="wf1989">
-  <subflow name="wf1987"/>
-</wf>
-
-<wf name="wf1998">
-  <subflow name="wf32"/>
-  <subflow name="wf1999"/>
-</wf>
-
-<wf name="wf1353">
-</wf>
-
-<wf name="wf1260">
-  <subflow name="wf1353"/>
-</wf>
-
-<wf name="wf35">
-</wf>
-
-<wf name="wf771">
-  <subflow name="wf222"/>
-  <subflow name="wf34"/>
-  <subflow name="wf35"/>
-</wf>
-
-<wf name="wf319">
-  <subflow name="wf32"/>
-  <subflow name="wf222"/>
-</wf>
-
-<wf name="wf222">
-</wf>
-
-<wf name="wf34">
-</wf>
-
-<wf name="wf32">
-</wf>
-
-<wf name="wf1999">
-</wf>
-
-<wf name="wf1993">
-</wf>
-
-<wf name="wf1990">
-</wf>
-
-<wf name="wf1995">
-</wf>
-
-</wfreport>
-
-<!-- Interfaces Type List -->
-
-<interfaces>
- <orm  description="HL7 ORM"/>
- <oru  description="HL7 ORU"/>
- <siu  description="HL7 SIU"/>
- <man  description="Manual" />
-</interfaces>
+<wfSublows>
+<wf1353/>
+<wf1260>    
+	<subflow id="wf1353" />
+</wf1260>
+<wf35/>
+<wf771>
+  <subflow id=">wf222" />
+  <subflow id="wf34" />
+  <subflow id="wf35" />
+</wf771>
+<wf319>
+  <subflow id="wf32" />
+  <subflow id="wf222" />
+</wf319>
+<wf222/>
+<wf34/>
+<wf32/>
+<wf1993/>
+<wf1989>
+  <subflow id="wf1987"/>
+</wf1989>
+<wf1990/>
+<wf1995/>
+<wf1866>
+  <subflow id="wf1998" />
+  <subflow id="wf1987" />
+  <subflow id="wf1995" />
+  <subflow id="wf771" />
+  <subflow id="wf1260" />
+</wf1866>
+<wf2048/>
+<wf1987/>
+<wf1999>
+    <subflow  id="wf1998" />
+    <subflow  id="wf2048"/>
+</wf1999>
+<wf1873>
+    <subflow  id="wf319"/>
+</wf1873>
+<wf1998>
+    <subflow   id="wf32" />
+    <subflow   id="wf1999"/>
+</wf1998>
+<wf2008>
+    <subflow   id="wf500"/>
+</wf2008>
+</wfSubflows>
 
 <!-- Workshop 8 Wall Pages List -->
 
