@@ -314,6 +314,10 @@ iOutputManager.println("", false);
 // End: com.esarks.arm.scripts.FinalReturnMethod
 /* *** GENERATED SECTION *** End of embedded XML expansion */
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// executeExtractComments2
+////////////////////////////////////////////////////////////////////////////////////////////////
+
 /*<& com.esarks.arm.scripts.Method
    <method name="executeExtractComments2" visibility="public" return="void" >
      <document></document>

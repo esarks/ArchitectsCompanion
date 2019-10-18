@@ -53,13 +53,13 @@
 
     while((lLine = lBr.readLine()) != null){
      
-      if ((lPrint == true) && (line.startsWith("Work Step") ||
-        line.startsWith("System") ||
-        line.startsWith("Decision") ||
-        line.startsWith("Start/Stop") ||
-        line.startsWith("Off Page Reference") ||
-        line.startsWith("Document") ||
-        line.startsWith("Swim Lane/Role"))) {
+      if ((lPrint == true) && (lLine.startsWith("Work Step") ||
+        lLine.startsWith("System") ||
+        lLine.startsWith("Decision") ||
+        lLine.startsWith("Start/Stop") ||
+        lLine.startsWith("Off Page Reference") ||
+        lLine.startsWith("Document") ||
+        lLine.startsWith("Swim Lane/Role"))) {
 
         if (lComments) {
           <!report:line!>!resetIterator();
