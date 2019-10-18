@@ -2,15 +2,6 @@ echo off
 echo ******************************************
 echo JAC2020 v20191012a phase2.bat
 
-if EXIST %JAC_BUILD%\classes rmdir/q/s %JAC_BUILD%\classes
-mkdir %JAC_BUILD%\classes
-
-if EXIST %JAC_BUILD%\lib\mic rmdir/q/s %JAC_BUILD%\lib\mic
-mkdir %JAC_BUILD%\lib\mic
-
-if EXIST %JAC_BUILD%\phase2Classes rmdir/q/s %JAC_BUILD%\phase2Classes
-mkdir %JAC_BUILD%\phase2Classes
-
 cd %JAC_BUILD%\bin
 
 call Job jac com.esarks.arm.scripts.ExitMethod         ! jac
@@ -28,4 +19,3 @@ xcopy %JAC_BUILD%\classes\*.class %JAC_BUILD%\phase2Classes /s
 
 "%JAVA_HOME%\bin\jar" cf %JAC_BUILD%\lib\mic\mic.jar -C "%JAC_BUILD%\phase2Classes" .
 
-if EXIST %JAC_BUILD%\phase2Classes rmdir/q/s %JAC_BUILD%\phase2Classes
