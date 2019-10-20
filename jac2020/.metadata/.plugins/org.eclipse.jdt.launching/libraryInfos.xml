@@ -19,4 +19,23 @@
 <entry path="C:\GitHub\ArchitectsCompanion\jac2020\jdk1.8.0_112\jre\lib\endorsed"/>
 </endorsedDirs>
 </libraryInfo>
+<libraryInfo home="C:\jdk1.8.0_171\jre" version="1.8.0_171">
+<bootpath>
+<entry path="C:\jdk1.8.0_171\jre\lib\resources.jar"/>
+<entry path="C:\jdk1.8.0_171\jre\lib\rt.jar"/>
+<entry path="C:\jdk1.8.0_171\jre\lib\sunrsasign.jar"/>
+<entry path="C:\jdk1.8.0_171\jre\lib\jsse.jar"/>
+<entry path="C:\jdk1.8.0_171\jre\lib\jce.jar"/>
+<entry path="C:\jdk1.8.0_171\jre\lib\charsets.jar"/>
+<entry path="C:\jdk1.8.0_171\jre\lib\jfr.jar"/>
+<entry path="C:\jdk1.8.0_171\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\jdk1.8.0_171\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\jdk1.8.0_171\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
 </libraryInfos>
