@@ -1,18 +1,480 @@
-wf1866,1VA - VBA - Exam-Management (IOC)
-wf1987,1VA - VBA - Perform Examination (IOC)
-wf1873,1VA - VBA - VR&E Block 1
-wf2008,1VA - VBA - 7131 Process
-wf1989,1VA - VBA - Deliver Exam Results
-wf1998,1VA - VBS Scheduling - Ambulatory - Orders to Scheduling
-wf1353,1VA - Registration - OHI Collection
-wf1260,1VA - Registration/Scheduling - In Person Check In
-wf35,1VA - Scheduling - Ambulatory - No Show Process
-wf771,1VA - Scheduling - Ambulatory - No Show-Contact
-wf319,1VA - Scheduling - Ambulatory - Orders to Scheduling
-wf222,1VA - VBA - Scheduling - Ambulatory - VBA Record an Appointment Contact
-wf34,1VA - Scheduling - Ambulatory - Reschedule Appointment
-wf32,1VA - Scheduling - Ambulatory - Schedule Appointment
-wf1999,1VA - Scheduling - Ambulatory - VBA Record an Appointment Contact
-wf1993,1VA - VBA - Capacity & Capability & Routing (IOC)
-wf1990,1VA - VBA - Enterprise Medical Records Search (IOC)
-wf1995,1VA - VBA - Exam-Management - Child Orders (IOC)
+wf1353,
+wf1260,
+,"Work Step [27668] 
+Description: Update Patient Status to 'Arrived' 
+
+
+Comments: If a patient remains in a single state for too long (for example, 15 minutes) 
+an excess wait time counter can show on Patient Tracking. 
+"
+,"Work Step [27556] 
+Description: Default Modify Patient Conversation launches. Verify/update Demographics, 
+Relationships, Ins and Alerts 
+
+
+Comments: The default Modify Patient Conversation can launch automatically when selected 
+within the Revenue Cycle Maintenance Tool 
+"
+,"Work Step [27561] 
+Description: Review,collect and confirm OHI 
+
+
+Comments: The default Modify Encounter Conversation can launch automatically when 
+selected within the Revenue Cycle Maintenance Tool 
+Eligibility checking 
+requires Transaction Services Integration 
+"
+,"Decision [27651] 
+Description: Images/documents gathered at check in? 
+
+
+Comments: Automatically launching the Images window is enabled within the Revenue Cycle 
+Maintenance Tool 
+Content 360 is required for images integration 
+"
+,"Off Page Reference [27680] 
+Workflow Link: 1VA -Registration -OHI Collection 
+
+
+Comments: Review,collect and confirm OHI 
+"
+wf35,
+,"Work Step [9325] 
+Description: Click the 'Confirmed' text / link 
+
+
+Comments: A tiny window opens below the 'Confirmed' text with options for 'Check In' and 
+'No Show' 
+"
+wf771,
+wf319,
+,"Work Step [38628] 
+Description: Complete required appointment details in Revenue Cycle 
+
+
+Comments: 'Force Medical Necessity Check Against Content' option available for new 
+Medicare patients without insurance on file 
+"
+,"Start/Stop [38686] 
+Description: Future Appointment is scheduled 
+
+
+Comments: changed from Future order placed to future appointment is scheduled -la 
+"
+,"Off Page Reference [38725] 
+Workflow Link: 1VA -Scheduling -Ambulatory -Schedule Appointment 
+
+
+Comments: (PR) added off page reference 3/5/18 
+"
+wf222,
+,"Work Step [4] 
+Description: From Appointments Perspective in Revenue Cycle , locate the appt, right click, 
+and select Record Contact for Appointment 
+
+
+Comments: Added application. MNelson 
+"
+wf34,
+,"Work Step [9274] 
+Description: Within Revenue Cycle, search for veteran by clicking the magnifying glass in top 
+left corner of window to open 'Person Search' 
+
+
+Comments: 'Person Search' window opens 
+"
+,"Work Step [30469] 
+Description: Click 'Select' 
+
+
+Comments: DEERS retrieve occurs before opening to patient's 'Future Appointments' view 
+"
+,"Work Step [9272] 
+Description: Within 'Future Appointments' tab, right click appointment to be rescheduled 
+
+
+Comments: Small window opens with various menu options including 'Reschedule 
+Appointment' 
+"
+,"Work Step [30472] 
+Description: Select 'Reschedule Appointment' 
+
+
+Comments: The 'Add Appointment' tab in the bottom half of the window changes to ' 
+Reschedule Appointment' with appointment details 
+"
+,"Work Step [9269] 
+Description: Select new appointment date and time 
+
+
+Comments: 'Reschedule Appointment' tab populates with a new additional drop-down field 
+requesting 'Reschedule Reason' 
+"
+wf32,
+,"Work Step [29068] 
+Description: In the 'Add Appointment Plus' tab, search for the Appointment Type . 
+
+
+Comments: Buttons for 3 methods for searching for an appointment change from unavailable 
+to available (e.g. 'First Available') 
+"
+,"Work Step [29073] 
+Description: Click on the 'First Available' button (recommended scheduling method) 
+
+
+Comments: 'First Available Times' window opens with 'Suggested Results' for available 
+appointments 
+"
+,"Work Step [29090] 
+Description: Click 'Confirm' 
+
+
+Comments: Appointment details populates the 'Future Appointments' list 
+"
+,"Work Step [29074] 
+Description: Click on the 'Schedule' button 
+
+
+Comments: 'Schedule' window opens with a calendar of appointment slots for the requested 
+resource(s) 
+"
+,"Work Step [29075] 
+Description: Click on the 'Recur' button 
+
+
+Comments: 'Recurring Frequencies' window opens with various search criteria -DO NOT 
+change 'Patient Duration' minutes 
+"
+wf1993,
+,"Start/Stop [12] 
+Description: Enter workflow -Pre-Condition: ERRA data is available within the CDW 
+
+
+Comments: ERRA data means the current C&P exam request inventory data, data on past 
+C&P 
+exam requests that were cancelled and/or completed, and VHA facility 
+capabilities (i.e., enabled/disabled DBQs based on VHA's internal personnel 
+and resources). High level data on C&P clinic locations (names/addresses) is 
+also included. 
+"
+,"Work Step [3] 
+Description: Access ERRA tool to determine where to send Exam Request 
+
+
+Comments: Products: 
+-ERRA tool : Determine location to send request 
+-Dependency on 
+the data being available for ERRA 
+"
+wf1989,
+wf1990,
+,"Work Step [11] 
+Description: VBA User Reviews CAPRI for EHRM Location 
+
+
+Comments: Products: 
+-CAPRI : Enterprise Search 
+"
+,"Work Step [3] 
+Description: If EHRM Location is identified, Special Issue is applied to claim 
+
+
+Comments: Products: 
+-VBMS 
+"
+,"Work Step [5] 
+Description: Pilot user retrieves claim from pilot queue 
+
+
+Comments: Products: 
+-TBD 
+"
+,"Work Step [9] 
+Description: In JLV -retrieve all DOD pre go-live historical records (Current Process) 
+
+
+Comments: Products: 
+-JLV 
+"
+,"System [15] 
+Description: Clinical XR creates pdf document 
+
+
+Comments: Products: 
+-Clinical Reporting XR 
+Note: May access Clinical Reporting XR 
+from AccessHIM 
+"
+wf1995,
+,"Work Step [4] 
+Description: Identify detail order appointment type (7 different types allowed) 
+
+
+Comments: Products: 
+-PowerChart : ? 
+"
+,"Work Step [5] 
+Description: Identify DBQ(s) associated to order type. 
+
+
+Comments: Complete one order at a time. 
+"
+,"Work Step [6] 
+Description: Identify Appointment Length 
+
+
+Comments: Interfaces: 
+-SIU_S12 : C&P Exam is scheduled : Notify VBMS that exam is 
+scheduled (post IOC) 
+-SIU_S13 : C&P Exam is rescheduled : Notify VBMS that 
+exam is rescheduled (post IOC) 
+-SIU_S14 : C&P Exam is modified : Notify 
+VBMS that exam is modified (post IOC) 
+-SIU_S15 : C&P Exam is cancelled : 
+Notify VBMS that exam is cancelled (post IOC) 
+"
+,"Start/Stop [8] 
+Description: Sign child order. 
+
+
+Comments: Interfaces: 
+-ORM : VHA Creates Child Orders : VHA Creates Child Order to map 
+to original request (post IOC) 
+"
+wf1866,
+,"Work Step [5] 
+Description: VBA Staff selects PowerChart from task bar within Revenue Cycle 
+
+
+Comments: Products: 
+-PowerChart : Search and View Medical Records 
+"
+,"Work Step [10] 
+Description: Open 2507 PowerForm and document DBQ by body system and complete 
+necessary documentation. 
+
+
+Comments: Products: 
+-PowerForm : Form 2507 to Document Requested DBQs 
+Interfaces: 
+-
+ORM : New Order Request Entered by VBA : Notify VBMS that exam is ordered ( 
+Post IOC) 
+"
+,"Work Step [74] 
+Description: Run Clinical XR report for Generic Encounter, create pdf and download to local 
+directory, upload to VBMS veteran's e-Folder 
+
+
+Comments: Products: 
+-Clinical Reporting XR : Generic Encounter 
+Interfaces: 
+-Manual 
+upload to VBMS Folder 
+"
+,"Work Step [47] 
+Description: Open Message Center, choose 2507 message template. Send message to 
+appropriate pool. 
+
+
+Comments: Products: 
+-Message Center : 2507 Message Template 
+"
+,"Work Step [106] 
+Description: Triage staff receives 2507 order request in appropriate future requests queue. 
+
+
+Comments: Products: 
+-Message Center : Message Pool 
+"
+,"Work Step [55] 
+Description: Validate special priority, sensitivity level, and jurisdiction. Address additional 
+comments entered in referral order. 
+
+
+Comments: Products: 
+-PowerChart : Review Order 
+"
+,"Work Step [67] 
+Description: Validate that the 2507 request form is correct. 
+
+
+Comments: Interfaces: 
+-ORR : Notify VBMS that exam request is accepted. 
+"
+,"Work Step [150] 
+Description: Send message to VBA User via Cerner Messaging asking question that needs to 
+be clarified 
+
+
+Comments: Question: How is this message sent / received at IOC? 
+Interfaces: 
+-ORR : 
+VBA Staff Discontinue Order Request : Notify VBMS of order discontinued as 
+requested (post IOC) 
+-ORR : VHA User Requests Clarification : VHA reviews 
+Exam Request and requests clarification (post IOC) 
+-ORM : VHA User Requests 
+Clarification : VHA reviews Exam Request and requests clarification (post IOC) 
+"
+,"Work Step [126] 
+Description: 2507 (Dummy / Parent) order being rejected will generate an HL7 ORU / ORM 
+message to DAS -Notification back to VBA via message p 
+
+
+Comments: VBA is requesting a pdf document be sent that can be loaded in the Veteran's 
+eFolder 
+Interfaces: 
+-Reject PDF to Veteran's eFolder (IOC) 
+-ORR : Order 
+Request Canceled by VHA Staff (Post IOC) 
+"
+,"Off Page Reference [42] 
+Workflow Link: 1VA -VBA Scheduling -Ambulatory -Orders to Scheduling 
+
+
+Comments: Note: Sub-flow belongs to Scheduling Council 
+Products: 
+-Cerner Scheduling 
+"
+,"Work Step [16] 
+Description: Prep: C&P Provider reviews request and DBQs needed for exam. 
+
+
+Comments: Products: 
+-Ambulatory Organizer : Clinician's view of scheduled appointments 
+"
+,"Work Step [18] 
+Description: From workflow Mpage Provider clicks Assessments component and selects the 
+drop down to access DBQ form. 
+Step Impact: Training 
+
+
+Comments: Products: 
+-PowerChart : Mpage : Assessment Component 
+"
+,"Decision [142] 
+Description: Did patient show for appointment 
+
+
+Comments: Interfaces: 
+-SIU_Z01 : C&P Exam is checked in : Notify VBMS that exam is 
+checked in (post IOC) 
+-ORM : C&P Exam is Completed : Notify VBMS that exam 
+occurred (post IOC) 
+"
+,"Start/Stop [21] 
+Description: Veteran checks out at the front desk unless receiving A.C.E. Evaluation. 
+
+
+Comments: Products: 
+-Revenue Cycle : Patient Access 
+"
+wf2048,
+wf1987,
+,"Work Step [3] 
+Description: Read 2507 Detailed order from Generic PowerForm 
+
+
+Comments: Products: 
+-PowerForm : 2507 
+"
+,"Work Step [4] 
+Description: Clinician will search the following sites based on availability of data (VBMS, 
+EHRM, CAPRI, JLV, AHLTA) 
+
+
+Comments: Products: 
+-PowerChart : 
+-VBMS 
+-CAPRI 
+-JLV 
+-AHLTA 
+"
+,"Work Step [6] 
+Description: Determine applicable DBQ(s) 
+
+
+Comments: Products: 
+-PowerChart : PowerForm : Specific DBQ 
+"
+wf1999,
+,"Work Step [4] 
+Description: In the appointment request queue locate the request, right click, and select Record 
+Contact 
+
+
+Comments: Products: 
+-Revenue Cycle : Appointments Perspective 
+"
+wf1873,
+,"Start/Stop [3] 
+Description: VBA user opens Power Chart. 
+
+
+Comments: Products: 
+-PowerChart : Veteran Orders 
+"
+wf2070,
+wf1998,
+,"Start/Stop [38723] 
+Description: Schedulable order placed in PowerChart 
+
+
+Comments: #VBA 
+"
+,"Work Step [38628] 
+Description: Complete required appointment details in Revenue Cycle 
+
+
+Comments: 'Force Medical Necessity Check Against Content' option available for new 
+Medicare patients without insurance on file 
+"
+,"Start/Stop [38686] 
+Description: Future Appointment is scheduled 
+
+
+Comments: changed from Future order placed to future appointment is scheduled -la 
+"
+,"Work Step [38757] 
+Description: Appointment is IDES. Contact per policy. 
+
+
+Comments: *gap for post IOC workflow -no issues for IOC. will need to resolve 
+notification of appointment post IOC 
+"
+,"Off Page Reference [38725] 
+Workflow Link: 1VA -Scheduling -Ambulatory -Schedule Appointment 
+
+
+Comments: (PR) added off page reference 3/5/18 
+Revisit deceased patient appointment 
+type 
+"
+wf2008,
+,"Work Step [4] 
+Description: Open AccessHIM 
+
+
+Comments: Products: 
+-AccessHIM : ROI 
+"
+,"Work Step [13] 
+Description: Requests tied to VBA requester source display in Request Queue 
+
+
+Comments: Product: AccessHIM 
+"
+,"Work Step [50] 
+Description: Add a note to the request that no records were located. Update request status. 
+
+
+Comments: Add a note to the request as necessary to indicate that no records were found. 
+Notify any necessary parties per VA Policy. 
+"
+,"Work Step [19] 
+Description: Add a note to the request as necessary. 
+
+
+Comments: Add a note to the request as necessary in accordance with VA Policy. 
+"

@@ -1,4 +1,4 @@
-echo on
+echo off
 echo Running... C:\GitHub\ArchitectsCompanion\jac2020\bin\Job.bat v20191013a
 
 echo Job.bat 20101013a
@@ -27,6 +27,8 @@ set JACOB=-Djava.library.path=%JAC_HOME%\lib\jacob-1.17-M2
 
 set DEBUG=
 if "%JAC_DEBUG%" == "true" set DEBUG=-Dorg.xml.sax.driver=com.bluecast.xml.Piccolo -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,address=8000,suspend=y
+
+set DEBUG=-Dorg.xml.sax.driver=com.bluecast.xml.Piccolo -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,address=8000,suspend=y
 
 set COMPILE=
 if "%JAC_COMPILE%" == "false" set COMPILE=-nocompile

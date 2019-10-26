@@ -1,0 +1,122 @@
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:3: import com.esarks.jac.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:4: import java.util.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:5: import java.lang.reflect.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:6: import java.io.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:7: import java.util.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:8: import java.text.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:9: import java.net.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:10: //import java.sql.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:11: //import javax.servlet.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:12: //import javax.servlet.http.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:13: //import javax.servlet.jsp.*;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptImport.script:14: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:1: public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:3: <#var#>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:4: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:5:   private String iScriptPackage = "<#[$jac:script:package]#>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:6:   private String iScriptName = "<#[$jac:script]#>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:7: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:8:   protected <#[$jac:script]#>() {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:9:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:10: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:11:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:12: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:13:     super(aScript);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:14: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:15:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:16: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:17:   public void execute() {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:18:     
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPrefix.script:19: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:1: // Begin: com.esarks.arm.scripts.Method
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:2: /**
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:3: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:4:   <!$jac:script:xml:method:document!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:5:   while (<!$jac:script:xml:method:document!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:6: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:7:  * <![$jac:script:xml:method:document]!>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:8: <%  
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:9:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:10:   <!$jac:script:xml:method:argument!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:11:   while (<!$jac:script:xml:method:argument!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:12:     <!$jac:script:xml:method:argument:document!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:13:     <!$jac:script:xml:method:argument:document!>!next();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:14: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:15:  * @param <![$jac:script:xml:method:argument:name]!> <![$jac:script:xml:method:argument:document]!>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:16: <%  
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:17:     while (<![$jac:script:xml:method:argument:document]!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:18: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:19:  *        <![$jac:script:xml:method:argument:document]!>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:20: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:21:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:22:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:23: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:24:  */
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:25:   <![$jac:script:xml:method:visibility]!> <![$jac:script:xml:method:return]!> <![$jac:script:xml:method:name]!>(<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:26: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:27:   <!$jac:script:xml:method:argument!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:28:   String lSignature = <!$jac:script:xml:method:name!>!getValueString() + "(";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:29:   while (<!$jac:script:xml:method:argument!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:30: %> <![$jac:script:xml:method:argument:type]!> <![$jac:script:xml:method:argument:name]!><%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:31:     lSignature += <!$jac:script:xml:method:argument:type!>!getValueString();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:32:     if (!<!$jac:script:xml:method:argument!>!isLast()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:33:       %>,<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:34:       lSignature += ",";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:35:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:36:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:37:   lSignature += ")";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:38: %>) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:39:   String lMethodSignature = "<!%lSignature!>";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:40:   String lMethodLocation = "";
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:41:   java.util.Date lMethodStartDate = null;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:42:   java.util.Date lMethodStopDate = null;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:43: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:44:   if (!<![$jac:script:xml:method:supressLog]!>.equals("true")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:45: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:46:   if (iMicLog.test(Log._APP)) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:47:     lMethodStartDate = new java.util.Date();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:48:     iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Enter method"<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:49:   <!$jac:script:xml:method:argument!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:50:   while (<!$jac:script:xml:method:argument!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:51:     String lArgType = <![$jac:script:xml:method:argument:type]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:52:     if (lArgType.equals("boolean")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:53:       %> + "!<![$jac:script:xml:method:argument:name]!>=" + Log.toString(Boolean.toString(<![$jac:script:xml:method:argument:name]!>))<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:54:     } else if (lArgType.equals("byte")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:55:       %> + "!<![$jac:script:xml:method:argument:name]!>=" + Log.toString(Byte.toString(<![$jac:script:xml:method:argument:name]!>))<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:56:     } else if (lArgType.equals("char")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:57:       %> + "!<![$jac:script:xml:method:argument:name]!>=" + Log.toString(Char.toString(<![$jac:script:xml:method:argument:name]!>))<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:58:     } else if (lArgType.equals("double")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:59:       %> + "!<![$jac:script:xml:method:argument:name]!>=" + Log.toString(Double.toString(<![$jac:script:xml:method:argument:name]!>))<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:60:     } else if (lArgType.equals("float")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:61:       %> + "!<![$jac:script:xml:method:argument:name]!>=" + Log.toString(Float.toString(<![$jac:script:xml:method:argument:name]!>))<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:62:     } else if (lArgType.equals("int")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:63:       %> + "!<![$jac:script:xml:method:argument:name]!>=" + Log.toString(Integer.toString(<![$jac:script:xml:method:argument:name]!>))<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:64:     } else if (lArgType.equals("long")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:65:       %> + "!<![$jac:script:xml:method:argument:name]!>=" + Log.toString(Long.toString(<![$jac:script:xml:method:argument:name]!>))<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:66:     } else if (lArgType.equals("short")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:67:       %> + "!<![$jac:script:xml:method:argument:name]!>=" + Log.toString(Short.toString(<![$jac:script:xml:method:argument:name]!>))<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:68:     } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:69:       %> + "!<![$jac:script:xml:method:argument:name]!>=" + Log.toString(<![$jac:script:xml:method:argument:name]!>)<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:70:     }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:71:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:72:   %>);
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:73:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:74: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:75:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:76: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:77:   try {<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:78:   if (<![$jac:script:xml:method:resetExit]!>.equals("false")) {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:79:   } else {
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:80: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:81:   resetExit();<%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:82:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:83: %>
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:84: 
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts\com\esarks\arm\scripts\Method.script:85: // End: com.esarks.arm.scripts.Method
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPostfix.script:1: <%
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPostfix.script:2:   }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPostfix.script:3: }
+C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\conf\ScriptPostfix.script:4: 

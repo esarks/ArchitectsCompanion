@@ -13,7 +13,7 @@ call Job jac com.esarks.arm.scripts.ReturnMethod       ! jac
 call Job jac com.esarks.arm.scripts.Service            ! jac
 call Job jac com.esarks.jac.jrun.Job                   ! micScriptComponent
 call Job jac com.esarks.jac.jrun.Jrun                  ! micScriptComponent
-call Job com.esarks.jac.jrun.Jrun execute "%JAC_BUILD%\source\scripts\com\esarks\jac\make\MakeJac_force.jrun"
+call Job com.esarks.jac.jrun.Jrun execute "%JAC_BUILD%\source\scripts\com\esarks\jac\make\MakeJac_force.jrun2"
 
 xcopy %JAC_BUILD%\classes\*.class %JAC_BUILD%\phase2Classes /s
 

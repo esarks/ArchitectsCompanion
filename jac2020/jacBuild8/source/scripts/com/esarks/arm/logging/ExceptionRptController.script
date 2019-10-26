@@ -31,7 +31,14 @@
     String lNow = lReserved;
     com.esarks.jac.OutputManager lOutputManager = iOutputManager;
     iOutputManager = new com.esarks.jac.OutputManager();
-    openOutput(path(getProperty("logPath") + ".") + lJobSlot + "_" + lReserved + "_" + lNow + ".xml");
+
+//    openOutput(path(getProperty("$jac:path:exception") + ".") + lJobSlot + "_" + lReserved + "_" + lNow + ".xml");
+
+    String iDebugPath = getProperty("$jac:path:exception");
+    String iDebugPathPath = path(getProperty("$jac:path:exception") + ".");
+    
+
+    openOutput(path(getProperty("$jac:path:exception")) + "Exception.xml");
 %>
 <exception>
   <time><<%%>![CDATA[<!%aTime!>]]></time>
@@ -61,7 +68,8 @@
     lDocumentJeo.setAction(aAction);
     lDocumentJeo.setResolution(aResolution);
 
-    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{getProperty("logPath") + "." + lJobSlot + "_" + lReserved + "_" + lNow, lServiceJeo});
+//    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{getProperty("$jac:path:exception") + "." + lJobSlot + "_" + lReserved + "_" + lNow, lServiceJeo});
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{getProperty("$jac:path:exception") + "." + "Exception", lServiceJeo});
 
 <& com.esarks.arm.scripts.FinalReturnMethod &>
   

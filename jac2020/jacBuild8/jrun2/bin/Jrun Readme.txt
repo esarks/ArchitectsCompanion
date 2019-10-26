@@ -1,0 +1,1 @@
+Associate (open with) file type .jrun with C:\GitHub\ArchitectsCompanion\jac2020\Jrun\bin\JrunDirect.bat

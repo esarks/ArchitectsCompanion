@@ -1,91 +1,41 @@
-<& com.esarks.arm.scripts.Method
-   <method name="execute" visibility="public" return="void" >
-     <document></document>
-   </method>
-&>
+
+public void execute() {
 
 %>
 <![$jac:path:scripts]!><!%path("ehrm.WorkflowTaxonomy.Workflowtaxonomy")!><!%".xml"!>
+<![$jac:path:scripts]!><!%path("ehrm.WorkflowTaxonomy.WorkflowtaxonomyComments")!><!%".xml"!>
 <%
 
   iSymbolTable.parseXml(<![$jac:path:scripts]!> + path("ehrm.WorkflowTaxonomy.Workflowtaxonomy") + ".xml");
+  iSymbolTable.parseXml(<![$jac:path:scripts]!> + path("ehrm.WorkflowTaxonomy.WorkflowtaxonomyComments") + ".xml");
 
-  executeExtractComments();
-//  executeWorkflowTaxonomyStatus();
+  <!business:wfDiagramsList:wfd!>!resetIterator();
+  while (<!business:wfDiagramsList:wfd!>!next()) {
+
+%>
+*** <![business:wfDiagramsList:wfd:id]!> *** <![business:wfDiagramsList:wfd:name]!>
+<%
+
+  }
+  
+//  executeExtractComments();
 //  executeWorkflowTaxonomyComments();
+  executeWorkflowTaxonomyStatus();
+//  executeWorkflowTaxonomyProducts();
 //  executeWorkflowTaxonomy();
 
-<& com.esarks.arm.scripts.FinalReturnMethod &>
-
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /// executeExtractComments
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-<& com.esarks.arm.scripts.Method
-   <method name="executeExtractComments" visibility="public" return="void" >
-     <document></document>
-   </method>
-&>
+public void executeExtractComments() {
 
 %>executeExtractComments v20191013a
 <%
 
   String lCdata = "<" + "!" + "[CDATA[";
-  String lLine;
-  boolean lPrint = false;
-  String lLastTag="";
-
-//  iOutputManager.openOutputFile(<![$jac:path:scripts]!> + path("ehrm.WorkflowTaxonomy.WorkflowtaxonomyComments") + ".xml", false);
-
-
-  <!business:wfDiagramsList:wfd!>!resetIterator();
-  while (<!business:wfDiagramsList:wfd!>!next()) {
-
-    String lFileName = <![business:wfExports:folder]!> + "\\" + <![business:wfExports:[business:wfDiagramsList:wfd:id]:file]!>;
-    File lFile = new File(lFileName);
-    FileReader lFr = new FileReader(lFile);
-    BufferedReader lBr = new BufferedReader(lFr);
-    Boolean lComments = false;
-    
-%>
-<!%lFileName!>
-<%
-
-    while((lLine = lBr.readLine()) != null){
-     
-      if ((lPrint == true) && (lLine.startsWith("Work Step") ||
-        lLine.startsWith("System") ||
-        lLine.startsWith("Decision") ||
-        lLine.startsWith("Start/Stop") ||
-        lLine.startsWith("Off Page Reference") ||
-        lLine.startsWith("Document") ||
-        lLine.startsWith("Swim Lane/Role"))) {
-
-        if (lComments) {
-          <!report:line!>!resetIterator();
-          while (<!report:line!>!next()) {
-%>
-<![report:line]!>
-<%
-          }
-        }
-      }
-    }
-  }
-    
-<& com.esarks.arm.scripts.FinalReturnMethod &>
-
-<& com.esarks.arm.scripts.Method
-   <method name="executeExtractComments2" visibility="public" return="void" >
-     <document></document>
-   </method>
-&>
-
-%>EHRM Hello World! v20191013a
-<%
-
-  String cdata = "<" + "!" + "[CDATA[";
-  String line;
+  String lLine = "";
   boolean lPrint = false;
   String lLastTag="";
 
@@ -94,86 +44,157 @@
 %>
 <comments>
 <%
+  try {
 
-  <!business:pdfs:pdf!>!resetIterator();
-  while (<!business:pdfs:pdf!>!next()) {
+    <!business:wfDiagramsList:wfd!>!resetIterator();
+    while (<!business:wfDiagramsList:wfd!>!next()) {
 
-try {
-
-String fileName = <![business:pdfs:folder]!> + "\\" + <![business:pdfs:pdf:name]!>;
-File file = new File(fileName);
-FileReader fr = new FileReader(file);
-BufferedReader br = new BufferedReader(fr);
-
-if (lLastTag != "") {
+      String lFileName = <![business:pdfs:folder]!> + "\\" + <![business:pdfs:[business:wfDiagramsList:wfd:id]:name]!>;
+      File lFile = new File(lFileName);
+      FileReader lFr = new FileReader(lFile);
+      BufferedReader lBr = new BufferedReader(lFr);
+      Boolean lComments = false;
+      <!report!>!remove();    
 %>
-</<!%lLastTag!>>
-<%
-}
-
-%>
-<<![business:pdfs:pdf:id]!>>
-<%  
-
-lLastTag = <![business:pdfs:pdf:id]!>;
-while((line = br.readLine()) != null){
-
-  if (line.startsWith("Comments:") && lPrint == false) {
-    lPrint = true;
-%>
-<comment><!%cdata!><%
-  }
-
-  if ((lPrint == true) && (line.startsWith("Work Step") ||
-      line.startsWith("System") ||
-      line.startsWith("Decision") ||
-      line.startsWith("Start/Stop") ||
-      line.startsWith("Off Page Reference") ||
-      line.startsWith("Document") ||
-      line.startsWith("© Cerner Corporation.") ||
-      line.startsWith("Swim Lane/Role"))) {
-      
-      lPrint = false;
-
-%>
-]]></comment>
+<<![business:wfDiagramsList:wfd:id]!> name="<![business:pdfs:[business:wfDiagramsList:wfd:id]:name]!>">
 <%
 
-  }
+      while((lLine = lBr.readLine()) != null){
 
-  if (lPrint) {
+        if (lLine.startsWith("Future State:")) continue; 
+        if (lLine.startsWith("Cerner Workflow ID")) continue;
+        if (lLine.trim().length() == 0) continue;
+        
+        lLine = lLine.replace("\"", "'");              
+        if ( lLine.startsWith("Comments:")) {
+          lComments = true;
+          <!report:line!>!set("\n");
+          <!report:line!>!set(lLine);
+          continue;
+        } //if ( lLine.startsWith("Comments:"))
+
+        if ( lLine.startsWith("©")) {
+          lLine = lBr.readLine();
+          lLine = lBr.readLine();
+          lLine = lBr.readLine();
+          lLine = lBr.readLine();
+          lLine = lBr.readLine();
+          lLine = lBr.readLine();
+          continue;
+        }
+
+        if ( (!lComments) && (lLine.startsWith("Work Step") ||
+             lLine.startsWith("System") ||
+             lLine.startsWith("Decision") ||
+             lLine.startsWith("Start/Stop") ||
+             lLine.startsWith("Off Page Reference") ||
+             lLine.startsWith("Document") ||
+             lLine.startsWith("Swim Lane/Role"))) {
+             
+             <!report:line!>!reset(lLine);
+             continue;
+         } //if ( (!lComments) && (lLine.startsWith("Work Step") ||
+
+        if ( (lComments) && (lLine.startsWith("Work Step") ||
+             lLine.startsWith("System") ||
+             lLine.startsWith("Decision") ||
+             lLine.startsWith("Start/Stop") ||
+             lLine.startsWith("Off Page Reference") ||
+             lLine.startsWith("Document") ||
+             lLine.startsWith("Swim Lane/Role"))) {
+
 %>
-<!%line!>
+<comment><!%lCdata!><%             
+            <!report:line!>!resetIterator();
+            while (<!report:line!>!next()) {
+%>
+<![report:line]!>
 <%
-  }
-   
-}
+            } //while (<!report:line!>!next())
+%>]]></comment>
+<%
 
-} catch (IOException lException) 
-{
+             lComments = false;
+             <!report:line!>!reset(lLine);
+             continue;
+         } //if ( (lComments) && (lLine.startsWith("Work Step") ||
+
+        <!report:line!>!set(lLine);
+        
+      } //while((lLine = lBr.readLine()) != null)
+
+      if (lComments) {
+%>
+<comment><!%lCdata!><%             
+            <!report:line!>!resetIterator();
+            while (<!report:line!>!next()) {
+%>
+<![report:line]!>
+<%
+            } //while (<!report:line!>!next())
+%>]]></comment>
+<%
+      }
+
+%>
+</<![business:wfDiagramsList:wfd:id]!>>
+<%
+
+    } // While
+  } catch (IOException lException) {
 %>
 <!%lException!>
 <%
-}
 
-}
+  }
 
 %>
-]]>
-</<!%lLastTag!>>
 </comments>
 <%
+  iOutputManager.closeOutputFile();
+
+}    
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// executeWorkflowTaxonomyStatus
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+public void executeWorkflowTaxonomyStatus() {
+
+%>EHRM Hello World! v20190816a
+<%
+
+  iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyStatus.csv", false);
+
+%>
+Flow ID,Flow Name,Status,Council,"DCW<!%Character.toString((char) 10)!>Required   ","DCW<!%Character.toString((char) 10)!>Completed   ","DDM<!%Character.toString((char) 10)!>Required   ","DDM<!%Character.toString((char) 10)!>Completed   ","Build in 81930<!%Character.toString((char) 10)!>Completed   ",,,,heading
+<%
+
+  <!business:wfDiagramsList:wfd!>!resetIterator();
+  while (<!business:wfDiagramsList:wfd!>!next()) {
+
+
+%>
+<![business:wfDiagramsList:wfd:id]!>,<![business:wfDiagramsNames:[business:wfDiagramsList:wfd:id]:name]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:status]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:council]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:dcwRqd]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:dcwCmp]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:ddmRqd]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:ddmCmp]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:build]!>,,,,flow
+<%
+
+    <!business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow!>!resetIterator();
+    while (<!business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow!>!next()) {     
+%>
+<![business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow:id]!>,<![business:wfDiagramNames:[business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow:id]:name]!>,,,,,,,,,,,subFlow
+<%
+    }
+  }
 
   iOutputManager.closeOutputFile();
-    
-<& com.esarks.arm.scripts.FinalReturnMethod &>
 
+}
 
-<& com.esarks.arm.scripts.Method
-   <method name="executeWorkflowTaxonomyStatus" visibility="public" return="void" >
-     <document></document>
-   </method>
-&>
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// executeWorkflowTaxonomyProducts
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+public void executeWorkflowTaxonomyStatus2() {
 
 %>EHRM Hello World! v20190816a
 <%
@@ -187,32 +208,31 @@ Flow ID,Flow Name,Status,Council,"DCW<!%Character.toString((char) 10)!>Required 
   <!business!>!resetIterator();
   while (<!business!>!next()) {
 
-    <!business:wfreport:wf!>!resetIterator();
-    while (<!business:wfreport:wf!>!next()) {
+    <!business:wfDiagramsList:wfd!>!resetIterator();
+    while (<!business:wfDiagramsList:wfd!>!next()) {
 
 %>
-<![business:wfreport:wf:name]!>,<![business:wfds:[business:wfreport:wf:name]:description]!>,<![business:states:[business:wfreport:wf:name]:status]!>,<![business:states:[business:wfreport:wf:name]:council]!>,<![business:states:[business:wfreport:wf:name]:dcwRqd]!>,<![business:states:[business:wfreport:wf:name]:dcwCmp]!>,<![business:states:[business:wfreport:wf:name]:ddmRqd]!>,<![business:states:[business:wfreport:wf:name]:ddmCmp]!>,<![business:states:[business:wfreport:wf:name]:build]!>,,,,flow
+<![business:wfDiagramsList:wfd:id]!>,<![business:wfDiagramsList:wfd:name]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:status]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:council]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:dcwRqd]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:dcwCmp]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:ddmRqd]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:ddmCmp]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:build]!>,,,,flow
 <%
 
-      <!business:wfreport:wf:subflow!>!resetIterator();
-      while (<!business:wfreport:wf:subflow!>!next()) {
+      <!business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow!>!resetIterator();
+      while (<!business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow!>!next()) {     
 %>
-<![business:wfreport:wf:subflow:name]!>,<![business:wfds:[business:wfreport:wf:subflow:name]:description]!>,,,,,,,,,,,subFlow
+<![business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow:id]!>,<![business:wfDiagramNames:[business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow:id]:name]!>,,,,,,,,,,,subFlow
 <%
       }
-
     }
   }
 
   iOutputManager.closeOutputFile();
 
-<& com.esarks.arm.scripts.FinalReturnMethod &>
+}
 
-<& com.esarks.arm.scripts.Method
-   <method name="executeWorkflowTaxonomyComments" visibility="public" return="void" >
-     <document></document>
-   </method>
-&>
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// executeWorkflowTaxonomyComments
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+public void executeWorkflowTaxonomyComments() {
 
 %>EHRM Hello World! v20190816a
 <%
@@ -222,18 +242,18 @@ Flow ID,Flow Name,Status,Council,"DCW<!%Character.toString((char) 10)!>Required 
   <!business!>!resetIterator();
   while (<!business!>!next()) {
 
-    <!business:wfreport:wf!>!resetIterator();
-    while (<!business:wfreport:wf!>!next()) {
+    <!business:wfDiagramsList:wfd!>!resetIterator();
+    while (<!business:wfDiagramsList:wfd!>!next()) {
 
 %>
-<![business:wfreport:wf:name]!>,<![business:wfds:[business:wfreport:wf:name]:description]!>
+<![business:wfDiagramsList:wfd:id]!>,<![business:wfDiagramsList:wfd:name]!>
 <%
 
-      <!business:comments:[business:wfreport:wf:name]:comment!>!resetIterator();
-      while (<!business:comments:[business:wfreport:wf:name]:comment!>!next()) {
-
+      <!comments:[business:wfDiagramsList:wfd:id]:comment!>!resetIterator();
+      while (<!comments:[business:wfDiagramsList:wfd:id]:comment!>!next()) {
+      
 %>
-,"<![business:comments:[business:wfreport:wf:name]:comment]!>"
+,"<![comments:[business:wfDiagramsList:wfd:id]:comment]!>"
 <%
 
       }
@@ -242,112 +262,47 @@ Flow ID,Flow Name,Status,Council,"DCW<!%Character.toString((char) 10)!>Required 
 
   iOutputManager.closeOutputFile();
 
-<& com.esarks.arm.scripts.FinalReturnMethod &>
+}
 
-<& com.esarks.arm.scripts.Method
-   <method name="executeWorkflowTaxonomy" visibility="public" return="void" >
-     <document></document>
-   </method>
-&>
+////////////////////////////////////////////////////////////////////////////////////////////////
+/// executeWorkflowTaxonomy
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+public void executeWorkflowTaxonomy() {
 
 %>EHRM Hello World! v20190816a
 <%
 
   iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.csv", false);
 
-  int lRow = 0;
-  Integer lWorkflow = 0;
-  Boolean lIncludeDetail = true;
+  int lRow = 1;
   
-%>
-,,,,,,Wf Designer,Interfaces
-<%    
-  <!business!>!resetIterator();
-  while (<!business!>!next()) {
+  <!business:major!>!resetIterator();
+  while (<!business:major!>!next()) {
 
-    <!business:major!>!resetIterator();
-    while (<!business:major!>!next()) {
-    lRow++;
 %>
-<![business:major:name]!>,,,,,,,,,group,<!%lRow!>
+<![business:major:name]!>,,,,,,,,,group,<!%lRow++!>
 <%
 
-      <!business:major:workflow!>!resetIterator();
-
-      while (<!business:major:workflow!>!next()) {
-        int lWorkflowSize = <!business:major:workflow:wfdesigner!>!size();
-        int lProdSize = <!business:major:workflow:product!>!size();
-        int lInterfaceSize = <!business:major:workflow:interface!>!size();
-        lRow++;
-        lWorkflow++;
-
- 
-%>
-<![business:major:name]!>,<![business:major:workflow:name]!>,#<!%lWorkflow!>: # Wf Designer = <!%lWorkflowSize!> Page = <![business:major:workflow:page]!>,,,,<![business:major:workflow:date1]!>,<![business:major:workflow:date2]!>,,workflow,<!%lRow!>
-<%
-
-        <!business:major:workflow:wfdesigner!>!resetIterator();
-        while (<!business:major:workflow:wfdesigner!>!next()) {
-          lRow++;
-          String lWfd = <![business:wfds:[business:major:workflow:wfdesigner:name]:description]!>;
+    <!business:major:workflow!>!resetIterator();
+    while (<!business:major:workflow!>!next()) {
 
 %>
-<![business:major:name]!>,,Wf Designer = <!%lWfd!>,Reviewed = <![business:wfds:[business:major:workflow:wfdesigner:name]:reviewed]!>,Phase = <![business:phases:[business:wfds:[business:major:workflow:wfdesigner:name]:phase]:description]!>,,,,,wfdesigner,<!%lRow!>
+<![business:major:name]!>,<![business:major:workflow:name]!>,,,,,<![business:major:workflow:date1]!>,<![business:major:workflow:date2]!>,,workflow,<!%lRow++!>
 <%
 
-          <!business:wfds:[business:major:workflow:wfdesigner:name]:product!>!resetIterator();
-          while (<!business:wfds:[business:major:workflow:wfdesigner:name]:product!>!next()) {
-            lRow++;
-/*
-<![business:major:name]!>,,Product = <![business:products:[business:wfds:[business:major:workflow:wfdesigner:name]:product:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:product:description]!>,Reviewed = <![business:major:workflow:product:reviewed]!>,Phase = <![business:phases:[business:major:workflow:product:phase]:description]!>,,,,,product,<!%lRow!>
-*/
-%>
-<![business:major:name]!>,,Product = <![business:products:[business:wfds:[business:major:workflow:wfdesigner:name]:product:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:product:description]!>,,,,,,,product,<!%lRow!>
-<%
-          }
-
-
-          <!business:wfds:[business:major:workflow:wfdesigner:name]:interface!>!resetIterator();
-          while (<!business:wfds:[business:major:workflow:wfdesigner:name]:interface!>!next()) {
-            lRow++;
-/*
-<![business:major:name]!>,,Interface = <![business:interfaces:[business:wfds:[business:major:workflow:wfdesigner:name]:interface:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:interface:description]!>,Reviewed = <![business:major:workflow:interface:reviewed]!>,Phase = <![business:phases:[business:major:workflow:interface:phase]:description]!>,,,,,interface,<!%lRow!>
-*/
-%>
-<![business:major:name]!>,,Interface = <![business:interfaces:[business:wfds:[business:major:workflow:wfdesigner:name]:interface:name]:description]!> : <![business:wfds:[business:major:workflow:wfdesigner:name]:interface:description]!>,,,,,,,interface,<!%lRow!>
-<%
-          }
-
-        }
-
-        <!business:major:workflow:product!>!resetIterator();
-        while (<!business:major:workflow:product!>!next()) {
-          lRow++;
-          String lProduct = <![business:products:[business:major:workflow:product:name]:description]!> + " <" + <![business:products:[business:major:workflow:product:name]:owner]!> + ">";
+      <!business:major:workflow:wfdesigner!>!resetIterator();
+      while (<!business:major:workflow:wfdesigner!>!next()) {
 
 %>
-<![business:major:name]!>,,Product = <!%lProduct!>,Reviewed = <![business:major:workflow:product:reviewed]!>,Phase = <![business:phases:[business:major:workflow:product:phase]:description]!>,,,,,product,<!%lRow!>
+<![business:major:name]!>,,(<![business:major:workflow:wfdesigner:name]!>) <![business:wfDiagramNames:[business:major:workflow:wfdesigner:name]:name]!>,,,,,,,wfdesigner,<!%lRow!>
 <%
 
-        }
-
-        <!business:major:workflow:interface!>!resetIterator();
-        while (<!business:major:workflow:interface!>!next()) {
-          lRow++;
-          String lInterface = <![business:interfaces:[business:major:workflow:interface:name]:description]!>;
-
-%>
-<![business:major:name]!>,,Interface = <!%lInterface!>,Reviewed = <![business:major:workflow:interface:reviewed]!>,Phase = <![business:phases:[business:major:workflow:interface:phase]:description]!>,,,,,interface,<!%lRow!>
-<%
-        }
-
-      }
-
-    }
-
-  }
+      } // while (<!business:major:workflow:wfdesigner!>!next())
+    } // while (<!business:major:workflow!>!next())
+  } // while (<!business:major!>!next())
 
   iOutputManager.closeOutputFile();
 
-<& com.esarks.arm.scripts.FinalReturnMethod &>
+}
 

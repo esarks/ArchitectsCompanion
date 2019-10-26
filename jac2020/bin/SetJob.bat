@@ -4,6 +4,8 @@ echo Running... C:\GitHub\ArchitectsCompanion\jac2020\bin\SetJob.bat v20191013a
 set JAC_HOME=%JAC_BASE%
 set JAC_WORK=%JAC_BASE%\classes
 set JAC_SCRIPTS=%JAC_BASE%\app
+rem - use below for jackbuild8 Make
+rem set JAC_SCRIPTS="C:\GitHub\ArchitectsCompanion\jac2020\jacBuild8\source\scripts"
 
 rem -- Jac
 if exist "%JAC_HOME%\lib\jac\jac.jar" (
@@ -153,5 +155,5 @@ set CLASSPATH=%CLASSPATH%;%JAC_HOME%\lib\hapi-dist-2.2-all\lib\log4j-1.2.17.jar
 set CLASSPATH=%CLASSPATH%;%JAC_HOME%\lib\hapi-dist-2.2-all\lib\slf4j-api-1.6.6.jar
 set CLASSPATH=%CLASSPATH%;%JAC_HOME%\lib\hapi-dist-2.2-all\lib\slf4j-log4j12-1.6.6.jar
 
-rem echo %CLASSPATH% >> classpath.txt
+echo %CLASSPATH% > classpath.txt
 

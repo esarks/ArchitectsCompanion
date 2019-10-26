@@ -6,8 +6,13 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>org.eclipse.jdt.core.javabuilder</name>
+			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
+			<triggers>full,incremental,</triggers>
 			<arguments>
+				<dictionary>
+					<key>LaunchConfigHandle</key>
+					<value>&lt;project&gt;/.externalToolBuilders/org.eclipse.jdt.core.javabuilder.launch</value>
+				</dictionary>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
@@ -21,14 +26,19 @@
 			<location>C:/GitHub/ArchitectsCompanion/jac2020/classes</location>
 		</link>
 		<link>
+			<name>classes2</name>
+			<type>2</type>
+			<location>C:/GitHub/ArchitectsCompanion/jac2020/jacBuild8/classes</location>
+		</link>
+		<link>
 			<name>java</name>
 			<type>2</type>
 			<location>C:/GitHub/ArchitectsCompanion/jac2020/jacBuild8/source/java</location>
 		</link>
 		<link>
-			<name>scripts</name>
+			<name>lib</name>
 			<type>2</type>
-			<location>C:/GitHub/ArchitectsCompanion/jac2020/jacBuild8/source/scripts</location>
+			<location>C:/GitHub/ArchitectsCompanion/jac2020/lib</location>
 		</link>
 	</linkedResources>
 </projectDescription>

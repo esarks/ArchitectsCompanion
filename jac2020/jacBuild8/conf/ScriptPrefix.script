@@ -1,4 +1,3 @@
-
 public class <#[$jac:script]#> <#[$jac:script:extends]#> <#[$jac:script:implements]#> {
 
 <#var#>

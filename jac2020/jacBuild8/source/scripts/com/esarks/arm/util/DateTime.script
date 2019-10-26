@@ -217,7 +217,7 @@ end
         {
              newDate = dtFormat.parse(szDate);
         }
-        catch (ParseException e)
+        catch (java.text.ParseException e)
         {
              newDate = dtDefaultDate;
         }

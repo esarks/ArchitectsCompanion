@@ -432,6 +432,15 @@ public class jac {
         lScript.getSymbolTable().getPropertyCollection().addPropertyValue("$jac:path:document", new PropertyValue(System.getProperty("user.home")));
         if (lLog != null) lLog.println(Log._DEBUG, "DEBUG-com.esarks.jac.jac:getScript()!$jac:path:document=" + System.getProperty("user.home"));
 
+// Added 10/23/2019 - to resolve ExceptionRptController issue - ptm
+//        if (iDebugPath.compareTo("") != 0) {
+//          lScript.getSymbolTable().getPropertyCollection().addPropertyValue("$jac:path:exception", new PropertyValue(System.getProperty(iDebugPath)));
+//          if (lLog != null) lLog.println(Log._DEBUG, "DEBUG-com.esarks.jac.jac:getScript()!$jac:path:exception=" + System.getProperty(iDebugPath));
+//        } else {
+            lScript.getSymbolTable().getPropertyCollection().addPropertyValue("$jac:path:exception", new PropertyValue(iHomeDirectory + lFileSeparator + "logs"));
+            if (lLog != null) lLog.println(Log._DEBUG, "DEBUG-com.esarks.jac.jac:getScript()!$jac:path:exception=" + iHomeDirectory + lFileSeparator + "logs");
+//        }
+
         lScript.getSymbolTable().getPropertyCollection().addPropertyValue("$jac:fileSeparator", new PropertyValue(lFileSeparator));
         if (lLog != null) lLog.println(Log._DEBUG, "DEBUG-com.esarks.jac.jac:getScript()!$jac:fileSeparator=" + lFileSeparator);
         lScript.getSymbolTable().getPropertyCollection().addPropertyValue("$jac:verifyScripts", new PropertyValue(iVerifyScripts));

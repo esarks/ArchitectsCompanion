@@ -4,34 +4,35 @@
 <!-- Products List -->
 
 <products>
- <AcHIM      description="Access HIM"                           owner="Cerner"/>
- <AdvInterop description="Advanced Interop"                     owner="Cerner"/>
- <AHLTA      description="AHLTA"                                owner="DoD" />
- <AmbOrg     description="Ambulatory Organizer"                 owner="Cerner"/>
- <AmbSched   description="Revenue Cycle / Amulatory Scheduling" owner="Cerner"/>
- <CAPRI      description="CAPRI"                                owner="VA"/>
- <ClXR       description="Clinicical Reporting XR"              owner="VA"/>
- <ERRA       description="ERRA Tool"                            owner="VA"/>
- <HeR        description="Healthy Record"                       owner="Cerner"/>
- <JLV        description="JLV"                                  owner="VA"/>
- <Man        description="Manual"                               owner="N/A"/>
- <MsgCtr     description="Message Center"                       owner="Cerner"/>
- <Outlook    description="MS Outlook"                           owner="Microsoft" />
- <Orders     description="Orders"                               owner="Cerner"/>
- <PChart     description="PowerChart"                           owner="Cerner"/>
- <PForms     description="PowerForms"                           owner="Cerner"/>
- <PatTrack   description="PowerChart / Patient Tracking"        owner="Cerner"/>
- <RevCyc     description="Revenue Cycle"                        owner="Cerner" />
- <Sched      description="Scheduling"                           owner="Cerner"/>
- <TBD        description="TBD"                                  owner="N/A"/>
- <VBARpt     description="VBA Report"                           owner="VA"/>
- <VBMS       description="VBMS"                                 owner="VA"/>
-</products>
+ <AcHIM      description="Access HIM"                            owner="Cerner"/>
+ <AdvInterop description="Advanced Interop"                      owner="Cerner"/>
+ <AHLTA      description="AHLTA"                                 owner="DoD" />
+ <AmbOrg     description="Ambulatory Organizer"                  owner="Cerner"/>
+ <AmbSched   description="Revenue Cycle / Ambulatory Scheduling" owner="Cerner"/>
+ <CAPRI      description="CAPRI"                                 owner="VA"/>
+ <ClXR       description="Clinical Reporting XR"                 owner="VA"/>
+ <ERRA       description="ERRA Tool"                             owner="VA"/>
+ <HeR        description="Healthy Record"                        owner="Cerner"/>
+ <JLV        description="JLV"                                   owner="VA"/>
+ <Man        description="Manual"                                owner="N/A"/>
+ <MsgCtr     description="Message Center"                        owner="Cerner"/>
+ <Outlook    description="MS Outlook"                            owner="Microsoft" />
+ <Orders     description="Orders"                                owner="Cerner"/>
+ <PChart     description="PowerChart"                            owner="Cerner"/>
+ <PForms     description="PowerForms"                            owner="Cerner"/>
+ <PatTrack   description="PowerChart / Patient Tracking"         owner="Cerner"/>
+ <RevCyc     description="Revenue Cycle"                         owner="Cerner" />
+ <Sched      description="Scheduling"                            owner="Cerner"/>
+ <TBD        description="TBD"                                   owner="N/A"/>
+ <VBARpt     description="VBA Report"                            owner="VA"/>
+ <VBMS       description="VBMS"                                  owner="VA"/>
+</products >    
 
 <!-- Interfaces Type List -->
 
 <interfaces>
  <orm  description="HL7 ORM"/>
+ <orr  description="HL7 ORR"/>
  <oru  description="HL7 ORU"/>
  <siu  description="HL7 SIU"/>
  <man  description="Manual" />
@@ -47,28 +48,55 @@
 
 <!-- Workflow Diagrams in Alpha Order -->
 
+<wfDiagramNames>
+  <wf1353  name="1VA - Registration - OHI Collection" />
+  <wf1260  name="1VA - Registration/Scheduling - In Person Check In" />
+  <wf35    name="1VA - Scheduling - Ambulatory - No Show Process" />
+  <wf771   name="1VA - Scheduling - Ambulatory - No Show-Contact" />
+  <wf319   name="1VA - Scheduling - Ambulatory - Orders to Scheduling" />
+  <wf222   name="1VA - Scheduling - Ambulatory - Record a Contact" />
+  <wf34    name="1VA - Scheduling - Ambulatory - Reschedule Appointment" />
+  <wf32    name="1VA - Scheduling - Ambulatory - Schedule Appointment" />
+  <wf2008  name="1VA - VBA - 7131-Process" />
+  <wf1993  name="1VA - VBA - Capacity &#038; Capability &#038; Routing (IOC)" />
+  <wf1989  name="1VA - VBA - Deliver Exam Results" />
+  <wf1990  name="1VA - VBA - Enterprise Medical Records Search (IOC)" />
+  <wf1995  name="1VA - VBA - Exam-Management - Child Orders (IOC)" />
+  <wf1866  name="1VA - VBA - Exam-Management (IOC)" />
+  <wf2048  name="1VA - VBA - Letter - Response - Workflow" />
+  <wf1987  name="1VA - VBA - Perform Examination (IOC)" />
+  <wf2094  name="1VA - VBA - Reporting" />
+  <wf1999  name="1VA - VBA - Scheduling - Ambulatory - Record a Contact" />
+  <wf1873  name="1VA - VBA - VR&#038;E Block 1" />
+  <wf2070  name="1VA - VBA Scheduling - Ambulatory - No Show-Contact" />
+  <wf1998  name="1VA - VBA Scheduling - Ambulatory - Orders to Scheduling" />
+</wfDiagramNames>
 
 <wfDiagramsList>
-  <wfd id="wf1353"  name="1VA - Registration - OHI Collection" />
-  <wfd id="wf1260"  name="1VA - Registration/Scheduling - In Person Check In" />
-  <wfd id="wf35"    name="1VA - Scheduling - Ambulatory - No Show Process" />
-  <wfd id="wf771"   name="1VA - Scheduling - Ambulatory - No Show-Contact" />
-  <wfd id="wf319"   name="1VA - Scheduling - Ambulatory - Orders to Scheduling" />
-  <wfd id="wf222"   name="1VA - Scheduling - Ambulatory - Record an Appointment Contact" />
-  <wfd id="wf34"    name="1VA - Scheduling - Ambulatory - Reschedule Appointment" />
-  <wfd id="wf32"    name="1VA - Scheduling - Ambulatory - Schedule Appointment" />
-  <wfd id="wf1993"  name="1VA - VBA - Capacity &#038; Capability &#038; Routing (IOC)" />
-  <wfd id="wf1989"  name="1VA - VBA - Deliver Exam Results" />
-  <wfd id="wf1990"  name="1VA - VBA - Enterprise Medical Records Search (IOC)" />
-  <wfd id="wf1995"  name="1VA - VBA - Exam-Management - Child Orders (IOC)" />
-  <wfd id="wf1866"  name="1VA - VBA - Exam-Management (IOC)" />
-  <wfd id="wf2048"  name="1VA - VBA - Letter - Response - Workflow" />
-  <wfd id="wf1987"  name="1VA - VBA - Perform Examination (IOC)" />
-  <wfd id="wf1999"  name="1VA - VBA - Scheduling - Ambulatory - Record a Contact" />
-  <wfd id="wf1873"  name="1VA - VBA - VR&#038;E Block 1" />
-  <wfd id="wf1998"  name="1VA - VBA Scheduling - Ambulatory - Orders to Scheduling" />
-  <wfd id="wf2008"  name="1VA - VBA-7131-Process" />
+  <wfd id="1353" />
+  <wfd id="1260" />
+  <wfd id="35" />
+  <wfd id="771" />
+  <wfd id="319" />
+  <wfd id="222" />
+  <wfd id="34" />
+  <wfd id="32" />
+  <wfd id="2008" />
+  <wfd id="1993" />
+  <wfd id="1989" />
+  <wfd id="1990" />
+  <wfd id="1995" />
+  <wfd id="1866" />
+  <wfd id="2048" />
+  <wfd id="1987" />
+  <wfd id="2094" />
+  <wfd id="1999" />
+  <wfd id="1873" />
+  <wfd id="2070" />
+  <wfd id="1998" />
 </wfDiagramsList>
+
+
 
 <!-- Workflow Designer "Products and Interfaces" List -->
 
@@ -157,26 +185,51 @@
 
 <!-- Workflow Designer Export List -->
 
-<wfExports folder="C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-15_1538">
-<wf1353  file="1VA_-_Registration_-_OHI_Collection_2019-10-15_1537_Approved.txt" />
-<wf1260  file="1VA_-_Registration_Scheduling_-_In_Person_Check_In_2019-10-15_1537_Approved.txt" />
-<wf771   file="1VA_-_Scheduling_-_Ambulatory_-_No_Show-Contact_2019-10-15_1537_Approved.txt" />
-<wf35    file="1VA_-_Scheduling_-_Ambulatory_-_No_Show_Process_2019-10-15_1537_Approved.txt" />
-<wf319   file="1VA_-_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-15_1537_Approved.txt" />
-<wf222   file="1VA_-_Scheduling_-_Ambulatory_-_Record_an_Appointment_Contact_2019-10-15_1537_Approved.txt" />
-<wf34    file="1VA_-_Scheduling_-_Ambulatory_-_Reschedule_Appointment_2019-10-15_1537_Approved.txt" />
-<wf32    file="1VA_-_Scheduling_-_Ambulatory_-_Schedule_Appointment_2019-10-15_1537_Approved.txt" />
-<wf1999  file="1VA_-_VBA_-_Scheduling_-_Ambulatory_-_Record_an_Appointment_Contact_2019-10-15_1538_In_Process.txt" />
-<wf1998  file="1VA_-_VBA_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-15_1538_In_Process.txt" />
-<wf1993  file="1VA_-_VBA_-_Capacity___Capability___Routing__(IOC)_2019-10-15_1538_Approved.txt" />
-<wf1990  file="1VA_-_VBA_-_Enterprise_Medical_Records_Search_(IOC)_2019-10-15_1537_Approved.txt" />
-<wf1995  file="1VA_-_VBA_-_Exam-Management_-_Child_Orders_(IOC)_2019-10-15_1538_Approved.txt" />
-<wf2008  file="_Proposed__1VA-VBA-7131-Process_2019-10-15_1538_Ready_For_Review.txt" />
-<wf1866  file="_Proposed__1VA_-_VBA_-_Exam-Management_(IOC)_2019-10-15_1537_In_Process.txt" />
-<wf1987  file="1VA_-_VBA_-_Perform_Examination_(IOC)_2019-10-15_1537_Approved.txt" />
-<wf1873  file="_Proposed__1VA_-_VBA_-_VR_E_Block_1_2019-10-15_1537_Ready_For_Review.txt" />
-<wf1989  file="_Proposed___1VA_-_VBA_-_Deliver_Exam_Results_2019-10-15_1537_Ready_For_Review.txt" />
-</wfExports>
+<pdfs folder="C:\\Users\\ptm\\OneDrive\\Desktop\\EHRM\\October 1 - 3\\WFD_PDF_2019-10-21_0623">
+ <wf1353    name="1VA_-_Registration_-_OHI_Collection_2019-10-21_0623_Approved.txt" />
+ <wf1260    name="1VA_-_Registration_Scheduling_-_In_Person_Check_In_2019-10-21_0623_Approved.txt" />
+ <wf35      name="1VA_-_Scheduling_-_Ambulatory_-_No_Show_Process_2019-10-21_0622_Approved.txt" />
+ <wf771     name="1VA_-_Scheduling_-_Ambulatory_-_No_Show-Contact_2019-10-21_0622_Approved.txt" />
+ <wf319     name="1VA_-_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-21_0622_Approved.txt" />
+ <wf222     name="1VA_-_Scheduling_-_Ambulatory_-_Record_an_Appointment_Contact_2019-10-21_0622_Approved.txt" />
+ <wf34      name="1VA_-_Scheduling_-_Ambulatory_-_Reschedule_Appointment_2019-10-21_0622_Approved.txt" />
+ <wf32      name="1VA_-_Scheduling_-_Ambulatory_-_Schedule_Appointment_2019-10-21_0622_Ready_For_Review.txt" />
+ <wf1993    name="1VA_-_VBA_-_Capacity___Capability___Routing__(IOC)_2019-10-21_0623_Approved.txt" />
+ <wf1989    name="1VA_-_VBA_-_Deliver_Exam_Results_2019-10-21_0623_In_Process.txt" />
+ <wf1990    name="1VA_-_VBA_-_Enterprise_Medical_Records_Search_(IOC)_2019-10-21_0623_Approved.txt" />
+ <wf1995    name="1VA_-_VBA_-_Exam-Management_-_Child_Orders_(IOC)_2019-10-21_0623_Approved.txt" />
+ <wf1866    name="1VA_-_VBA_-_Exam-Management_(IOC)_2019-10-21_0623_In_Process.txt" />
+ <wf2048    name="1VA_-_VBA_-_Letter_-_Response_-_Workflow_2019-10-21_0623_Ready_For_Review.txt" />
+ <wf1987    name="1VA_-_VBA_-_Perform_Examination_(IOC)_2019-10-21_0623_Approved.txt" />
+ <wf1999    name="1VA_-_VBA_-_Scheduling_-_Ambulatory_-_Record_a_Contact_2019-10-21_0623_Ready_For_Review.txt" />
+ <wf1873    name="1VA_-_VBA_-_VR_E_Block_1_2019-10-21_0623_In_Process.txt" />
+ <wf1998    name="1VA_-_VBA_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-21_0623_In_Process.txt" />
+ <wf2008    name="1VA_-_VBA-7131-Process_2019-10-21_0623_In_Process.txt" />
+</pdfs>
+
+<!--
+C:\Users\ptm\OneDrive\Desktop\EHRM\October 1 - 3\WFD_PDF_2019-10-24_0828
+1VA_-_Registration_-_OHI_Collection_2019-10-24_0828_Approved.txt
+1VA_-_Registration_Scheduling_-_In_Person_Check_In_2019-10-24_0828_Approved.txt
+1VA_-_Scheduling_-_Ambulatory_-_No_Show-Contact_2019-10-24_0828_Approved.txt
+1VA_-_Scheduling_-_Ambulatory_-_No_Show_Process_2019-10-24_0828_Approved.txt
+1VA_-_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-24_0828_Approved.txt
+1VA_-_Scheduling_-_Ambulatory_-_Record_a_Contact_2019-10-24_0828_Approved.txt
+1VA_-_Scheduling_-_Ambulatory_-_Reschedule_Appointment_2019-10-24_0828_Approved.txt
+1VA_-_Scheduling_-_Ambulatory_-_Schedule_Appointment_2019-10-24_0828_Approved.txt
+1VA_-_VBA-7131-Process_2019-10-24_0828_In_Process.txt
+1VA_-_VBA_-_Capacity___Capability___Routing__(IOC)_2019-10-24_0828_Approved.txt
+1VA_-_VBA_-_Deliver_Exam_Results_2019-10-24_0828_In_Process.txt
+1VA_-_VBA_-_Enterprise_Medical_Records_Search_(IOC)_2019-10-24_0828_Approved.txt
+1VA_-_VBA_-_Exam-Management_(IOC)_2019-10-24_0828_In_Process.txt
+1VA_-_VBA_-_Exam-Management_-_Child_Orders_(IOC)_2019-10-24_0828_Approved.txt
+1VA_-_VBA_-_Letter_-_Response_-_Workflow_2019-10-24_0828_Ready_For_Review.txt
+1VA_-_VBA_-_Perform_Examination_(IOC)_2019-10-24_0828_Approved.txt
+1VA_-_VBA_-_Scheduling_-_Ambulatory_-_Record_a_Contact_2019-10-24_0828_Ready_For_Review.txt
+1VA_-_VBA_-_VR_E_Block_1_2019-10-24_0828_In_Process.txt
+1VA_-_VBA_Scheduling_-_Ambulatory_-_No_Show-Contact_2019-10-24_0828_In_Process.txt
+1VA_-_VBA_Scheduling_-_Ambulatory_-_Orders_to_Scheduling_2019-10-24_0828_In_Process.txt
+-->
 
 <!-- Steve's Status List -->
 
@@ -203,14 +256,14 @@
 
 <!-- Workflow Designer Parent / Child List -->
 
-<wfSublows>
+<wfSubflows>
 <wf1353/>
 <wf1260>    
 	<subflow id="wf1353" />
 </wf1260>
 <wf35/>
 <wf771>
-  <subflow id=">wf222" />
+  <subflow id="wf222" />
   <subflow id="wf34" />
   <subflow id="wf35" />
 </wf771>
@@ -237,6 +290,7 @@
 <wf2048/>
 <wf1987/>
 <wf1999>
+<wf2070/>
     <subflow  id="wf1998" />
     <subflow  id="wf2048"/>
 </wf1999>
@@ -248,7 +302,7 @@
     <subflow   id="wf1999"/>
 </wf1998>
 <wf2008>
-    <subflow   id="wf500"/>
+    <subflow   id="wf2072"/>
 </wf2008>
 </wfSubflows>
 

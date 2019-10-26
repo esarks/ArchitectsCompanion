@@ -40,19 +40,30 @@ C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:39:
 C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:40: <#import#>
 C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
 C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:2: 
-C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:3:   protected <#[$jac:script]#>() {
-C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:4:   }
-C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:5: 
-C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:6:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:3: <#var#>
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:4: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:6:   }
 C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:7: 
-C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:8:     super(aScript);
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
 C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:9: 
-C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:10:   }
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:11: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:12:   }
 C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:1: 
-C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:2: public void execute() {
-C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:3: 
-C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:4: %>Hello World! v20191013a
-C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:5: <%
-C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:6: 
-C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:7: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:3: <& com.esarks.arm.scripts.Method
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:4:    <method name="execute" visibility="public" return="void" >
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:5:      <document></document>
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:6:    </method>
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:7: &>
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:8: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:9: %>Hello World! v20191013a
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:10: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:11: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:12: int a=1;
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:13: int b=0;
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:14: int c= a/b;
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:15: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\paul\HelloWorld.script:16: <& com.esarks.arm.scripts.FinalReturnMethod &>
 C:\GitHub\ArchitectsCompanion\jac2020\conf\micPostfix.script:1: }

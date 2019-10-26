@@ -1,5 +1,6 @@
-
 public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+
+<#var#>
 
   protected <#[$jac:script]#>() {
   }

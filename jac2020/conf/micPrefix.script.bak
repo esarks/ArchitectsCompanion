@@ -1,0 +1,10 @@
+public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+
+  protected <#[$jac:script]#>() {
+  }
+
+  public <#[$jac:script]#>(Script aScript) {
+
+    super(aScript);
+
+  }

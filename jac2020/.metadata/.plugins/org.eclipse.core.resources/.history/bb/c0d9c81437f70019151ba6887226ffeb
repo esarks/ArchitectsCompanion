@@ -1,0 +1,579 @@
+context micScriptComponent
+import java.awt.*
+import javax.swing.*
+var public boolean iReverseMerge = true;
+var public String iFileSeparator = System.getProperty("file.separator");
+end
+
+  public void generateDtable(String aXmlDefinition) {
+    resetExit();
+    try {
+%>generateDtable: <!%aXmlDefinition!>
+<%
+    parseXmlPath(path(aXmlDefinition) + ".xml");
+
+    if (<!com.esarks.arm.schemas.rules.root!>!size() == 0) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set("Could not find <com.esarks.arm.schemas.rules.root> tag in " + path(aXmlDefinition) + ".xml file.");
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+    boolean lForce = false;
+    setContext(iScript.getMasterScript());
+    if (<![$jac:makeAll:force]!>.equals("true")) lForce = true;
+    restoreContext();
+    if (!lForce) {
+      File lGeneratorFile = new File(path("com.esarks.jac.generators.GenerateDtable") + ".new");
+      File lXmlFile = new File(path(aXmlDefinition) + ".xml");
+      File lNewFile = new File(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".script");
+      if (lNewFile.exists() && lXmlFile.exists() && lNewFile.lastModified() >= lXmlFile.lastModified() &&
+          lGeneratorFile.exists() && lGeneratorFile.lastModified() <= lNewFile.lastModified()) {
+        String lReportName = <![com.esarks.arm.schemas.rules.root:name]!>;
+        setContext(iScript.getMasterScript());
+        <!$jac:event!>!set("File " + lReportName + ".script is not stale.  Generation bypassed.");
+        <!$jac:event:severity!>!set("info");
+        <!$jac:event:scriptPackage!>!set(iScriptPackage);
+        <!$jac:event:scriptName!>!set(iScriptName);
+        restoreContext();
+        setExit();
+        return;
+      }
+    }
+
+    setContext(iScript.getMasterScript());
+    String lHomePath = <![$jac:path:home]!>;
+    String lWorkPath = <![$jac:path:work]!>;
+    String lScriptPath = <![$jac:path:scripts]!>;
+    restoreContext();
+    String lPackageName = "";
+    String lPackagePath = "";
+    String aScriptName = <![com.esarks.arm.schemas.rules.root:name]!>;
+    String lScriptName = aScriptName;
+
+    {
+        int lLastDot = -1;
+        for (int lIdx = aScriptName.length() - 1; lIdx >= 0; lIdx--) {
+            if (aScriptName.charAt(lIdx) == '.') {
+                lLastDot = lIdx;
+                break;
+            }
+        }
+
+        if (lLastDot > -1) {
+            lPackageName = aScriptName.substring(0, lLastDot);
+            lPackagePath = lPackageName;
+            lScriptName = aScriptName.substring(lLastDot + 1);
+        }
+
+        int lIdx = lPackagePath.indexOf(".");
+        while (lIdx > -1) {
+            lPackagePath = lPackagePath.substring(0,lIdx) + iFileSeparator + lPackagePath.substring(lIdx+1);
+            lIdx = lPackagePath.indexOf(".");
+        }
+    }
+
+
+    File lPrimarySourceFile = new File(lScriptPath + iFileSeparator + lPackagePath + iFileSeparator + lScriptName + ".script");
+    if (lPrimarySourceFile.exists()) {
+        try {
+            File lJavaFile = new File(lWorkPath + iFileSeparator + lPackagePath + iFileSeparator + lScriptName + ".java");
+
+            if (iReverseMerge == false && lJavaFile.exists() && lJavaFile.lastModified() > lPrimarySourceFile.lastModified()) lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
+
+            if (iReverseMerge && lJavaFile.exists() && lJavaFile.lastModified() > lPrimarySourceFile.lastModified()) {
+
+                boolean lReverseMergeThisFile = false;
+                java.awt.Frame lFrame = new java.awt.Frame();
+                int lResult = JOptionPane.showConfirmDialog(lFrame, "Do you want to Reverse Merge " + lPrimarySourceFile.getName() + "?");
+                switch (lResult) {
+                    case JOptionPane.YES_OPTION:
+                        lReverseMergeThisFile = true;
+                        break;
+                    case JOptionPane.NO_OPTION:
+                        lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
+                        lReverseMergeThisFile = false;
+                        break;
+                    case JOptionPane.CANCEL_OPTION:
+                        lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
+                        lReverseMergeThisFile = false;
+                        iReverseMerge = false;
+                        break;
+                }
+                lFrame.dispose();
+
+                if (lReverseMergeThisFile) {
+                    if (!iOutputManager.isJspOpen()) iOutputManager.println("Reverse Merging " + lPrimarySourceFile.getName(), true);
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:sectionMarker", new PropertyValue("//$Sec" + "tion="));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:preserveMarker", new PropertyValue("$Pres" + "erve=yes"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:noPreserveMarker", new PropertyValue("$Pres" + "erve=no"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:keepPreserveMarker", new PropertyValue("$Pres" + "erve=keep"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:discardPreserveMarker", new PropertyValue("$Pres" + "erve=discard"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:preservePreamble", new PropertyValue("no"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:comments", new PropertyValue("//"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:commentsBegin", new PropertyValue("/*"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:commentsEnd", new PropertyValue("*/"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:reverseMergeMarker", new PropertyValue("$Reverse" + "Merge=yes"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:reverseMergeNoPreserveMarker", new PropertyValue("$Reverse" + "Merge=no"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:excludeCompare", new PropertyValue("//  Gener" + "ated at"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:trimOutput", new PropertyValue("yes"));
+                    iSymbolTable.getPropertyCollection().resetPropertyValue("$jac:merge:keepSections", new PropertyValue("no"));
+                    Merge.getInstance().doMergeToExisting(lPrimarySourceFile.getAbsolutePath(), lJavaFile.getAbsolutePath(), iScript);
+//                      lJavaFile.setLastModified(lPrimarySourceFile.lastModified());
+                }
+            }
+        } catch (Exception e) {if (!iOutputManager.isJspOpen()) iOutputManager.println(e.getMessage(), true);
+                               if (!iOutputManager.isJspOpen()) iOutputManager.println("Error in ReverseMerge.", true);}
+    }
+
+    setContext(iScript.getMasterScript());
+    <!$jac:merge:sectionMarker!>!reset("//$Section=");
+    <!$jac:merge:preserveMarker!>!reset("$Preserve=yes");
+    <!$jac:merge:noPreserveMarker!>!reset("$Preserve=no");
+    <!$jac:merge:keepPreserveMarker!>!reset("$Preserve=keep");
+    <!$jac:merge:discardPreserveMarker!>!reset("$Preserve=discard");
+    <!$jac:merge:preservePreamble!>!reset("yes");
+    <!$jac:merge:comments!>!reset("//");
+    <!$jac:merge:excludeCompare!>!reset("//  Generated at");
+    <!$jac:merge:trimOutput!>!reset("yes");
+    <!$jac:merge:keepSections!>!reset("no");
+    restoreContext();
+
+//    String lLineNbr = "<" + "#" + "[$jac:script:lineNumber]#>";
+//    boolean lResultSetExists = false;
+
+    openOutput(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".html");
+
+    %><html><%
+    %><table border=1 cellpadding=2 cellspacing=0><%
+    %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><tr><td><b><![com.esarks.arm.schemas.rules.root:title]!></b> (<![com.esarks.arm.schemas.rules.root:name]!>)<%
+    %></td></tr></table></td></tr><%
+    %><tr bgcolor="#ccccff"><td><b>Rule Controller:</b></td></tr><%
+    %><tr><td><![com.esarks.arm.schemas.rules.root:text]!><%
+    %></td></tr><%
+    %></table><%
+    %><p><i>List of Decision Tables:</i><%
+    %><ul><%
+    <!com.esarks.arm.schemas.rules.root:dtable!>& {
+      %><li><![com.esarks.arm.schemas.rules.root:dtable:title]!> (<![com.esarks.arm.schemas.rules.root:dtable:name]!>) <%
+    }
+    %></ul><br><%
+
+    <!com.esarks.arm.schemas.rules.root:dtable!>& {
+      if (<![com.esarks.arm.schemas.rules.root:dtable:pagebreak]!>.equals("true")) {
+        %><p style="page-break-before: always"><%
+      } else {
+        %><p><%
+      }
+      %><a name="<!%iScriptFullName!>_<!%iScriptInstanceName!>_<![com.esarks.arm.schemas.rules.root:dtable:name]!>"></a><%
+      %><table width="100%" border="0" cellpadding="0" cellspacing="0"><%
+      %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
+      %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><tr><td><b><![com.esarks.arm.schemas.rules.root:dtable:title]!></b> (<![com.esarks.arm.schemas.rules.root:dtable:name]!>)</td></tr></table></td></tr><%
+      %><tr bgcolor="#ccccff"><td><b>Control:</b></td></tr><%
+      %><tr><td><![com.esarks.arm.schemas.rules.root:dtable:text]!></td></tr><%
+      %><tr bgcolor="#ccccff"><td><b>Method Prototype:</b></td></tr><%
+      %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
+      String lReturn = "void";
+      String lVisibility = "private";
+      if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() > 0) lReturn = <![com.esarks.arm.schemas.rules.root:dtable:return]!>;
+      if (<!com.esarks.arm.schemas.rules.root:dtable:visibility!>!size() > 0) lVisibility = <![com.esarks.arm.schemas.rules.root:dtable:visibility]!>;
+      %><tr><td colspan=3><b>Return:</b> <!%lReturn!>; <b>Visibility:</b> <!%lVisibility!>; <b>Name:</b> <![com.esarks.arm.schemas.rules.root:dtable:name]!></td></tr><%
+      %><tr><td><b>Type</b></td><td><b>Name</b></td><td><b>Description</b></td></tr><%
+      <!com.esarks.arm.schemas.rules.root:dtable:argument!>& {
+        %><tr><td><![com.esarks.arm.schemas.rules.root:dtable:argument:type]!></td><td><![com.esarks.arm.schemas.rules.root:dtable:argument:name]!></td><td><![com.esarks.arm.schemas.rules.root:dtable:argument:document]!></td></tr><%
+      }
+      %></table></td></tr><%
+      %></table></td></tr><%
+      %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
+      if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() == 1) {
+        %><tr bgcolor="#ccccff"><td><b>Condition:</b></td><%
+      } else if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() > 1) {
+        %><tr bgcolor="#ccccff"><td><b>Conditions:</b></td><%
+      }
+      for (int lIdx=0; lIdx < <!com.esarks.arm.schemas.rules.root:dtable:scenario!>!size(); lIdx++) {
+        %><td width="20" valign="top" align="center"><b><!%Integer.toString(lIdx+1)!></b></td><%
+      }
+      %></tr><%
+      <!com.esarks.arm.schemas.rules.root:dtable:condition!>& {
+        String lConditionText = <![com.esarks.arm.schemas.rules.root:dtable:condition:text]!>.trim();
+        %><tr><td><table border="0" cellpadding="2" cellspacing="0"><tr><td valign="top"><![com.esarks.arm.schemas.rules.root:dtable:condition:id]!>)</td><td valign="top"><!%lConditionText!><br><small>[<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>]</small><%
+        %></td></tr></table></td><%
+        <!com.esarks.arm.schemas.rules.root:dtable:scenario!>& {
+          <!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>!resetIterator();
+          if (<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!scan("condition:id", <![com.esarks.arm.schemas.rules.root:dtable:condition:id]!>)) {
+            if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate!>!size() == 0) {
+              %><td width="20" valign="top" align="center">T</td><%
+            } else if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("true")) {
+              %><td width="20" valign="top" align="center">T</td><%
+            } else if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("false")) {
+              %><td width="20" valign="top" align="center">F</td><%
+            } else {
+              %><td width="20" valign="top" align="center">?</td><%
+            }
+          } else {
+            %><td>&nbsp;</td><%
+          }
+        }
+        %></tr><%
+      }
+      %></table><%
+      %><tr><td><table width="100%" border="1" cellpadding="2" cellspacing="0"><%
+      if (<!com.esarks.arm.schemas.rules.root:dtable:action!>!size() == 1) {
+        %><tr bgcolor="#ccccff"><td><b>Action:</b></td><%
+      } else if (<!com.esarks.arm.schemas.rules.root:dtable:action!>!size() > 1) {
+        %><tr bgcolor="#ccccff"><td><b>Actions:</b></td><%
+      }
+      for (int lIdx=0; lIdx < <!com.esarks.arm.schemas.rules.root:dtable:scenario!>!size(); lIdx++) {
+        %><td width="20" valign="top" align="center"><b><!%Integer.toString(lIdx+1)!></b></td><%
+      }
+      %></tr><%
+      <!com.esarks.arm.schemas.rules.root:dtable:action!>& {
+        String lActionText = <![com.esarks.arm.schemas.rules.root:dtable:action:text]!>.trim();
+        %><tr><td><table border="0" cellpadding="2" cellspacing="0"><tr><td valign="top"><![com.esarks.arm.schemas.rules.root:dtable:action:id]!>)</td><td><!%lActionText!><br><small>[<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>]</small><%
+        %></td></tr></table></td><%
+        <!com.esarks.arm.schemas.rules.root:dtable:scenario!>& {
+          <!com.esarks.arm.schemas.rules.root:dtable:scenario:action!>!resetIterator();
+          if (<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!scan("action:id", <![com.esarks.arm.schemas.rules.root:dtable:action:id]!>)) {
+            int lSeq = <!com.esarks.arm.schemas.rules.root:dtable:scenario:action!>!getIterator();
+            %><td width="20" valign="top" align="center"><!%lSeq!></td><%
+          } else {
+            %><td>&nbsp;</td><%
+          }
+        }
+        %></tr><%
+      }
+      %></table></td></tr></table><%
+    }
+    %></html><%
+
+    closeOutput();
+
+    openOutput(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".new");
+
+    setContext(iScript.getMasterScript());
+    String lDateTime = <![$jac:dateTime]!>;
+    restoreContext();
+
+    String lStart = "%" + ">";
+    String lStop = "<" + "%";
+    String lVarStart = "<" + "!";
+    String lVarEnd = "!" + ">";
+    String lScriptBegin = "<" + "&";
+    String lScriptEnd = "&" + ">";
+    
+%>
+//  Generated at <!%lDateTime!> by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+//$Section=genertedBody$Preserve=yes
+
+// TODO: Place custom declarations (e.g. variables) or helper methods here.
+
+//$Section=genertedBody$Preserve=no
+
+<!%lScriptBegin!> com.esarks.arm.scripts.Method
+  <method name="execute" visibility="public" return="void" >
+  </method>
+<!%lScriptEnd!>
+//$Section=execute$Preserve=yes
+
+// TODO: Place execute() method behavior here.
+
+//$Section=execute$Preserve=no
+<!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod <!%lScriptEnd!>
+
+<%
+
+    <!com.esarks.arm.schemas.rules.root:dtable!>& {
+    String lReturn = "void";
+    String lVisibility = "private";
+    if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() > 0) lReturn = <![com.esarks.arm.schemas.rules.root:dtable:return]!>;
+    if (<!com.esarks.arm.schemas.rules.root:dtable:visibility!>!size() > 0) lVisibility = <![com.esarks.arm.schemas.rules.root:dtable:visibility]!>;
+%>
+<!%lScriptBegin!> com.esarks.arm.scripts.Method
+  <method name="<![com.esarks.arm.schemas.rules.root:dtable:name]!>" visibility="<!%lVisibility!>" return="<!%lReturn!>" >
+<%
+      <!com.esarks.arm.schemas.rules.root:dtable:argument!>& {
+%>
+    <argument type="<![com.esarks.arm.schemas.rules.root:dtable:argument:type]!>" name="a<![com.esarks.arm.schemas.rules.root:dtable:argument:name]!>" document="<![com.esarks.arm.schemas.rules.root:dtable:argument:document]!>" />
+<%
+      }
+%>
+  </method>
+<!%lScriptEnd!>
+
+<%
+
+      <!com.esarks.arm.schemas.rules.root:dtable:condition!>& {
+%>
+    boolean lConditionEnable_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = true;
+<%
+      }
+
+%>
+
+//CUSTOMDTABLE-----------------------------------------------------------------------------------------
+// <![com.esarks.arm.schemas.rules.root:dtable:name]!> Precondition
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_precondition$Preserve=yes
+
+// TODO: Place decision table control initialization behavior here.
+
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_precondition$Preserve=no
+
+<%
+      if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() > 0) {
+%>
+    boolean lDecisionTableProcessing = false;
+
+    do {
+        if (iMicLog.test(Log._APP)) {
+            iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Start of DecisionTable loop");
+        }
+        lDecisionTableProcessing = false;
+        boolean lScenarioProcessing = true;
+        int lNextScenario = 0;
+        do {
+          if (iMicLog.test(Log._APP)) {
+              iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Start of Scenario loop");
+          }
+<%
+
+%>
+//CUSTOMDTABLE-----------------------------------------------------------------------------------------
+// <![com.esarks.arm.schemas.rules.root:dtable:name]!> Code
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_code$Preserve=yes
+
+// TODO: Place decision table control initialization behavior here. (This is within the "do" iteration loops).
+
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_code$Preserve=no
+
+<%
+      <!com.esarks.arm.schemas.rules.root:dtable:condition!>& {
+%>
+//CUSTOMDTABLE-----------------------------------------------------------------------------------------
+// <![com.esarks.arm.schemas.rules.root:dtable:name]!> Condition id = <![com.esarks.arm.schemas.rules.root:dtable:condition:id]!>; symbolicId = <![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>
+<%
+      String lText = <![com.esarks.arm.schemas.rules.root:dtable:condition:text]!>.trim();
+%>
+/* <!%lText!> */
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_condition_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>$Preserve=yes
+
+// TODO: Modify or add condition processing behavior here.
+
+            int lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = 0;
+            if (lConditionEnable_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>) {
+
+                lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = 0;
+
+            }
+
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_condition_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>$Preserve=no
+
+            if (iMicLog.test(Log._APP)) {
+                iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> = " + lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!>);
+            }
+<%
+      }
+%>
+            int lScenarioTaken = 0;
+            ArrayList lActionArrayList = new ArrayList();
+<%
+      <!com.esarks.arm.schemas.rules.root:dtable:scenario!>& {
+        String lScenarioNumber = Integer.toString(<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!getIterator());
+        String lConditionsExist = " &&";
+        if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>!size() == 0) lConditionsExist = "";
+        if (<!com.esarks.arm.schemas.rules.root:dtable:scenario!>!isFirst()) {
+%>
+            if (lScenarioProcessing && lNextScenario <= <!%lScenarioNumber!><!%lConditionsExist!> <%
+        } else {
+%> else if (lScenarioProcessing && lNextScenario <= <!%lScenarioNumber!><!%lConditionsExist!> <%
+
+        }
+        <!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>& {
+          String lTest = "true";
+          if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate!>!size() > 0) {
+            if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("true")) {
+              lTest = "true";
+            } else if (<![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:evaluate]!>.equals("false")) {
+              lTest = "false";
+            } else {
+              lTest = "?";
+            }
+          }
+          String lAnd = " &&";
+          if (<!com.esarks.arm.schemas.rules.root:dtable:scenario:condition!>!isLast()) lAnd = "";
+            <!com.esarks.arm.schemas.rules.root:dtable:condition!>!resetIterator();
+            <!com.esarks.arm.schemas.rules.root:dtable!>!scan("condition:id", <![com.esarks.arm.schemas.rules.root:dtable:scenario:condition:id]!>);
+            if (lTest.equals("true")) {
+%>(lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> > 0)<!%lAnd!><%
+            }
+            if (lTest.equals("false")) {
+%>(lConditionResult_<![com.esarks.arm.schemas.rules.root:dtable:condition:symbolicId]!> < 0)<!%lAnd!><%
+            }
+        }
+%>) {
+                // Scenario <!%lScenarioNumber!>
+                if (iMicLog.test(Log._APP)) {
+                    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Scenario <!%lScenarioNumber!> taken.");
+                }
+                lScenarioTaken = <!%lScenarioNumber!>;
+                lScenarioProcessing = false;
+<%
+        <!com.esarks.arm.schemas.rules.root:dtable:scenario:action!>& {
+          <!com.esarks.arm.schemas.rules.root:dtable:action!>!resetIterator();
+          <!com.esarks.arm.schemas.rules.root:dtable!>!scan("action:id", <![com.esarks.arm.schemas.rules.root:dtable:scenario:action:id]!>);
+%>
+                // Action symbolicId=<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>
+                lActionArrayList.add("<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>");
+<%
+        }
+%>
+            }<%
+      }
+%>
+else {
+                // No scenario taken
+                if (iMicLog.test(Log._APP)) {
+                    iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!No scenario taken.");
+                }
+                lScenarioProcessing = false;
+                lScenarioTaken = -1;
+            }
+//CUSTOMDTABLE-----------------------------------------------------------------------------------------
+// <![com.esarks.arm.schemas.rules.root:dtable:name]!> Actions (all have visibility of this section)
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_actions$Preserve=yes
+
+// TODO: Place global action behavior here.  This section is visible to all actions.
+
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_actions$Preserve=no
+
+            for (int lActionIdx=0; lActionIdx < lActionArrayList.size(); lActionIdx++) {
+<%
+      <!com.esarks.arm.schemas.rules.root:dtable:action!>& {
+
+        if (<!com.esarks.arm.schemas.rules.root:dtable:action!>!isFirst()) {
+%>
+                if (((String) lActionArrayList.get(lActionIdx)).equals("<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>")) {
+<%
+        } else {
+%>
+ else if (((String) lActionArrayList.get(lActionIdx)).equals("<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>")) {
+<%
+        }
+%>
+                    // Action symbolicId=<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>
+                    if (iMicLog.test(Log._APP)) {
+                        iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Performing action code \\\"<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>\\\"");
+                    }
+//CUSTOMDTABLE-----------------------------------------------------------------------------------------
+// <![com.esarks.arm.schemas.rules.root:dtable:name]!> Action id = <![com.esarks.arm.schemas.rules.root:dtable:action:id]!>; symbolicId = <![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>
+<%
+      String lText = <![com.esarks.arm.schemas.rules.root:dtable:action:text]!>.trim();
+%>
+/* <!%lText!> */
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_action_<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>$Preserve=yes
+
+// TODO: Place action behavior here.
+
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_action_<![com.esarks.arm.schemas.rules.root:dtable:action:symbolicId]!>$Preserve=no
+
+                }<%
+      }
+%>
+
+            }
+        } while(lScenarioProcessing);
+
+        if (iMicLog.test(Log._APP)) {
+            iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Fall out of Scenario loop");
+        }
+<%
+
+%>
+//CUSTOMDTABLE-----------------------------------------------------------------------------------------
+// <![com.esarks.arm.schemas.rules.root:dtable:name]!> Postcondition
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_postcondition$Preserve=yes
+
+// TODO: Place decision table control post-processing behavior here.
+
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_postcondition$Preserve=no
+
+    } while(lDecisionTableProcessing);
+
+    if (iMicLog.test(Log._APP)) {
+        iMicLog.println(Log._APP, "APP-" + iScriptFullName + ":" + lMethodSignature + "!Fall out of DecisionTable loop");
+    }
+
+<%
+      } // if (<!com.esarks.arm.schemas.rules.root:dtable:condition!>!size() > 0) {
+
+      if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() == 0) {
+%>
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
+<!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod <!%lScriptEnd!>
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
+<%
+        continue;
+      }
+      if (<![com.esarks.arm.schemas.rules.root:dtable:return]!>.equals("boolean")) {
+%>
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
+<!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod
+  <return>
+    <normal>true</normal>
+    <error>false</error>
+  </return>
+<!%lScriptEnd!>
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
+<%
+        continue;
+      }
+      if (<!com.esarks.arm.schemas.rules.root:dtable:return!>!size() > 0) {
+%>
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
+<!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod
+  <return>
+    <normal>null</normal>
+    <error>null</error>
+  </return>
+<!%lScriptEnd!>
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
+<%
+        continue;
+      }
+
+%>
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=yes
+<!%lScriptBegin!> com.esarks.arm.scripts.FinalReturnMethod <!%lScriptEnd!>
+//$Section=<![com.esarks.arm.schemas.rules.root:dtable:name]!>_return$Preserve=no
+<%
+    }
+
+%>
+//$Section=endOfClass$Preserve=yes
+
+// TODO: Place helper methods or inner-classes here.
+
+//$Section=endOfClass$Preserve=no
+<%
+
+    closeOutput();
+
+    if (<![com.esarks.arm.schemas.rules.root:generateCode]!>.equals("true")) {
+      Merge.getInstance().doMerge(path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".script", path(<![com.esarks.arm.schemas.rules.root:name]!>) + ".new", iScript.getMasterScript());
+    }
+    
+    } catch (Throwable e) {
+      setContext(iScript.getMasterScript());
+      <!$jac:event!>!set(e.getMessage());
+      <!$jac:event:severity!>!set("fatal");
+      <!$jac:event:scriptPackage!>!set(iScriptPackage);
+      <!$jac:event:scriptName!>!set(iScriptName);
+      restoreContext();
+      setExit();
+      return;
+    }
+
+  }

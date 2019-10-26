@@ -1,7 +1,17 @@
 
-public void execute() {
 
-%>Hello World! v20170718a
+<& com.esarks.arm.scripts.Method
+   <method name="execute" visibility="public" return="void" >
+     <document></document>
+   </method>
+&>
+
+%>Hello World! v20191013a
 <%
 
-}
+
+int a=1;
+int b=0;
+int c= a/b;
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>
