@@ -31,7 +31,7 @@ public class ExceptionRpt extends com.esarks.mic.Report  {
     super(aScript);
 
   }
-//  Generated at 2005.07.29 07:41:25.687 AM EDT by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
+//  Generated at 2019.10.26 12:14:56.477 PM EDT by Architect's Companion (c) 2003, Architects of Software Design, Corp., ALL RIGHTS RESERVED
 
   public void render(String aOutput, String aStereotype, com.esarks.arm.model.jeo.ServiceJeo aJeo) {
     renderHtml(aOutput, aJeo);

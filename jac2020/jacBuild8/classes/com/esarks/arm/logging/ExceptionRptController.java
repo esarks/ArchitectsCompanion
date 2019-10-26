@@ -84,25 +84,43 @@ public class ExceptionRptController extends com.esarks.mic.Component  {
     String lNow = Long.toHexString(lDate.getTime());
 */
 
+/*
     String lJobSlot = "1";
     String lReserved = new java.util.Date().toString();
     String lNow = lReserved;
     com.esarks.jac.OutputManager lOutputManager = iOutputManager;
     iOutputManager = new com.esarks.jac.OutputManager();
 
-//    openOutput(path(getProperty("$jac:path:exception") + ".") + lJobSlot + "_" + lReserved + "_" + lNow + ".xml");
+    openOutput(path(getProperty("$jac:path:exception") + ".") + lJobSlot + "_" + lReserved + "_" + lNow + ".xml");
 
     String iDebugPath = getProperty("$jac:path:exception");
     String iDebugPathPath = path(getProperty("$jac:path:exception") + ".");
-    
 
-    openOutput(path(getProperty("$jac:path:exception")) + "Exception.xml");
+    openOutput(path(getProperty("$jac:path:exception")) + "Exception_" + Long.toString(System.currentTimeMillis()) + ".xml");
+*/
+
+    setContext(iScript.getMasterScript());
+//    restoreContext();
+
+    com.esarks.jac.OutputManager lOutputManager = iOutputManager;
+    iOutputManager = new com.esarks.jac.OutputManager();
+
+//private String iFileSeparator = System.getProperty("file.separator");
+
+//895: DEBUG-com.esarks.jac.jac:getScript()!$jac:path:exception=C:\GitHub\ArchitectsCompanion\jac2020\logs
+//896: DEBUG-com.esarks.jac.jac:getScript()!$jac:fileSeparator=\
+
+//ScriptWriter~~    String lExceptionPath = <![$jac:path:exception]!> + <![$jac:fileSeparator]!> + "Exception_" + Long.toString(System.currentTimeMillis());
+    String lExceptionPath = iSymbolTable.translateProperties("[$jac:path:exception]") + iSymbolTable.translateProperties("[$jac:fileSeparator]") + "Exception_" + Long.toString(System.currentTimeMillis());
+    
+    openOutput(lExceptionPath + ".xml");
+
 //ScriptWriter~~%>
 {
 //ScriptWriter~~~
 iOutputManager.println("", false);
-//ScriptWriter~~<exception>
-iOutputManager.println("<exception>", true);
+//ScriptWriter~~<exception path="<!%lExceptionPath!>">
+iOutputManager.println("<exception path=\"" + lExceptionPath + "\">", true);
 //ScriptWriter~~  <time><<%%>![CDATA[<!%aTime!>]]></time>
 iOutputManager.println("  <time><", false);
 //ScriptWriter~~~
@@ -175,11 +193,16 @@ iOutputManager.println("", false);
 }
 //ScriptWriter~~~
 
+
     closeOutput();
     iOutputManager = lOutputManager;
     lOutputManager = null;
-    if (true) return;
+//    if (true) return;
         
+    lOutputManager = iOutputManager;
+    iOutputManager = new com.esarks.jac.OutputManager();
+    openOutput(lExceptionPath + ".html");
+
     com.esarks.arm.model.jeo.ServiceJeo lServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
     com.esarks.arm.logging.ExceptionJeo lDocumentJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
     lServiceJeo.addJeo(lDocumentJeo);
@@ -193,7 +216,12 @@ iOutputManager.println("", false);
     lDocumentJeo.setResolution(aResolution);
 
 //    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{getProperty("$jac:path:exception") + "." + lJobSlot + "_" + lReserved + "_" + lNow, lServiceJeo});
-    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{getProperty("$jac:path:exception") + "." + "Exception", lServiceJeo});
+    iScript.execMethod("", "render", new Object[]{getProperty("$jac:path:exception") + "." + "Exception", lServiceJeo});
+
+    closeOutput();
+    iOutputManager = lOutputManager;
+    lOutputManager = null;
+
 
 /*<& com.esarks.arm.scripts.FinalReturnMethod &>*/
 /* *** GENERATED SECTION *** Beginning of embedded XML expansion */

@@ -1,0 +1,74 @@
+  
+//////////////////////////////////////////////////////////////////////////////
+
+<& com.esarks.arm.scripts.Method
+   <method name="execute" visibility="public" return="void" >
+     <document></document>
+     <argument type="String"         name="aTime"             document="" />
+     <argument type="String"         name="aModule"           document="" />
+     <argument type="String"         name="aMethod"           document="" />
+     <argument type="String"         name="aSeverity"         document="" />
+     <argument type="String"         name="aLocation"         document="" />
+     <argument type="String"         name="aDescription"      document="" />
+     <argument type="String"         name="aAction"           document="" />
+     <argument type="String"         name="aResolution"       document="" />
+   </method>
+&>
+
+/*
+    setContext(iScript.getMasterScript());
+    com.esarks.arm.applicationFramework.model.entity.ArmJobSlot lArmJobSlot = (com.esarks.arm.applicationFramework.model.entity.ArmJobSlot) iSymbolTable.getPropertyCollection().getPropertyValue("$mic:com.esarks.arm.applicationFramework.model.entity.ArmJobSlot", 0).getValueObject();
+    restoreContext();
+
+    String lJobSlot = Long.toHexString(lArmJobSlot.getSlot());
+    String lReserved = Long.toHexString(lArmJobSlot.getReservedPropertyValue().getValueTimestamp().getTime());
+    java.util.Date lDate = new java.util.Date();
+    String lNow = Long.toHexString(lDate.getTime());
+*/
+
+    String lJobSlot = "1";
+    String lReserved = new java.util.Date().toString();
+    String lNow = lReserved;
+    com.esarks.jac.OutputManager lOutputManager = iOutputManager;
+    iOutputManager = new com.esarks.jac.OutputManager();
+
+//    openOutput(path(getProperty("$jac:path:exception") + ".") + lJobSlot + "_" + lReserved + "_" + lNow + ".xml");
+
+    String iDebugPath = getProperty("$jac:path:exception");
+    String iDebugPathPath = path(getProperty("$jac:path:exception") + ".");
+
+    openOutput(path(getProperty("$jac:path:exception")) + "Exception_" + Long.toString(System.currentTimeMillis()) + ".xml");
+%>
+<exception path="<![$jac:path:exception]!>">
+  <time><<%%>![CDATA[<!%aTime!>]]></time>
+  <module><<%%>![CDATA[<!%aModule!>]]></module>
+  <method><<%%>![CDATA[<!%aMethod!>]]></method>
+  <severity><<%%>![CDATA[<!%aSeverity!>]]></severity>
+  <location><<%%>![CDATA[<!%aLocation!>]]></location>
+  <description><<%%>![CDATA[<!%aDescription!>]]></description>
+  <action><<%%>![CDATA[<!%aAction!>]]></action>
+  <resolution><<%%>![CDATA[<!%aResolution!>]]></resolution>
+</exception>
+<%
+    closeOutput();
+    iOutputManager = lOutputManager;
+    lOutputManager = null;
+    if (true) return;
+        
+    com.esarks.arm.model.jeo.ServiceJeo lServiceJeo = new com.esarks.arm.model.jeo.ServiceJeo();
+    com.esarks.arm.logging.ExceptionJeo lDocumentJeo = new com.esarks.arm.logging.ExceptionJeo("detail");
+    lServiceJeo.addJeo(lDocumentJeo);
+
+    lDocumentJeo.setTime(aTime);
+    lDocumentJeo.setModule(aModule);
+    lDocumentJeo.setSeverity(aSeverity);
+    lDocumentJeo.setLocation(aLocation);
+    lDocumentJeo.setDescription(aDescription);
+    lDocumentJeo.setAction(aAction);
+    lDocumentJeo.setResolution(aResolution);
+
+//    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{getProperty("$jac:path:exception") + "." + lJobSlot + "_" + lReserved + "_" + lNow, lServiceJeo});
+    iScript.execMethod("com.esarks.arm.logging.ExceptionRpt", "render", new Object[]{getProperty("$jac:path:exception") + "." + "Exception", lServiceJeo});
+
+<& com.esarks.arm.scripts.FinalReturnMethod &>
+  

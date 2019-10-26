@@ -1,3 +1,4 @@
-echo Running... C:\GitHub\ArchitectsCompanion\jac2020\Jrun\bin\SetJAC_DEBUG.bat v20191013a
-echo Set JAC_DEBUG=true
-echo set JAC_DEBUG=true > SetJAC_DEBUG.bat
+echo off
+echo echo Running... C:\GitHub\ArchitectsCompanion\jac2020\Jrun\bin\SetJAC_DEBUG.bat v20191013a>SetJAC_DEBUG.bat
+echo echo Set JAC_DEBUG=true>>SetJAC_DEBUG.bat
+echo set JAC_DEBUG=true>>SetJAC_DEBUG.bat

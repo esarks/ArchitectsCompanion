@@ -16,6 +16,8 @@ echo JAC_SCRIPTS=%JAC_SCRIPTS%
 
 set MEMORY=-Xms64m -Xmx512m
 
+echo on
+
 if "%JAC_DEBUG_LEVEL%" == "" set LOG=-debugInstance ?date -debugPath "%JAC_HOME%\logs" -debug 4 -debugClass 4
 if NOT "%JAC_DEBUG_LEVEL%" == "" set LOG=-debugInstance ?date -debugPath "%JAC_HOME%\logs" -debug %JAC_DEBUG_LEVEL% -debugClass %JAC_DEBUG_LEVEL%
 
@@ -25,10 +27,14 @@ if "%JAC_PROFILE%" == "true" set PROFILE=-Xrunjprofiler -Xint -Xbootclasspath/a:
 rem set JACOB=-Djava.library.path=%JAC_HOME%\lib\jacob-1.17-M2 -Dcom.jacob.debug=true -Xcheck:jni
 set JACOB=-Djava.library.path=%JAC_HOME%\lib\jacob-1.17-M2
 
+echo JAC_DEBUG is %JAC_DEBUG%
+
 set DEBUG=
 if "%JAC_DEBUG%" == "true" set DEBUG=-Dorg.xml.sax.driver=com.bluecast.xml.Piccolo -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,address=8000,suspend=y
 
-set DEBUG=-Dorg.xml.sax.driver=com.bluecast.xml.Piccolo -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,address=8000,suspend=y
+echo DEBUG is %DEBUG%
+
+pause Debug
 
 set COMPILE=
 if "%JAC_COMPILE%" == "false" set COMPILE=-nocompile

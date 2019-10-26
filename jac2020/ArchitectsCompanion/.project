@@ -40,5 +40,10 @@
 			<type>2</type>
 			<location>C:/GitHub/ArchitectsCompanion/jac2020/lib</location>
 		</link>
+		<link>
+			<name>scripts</name>
+			<type>2</type>
+			<location>C:/GitHub/ArchitectsCompanion/jac2020/jacBuild8/source/scripts</location>
+		</link>
 	</linkedResources>
 </projectDescription>

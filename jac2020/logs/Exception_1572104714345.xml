@@ -1,0 +1,10 @@
+<exception path="C:\GitHub\ArchitectsCompanion\jac2020\logs\Exception_1572104714345">
+  <time><![CDATA[]]></time>
+  <module><![CDATA[paul.HelloWorld]]></module>
+  <method><![CDATA[execute()]]></method>
+  <severity><![CDATA[fatal]]></severity>
+  <location><![CDATA[]]></location>
+  <description><![CDATA[/ by zero]]></description>
+  <action><![CDATA[Unhandled exception.]]></action>
+  <resolution><![CDATA[Review this exception to determine proper handling.]]></resolution>
+</exception>

@@ -1,0 +1,361 @@
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:1: package <#[$jac:script:package]#>;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:3: import com.esarks.jac.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:4: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:5: import java.time.Duration;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:6: import java.time.Instant;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:7: import java.time.Period;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:8: import java.time.ZoneId;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:9: import java.time.LocalDate;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:10: import java.time.LocalDateTime;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:11: import java.time.LocalTime;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:12: import java.time.format.DateTimeFormatter;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:13: import java.time.format.FormatStyle;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:14: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:15: import java.util.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:16: import java.lang.reflect.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:17: import java.io.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:18: import java.text.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:19: import java.net.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:20: import javax.net.ssl.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:21: import java.security.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:22: import java.sql.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:23: import javax.servlet.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:24: import javax.servlet.http.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:25: import java.awt.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:26: import javax.swing.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:27: import com.esarks.mic.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:28: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:29: import java.nio.file.Files;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:30: import java.nio.file.Paths;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:31: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:32: import java.io.FileNotFoundException;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:33: import java.io.FileReader;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:34: import java.io.IOException;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:35: import java.util.Iterator;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:36: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:37: import org.json.simple.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:38: import org.json.simple.parser.*;
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:39: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micImport.script:40: <#import#>
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:1: public class <#[$jac:script]#> extends <#[$jac:script:extends]#> {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:2: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:3: <#var#>
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:4: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:5:   protected <#[$jac:script]#>() {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:6:   }
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:7: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:8:   public <#[$jac:script]#>(Script aScript) {
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:9: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:10:     super(aScript);
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:11: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPrefix.script:12:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:1: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:2: public void execute() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:3: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:4: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:5: <![$jac:path:scripts]!><!%path("ehrm.WorkflowTaxonomy.Workflowtaxonomy")!><!%".xml"!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:6: <![$jac:path:scripts]!><!%path("ehrm.WorkflowTaxonomy.WorkflowtaxonomyComments")!><!%".xml"!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:7: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:8: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:9:   iSymbolTable.parseXml(<![$jac:path:scripts]!> + path("ehrm.WorkflowTaxonomy.Workflowtaxonomy") + ".xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:10:   iSymbolTable.parseXml(<![$jac:path:scripts]!> + path("ehrm.WorkflowTaxonomy.WorkflowtaxonomyComments") + ".xml");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:11: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:12:   <!business:wfDiagramsList:wfd!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:13:   while (<!business:wfDiagramsList:wfd!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:14: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:15: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:16: *** <![business:wfDiagramsList:wfd:id]!> *** <![business:wfDiagramsList:wfd:name]!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:17: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:18: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:19:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:20:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:21: //  executeExtractComments();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:22: //  executeWorkflowTaxonomyComments();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:23:   executeWorkflowTaxonomyStatus();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:24: //  executeWorkflowTaxonomyProducts();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:25: //  executeWorkflowTaxonomy();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:26: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:27: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:28: ////////////////////////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:29: /// executeExtractComments
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:30: ////////////////////////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:31: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:32: public void executeExtractComments() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:33: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:34: %>executeExtractComments v20191013a
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:35: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:36: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:37:   String lCdata = "<" + "!" + "[CDATA[";
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:38:   String lLine = "";
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:39:   boolean lPrint = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:40:   String lLastTag="";
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:41: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:42:   iOutputManager.openOutputFile(<![$jac:path:scripts]!> + path("ehrm.WorkflowTaxonomy.WorkflowtaxonomyComments") + ".xml", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:43: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:44: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:45: <comments>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:46: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:47:   try {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:48: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:49:     <!business:wfDiagramsList:wfd!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:50:     while (<!business:wfDiagramsList:wfd!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:51: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:52:       String lFileName = <![business:pdfs:folder]!> + "\\" + <![business:pdfs:[business:wfDiagramsList:wfd:id]:name]!>;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:53:       File lFile = new File(lFileName);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:54:       FileReader lFr = new FileReader(lFile);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:55:       BufferedReader lBr = new BufferedReader(lFr);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:56:       Boolean lComments = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:57:       <!report!>!remove();    
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:58: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:59: <<![business:wfDiagramsList:wfd:id]!> name="<![business:pdfs:[business:wfDiagramsList:wfd:id]:name]!>">
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:60: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:61: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:62:       while((lLine = lBr.readLine()) != null){
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:63: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:64:         if (lLine.startsWith("Future State:")) continue; 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:65:         if (lLine.startsWith("Cerner Workflow ID")) continue;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:66:         if (lLine.trim().length() == 0) continue;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:67:         
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:68:         lLine = lLine.replace("\"", "'");              
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:69:         if ( lLine.startsWith("Comments:")) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:70:           lComments = true;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:71:           <!report:line!>!set("\n");
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:72:           <!report:line!>!set(lLine);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:73:           continue;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:74:         } //if ( lLine.startsWith("Comments:"))
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:75: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:76:         if ( lLine.startsWith("©")) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:77:           lLine = lBr.readLine();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:78:           lLine = lBr.readLine();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:79:           lLine = lBr.readLine();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:80:           lLine = lBr.readLine();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:81:           lLine = lBr.readLine();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:82:           lLine = lBr.readLine();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:83:           continue;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:84:         }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:85: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:86:         if ( (!lComments) && (lLine.startsWith("Work Step") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:87:              lLine.startsWith("System") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:88:              lLine.startsWith("Decision") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:89:              lLine.startsWith("Start/Stop") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:90:              lLine.startsWith("Off Page Reference") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:91:              lLine.startsWith("Document") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:92:              lLine.startsWith("Swim Lane/Role"))) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:93:              
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:94:              <!report:line!>!reset(lLine);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:95:              continue;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:96:          } //if ( (!lComments) && (lLine.startsWith("Work Step") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:97: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:98:         if ( (lComments) && (lLine.startsWith("Work Step") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:99:              lLine.startsWith("System") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:100:              lLine.startsWith("Decision") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:101:              lLine.startsWith("Start/Stop") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:102:              lLine.startsWith("Off Page Reference") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:103:              lLine.startsWith("Document") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:104:              lLine.startsWith("Swim Lane/Role"))) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:105: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:106: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:107: <comment><!%lCdata!><%             
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:108:             <!report:line!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:109:             while (<!report:line!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:110: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:111: <![report:line]!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:112: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:113:             } //while (<!report:line!>!next())
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:114: %>]]></comment>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:115: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:116: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:117:              lComments = false;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:118:              <!report:line!>!reset(lLine);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:119:              continue;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:120:          } //if ( (lComments) && (lLine.startsWith("Work Step") ||
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:121: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:122:         <!report:line!>!set(lLine);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:123:         
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:124:       } //while((lLine = lBr.readLine()) != null)
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:125: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:126:       if (lComments) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:127: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:128: <comment><!%lCdata!><%             
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:129:             <!report:line!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:130:             while (<!report:line!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:131: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:132: <![report:line]!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:133: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:134:             } //while (<!report:line!>!next())
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:135: %>]]></comment>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:136: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:137:       }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:138: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:139: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:140: </<![business:wfDiagramsList:wfd:id]!>>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:141: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:142: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:143:     } // While
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:144:   } catch (IOException lException) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:145: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:146: <!%lException!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:147: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:148: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:149:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:150: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:151: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:152: </comments>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:153: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:154:   iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:155: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:156: }    
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:157: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:158: ////////////////////////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:159: /// executeWorkflowTaxonomyStatus
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:160: ////////////////////////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:161: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:162: public void executeWorkflowTaxonomyStatus() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:163: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:164: %>EHRM Hello World! v20190816a
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:165: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:166: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:167:   iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyStatus.csv", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:168: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:169: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:170: Flow ID,Flow Name,Status,Council,"DCW<!%Character.toString((char) 10)!>Required   ","DCW<!%Character.toString((char) 10)!>Completed   ","DDM<!%Character.toString((char) 10)!>Required   ","DDM<!%Character.toString((char) 10)!>Completed   ","Build in 81930<!%Character.toString((char) 10)!>Completed   ",,,,heading
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:171: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:172: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:173:   <!business:wfDiagramsList:wfd!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:174:   while (<!business:wfDiagramsList:wfd!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:175: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:176: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:177: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:178: <![business:wfDiagramsList:wfd:id]!>,<![business:wfDiagramNames:[business:wfDiagramsList:wfd:id]:name]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:status]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:council]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:dcwRqd]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:dcwCmp]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:ddmRqd]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:ddmCmp]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:build]!>,,,,flow
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:179: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:180: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:181:     <!business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:182:     while (<!business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow!>!next()) {     
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:183: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:184: <![business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow:id]!>,<![business:wfDiagramNames:[business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow:id]:name]!>,,,,,,,,,,,subFlow
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:185: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:186:     }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:187:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:188: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:189:   iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:190: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:191: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:192: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:193: ////////////////////////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:194: /// executeWorkflowTaxonomyProducts
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:195: ////////////////////////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:196: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:197: public void executeWorkflowTaxonomyStatus2() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:198: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:199: %>EHRM Hello World! v20190816a
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:200: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:201: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:202:   iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyStatus.csv", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:203: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:204: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:205: Flow ID,Flow Name,Status,Council,"DCW<!%Character.toString((char) 10)!>Required   ","DCW<!%Character.toString((char) 10)!>Completed   ","DDM<!%Character.toString((char) 10)!>Required   ","DDM<!%Character.toString((char) 10)!>Completed   ","Build in 81930<!%Character.toString((char) 10)!>Completed   ",,,,heading
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:206: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:207: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:208:   <!business!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:209:   while (<!business!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:210: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:211:     <!business:wfDiagramsList:wfd!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:212:     while (<!business:wfDiagramsList:wfd!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:213: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:214: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:215: <![business:wfDiagramsList:wfd:id]!>,<![business:wfDiagramsList:wfd:name]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:status]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:council]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:dcwRqd]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:dcwCmp]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:ddmRqd]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:ddmCmp]!>,<![business:wfStates:[business:wfDiagramsList:wfd:id]:build]!>,,,,flow
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:216: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:217: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:218:       <!business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:219:       while (<!business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow!>!next()) {     
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:220: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:221: <![business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow:id]!>,<![business:wfDiagramNames:[business:wfSubflows:[business:wfDiagramsList:wfd:id]:subflow:id]:name]!>,,,,,,,,,,,subFlow
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:222: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:223:       }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:224:     }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:225:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:226: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:227:   iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:228: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:229: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:230: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:231: ////////////////////////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:232: /// executeWorkflowTaxonomyComments
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:233: ////////////////////////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:234: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:235: public void executeWorkflowTaxonomyComments() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:236: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:237: %>EHRM Hello World! v20190816a
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:238: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:239: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:240:   iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomyComments.csv", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:241: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:242:   <!business!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:243:   while (<!business!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:244: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:245:     <!business:wfDiagramsList:wfd!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:246:     while (<!business:wfDiagramsList:wfd!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:247: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:248: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:249: <![business:wfDiagramsList:wfd:id]!>,<![business:wfDiagramsList:wfd:name]!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:250: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:251: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:252:       <!comments:[business:wfDiagramsList:wfd:id]:comment!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:253:       while (<!comments:[business:wfDiagramsList:wfd:id]:comment!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:254:       
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:255: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:256: ,"<![comments:[business:wfDiagramsList:wfd:id]:comment]!>"
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:257: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:258: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:259:       }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:260:     }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:261:   }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:262: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:263:   iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:264: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:265: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:266: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:267: ////////////////////////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:268: /// executeWorkflowTaxonomy
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:269: ////////////////////////////////////////////////////////////////////////////////////////////////
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:270: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:271: public void executeWorkflowTaxonomy() {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:272: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:273: %>EHRM Hello World! v20190816a
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:274: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:275: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:276:   iOutputManager.openOutputFile("C:\\GitHub\\ArchitectsCompanion\\jac2020\\app\\ehrm\\WorkflowTaxonomy\\WorkflowTaxonomy.csv", false);
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:277: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:278:   int lRow = 1;
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:279:   
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:280:   <!business:major!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:281:   while (<!business:major!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:282: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:283: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:284: <![business:major:name]!>,,,,,,,,,group,<!%lRow++!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:285: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:286: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:287:     <!business:major:workflow!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:288:     while (<!business:major:workflow!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:289: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:290: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:291: <![business:major:name]!>,<![business:major:workflow:name]!>,,,,,<![business:major:workflow:date1]!>,<![business:major:workflow:date2]!>,,workflow,<!%lRow++!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:292: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:293: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:294:       <!business:major:workflow:wfdesigner!>!resetIterator();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:295:       while (<!business:major:workflow:wfdesigner!>!next()) {
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:296: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:297: %>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:298: <![business:major:name]!>,,(<![business:major:workflow:wfdesigner:name]!>) <![business:wfDiagramNames:[business:major:workflow:wfdesigner:name]:name]!>,,,,,,,wfdesigner,<!%lRow!>
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:299: <%
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:300: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:301:       } // while (<!business:major:workflow:wfdesigner!>!next())
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:302:     } // while (<!business:major:workflow!>!next())
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:303:   } // while (<!business:major!>!next())
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:304: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:305:   iOutputManager.closeOutputFile();
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:306: 
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:307: }
+C:\GitHub\ArchitectsCompanion\jac2020\app\ehrm\WorkflowTaxonomy\WorkflowTaxonomyBuild.script:308: 
+C:\GitHub\ArchitectsCompanion\jac2020\conf\micPostfix.script:1: }

@@ -1,0 +1,22 @@
+<report name=".Exception"><table>
+<header>
+<column attribute="time" width="">Time</column>
+<column attribute="module" width="">Module</column>
+<column attribute="method" width="">Method</column>
+<column attribute="severity" width="">Severity</column>
+<column attribute="location" width="">Location</column>
+<column attribute="description" width="">Description</column>
+<column attribute="action" width="">Action</column>
+<column attribute="resolution" width="">Resolution</column>
+</header>
+<row >
+<time ></time>
+<module >paul.HelloWorld</module>
+<method ></method>
+<severity >fatal</severity>
+<location ></location>
+<description >/ by zero</description>
+<action >Unhandled exception.</action>
+<resolution >Review this exception to determine proper handling.</resolution>
+</row>
+</table></report>
